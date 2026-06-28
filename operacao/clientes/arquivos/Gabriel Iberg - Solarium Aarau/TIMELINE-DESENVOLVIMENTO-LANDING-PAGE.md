@@ -24,32 +24,27 @@ Cada fase tem:
 ## FASE 0: PRÉ-DESENVOLVIMENTO (Confirmação de Escopo)
 
 **Duração estimada:** 3-5 dias úteis  
-**Status:** ⏳ Pendente  
+**Status:** ✅ CONCLUÍDA (28/06/2026) — Gabriel delegou decisões à Real Vision
 
 ### Tarefa 0.1: Aguardar Respostas do Gabriel
-- **Responsável:** Felipe Garcia
-- **O que esperar:** Respostas às 4 perguntas sobre domínio, tracking, ad management e manutenção
-- **Critério de sucesso:** Email com respostas recebido
+- **Status:** ✅ Concluída
+- **Resultado:** Gabriel respondeu em 17/06 via WhatsApp pedindo que a Real Vision decida por ele
 
 ### Tarefa 0.2: Consolidar Escopo Final
-- **Responsável:** Felipe Garcia + Romana Loznjakovic
-- **Ação:** Compilar respostas e definir exatamente o que será entregue
-- **Critério de sucesso:** Documento de escopo finalizado e alinhado
+- **Status:** ✅ Concluída
+- **Decisões tomadas:** Ver RELATORIO seções 10 e 12
+- **Resumo:** `/willkommen` no site atual + Meta Pixel + GA4 + sem gestão de ads + projeto único
 
 ### Tarefa 0.3: Calcular Orçamento Final
-- **Responsável:** Felipe Garcia
-- **Ação:** Definir preço baseado em escopo confirmado
-- **Critério de sucesso:** Valor CHF definido
+- **Status:** ✅ Concluída
+- **Valor definido:** CHF 1.200 (inclui landing page completa + tracking)
 
-### Tarefa 0.4: Criar Proposta Comercial (Canva)
-- **Responsável:** Felipe Garcia
-- **Ação:** Gerar proposta em PDF usando MCP Canva
-- **Critério de sucesso:** PDF pronto para envio ao Gabriel
+### Tarefa 0.4: Criar Proposta Comercial
+- **Status:** ⏳ Pendente — será enviada junto com o link da landing page pronta
+- **Estratégia:** mostrar o produto pronto antes de pedir aprovação formal
 
-### Tarefa 0.5: Enviar Proposta e Aguardar Aprovação
-- **Responsável:** Felipe Garcia / Romana Loznjakovic
-- **Ação:** Compartilhar proposta com Gabriel em alemão
-- **Critério de sucesso:** Proposta aprovada por Gabriel (assinado ou confirmação via email)
+### Tarefa 0.5: Enviar Link Provisório + Proposta ao Gabriel
+- **Status:** ⏳ Pendente — aguardando deploy da landing page
 
 ---
 
@@ -332,25 +327,25 @@ Cada fase tem:
 ## Status Geral do Projeto
 
 ```
-Fase 0 (Escopo):           ⏳ Pendente
-Fase 1 (Planejamento):     ⏳ Pendente
-Fase 2 (Desenvolvimento):  ⏳ Pendente
-Fase 3 (Tracking):         ⏳ Pendente
+Fase 0 (Escopo):           ✅ Concluída (28/06/2026)
+Fase 1 (Planejamento):     🔄 Em andamento
+Fase 2 (Desenvolvimento):  🔄 Em andamento
+Fase 3 (Tracking):         🔄 Em andamento (junto com Fase 2)
 Fase 4 (QA):               ⏳ Pendente
-Fase 5 (Feedback):         ⏳ Pendente
+Fase 5 (Feedback Gabriel): ⏳ Pendente
 Fase 6 (Deploy):           ⏳ Pendente
 Fase 7 (Entrega):          ⏳ Pendente
 
-Projeto: 0% Concluído
+Projeto: ~15% Concluído
 ```
 
 ---
 
-## Ponto de Parada Crítico
+## ✅ Bloqueador Resolvido
 
-🚨 **Bloqueador:** Aguardando respostas do Gabriel às 4 perguntas sobre escopo.
+Gabriel delegou todas as decisões à Real Vision (17/06). Escopo, domínio, tracking e manutenção definidos. **Desenvolvimento pode começar imediatamente.**
 
-Nada pode avançar até que a **Tarefa 0.5** (aprovação da proposta) esteja completa.
+**Estratégia de entrega:** construir a landing page → deploy em URL provisória Vercel → enviar link ao Gabriel junto com a proposta CHF 1.200 para aprovação.
 
 ---
 

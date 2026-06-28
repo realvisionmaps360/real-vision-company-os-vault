@@ -214,3 +214,102 @@ Este documento representa o **estado atual do projeto** e pode servir como **pon
 **Versão:** 1.0  
 **Data:** 2026-06-24  
 **Responsáveis:** Felipe Garcia, Romana Loznjakovic
+
+---
+
+## 9. Resposta do Gabriel (17/06/2026)
+
+**Mensagem recebida via WhatsApp:**
+
+> "Oi, mano, desculpa por não ter respondido, estava com outras coisas na cabeça. Entendi sua mensagem, mesmo que ela tenha sido traduzida para o alemão por uma IA. É tudo muito complexo; gostaria de deixar por sua conta a forma como vamos organizar isso. Estou aberto a ideias e estratégias."
+
+**Interpretação:** Gabriel é leigo e confia 100% na Real Vision para decidir escopo, domínio, tracking e manutenção. Não quer ser consultado para cada detalhe técnico.
+
+---
+
+## 10. Decisões Tomadas (28/06/2026) — por conta da Real Vision
+
+Como Gabriel delegou as decisões, definimos o seguinte:
+
+### 10.1 Domínio da Landing Page
+**Decisão: rota `/willkommen` dentro do site atual** (aarau-solarium.ch/willkommen)
+- Zero custo extra de domínio
+- Mesmo repo (solariumaarau), mesmo Vercel — deploy automático
+- SEO unificado com o site principal
+- Header/footer suprimidos — página focada em conversão
+
+### 10.2 Tracking
+**Decisão: INCLUÍDO no escopo padrão** — Meta Pixel + Google Analytics 4 básico
+- Sem tracking a campanha Meta Ads é cega: não é possível medir conversões
+- Custo de implementação: baixo (código já documentado)
+- GA4 e Meta Pixel são obrigatórios para qualquer campanha profissional
+
+### 10.3 Gestão de Anúncios
+**Decisão: NÃO incluída agora**
+- Gabriel já gerencia seus próprios anúncios no Meta
+- Gestão de campanhas é serviço separado (add-on mensal futuro, se ele pedir)
+- Foco total na entrega da landing page primeiro
+
+### 10.4 Manutenção Pós-Entrega
+**Decisão: projeto único** (entrega + fim)
+- Gabriel já paga anuidade de hospedagem (site + tour) — cobre infraestrutura
+- Ajustes pontuais cobrados à parte quando necessário
+- Sem contrato mensal fixo por enquanto
+
+---
+
+## 11. Histórico Financeiro do Gabriel (VisionFlow)
+
+| Serviço | Valor | Status |
+|---------|-------|--------|
+| 2 Vídeos YouTube + Tour Virtual | 6.400 | ✅ Pago |
+| Novo Site (aarau-solarium.ch) | 2.553 | ✅ Pago |
+| Tour Correção | 638 | ✅ Pago |
+| Anuidade Hospedagem (tour + site) | 1.021 | ✅ Pago |
+| **Total investido** | **10.612** | ✅ |
+
+*Nota: moeda registrada no VisionFlow a confirmar com Felipe (BRL ou CHF).*
+
+---
+
+## 12. Escopo Final e Precificação da Landing Page
+
+**O que está incluído:**
+- Rota `/willkommen` no site existente (React/Vite/Tailwind)
+- Hero com urgência (endereço, horário, "Jetzt geöffnet")
+- 3 passos simplificados (SpotlightCard reutilizados)
+- Prova social (3 Google Reviews reais)
+- Tabela de Bônus de boas-vindas
+- Preview do Tour 360°
+- CTA final com Google Maps embed
+- Meta Pixel + GA4 configurados
+- Deploy em Vercel (URL provisória para aprovação do Gabriel)
+- Copy em alemão (Romana revisa)
+
+**O que NÃO está incluído:**
+- Gestão de campanhas Meta Ads
+- Contrato de manutenção mensal
+- Novo domínio
+
+**Preço sugerido: CHF 1.200**
+- Faixa de mercado Suíça para landing page profissional: CHF 1.000–1.500
+- Inclui tracking completo (Meta Pixel + GA4) que normalmente é add-on
+- Referência: site completo (8 páginas + i18n) foi cobrado a 2.553 — landing page focada é escopo menor
+
+---
+
+## 13. Próximos Passos (a partir de 28/06/2026)
+
+| Passo | Responsável | Status |
+|-------|-------------|--------|
+| 1. Construir `/willkommen` no repo solariumaarau | Felipe | 🔄 Em andamento |
+| 2. Deploy Vercel com URL provisória | Felipe | ⏳ Após desenvolvimento |
+| 3. Implementar Meta Pixel + GA4 | Felipe | ⏳ Junto com dev |
+| 4. Romana revisa copy alemão | Romana | ⏳ Paralelo ao dev |
+| 5. Enviar link provisório + proposta CHF 1.200 ao Gabriel | Felipe/Romana | ⏳ Após deploy |
+| 6. Aguardar aprovação do Gabriel | Gabriel | ⏳ |
+| 7. Ajustes finais → deploy em produção | Felipe | ⏳ |
+
+**Versão:** 2.0  
+**Data:** 2026-06-28  
+**Responsáveis:** Felipe Garcia, Romana Loznjakovic
