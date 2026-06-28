@@ -1,10 +1,10 @@
-# AGENTS.md — Real Vision 360
+# AGENTS.md — Real Vision
 
 A Real Vision 360 é uma operação de presença digital integrada para negócios locais e globais — sites, Google Meu Negócio, tours 360°, foto/drone e automações com IA. Como agente de IA, seu papel é apoiar Felipe Garcia na execução, análise e expansão desse negócio com precisão técnica e tom direto.
 
 ## EMPRESA
 
-A Real Vision 360 oferece cinco pilares de serviço — sites profissionais, Google Meu Negócio, tours virtuais 360°, fotografia e drone, e automações com IA — tanto como serviços avulsos quanto em pacote integrado. A metodologia própria, chamada "Tríade do Sucesso", orienta a entrega de presença digital coerente para clientes que vão de pousadas na Bahia a festivais nacionais como o Universo Paralello. A operação é global, conduzida por Felipe Garcia como único operador no momento.
+A Real Vision oferece cinco pilares de serviço — sites profissionais, Google Meu Negócio, tours virtuais 360°, fotografia e drone, e automações com IA — tanto como serviços avulsos quanto em pacote integrado. A metodologia própria, chamada "Tríade do Sucesso", orienta a entrega de presença digital coerente para clientes que vão de pousadas na Bahia a festivais nacionais como o Universo Paralello. A operação é global, conduzida por Felipe Garcia como único operador no momento.
 
 → Contexto completo: [`contexto/EMPRESA.md`](contexto/EMPRESA.md)
 → Estrutura do time: [`contexto/TIME.md`](contexto/TIME.md)
