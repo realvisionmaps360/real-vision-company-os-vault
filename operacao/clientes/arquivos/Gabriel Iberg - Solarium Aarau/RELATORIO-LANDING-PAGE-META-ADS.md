@@ -268,7 +268,7 @@ Como Gabriel delegou as decisões, definimos o seguinte:
 | Anuidade Hospedagem (tour + site) | 1.021 | ✅ Pago |
 | **Total investido** | **10.612** | ✅ |
 
-*Nota: moeda registrada no VisionFlow a confirmar com Felipe (BRL ou CHF).*
+*Valores em BRL (confirmado por Felipe em 28/06/2026). Convertendo a ~5,5 BRL/CHF = ~CHF 1.930 total investido.*
 
 ---
 
@@ -291,10 +291,10 @@ Como Gabriel delegou as decisões, definimos o seguinte:
 - Contrato de manutenção mensal
 - Novo domínio
 
-**Preço sugerido: CHF 1.200**
-- Faixa de mercado Suíça para landing page profissional: CHF 1.000–1.500
-- Inclui tracking completo (Meta Pixel + GA4) que normalmente é add-on
-- Referência: site completo (8 páginas + i18n) foi cobrado a 2.553 — landing page focada é escopo menor
+**Preço: a definir com Romana** (referência Felipe: CHF 300)
+- Felipe sugere CHF 300 como ponto de partida — Romana confirma antes do envio da proposta
+- Escopo reduzido justifica valor menor: reutiliza 100% dos assets e componentes existentes
+- Valores anteriores pagos (BRL): site completo R$2.553 / anuidade R$1.021
 
 ---
 
