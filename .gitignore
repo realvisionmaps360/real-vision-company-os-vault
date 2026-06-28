@@ -1,0 +1,36 @@
+# Ignorar TUDO por padrão
+*
+
+# Permitir apenas arquivos .md e pastas (para navegar até eles)
+!*/
+!*.md
+
+# Permitir o próprio .gitignore (para a regra viajar para celular/VPS)
+!.gitignore
+
+# Bloquear repos git internos (evitar "repo dentro de repo")
+operacao/projetos/
+operacao/clientes/arquivos/MSV-Aarau/site/
+
+# Bloquear pastas com arquivos grandes ou desnecessários
+loja-imagens/
+TEMP/
+
+# Bloquear arquivos de sistema e config
+.obsidian/
+.claude/
+.env
+*.env
+node_modules/
+.git/
+*.log
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.pdf
+*.zip
+*.rar
+*.7z
