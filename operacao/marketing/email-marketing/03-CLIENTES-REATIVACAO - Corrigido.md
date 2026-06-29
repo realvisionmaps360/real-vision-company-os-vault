@@ -74,7 +74,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557381722288
 
 Oi, Seu Nery! Aqui é o Felipe, da Real Vision. Fiz o tour virtual do seu mercado lá em dezembro de 2024.
 
@@ -136,7 +136,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557181027561
 
 Oi, Jair! Aqui é o Felipe, da Real Vision. Fiz o tour da sua casa em dezembro de 2024.
 
@@ -200,7 +200,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557399544557
 
 Oi, Antônio! Aqui é o Felipe, da Real Vision. Trabalhei com você em dezembro, na época do Universo Paralello.
 
@@ -269,7 +269,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557381940236
 
 Oi, Jucélia! Aqui é o Felipe, da Real Vision. Quanto tempo, saudades da Bahia!
 
@@ -329,7 +329,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557185448077
 
 Oi, Getúlio! Aqui é o Felipe, da Real Vision. Fiz o tour virtual do Residencial Soares e Ferreira em janeiro.
 
@@ -392,7 +392,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557399368414
 
 Oi, Emerson! Aqui é o Felipe, da Real Vision. Fiz o tour virtual do Recanto da Natureza.
 
@@ -455,7 +455,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557181482469
 
 Oi, Messias! Aqui é o Felipe, da Real Vision. Fiz o tour virtual do Restaurante Pôr do Sol.
 
@@ -520,7 +520,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557399540693
 
 Oi, Betão! Aqui é o Felipe, da Real Vision. Fiz o tour da Pousada Cajueiro.
 
@@ -583,7 +583,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557191267286
 
 Oi, Zuleide! Aqui é o Felipe, da Real Vision. Saudades da ilha!
 
@@ -650,7 +650,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +5573981912122
 
 Oi, Fernanda! É o Felipe. Eu e a Romana com saudade do Siri Bar!
 
@@ -711,7 +711,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557398113507
 
 Bonjour, Didier! C'est Felipe, de Real Vision. J'ai fait les tours virtuels de vos propriétés à Barra Grande.
 
@@ -773,7 +773,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557399772424
 
 Oi, Kelly! Aqui é o Felipe, da Real Vision. Fiz o tour virtual da Pizzaria Baiana.
 
@@ -840,7 +840,7 @@ Real Vision 360
 
 ---
 
-**💬 WA 1**
+**💬 WA 1** · +557382382404
 
 Oi, Ian! Aqui é o Felipe, da Real Vision. Fiz o tour virtual do Barra Clube.
 
