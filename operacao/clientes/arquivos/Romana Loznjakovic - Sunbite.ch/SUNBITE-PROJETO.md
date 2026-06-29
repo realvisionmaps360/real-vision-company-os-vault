@@ -1,8 +1,27 @@
+---
+title: Sunbite.ch — Dossiê do Projeto
+tags:
+  - cliente
+  - ativo
+  - suica
+status: desenvolvimento
+data_inicio: 2026-05-01
+servicos:
+  - site
+  - convite-digital
+  - identidade-visual
+aliases:
+  - Sunbite
+  - Romana
+---
+
 # Sunbite.ch — Dossiê do Projeto
 
 > Cliente da Real Vision 360. Carregue sempre junto com a skill `realvision`.
 > Para trabalho no código do site, ativar a skill `sunbite-site`.
 > Idioma de trabalho com a cliente: Inglês / Alemão (Hochdeutsch).
+
+Ficha resumida: [[FICHA-CLIENTE]] · Linha do tempo: [[SUNBITE-TIMELINE]]
 
 ---
 
@@ -15,7 +34,7 @@
 - **Contato:** +41 76 583 52 22
 - **Localização:** Aarau, Suíça
 - **VisionFlow:** id `a1bbaea7-0081-48d1-bdeb-b945aa4794b1` · status `desenvolvimento`
-- **Posicionamento:** "Made for Sunny Days" · estética retrô-elegante creme + vermelho
+- **Posicionamento:** "Made for Sunny Days" · estética ==retrô-elegante creme + vermelho==
 
 ---
 
@@ -45,19 +64,19 @@ Stack obrigatória (detalhes completos na skill `sunbite-site`):
 
 ### 2. Convite digital — `sunbite.ch/invitation`
 
-Página **HTML standalone** (não React) para o Grand Opening (18. Juli 2026).
+Página **HTML standalone** (não React) para o ==Grand Opening: 18. Juli 2026==.
 
 - **Arquivo:** `public/invitation/index.html` (CSS + JS inline, Motion.js v11 via CDN)
 - **4 cards com flip 3D** (face → back) + fly-off entre cards + progress dots
 - **Bilíngue DE/EN** com toggle no topo
-- **Paleta da marca aplicada** (jun/2026): fundo creme `#F5EBDA`, vermelho `#8B1515` — alinhada à identidade "Strawberry Chocolate Cups"
-- **Capa (face):** mantém fundo chocolate escuro para efeito de revelação; logo circular `logo-oficial.png` centrado
-- Card 1: mensagem de revelação poética · Card 2: data/hora/local + botões Maps e 360° · Card 3: produto + preço **CHF 5.—** no Grand Opening · Card 4: encerramento + QR placeholder + restart
-- **Fix mobile-first (29/06/2026):** `body { height: 100dvh }` + `--vh` JS (iOS), card `92vw × min(175%, 82dvh)` → preenche a tela no celular
+- **Paleta da marca aplicada** (jun/2026): fundo creme `#F5EBDA`, vermelho `#8B1515`
+- **Capa (face):** fundo chocolate escuro para efeito de revelação; logo circular `logo-oficial.png` centrado
+- Card 1: mensagem de revelação poética · Card 2: data/hora/local + botões Maps e 360° · Card 3: produto + preço ==CHF 5.—== · Card 4: encerramento + QR placeholder + restart
+- **Fix mobile-first (29/06/2026):** `body { height: 100dvh }` + `--vh` JS (iOS), card `92vw × min(175%, 82dvh)`
 - Partículas flutuantes + shimmer + reduced-motion guard
 
 **Assets do convite** (`public/invitation/assets/`):
-- `logo-oficial.png` — logo circular Sunbite.ch (corrigido/centrado em 27/06)
+- `logo-oficial.png` — logo circular Sunbite.ch
 - `strawberry-cup.png` — copo de morango com chocolate
 - `logo-wordmark-tight.png` — wordmark (card 3)
 
@@ -69,13 +88,17 @@ Página **HTML standalone** (não React) para o Grand Opening (18. Juli 2026).
 - **GitHub:** `realvisionmaps360/sunbite-site`
 - **Deploy:** Vercel (auto-deploy a cada push em `main`)
 - **URLs:** `https://sunbite.ch` · `https://sunbite.ch/invitation`
-- ⚠️ Site em produção — **nunca** publicar sem OK explícito do Felipe.
-- ⚠️ Antes de mexer: `git pull` + `git status`.
+
+> [!danger] Produção ativa
+> Site em produção — **nunca** publicar sem OK explícito do Felipe.
+> Antes de mexer: `git pull` + `git status`.
 
 ### Pasta do cliente (documentação)
+
 `operacao/clientes/arquivos/Romana Loznjakovic - Sunbite.ch/`
-- `SUNBITE-PROJETO.md` — este dossiê
-- `SUNBITE-TIMELINE.md` — linha do tempo do projeto · veja [[SUNBITE-TIMELINE]]
+- [[SUNBITE-PROJETO]] — este dossiê
+- [[SUNBITE-TIMELINE]] — linha do tempo do projeto
+- [[FICHA-CLIENTE]] — contexto resumido para início de sessão
 - `dados.json` — export do VisionFlow
 - `arquivos/fotos/` — logos e fotos da marca
 
@@ -83,14 +106,17 @@ Página **HTML standalone** (não React) para o Grand Opening (18. Juli 2026).
 
 ## Pendências conhecidas
 
-- [ ] Toggle de idioma DE/EN pequeno demais no mobile (aumentar área clicável ≥ 44×44px)
-- [ ] QR Code real no card 4 do convite (hoje é placeholder)
-- [ ] Links reais de Google Maps e Tour 360° nos botões do card 2
-- [ ] Endereço exato do evento (hoje "Am Aareufer, Aarau")
-- [ ] Versão Alemã (DE) completa do site principal (copy em `content.ts`, seletor reservado no Header)
-- [ ] Datas reais de aparições na FindUsSection
-- [ ] Foto real da Romana na RomanaSection (substituir `emblem.jpg`)
-- [ ] Regenerar ícones Private Celebrations e Markets no Canva quando quota resetar
+> [!todo] Convite digital
+> - [ ] Toggle DE/EN pequeno demais no mobile — aumentar área clicável ≥ ==44×44px==
+> - [ ] QR Code real no card 4 (hoje é placeholder)
+> - [ ] Links reais de Google Maps e Tour 360° nos botões do card 2
+> - [ ] Endereço exato do evento (hoje "Am Aareufer, Aarau")
+
+> [!todo] Site principal
+> - [ ] Versão Alemã (DE) completa (copy em `content.ts`, seletor reservado no Header)
+> - [ ] Datas reais de aparições na FindUsSection
+> - [ ] Foto real da Romana na RomanaSection (substituir `emblem.jpg`)
+> - [ ] Regenerar ícones Private Celebrations e Markets no Canva quando quota resetar
 
 ---
 

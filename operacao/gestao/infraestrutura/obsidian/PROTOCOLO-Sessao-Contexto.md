@@ -98,7 +98,10 @@ O CLI do Obsidian vem embutido no app — não é instalado separado. Para ativa
 ## Integração com outras skills
 
 - **[[rv-novo-cliente]]** — cria a ficha ao cadastrar cliente novo
+- **[[rv-fim-sessao]]** — o maestro de encerramento: ao final da sessão atualiza esta ficha (fecha o círculo com este protocolo) e gera os demais artefatos
 - **[[rv-visionflow-handoff]]** — ao final da sessão, o resumo vai pro VisionFlow E pra ficha
 - **[[obsidian-cli]]** — a skill que ensina os comandos do CLI
+
+> Visão geral do ciclo completo (início → durante → fim) em [[CICLO-Sessao]].
 
 > Para a explicação técnica completa do CLI, ver [[REGISTRO-Tecnico]] e a skill `obsidian-cli`.

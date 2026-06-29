@@ -12,6 +12,7 @@
 | [[GUIA-Sincronizacao]] | Passo a passo simples: ligar PC e celular, resolver problemas | Felipe (linguagem não-técnica) |
 | [[REGISTRO-Tecnico]] | Estado do sistema, `.gitignore`, configs, histórico de bugs e soluções | Troubleshooting técnico |
 | [[PROTOCOLO-Sessao-Contexto]] | Como o Claude lê contexto de clientes via obsidian-cli ao iniciar sessão | Felipe + Claude |
+| [[CICLO-Sessao]] | Índice do ciclo completo de uma sessão: início (carrega ficha) → durante → fim (rv-fim-sessao) | Felipe + Claude |
 
 ---
 
