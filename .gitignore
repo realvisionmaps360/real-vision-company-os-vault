@@ -19,6 +19,7 @@ TEMP/
 # Bloquear arquivos de sistema e config
 .obsidian/
 .claude/
+.claude-skills/
 .env
 *.env
 node_modules/
