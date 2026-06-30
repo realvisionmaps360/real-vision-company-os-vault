@@ -9,6 +9,13 @@ Registro cronológico de todas as ingestas. Append-only.
 - Páginas criadas em `wiki/entities/`: ver index.md
 - Resumo: base completa de clientes mapeada com status, serviços e entregas reais
 
+## [2026-06-30] ingest | contexto/ + Felipe Garcia + email marketing | Varredura Lote 3
+- Criados em `wiki/concepts/`: rv-empresa, rv-time, rv-voz, rv-design, hermes-email-marketing
+- Criado em `wiki/entities/`: felipe-garcia
+- Criados em `wiki/sources/`: acquisition-timeline, acquisition-operating-system, campanha-paraty-pousadas
+- Índice atualizado com seções Fundadores e Marketing
+- Fontes: `contexto/EMPRESA.md`, `contexto/TIME.md`, `contexto/VOZ.md`, `contexto/DESIGN.md`, `Felipe Garcia/AGENTE.md`, `operacao/marketing/email-marketing/00-ESTRATEGIA.md`, `operacao/prospeccao/ACQUISITION-TIMELINE.md`, `operacao/prospeccao/ACQUISITION-OPERATING-SYSTEM.md`, `operacao/prospeccao/paraty-pousadas-contatos.md`
+
 ## [2026-06-29] entities + concepts criados | Varredura Lote 2
 - Criados 35 arquivos em `wiki/entities/` (todos os clientes da carteira)
 - Criados 7 arquivos em `wiki/concepts/` (tour-360, google-meu-negocio, website, cartao-digital, video-drone, chatbot-ia, termos-condicoes)

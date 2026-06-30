@@ -9,6 +9,14 @@ Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 
 ---
 
+## Entidades — Fundadores
+
+| Página | Papel |
+|---|---|
+| [[entities/felipe-garcia]] | Fundador & Estrategista |
+
+---
+
 ## Entidades — Clientes
 
 | Página | Empresa | Status |
@@ -64,6 +72,17 @@ Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 
 ---
 
+## Conceitos — Empresa
+
+| Página | Descrição |
+|---|---|
+| [[concepts/rv-empresa]] | Real Vision 360 — missão, pilares, portfólio, visão de expansão |
+| [[concepts/rv-time]] | Time — Felipe Garcia e Romana Loznjakovic |
+| [[concepts/rv-voz]] | Tom de voz e comunicação da Real Vision |
+| [[concepts/rv-design]] | Design system — paleta, tipografia, logos, stack frontend |
+
+---
+
 ## Conceitos — Prospecção e Aquisição
 
 | Página | Descrição |
@@ -73,6 +92,14 @@ Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 | [[concepts/campanha-paraty-2026]] | Campanha Paraty jun/2026 — 35 pousadas, 31 WA + 17 email |
 | [[concepts/socio-digital]] | Sócio Digital — produto/oferta de presença digital integrada |
 | [[concepts/icp-real-vision]] | Ideal Customer Profile — perfil de cliente alvo da RV |
+
+---
+
+## Conceitos — Marketing
+
+| Página | Descrição |
+|---|---|
+| [[concepts/hermes-email-marketing]] | Hermes — agente de email marketing (Resend + Supabase) |
 
 ---
 
