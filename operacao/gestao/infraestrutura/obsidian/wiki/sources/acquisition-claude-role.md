@@ -29,3 +29,8 @@ Define o papel do Acquisition Claude como maestro do funil de aquisição da Rea
 - [[concepts/acquisition-system]]
 - [[concepts/opportunity-score]]
 - [[concepts/campanha-paraty-2026]]
+
+## Conex�es
+- [[rv-empresa]]
+- [[felipe-garcia]]
+- [[acquisition-system]]

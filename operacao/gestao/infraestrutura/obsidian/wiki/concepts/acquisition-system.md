@@ -47,3 +47,7 @@ Papel interno da Real Vision 360 para encher e organizar o funil de aquisição 
 - [[campanha-paraty-2026]]
 - [[icp-real-vision]]
 - [[socio-digital]]
+
+## Conex�es
+- [[rv-empresa]]
+- [[felipe-garcia]]

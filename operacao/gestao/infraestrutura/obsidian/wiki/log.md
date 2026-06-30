@@ -9,6 +9,11 @@ Registro cronológico de todas as ingestas. Append-only.
 - Páginas criadas em `wiki/entities/`: ver index.md
 - Resumo: base completa de clientes mapeada com status, serviços e entregas reais
 
+## [2026-06-30] ingest | cursos + backlinks ICP | Varredura Lote 4
+- Criado em `wiki/sources/`: cursos-real-vision (3 cursos: Sócio Digital, Profissão 360°, Empresa com IA)
+- Expandido `wiki/concepts/icp-real-vision.md` com todos os 35 clientes classificados por tier (Tier A BA, Tier A Suíça, Alto potencial, Gastro, Anti-ICP)
+- Fontes: `operacao/cursos/` (README + 3 CONCEITO.md)
+
 ## [2026-06-30] ingest | contexto/ + Felipe Garcia + email marketing | Varredura Lote 3
 - Criados em `wiki/concepts/`: rv-empresa, rv-time, rv-voz, rv-design, hermes-email-marketing
 - Criado em `wiki/entities/`: felipe-garcia

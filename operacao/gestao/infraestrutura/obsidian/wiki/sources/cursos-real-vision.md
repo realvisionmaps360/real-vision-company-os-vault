@@ -55,3 +55,8 @@ porta de entrada          formação técnica            formação ampla
 - [[rv-empresa]]
 - [[socio-digital]]
 - [[hermes-email-marketing]]
+
+## Conexões
+- [[rv-empresa]]
+- [[socio-digital]]
+- [[felipe-garcia]]

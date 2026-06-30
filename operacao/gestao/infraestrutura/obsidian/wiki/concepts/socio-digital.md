@@ -41,3 +41,12 @@ Não é "empresa de tours" — é **presença digital integrada**. O tour é um 
 - `operacao/comercial/SOCIO_DIGITAL_COPY_NOVA.md`
 - [[concepts/icp-real-vision]]
 - [[acquisition-system]]
+
+## Clientes com S�cio Digital ativo ou em desenvolvimento
+[[entities/flavia-vila-dos-corais]], [[entities/eduardo-barqueiro]], [[entities/romano-sunbite]], [[entities/pedro-paraty-paradiso]], [[entities/francesco-fazenda-coroa-azul]]
+
+## Conex�es
+- [[rv-empresa]]
+- [[icp-real-vision]]
+- [[sources/cursos-real-vision]]
+- [[hermes-email-marketing]]

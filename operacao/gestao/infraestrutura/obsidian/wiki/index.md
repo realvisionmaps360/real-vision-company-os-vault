@@ -120,6 +120,7 @@ Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 | [[sources/acquisition-timeline]] | ACQUISITION-TIMELINE.md |
 | [[sources/acquisition-operating-system]] | ACQUISITION-OPERATING-SYSTEM.md (sumário) |
 | [[sources/campanha-paraty-pousadas]] | paraty-pousadas-contatos.md |
+| [[sources/cursos-real-vision]] | operacao/cursos/ (3 cursos) |
 
 ---
 

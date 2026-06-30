@@ -46,3 +46,9 @@ Primeira campanha estruturada de prospecção da Real Vision com o sistema Acqui
 - [[acquisition-system]]
 - [[opportunity-score]]
 - [[socio-digital]]
+
+## Conex�es
+- [[rv-empresa]]
+- [[acquisition-system]]
+- [[icp-real-vision]]
+- [[sources/campanha-paraty-pousadas]]

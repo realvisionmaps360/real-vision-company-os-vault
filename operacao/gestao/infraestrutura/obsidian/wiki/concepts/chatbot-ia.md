@@ -16,3 +16,8 @@ Automação de atendimento via chatbot com IA integrado ao site ou WhatsApp do cli
 
 ## Clientes com este serviço (histórico)
 [[dorival-brazilcomp]] (desativado jun/2026 junto ao encerramento do relacionamento)
+
+## Conexões
+- [[rv-empresa]]
+- [[socio-digital]]
+- [[hermes-email-marketing]]

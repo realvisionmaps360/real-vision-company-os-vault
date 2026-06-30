@@ -37,3 +37,9 @@ Primeira rodada Sócio Digital no novo banco + relatório semanal automatizado + S
 - [[acquisition-system]]
 - [[campanha-paraty-2026]]
 - [[opportunity-score]]
+
+## Conexões
+- [[acquisition-system]]
+- [[campanha-paraty-2026]]
+- [[opportunity-score]]
+- [[rv-empresa]]

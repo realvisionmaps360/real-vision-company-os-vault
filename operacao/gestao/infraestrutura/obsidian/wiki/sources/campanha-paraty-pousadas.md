@@ -40,3 +40,8 @@ Primeira campanha de prospecção em Paraty. Oferta: foto 360° aérea no Google Meu
 - [[eduardo-barqueiro]]
 - [[pedro-paraty-paradiso]]
 - [[acquisition-system]]
+
+## Conexões
+- [[campanha-paraty-2026]]
+- [[acquisition-system]]
+- [[rv-empresa]]

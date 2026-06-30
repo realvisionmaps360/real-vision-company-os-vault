@@ -35,3 +35,8 @@ Score de 0 a 100 que define a ordem de quem abordar primeiro no funil de aquisi√
 
 - [[sources/acquisition-claude-role]]
 - [[acquisition-system]]
+
+## Conexıes
+- [[acquisition-system]]
+- [[icp-real-vision]]
+- [[campanha-paraty-2026]]

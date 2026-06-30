@@ -37,12 +37,33 @@ Perfil do cliente que a Real Vision quer atrair. Definido no Operating System do
 - Decisor que já recusou e não quer ser abordado novamente (`do_not_contact`)
 - Segmentos sem fit remoto
 
-## Exemplos reais
+## Clientes por tier
 
-- **Tier A:** [[entities/gabriel-solarium-aarau]], [[entities/pedro-paraty-paradiso]], [[entities/modular-festival]]
-- **Convertido via campanha:** [[entities/eduardo-barqueiro]]
+**Tier A — Pousadas/resorts premium BA:**
+[[entities/antonio-pousada-caminho-da-praia]], [[entities/betao-pousada-cajueiro]], [[entities/didier-casa-dos-cajus]], [[entities/emerson-pousada-recanto]], [[entities/fernanda-siribar]], [[entities/flavia-vila-dos-corais]], [[entities/getulio-residencial-soares]], [[entities/ian-barra-club]], [[entities/jair-casa-barra-serinhaem]], [[entities/juscelia-fazenda-coqueirais]], [[entities/maria-cristina-shangri-la]], [[entities/moreno-pousada-galeao]], [[entities/nery-mercado-pratigi]], [[entities/raphael-casa-amarela]], [[entities/sadra-universo-paralello]], [[entities/sandra-casa-oba]], [[entities/senhor-costinha-canto-dos-passaros]], [[entities/zuleide-pousada-sol-da-ilha]]
+
+**Tier A — Internacionais (Suíça):**
+[[entities/gabriel-solarium-aarau]], [[entities/alexis-lafatas]], [[entities/msv-aarau]], [[entities/modular-festival]]
+
+**Tier A — Alto potencial (em proposta):**
+[[entities/pedro-paraty-paradiso]], [[entities/francisco-fazenda-coroa-azul]]
+
+**Convertidos via campanha:**
+[[entities/eduardo-barqueiro]]
+
+**Tier A — Restaurantes/gastro:**
+[[entities/fred-manga-rosa]], [[entities/kelly-pizzaria-baiana]], [[entities/messias-restaurante-por-do-sol]]
+
+**Anti-ICP (encerrados):**
+[[entities/dorival-brazilcomp]], [[entities/nesi-46-barber]], [[entities/papito-pizzaria]]
 
 ## Fontes
 
 - [[sources/acquisition-operating-system]]
 - [[acquisition-system]]
+
+## Conex�es
+- [[rv-empresa]]
+- [[acquisition-system]]
+- [[campanha-paraty-2026]]
+- [[opportunity-score]]

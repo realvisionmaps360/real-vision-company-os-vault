@@ -43,3 +43,11 @@ Ativar a skill `rv-contrato` com dados do cliente. Output: PDF com capa + resumo
 
 - [[termos-condicoes]]
 - [[socio-digital]]
+
+## Clientes com contrato formal registrado
+Contrato gerado via skill `rv-contrato`. Clientes com projeto ativo são candidatos.
+
+## Conexões
+- [[termos-condicoes]]
+- [[socio-digital]]
+- [[rv-empresa]]

@@ -16,3 +16,9 @@ Criação e otimização do perfil Google Meu Negócio (Google Business Profile) para
 
 ## Clientes com este serviço
 [[antonio-pousada-caminho-da-praia]], [[didier-casa-dos-cajus]], [[flavia-vila-dos-corais]], [[getulio-residencial-soares]], [[jair-casa-barra-serinhaem]], [[juscelia-fazenda-coqueirais]], [[nery-mercado-pratigi]], [[sandra-casa-oba]], [[zuleide-pousada-sol-da-ilha]]
+
+## Conexões
+- [[rv-empresa]]
+- [[icp-real-vision]]
+- [[tour-360]]
+- [[socio-digital]]

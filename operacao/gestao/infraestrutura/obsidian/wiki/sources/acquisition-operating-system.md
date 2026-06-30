@@ -29,3 +29,9 @@ Manual operacional permanente do Acquisition Claude. 15 seções que definem a lóg
 - [[acquisition-system]]
 - [[opportunity-score]]
 - [[icp-real-vision]]
+
+## Conexões
+- [[acquisition-system]]
+- [[icp-real-vision]]
+- [[opportunity-score]]
+- [[campanha-paraty-2026]]
