@@ -1,13 +1,13 @@
 # Protocolo de Contexto de Sessão — Obsidian CLI
 
-> Como o Claude carrega o contexto de um cliente automaticamente ao iniciar uma sessão.
+> Como o Claude usa o Obsidian CLI para trabalhar com a vault da Real Vision.
 > Criado em 29/06/2026. Ver também: [[README]] · [[GUIA-Sincronizacao]] · [[REGISTRO-Tecnico]]
 
 ---
 
 ## A ideia em uma frase
 
-Cada cliente tem um arquivo `FICHA-CLIENTE.md` na sua pasta dentro da vault. Ao iniciar uma sessão sobre um cliente, o Claude lê esse arquivo com o `obsidian-cli` — sem Felipe precisar colar o contexto na mão.
+O `obsidian-cli` é usado em **qualquer trabalho que envolva arquivos `.md`** da vault — seja sessão de cliente, projeto interno, prospecção ou pesquisa. Ele permite busca, leitura de backlinks, tags e metadados que o `Read` simples não oferece.
 
 ---
 

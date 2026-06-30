@@ -10,9 +10,11 @@ Permite que o Claude leia e escreva notas da vault sem abrir o Obsidian. Usado p
 - Atualizar a FICHA e a TIMELINE ao final
 - Pesquisar notas na vault via terminal
 
-## Uso típico
+## Quando usar
 
-Ativado automaticamente pelo [[PROTOCOLO-Sessao-Contexto]] no início de sessões de cliente.
+Em qualquer trabalho que envolva arquivos `.md` da vault — clientes, projetos, prospecção, pesquisa. Sempre que precisar buscar, ler backlinks, tags ou metadados.
+
+> Requer o Obsidian aberto. Ver [[PROTOCOLO-Sessao-Contexto]] para detalhes de ativação.
 
 ## Relacionadas
 
