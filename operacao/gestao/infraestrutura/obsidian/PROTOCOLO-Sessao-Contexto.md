@@ -1,13 +1,13 @@
 # Protocolo de Contexto de Sessão — Obsidian CLI
 
-> Como o Claude usa o Obsidian CLI para trabalhar com a vault da Real Vision.
+> Como o Claude carrega o contexto de um cliente automaticamente ao iniciar uma sessão.
 > Criado em 29/06/2026. Ver também: [[README]] · [[GUIA-Sincronizacao]] · [[REGISTRO-Tecnico]]
 
 ---
 
 ## A ideia em uma frase
 
-O `obsidian-cli` é usado em **qualquer trabalho que envolva arquivos `.md`** da vault — seja sessão de cliente, projeto interno, prospecção ou pesquisa. Ele permite busca, leitura de backlinks, tags e metadados que o `Read` simples não oferece.
+Cada cliente tem um arquivo `FICHA-CLIENTE.md` na sua pasta dentro da vault. Ao iniciar uma sessão sobre um cliente, o Claude lê esse arquivo com o `obsidian-cli` — sem Felipe precisar colar o contexto na mão.
 
 ---
 
@@ -97,10 +97,10 @@ O CLI do Obsidian vem embutido no app — não é instalado separado. Para ativa
 
 ## Integração com outras skills
 
-- **[[skills/rv-novo-cliente]]** — cria a ficha ao cadastrar cliente novo
-- **[[skills/rv-fim-sessao]]** — o maestro de encerramento: ao final da sessão atualiza esta ficha (fecha o círculo com este protocolo) e gera os demais artefatos
-- **[[skills/rv-visionflow-handoff]]** — ao final da sessão, o resumo vai pro VisionFlow E pra ficha
-- **[[skills/obsidian-cli]]** — a skill que ensina os comandos do CLI
+- **[[rv-novo-cliente]]** — cria a ficha ao cadastrar cliente novo
+- **[[rv-fim-sessao]]** — o maestro de encerramento: ao final da sessão atualiza esta ficha (fecha o círculo com este protocolo) e gera os demais artefatos
+- **[[rv-visionflow-handoff]]** — ao final da sessão, o resumo vai pro VisionFlow E pra ficha
+- **[[obsidian-cli]]** — a skill que ensina os comandos do CLI
 
 > Visão geral do ciclo completo (início → durante → fim) em [[CICLO-Sessao]].
 

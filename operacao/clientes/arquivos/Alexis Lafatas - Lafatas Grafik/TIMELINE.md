@@ -93,20 +93,6 @@
 
 ---
 
-## Tempo investido
-
-Controle de horas por sessão, para calcular o custo/hora real do Felipe como programador. Registro retroativo aplicado em 30/06/2026 — valores abaixo são **estimativa** baseada no volume de trabalho descrito no histórico (não foi cronometrado em tempo real).
-
-| Data | Sessão / Escopo | Estimativa |
-|---|---|---|
-| 28/05 – 24/06/2026 | Prospecção, negociação, proposta (HTML), aceite | ~2h |
-| 25/06/2026 | Auditoria técnica (Playwright), organização da pasta, setup Wix MCP, criação da skill `rv-lafatas` | ~3h |
-| 26–27/06/2026 | Fase 1 (SEO on-page em 7 páginas) + Fase 2 (Google Business Profile) + Fase 3 (Search Console/Analytics/llms.txt) + Fase 4 (Schema.org/GEO) | ~6h |
-| 27–28/06/2026 | Geração dos 2 relatórios PDF (PT-BR + DE) | ~1h30 |
-| **Total estimado até 28/06/2026** | | **~12h30** |
-
-A partir desta data, toda sessão de trabalho com o Lafatas adiciona uma linha nesta tabela.
-
 ## Arquivos do Projeto
 
 ```
