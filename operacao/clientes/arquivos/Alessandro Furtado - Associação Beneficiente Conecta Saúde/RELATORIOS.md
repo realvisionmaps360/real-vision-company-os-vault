@@ -40,6 +40,7 @@
 - Cliente recorrente — relatório mensal é obrigação contratual
 - Criar todos os relatórios atrasados o quanto antes e combinar com Alessandro como quer receber (acumulado ou mês a mês)
 - A partir de julho, enviar todo dia 12 do mês seguinte
+- **Marco importante (01/07/2026):** o Google Analytics (GA4) do site só começou a captar dados de verdade a partir de hoje (site migrado de Lovable pra Vercel + tag instalada). Os relatórios de Janeiro–Junho/2026 **não vão ter dado de tráfego real** — precisam ser montados só com o que já existia antes (entregas, marcos do projeto), sem métricas de visitantes. Ver detalhes técnicos em `FICHA-CLIENTE.md`, sessão 01/07/2026.
 
 
 
