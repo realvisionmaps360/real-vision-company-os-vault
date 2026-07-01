@@ -45,7 +45,7 @@ Os dois primeiros são **memória de relacionamento**; o terceiro é **continuid
 |---|---|---|
 | [[PROTOCOLO-Sessao-Contexto]] | Carrega a FICHA-CLIENTE do cliente | Início |
 | `rv-novo-cliente` | Cria pasta + docs + ficha de cliente novo | Cadastro |
-| [[rv-visionflow]] | Manual de segurança do CRM (pré-voo git, valores válidos, pitfalls) | Durante (se tocar o banco) |
+| [[skills/rv-visionflow]] | Manual de segurança do CRM (pré-voo git, valores válidos, pitfalls) | Durante (se tocar o banco) |
 | `rv-fim-sessao` | **Maestro** — orquestra os 3 artefatos de encerramento | Fim |
 | `rv-visionflow-handoff` | Gera só o texto do VisionFlow | Fim (chamado pelo maestro ou direto) |
 | `session-handoff` | Gera só o bilhete técnico pré-`/clear` | Fim (chamado pelo maestro ou direto) |

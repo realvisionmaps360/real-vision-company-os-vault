@@ -1,1 +1,0 @@
-![[Alexis Lafatas PLAN]]

@@ -1,1 +1,0 @@
-![[A_formula_do_lancamento_Jeff_Walker 2019]]
