@@ -70,18 +70,25 @@ fazer" e reforça o cuidado com o lugar. Também aparece nos reviews reais.
 
 ---
 
-## 5. Ângulo de copy escolhido
+## 5. Ângulo de copy e voz
 
-**PAS + StoryBrand**, tom consultor (VOZ.md), copy Hormoziana (curta, específica, sem em-dash).
+**Framework:** PAS + StoryBrand. **Princípios de copy:** rv-copy (pain is the pitch,
+especificidade, Value Equation). **Regras de escrita do Felipe:** sem em-dash entre frases,
+capitalização correta, nomes de marca exatos.
+
+> **Voz: é a do Solarium, não a da Real Vision.** Esta é uma LP de **cliente**. O `VOZ.md` da RV
+> (tom consultor-técnico) NÃO se aplica aqui como guia de tom. O tom da LP é o do próprio Solarium
+> Aarau: caloroso, simples, sensação de sol e bem-estar, premium sem ser pomposo. Referência de tom
+> = a copy que já existe no site do cliente (aarau-solarium.ch), não os materiais da RV.
 
 - **Herói:** o cliente que quer um bronzeado sem complicação.
-- **Guia:** Solarium Aarau — o lugar simples, aberto sempre, que resolve em minutos.
+- **Guia:** Solarium Aarau, o lugar simples, aberto sempre, limpo, que resolve em minutos.
 - **Plano (os 3 passos cashless):** escolher cabine → pagar com cartão/TWINT → entrar e relaxar.
 - **Sucesso:** pele bronzeada, sensação de sol, sem burocracia.
-- **Falha evitada:** perder tempo agendando, pagar com fricção, ficar pálido no momento errado.
+- **Falha evitada:** perder tempo agendando, pagar com fricção, filas, lugar duvidoso.
 
-**Headline candidata (a refinar na Fase 2):**
-"Perfect tan today. No appointment, no card. Just walk in." (fórmula resultado + sem-dor)
+**Headline candidata (validada com o Felipe, "no card" removido por ser ambíguo):**
+"Perfect tan today. No appointment. Just walk in." (fórmula resultado + sem-dor)
 
 ---
 
@@ -113,5 +120,21 @@ Fonte: collarium.ch (coletado 02/07/2026). Usar na seção de benefícios da LP:
 
 ---
 
+## 8. Prova social — requisito de reviews (Fase 2)
+
+O template de testimonials escolhido (21st.dev, "wall of love") mostra muitos cards. Meta:
+**~10 reviews 5 estrelas reais** do Google Meu Negócio do Solarium Aarau.
+Fonte: https://maps.app.goo.gl/dpr5DxRDBFuU6zBR9
+
+Priorizar reviews que mencionem:
+- **Limpeza / higiene do local** (dor #5, argumento central de confiança)
+- **Funcionários presentes, cordiais, prestativos** (mata a dor #4, apesar do autoatendimento)
+- Facilidade de uso, resultado do bronzeado, equipamentos novos/bem cuidados
+
+Manter o **nome real do autor**. Traduzir o texto original (DE/IT) para **inglês** (idioma da LP).
+
+---
+
 **Status:** rascunho para aprovação do Felipe. Nada inventado — tudo rastreável ao site do cliente,
-à auditoria CRO existente e a collarium.ch. Próximo passo após OK: Fase 2 (blueprint de conteúdo EN).
+à auditoria CRO existente e a collarium.ch. Próximo passo após OK: puxar os 10 reviews + Fase 2
+(blueprint de conteúdo EN).
