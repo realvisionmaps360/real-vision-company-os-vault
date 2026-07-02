@@ -55,14 +55,11 @@ P.S.: reparei que o Solarium ainda não tem um perfil otimizado no Google Busine
 
 ---
 
-## Pendência de decisão (canal de envio)
+## Decisão registrada (02/07/2026)
 
-O `rv-relatorio` usa `adm@realvisionmaps.com` como remetente padrão de documentos de cliente (não é lista de marketing). Já o Hermes/`rv-email` usa `contato@realvisionmaps.com` com infraestrutura de envio real (Resend + Supabase, DNS verificado) — essa é a peça que provavelmente você lembrava como "ferramenta de enviar automaticamente".
+Canal de envio: **manual**, via `adm@realvisionmaps.com` (padrão `rv-relatorio`, não a trilha do Hermes/Resend). Felipe optou por não abrir a infraestrutura do Hermes (`contato@realvisionmaps.com`, cadastro em `email_contatos`) para este cliente agora — fica registrado como opção futura, não como pendência ativa.
 
-Duas opções, preciso que você escolha:
-
-1. **Manual, como já estava no plano** — PDF gerado pelo `rv-relatorio`, você mesmo anexa e dispara pelo Gmail (ou eu crio o rascunho de verdade no Gmail pra você revisar e enviar). Sem infraestrutura nova, baixo risco, mas o "mensal recorrente" continua dependendo de alguém lembrar de disparar.
-2. **Via Hermes/Resend** — o relatório entra no fluxo já existente do Hermes (trilha "clientes ativos"), remetente muda pra `contato@realvisionmaps.com`, e fica pronto pra um gatilho recorrente de verdade no futuro (precisaria desenhar isso — não existe ainda). Path mais próximo do "automático" que você lembrava, mas é escopo maior: cadastrar o Gabriel no banco do Hermes (`email_contatos`), e o texto muda de tom (mais próximo de campanha do que de documento formal).
+Fluxo de envio: PDF gerado pelo `rv-relatorio` → Felipe anexa e dispara pelo Gmail (ou eu crio o rascunho de verdade no Gmail, se ele pedir). As regras de voz/estrutura do Hermes (assunto A/B, preview text, P.S., loop de autocrítica) seguem valendo — só o canal de disparo que é manual, não a qualidade do texto.
 
 ---
 
