@@ -1,1 +1,0 @@
-![[site-snapshot-completo-2026-06-26]]

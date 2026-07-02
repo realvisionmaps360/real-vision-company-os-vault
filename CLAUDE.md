@@ -1,4 +1,4 @@
-# Contexto Global — Felipe Garcia / Real Vision 360
+# Contexto Global — Felipe Garcia / Real Vision
 
 > **Company OS completo em:**
 > `C:\Users\Computador\Desktop\Real Vision\`
@@ -7,7 +7,7 @@
 
 ## Quem é o usuário (resumo de 30 segundos)
 
-- **Felipe Garcia** — fundador da Real Vision 360
+- **Felipe Garcia** — fundador da Real Vision
 - Trajetória: Local Guide do Google → câmera 360° + drone → vibe coder → engenheiro de IA
 - Operação **global** (cidades já atendidas: Itacaré, Barra Grande, Maraú, Igrapiúna, Ituberá — BA)
 - Idiomas: PT + EN fluente
