@@ -1,8 +1,8 @@
 # Mission 3 — Construção do Banco (Kickstart)
 
 > **Pré-requisito:** Mission 2 (arquitetura) aprovada em 20/06/2026 ✅
-> **Referência de arquitetura:** [`ACQUISITION-SYSTEM-ARCHITECTURE.md`](ACQUISITION-SYSTEM-ARCHITECTURE.md)
-> **Papel do agente:** [`ACQUISITION-CLAUDE.md`](ACQUISITION-CLAUDE.md)
+> **Referência de arquitetura:** [[ACQUISITION-SYSTEM-ARCHITECTURE]]
+> **Papel do agente:** [[ACQUISITION-CLAUDE]]
 
 ---
 
@@ -35,7 +35,7 @@ Transformar o desenho da Mission 2 em sistema funcionando. Ao final desta missã
 
 ### Fase 2 — Contrato de acesso ✅ CONCLUÍDA (25/06/2026)
 
-- [x] Arquivo [`ACQUISITION-CONTRACT.md`](ACQUISITION-CONTRACT.md) criado com: dedup 3 camadas, tipos de evento, regra de nunca escrever no VisionFlow, regra de `do_not_contact`, queries do relatório semanal.
+- [x] Arquivo [[ACQUISITION-CONTRACT]] criado com: dedup 3 camadas, tipos de evento, regra de nunca escrever no VisionFlow, regra de `do_not_contact`, queries do relatório semanal.
 
 ### Fase 3 — Atualizar as skills ✅ CONCLUÍDA (25/06/2026)
 

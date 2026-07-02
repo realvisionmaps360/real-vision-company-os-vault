@@ -47,7 +47,7 @@
 
 ### MÓDULO 1 — Google Meu Negócio *(a base da visibilidade local)*
 8 aulas. → **Resultado: cobrar de R$300 a R$800 por projeto.**
-*(Roteiro completo no arquivo `MODULO-1-google-meu-negocio.md`)*
+*(Roteiro completo no arquivo [[MODULO-1-google-meu-negocio]])*
 - **1.1** — Por que o Google Meu Negócio vale dinheiro
 - **1.2** — Criando o perfil do zero
 - **1.3** — Otimização: categoria, descrição e palavras-chave

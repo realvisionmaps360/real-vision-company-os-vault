@@ -33,9 +33,9 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 
 | Arquivo | O que é |
 |---|---|
-| `README.md` | Este índice — visão geral do projeto |
-| `CONCEITO.md` | **Grade-mestra**: os 6 módulos, todas as aulas, preços e modelos de venda |
-| `MODULO-1-google-meu-negocio.md` | **Roteiro pronto pra gravar** do Módulo 1 (8 aulas, com fala e tela) |
+| README.md | Este índice — visão geral do projeto |
+| [[CONCEITO]] | **Grade-mestra**: os 6 módulos, todas as aulas, preços e modelos de venda |
+| [[MODULO-1-google-meu-negocio]] | **Roteiro pronto pra gravar** do Módulo 1 (8 aulas, com fala e tela) |
 
 > Convenção: os próximos roteiros seguem o mesmo nome — `MODULO-2-...md`, `MODULO-3-...md`, etc. (padrão flat, igual ao Curso 01).
 

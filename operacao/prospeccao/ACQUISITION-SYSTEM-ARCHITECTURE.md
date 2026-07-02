@@ -1,7 +1,7 @@
 # Sistema de Aquisição — Arquitetura (Real Vision 360)
 
 > **Status:** Desenho aprovado · **Data:** 20/06/2026 · **Missão:** Mission 2
-> **Relacionado:** [ACQUISITION-CLAUDE.md](ACQUISITION-CLAUDE.md) (papel — Mission 1) · VisionFlow (CRM — destino do handover)
+> **Relacionado:** [[ACQUISITION-CLAUDE]] (papel — Mission 1) · VisionFlow (CRM — destino do handover)
 > **Escopo deste documento:** define *onde* e *como* os dados de aquisição vivem. **A construção do banco é a Mission 3** — este doc é o projeto, não a implementação.
 
 ---
@@ -145,5 +145,5 @@ Fora do escopo deste documento. Quando autorizada, faria:
 1. Criar o projeto Supabase novo (Acquisition DB).
 2. Rodar o SQL das tabelas (`prospects`, `prospect_events`, `campaigns`, `campaign_prospects`).
 3. Escrever os ajudantes de dedup/registro de evento.
-4. Atualizar `ACQUISITION-CLAUDE.md` + as 3 skills (`clarisso`, `rv-prospeccao`, `rv-relatorio`) com o contrato de acesso.
+4. Atualizar [[ACQUISITION-CLAUDE]] + as 3 skills (`clarisso`, `rv-prospeccao`, `rv-relatorio`) com o contrato de acesso.
 5. Migrar os dados de Paraty como a primeira campanha.

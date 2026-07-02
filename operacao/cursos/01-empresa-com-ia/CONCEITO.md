@@ -5,7 +5,7 @@
 **Nome provisório:** "Como Abrir uma Empresa com IA" — ou variação baseada no vídeo "A Crise e a Oportunidade da Inteligência Artificial"
 
 **Conceito central:**
-O curso ensina a metodologia completa para abrir qualquer empresa do zero usando IA — desde encontrar o problema até montar a arquitetura de agentes. O diferencial: a entrega prática inclui instalar e configurar o Sócio Digital (Claude Code + agentes), que se torna a infraestrutura de IA da empresa do aluno.
+O curso ensina a metodologia completa para abrir qualquer empresa do zero usando IA — desde encontrar o problema até montar a arquitetura de agentes. O diferencial: a entrega prática inclui instalar e configurar o [[03-socio-digital/CONCEITO|Sócio Digital]] (Claude Code + agentes), que se torna a infraestrutura de IA da empresa do aluno.
 
 **É literalmente:** Instalar o Sócio Digital + executar o Plano de Ação de 7 passos do vídeo.
 
@@ -33,7 +33,7 @@ Mesmo que a entrega do negócio não envolva IA (eletricista, dedetização, res
 - Treinamento de delegação: como pedir, como corrigir, como confiar
 
 ### MÓDULO 2 — O Plano de Ação (os 7 passos)
-Ver: `PLANO_ACAO.md`
+Ver: [[PLANO_ACAO]]
 
 ### MÓDULO 3 — Arquitetura de agentes para o seu negócio
 - Mapeamento de funções (canvas infinito)

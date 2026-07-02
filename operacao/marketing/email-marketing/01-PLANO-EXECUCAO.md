@@ -1,8 +1,8 @@
 # Plano de Execução — Hermes (Agente de Email Marketing RV)
 
 > Passo a passo completo até "tudo pronto e funcionando". Cada passo tem uma checagem de
-> sucesso. Marcar `[x]` quando concluído e registrar no `02-TIMELINE.md`.
-> Criado em 23/06/2026.
+> sucesso. Marcar `[x]` quando concluído e registrar no [[02-TIMELINE]].
+> Criado em 23/06/2026. Estratégia geral: [[00-ESTRATEGIA]].
 
 ---
 

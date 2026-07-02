@@ -51,7 +51,7 @@ Enviar o email com:
 - Como pesquisar a "capivara" do cliente
 - Regras de comunicação (texto sempre + aprovação do Felipe)
 
-**Template:** `EMAIL-ONBOARDING-TEMPLATE.md`
+**Template:** [[EMAIL-ONBOARDING-TEMPLATE]]
 
 ### Etapa 2 — Reunião de briefing (Google Meet)
 Cobrir na reunião:

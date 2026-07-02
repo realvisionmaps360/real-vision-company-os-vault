@@ -2,7 +2,7 @@
 
 > Diário de bordo vivo. **Regra:** ao final de toda sessão de trabalho no email marketing,
 > atualizar este arquivo (o que foi feito, decisões, próximo passo) e marcar os checkboxes
-> no `01-PLANO-EXECUCAO.md`. Datas em formato absoluto.
+> no [[01-PLANO-EXECUCAO]]. Datas em formato absoluto. Estratégia geral: [[00-ESTRATEGIA]].
 
 ---
 
@@ -77,7 +77,7 @@
   - Grupo B — vencendo agora (Fernanda, Didier, Kelly): janela de urgência natural.
   - Grupo C — ainda no prazo (Ian Marques): abordagem diferente ("chegando ao fim do período").
 - **Próximo passo:** Felipe envia a "capivara" (pesquisa) de cada cliente.
-  Arquivo de capivara em: `operacao/marketing/email-marketing/03-CLIENTES-REATIVACAO.md`.
+  Arquivo de capivara em: [[03-CLIENTES-REATIVACAO - Corrigido|03-CLIENTES-REATIVACAO]].
   Assim que tiver as capivaras, Hermes escreve Email 1 + WA 1 por segmento → revisão do Felipe → disparo.
 
 ## Decisões registradas

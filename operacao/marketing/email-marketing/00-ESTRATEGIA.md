@@ -146,8 +146,8 @@ Conecta com a skill `rv-prospeccao`.
 ---
 
 ## 8. Fontes
-Arquivos originais em `TEMP/email marketing/`:
-- `hormozi about email marketing.pdf`
-- `ferdy korpeskoek email tutorial.pdf`
-- `A_formula_do_lancamento_Jeff_Walker 2019.pdf`
-- `Lead Gen Jay email future with claude code.md`
+Arquivos transcritos em `operacao/marketing/email-marketing/referencias/`:
+- [[hormozi about email marketing]]
+- [[ferdy korpeskoek email tutorial]]
+- [[A_formula_do_lancamento_Jeff_Walker 2019]]
+- [[Lead Gen Jay email future with claude code]]

@@ -2,7 +2,7 @@
 
 > **Versão:** 1.0 · **Data:** 25/06/2026
 > **Banco:** `rv-acquisition` · Project ID: `gexacmtkjqectfqwhunv`
-> **Relacionado:** [ACQUISITION-DATA-MODEL.md](ACQUISITION-DATA-MODEL.md) · [ACQUISITION-CLAUDE.md](ACQUISITION-CLAUDE.md)
+> **Relacionado:** [[ACQUISITION-DATA-MODEL]] · [[ACQUISITION-CLAUDE]]
 
 Este é o contrato único que todos os agentes seguem ao operar o Acquisition DB. Qualquer agente novo — clarisso, rv-prospeccao, acquisition-claude, e futuros — segue estas regras sem exceção.
 

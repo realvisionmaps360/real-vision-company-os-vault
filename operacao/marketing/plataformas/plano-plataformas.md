@@ -2,7 +2,7 @@
 
 Documento de trabalho. Objetivo: colocar a Real Vision nas plataformas onde clientes contratam quem desenvolve sites, aplicações, tours virtuais 360°, chatbots e agentes de IA.
 
-Texto-base de apresentação: [`apresentacao-base-PT.md`](apresentacao-base-PT.md)
+Texto-base de apresentação: [[apresentacao-base-PT]]
 
 ---
 

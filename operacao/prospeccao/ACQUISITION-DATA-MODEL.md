@@ -2,7 +2,7 @@
 
 > **Status:** ✅ Congelado · **Data:** 24/06/2026 · **Missão:** Mission 3
 > **Aprovado por:** Felipe Garcia
-> **Relacionado:** [ACQUISITION-CLAUDE.md](ACQUISITION-CLAUDE.md) (Mission 1) · [ACQUISITION-SYSTEM-ARCHITECTURE.md](ACQUISITION-SYSTEM-ARCHITECTURE.md) (Mission 2) · [ACQUISITION-MISSION3-KICKSTART.md](ACQUISITION-MISSION3-KICKSTART.md) (construção)
+> **Relacionado:** [[ACQUISITION-CLAUDE]] (Mission 1) · [[ACQUISITION-SYSTEM-ARCHITECTURE]] (Mission 2) · [[ACQUISITION-MISSION3-KICKSTART]] (construção)
 > **Próxima etapa:** construção do banco (Supabase, SQL, RLS) conforme checklist do Kickstart
 
 ---
@@ -324,11 +324,11 @@ INDEX ON prospect_id
 
 # PARTE E — Próxima etapa (construção)
 
-Este documento é o projeto. A construção segue o checklist em [`ACQUISITION-MISSION3-KICKSTART.md`](ACQUISITION-MISSION3-KICKSTART.md):
+Este documento é o projeto. A construção segue o checklist em [[ACQUISITION-MISSION3-KICKSTART]]:
 
 1. Criar projeto Supabase `rv-acquisition` (separado do VisionFlow `ghwjetvazmdlaqidgxqi`).
 2. Rodar o SQL das 8 tabelas com índices e RLS.
-3. Escrever `ACQUISITION-CONTRACT.md` com as regras de acesso para todos os agentes.
-4. Atualizar `clarisso`, `rv-prospeccao` e `ACQUISITION-CLAUDE.md` com o contrato.
+3. Escrever [[ACQUISITION-CONTRACT]] com as regras de acesso para todos os agentes.
+4. Atualizar `clarisso`, `rv-prospeccao` e [[ACQUISITION-CLAUDE]] com o contrato.
 5. Migrar os dados de Paraty como primeira campanha.
-6. Documentar a query do relatório semanal em `ACQUISITION-CONTRACT.md`.
+6. Documentar a query do relatório semanal em [[ACQUISITION-CONTRACT]].
