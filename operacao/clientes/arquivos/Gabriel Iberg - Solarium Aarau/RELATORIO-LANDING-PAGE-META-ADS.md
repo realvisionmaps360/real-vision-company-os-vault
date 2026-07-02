@@ -152,12 +152,11 @@ Em qual domínio a landing page será publicada?
 - **Sistema completo (com ad management):** á combinar
 
 ### Avaliação para Solarium Aarau
-**Faixa provável:** CHF  – CHF 1.500
+**Faixa provável:** CHF 300 – CHF 700
 
 **Variáveis que podem alterar o preço:**
 - Implementação de tracking completo
 - Gestão de campanhas Meta
-- Contrato de manutenção mensal
 - Escopo final confirmado com Gabriel
 
 ---
