@@ -8,9 +8,9 @@
 > `operacao/comercial/SOCIO_DIGITAL_COPY_NOVA.md`.
 >
 > **Banco ativo (Mission 3 — construído 25/06/2026):** `rv-acquisition` · Project ID: `gexacmtkjqectfqwhunv`
-> **Contrato de acesso ao banco:** [`ACQUISITION-CONTRACT.md`](ACQUISITION-CONTRACT.md) — regras obrigatórias para todos os agentes
-> **Arquitetura de dados (Mission 2):** [`ACQUISITION-SYSTEM-ARCHITECTURE.md`](ACQUISITION-SYSTEM-ARCHITECTURE.md)
-> **Manual operacional / decisões (Mission 4):** [`ACQUISITION-OPERATING-SYSTEM.md`](ACQUISITION-OPERATING-SYSTEM.md) — como o agente pensa, decide e age em cada cenário.
+> **Contrato de acesso ao banco:** [[ACQUISITION-CONTRACT]] — regras obrigatórias para todos os agentes
+> **Arquitetura de dados (Mission 2):** [[ACQUISITION-SYSTEM-ARCHITECTURE]]
+> **Manual operacional / decisões (Mission 4):** [[ACQUISITION-OPERATING-SYSTEM]] — como o agente pensa, decide e age em cada cenário.
 
 ---
 
@@ -120,7 +120,7 @@ A partir de 25/06/2026, a fonte única é o banco `rv-acquisition`. Os arquivos 
 (`operacao/prospeccao/[cidade]-[segmento]-contatos.md`) continuam como **camada humana de trabalho**
 (mensagens prontas, checkboxes que Felipe copia/envia), mas o estado oficial de cada lead está no banco.
 
-**Para consultar o funil, usar as queries do [`ACQUISITION-CONTRACT.md`](ACQUISITION-CONTRACT.md).**
+**Para consultar o funil, usar as queries do [[ACQUISITION-CONTRACT]].**
 
 Os três status que acionam handover (`interessado` / `reuniao_marcada` / `proposta_enviada`) continuam
 sendo os gatilhos de passagem para o VisionFlow (seção 5). Todo lead em estado quente deve ter o

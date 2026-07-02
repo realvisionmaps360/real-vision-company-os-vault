@@ -2,7 +2,7 @@
 
 > Grade-mestra do curso. Documento de referência para gravação, montagem da área de membros e material de venda.
 > Criado em 28/06/2026. Fonte de verdade da estrutura — o site será alinhado a este documento depois, com OK do Felipe.
-> Índice do projeto: [[README]] · Marketing: [[ESTRATEGIA-LANCAMENTO]] · Cronograma: [[TIMELINE]] · As 3 perguntas: [[GUIA-3-PERGUNTAS]].
+> Índice do projeto: [[README]] · Marketing: [[ESTRATEGIA-LANCAMENTO]] · Cronograma: [[TIMELINE]] · As 3 perguntas: [[GUIA-3-PERGUNTAS]] · Copy de venda: [[SOCIO_DIGITAL_COPY_NOVA]].
 
 ---
 

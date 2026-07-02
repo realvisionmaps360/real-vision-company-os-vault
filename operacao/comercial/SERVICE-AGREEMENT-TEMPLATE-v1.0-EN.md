@@ -1,4 +1,4 @@
-<!-- Real Vision — Service Agreement (master template) · v1.0 (June 2026) · pairs with General Terms & Conditions v1.1 · merge fields use {{FIELD}} syntax -->
+<!-- Real Vision — Service Agreement (master template) · v1.0 (June 2026) · pairs with [[GENERAL-TERMS-CONDITIONS-v1.1-EN]] · merge fields use {{FIELD}} syntax · pareia com [[CONTRATO-PRESTACAO-SERVICOS-TEMPLATE-v1.0-PT]] -->
 
 # REAL VISION BRASIL LTDA
 
@@ -272,7 +272,7 @@ If no special conditions exist, this section shall be deemed not applicable.
 
 The Client acknowledges having received, read and accepted the document:
 
-REAL VISION – GENERAL TERMS AND CONDITIONS
+[[GENERAL-TERMS-CONDITIONS-v1.1-EN|REAL VISION – GENERAL TERMS AND CONDITIONS]]
 
 which forms an integral and inseparable part of this Agreement.
 

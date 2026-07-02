@@ -6,7 +6,9 @@
 
 *Em caso de conflito entre esta versão em português e eventual versão em inglês, a versão em português prevalece para contratos com clientes domiciliados no Brasil.*
 
-Estes Termos e Condições Gerais ("Termos") aplicam-se a todos os serviços prestados pela Real Vision Brasil Ltda ("Real Vision") e integram todo e qualquer orçamento, proposta, contrato ou ordem de serviço celebrado entre a Real Vision e seus clientes.
+Estes Termos e Condições Gerais ("Termos") aplicam-se a todos os serviços prestados pela Real Vision Brasil Ltda ("Real Vision") e integram todo e qualquer orçamento, proposta, [[CONTRATO-PRESTACAO-SERVICOS-TEMPLATE-v1.0-PT|contrato]] ou ordem de serviço celebrado entre a Real Vision e seus clientes.
+
+*Versão em inglês: [[GENERAL-TERMS-CONDITIONS-v1.1-EN]]*
 
 ---
 

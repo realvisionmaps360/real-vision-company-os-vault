@@ -1,4 +1,4 @@
-<!-- Real Vision — Contrato de Prestação de Serviços (template mestre) · v1.0 (junho 2026) · pareia com Termos e Condições Gerais v1.1 · campos de preenchimento usam a sintaxe {{CAMPO}} · tradução fiel do SERVICE-AGREEMENT-TEMPLATE-v1.0-EN — pendente de revisão do Felipe -->
+<!-- Real Vision — Contrato de Prestação de Serviços (template mestre) · v1.0 (junho 2026) · pareia com [[TERMOS-E-CONDICOES-GERAIS-v1.1-PT]] · campos de preenchimento usam a sintaxe {{CAMPO}} · tradução fiel do [[SERVICE-AGREEMENT-TEMPLATE-v1.0-EN]] — pendente de revisão do Felipe -->
 
 # REAL VISION BRASIL LTDA
 
@@ -272,7 +272,7 @@ Caso não existam condições especiais, esta seção será considerada não apl
 
 O Cliente declara ter recebido, lido e aceitado o documento:
 
-REAL VISION – TERMOS E CONDIÇÕES GERAIS
+[[TERMOS-E-CONDICOES-GERAIS-v1.1-PT|REAL VISION – TERMOS E CONDIÇÕES GERAIS]]
 
 que constitui parte integrante e inseparável deste Contrato.
 
