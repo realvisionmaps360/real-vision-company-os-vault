@@ -135,7 +135,7 @@ Em qual domínio a landing page será publicada?
 
 ### 5.6 Gestão de Anúncios
 **Situação:** Gabriel parece fazer seus próprios anúncios.  
-**Necessário confirmar:** Se quer que Real Vision cuide também da gestão de campanhas.
+
 
 ### 5.7 Manutenção Pós-Entrega
 **Necessário confirmar com Gabriel:**
@@ -147,12 +147,12 @@ Em qual domínio a landing page será publicada?
 ## 6. Faixa de Preço Discutida
 
 ### Análise de Mercado
-- **Landing page simples:** CHF 700 – CHF 1.200
-- **Landing page profissional:** CHF 1.500 – CHF 2.500
-- **Sistema completo (com ad management):** CHF 2.000 – CHF 4.000+
+- **Landing page simples:** CHF 300 – CHF 400
+- **Landing page profissional:** CHF 500 – CHF 700
+- **Sistema completo (com ad management):** á combinar
 
 ### Avaliação para Solarium Aarau
-**Faixa provável:** CHF 1.000 – CHF 1.500
+**Faixa provável:** CHF  – CHF 1.500
 
 **Variáveis que podem alterar o preço:**
 - Implementação de tracking completo
