@@ -10,7 +10,9 @@
 
 ## Versão em alemão (pronta para envio)
 
-**Betreff:** Ihr monatlicher Website-Bericht – Solarium & Collarium Aarau
+**Betreff (Variante A):** Ihr monatlicher Website-Bericht – Solarium & Collarium Aarau
+**Betreff (Variante B):** Wie lief der Monat für aarau-solarium.ch?
+**Preview-Text:** Zahlen, Trends und die nächsten Verbesserungsmöglichkeiten für deine Website.
 
 Hallo Gabriel,
 
@@ -22,13 +24,45 @@ Viele Grüße
 Felipe Garcia
 Real Vision 360
 
+P.S.: Mir ist aufgefallen, dass das Solarium noch kein optimiertes Google Business Profile hat. Für ein Geschäft mit Vor-Ort-Besuchen wie deins bringt das oft zusätzliche Kundschaft, die direkt über Google Maps nach "Solarium Aarau" sucht. Sag Bescheid, wenn du sehen möchtest, wie das aussehen könnte.
+
 ---
 
 ## Resumo em português (só para sua conferência)
 
-Assunto: "Seu relatório mensal do site — Solarium & Collarium Aarau"
+**Assunto A:** "Seu relatório mensal do site — Solarium & Collarium Aarau"
+**Assunto B:** "Como foi o mês para aarau-solarium.ch?"
+**Preview text:** "Números, tendências e as próximas oportunidades de melhoria do site."
 
 Corpo: Oi Gabriel, segue em anexo o relatório mensal do site (aarau-solarium.ch) com os principais números do Google Analytics e um resumo rápido das próximas oportunidades de melhoria que identificamos na última análise. Qualquer dúvida sobre os números ou se quiser priorizar alguma melhoria, é só chamar. Abraço, Felipe / Real Vision 360.
+
+P.S.: reparei que o Solarium ainda não tem um perfil otimizado no Google Business Profile — pra um negócio de visita física como o dele, isso costuma trazer gente que busca "Solarium Aarau" direto no Google Maps. É um gancho pra puxar assunto sobre o serviço, sem parecer venda forçada (o Gabriel decide se quer ver mais).
+
+---
+
+## Loop de autocrítica (skill `rv-email`/Hermes)
+
+| Checagem | Resultado |
+|---|---|
+| O email paga por si em <60s? | Sim — PDF anexado + resumo direto no corpo |
+| Tem 1 ideia só? | Sim — o relatório; o P.S. é gancho leve, não uma 2ª ideia central |
+| Voz correta (sem hipérbole, tom consultivo)? | Sim |
+| CTA claro? | Sim — "melde dich" / "é só chamar" |
+| P.S. está sendo usado? | Sim — gancho de upsell (Google Business Profile, catálogo item #3) |
+| Assunto + preview text têm variante B? | Sim |
+| Palavras de spam no corpo? | Nenhuma |
+| Gatilho Walker em jogo? | Reciprocidade (relatório grátis, de valor) + Confiança (dados transparentes) |
+
+---
+
+## Pendência de decisão (canal de envio)
+
+O `rv-relatorio` usa `adm@realvisionmaps.com` como remetente padrão de documentos de cliente (não é lista de marketing). Já o Hermes/`rv-email` usa `contato@realvisionmaps.com` com infraestrutura de envio real (Resend + Supabase, DNS verificado) — essa é a peça que provavelmente você lembrava como "ferramenta de enviar automaticamente".
+
+Duas opções, preciso que você escolha:
+
+1. **Manual, como já estava no plano** — PDF gerado pelo `rv-relatorio`, você mesmo anexa e dispara pelo Gmail (ou eu crio o rascunho de verdade no Gmail pra você revisar e enviar). Sem infraestrutura nova, baixo risco, mas o "mensal recorrente" continua dependendo de alguém lembrar de disparar.
+2. **Via Hermes/Resend** — o relatório entra no fluxo já existente do Hermes (trilha "clientes ativos"), remetente muda pra `contato@realvisionmaps.com`, e fica pronto pra um gatilho recorrente de verdade no futuro (precisaria desenhar isso — não existe ainda). Path mais próximo do "automático" que você lembrava, mas é escopo maior: cadastrar o Gabriel no banco do Hermes (`email_contatos`), e o texto muda de tom (mais próximo de campanha do que de documento formal).
 
 ---
 
