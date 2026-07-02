@@ -35,19 +35,26 @@ passar vergonha na primeira vez."
 
 ## 3. Dores concretas (matéria-prima do "pain is the pitch")
 
-A rv-copy manda vender no ponto de maior privação, descrevendo a dor em **momentos específicos**:
+Vender no ponto de maior privação, descrevendo a dor em **momentos específicos**.
+(Lista validada pelo Felipe em 02/07/2026.)
 
-1. **Pele pálida antes de um momento que importa.** Férias chegando, um evento, o verão começando, e
-   a pessoa se sente apagada nas fotos e ao lado dos outros.
-2. **Inverno suíço sem sol.** Meses de céu cinza, pouca luz, sensação de baixo-astral e falta de
+1. **Inverno suíço sem sol.** Meses de céu cinza, pouca luz, sensação de baixo-astral e falta de
    Vitamina D.
-3. **Fricção de agendamento.** Outros lugares exigem marcar horário, esperar atendente, criar conta.
+2. **Fricção de agendamento.** Outros lugares exigem marcar horário, esperar atendente, criar conta.
    Ela só queria entrar e sair.
-4. **Fricção de pagamento.** Só tem cartão/TWINT. Já passou raiva em lugar que só aceitava dinheiro
+3. **Fricção de pagamento.** Só tem cartão/TWINT. Já passou raiva em lugar que só aceitava dinheiro
    ou exigia comprar um cartão pré-pago antes de usar qualquer coisa.
-5. **Receio da primeira vez.** Não sabe operar a máquina, tem medo de errar na frente de alguém,
-   não sabe se o lugar é limpo.
+4. **Receio da primeira vez.** Não sabe operar a máquina, tem medo de errar na frente de alguém.
+   **Resolvido no local:** em cima de cada máquina há um monitor com tutorial em vídeo rodando o
+   tempo todo, mostrando como usar. Ninguém fica perdido.
+5. **Higiene / limpeza (dor forte).** Bronzeamento é contato de pele com equipamento compartilhado.
+   O medo de sujeira é real e afasta. O Solarium Aarau é reconhecido pela limpeza (aparece nos
+   reviews). Isso vira argumento central de confiança.
 6. **Medo do resultado artificial.** Quer um bronzeado natural e saudável, não "laranja".
+
+**Diferencial que ataca as dores 4 e 5:** apesar de ser autoatendimento, os **funcionários estão
+sempre presentes, são cordiais e prestativos**. Isso mata o medo de "ficar sozinho sem saber o que
+fazer" e reforça o cuidado com o lugar. Também aparece nos reviews reais.
 
 > Essas dores viram os hooks e as seções da LP. Cada seção responde a uma dessas dores.
 
@@ -58,8 +65,8 @@ A rv-copy manda vender no ponto de maior privação, descrevendo a dor em **mome
 | Eixo | Como o Solarium Aarau entrega | Como aparece na LP |
 |---|---|---|
 | **Rápido** | Aberto todo dia 06:00–24:00, sem hora marcada | Badge "Open now", "no appointment, just walk in" |
-| **Fácil** | Paga direto na máquina com cartão/TWINT e entra | Os 3 passos cashless, "no card, no account" |
-| **Sem risco** | Autoatendimento (sem constrangimento) + tour 360° pra ver antes + higiene | Seção "see it before you go" (tour) + prova social |
+| **Fácil** | Paga direto na máquina com cartão/TWINT e entra; tutorial em vídeo em cada máquina | Os 3 passos cashless, "no account", "video guide on every machine" |
+| **Sem risco** | Sempre limpo, funcionários presentes e cordiais, tour 360° pra ver antes | Seção de higiene + "see it before you go" (tour) + prova social real |
 
 ---
 
