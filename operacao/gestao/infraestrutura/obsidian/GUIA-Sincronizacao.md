@@ -4,7 +4,7 @@
 > Criado em 28/06/2026. Veja também: [[REGISTRO-Tecnico]] (a parte técnica) e [[README]] (índice da base Obsidian).
 
 ---
-![[CLAUDE]]
+
 ## A ideia em uma frase
 
 Suas notas ficam no computador. Uma cópia fica guardada no **GitHub** (um "cofre" na internet). O celular pega desse cofre. Resultado: você escreve em qualquer aparelho e aparece no outro — sozinho.
