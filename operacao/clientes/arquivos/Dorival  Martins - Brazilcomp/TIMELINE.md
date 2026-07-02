@@ -1,7 +1,7 @@
 # BrazilComp — Cronologia do Cliente
 
 > Log de eventos relevantes do relacionamento com a BrazilComp (Dorival Martins).
-> Início do registro: 28/05/2026.
+> Início do registro: 28/05/2026. Dados de Analytics: [[ANALYTICS-FINAL]].
 
 ---
 

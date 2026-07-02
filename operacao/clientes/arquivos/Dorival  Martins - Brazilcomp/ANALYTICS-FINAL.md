@@ -3,7 +3,7 @@
 > Documentação interna dos dados do Google Analytics.
 > Coletado em: 25/06/2026. Encerramento do serviço: 26/06/2026.
 
-**Relacionados:** [TIMELINE](TIMELINE.md) | [Alinhamento 11-06-26](BrazilComp_Alinhamento_11-06-26.pdf) | [Relatório 11-05-26](BrazilComp_Relatorio_11-05-26.pdf)
+**Relacionados:** [[TIMELINE]] | [Alinhamento 11-06-26](BrazilComp_Alinhamento_11-06-26.pdf) | [Relatório 11-05-26](BrazilComp_Relatorio_11-05-26.pdf)
 
 ---
 

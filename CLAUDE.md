@@ -31,13 +31,13 @@ Claude Code (desenvolvimento de sites e apps) · Pano2VR · Câmera 360° + Dron
 - **Idioma:** Português brasileiro sempre
 - **Site real:** Nunca mexer em produção sem autorização explícita
 - **Company OS:** source of truth é `C:\Users\Computador\Desktop\Real Vision\`. Quando identificar info nova, AVISAR antes de atualizar — apresentar mudança e esperar OK
-- **Antes de verificar qualquer arquivo do site:** executar `git pull origin main` na pasta `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\real-vision-site` para sincronizar com o GitHub
+- **Antes de verificar qualquer arquivo do site:** executar `git pull origin main` na pasta `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\real-vision-site` para sincronizar com o GitHub
 
 ## Links
 
 - Site: https://realvisionmaps.com
 - Repositório GitHub: https://github.com/realvisionmaps360/real-vision-core
-- Repo local: `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\real-vision-site`
+- Repo local: `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\real-vision-site`
 - YouTube: https://www.youtube.com/@RealVisionMaps
 
 ## Projetos Internos

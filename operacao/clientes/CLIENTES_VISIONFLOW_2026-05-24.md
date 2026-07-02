@@ -161,6 +161,8 @@ Escopo do Trabalho:Criação de Landing Page no dominio https://viladoscorais.co
 ---
 ## Gabriel Iberg — Solarium Aarau
 
+> Ficha completa: [[Gabriel Iberg - Solarium Aarau/FICHA-CLIENTE|FICHA-CLIENTE]]
+
 - **Status:** entregue
 - **Arquivado:** False
 - **Localização:** Aarau Suiça
@@ -410,6 +412,8 @@ Maria, boa tarde. Quero esclarecer com calma e transparência tudo o que foi fei
 ---
 ## Alexis Lafatas — Lafatas (Gráfica)
 
+> Briefing e timeline: [[Alexis Lafatas - Lafatas Grafik/BRIEFING|BRIEFING]]
+
 - **Status:** prospecção
 - **Arquivado:** False
 - **Localização:** Aarau, Suíça 🇨🇭
@@ -430,6 +434,8 @@ Amigo da Romana. Trabalha com gráfica na Suíça. Precisa de upgrade no site. C
   - Contatar durante ou após visita da Romana em junho/2026
 ---
 ## MSV Aarau — Swiss Military Association
+
+> Briefing: [[MSV-Aarau/BRIEFING|BRIEFING]]
 
 - **Status:** prospecção
 - **Arquivado:** False
@@ -650,6 +656,8 @@ Vou explicar pra voce meu amigo tudo resumido e o porque de cada um: 🛡️ Seg
 ---
 ## Alessandro Furtado — Associação Beneficiente Conecta Saúde 
 
+> Relatórios: [[Alessandro Furtado/RELATORIOS|RELATORIOS]]
+
 - **Status:** recorrente
 - **Arquivado:** False
 - **Localização:** São  Bernardo do Campo
@@ -672,6 +680,8 @@ Vou explicar pra voce meu amigo tudo resumido e o porque de cada um: 🛡️ Seg
   (nenhum)
 ---
 ## Dorival  Martins — Brazilcomp
+
+> Cronologia e analytics: [[Dorival  Martins - Brazilcomp/TIMELINE|TIMELINE]]
 
 - **Status:** recorrente
 - **Arquivado:** False

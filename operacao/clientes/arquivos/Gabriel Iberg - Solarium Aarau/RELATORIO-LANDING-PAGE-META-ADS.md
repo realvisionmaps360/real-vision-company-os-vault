@@ -1,5 +1,7 @@
 # RELATÓRIO – LANDING PAGE SOLARIUM AARAU
 
+> Ficha do cliente: [[FICHA-CLIENTE]] · Cronologia: [[TIMELINE-DESENVOLVIMENTO-LANDING-PAGE]]
+
 **Cliente:** Gabriel (Solarium Aarau)  
 **Projeto:** Landing Page para campanhas Meta Ads  
 **Responsável:** Real Vision (Felipe Garcia)  

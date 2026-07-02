@@ -1,5 +1,7 @@
 # Alexis Lafatas — Lafatas Photography & Print
 
+> Histórico de sessões: [[TIMELINE]]
+
 ## Regras de atendimento (Claude)
 
 - **Idioma das mensagens:** sempre apresentar as duas versões — 🇧🇷 português (para Felipe revisar) + 🇩🇪 alemão (para enviar ao cliente)

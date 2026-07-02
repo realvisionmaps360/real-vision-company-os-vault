@@ -1,5 +1,7 @@
 # Auditoria CRO Completa — Solarium Aarau
 
+> Ficha do cliente: [[FICHA-CLIENTE]]
+
 **Data:** 2026-06-24  
 **Objetivo:** Aumentar visitas físicas e clientes recorrentes  
 **Site:** https://www.aarau-solarium.ch  

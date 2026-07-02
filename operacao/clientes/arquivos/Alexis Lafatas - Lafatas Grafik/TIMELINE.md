@@ -1,5 +1,7 @@
 # Timeline — Alexis Lafatas / Lafatas Photography & Print
 
+> Dados do cliente e proposta: [[BRIEFING]]
+
 **Status atual:** ✅ Cliente ativo — aguardando credenciais de acesso
 **Orçamento aprovado:** CHF 300 (24/06/2026)
 **Meta:** Site Wix 100% otimizado para SEO local em Aarau

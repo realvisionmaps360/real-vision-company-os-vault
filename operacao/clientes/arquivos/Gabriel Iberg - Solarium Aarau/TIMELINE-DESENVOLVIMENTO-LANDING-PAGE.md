@@ -1,5 +1,7 @@
 # TIMELINE – DESENVOLVIMENTO LANDING PAGE SOLARIUM AARAU
 
+> Ficha do cliente: [[FICHA-CLIENTE]] · Relatório: [[RELATORIO-LANDING-PAGE-META-ADS]]
+
 **Projeto:** Landing Page Meta Ads para Solarium Aarau  
 **Cliente:** Gabriel  
 **Data Início:** 2026-06-24  

@@ -37,3 +37,9 @@ Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision 360 
 - Primeiro cliente internacional da Real Vision 360
 - Ponto de referência para expansão na Suíça/Europa
 - Contato via Romana Loznjakovic
+
+## Conexões
+
+- [[AUDITORIA-CRO-SOLARIUM]] — auditoria de conversão da landing page
+- [[RELATORIO-LANDING-PAGE-META-ADS]] — relatório de performance de Meta Ads
+- [[TIMELINE-DESENVOLVIMENTO-LANDING-PAGE]] — cronologia do desenvolvimento
