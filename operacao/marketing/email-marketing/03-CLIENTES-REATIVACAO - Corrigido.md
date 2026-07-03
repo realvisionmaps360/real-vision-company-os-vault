@@ -430,9 +430,9 @@ Messias,
 
 Passei no perfil do Restaurante Pôr do Sol hoje.
 
-Primeira coisa importante: o período de 1 ano do tour virtual venceu. O tour ainda está no ar por enquanto, mas para manter ele ativo no seu perfil do Google são R$100/ano. Sem renovação, ele sai do ar em breve.
+Primeira coisa importante: o período de 1 ano do tour virtual venceu. O tour ainda está no ar por enquanto, mas para manter ele ativo e online  são R$100/ano. Sem renovação, ele sai do ar em breve.
 
-Segunda coisa: o Instagram não tem nenhum link na bio. Quando alguém descobre o restaurante por lá e quer saber mais, ver o cardápio, reservar ou ligar, não tem nenhuma saída. Com o YouTube que você já tem e o tour virtual, um site próprio juntaria tudo isso e ainda apareceria no Google quando as pessoas pesquisarem restaurante na região.
+Segunda coisa: o seu Instagram não tem nenhum link na bio. Quando alguém descobre o restaurante por lá e quer saber mais, ver o cardápio, reservar ou ligar, não tem nenhuma saída. Com o tour virtual, um site próprio juntaria tudo isso e ainda apareceria no Google quando as pessoas pesquisarem restaurante na região.
 
 Veja um exemplo de site com tour integrado que fizemos para um restaurante: realvisionmaps.com/portfolio/manga-rosa-garden
 
