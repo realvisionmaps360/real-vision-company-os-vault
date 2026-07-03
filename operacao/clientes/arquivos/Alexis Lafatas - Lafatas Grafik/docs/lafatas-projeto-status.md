@@ -1,5 +1,5 @@
 # Lafatas Photography & Print — Status SEO
-**Última atualização:** 2026-06-27
+**Última atualização:** 2026-07-03
 
 ---
 
@@ -146,8 +146,24 @@ Nichos incluídos: saúde, hotel, empresa, arquitetura, pessoa física.
 | robots.txt otimizado | ✅ |
 | Google Analytics GA4 conectado (`G-9LWP8DSS3K`) | ✅ recebendo dados |
 
+## Relatório v2 (HTML) ✅ CONCLUÍDO 03/07/2026
+
+`Lafatas_Relatorio-SEO_02-07-26_v2.html` — revisão do relatório com prints reais embutidos e ajustes de conteúdo pedidos pelo Felipe. Ver detalhes completos na skill `rv-lafatas` (seção "Relatório v2"). Resumo:
+- 2 opções (não 3) para personalizar o título discreto/invisível da página.
+- Tabelas de SEO por página mostram só o resultado final (título + descrição), sem coluna "antes".
+- Callout novo explicando o algoritmo do Google antes da seção de GBP.
+- Callout de destaque para Google Merchant Center (produtos cadastrados), com o logo oficial — marcado como próxima venda condicionada ao interesse do Alexis.
+- Novo item nos próximos passos: imagem 360° aérea no perfil GBP (CHF 10 a mais, drone próprio da RV) — perfil dele não tem nenhuma imagem 360° hoje.
+- Removida a promessa de "texto de convite pronto" para avaliações (ainda não existe) e o "Guia de Analytics" (vai ser ensinado na call de entrega, não por documento).
+
+## Baseline Analytics + Search Console (interno, não no relatório do cliente)
+
+Capturada em 03/07/2026 — ver `docs/analytics-baseline-julho-2026.md`. GA4 só começou a coletar dados em ~26/06/2026, então é baseline "dia 1", sem comparação real ainda. Felipe decidiu não apresentar esses números pro Alexis por enquanto.
+
 ## Próximo
 
-- [ ] Relatório para o Alexis (PDF com antes/depois) — escopo contratado
-- [ ] Guia de Analytics para o Alexis (como acessar os dados)
-- [ ] Upsell: Google Merchant Center (proposta de serviço adicional)
+- [x] Relatório para o Alexis (HTML v2 com antes/depois) — concluído 03/07/2026
+- [ ] Ensinar Alexis a acessar o Analytics durante a call de entrega
+- [ ] Propor Google Merchant Center (já com destaque visual no relatório v2)
+- [ ] Propor imagem 360° aérea no perfil GBP (CHF 10) — condicionado ao interesse
+- [ ] Pedir a Alexis acesso de leitura ao GA4 + Search Console pra uma conta da Real Vision (destrava MCP pros próximos relatórios)
