@@ -493,11 +493,11 @@ Dá uma olhada quando puder?
 
 ---
 
-Betão,
+Betão e família,
 
 Passei no perfil da Pousada Cajueiro hoje. O Google Meu Negócio está ótimo, tudo organizado, WhatsApp no lugar certo.
 
-Mas tem uma coisa importante: o período de 1 ano do tour virtual venceu. O tour ainda está no ar por enquanto, mas para manter ele ativo no seu perfil do Google são R$100/ano. Sem renovação, ele sai do ar em breve.
+Mas tem uma coisa importante: o período de 1 ano do tour virtual venceu. O tour ainda está no ar por enquanto, mas para manter ele ativo no seu perfil do Google são R$100/ano com desconto. Sem renovação, ele sai do ar em breve.
 
 E uma coisa que notei no Instagram: o link na bio está indo direto para o WhatsApp, em vez de apontar para o tour. Quem descobre a pousada pelo Instagram e quer conhecer o espaço antes de reservar não encontra o tour. É exatamente o tour que convence o cliente a escolher a sua pousada.
 
