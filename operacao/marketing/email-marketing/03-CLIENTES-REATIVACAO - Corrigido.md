@@ -688,15 +688,15 @@ Didier,
 
 Passei no seu perfil hoje para checar o tour virtual. Ele está online e funcionando no Google Meu Negócio.
 
-Mas notei uma coisa: seu Linktree no Instagram tem o WhatsApp e o Google Maps, e não tem o tour. Quem descobre a Casa dos Cajus ou a Pousada Fruta Pão pelo Instagram e quer conhecer o espaço antes de reservar, não encontra o tour em lugar nenhum.
+Mas notei uma coisa: seu Linktree no Instagram tem o WhatsApp e o Google Maps, e não tem o tour. Quem descobre a Casa dos Cajus ou a Pousada Fruta Pão pelo Instagram e quer conhecer o espaço antes de reservar, não encontra o tour em lugar nenhum ( fora dentro do perfil do Google)
 
 Adicionar o link do tour no Linktree leva dois minutos e não tem custo. Te mando o link certo para adicionar se quiser.
 
-Sobre o tour: o período de 1 ano está chegando ao fim. Para manter ele ativo no seu perfil do Google por mais 1 ano, são R$100.
+Sobre o tour: o período de 1 ano está chegando ao fim. Para manter ele ativo no seu perfil do Google por mais 1 ano, são R$200.
 
 Aqui está o que posso oferecer:
 
-- Renovação do tour: R$100/ano
+- Renovação do tour: R$200/ano
 - Domínio próprio: R$40/ano
 - Cartão digital: a partir de R$300/ano
 - Landing page: a partir de R$800/ano
@@ -749,9 +749,9 @@ Kelly,
 
 Entrei no seu endereço hoje. A Pizzaria Baiana tem domínio próprio, tem tour virtual, e o domínio aponta direto para o tour. Isso é mais do que a maioria dos restaurantes tem.
 
-Mas o período do tour está vencendo agora. Para manter ele no ar por mais 1 ano, são R$100.
+Mas o período do tour está vencendo agora. Para manter ele no ar por mais 1 ano, são R$200.
 
-E enquanto você decide sobre renovar, há uma coisa que vale pensar: quando alguém digita o endereço da pizzaria e vai direto pro tour, não vê cardápio, não vê horários, não vê endereço, não consegue fazer reserva. O tour é ótimo para mostrar o ambiente, mas quem quer comer precisa dessas informações antes de sair de casa.
+E enquanto você decide sobre renovar, há uma coisa que vale pensar: quando alguém digita o endereço da pizzaria e vai direto pro tour, não vê cardápio, não vê horários,  não consegue fazer reserva. O tour é ótimo para mostrar o ambiente, mas quem quer comer precisa dessas informações antes de sair de casa.
 
 Um site dentro do domínio que você já tem resolveria isso. Você já tem o domínio. Você já tem o tour, que ficaria integrado dentro do site. Faltaria só criar as páginas.
 
@@ -759,7 +759,7 @@ Veja um exemplo de site com tour integrado que fizemos para um restaurante: real
 
 Aqui está o que ofereço:
 
-- Renovação do tour: R$100/ano
+- Renovação do tour: R$200/ano
 - Site profissional dentro do seu domínio (com tour integrado, cardápio, contato e analytics): a partir de R$1.500/ano
 - Cartão digital: a partir de R$300/ano
 - Landing page: a partir de R$800/ano
