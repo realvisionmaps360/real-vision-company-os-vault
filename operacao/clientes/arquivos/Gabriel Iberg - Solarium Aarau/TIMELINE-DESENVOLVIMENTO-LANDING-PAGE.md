@@ -39,10 +39,10 @@ Cada fase tem:
 
 ### Tarefa 0.3: Calcular Orçamento Final
 - **Status:** ✅ Concluída
-- **Valor definido:** CHF 1.200 (inclui landing page completa + tracking)
+- **Valor definido:** CHF 600, dividido em 3 partes — Estratégia & Texto (CHF 190) + Design & Desenvolvimento (CHF 320) + Rastreamento de Campanhas (CHF 90) (valor final confirmado por Felipe em 03/07/2026, substitui a estimativa anterior de CHF 1.200)
 
 ### Tarefa 0.4: Criar Proposta Comercial
-- **Status:** ⏳ Pendente — será enviada junto com o link da landing page pronta
+- **Status:** ✅ Concluída (03/07/2026) — HTML gerado em PT (revisão interna) e DE (versão para o Gabriel), formato honeycomb padrão Real Vision
 - **Estratégia:** mostrar o produto pronto antes de pedir aprovação formal
 
 ### Tarefa 0.5: Enviar Link Provisório + Proposta ao Gabriel
@@ -347,7 +347,7 @@ Projeto: ~15% Concluído
 
 Gabriel delegou todas as decisões à Real Vision (17/06). Escopo, domínio, tracking e manutenção definidos. **Desenvolvimento pode começar imediatamente.**
 
-**Estratégia de entrega:** construir a landing page → deploy em URL provisória Vercel → enviar link ao Gabriel junto com a proposta CHF 1.200 para aprovação.
+**Estratégia de entrega:** construir a landing page → deploy em URL provisória Vercel → enviar link ao Gabriel junto com a proposta CHF 600 para aprovação.
 
 ---
 

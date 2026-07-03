@@ -292,9 +292,10 @@ Como Gabriel delegou as decisões, definimos o seguinte:
 - Contrato de manutenção mensal
 - Novo domínio
 
-**Preço: a definir com Romana** (referência Felipe: CHF 300)
-- Felipe sugere CHF 300 como ponto de partida — Romana confirma antes do envio da proposta
-- Escopo reduzido justifica valor menor: reutiliza 100% dos assets e componentes existentes
+**Preço final: CHF 600** (confirmado por Felipe em 03/07/2026), dividido em 3 partes:
+- Estratégia & Texto (diagnóstico + pesquisa de público + curadoria de reviews + copy) — CHF 190
+- Design & Desenvolvimento (design visual + implementação da LP) — CHF 320
+- Rastreamento de Campanhas (Meta Pixel + GA4) — CHF 90
 - Valores anteriores pagos (BRL): site completo R$2.553 / anuidade R$1.021
 
 ---
@@ -307,7 +308,7 @@ Como Gabriel delegou as decisões, definimos o seguinte:
 | 2. Deploy Vercel com URL provisória | Felipe | ⏳ Após desenvolvimento |
 | 3. Implementar Meta Pixel + GA4 | Felipe | ⏳ Junto com dev |
 | 4. Romana revisa copy alemão | Romana | ⏳ Paralelo ao dev |
-| 5. Enviar link provisório + proposta CHF 1.200 ao Gabriel | Felipe/Romana | ⏳ Após deploy |
+| 5. Enviar link provisório + proposta CHF 600 ao Gabriel | Felipe/Romana | ⏳ Após deploy |
 | 6. Aguardar aprovação do Gabriel | Gabriel | ⏳ |
 | 7. Ajustes finais → deploy em produção | Felipe | ⏳ |
 

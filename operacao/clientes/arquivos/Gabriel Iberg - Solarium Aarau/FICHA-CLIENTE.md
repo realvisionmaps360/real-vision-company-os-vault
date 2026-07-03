@@ -28,8 +28,15 @@ Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision 360 
 
 ## Próximos passos
 
+- [ ] Enviar proposta da Landing Page (CHF 600) ao Gabriel, via Romana, junto com o link provisório
 - [ ] Follow-up pós-entrega: satisfação e possibilidade de outros serviços
 - [ ] Oportunidade: outros clientes suíços via indicação do Gabriel
+
+## Projeto em andamento — Landing Page Meta Ads (03/07/2026)
+
+- Proposta comercial gerada: CHF 600, dividido em Estratégia & Texto (190) + Design & Desenvolvimento (320) + Rastreamento (90)
+- Documentos: `Solarium-Aarau_Proposta-LandingPage_03-07-26_PT.html` (revisão interna) e `_DE.html` (versão para o Gabriel)
+- Detalhes completos em [[RELATORIO-LANDING-PAGE-META-ADS]] e [[TIMELINE-DESENVOLVIMENTO-LANDING-PAGE]]
 
 ## Observações
 
