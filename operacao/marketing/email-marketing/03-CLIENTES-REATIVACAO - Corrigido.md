@@ -769,7 +769,7 @@ Me fala o que quiser fazer.
 Felipe
 Real Vision 360
 
-**P.S.:** Com analytics no site, você passa a saber quantas pessoas visitam, de onde vêm e quanto tempo ficam. Esses dados são valiosos para tomar decisões sobre o negócio.
+**P.S.:** Com analytics no site, você passa a saber quantas pessoas visitam, de onde vêm e quanto tempo ficam. Esses dados são valiosos para tomar decisões sobre o negócio, e a gente tbm instala isso no seu tour ou no site, se puder decidir eme dar um retorno essa semana seria perfeito, um abraço e sucesso.
 
 ---
 
