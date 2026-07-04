@@ -21,6 +21,7 @@ Suas notas ficam no computador. Uma cópia fica guardada no **GitHub** (um "cofr
 - **Cofre na nuvem criado:** repositório privado `real-vision-company-os-vault` (conta `realvisionmaps360`).
 - **Computador já ligado ao cofre:** o PC envia e recebe automaticamente.
 - **O que é sincronizado:** só os arquivos de texto (`.md`) de todo o Company OS. Fotos, vídeos, PDFs e os sites de clientes **não** sobem (ficam só no PC, pra não pesar).
+- **Atualização 04/07/2026:** dentro de `operacao/projetos/`, as pastas que são só anotação (ex: `documentacao/`, `socio-digital/`, `jogo-da-terra/`, `brasil-trip-junho-2026/`) agora aparecem no celular normalmente. Só as pastas que são repositório de código (VisionFlow, site da Real Vision, Solarium, Sunbite, cartão digital Paraty) continuam de fora — são grandes demais e não fazem sentido no celular.
 
 ---
 

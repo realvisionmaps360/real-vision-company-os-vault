@@ -33,9 +33,13 @@ Lógica: **ignora tudo (`*`)** e **libera só** o que interessa.
 !*.md            # ...e versiona arquivos .md
 !.gitignore      # ...e o próprio .gitignore (pra regra viajar p/ celular/VPS)
 
-# Bloqueios explícitos:
-operacao/projetos/                              # repos de código internos
-operacao/clientes/arquivos/MSV-Aarau/site/      # repo de site de cliente
+# Bloqueios explícitos (por repositório nomeado, ver mudança de 04/07/2026 abaixo):
+operacao/projetos/_RV-Internos/visionflow/
+operacao/projetos/_RV-Internos/real-vision-site/
+operacao/projetos/solariumaarau/
+operacao/projetos/sunbite-site/
+operacao/projetos/rv-cartaodigital-paraty-onboard/
+operacao/clientes/arquivos/MSV-Aarau/site/
 loja-imagens/  TEMP/  .obsidian/  .claude/
 .env  *.env  node_modules/  .git/  *.log
 *.png *.jpg *.jpeg *.gif *.mp4 *.mp3 *.pdf *.zip *.rar *.7z
@@ -52,6 +56,15 @@ Mapeados em 28/06/2026 — todos caem em caminhos já bloqueados:
 - `operacao/projetos/_RV-Internos/real-vision-site/.git`
 - `operacao/projetos/_RV-Internos/visionflow/.git`
 - `operacao/clientes/arquivos/MSV-Aarau/site/.git`
+
+### Mudança 04/07/2026 — exclusão por repositório nomeado, não pasta inteira
+Até essa data, o `.gitignore` bloqueava `operacao/projetos/` inteira de uma vez. Isso escondia do celular 4 pastas que são só documentação (`_RV-Internos/brasil-trip-junho-2026/`, `_RV-Internos/documentacao/`, `_RV-Internos/jogo-da-terra/`, `_RV-Internos/socio-digital/`), que não têm `.git` interno.
+
+**Correção:** trocada a linha genérica `operacao/projetos/` por uma lista nomeando cada repositório de código (os 5 listados acima). Como a regra geral do `.gitignore` já é "ignora tudo, exceto pastas e `.md`", isso libera automaticamente qualquer pasta de projeto que só tenha `.md` — inclusive pastas novas que Felipe venha a criar no futuro, sem precisar editar o `.gitignore` de novo.
+
+**Regra prática pra próximas sessões:** ao criar um projeto novo dentro de `operacao/projetos/` que seja um repositório de código (tiver `.git` próprio), adicionar uma linha nomeando esse caminho no bloco de exclusões acima. Pastas de documentação pura não precisam de nenhuma ação — já ficam visíveis por padrão.
+
+**Reforço sobre o `.git` da raiz:** esse `.git` (repositório privado `real-vision-company-os-vault`) é o próprio mecanismo de sincronização PC ↔ celular — não é algo isolado do resto do sistema. Ele precisa continuar conectado e com o auto push/pull ativos (ver seção "Configuração do plugin" acima). Editar o `.gitignore` é seguro; remover o `.git` da raiz ou trocar o remote quebra a sincronização inteira.
 
 > Pré-voo antes de qualquer `git init` futuro na raiz: rodar `find . -name .git` e garantir que todo repo interno está dentro de um caminho ignorado.
 

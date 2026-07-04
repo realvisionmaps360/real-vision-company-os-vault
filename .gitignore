@@ -9,7 +9,15 @@
 !.gitignore
 
 # Bloquear repos git internos (evitar "repo dentro de repo")
-operacao/projetos/
+# Cada linha abaixo é um repositório de código com .git próprio.
+# Pastas de projeto que só têm .md (documentação) NÃO precisam ser listadas aqui —
+# a regra geral do gitignore já libera .md automaticamente.
+# Ao criar um projeto novo que seja um repositório de código, adicionar uma linha aqui.
+operacao/projetos/_RV-Internos/visionflow/
+operacao/projetos/_RV-Internos/real-vision-site/
+operacao/projetos/solariumaarau/
+operacao/projetos/sunbite-site/
+operacao/projetos/rv-cartaodigital-paraty-onboard/
 operacao/clientes/arquivos/MSV-Aarau/site/
 
 # Bloquear pastas com arquivos grandes ou desnecessários
