@@ -31,6 +31,8 @@
 | 04/07/2026 | Foco atual do projeto: **design das telas do jogo** | Felipe |
 | 04/07/2026 | Sequência de viagem definida: linha atravessando o mapa + mergulho → tela preta mostrando o ANO do evento → diálogo de abertura entre dois personagens | Felipe (áudio) |
 | 04/07/2026 | Legibilidade da interrupção: ao ignorar o jogador, o NPC vira e olha para o personagem antes de retomar a conversa — sinal visual de que ele está incomodando | Felipe (áudio) |
+| 04/07/2026 | **Q4 respondida: o nome do jogo é EARTH GAME** — pendência prática: checar disponibilidade na Google Play Store e domínio antes do lançamento | Felipe |
+| 04/07/2026 | Gráficos: pixel art SIM, mas com acabamento moderno ("gráficos legais") — os mockups de blocos eram estudo de layout, não o nível visual final; direção gráfica a definir com arte-conceito | Felipe |
 | 04/07/2026 | **Design do MVP completo:** as 9 telas aprovadas em mockup (Conversa, Cenário, Globo+viagem e as 6 de apoio); filosofia visual "Nigredo Luminoso" (quase P&B + brasa dourada, jogador como único ponto de cor quente); imagens em `design/` | Felipe |
 
 ---
@@ -39,8 +41,8 @@
 
 > Q1, Q2, Q3, Q5, Q6, Q7 e Q8 foram respondidas em 04/07/2026 — ver tabela de decisões acima.
 
-### Q4 — Nome do jogo (ABERTA — brainstorm)
-"O Jogo da Terra" é título de trabalho e não pode ser o nome final (é a marca do vídeo de terceiro). Sementes iniciais pro brainstorm (tema alquimia/Grande Obra): **A Grande Obra** · **Magnum Opus** · **O Aprendiz** · **Rubedo** · **A Obra Interior**. Decidir com calma; checar disponibilidade na Play Store e domínio quando houver finalista.
+### Q4 — Nome do jogo (RESPONDIDA em 04/07/2026)
+**EARTH GAME.** Falta só a checagem prática de disponibilidade na Play Store e domínio antes do lançamento — ver tabela de decisões.
 
 ### Q9 — Escolher a escada de progressão (NOVA)
 Proposta principal: **A Grande Obra** (7 operações alquímicas: Calcinação → Dissolução → Separação → Conjunção → Fermentação → Destilação → Coagulação). Alternativa: **Graus dos Mistérios** (Dormente → ... → Hierofante). Detalhes e justificativa no [[GAME-DESIGN]] seção 2. *Recomendo a Grande Obra.*
