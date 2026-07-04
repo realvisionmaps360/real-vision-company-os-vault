@@ -30,6 +30,9 @@
 | 27/06/2026 | Alexis confirma acesso a todas as plataformas via WhatsApp ✅ |
 | 27/06/2026 | Estratégia atualizada: novos públicos-alvo confirmados pelo cliente (hotéis, arquitetura, imobiliário) |
 | 27/06/2026 | Decisão: criar variante da página /clients como bônus para o cliente |
+| 04/07/2026 | Romana revisou o alemão do relatório (tom "du", correções gramaticais) — comparado ao original, achado: seção de Schema/GEO estava tecnicamente imprecisa |
+| 04/07/2026 | Felipe ativou a foto 360° aérea de Aarau no perfil GBP (era o único item pendente da lista de próximos passos) |
+| 04/07/2026 | Relatórios finais regerados (DE + PT-BR): seção GEO reescrita com precisão (llms.txt, NLWeb/ASK, IndexNow explicados em linguagem simples) + nova seção com prints antes/depois da foto 360° no perfil; versões antigas (28-06 e 02-07, HTML+PDF) apagadas — mantidos só `Lafatas_Bericht-SEO_04-07-26.html` (DE) e `Lafatas_Relatorio-SEO_04-07-26.html` (PT-BR) |
 | 04/07/2026 | Teste de publicação de foto 360° (`aarau 360.jpg`) no GBP via desktop — Fotos → Adicionar fotos → Selecionar imagens e vídeos (upload genérico, sem botão dedicado "Foto 360°" pelo navegador). ✅ Confirmado: foto aprovada e navegável em esfera após ~5min de revisão |
 
 ---
