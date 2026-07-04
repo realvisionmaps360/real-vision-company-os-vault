@@ -30,7 +30,7 @@
 | 27/06/2026 | Alexis confirma acesso a todas as plataformas via WhatsApp ✅ |
 | 27/06/2026 | Estratégia atualizada: novos públicos-alvo confirmados pelo cliente (hotéis, arquitetura, imobiliário) |
 | 27/06/2026 | Decisão: criar variante da página /clients como bônus para o cliente |
-| 04/07/2026 | Teste de publicação de foto 360° (`aarau 360.jpg`) no GBP via desktop — Fotos → Adicionar fotos → Selecionar imagens e vídeos (upload genérico, sem botão dedicado "Foto 360°" pelo navegador). Status pós-envio: pendente/revisão. Aguardando resultado para confirmar se vira navegável em esfera |
+| 04/07/2026 | Teste de publicação de foto 360° (`aarau 360.jpg`) no GBP via desktop — Fotos → Adicionar fotos → Selecionar imagens e vídeos (upload genérico, sem botão dedicado "Foto 360°" pelo navegador). ✅ Confirmado: foto aprovada e navegável em esfera após ~5min de revisão |
 
 ---
 
