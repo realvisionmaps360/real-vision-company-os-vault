@@ -45,4 +45,14 @@ Fim de capítulo → volta ao Globo (novo destino aceso = recompensa visual)
 
 ## 5. Telas aprovadas
 
-*(nenhuma ainda — seções entram aqui conforme forem aprovadas)*
+### Tela 5 — Conversa (aprovada em 04/07/2026)
+
+![Mockup da tela Conversa](../design/mockup-tela-5-conversa.png)
+
+Regras da tela:
+- Cenário ocupa o alto; caixa de diálogo clássica embaixo (borda dupla, nome de quem fala, texto letra por letra, setinha piscando)
+- Paleta segue o estágio do jogador (capítulo 1 = quase P&B); o jogador é o único ponto de cor quente (túnica/aura dourada)
+- Interrupção legível: NPC interrompido vira e olha para o jogador + balão "..." + linha pontilhada de olhar + feedback textual ("ignorado · seja pertinente")
+- Campo de fala do jogador embaixo, com botão de enviar dourado
+- Filosofia visual: [[../design/FILOSOFIA-VISUAL|Nigredo Luminoso]]
+- Nota: sprites do mockup são blocos de estudo — arte final dos personagens vem em etapa própria
