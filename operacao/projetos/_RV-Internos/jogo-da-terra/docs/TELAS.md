@@ -1,6 +1,6 @@
 # Telas do Jogo — Design
 
-> Foco atual do projeto (decisão de 04/07/2026). Este documento lista as telas do MVP, o fluxo entre elas e a direção visual. Status: 🟡 rascunho para discussão — nada aprovado ainda.
+> Foco atual do projeto (decisão de 04/07/2026). Este documento lista as telas do MVP, o fluxo entre elas e a direção visual. Status: ✅ **todas as 9 telas do MVP aprovadas em mockup** (04/07/2026) — ver seção 5. Filosofia visual: [[../design/FILOSOFIA-VISUAL|Nigredo Luminoso]].
 
 ---
 
@@ -76,3 +76,16 @@ Regras da sequência (3 momentos):
 2. **Mergulho:** zoom no globo, linha dourada tracejada atravessa o mapa até o destino pulsando; vinheta escura e riscos de velocidade
 3. **O Ano:** tela preta com o ANO em tipografia pixel gigante (número em claro, "a.C./d.C." em brasa); o diálogo de abertura entre dois personagens surge do preto antes de a cena clarear pro cenário
 - Nota: o ano 283 a.C. do mockup é placeholder — ano oficial de cada capítulo se define com o roteiro
+
+### Telas de apoio — 1, 2, 6, 7, 8 e 9 (aprovadas em 04/07/2026)
+
+![Prancha A — Título, Criação, Ajustes](../design/mockup-telas-apoio-A.png)
+![Prancha B — Ficha, Conquistas, Diário](../design/mockup-telas-apoio-B.png)
+
+Regras por tela:
+- **Título:** emblema alquímico (círculo + triângulo de fogo + ponto-brasa); título "A GRANDE OBRA" é provisório (Q4 aberta); botão principal dourado, secundário discreto
+- **Criação do Buscador:** palco com sprite ampliado, setas de troca, 4 variantes (selecionada com borda dourada), campo de nome, COMEÇAR
+- **Ficha:** retrato com aura, símbolo + nome do estágio, barra dos 7 estágios (acesos conforme progresso), atributos em pontos (Atenção, Escuta, Expressão, Percepção), aura descrita em palavras
+- **Conquistas:** galeria 12 molduras; desbloqueada = dourada com brilho + nome; bloqueada = silhueta; contador X/12
+- **Diário:** abas Padrões/Sinais, folha de papel com entradas curtas datadas, botão "+" dourado (entrada rápida, sem fricção)
+- **Ajustes:** som, música, idioma, conta, sair + frase "sua jornada está salva" no rodapé

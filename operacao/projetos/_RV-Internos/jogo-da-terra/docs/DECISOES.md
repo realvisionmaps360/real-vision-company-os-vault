@@ -31,6 +31,7 @@
 | 04/07/2026 | Foco atual do projeto: **design das telas do jogo** | Felipe |
 | 04/07/2026 | Sequência de viagem definida: linha atravessando o mapa + mergulho → tela preta mostrando o ANO do evento → diálogo de abertura entre dois personagens | Felipe (áudio) |
 | 04/07/2026 | Legibilidade da interrupção: ao ignorar o jogador, o NPC vira e olha para o personagem antes de retomar a conversa — sinal visual de que ele está incomodando | Felipe (áudio) |
+| 04/07/2026 | **Design do MVP completo:** as 9 telas aprovadas em mockup (Conversa, Cenário, Globo+viagem e as 6 de apoio); filosofia visual "Nigredo Luminoso" (quase P&B + brasa dourada, jogador como único ponto de cor quente); imagens em `design/` | Felipe |
 
 ---
 
