@@ -56,3 +56,13 @@ Regras da tela:
 - Campo de fala do jogador embaixo, com botão de enviar dourado
 - Filosofia visual: [[../design/FILOSOFIA-VISUAL|Nigredo Luminoso]]
 - Nota: sprites do mockup são blocos de estudo — arte final dos personagens vem em etapa própria
+
+### Tela 4 — Cenário (aprovada em 04/07/2026)
+
+![Mockup da tela Cenário](../design/mockup-tela-4-cenario.png)
+
+Regras da tela:
+- Cenário com pontos de referência (fachada, obelisco, palmeiras, braseiro) pra dar sensação de lugar
+- Rodinhas de NPCs com balãozinho "..." quando estão conversando
+- Botão OUVIR aparece só por proximidade (borda dourada = interativo); rodinha longe fica sem botão — a regra de alcance é visível na tela
+- Jogador é o único ponto de cor quente; joystick virtual no canto inferior esquerdo; menu no topo direito
