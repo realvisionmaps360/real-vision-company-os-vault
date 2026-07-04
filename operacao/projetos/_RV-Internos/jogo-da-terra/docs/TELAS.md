@@ -66,3 +66,13 @@ Regras da tela:
 - Rodinhas de NPCs com balãozinho "..." quando estão conversando
 - Botão OUVIR aparece só por proximidade (borda dourada = interativo); rodinha longe fica sem botão — a regra de alcance é visível na tela
 - Jogador é o único ponto de cor quente; joystick virtual no canto inferior esquerdo; menu no topo direito
+
+### Tela 3 — O Globo + sequência de viagem (aprovada em 04/07/2026)
+
+![Storyboard do Globo e viagem](../design/mockup-tela-3-globo-viagem.png)
+
+Regras da sequência (3 momentos):
+1. **O Globo:** Terra girando no espaço, continentes cinza; só destinos desbloqueados acesos (anéis dourados pulsando + etiqueta); os demais aparecem apagados. Pergunta "PARA ONDE?" + botão VIAJAR
+2. **Mergulho:** zoom no globo, linha dourada tracejada atravessa o mapa até o destino pulsando; vinheta escura e riscos de velocidade
+3. **O Ano:** tela preta com o ANO em tipografia pixel gigante (número em claro, "a.C./d.C." em brasa); o diálogo de abertura entre dois personagens surge do preto antes de a cena clarear pro cenário
+- Nota: o ano 283 a.C. do mockup é placeholder — ano oficial de cada capítulo se define com o roteiro
