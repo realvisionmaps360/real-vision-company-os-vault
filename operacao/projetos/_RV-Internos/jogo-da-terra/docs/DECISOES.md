@@ -33,6 +33,8 @@
 | 04/07/2026 | Legibilidade da interrupção: ao ignorar o jogador, o NPC vira e olha para o personagem antes de retomar a conversa — sinal visual de que ele está incomodando | Felipe (áudio) |
 | 04/07/2026 | **Q4 respondida: o nome do jogo é EARTH GAME** — pendência prática: checar disponibilidade na Google Play Store e domínio antes do lançamento | Felipe |
 | 04/07/2026 | Gráficos: pixel art SIM, mas com acabamento moderno ("gráficos legais") — os mockups de blocos eram estudo de layout, não o nível visual final; direção gráfica a definir com arte-conceito | Felipe |
+| 04/07/2026 | **Q9 respondida:** escada de progressão = **A Grande Obra** (7 operações alquímicas: Calcinação → Dissolução → Separação → Conjunção → Fermentação → Destilação → Coagulação) | Felipe |
+| 04/07/2026 | **Q10 respondida:** stack aprovada conforme [[STACK]] — React + Phaser + Capacitor + Supabase + API do Claude (modelo pequeno) + Google Play Billing; conteúdo pré-fabricado na produção, IA ao vivo só nas interações do jogador | Felipe |
 | 04/07/2026 | **Referência oficial de acabamento gráfico aprovada:** `design/conceito-grafico-biblioteca.png` (pixel art moderna estilo Sea of Stars/Eastward, gerada por IA) — toda arte do jogo é cobrada contra esse padrão; cenários/personagens gerados por IA + retoque, textos e botões sempre renderizados pelo próprio jogo | Felipe ("isso aí tá perfeito") |
 | 04/07/2026 | **Design do MVP completo:** as 9 telas aprovadas em mockup (Conversa, Cenário, Globo+viagem e as 6 de apoio); filosofia visual "Nigredo Luminoso" (quase P&B + brasa dourada, jogador como único ponto de cor quente); imagens em `design/` | Felipe |
 
@@ -40,13 +42,6 @@
 
 ## Perguntas abertas (para o Felipe decidir)
 
-> Q1, Q2, Q3, Q5, Q6, Q7 e Q8 foram respondidas em 04/07/2026 — ver tabela de decisões acima.
-
-### Q4 — Nome do jogo (RESPONDIDA em 04/07/2026)
-**EARTH GAME.** Falta só a checagem prática de disponibilidade na Play Store e domínio antes do lançamento — ver tabela de decisões.
-
-### Q9 — Escolher a escada de progressão (NOVA)
-Proposta principal: **A Grande Obra** (7 operações alquímicas: Calcinação → Dissolução → Separação → Conjunção → Fermentação → Destilação → Coagulação). Alternativa: **Graus dos Mistérios** (Dormente → ... → Hierofante). Detalhes e justificativa no [[GAME-DESIGN]] seção 2. *Recomendo a Grande Obra.*
-
-### Q10 — Aprovar a stack (NOVA)
-Proposta completa em [[STACK]]: React + Phaser + Capacitor + Supabase + API do Claude (modelo pequeno) + Google Play Billing; conteúdo pré-fabricado na produção, IA ao vivo só nas interações do jogador. Falta o OK do Felipe.
+> **Todas as perguntas (Q1–Q10) foram respondidas** — ver tabela de decisões acima. Q4 = EARTH GAME (falta só checar disponibilidade na Play Store e domínio antes do lançamento).
+>
+> Nenhuma pergunta aberta no momento. A próxima etapa do projeto é o **roteiro do Capítulo 1** ("A Simbologia do Corpo Humano", cap. 14 do livro).

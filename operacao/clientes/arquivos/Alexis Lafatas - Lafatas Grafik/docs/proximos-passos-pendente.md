@@ -1,6 +1,8 @@
 # Próximos passos pendentes — conteúdo reservado para documento futuro
 
 > Removido do relatório final (04/07/2026) por decisão do Felipe: o relatório de entrega deve focar só no que já foi feito. Este conteúdo sobre o Google Merchant Center foi preservado aqui para entrar num **próximo documento** de "próximos passos / oportunidades de expansão" que o Felipe ainda vai criar para o Alexis.
+>
+> ✅ **Incorporado em 04/07/2026** ao documento [`proximos-passos-blog-PT-BR.html`](proximos-passos-blog-PT-BR.html) (seção "Produtos no Google"). Este arquivo fica mantido como histórico do texto original.
 
 ## Google Merchant Center — produtos no Google
 
