@@ -1,0 +1,1 @@
+![[Solarium-Aarau_Proposta-LandingPage_03-07-26_PT-CORRIGIDO]]
