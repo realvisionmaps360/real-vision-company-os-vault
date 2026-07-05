@@ -55,7 +55,7 @@ Investigamos quais dúvidas e incertezas os potenciais clientes novos têm antes
 
 **3. Seleção das suas melhores avaliações**
 ⚠️ **Ponto em aberto — escolher uma versão:**
-- *Versão da Romana:* "Selecionamos avaliações atuais do Google que geram confiança e destacam exatamente os aspectos mais importantes para novos visitantes."
+- *Versão da Romana:* "Selecionamos avaliações atuais do Google que geram confiança e destacam exatamente os aspectos mais importantes para novos visitantes." VAI SER ESSA 
 - *Versão com mais especificidade (minha sugestão):* "Selecionamos 8 avaliações reais e recentes do Google, com foco em limpeza e atendimento simpático — os dois pontos que mais dão segurança a um cliente novo."
 
 **4. Desenvolvimento de todos os conteúdos**
