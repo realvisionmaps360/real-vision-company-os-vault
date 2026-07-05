@@ -1,6 +1,8 @@
 # Base de Consulta — The Secret Teachings of All Ages (Manly P. Hall, 1928)
 
-> Índice consultável do livro que é o "motor de sabedoria" do jogo. O texto completo está em `referencias/The_Secret_Teachings_of_All_Ages_- _Manly_Hall.md` (1,7 MB, edição de 1928 editada para web por Mario Lampić, 2009 — **domínio público**, sem renovação de copyright).
+> Índice consultável do livro que é o "motor de sabedoria" do jogo. O arquivo local `referencias/The_Secret_Teachings_of_All_Ages_- _Manly_Hall.md` (1,7 MB, edição de 1928 — **domínio público**, sem renovação de copyright) é a fonte primária.
+>
+> ⚠️ **Descoberta de 05/07/2026: o arquivo local está INCOMPLETO** — o texto vai só até a pág. 79 da edição original (fim do cap. 3); o resto do 1,7 MB são 4 imagens embutidas em base64. Para os demais capítulos, usar o texto completo em sacred-texts.com (`sacred-texts.com/eso/sta/`, também domínio público) e resumir aqui na seção 4. Pendência: substituir o arquivo local por uma cópia completa em texto puro.
 >
 > **Como localizar um capítulo no arquivo-fonte:** buscar pelo título em inglês (o arquivo tem cabeçalhos de página repetidos, então o título aparece mais de uma vez; o capítulo de verdade é a ocorrência seguida de texto corrido). Os números de página abaixo são da edição original e aparecem no meio do texto em negrito.
 >
@@ -94,5 +96,26 @@ Página = edição original 1928. A coluna 🎮 marca a relevância imediata par
 
 *(seções adicionadas conforme cada capítulo do jogo entra em produção)*
 
-- [ ] Cap. 14 — The Human Body in Symbolism *(próximo: base do Capítulo 1 do jogo)*
+- [x] Cap. 14 — The Human Body in Symbolism *(lido na íntegra em 05/07/2026 — resumo abaixo; base do [[ROTEIRO-CAP1]])*
 - [ ] Cap. 5 — Thoth Hermes / Sete Governadores *(base da escada de 7 níveis própria)*
+
+### Cap. 14 — The Human Body in Symbolism (pp. 73–76 da edição web / 215 da original)
+
+> Fonte lida: sacred-texts.com/eso/sta/sta17.htm (domínio público). Lido na íntegra em 05/07/2026.
+
+**Ideia-mestra:** o corpo humano é o símbolo mais antigo e universal. Todas as escolas de mistério ensinavam que o universo está resumido no homem: o universo é o **Macrocosmo** (o Grande Homem) e o homem é o **Microcosmo** (o pequeno universo). Entender a relação entre os dois era o tesouro dos iniciados.
+
+**Os pontos que alimentam o jogo:**
+
+1. **O manequim filosófico** — antes da idolatria, os sacerdotes punham no altar a estátua de um homem coberta de hieróglifos: um mapa do universo, não um deus. Com a decadência dos Mistérios, **esqueceram o significado e continuaram adorando a estátua** — até o templo ruir. *(→ metáfora perfeita do piloto automático; motor da Calcinação no [[ROTEIRO-CAP1]])*
+2. **Os três centros universais** — todo corpo (espiritual ou material) tem três centros: o **coração** (espiritual — o verdadeiro superior, embora "do meio"), o **cérebro** (o elo, a inteligência racional) e o **sistema gerador** (a força criadora física). O tipo de vida da pessoa depende de qual predomina; no iniciado, o coração banha os outros dois. Símbolos: coração; olho aberto = **glândula pineal** ("olho ciclópico", o Janus de duas faces); flor/cajado/taça/mão = geração.
+3. **A troca de véus** — os Mistérios usavam "blinds": diziam ao público que o cérebro era o superior; só nos graus altos revelavam que o cérebro é **procurador** da chama que mora no coração. "Há sete corações no cérebro e sete cérebros no coração."
+4. **Templos em forma de corpo** — as três câmaras dos graus correspondiam aos três centros; quando possível o templo tinha a forma de um corpo humano: o candidato **entrava pelos pés** e recebia o grau mais alto na câmara do **cérebro** — onde se dava o **mistério do coração** ("como um homem pensa em seu coração, assim ele é"). *(→ Rodinha 3 do roteiro)*
+5. **Corpo: templo ou prisão** — o corpo não é o indivíduo, é a **casa** do indivíduo. Em estado de grosseria é tumba/prisão de um princípio divino; regenerado, é santuário. *(→ "prisão com janelas bonitas")*
+6. **A mão saindo da nuvem** — artistas representavam a Divindade como uma mão emergindo de uma nuvem: a nuvem é o incognoscível; a mão, a única atividade divina perceptível aos sentidos.
+7. **Simbolismo do número 5 e das mãos** — 5 extremidades (símbolo do homem); pés = terra e água, mãos = fogo e ar, cabeça = éter que governa os quatro; dedos = zodíaco (12 falanges por mão) e o polegar = a tríade divina.
+8. **Direita/esquerda, luz/trevas** — metade direita = luz/objetividade/masculino; esquerda = trevas/subjetividade/feminino. A escuridão é *anterior* à luz (a vida precede a luz); o coração fica do lado escuro. Escrever para a direita = exotérico ("para fora do coração"); para a esquerda (como o hebraico) = esotérico ("em direção ao coração").
+9. **O Anthropos / Sobre-alma** — só um terço da natureza divina encarna; a parte que nunca veste matéria é o **Anthropos** (o Sobre-homem hermético; o "anjo" de Böhme, a Oversoul de Emerson). O propósito supremo dos Mistérios: reunir-se conscientemente a essa fonte divina **sem passar pela morte** — a morte é "o Iniciador inevitável".
+10. **Frase-síntese do capítulo:** "O estudo apropriado da humanidade é o homem."
+
+**Conexões:** cap. 15 (Hiramic Legend) continua o tema do fogo espiritual e da pineal; cap. 46 traz Hipátia de Alexandria (mentora do Capítulo 1 do jogo).
