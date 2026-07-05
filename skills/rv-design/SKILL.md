@@ -5,7 +5,7 @@ description: "Padrões de UI/UX específicos para projetos Real Vision: pousadas
 
 # RV Design — UI/UX para Turismo e Negócios Locais
 
-Guia compacto de design para os projetos da Real Vision 360. Cobre paletas, tipografia, layouts e padrões de conversão adequados para pousadas, restaurantes, food trucks, tour operators e negócios locais no Brasil e exterior.
+Guia compacto de design para os projetos da Real Vision. Cobre paletas, tipografia, layouts e padrões de conversão adequados para pousadas, restaurantes, food trucks, tour operators e negócios locais no Brasil e exterior.
 
 ---
 

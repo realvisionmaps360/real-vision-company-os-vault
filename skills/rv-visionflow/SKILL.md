@@ -1,6 +1,6 @@
 ﻿# Skill: rv-visionflow
 
-Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM interno da Real Vision 360.
+Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM interno da Real Vision.
 
 ---
 

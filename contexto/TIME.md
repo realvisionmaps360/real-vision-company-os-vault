@@ -1,4 +1,4 @@
-# TIME — Real Vision 360
+# TIME — Real Vision
 
 ## Felipe Garcia — Fundador & Estrategista
 

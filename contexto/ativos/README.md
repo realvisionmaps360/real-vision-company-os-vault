@@ -1,6 +1,6 @@
-# Ativos de Marca — Real Vision 360
-
-Esta pasta concentra todos os arquivos de marca da Real Vision 360. Nenhum agente de IA deve usar imagens, logos ou fontes externas sem verificar aqui primeiro.
+# Ativos de Marca — Real Vision
+Esta pasta concentra todos os arquivos de marca da Real Vision.
+Esta pasta concentra todos os arquivos de marca da Real Vision. Nenhum agente de IA deve usar imagens, logos ou fontes externas sem verificar aqui primeiro.
 
 ---
 

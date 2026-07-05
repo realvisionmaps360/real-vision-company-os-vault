@@ -25,7 +25,7 @@ Trabalhar seção-por-seção é mais leve e dá mais controle. A alternativa (p
 CONTEXTO DA MARCA — REAL VISION 360
 ═══════════════════════════════════════════════════════════════
 
-Marca: Real Vision 360
+Marca: Real Vision
 Tagline: Presença digital integrada para negócios locais e globais
 Posicionamento: Consultor de presença digital — não agência criativa
 Tom: Direto, técnico, resultado-focado, sem hipérbole
@@ -735,7 +735,7 @@ ABAIXO DAS COLUNAS (faixa central):
 - Logo em ícone à esquerda
 
 LINHA FINAL (mais sutil, centralizada, fonte pequena):
-"© 2026 Real Vision 360 · Construído com presença digital
+"© 2026 Real Vision · Construído com presença digital
 integrada · Itacaré → Mundo"
 
 ESTILO:

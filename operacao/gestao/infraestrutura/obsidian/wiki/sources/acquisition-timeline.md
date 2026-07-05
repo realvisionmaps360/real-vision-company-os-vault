@@ -1,6 +1,6 @@
 ---
 type: source
-title: "Acquisition Timeline — Missões 1 a 5"
+title: "Acquisition Timeline ï¿½ Missï¿½es 1 a 5"
 aliases: ["acquisition-timeline"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
@@ -11,34 +11,34 @@ tags: [prospeccao, aquisicao]
 status: stable
 ---
 
-# Acquisition Timeline — Missões 1 a 5
+# Acquisition Timeline ï¿½ Missï¿½es 1 a 5
 
 ## TL;DR
-Registro cronológico das Missions de construção do sistema de aquisição da Real Vision 360. 4 missions concluídas; Mission 5 é a operação contínua.
+Registro cronolï¿½gico das Missions de construï¿½ï¿½o do sistema de aquisiï¿½ï¿½o da Real Vision. 4 missions concluï¿½das; Mission 5 ï¿½ a operaï¿½ï¿½o contï¿½nua.
 
 ## Missions
 
-### ? Mission 1 — Papel Acquisition Claude (jun/2026)
+### ? Mission 1 ï¿½ Papel Acquisition Claude (jun/2026)
 Definiu o papel do Acquisition Claude como maestro do funil. Criou o Opportunity Score (0-100) com 4 sub-scores. Campanha Paraty executada durante a mission: 35 pousadas, 31 WA + 17 emails.
 
-### ? Mission 2 — Arquitetura (20/06/2026)
+### ? Mission 2 ï¿½ Arquitetura (20/06/2026)
 Banco separado do VisionFlow. Handover manual. Modelo de dados aprovado: `prospects`, `prospect_events`, `campaigns`, `campaign_prospects`.
 
-### ? Mission 3 — Banco Construído (24-25/06/2026)
-8 tabelas especificadas e construídas. Banco `rv-acquisition` (`gexacmtkjqectfqwhunv`) em produção. Dedup por `pg_trgm`.
+### ? Mission 3 ï¿½ Banco Construï¿½do (24-25/06/2026)
+8 tabelas especificadas e construï¿½das. Banco `rv-acquisition` (`gexacmtkjqectfqwhunv`) em produï¿½ï¿½o. Dedup por `pg_trgm`.
 
-### ? Mission 4 — Operating System (24/06/2026)
-Manual operacional com 15 seções. Faixas de score (80–100 imediato / 60–79 padrão / 40–59 futura / <40 arquiva). Follow-up de 3 toques. 9 portões humanos definidos.
+### ? Mission 4 ï¿½ Operating System (24/06/2026)
+Manual operacional com 15 seï¿½ï¿½es. Faixas de score (80ï¿½100 imediato / 60ï¿½79 padrï¿½o / 40ï¿½59 futura / <40 arquiva). Follow-up de 3 toques. 9 portï¿½es humanos definidos.
 
-### ?? Mission 5 — Operação Contínua (futura)
-Primeira rodada Sócio Digital no novo banco + relatório semanal automatizado + São Tomé das Letras como segunda campanha.
+### ?? Mission 5 ï¿½ Operaï¿½ï¿½o Contï¿½nua (futura)
+Primeira rodada Sï¿½cio Digital no novo banco + relatï¿½rio semanal automatizado + Sï¿½o Tomï¿½ das Letras como segunda campanha.
 
-## Conexões
+## Conexï¿½es
 - [[acquisition-system]]
 - [[campanha-paraty-2026]]
 - [[opportunity-score]]
 
-## Conexões
+## Conexï¿½es
 - [[acquisition-system]]
 - [[campanha-paraty-2026]]
 - [[opportunity-score]]

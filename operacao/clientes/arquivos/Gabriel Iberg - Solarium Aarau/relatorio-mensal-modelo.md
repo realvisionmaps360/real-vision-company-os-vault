@@ -60,4 +60,4 @@ Horário em destaque, endereço com Google Maps, telefone clicável, 2 vídeos t
 
 ## 5. Fechamento padrão
 
-> A Real Vision 360 segue à disposição para dúvidas sobre os dados ou para priorizar as próximas melhorias do site. Este relatório é gerado mensalmente como parte do acompanhamento do site do Solarium Aarau.
+> A Real Vision segue à disposição para dúvidas sobre os dados ou para priorizar as próximas melhorias do site. Este relatório é gerado mensalmente como parte do acompanhamento do site do Solarium Aarau.

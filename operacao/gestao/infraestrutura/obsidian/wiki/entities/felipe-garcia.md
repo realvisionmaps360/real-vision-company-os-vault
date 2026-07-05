@@ -1,6 +1,6 @@
 ---
 type: entity
-title: "Felipe Garcia — Fundador Real Vision 360"
+title: "Felipe Garcia ï¿½ Fundador Real Vision"
 aliases: ["Felipe", "Felipe Garcia"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
@@ -9,24 +9,24 @@ tags: [fundador, time]
 status: stable
 ---
 
-# Felipe Garcia — Fundador Real Vision 360
+# Felipe Garcia ï¿½ Fundador Real Vision
 
 ## Resumo
-Fundador e único operador da Real Vision 360. 36 anos, São Bernardo do Campo/SP. Trajetória: Local Guide Google ? fotógrafo 360° + drone ? vibe coder ? engenheiro de IA.
+Fundador e ï¿½nico operador da Real Vision. 36 anos, Sï¿½o Bernardo do Campo/SP. Trajetï¿½ria: Local Guide Google ? fotï¿½grafo 360ï¿½ + drone ? vibe coder ? engenheiro de IA.
 
 ## Contato
 - Email: realvisionmaps360@gmail.com
 - LinkedIn: https://www.linkedin.com/in/felipe-garcia-pereira-918565331/
 
 ## Idiomas
-Português + Inglês fluente.
+Portuguï¿½s + Inglï¿½s fluente.
 
 ## Pessoal
-- Dog: Negão Revoada ????? (preto)
+- Dog: Negï¿½o Revoada ????? (preto)
 - Parceira: Romana Loznjakovic (co-fundadora e companheira)
-- Base: nômade — São Bernardo do Campo ? Itacaré/Bahia
+- Base: nï¿½made ï¿½ Sï¿½o Bernardo do Campo ? Itacarï¿½/Bahia
 
-## Conexões
+## Conexï¿½es
 - Empresa: [[rv-empresa]]
 - Co-fundadora: [[romana-sunbite]]
 - Time: [[rv-time]]

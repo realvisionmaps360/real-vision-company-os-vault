@@ -1,7 +1,7 @@
 # Plano de Ação para Criar um Negócio com IA
 
 > Extraído do vídeo "A Crise e a Oportunidade da Inteligência Artificial"
-> Anotado em 28/05/2026 — Felipe Garcia / Real Vision 360
+> Anotado em 28/05/2026 — Felipe Garcia / Real Vision
 
 Este é o plano de ação que vamos ensinar no Curso 01 e usar como espinha dorsal do conteúdo.
 

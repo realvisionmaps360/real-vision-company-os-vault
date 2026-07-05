@@ -1,4 +1,4 @@
-# Estrutura de Projetos — Real Vision 360
+# Estrutura de Projetos — Real Vision
 
 **Data:** 2026-06-24  
 **Última atualização:** Reorganização concluída
@@ -13,7 +13,7 @@ Esta pasta contém **todos os projetos da Real Vision**, organizados em duas cat
 Cada cliente tem sua própria pasta com todos os seus projetos, documentação e briefings.
 
 ### 2️⃣ **Projetos Internos** (`/_RV-Internos/`)
-Projetos, produtos e infraestrutura da Real Vision 360.
+Projetos, produtos e infraestrutura da Real Vision.
 
 ---
 

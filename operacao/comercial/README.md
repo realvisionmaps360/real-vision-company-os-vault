@@ -1,6 +1,6 @@
 # Comercial — Índice
 
-Contratos, termos e materiais comerciais da Real Vision 360.
+Contratos, termos e materiais comerciais da Real Vision.
 
 ## Arquivos desta pasta
 

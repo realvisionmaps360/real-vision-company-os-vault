@@ -1,11 +1,11 @@
 ---
 name: realvision
-description: Carrega o contexto completo da Real Vision 360 — empresa do Felipe Garcia. Use SEMPRE que o Felipe disser "Real Vision", "real vision", "RV", mencionar tours virtuais 360, captação com drone, otimização de Google Meu Negócio, ou quando estiver trabalhando em qualquer coisa relacionada ao negócio dele. Também use no início de qualquer sessão onde o Felipe quiser trabalhar em projetos da empresa.
+description: Carrega o contexto completo da Real Vision — empresa do Felipe Garcia. Use SEMPRE que o Felipe disser "Real Vision", "real vision", "RV", mencionar tours virtuais 360, captação com drone, otimização de Google Meu Negócio, ou quando estiver trabalhando em qualquer coisa relacionada ao negócio dele. Também use no início de qualquer sessão onde o Felipe quiser trabalhar em projetos da empresa.
 ---
 
 # Real Vision — Context Loader
 
-Felipe Garcia é o fundador da **Real Vision 360**. Esta skill carrega todo o contexto necessário pra trabalhar com ele.
+Felipe Garcia é o fundador da **Real Vision**. Esta skill carrega todo o contexto necessário pra trabalhar com ele.
 
 ## Passo 1 — Ler as regras de trabalho
 

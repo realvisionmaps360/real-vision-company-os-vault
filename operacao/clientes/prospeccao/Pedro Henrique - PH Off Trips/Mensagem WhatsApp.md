@@ -4,7 +4,7 @@
 
 ---
 
-Oi Pedro Henrique! Tudo bem? Meu nome é Felipe, da Real Vision 360.
+Oi Pedro Henrique! Tudo bem? Meu nome é Felipe, da Real Vision.
 
 Eu estava pesquisando quem é a referência em turismo aqui em Ilhabela e seu nome apareceu em primeiro lugar — fui ver seu trabalho e achei muito bom, principalmente pela sua formação e o catálogo de passeios que você já tem montado.
 

@@ -1,4 +1,4 @@
-# Processo Seletivo — Real Vision 360
+# Processo Seletivo — Real Vision
 
 **Criado por:** Felipe Garcia
 **Atualizado em:** 22/05/2026

@@ -1,9 +1,9 @@
 ---
-title: Índice da Wiki — Real Vision 360
+title: Índice da Wiki — Real Vision
 date_updated: 2026-06-29
 ---
 
-# Índice da Wiki — Real Vision 360
+# Índice da Wiki — Real Vision
 
 Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 
@@ -76,7 +76,7 @@ Catálogo de todas as páginas. Atualizado automaticamente a cada ingest.
 
 | Página | Descrição |
 |---|---|
-| [[concepts/rv-empresa]] | Real Vision 360 — missão, pilares, portfólio, visão de expansão |
+| [[concepts/rv-empresa]] | Real Vision — missão, pilares, portfólio, visão de expansão |
 | [[concepts/rv-time]] | Time — Felipe Garcia e Romana Loznjakovic |
 | [[concepts/rv-voz]] | Tom de voz e comunicação da Real Vision |
 | [[concepts/rv-design]] | Design system — paleta, tipografia, logos, stack frontend |

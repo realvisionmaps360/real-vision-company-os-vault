@@ -15,7 +15,7 @@ servicos:
 
 ## Contexto
 
-Romana Loznjakovic é co-fundadora da Real Vision 360 e criadora da Sunbite.ch — food bike de comida saudável baseada na Suíça. Projeto pessoal de Romana, com estética retrô e foco em ingredientes naturais. Base: Brasil ↔ Suíça.
+Romana Loznjakovic é co-fundadora da Real Vision e criadora da Sunbite.ch — food bike de comida saudável baseada na Suíça. Projeto pessoal de Romana, com estética retrô e foco em ingredientes naturais. Base: Brasil ↔ Suíça.
 
 ## Serviços contratados
 

@@ -1,7 +1,7 @@
 ---
 type: concept
-title: "Real Vision 360 — Empresa"
-aliases: ["rv-empresa", "Real Vision", "Real Vision 360", "empresa"]
+title: "Real Vision ï¿½ Empresa"
+aliases: ["rv-empresa", "Real Vision", "empresa"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
 source_count: 1
@@ -9,40 +9,40 @@ tags: [empresa, estrategia]
 status: stable
 ---
 
-# Real Vision 360 — Empresa
+# Real Vision ï¿½ Empresa
 
-## O que é
-Operação de presença digital integrada para negócios locais e globais. Vende resultado mensurável: mais visibilidade no Google, mais confiança antes do cliente chegar, mais conversão.
+## O que ï¿½
+Operaï¿½ï¿½o de presenï¿½a digital integrada para negï¿½cios locais e globais. Vende resultado mensurï¿½vel: mais visibilidade no Google, mais confianï¿½a antes do cliente chegar, mais conversï¿½o.
 
 ## Produto principal
-**Sócio Digital** — presença digital integrada com IA. Reúne os cinco pilares em um sistema coeso.
+**Sï¿½cio Digital** ï¿½ presenï¿½a digital integrada com IA. Reï¿½ne os cinco pilares em um sistema coeso.
 
 ## Cinco pilares
 1. Sites Profissionais (Landing, Institucional, E-commerce)
-2. Google Meu Negócio — otimização estratégica
-3. Tour Virtual 360° — captação, Pano2VR, Street View
-4. Fotografia & Drone — material visual com equipamentos próprios
-5. Automações & Agentes de IA — chatbots, integrações, automações
+2. Google Meu Negï¿½cio ï¿½ otimizaï¿½ï¿½o estratï¿½gica
+3. Tour Virtual 360ï¿½ ï¿½ captaï¿½ï¿½o, Pano2VR, Street View
+4. Fotografia & Drone ï¿½ material visual com equipamentos prï¿½prios
+5. Automaï¿½ï¿½es & Agentes de IA ï¿½ chatbots, integraï¿½ï¿½es, automaï¿½ï¿½es
 
 ## Hierarquia atual (2026)
-Sites + Automações/IA + Tours = carro-chefe remoto. Foto/Drone = complementar, não é a identidade.
+Sites + Automaï¿½ï¿½es/IA + Tours = carro-chefe remoto. Foto/Drone = complementar, nï¿½o ï¿½ a identidade.
 
 ## Metodologia
-**"Tríade do Sucesso"** — metodologia própria de entrega de presença digital integrada para PMEs.
-**Diferencial:** arquitetura preparada para GEO (Generative Engine Optimization) além de SEO tradicional.
+**"Trï¿½ade do Sucesso"** ï¿½ metodologia prï¿½pria de entrega de presenï¿½a digital integrada para PMEs.
+**Diferencial:** arquitetura preparada para GEO (Generative Engine Optimization) alï¿½m de SEO tradicional.
 
 ## Mercados atendidos
-Brasil (Itacaré, Barra Grande, Maraú, Igrapiúna, Ituberá, Paraty) ? Suíça (Aarau e região).
+Brasil (Itacarï¿½, Barra Grande, Maraï¿½, Igrapiï¿½na, Ituberï¿½, Paraty) ? Suï¿½ï¿½a (Aarau e regiï¿½o).
 
-## Portfólio
+## Portfï¿½lio
 30+ projetos, 5+ segmentos, 10+ cidades. Destaque: [[gabriel-solarium-aarau]] (primeiro projeto internacional).
 
-## Visão de expansão (2026+)
-- Conteúdo em inglês para mercado global
+## Visï¿½o de expansï¿½o (2026+)
+- Conteï¿½do em inglï¿½s para mercado global
 - Cursos e mentorias (Real Vision Academy)
-- Rede global de fotógrafos 360° certificados
+- Rede global de fotï¿½grafos 360ï¿½ certificados
 
-## Conexões
+## Conexï¿½es
 - Fundador: [[felipe-garcia]]
 - Co-fundadora: [[romana-sunbite]]
 - Produto: [[socio-digital]]

@@ -1,7 +1,7 @@
 ---
 type: concept
-title: "Voz e Tom — Real Vision 360"
-aliases: ["rv-voz", "voz", "tom de voz", "comunicação"]
+title: "Voz e Tom ï¿½ Real Vision"
+aliases: ["rv-voz", "voz", "tom de voz", "comunicaï¿½ï¿½o"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
 source_count: 1
@@ -9,29 +9,29 @@ tags: [empresa, comunicacao, marketing]
 status: stable
 ---
 
-# Voz e Tom — Real Vision 360
+# Voz e Tom ï¿½ Real Vision
 
-## Princípio central
-**Direto e técnico.** Fala como consultor, não como vendedor. Usa vocabulário de negócio quando necessário, sem hipérboles.
+## Princï¿½pio central
+**Direto e tï¿½cnico.** Fala como consultor, nï¿½o como vendedor. Usa vocabulï¿½rio de negï¿½cio quando necessï¿½rio, sem hipï¿½rboles.
 
-## Somos / Não somos
-| Somos | Não somos |
+## Somos / Nï¿½o somos
+| Somos | Nï¿½o somos |
 |---|---|
-| Consultores de presença digital | Fotógrafos 360° comuns |
-| Especialistas em sistemas digitais | Agência que faz "site bonito" |
-| Técnicos com visão estratégica | Generalistas sem especialidade |
+| Consultores de presenï¿½a digital | Fotï¿½grafos 360ï¿½ comuns |
+| Especialistas em sistemas digitais | Agï¿½ncia que faz "site bonito" |
+| Tï¿½cnicos com visï¿½o estratï¿½gica | Generalistas sem especialidade |
 
 ## Palavras que usamos
-Presença digital integrada · Sistema digital funcional · Visibilidade no Google · Conversão · Tríade do Sucesso · GEO · Tour virtual/imersivo · Resultado mensurável
+Presenï¿½a digital integrada ï¿½ Sistema digital funcional ï¿½ Visibilidade no Google ï¿½ Conversï¿½o ï¿½ Trï¿½ade do Sucesso ï¿½ GEO ï¿½ Tour virtual/imersivo ï¿½ Resultado mensurï¿½vel
 
 ## Palavras que evitamos
-"Incrível", "sensacional", "fantástico" · "Agência criativa" · "Fotógrafo de tour" · Superlativos sem embasamento · Linguagem passiva corporativa
+"Incrï¿½vel", "sensacional", "fantï¿½stico" ï¿½ "Agï¿½ncia criativa" ï¿½ "Fotï¿½grafo de tour" ï¿½ Superlativos sem embasamento ï¿½ Linguagem passiva corporativa
 
-## Estrutura de comunicação
+## Estrutura de comunicaï¿½ï¿½o
 1. Ponto direto primeiro
 2. Contexto suficiente para decidir
 3. CTA clara e sem ambiguidade
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[socio-digital]]

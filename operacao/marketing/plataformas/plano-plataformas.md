@@ -1,4 +1,4 @@
-# Plano de Plataformas — Captação Online Real Vision 360
+# Plano de Plataformas — Captação Online Real Vision
 
 Documento de trabalho. Objetivo: colocar a Real Vision nas plataformas onde clientes contratam quem desenvolve sites, aplicações, tours virtuais 360°, chatbots e agentes de IA.
 

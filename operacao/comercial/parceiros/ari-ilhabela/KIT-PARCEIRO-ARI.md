@@ -155,5 +155,5 @@ Não queremos que você venda a Real Vision. Queremos apenas que, quando surgir 
 Obrigado pela confiança.
 
 **Felipe Garcia**  
-Real Vision 360  
+Real Vision  
 realvisionmaps360@gmail.com

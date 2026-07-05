@@ -1,9 +1,9 @@
 ---
 name: visionflow
-description: "CRM interno da Real Vision 360. Ativar em qualquer sessão de desenvolvimento do VisionFlow: correções de UI, novas features, banco de dados, mobile UX. Cobre stack, schema Supabase, padrões de componente, sistema de design e decisões já tomadas. Inclui feature IA Insights (analisar observações com Claude e gerar cards de aprovação)."
+description: "CRM interno da Real Vision. Ativar em qualquer sessão de desenvolvimento do VisionFlow: correções de UI, novas features, banco de dados, mobile UX. Cobre stack, schema Supabase, padrões de componente, sistema de design e decisões já tomadas. Inclui feature IA Insights (analisar observações com Claude e gerar cards de aprovação)."
 ---
 
-# VisionFlow — CRM Interno Real Vision 360
+# VisionFlow — CRM Interno Real Vision
 
 Guia completo para desenvolver o VisionFlow. Contém stack, estrutura, padrões mobile, sistema de design e histórico de decisões.
 
@@ -11,7 +11,7 @@ Guia completo para desenvolver o VisionFlow. Contém stack, estrutura, padrões 
 
 ## 1. O que é o VisionFlow
 
-CRM interno usado por Felipe e time da Real Vision 360 para gerenciar o pipeline de clientes, registrar atividades, controlar tarefas, finanças e entregas. Acesso restrito — Google OAuth via Supabase.
+CRM interno usado por Felipe e time da Real Vision para gerenciar o pipeline de clientes, registrar atividades, controlar tarefas, finanças e entregas. Acesso restrito — Google OAuth via Supabase.
 
 **Usuários:** Felipe (admin) + colaboradoras (acesso limitado por cliente)  
 **Deploy:** Vercel  

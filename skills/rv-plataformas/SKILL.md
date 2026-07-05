@@ -1,11 +1,11 @@
 ---
 name: rv-plataformas
-description: Auxilia o Felipe a divulgar a Real Vision 360 nas plataformas de captação de clientes (Malt, Workana, 99Freelas, Trampos.co, Upwork, Fiverr, Contra, LinkedIn, Behance e outras). Use SEMPRE que ele mencionar "postar nas plataformas", "criar perfil no Upwork/Fiverr/Workana/Malt/LinkedIn/Behance/Contra/Trampos", "divulgar a empresa", "perfil de freelancer", "anunciar nossos serviços online", adaptar o texto de apresentação, montar um Gig/pacote, ou atualizar o status de cadastro nas plataformas. Carrega o contexto Real Vision e o texto-base oficial antes de agir.
+description: Auxilia o Felipe a divulgar a Real Vision nas plataformas de captação de clientes (Malt, Workana, 99Freelas, Trampos.co, Upwork, Fiverr, Contra, LinkedIn, Behance e outras). Use SEMPRE que ele mencionar "postar nas plataformas", "criar perfil no Upwork/Fiverr/Workana/Malt/LinkedIn/Behance/Contra/Trampos", "divulgar a empresa", "perfil de freelancer", "anunciar nossos serviços online", adaptar o texto de apresentação, montar um Gig/pacote, ou atualizar o status de cadastro nas plataformas. Carrega o contexto Real Vision e o texto-base oficial antes de agir.
 ---
 
 # RV Plataformas — Divulgação da Real Vision nas plataformas de captação
 
-Skill que apoia a publicação da Real Vision 360 nas plataformas onde clientes contratam quem desenvolve sites, aplicações, tours 360°, chatbots e agentes de IA.
+Skill que apoia a publicação da Real Vision nas plataformas onde clientes contratam quem desenvolve sites, aplicações, tours 360°, chatbots e agentes de IA.
 
 ## Passo 0 — Contexto
 

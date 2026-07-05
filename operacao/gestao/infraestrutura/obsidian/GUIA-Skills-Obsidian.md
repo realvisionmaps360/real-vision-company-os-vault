@@ -7,7 +7,7 @@ tags:
 date: 2026-06-29
 ---
 
-# Guia das Skills Obsidian — Real Vision 360
+# Guia das Skills Obsidian — Real Vision
 
 > Documento de referência das 4 skills do repositório kepano/obsidian-skills instaladas no Claude Code da Real Vision.
 > Criado em 29/06/2026. Ver também: [[README]] · [[PROTOCOLO-Sessao-Contexto]]

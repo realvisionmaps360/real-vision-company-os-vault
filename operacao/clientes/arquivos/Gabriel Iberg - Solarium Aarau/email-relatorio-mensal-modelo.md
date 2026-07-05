@@ -22,7 +22,7 @@ Falls du Fragen zu den Zahlen hast oder eine der vorgeschlagenen Verbesserungen 
 
 Viele Grüße
 Felipe Garcia
-Real Vision 360
+Real Vision
 
 P.S.: Mir ist aufgefallen, dass das Solarium noch kein optimiertes Google Business Profile hat. Für ein Geschäft mit Vor-Ort-Besuchen wie deins bringt das oft zusätzliche Kundschaft, die direkt über Google Maps nach "Solarium Aarau" sucht. Sag Bescheid, wenn du sehen möchtest, wie das aussehen könnte.
 
@@ -34,7 +34,7 @@ P.S.: Mir ist aufgefallen, dass das Solarium noch kein optimiertes Google Busine
 **Assunto B:** "Como foi o mês para aarau-solarium.ch?"
 **Preview text:** "Números, tendências e as próximas oportunidades de melhoria do site."
 
-Corpo: Oi Gabriel, segue em anexo o relatório mensal do site (aarau-solarium.ch) com os principais números do Google Analytics e um resumo rápido das próximas oportunidades de melhoria que identificamos na última análise. Qualquer dúvida sobre os números ou se quiser priorizar alguma melhoria, é só chamar. Abraço, Felipe / Real Vision 360.
+Corpo: Oi Gabriel, segue em anexo o relatório mensal do site (aarau-solarium.ch) com os principais números do Google Analytics e um resumo rápido das próximas oportunidades de melhoria que identificamos na última análise. Qualquer dúvida sobre os números ou se quiser priorizar alguma melhoria, é só chamar. Abraço, Felipe / Real Vision.
 
 P.S.: reparei que o Solarium ainda não tem um perfil otimizado no Google Business Profile — pra um negócio de visita física como o dele, isso costuma trazer gente que busca "Solarium Aarau" direto no Google Maps. É um gancho pra puxar assunto sobre o serviço, sem parecer venda forçada (o Gabriel decide se quer ver mais).
 

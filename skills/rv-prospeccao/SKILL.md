@@ -81,7 +81,7 @@ Estrutura por pousada:
 
 **WhatsApp — template padrão:**
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em [CIDADE] esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -97,7 +97,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **E-mail — template padrão (sem assinatura — Felipe coloca a própria):**
 ```html
 <p>Olá!</p>
-<p>Sou o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — percorremos o Brasil atualizando imagens de cidades e regiões diretamente no Google Maps.</p>
+<p>Sou o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — percorremos o Brasil atualizando imagens de cidades e regiões diretamente no Google Maps.</p>
 <p>Nossa equipe esteve em [CIDADE] recentemente atualizando as imagens aéreas da região. Aproveitamos para oferecer também para os negócios locais: a possibilidade de incluir uma dessas imagens 360° no perfil do Google do estabelecimento.</p>
 <p>Quase nenhum[a] [SEGMENTO] de [CIDADE] tem fotos 360° anexadas ao perfil — a galeria fica vazia para a maioria. Com a imagem, toda vez que alguém abrir o perfil da <strong>[NOME]</strong> no Google vai se deparar com uma panorâmica aérea a 500 metros de altura, navegável tipo Street View. Além do visual, ajuda o visitante a se localizar e entender onde o negócio está antes de sair de casa.</p>
 <p>Veja nosso trabalho completo em: <a href="https://realvisionmaps.com/sobre">realvisionmaps.com/sobre</a></p>

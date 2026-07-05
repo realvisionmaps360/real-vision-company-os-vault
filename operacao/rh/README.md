@@ -1,6 +1,6 @@
 # RH — Índice
 
-Recrutamento e onboarding de pessoas na Real Vision 360.
+Recrutamento e onboarding de pessoas na Real Vision.
 
 | Arquivo | O que é |
 |---|---|

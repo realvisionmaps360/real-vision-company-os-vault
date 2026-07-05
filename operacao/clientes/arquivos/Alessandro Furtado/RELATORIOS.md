@@ -4,7 +4,7 @@
 
 - **Cliente desde:** 12/01/2026
 - **Frequência:** Mensal
-- **Responsável:** Felipe Garcia / Real Vision 360
+- **Responsável:** Felipe Garcia / Real Vision
 - **Situação:** Nenhum relatório enviado até agora (28/06/2026)
 
 ---

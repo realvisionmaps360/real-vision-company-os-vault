@@ -1,6 +1,6 @@
 # Gestão — Índice
 
-Tarefas e infraestrutura interna da Real Vision 360.
+Tarefas e infraestrutura interna da Real Vision.
 
 | Arquivo/Pasta | O que é |
 |---|---|

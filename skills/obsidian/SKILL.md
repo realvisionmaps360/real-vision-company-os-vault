@@ -1,9 +1,9 @@
 ---
 name: obsidian
-description: Skill mestre do vault Obsidian da Real Vision 360. Carrega quando Felipe falar em Obsidian, vault, wiki, backlinks, varredura do Company OS, ou "abre o Obsidian". Explica onde fica tudo, quais sub-skills usar e como criar conexões entre documentos.
+description: Skill mestre do vault Obsidian da Real Vision. Carrega quando Felipe falar em Obsidian, vault, wiki, backlinks, varredura do Company OS, ou "abre o Obsidian". Explica onde fica tudo, quais sub-skills usar e como criar conexões entre documentos.
 ---
 
-# Obsidian — Real Vision 360
+# Obsidian — Real Vision
 
 O vault do Obsidian É o Company OS da Real Vision. Todos os documentos `.md` da operação vivem aqui e são sincronizados automaticamente com o celular via GitHub privado.
 

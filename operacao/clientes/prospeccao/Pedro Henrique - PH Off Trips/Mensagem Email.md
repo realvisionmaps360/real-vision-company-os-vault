@@ -9,7 +9,7 @@
 
 Olá, Pedro Henrique,
 
-Meu nome é Felipe Garcia, sou fundador da Real Vision 360, uma operação focada em presença digital para negócios e profissionais locais — sites, Google Meu Negócio, tours virtuais 360° e automações com inteligência artificial.
+Meu nome é Felipe Garcia, sou fundador da Real Vision, uma operação focada em presença digital para negócios e profissionais locais — sites, Google Meu Negócio, tours virtuais 360° e automações com inteligência artificial.
 
 Encontrei seu trabalho pesquisando referências de turismo em Ilhabela, e seu nome apareceu como o primeiro resultado. Ao conhecer seu site e seu PDF de passeios, vi um profissional com formação sólida (Cadastur, Bacharel em Hotelaria, pós-graduação em Marketing Turístico, monitor ambiental do Parque Estadual de Ilhabela) e um catálogo de passeios muito bem estruturado — só que a apresentação digital ainda não reflete esse nível.
 
@@ -33,5 +33,5 @@ Se fizer sentido para você, posso preparar um diagnóstico mais detalhado e uma
 
 Um abraço,
 **Felipe Garcia**
-Real Vision 360
+Real Vision
 realvisionmaps360@gmail.com

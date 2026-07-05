@@ -1,4 +1,4 @@
-# Apresentação Base — Real Vision 360 (PT)
+# Apresentação Base — Real Vision (PT)
 
 > Texto-base para postar nas plataformas de captação (Malt, Workana, 99Freelas, Trampos.co, Upwork, Fiverr, Contra, LinkedIn, Behance).
 > Revisado contra `contexto/VOZ.md` — tom direto, técnico, sem hipérbole. **Não inventar dados.**
@@ -8,7 +8,7 @@
 
 ## 1. Headline / Título (1 linha)
 
-**Real Vision 360 — Sites profissionais, automações com IA e tours virtuais 360° para negócios que querem ser encontrados, confiados e contratados online.**
+**Real Vision — Sites profissionais, automações com IA e tours virtuais 360° para negócios que querem ser encontrados, confiados e contratados online.**
 
 Variações curtas (quando o campo for muito pequeno):
 - `Presença digital integrada: sites profissionais, IA e tours virtuais 360°.`
@@ -24,7 +24,7 @@ Construímos presença digital integrada para negócios locais e globais: sites 
 
 ## 3. Apresentação completa (~180 palavras)
 
-**Real Vision 360 — presença digital integrada para negócios locais e globais.**
+**Real Vision — presença digital integrada para negócios locais e globais.**
 
 Não criamos apenas páginas bonitas. Criamos sistemas digitais funcionais — site, Google Meu Negócio, tour virtual 360° e automações com IA trabalhando juntos para que seu negócio seja encontrado, confiado e contratado.
 

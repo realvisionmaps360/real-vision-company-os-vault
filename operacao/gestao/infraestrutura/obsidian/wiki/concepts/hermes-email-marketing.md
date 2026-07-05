@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Hermes — Agente de Email Marketing"
+title: "Hermes ï¿½ Agente de Email Marketing"
 aliases: ["hermes", "hermes-email-marketing", "email marketing", "Hermes"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
@@ -9,40 +9,40 @@ tags: [marketing, email, ia, automacao]
 status: stub
 ---
 
-# Hermes — Agente de Email Marketing
+# Hermes ï¿½ Agente de Email Marketing
 
-## O que é
-Primeiro agente de email marketing da Real Vision 360. Persona: estrategista-redator chamado **Hermes**. Conectado ao VisionFlow/Supabase para personalização por histórico de cliente.
+## O que ï¿½
+Primeiro agente de email marketing da Real Vision. Persona: estrategista-redator chamado **Hermes**. Conectado ao VisionFlow/Supabase para personalizaï¿½ï¿½o por histï¿½rico de cliente.
 
 ## Stack
 - **Plataforma:** Resend + Supabase
-- **Domínio:** realvisionmaps.com (motor quente)
+- **Domï¿½nio:** realvisionmaps.com (motor quente)
 - **Skill:** `rv-email`
 - **Arquivos:** `operacao/marketing/email-marketing/`
 
 ## Os 4 mestres (Megazord)
-| Peça | Mestre | Entrega |
+| Peï¿½a | Mestre | Entrega |
 |---|---|---|
-| Estratégia | Jeff Walker | narrativa, 9 gatilhos, sequência |
+| Estratï¿½gia | Jeff Walker | narrativa, 9 gatilhos, sequï¿½ncia |
 | Voz | Hormozi | cada email paga por si, estrutura fixa |
-| Máquina | Ferdy (OmniSend) | captura, automação, segmentos, DNS |
-| IA | Lead Gen Jay | skills encadeadas, banco próprio, autolearn |
+| Mï¿½quina | Ferdy (OmniSend) | captura, automaï¿½ï¿½o, segmentos, DNS |
+| IA | Lead Gen Jay | skills encadeadas, banco prï¿½prio, autolearn |
 
-## 3 Trilhas (públicos)
-1. **Clientes ativos** — relação + upsell (PRIORIDADE)
-2. **Prospects** — nutrir até reunião
-3. **Newsletter pública** — autoridade / GEO
+## 3 Trilhas (pï¿½blicos)
+1. **Clientes ativos** ï¿½ relaï¿½ï¿½o + upsell (PRIORIDADE)
+2. **Prospects** ï¿½ nutrir atï¿½ reuniï¿½o
+3. **Newsletter pï¿½blica** ï¿½ autoridade / GEO
 
 ## Diferencial real
-Email guiado por IA conectado ao CRM. Hermes lê quem comprou o quê, quem está inativo, quem recebeu proposta sem responder — e escreve a sequência certa para cada um.
+Email guiado por IA conectado ao CRM. Hermes lï¿½ quem comprou o quï¿½, quem estï¿½ inativo, quem recebeu proposta sem responder ï¿½ e escreve a sequï¿½ncia certa para cada um.
 
-## Reverse Lead Magnet (adaptação RV)
-Em vez de "quer um orçamento?", oferecer algo feito sob medida: mini-tour de demonstração, análise do Google Meu Negócio, print de como o site apareceria.
+## Reverse Lead Magnet (adaptaï¿½ï¿½o RV)
+Em vez de "quer um orï¿½amento?", oferecer algo feito sob medida: mini-tour de demonstraï¿½ï¿½o, anï¿½lise do Google Meu Negï¿½cio, print de como o site apareceria.
 
 ## Status (jun/2026)
-Estratégia definida. Plataforma escolhida. Construção: próxima fase.
+Estratï¿½gia definida. Plataforma escolhida. Construï¿½ï¿½o: prï¿½xima fase.
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[icp-real-vision]]
 - [[acquisition-system]]

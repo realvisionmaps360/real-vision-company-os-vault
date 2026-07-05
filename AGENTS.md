@@ -1,6 +1,6 @@
 # AGENTS.md — Real Vision
 
-A Real Vision 360 é uma operação de presença digital integrada para negócios locais e globais — sites, Google Meu Negócio, tours 360°, foto/drone e automações com IA. Como agente de IA, seu papel é apoiar Felipe Garcia na execução, análise e expansão desse negócio com precisão técnica e tom direto.
+A Real Vision é uma operação de presença digital integrada para negócios locais e globais — sites, Google Meu Negócio, tours 360°, foto/drone e automações com IA. Como agente de IA, seu papel é apoiar Felipe Garcia na execução, análise e expansão desse negócio com precisão técnica e tom direto.
 
 ## EMPRESA
 
@@ -18,6 +18,7 @@ A Real Vision oferece cinco pilares de serviço — sites profissionais, Google 
 5. **Design**: ao criar peças visuais ou copy para artes, consultar `contexto/DESIGN.md`. Campos marcados como "A definir" = perguntar ao Felipe antes de preencher.
 6. **Ativos de marca**: logos, fotos e fontes ficam em `contexto/ativos/` — nunca usar fontes externas sem confirmar com Felipe.
 7. **Raiz da pasta é sagrada**: arquivos temporários (screenshots, HTMLs provisórios, qualquer lixo de trabalho) vão obrigatoriamente para `TEMP/`. A raiz `Desktop\Real Vision\` só pode conter estrutura permanente — nunca arquivos soltos de trabalho. Ao final de qualquer sessão, limpar o que foi criado em `TEMP/`.
+8. **NUNCA APAGUE NOTAS DO OBSIDIAN**: você não tem autorização para excluir arquivos do vault. Se achar que algo precisa ser refeito, crie um NOVO arquivo (ex: `arquivo-revisado.md`) mas MANTENHA o original. Já perdi arquivos importantes porque o agente apagou e a sincronização foi instantânea. Regra de ouro: apenas CRIE, nunca DELETE.
 
 ## ARQUIVOS DE CONTEXTO
 

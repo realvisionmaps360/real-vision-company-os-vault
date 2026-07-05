@@ -1,6 +1,6 @@
 ---
 type: concept
-title: Ideal Customer Profile — Real Vision 360
+title: Ideal Customer Profile — Real Vision
 aliases: [ICP, perfil do cliente ideal, cliente alvo]
 date_created: 2026-06-29
 date_updated: 2026-06-29
@@ -9,7 +9,7 @@ tags: [icp, prospeccao, posicionamento]
 status: stable
 ---
 
-# Ideal Customer Profile — Real Vision 360
+# Ideal Customer Profile — Real Vision
 
 Perfil do cliente que a Real Vision quer atrair. Definido no Operating System do Acquisition Claude.
 
@@ -62,7 +62,7 @@ Perfil do cliente que a Real Vision quer atrair. Definido no Operating System do
 - [[sources/acquisition-operating-system]]
 - [[acquisition-system]]
 
-## Conex�es
+## Conex�es
 - [[rv-empresa]]
 - [[acquisition-system]]
 - [[campanha-paraty-2026]]

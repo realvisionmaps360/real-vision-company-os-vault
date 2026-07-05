@@ -1,6 +1,6 @@
 ---
 name: rv-fim-sessao
-description: Maestro de fim de sessão da Real Vision 360. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", ou /rv-fim-sessao. Orquestra três artefatos de encerramento: (1) SEMPRE atualiza a FICHA-CLIENTE.md + TIMELINE do cliente — memória que fecha o círculo com o início da próxima sessão; (2) gera o texto do VisionFlow se for sessão de cliente; (3) gera o bilhete técnico estilo session-handoff se a obra ficou pela metade e Felipe vai dar /clear. Carregar sempre junto com a skill realvision.
+description: Maestro de fim de sessão da Real Vision. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", ou /rv-fim-sessao. Orquestra três artefatos de encerramento: (1) SEMPRE atualiza a FICHA-CLIENTE.md + TIMELINE do cliente — memória que fecha o círculo com o início da próxima sessão; (2) gera o texto do VisionFlow se for sessão de cliente; (3) gera o bilhete técnico estilo session-handoff se a obra ficou pela metade e Felipe vai dar /clear. Carregar sempre junto com a skill realvision.
 ---
 
 # Skill: rv-fim-sessao — Maestro de Fim de Sessão

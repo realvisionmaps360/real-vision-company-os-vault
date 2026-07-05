@@ -68,7 +68,7 @@ Além do tour, aqui está o que posso oferecer:
 Responde esse email se quiser que eu coloque o tour no ar de novo.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Tenho três links do trabalho que fizemos no Universo Paralello 18, caso queira ver ou mostrar para alguém da região: realvisionmaps.com/portfolio/universo-paralello-18 | realvisionmaps.com/blog/bastidores-tour-360-universo-paralello-18 | realvisionmaps.com/blog/street-view-linha-azul-pratigi
 
@@ -130,7 +130,7 @@ Além do tour, aqui está o que ofereço:
 Me fala como quer resolver isso.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Três links do trabalho que fizemos no UP 18: realvisionmaps.com/portfolio/universo-paralello-18 | realvisionmaps.com/blog/bastidores-tour-360-universo-paralello-18 | realvisionmaps.com/blog/street-view-linha-azul-pratigi
 
@@ -194,7 +194,7 @@ Além do tour, aqui está o que posso oferecer:
 Me responde e a gente resolve isso junto.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Os links do trabalho que fizemos no UP 18, para você ver o nível do que entregamos na região: realvisionmaps.com/portfolio/universo-paralello-18 | realvisionmaps.com/blog/bastidores-tour-360-universo-paralello-18
 
@@ -263,7 +263,7 @@ Aqui está o que ofereço:
 Me fala quando puder conversar.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Sinto muito orgulho do trabalho que fizemos no UP 18, e você fez parte disso: realvisionmaps.com/portfolio/universo-paralello-18 | realvisionmaps.com/blog/bastidores-tour-360-universo-paralello-18
 
@@ -323,7 +323,7 @@ Além do tour, aqui está o que ofereço:
 Responde esse email para a gente resolver isso.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Três links do trabalho que fizemos no Universo Paralello 18: realvisionmaps.com/portfolio/universo-paralello-18 | realvisionmaps.com/blog/bastidores-tour-360-universo-paralello-18 | realvisionmaps.com/blog/street-view-linha-azul-pratigi
 
@@ -386,7 +386,7 @@ Além do tour, aqui está o que ofereço:
 Me fala se quiser resolver isso.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** No Instagram da pousada também tem dois links na bio, o que divide a atenção de quem visita. Um cartão digital resolveria isso com um link só que centraliza tudo.
 
@@ -449,7 +449,7 @@ Além do tour, aqui está o que ofereço:
 Responde esse email para a gente ver o que faz mais sentido.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Aqui está o link do trabalho que fizemos no UP 18, que aconteceu aí perto: realvisionmaps.com/portfolio/universo-paralello-18
 
@@ -514,7 +514,7 @@ Além da renovação do tour, aqui está o que ofereço:
 Me fala o que quiser fazer.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Com um domínio próprio, o endereço da pousada na internet ficaria algo como pousadacajueiro.com.br. Isso passa mais credibilidade para quem pesquisa online.
 
@@ -577,7 +577,7 @@ Aqui está o que ofereço:
 Quer que eu monte uma proposta para você?
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Com analytics no site, você também tem dados sobre os visitantes na hora de negociar a venda da pousada. Isso pode ser um diferencial.
 
@@ -644,7 +644,7 @@ Aqui está o que ofereço:
 Me fala o que achar.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Com o tour dentro do site e o domínio próprio, o link do Instagram poderia apontar para um endereço só seu: siribar.com.br. Bem melhor do que o WhatsApp sozinho.
 
@@ -705,7 +705,7 @@ Aqui está o que posso oferecer:
 Me fala esta semana se quiser renovar.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Veja um exemplo de hospedagem que trabalhamos, para referência: realvisionmaps.com/portfolio/vila-mandela
 
@@ -767,7 +767,7 @@ Aqui está o que ofereço:
 Me fala o que quiser fazer.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Com analytics no site, você passa a saber quantas pessoas visitam, de onde vêm e quanto tempo ficam. Esses dados são valiosos para tomar decisões sobre o negócio, e a gente tbm instala isso no seu tour ou no site, se puder decidir eme dar um retorno essa semana seria perfeito, um abraço e sucesso.
 
@@ -834,7 +834,7 @@ Aqui está o que ofereço:
 Me fala se tiver interesse.
 
 Felipe
-Real Vision 360
+Real Vision
 
 **P.S.:** Atualizar o link do Instagram para o tour leva 30 segundos e já resolve o problema imediato. Mas com um cartão digital, o link nunca precisaria ser trocado de novo.
 

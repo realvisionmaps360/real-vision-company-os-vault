@@ -1,6 +1,6 @@
 # Template — Email de Onboarding (Etapa 1)
 
-**Assunto:** Real Vision 360 — Material do Teste *(parte 1 de 2)*
+**Assunto:** Real Vision — Material do Teste *(parte 1 de 2)*
 **Usar para:** todos os candidatos, antes da reunião de briefing
 **Atualizado em:** 27/05/2026
 
@@ -140,4 +140,4 @@ Em breve mando a parte 2 com mais detalhes sobre o que vem a seguir.
 Qualquer dúvida me chama aqui!
 
 Felipe Garcia
-Real Vision 360
+Real Vision

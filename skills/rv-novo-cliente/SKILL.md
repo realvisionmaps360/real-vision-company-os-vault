@@ -1,6 +1,6 @@
 ---
 name: rv-novo-cliente
-description: Onboarding de cliente novo da Real Vision 360. Use SEMPRE que Felipe apresentar um cliente novo — um print/imagem da ficha do VisionFlow, um nome de pessoa, um nome de empresa, a frase "novo cliente", ou um lead de prospecção de campo (visita, indicação) que ainda não está em nenhum sistema. Consulta o Supabase do VisionFlow, confirma o match com o Felipe (anti-duplicata) — e se for lead genuíno ainda não cadastrado, cria o registro no VisionFlow com aprovação. Cria a estrutura padrão do cliente — pasta + docs base (PROJETO + TIMELINE + FICHA-CLIENTE) + skill por-cliente; em fase de prospecção, também briefing de call + script de WhatsApp. Carregar sempre junto com a skill `realvision`.
+description: Onboarding de cliente novo da Real Vision. Use SEMPRE que Felipe apresentar um cliente novo — um print/imagem da ficha do VisionFlow, um nome de pessoa, um nome de empresa, a frase "novo cliente", ou um lead de prospecção de campo (visita, indicação) que ainda não está em nenhum sistema. Consulta o Supabase do VisionFlow, confirma o match com o Felipe (anti-duplicata) — e se for lead genuíno ainda não cadastrado, cria o registro no VisionFlow com aprovação. Cria a estrutura padrão do cliente — pasta + docs base (PROJETO + TIMELINE + FICHA-CLIENTE) + skill por-cliente; em fase de prospecção, também briefing de call + script de WhatsApp. Carregar sempre junto com a skill `realvision`.
 ---
 
 # Skill: rv-novo-cliente — Onboarding de Cliente Novo
@@ -135,7 +135,7 @@ servicos: []
 ```markdown
 # <Empresa> — Dossiê do Projeto
 
-> Cliente da Real Vision 360. Carregue sempre junto com a skill `realvision`.
+> Cliente da Real Vision. Carregue sempre junto com a skill `realvision`.
 > Idioma de trabalho com o cliente: <idioma>.
 
 ## Quem é

@@ -1,4 +1,4 @@
-# EMPRESA — Real Vision 360
+# EMPRESA — Real Vision
 
 ## O que fazemos
 

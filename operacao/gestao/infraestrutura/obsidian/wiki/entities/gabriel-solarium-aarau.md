@@ -1,6 +1,6 @@
 ---
 type: entity
-title: "Gabriel Iberg — Solarium Aarau"
+title: "Gabriel Iberg ï¿½ Solarium Aarau"
 aliases: ["Gabriel Iberg", "Gabriel", "Solarium Aarau", "Solarium"]
 date_created: 2026-06-29
 date_updated: 2026-06-29
@@ -9,22 +9,22 @@ tags: [cliente, entregue, suica]
 status: stub
 ---
 
-# Gabriel Iberg — Solarium Aarau
+# Gabriel Iberg ï¿½ Solarium Aarau
 
 ## Resumo
-Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision 360 — Solarium Aarau, Suíça. Tour Virtual 360° entregue. Chegou via Romana (co-fundadora da RV).
+Gabriel Iberg ï¿½ o cliente do primeiro projeto internacional da Real Vision ï¿½ Solarium Aarau, Suï¿½ï¿½a. Tour Virtual 360ï¿½ entregue. Chegou via Romana (co-fundadora da RV).
 
-## Serviços contratados
-- **Tour Virtual 360°** (entregue) — tour do Solarium Aarau
+## Serviï¿½os contratados
+- **Tour Virtual 360ï¿½** (entregue) ï¿½ tour do Solarium Aarau
 
 ## Entregas
-- Tour 360° entregue e publicado
+- Tour 360ï¿½ entregue e publicado
 - Repo: operacao/projetos/solariumaarau/
 - Skill por-cliente: solarium
 
-## Histórico
-- **2026-04-01** — Início; primeiro projeto internacional da Real Vision
+## Histï¿½rico
+- **2026-04-01** ï¿½ Inï¿½cio; primeiro projeto internacional da Real Vision
 
-## Conexões
+## Conexï¿½es
 - Perfil: [[icp-real-vision]]
-- Serviços: [[tour-360]]
+- Serviï¿½os: [[tour-360]]

@@ -1,6 +1,6 @@
 # D Info — Dossiê do Projeto
 
-> Cliente da Real Vision 360. Carregue sempre junto com a skill `realvision`.
+> Cliente da Real Vision. Carregue sempre junto com a skill `realvision`.
 > Idioma de trabalho com o cliente: português brasileiro.
 
 ## Quem é

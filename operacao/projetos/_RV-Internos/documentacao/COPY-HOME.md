@@ -404,7 +404,7 @@ Toda copy aqui está pronta pra ir direto pro briefing do Claude Design (Fase 4)
 - LinkedIn (Felipe): https://www.linkedin.com/in/felipe-garcia-pereira-918565331/
 
 ### Linha final (centralizada, fonte pequena)
-> © 2026 Real Vision 360 · Construído com presença digital integrada · Itacaré → Mundo
+> © 2026 Real Vision · Construído com presença digital integrada · Itacaré → Mundo
 
 ### CTA secundário no footer (antes da linha final)
 **`Fale com a gente`** → WhatsApp

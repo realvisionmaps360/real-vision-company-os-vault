@@ -1,4 +1,4 @@
-# VOZ — Real Vision 360
+# VOZ — Real Vision
 
 ## Tom de voz
 

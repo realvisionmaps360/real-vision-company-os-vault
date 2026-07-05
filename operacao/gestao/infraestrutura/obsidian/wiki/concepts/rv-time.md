@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Time — Real Vision 360"
+title: "Time ï¿½ Real Vision"
 aliases: ["rv-time", "time", "equipe", "fundadores"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
@@ -9,27 +9,27 @@ tags: [empresa, time]
 status: stable
 ---
 
-# Time — Real Vision 360
+# Time ï¿½ Real Vision
 
-## Felipe Garcia — Fundador & Estrategista
-- **Idade:** 36 anos (nasc. 25/06/1990, São Bernardo do Campo/SP)
-- **Papel:** estratégia, entrega técnica e expansão
+## Felipe Garcia ï¿½ Fundador & Estrategista
+- **Idade:** 36 anos (nasc. 25/06/1990, Sï¿½o Bernardo do Campo/SP)
+- **Papel:** estratï¿½gia, entrega tï¿½cnica e expansï¿½o
 - **Email:** realvisionmaps360@gmail.com
-- **Idiomas:** Português + Inglês fluente
-- **Trajetória:** Local Guide Google ? fotógrafo 360°/drone ? vibe coder ? engenheiro de IA
-- **Decide:** estratégia, preço, entrega técnica, comunicação, financeiro, contratações
+- **Idiomas:** Portuguï¿½s + Inglï¿½s fluente
+- **Trajetï¿½ria:** Local Guide Google ? fotï¿½grafo 360ï¿½/drone ? vibe coder ? engenheiro de IA
+- **Decide:** estratï¿½gia, preï¿½o, entrega tï¿½cnica, comunicaï¿½ï¿½o, financeiro, contrataï¿½ï¿½es
 
-## Romana Loznjakovic — Co-fundadora
-- **Origem:** Bósnia, criada em Aarau, Suíça. 31 anos.
-- **Papel:** Fotografia & Organização de Processos
-- **Idiomas:** Bósnio, Alemão, Inglês, Espanhol, Português (aprendendo)
-- **Base:** Brasil ? Suíça
-- **Parceira pessoal de Felipe**. Trouxe clientes suíços: [[alexis-lafatas]] + [[msv-aarau]]
+## Romana Loznjakovic ï¿½ Co-fundadora
+- **Origem:** Bï¿½snia, criada em Aarau, Suï¿½ï¿½a. 31 anos.
+- **Papel:** Fotografia & Organizaï¿½ï¿½o de Processos
+- **Idiomas:** Bï¿½snio, Alemï¿½o, Inglï¿½s, Espanhol, Portuguï¿½s (aprendendo)
+- **Base:** Brasil ? Suï¿½ï¿½a
+- **Parceira pessoal de Felipe**. Trouxe clientes suï¿½ï¿½os: [[alexis-lafatas]] + [[msv-aarau]]
 
-## Contratações
-Processo seletivo encerrado em jun/2026 sem contratação. Estrutura de RH mantida em `operacao/rh/`.
+## Contrataï¿½ï¿½es
+Processo seletivo encerrado em jun/2026 sem contrataï¿½ï¿½o. Estrutura de RH mantida em `operacao/rh/`.
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[felipe-garcia]]
 - [[romana-sunbite]]

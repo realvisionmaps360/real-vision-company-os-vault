@@ -1,6 +1,6 @@
 # Operação — Índice Central
 
-Índice de toda a operação da Real Vision 360. Cada linha abaixo é o ponto de entrada de uma área.
+Índice de toda a operação da Real Vision. Cada linha abaixo é o ponto de entrada de uma área.
 
 | Área | Índice |
 |---|---|

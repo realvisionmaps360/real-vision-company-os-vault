@@ -1,6 +1,6 @@
 ---
 type: entity
-title: "Romana Loznjakovic — Sunbite.ch"
+title: "Romana Loznjakovic ï¿½ Sunbite.ch"
 aliases: ["Romana", "Romana Loznjakovic", "Sunbite", "Sunbite.ch"]
 date_created: 2026-06-29
 date_updated: 2026-06-29
@@ -9,23 +9,23 @@ tags: [cliente, ativo, co-fundadora]
 status: stub
 ---
 
-# Romana Loznjakovic — Sunbite.ch
+# Romana Loznjakovic ï¿½ Sunbite.ch
 
 ## Resumo
-Romana Loznjakovic é co-fundadora da Real Vision 360 e criadora da Sunbite.ch — food bike de comida saudável baseada na Suíça. Site em desenvolvimento, aguardando logo + fotos. Pasta canônica: operacao/clientes/arquivos/Romana Loznjakovic - Sunbite.ch/
+Romana Loznjakovic ï¿½ co-fundadora da Real Vision e criadora da Sunbite.ch ï¿½ food bike de comida saudï¿½vel baseada na Suï¿½ï¿½a. Site em desenvolvimento, aguardando logo + fotos. Pasta canï¿½nica: operacao/clientes/arquivos/Romana Loznjakovic - Sunbite.ch/
 
-## Serviços contratados
-- **Site Sunbite.ch** — em desenvolvimento
-- **Vetorização de stickers** (via Leonardo, freelancer) — aguardando
+## Serviï¿½os contratados
+- **Site Sunbite.ch** ï¿½ em desenvolvimento
+- **Vetorizaï¿½ï¿½o de stickers** (via Leonardo, freelancer) ï¿½ aguardando
 
 ## Entregas
-- **29/05/2026** — Briefing criado em operacao/projetos/BRIEFING-SUNBITE.md
-- **29/05/2026** — Mensagem enviada ao Leonardo (vetorização); prazo ~1 mês
-- **29/06/2026** — Pasta canônica padronizada
+- **29/05/2026** ï¿½ Briefing criado em operacao/projetos/BRIEFING-SUNBITE.md
+- **29/05/2026** ï¿½ Mensagem enviada ao Leonardo (vetorizaï¿½ï¿½o); prazo ~1 mï¿½s
+- **29/06/2026** ï¿½ Pasta canï¿½nica padronizada
 
-## Histórico
-- **2026-05-01** — Início do projeto Sunbite.ch
+## Histï¿½rico
+- **2026-05-01** ï¿½ Inï¿½cio do projeto Sunbite.ch
 
-## Conexões
+## Conexï¿½es
 - Perfil: [[icp-real-vision]]
-- Serviços: [[website]]
+- Serviï¿½os: [[website]]

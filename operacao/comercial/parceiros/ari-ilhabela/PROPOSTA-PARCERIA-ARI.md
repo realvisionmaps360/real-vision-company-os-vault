@@ -1,7 +1,7 @@
 # Proposta de Parceria — Real Vision × Ari
 
 **Data:** 24 de junho de 2026  
-**Elaborado por:** Felipe Garcia — Real Vision 360
+**Elaborado por:** Felipe Garcia — Real Vision
 
 ---
 
@@ -98,6 +98,6 @@ Nosso objetivo é construir uma rede pequena de parceiros de confiança em Ilhab
 Qualquer dúvida, estou à disposição.
 
 **Felipe Garcia**  
-Real Vision 360  
+Real Vision  
 realvisionmaps.com  
 realvisionmaps360@gmail.com

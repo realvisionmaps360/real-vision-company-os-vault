@@ -1,6 +1,6 @@
 # Prospecção — Índice
 
-Sistema de aquisição de clientes da Real Vision 360 (Acquisition Claude) e campanhas de prospecção.
+Sistema de aquisição de clientes da Real Vision (Acquisition Claude) e campanhas de prospecção.
 
 ## Sistema de aquisição
 

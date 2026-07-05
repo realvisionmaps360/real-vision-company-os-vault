@@ -42,7 +42,7 @@ Claude Code (desenvolvimento de sites e apps) · Pano2VR · Câmera 360° + Dron
 
 ## Projetos Internos
 
-- **VisionFlow** — CRM interno da Real Vision 360. Pasta local: `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
+- **VisionFlow** — CRM interno da Real Vision. Pasta local: `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
 
 ---
 
@@ -89,7 +89,8 @@ Ao editar código, documentos ou arquivos do Company OS:
 
 Quando minhas mudanças criarem órfãos:
 - Remova apenas o que MINHAS alterações tornaram inútil.
-- Nunca remover conteúdo pré-existente sem aprovação explícita do Felipe.
+- **Nunca remover conteúdo pré-existente sem aprovação explícita do Felipe.**
+- **NUNCA APAGUE ARQUIVOS DO VAULT OBSIDIAN** — apenas crie novos. Se achar que algo precisa ser refeito, crie `arquivo-revisado.md` e mantenha o original. Já perdemos arquivos importantes por exclusão + sync instantâneo. Regra: CRIE, nunca DELETE.
 
 Teste: cada linha alterada deve traçar diretamente ao que foi pedido.
 

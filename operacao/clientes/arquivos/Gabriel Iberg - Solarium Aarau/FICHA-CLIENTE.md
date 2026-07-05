@@ -14,7 +14,7 @@ servicos:
 
 ## Contexto
 
-Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision 360 — Solarium Aarau, localizado na Suíça. Tour Virtual 360° entregue. Chegou através da Romana (co-fundadora da RV).
+Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision — Solarium Aarau, localizado na Suíça. Tour Virtual 360° entregue. Chegou através da Romana (co-fundadora da RV).
 
 ## Serviços contratados
 
@@ -41,7 +41,7 @@ Gabriel Iberg é o cliente do primeiro projeto internacional da Real Vision 360 
 ## Observações
 
 - Idioma de trabalho: DE (Hochdeutsch) ou EN — Suíça
-- Primeiro cliente internacional da Real Vision 360
+- Primeiro cliente internacional da Real Vision
 - Ponto de referência para expansão na Suíça/Europa
 - Contato via Romana Loznjakovic
 

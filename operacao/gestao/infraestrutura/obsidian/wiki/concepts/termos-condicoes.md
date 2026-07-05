@@ -1,7 +1,7 @@
 ---
 type: concept
-title: "Termos e Condições Gerais v1.1"
-aliases: ["termos-condicoes", "termos", "T&C", "termos de serviço"]
+title: "Termos e Condiï¿½ï¿½es Gerais v1.1"
+aliases: ["termos-condicoes", "termos", "T&C", "termos de serviï¿½o"]
 date_created: 2026-06-29
 date_updated: 2026-06-29
 source_count: 0
@@ -9,13 +9,13 @@ tags: [comercial, juridico]
 status: stub
 ---
 
-# Termos e Condições Gerais v1.1
+# Termos e Condiï¿½ï¿½es Gerais v1.1
 
 ## Resumo
-Documento oficial com os Termos e Condições da Real Vision 360, versão 1.1, jun/2026. Anexado ao Service Agreement em todos os contratos.
+Documento oficial com os Termos e Condiï¿½ï¿½es da Real Vision, versï¿½o 1.1, jun/2026. Anexado ao Service Agreement em todos os contratos.
 
 ## Onde fica
-operacao/comercial/ — acessível via skill [[rv-termos]]
+operacao/comercial/ ï¿½ acessï¿½vel via skill [[rv-termos]]
 
-## Conexões
+## Conexï¿½es
 - [[contrato-rv]]

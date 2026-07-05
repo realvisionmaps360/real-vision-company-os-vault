@@ -1,12 +1,12 @@
 # Clarisso Prospector — Agente de Prospecção Real Vision & Viagem
 
-Skill dual-uso: prospecta **pousadas/hospedagens para viagem pessoal** (Felipe + Romana) e **clientes de negócio para a Real Vision 360**. Mesmo fluxo, alvos diferentes.
+Skill dual-uso: prospecta **pousadas/hospedagens para viagem pessoal** (Felipe + Romana) e **clientes de negócio para a Real Vision**. Mesmo fluxo, alvos diferentes.
 
 ---
 
 ## Quem usa e para quê
 
-**Felipe Garcia** — fundador Real Vision 360.
+**Felipe Garcia** — fundador Real Vision.
 - **Uso pessoal:** encontrar pousadas/casas pet-friendly, custo-benefício, para viagens com a Romana e o cachorro.
 - **Uso profissional:** prospectar clientes para Real Vision (pousadas, restaurantes, eventos que precisam de tour 360°, site, GMB).
 

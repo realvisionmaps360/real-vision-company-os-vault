@@ -25,7 +25,7 @@
 ## Template WhatsApp — trocar [NOME DO RESTAURANTE]
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -50,7 +50,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99328-2688](https://wa.me/5524993282688) · **E-mail:** banana@restaurantebananadaterra.com.br · ☐ WA · ☐ Email
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -69,7 +69,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99875-2447](https://wa.me/5524998752447) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -88,7 +88,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99974-2734](https://wa.me/5524999742734) · **E-mail:** restaurante@margaridacafe.com.br · ☐ WA · ☐ Email
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -107,7 +107,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99216-0508](https://wa.me/5524992160508) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -126,7 +126,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99266-2221](https://wa.me/5524992662221) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -145,7 +145,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99847-2092](https://wa.me/5524998472092) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -164,7 +164,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99317-6793](https://wa.me/5524993176793) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -183,7 +183,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99848-2098](https://wa.me/5524998482098) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -202,7 +202,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99873-1680](https://wa.me/5524998731680) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -221,7 +221,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99991-3190](https://wa.me/5524999913190) · **E-mail:** jgggfidelis@hotmail.com · ☐ WA · ☐ Email
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -240,7 +240,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99859-7585](https://wa.me/5524998597585) · **E-mail:** — (contato via puntodivino.com.br/contato) · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -259,7 +259,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99844-3788](https://wa.me/5524998443788) · **E-mail:** contato@gastromarparaty.com · ☐ WA · ☐ Email
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -278,7 +278,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 98856-5126](https://wa.me/5524988565126) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -297,7 +297,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 **WhatsApp:** [(24) 99884-5916](https://wa.me/5524998845916) · **E-mail:** — · ☐ WA
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -333,7 +333,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 *(Rod. Gov. Mario Covas, BR101 km 564 — fora do centro, mas ativo no WA)*
 
 ```
-Oi! Aqui é o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
+Oi! Aqui é o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — andamos pelo Brasil atualizando imagens de cidades e regiões no Google Maps.
 
 Nossa equipe esteve em Paraty esses dias atualizando as imagens aéreas da região. Aproveitamos pra oferecer também pro comércio local: incluir uma dessas fotos 360° diretamente no perfil do Google do negócio.
 
@@ -371,7 +371,7 @@ Se não tiver interesse no momento, não precisa responder. Abraço!
 
 ```html
 <p>Olá!</p>
-<p>Sou o Felipe, da Real Vision 360. Somos Guias Locais do Google e contribuidores do Street View — percorremos o Brasil atualizando imagens de cidades e regiões diretamente no Google Maps.</p>
+<p>Sou o Felipe, da Real Vision. Somos Guias Locais do Google e contribuidores do Street View — percorremos o Brasil atualizando imagens de cidades e regiões diretamente no Google Maps.</p>
 <p>Nossa equipe esteve em Paraty recentemente atualizando as imagens aéreas da região. Aproveitamos para oferecer também para os negócios locais: a possibilidade de incluir uma dessas imagens 360° no perfil do Google do estabelecimento.</p>
 <p>Quase nenhum restaurante de Paraty tem fotos 360° anexadas ao perfil — a galeria fica vazia para a maioria. Com a imagem, toda vez que alguém abrir o perfil <strong>[do/da NOME]</strong> no Google vai se deparar com uma panorâmica aérea a 500 metros de altura, navegável tipo Street View. Além do visual, ajuda o visitante a se localizar e entender onde o negócio está antes de sair de casa.</p>
 <p>Veja nosso trabalho completo em: <a href="https://realvisionmaps.com/sobre">realvisionmaps.com/sobre</a></p>

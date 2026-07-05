@@ -1,4 +1,4 @@
-# Vagas — Real Vision 360
+# Vagas — Real Vision
 
 **Vaga atual:** Assistente de Relacionamento e Vendas
 **Canais publicados:** LinkedIn e Upwork

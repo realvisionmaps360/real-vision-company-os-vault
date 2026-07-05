@@ -48,7 +48,7 @@ A AGB é o documento de **Termos e Condições Gerais** do festival — equivale
 **Preview text (hidden):** We've done this for psytrance festivals in Brazil. Curious if it fits Modular.
 
 **Resumo do email:**
-- Apresentou a Real Vision 360 como empresa de tours 360°, sites e ferramentas digitais
+- Apresentou a Real Vision como empresa de tours 360°, sites e ferramentas digitais
 - Referenciou o trabalho para o Universo Paralello (UP18) como caso de uso para festivais
 - Mencionou que Felipe e Romana estarão na Suíça em setembro — conexão pessoal e logística
 - Propôs a Sunbite (food bike da Romana) como parceira gastronômica do evento
@@ -82,4 +82,4 @@ A AGB é o documento de **Termos e Condições Gerais** do festival — equivale
 
 ---
 
-*Documento criado em 28/06/2026 — Sessão de prospecção Real Vision 360*
+*Documento criado em 28/06/2026 — Sessão de prospecção Real Vision*

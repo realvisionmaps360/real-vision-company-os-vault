@@ -1,4 +1,4 @@
-# Sistema de Aquisição — Arquitetura (Real Vision 360)
+# Sistema de Aquisição — Arquitetura (Real Vision)
 
 > **Status:** Desenho aprovado · **Data:** 20/06/2026 · **Missão:** Mission 2
 > **Relacionado:** [[ACQUISITION-CLAUDE]] (papel — Mission 1) · VisionFlow (CRM — destino do handover)

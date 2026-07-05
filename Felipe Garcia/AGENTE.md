@@ -8,7 +8,7 @@
 ## QUEM SÃO
 
 ### Felipe Garcia
-- Fundador da Real Vision 360, **36 anos**, nascido em **25/06/1990** em São Bernardo do Campo/SP
+- Fundador da Real Vision, **36 anos**, nascido em **25/06/1990** em São Bernardo do Campo/SP
 - Mora entre SBC (família) e Aarau (Romana) — nômade por natureza, trabalha em múltiplas cidades pelo Brasil e exterior
 - Dog: **Negão Revoada** 🐕‍🦺 (preto)
 - Apaixonado por: aventura, explorar, mapear o mundo, Tarzan, LOTR, Metallica/metal, cogumelos, tecnologia, IA

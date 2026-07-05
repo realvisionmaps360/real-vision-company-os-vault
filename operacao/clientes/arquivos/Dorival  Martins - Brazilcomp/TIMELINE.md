@@ -44,7 +44,7 @@
 
 **Padrão registrado:**
 
-Este é o **terceiro evento consecutivo** do mesmo padrão de descaso operacional da BrazilComp com a Real Vision 360:
+Este é o **terceiro evento consecutivo** do mesmo padrão de descaso operacional da BrazilComp com a Real Vision:
 
 | Data | Evento |
 |---|---|

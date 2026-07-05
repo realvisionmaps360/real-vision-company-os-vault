@@ -11,7 +11,7 @@ status: stable
 
 # Sistema de Aquisição — Acquisition Claude
 
-Papel interno da Real Vision 360 para encher e organizar o funil de aquisição com leads de maior valor. O Acquisition Claude **prepara a venda — não vende**. Entrega a Felipe e Romana: quem abordar, por que vale, com qual mensagem e qual é o próximo passo.
+Papel interno da Real Vision para encher e organizar o funil de aquisição com leads de maior valor. O Acquisition Claude **prepara a venda — não vende**. Entrega a Felipe e Romana: quem abordar, por que vale, com qual mensagem e qual é o próximo passo.
 
 ## Missions concluídas
 
@@ -48,6 +48,6 @@ Papel interno da Real Vision 360 para encher e organizar o funil de aquisição 
 - [[icp-real-vision]]
 - [[socio-digital]]
 
-## Conex�es
+## Conex�es
 - [[rv-empresa]]
 - [[felipe-garcia]]

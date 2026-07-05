@@ -1,7 +1,7 @@
 ---
 type: concept
-title: "Tour Virtual 360°"
-aliases: ["tour-360", "tour virtual", "tour 360", "360°"]
+title: "Tour Virtual 360ï¿½"
+aliases: ["tour-360", "tour virtual", "tour 360", "360ï¿½"]
 date_created: 2026-06-29
 date_updated: 2026-06-29
 source_count: 0
@@ -9,24 +9,24 @@ tags: [servico, carro-chefe]
 status: stub
 ---
 
-# Tour Virtual 360°
+# Tour Virtual 360ï¿½
 
 ## Resumo
-Serviço principal da Real Vision 360. Captura fotográfica com câmera 360° e publicação de tour interativo, geralmente hospedado em realvisionmaps.com/tour/ ou domínio próprio do cliente.
+Serviï¿½o principal da Real Vision. Captura fotogrï¿½fica com cï¿½mera 360ï¿½ e publicaï¿½ï¿½o de tour interativo, geralmente hospedado em realvisionmaps.com/tour/ ou domï¿½nio prï¿½prio do cliente.
 
 ## Como funciona
-- Captura no local com câmera 360° própria
+- Captura no local com cï¿½mera 360ï¿½ prï¿½pria
 - Processamento e montagem via Pano2VR
-- Publicação e hospedagem na Hostinger ou domínio do cliente
-- Integração opcional com Google Street View
+- Publicaï¿½ï¿½o e hospedagem na Hostinger ou domï¿½nio do cliente
+- Integraï¿½ï¿½o opcional com Google Street View
 
-## Preço referência
-- R$100/imagem (captura + entrega) — referência jun/2026
+## Preï¿½o referï¿½ncia
+- R$100/imagem (captura + entrega) ï¿½ referï¿½ncia jun/2026
 
-## Clientes com este serviço
+## Clientes com este serviï¿½o
 [[antonio-pousada-caminho-da-praia]], [[didier-casa-dos-cajus]], [[fernanda-siribar]], [[fred-manga-rosa]], [[gabriel-solarium-aarau]], [[getulio-residencial-soares]], [[ian-barra-club]], [[jair-casa-barra-serinhaem]], [[juscelia-fazenda-coqueirais]], [[kelly-pizzaria-baiana]], [[maria-cristina-shangri-la]], [[moreno-pousada-galeao]], [[nery-mercado-pratigi]], [[raphael-casa-amarela]], [[sadra-universo-paralello]], [[sandra-casa-oba]], [[senhor-costinha-canto-dos-passaros]], [[zuleide-pousada-sol-da-ilha]]
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[icp-real-vision]]
 - [[google-meu-negocio]]

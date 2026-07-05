@@ -1,4 +1,4 @@
-# DESIGN — Real Vision 360
+# DESIGN — Real Vision
 
 > Source of truth para identidade visual do site oficial. Atualizado em mai/2026.
 

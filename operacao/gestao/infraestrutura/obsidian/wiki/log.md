@@ -1,4 +1,4 @@
-# Wiki Log — Real Vision 360
+# Wiki Log — Real Vision
 
 Registro cronológico de todas as ingestas. Append-only.
 

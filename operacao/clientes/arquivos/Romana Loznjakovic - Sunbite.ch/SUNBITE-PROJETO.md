@@ -17,7 +17,7 @@ aliases:
 
 # Sunbite.ch — Dossiê do Projeto
 
-> Cliente da Real Vision 360. Carregue sempre junto com a skill `realvision`.
+> Cliente da Real Vision. Carregue sempre junto com a skill `realvision`.
 > Para trabalho no código do site, ativar a skill `sunbite-site`.
 > Idioma de trabalho com a cliente: Inglês / Alemão (Hochdeutsch).
 
@@ -27,7 +27,7 @@ Ficha resumida: [[FICHA-CLIENTE]] · Linha do tempo: [[SUNBITE-TIMELINE]]
 
 ## Quem é
 
-- **Cliente:** Romana Loznjakovic (co-fundadora da Real Vision 360; parceira pessoal do Felipe)
+- **Cliente:** Romana Loznjakovic (co-fundadora da Real Vision; parceira pessoal do Felipe)
 - **Negócio:** SUNBITE — food bike de sobremesas premium
 - **Produto único:** Strawberry Chocolate Cups (morangos frescos + chocolate suíço premium) + limonada caseira
 - **Mercado:** Suíça (Aarau e região)
