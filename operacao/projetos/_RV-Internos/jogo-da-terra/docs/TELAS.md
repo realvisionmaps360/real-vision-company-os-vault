@@ -9,6 +9,7 @@
 - **Moldura Game Boy:** a área de jogo vive dentro de uma estética retrô consistente — pixel art, caixa de diálogo clássica com texto aparecendo letra por letra e setinha piscando
 - **A cor conta a história:** a paleta do mundo segue o estágio da Grande Obra do jogador — do quase preto-e-branco (Calcinação/nigredo) até cores quentes e douradas (Coagulação/rubedo). A ficha, os menus e a aura do personagem acompanham
 - **Pouco texto na tela, sempre:** telas limpas, uma ideia por vez — o jogo é sobre atenção, o design tem que praticar o que prega
+- **Nível gráfico (aprovado 04/07/2026):** pixel art moderna com acabamento rico — personagens grandes e expressivos, iluminação volumétrica, cenários detalhados. Referência oficial: ![conceito](../design/conceito-grafico-biblioteca.png). Os mockups de blocos da seção 5 são estudos de layout, não o acabamento
 
 ## 2. Inventário de telas do MVP
 

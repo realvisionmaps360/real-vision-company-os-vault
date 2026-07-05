@@ -33,6 +33,7 @@
 | 04/07/2026 | Legibilidade da interrupção: ao ignorar o jogador, o NPC vira e olha para o personagem antes de retomar a conversa — sinal visual de que ele está incomodando | Felipe (áudio) |
 | 04/07/2026 | **Q4 respondida: o nome do jogo é EARTH GAME** — pendência prática: checar disponibilidade na Google Play Store e domínio antes do lançamento | Felipe |
 | 04/07/2026 | Gráficos: pixel art SIM, mas com acabamento moderno ("gráficos legais") — os mockups de blocos eram estudo de layout, não o nível visual final; direção gráfica a definir com arte-conceito | Felipe |
+| 04/07/2026 | **Referência oficial de acabamento gráfico aprovada:** `design/conceito-grafico-biblioteca.png` (pixel art moderna estilo Sea of Stars/Eastward, gerada por IA) — toda arte do jogo é cobrada contra esse padrão; cenários/personagens gerados por IA + retoque, textos e botões sempre renderizados pelo próprio jogo | Felipe ("isso aí tá perfeito") |
 | 04/07/2026 | **Design do MVP completo:** as 9 telas aprovadas em mockup (Conversa, Cenário, Globo+viagem e as 6 de apoio); filosofia visual "Nigredo Luminoso" (quase P&B + brasa dourada, jogador como único ponto de cor quente); imagens em `design/` | Felipe |
 
 ---
