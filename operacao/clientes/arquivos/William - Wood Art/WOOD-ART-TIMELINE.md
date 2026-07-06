@@ -26,6 +26,11 @@
 - **Pesquisa feita:** Felipe tinha dito ao William que ia estudar se o Wix já é avançado o bastante para dar conta de tudo sem migrar. Pesquisado o estado do Velo (backend do Wix), integração Mercado Pago e apps de configurador de produto. Confirmado: configurador simples até dá para existir via app de terceiro (Kickflip, Zakeke), mas o Wix tem banco de dados fechado (sem Postgres/MySQL nos planos básicos), backend com recursos travados (~400MB RAM, ~200 req/min), e a própria Wix está descontinuando pagamento server-to-server em 30/09/2026 — fecha a porta para o checkout controlado que o Brazilcomp já tem pronto. **Confirma a intuição do Felipe: não vale a pena tentar construir tudo dentro do Wix.**
 - Documento produzido: [[WOOD-ART-SITE-DIAGNOSTICO]]. Conclusão: migração é tecnicamente viável e recomendável; decisão final (migrar vs. corrigir o Wix vs. não fazer nada) fica para o William, na proposta.
 
+### 06/07/2026 — 3ª entrega: spec conceitual + custos do Chatbot com IA
+- Produzido o documento [[WOOD-ART-CHATBOT-IA-SPEC]]: conceito (assistente humanizado treinado na base da Wood Art, mostra produto no chat, integra com Google Merchant Center, transfere para ramais da equipe), canais possíveis (WhatsApp, Telegram, site, Instagram, qualquer link) e estrutura de custo — R$1.800 desenvolvimento (custo único), R$300/mês manutenção, R$250 por integração de plataforma adicional.
+- Confirmado: é entrega independente do App de Placas e do Website — pode ir no WhatsApp da operação atual do William sem depender das outras duas frentes; se o site próprio existir depois, o mesmo bot pode ser integrado nele por custo adicional.
+- Correção de processo: a skill `realvision` não havia sido carregada junto com `wood-art` no início da sessão (regra da própria skill e de [[feedback_skill_realvision_primeiro]]) — corrigido nesta sessão antes de criar o documento.
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -33,6 +38,7 @@
 | 06/07/2026 | Spec técnica + custos do App de Placas | 1h |
 | 06/07/2026 | Diagnóstico do site Wix + avaliação Brazilcomp | 1h |
 | 06/07/2026 | Correção App×Site + pesquisa técnica Wix (Velo, limites, Mercado Pago) | 0h30 |
+| 06/07/2026 | Spec conceitual + custos do Chatbot com IA | 0h30 |
 
 ## Próximos marcos
 **1ª entrega (App):**
@@ -42,7 +48,10 @@
 **2ª entrega (Website):**
 - Confirmar com o William: migrar para site próprio vs. corrigir o Wix atual vs. não fazer nada agora
 
+**3ª entrega (Chatbot IA):**
+- Confirmar com o William: canal prioritário, se quer multi-plataforma desde já, e volume esperado de conversas — ver [[WOOD-ART-CHATBOT-IA-SPEC]]
+
 **Geral:**
-- Reconciliar duplicata no VisionFlow quando o Supabase voltar
-- Montar a proposta comercial (skill `proposta-comercial`) — com as duas entregas como linhas separadas
+- Reconciliar duplicata no VisionFlow (tentado em 06/07/2026, MCP Supabase com timeout de conexão — retomar quando resolver)
+- Montar a proposta comercial (skill `proposta-comercial`) — com as três entregas como linhas separadas
 - Gerar versão em slides da proposta aprovada (skill `frontend-slides`)
