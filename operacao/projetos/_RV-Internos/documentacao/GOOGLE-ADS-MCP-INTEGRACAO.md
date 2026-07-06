@@ -17,6 +17,15 @@ Conectar o Claude Code à API do Google Ads via MCP Server oficial (read-only), 
    - Capacidade marcada: Reporting (nenhuma de criação/gerenciamento de conta ou campanha)
    - Tipo de campanha suportado: Search
 
+## Google Cloud + OAuth (concluído 06/07/2026)
+
+- Projeto criado: `real-vision-ads-mcp`
+- Google Ads API habilitada
+- Credenciais OAuth (Desktop app) criadas
+- Arquivo de credenciais salvo em: `TEMP/client_secret_865189378753-8qnls48uloe5msmdg94shil5h82rmmu4.apps.googleusercontent.com.json` (pasta `TEMP/` está no `.gitignore` do vault — nunca sobe pro GitHub)
+- Client ID: `865189378753-8qnls48uloe5msmdg94shil5h82rmmu4.apps.googleusercontent.com`
+- Client Secret: guardado apenas no arquivo JSON local acima — **não duplicar em outros arquivos do vault**
+
 ## Observação importante encontrada no processo
 - A conta "Real Vision Google ADS Account" original (156-292-4356) está **cancelada** — não pode ser usada.
 - A conta de anúncio ativa correta do Felipe é `felipegarciajericoacoara@gmail.com`.
