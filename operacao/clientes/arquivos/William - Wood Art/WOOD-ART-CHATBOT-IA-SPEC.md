@@ -33,13 +33,13 @@ Ou seja: é possível vender esta peça sozinha, ou como complemento de qualquer
 
 O bot pode atuar em qualquer um destes canais, com custo de integração próprio para cada um:
 
-| Canal | Observação |
-|---|---|
-| WhatsApp | Canal onde o William já atende hoje — ponto de partida mais natural |
-| Telegram | Alternativa/complemento ao WhatsApp |
-| Site (widget de chat) | Se/quando o site próprio existir (Frente 3) |
-| Instagram (DM) | Atendimento direto pelas mensagens do Instagram |
-| Qualquer link/lugar | O bot pode ser embutido onde o William quiser (ex: link direto, QR code, etc.) |
+| Canal                 | Observação                                                                     |
+| --------------------- | ------------------------------------------------------------------------------ |
+| WhatsApp              | Canal onde o William já atende hoje — ponto de partida mais natural            |
+| Telegram              | Alternativa/complemento ao WhatsApp                                            |
+| Site (widget de chat) | Se/quando o site próprio existir (Frente 3)                                    |
+| Instagram (DM)        | Atendimento direto pelas mensagens do Instagram                                |
+| Qualquer link/lugar   | O bot pode ser embutido onde o William quiser (ex: link direto, QR code, etc.) |
 
 O William pode escolher começar por um canal só e ir expandindo — não precisa decidir tudo de uma vez.
 
@@ -48,8 +48,8 @@ O William pode escolher começar por um canal só e ir expandindo — não preci
 ## 4. Capacidades / integrações conceituais
 
 - **Base de conhecimento treinada:** catálogo de produtos, preços, dúvidas frequentes e processo da Wood Art alimentam a IA.
-- **Produtos dentro do chat:** o bot mostra o produto (imagem + info) na própria conversa, não só descreve em texto.
-- **Google Merchant Center:** integração conceitual para puxar/sincronizar dados de produto entre o Merchant Center e o bot (ver também item 8 de [[WOOD-ART-FRENTES-DE-TRABALHO]]).
+- **Produtos dentro do chat:** o bot mostra o produto (imagem + info) na própria conversa, não só descreve em texto. ( pode ter mais custo para desenvolver)
+- **Google Merchant Center:** integração conceitual para puxar/sincronizar dados de produto entre o Merchant Center e o bot (ver também item 8 de [[WOOD-ART-FRENTES-DE-TRABALHO]]).( pode ter mais custo para desenvolver)
 - **Transferência para a equipe:** o bot identifica quando precisa de humano e encaminha para o ramal certo da equipe interna do William.
 - **Atendimento em massa e simultâneo:** múltiplos clientes atendidos ao mesmo tempo, sem fila.
 
@@ -68,6 +68,7 @@ O William pode escolher começar por um canal só e ir expandindo — não preci
 *Exemplo:* bot no WhatsApp (incluso no R$1.800) + site próprio depois = +R$250. Bot no WhatsApp + site + Instagram = +R$250 × 2.
 
 **⚠️ Valor final pendente de confirmação.** Esses números são a referência-base da Real Vision. O custo real (principalmente a manutenção mensal, que inclui uso de API de IA) depende do volume de conversas e da complexidade das respostas que o William espera — isso só se define entendendo a demanda dele.
+
 
 ---
 
