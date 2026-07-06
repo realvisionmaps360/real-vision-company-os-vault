@@ -49,13 +49,13 @@
 
 ## 4. Chatbot com IA
 
-**O que é:** chatbot de vendas diretas via WhatsApp, Telegram ou chat dentro do próprio site.
+**O que é:** assistente de vendas com IA, humanizado, treinado com a base de dados da Wood Art (produtos, dúvidas frequentes) — tira dúvidas como um vendedor, mostra produtos dentro do próprio chat, integra conceitualmente com o Google Merchant Center, e transfere para os ramais certos da equipe quando precisa de toque humano. Pode atuar em WhatsApp, Telegram, site, Instagram ou qualquer link, com custo de integração por plataforma. Spec completa + custos em [[WOOD-ART-CHATBOT-IA-SPEC]].
 
-**Por que importa:** atendimento automatizado escalável, sem depender do William ou da equipe estarem disponíveis o tempo todo.
+**Por que importa:** atendimento automatizado escalável, sem depender do William ou da equipe estarem disponíveis o tempo todo; acesso rápido à informação é fator decisivo na escolha de onde comprar.
 
-**Status atual:** ideia inicial.
+**Status atual:** spec conceitual pronta (06/07/2026) — entrega independente do App de Placas e do Website, pode ir no WhatsApp da operação atual do William sem depender das outras duas frentes.
 
-**Decisão pendente:** canal prioritário (WhatsApp vs Telegram vs site) e escopo (responder dúvidas vs. fechar vendas).
+**Decisão pendente:** canal prioritário de lançamento, se quer multi-plataforma desde já ou começar por um canal, volume esperado de conversas (define custo real de manutenção) — ver [[WOOD-ART-CHATBOT-IA-SPEC]].
 
 ---
 

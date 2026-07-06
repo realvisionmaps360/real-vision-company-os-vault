@@ -23,7 +23,7 @@ Ver detalhamento completo em [[WOOD-ART-FRENTES-DE-TRABALHO]]. Resumo das 11 fre
 1. App de criação de placas personalizadas (self-service + integração com produção interna) — spec técnica + custos em [[WOOD-ART-APP-PLACAS-SPEC]]
 2. Diagnóstico do site atual no Wix (avaliação negativa) — decisão pendente: migrar ou não
 3. Loja virtual própria (Mercado Pago + Correios + estoque), reaproveitando arquitetura do Brazilcomp
-4. Chatbot IA para vendas (WhatsApp/Telegram/site)
+4. Chatbot IA para vendas (WhatsApp/Telegram/site/Instagram) — entrega independente das outras, spec em [[WOOD-ART-CHATBOT-IA-SPEC]]
 5. Ferramenta de prospecção de leads (restaurantes — tábuas e placas grandes)
 6. Tráfego pago Google Ads
 7. Dados financeiros de referência (ML e Shopee) para embasar ROI
