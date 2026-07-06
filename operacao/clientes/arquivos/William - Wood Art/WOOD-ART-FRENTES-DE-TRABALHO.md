@@ -1,4 +1,3 @@
-# Wood Art — Frentes de Trabalho
 
 > Levantamento completo feito em 03/07/2026. Dossiê principal em [[WOOD-ART-PROJETO]].
 > Nenhuma frente está decidida ainda — este documento organiza as ideias para a análise e a proposta comercial.
