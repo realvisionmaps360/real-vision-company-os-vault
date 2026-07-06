@@ -17,13 +17,14 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 - Nenhum ainda — cliente em fase de diagnóstico.
 
 ## Entregas realizadas
-- Nenhuma ainda.
+- 06/07/2026 — Spec técnica + custos do App de Placas (Frente 1): [[WOOD-ART-APP-PLACAS-SPEC]]. PWA recomendado vs. nativo, stack, integrações. Total de horas ainda pendente de confirmação de escopo com o William.
 
 ## Próximos passos
-- Analisar a fundo a realidade atual do cliente (primeiro passo acordado com o Felipe)
+- Confirmar com o William o escopo do configurador (tamanhos, materiais, opções de personalização) — define o total de horas/valor do app.
+- Confirmar se domínio próprio se aplica ou se ele já usa o dele.
+- Próxima frente: site próprio + clone Brazilcomp + relatório do Wix atual (woodartstore.com.br).
+- Reconciliar duplicata no VisionFlow quando o Supabase voltar.
 - Ver as 11 frentes detalhadas em [[WOOD-ART-FRENTES-DE-TRABALHO]]
-- Montar proposta comercial → depois, versão em slides
-- Reconciliar duplicata no VisionFlow quando o Supabase voltar
 
 ## Observações
 - Idioma: PT-BR

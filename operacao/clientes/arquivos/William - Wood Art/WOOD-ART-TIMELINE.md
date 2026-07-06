@@ -13,11 +13,20 @@
 ### 06/07/2026 — Spec técnica + custos do App de Placas (Frente 1)
 - Analisadas as anotações do Felipe (`TEMP/woodart store will.md`) com o detalhamento das 11 frentes.
 - Produzido o documento [[WOOD-ART-APP-PLACAS-SPEC]]: jornada do cliente, comparativo PWA × app nativo (recomendação: PWA), stack, integrações e custos.
-- Valor-hora definido: R$120. Estimativa PWA ~184h (~R$22.080; faixa R$20.400–24.000). Custo mensal separado em fixo × variável.
-- Pendência para fechar o número: escopo do configurador (a confirmar com o William — versão-padrão sugerida no doc).
+- Valor-hora definido: R$120. Estimativa de desenvolvimento recalculada: 32h / R$3.840 — **total ainda pendente**, depende do escopo do configurador que o William vai confirmar.
+- Valor mensal de manutenção a cobrar do William: R$150–300/mês (separado do custo único de dev). Domínio: a confirmar se se aplica.
+- Objetivo desta fase reforçado: reunir informações para a proposta, sem iniciar construção.
 - Próxima frente confirmada: site próprio + clone Brazilcomp + relatório do Wix atual.
 
+## Tempo investido
+
+| Data | Sessão | Horas |
+|---|---|---|
+| 06/07/2026 | Spec técnica + custos do App de Placas | 1h |
+
 ## Próximos marcos
+- Confirmar com o William o escopo do configurador (define horas/valor final do app)
+- Confirmar se domínio próprio se aplica ou se ele usa o dele
 - Análise a fundo da realidade atual do cliente (primeiro passo acordado, antes de qualquer proposta)
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar
 - Montar a proposta comercial (skill `proposta-comercial`)
