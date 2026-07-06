@@ -18,16 +18,22 @@
 - Objetivo desta fase reforçado: reunir informações para a proposta, sem iniciar construção.
 - Próxima frente confirmada: site próprio + clone Brazilcomp + relatório do Wix atual.
 
+### 06/07/2026 — Diagnóstico do site Wix + avaliação do Brazilcomp (Frente 2 e 3)
+- Navegação ao vivo em woodartstore.com.br: confirmados 4 links de rodapé mortos, página de Contato com telefone/e-mail mock do template Wix (`(11) 3456-7890` / `info@meusite.com`), e uma página órfã do template ("Inquiry Services Page", em inglês, com fotos de stock genéricas) publicada no menu principal. Fotos de paisagismo/piscina desconexas do produto na seção "Clientes satisfeitos".
+- Avaliada a arquitetura do Brazilcomp (repo do cliente Dorival): stack React/Vite/Supabase idêntica à usada hoje pela RV; ~70% da infra de e-commerce (cadastro, carrinho, frete, Mercado Pago, pedidos, admin) já pronta e reaproveitável. Falta apenas o configurador de personalização, catálogo/copy/fotos e integração com a produção física do William.
+- Documento produzido: [[WOOD-ART-SITE-DIAGNOSTICO]]. Conclusão: migração é tecnicamente viável e recomendável, mas decisão de migrar vs. corrigir o Wix fica para o William, na proposta.
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
 |---|---|---|
 | 06/07/2026 | Spec técnica + custos do App de Placas | 1h |
+| 06/07/2026 | Diagnóstico do site Wix + avaliação Brazilcomp | 1h |
 
 ## Próximos marcos
 - Confirmar com o William o escopo do configurador (define horas/valor final do app)
 - Confirmar se domínio próprio se aplica ou se ele usa o dele
-- Análise a fundo da realidade atual do cliente (primeiro passo acordado, antes de qualquer proposta)
+- Confirmar com o William: migrar para site próprio vs. corrigir o Wix atual vs. não fazer nada agora
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar
 - Montar a proposta comercial (skill `proposta-comercial`)
 - Gerar versão em slides da proposta aprovada (skill `frontend-slides`)
