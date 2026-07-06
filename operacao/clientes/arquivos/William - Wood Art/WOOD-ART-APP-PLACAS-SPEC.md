@@ -4,6 +4,7 @@
 > Cliente: William (Wood Art). Dossiê: [[WOOD-ART-PROJETO]] · Frentes: [[WOOD-ART-FRENTES-DE-TRABALHO]]
 > Criado: 06/07/2026 · Valor-hora de referência: **R$120/h**
 > ⚠️ Estimativas de horas são da Real Vision. Custos de infraestrutura são faixas de mercado (jul/2026), confirmadas na hora de construir. Nada aqui é chute de preço final ao cliente — o preço fecha depois que o William confirmar o escopo.
+> 🎯 **Objetivo desta fase:** reunir as informações principais para montar a proposta comercial. Nenhuma construção/produção começa ainda.
 
 ---
 
@@ -51,7 +52,7 @@ O restante da spec detalha o **cenário A**.
 - **Frete:** API dos Correios — cálculo de valor/prazo no checkout e geração de etiqueta.
 - **Geração de arte:** API OpenAI (imagem/texto) — o cliente gera/ajusta a arte com auxílio de IA dentro do app.
 - **Painel interno de produção:** fila de pedidos com arte final + especificações, status (recebido → em produção → enviado), acessível à equipe.
-- **Deploy:** Vercel · **Domínio:** woodartstore.com.br (já existente).
+- **Deploy:** Vercel · **Domínio:** a confirmar se se aplica (ver seção 5.2 — William já tem woodartstore.com.br; depende do formato final).
 
 ---
 
@@ -75,33 +76,33 @@ Estimativa por bloco de trabalho × R$120/h:
 
 | Bloco | Horas | Valor |
 |---|---|---|
-| Configurador (seleção de tamanho/material + pré-visualização) | 40h | R$4.800 |
-| Geração de arte assistida por IA (integração + editor) | 30h | R$3.600 |
-| Backend + banco (catálogo, estoque, pedidos, auth) | 24h | R$2.880 |
-| Painel interno de produção (fila + status + export) | 30h | R$3.600 |
-| Integração pagamento (Mercado Pago) | 20h | R$2.400 |
-| Integração frete (Correios) | 16h | R$1.920 |
-| Notificações (email/WhatsApp) | 8h | R$960 |
-| Deploy PWA (instalável) + testes + ajustes | 16h | R$1.920 |
-| **Total** | **~184h** | **~R$22.080** |
+| Configurador (seleção de tamanho/material + pré-visualização) | 4h | R$480 |
+| Geração de arte assistida por IA (integração + editor) | 4h | R$480 |
+| Backend + banco (catálogo, estoque, pedidos, auth) | 5h | R$600 |
+| Painel interno de produção (fila + status + export) | 4h | R$480 |
+| Integração pagamento (Mercado Pago) | 3h | R$360 |
+| Integração frete (Correios) | 2h | R$240 |
+| Notificações (email/WhatsApp) | 3h | R$360 |
+| Deploy PWA (instalável) + testes + ajustes | 7h | R$840 |
+| **Total** | **32h** | **R$3.840** |
 
-Faixa de trabalho: **R$20.400 a R$24.000** (170–200h), a fechar conforme o escopo do configurador (ver seção 6).
+**⚠️ Total pendente de confirmação.** Essa estimativa só fecha depois que o William responder o que o configurador vai efetivamente oferecer (seção 6) — mais opções de personalização = mais horas. O número acima pode subir ou descer dependendo dessa resposta.
 
 > Precificação segue a filosofia [[feedback_proposta_fecha_total_divide_partes]] — fecha o total redondo e divide em pacotes depois. Âncora de mercado RV em [[project_rv_reativacao_skill]].
 
-### 5.2 Custo mensal — manter rodando
+### 5.2 Valor mensal a cobrar do William (manutenção do app)
 
-**Fixo (estimado):**
+**R$150 a R$300/mês** — cobrado pela Real Vision para manter o app rodando (suporte + atualizações). Esse valor é separado do custo único de desenvolvimento da seção 5.1.
+
+**Custo de infraestrutura por trás desse valor (referência interna, não repassar linha a linha ao cliente):**
 - Vercel: começa grátis; ~R$110/mês se precisar do plano Pro por volume.
 - Supabase: começa grátis; ~R$140/mês no Pro conforme crescer.
-- Domínio: ~R$40/ano (já pago).
-- Manutenção Real Vision (suporte + atualizações): a definir — faixa sugerida R$150–300/mês.
+- OpenAI: por arte gerada (estimativa ~R$0,25–0,50 por geração de imagem), variável conforme uso.
+- Mercado Pago: taxa por transação — não é custo da RV, sai do checkout do William.
 
-**Variável (por volume de uso):**
-- OpenAI: por arte gerada (estimativa ~R$0,25–0,50 por geração de imagem) — cresce com o número de clientes usando a IA.
-- Mercado Pago: taxa por transação (não é custo da RV — sai do checkout do William).
+> No início (poucos pedidos), Vercel e Supabase ficam nos planos grátis — o R$150–300/mês cobrado é majoritariamente margem de manutenção, não repasse de custo de infra.
 
-> Estratégia: começar nos planos grátis de Vercel/Supabase e só migrar para pago quando o volume exigir. No início, o custo mensal fixo real é praticamente só a manutenção RV.
+**Domínio — a confirmar:** William já tem o domínio woodartstore.com.br. Só faz sentido cobrar/provisionar domínio novo se a solução for um site acessado por link próprio. Se o app for pensado como instalável direto no celular (ícone, sem depender de visitar um endereço novo), domínio pode não se aplicar aqui — decidir isso faz parte de definir o formato final com o William.
 
 ---
 
