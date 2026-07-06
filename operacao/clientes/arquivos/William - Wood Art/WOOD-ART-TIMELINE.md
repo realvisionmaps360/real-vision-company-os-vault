@@ -32,6 +32,7 @@
 |---|---|---|
 | 06/07/2026 | Spec técnica + custos do App de Placas | 1h |
 | 06/07/2026 | Diagnóstico do site Wix + avaliação Brazilcomp | 1h |
+| 06/07/2026 | Correção App×Site + pesquisa técnica Wix (Velo, limites, Mercado Pago) | 0h30 |
 
 ## Próximos marcos
 **1ª entrega (App):**
