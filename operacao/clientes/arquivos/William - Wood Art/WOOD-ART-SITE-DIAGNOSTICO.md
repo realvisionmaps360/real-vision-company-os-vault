@@ -73,20 +73,61 @@ Isso é a base inteira de e-commerce que o William precisaria do zero — já co
 
 ---
 
-## 3. Decisão pendente a levar ao William
+## 3. Pesquisa — dá pra fazer tudo dentro do Wix? (respondendo o que foi prometido ao William)
+
+Felipe disse ao William que ia estudar se o Wix avançou o suficiente para dar conta de tudo que o projeto precisa, sem precisar migrar. Pesquisa feita em 06/07/2026 sobre o estado atual da plataforma (Velo, integrações, limites técnicos):
+
+### 3.1 O que o Wix consegue hoje, de fato
+- **Configurador de personalização:** existe um mercado de apps prontos para isso — Kickflip, Zakeke, DesignNBuy, Roomle — que adicionam personalização em tempo real (texto, cor, prévia visual) a produtos Wix Stores, via app instalado, sem código. Ou seja: **um configurador simples e genérico dá, sim, para existir dentro do Wix.**
+- **Mercado Pago:** é um provedor de pagamento oficialmente suportado pelo Wix Stores (integração nativa via "Connecting Mercado Pago as a Payment Provider"). Funciona no modo Checkout Pro — o cliente é redirecionado para o ambiente do Mercado Pago, paga lá, e volta. É o modelo mais simples e limitado, não o checkout embutido e controlado por webhook que o Brazilcomp usa.
+- **Velo (o "modo desenvolvedor" do Wix):** permite escrever backend em JavaScript, criar funções HTTP e conectar a serviços externos — não é só arrasta-e-solta.
+
+### 3.2 Onde o Wix trava — as evidências que sustentam o "não vale a pena"
+- **Banco de dados fechado:** o Wix usa "Coleções" próprias, não um Postgres/MySQL de verdade. Conectar a um banco externo **não está disponível no plano gratuito**, não permite índices customizados para consultas mais complexas, e no plano básico o limite é de 1.000 itens somando todas as coleções. Para o volume de pedidos/estoque que o William já movimenta (R$250k/mês em ML+Shopee), isso é uma limitação estrutural, não um detalhe.
+- **Backend com recursos travados:** no plano de entrada, o backend roda em um contêiner "micro" com ~1 vCPU e 400MB de RAM, e limite de ~200 requisições por minuto por app. É infraestrutura pensada para sites institucionais com lógica leve — não para uma esteira de produção com controle de estoque, status de pedido e integrações simultâneas (pagamento + frete + IA de geração de arte, que é exatamente o que o App de Placas precisa).
+- **Pagamento server-to-server sendo descontinuado:** a própria Wix está **depreciando em 30/09/2026** os métodos de criação de transação e tokenização de cartão via backend (Velo) — ou seja, o caminho para pagamentos iniciados/controlados pelo servidor (o modelo seguro que o Brazilcomp usa: pedido nasce no servidor, webhook valida e confirma) está sendo fechado pelo próprio Wix, não é limitação temporária.
+- **Checkout customizado + Mercado Pago:** não existe documentação de um checkout headless/customizado com Mercado Pago dentro do Wix — só o redirecionamento padrão (Checkout Pro). O controle fino de webhook/HMAC/idempotência que o Brazilcomp já tem pronto **não é replicável dentro do Wix**.
+- **Lock-in de infraestrutura:** tudo roda dentro da nuvem do próprio Wix. Dá para exportar dados de coleção em JSON, mas não dá para "tirar o site de dentro do Wix" — ele não vira um projeto de código próprio, independente, hospedado onde a Real Vision quiser (Vercel, por exemplo).
+
+### 3.3 Conclusão da pesquisa
+**Confirma a intuição do Felipe: o Wix não vale a pena para o que o projeto precisa.** Um configurador simples de personalização até dá para existir dentro do Wix via app de terceiro — mas o resto do que o Wood Art precisa (estoque real, painel de produção ligado à fábrica, checkout controlado por servidor, volume de dados de um negócio de R$250k/mês) esbarra em limites estruturais da plataforma, que a própria Wix está reduzindo ainda mais em 2026 (fim do pagamento server-to-server). Continuar no Wix restringe o projeto a um site de vitrine com loja simples — não sustenta o app de placas nem o painel de produção que o William quer.
+
+**Fontes consultadas:**
+- [Velo Docs — dev.wix.com](https://dev.wix.com/docs/velo)
+- [Data Features | Velo](https://dev.wix.com/docs/develop-websites/articles/coding-with-velo/limits-and-optimization/data-features)
+- [Developer Tools Features | Velo](https://dev.wix.com/docs/develop-websites/articles/coding-with-velo/limits-and-optimization/developer-tools-features)
+- [Developer Changelog — dev.wix.com](https://dev.wix.com/docs/changelog)
+- [Connecting Mercado Pago as a Payment Provider — Wix Support](https://support.wix.com/en/article/connecting-mercadopago-as-a-payment-provider)
+- [Wix — Mercado Pago Developers](https://www.mercadopago.com.br/developers/pt/docs/wix/connection)
+- [Adding a Product Configurator to a Wix Stores Site | Velo](https://dev.wix.com/docs/develop-websites/articles/code-tutorials/wix-e-commerce-stores/adding-a-product-configurator-to-a-wix-stores-site)
+- [Kickflip product configurator — Wix App Market](https://www.wix.com/app-market/web-solution/kickflip-customize-products)
+
+---
+
+## 4. Decisão pendente a levar ao William (frente Website)
 
 A proposta comercial deve apresentar as opções, não decidir por ele:
 
-1. **Migrar totalmente para site próprio** (reaproveitando arquitetura Brazilcomp) — resolve taxa de 1% do Wix, dá controle total, mas exige desenvolvimento e catálogo novos.
-2. **Melhorias pontuais no Wix atual** — corrige o crítico (contato mock, links mortos, remover página órfã, trocar fotos de stock) sem migrar. Mais barato e rápido, mas mantém a limitação técnica do Wix (sem gateway próprio, taxas, menos controle).
+1. **Migrar totalmente para site próprio** (reaproveitando arquitetura Brazilcomp) — resolve taxa de 1% do Wix, dá controle total, sustenta o App de Placas e o painel de produção, mas exige desenvolvimento e catálogo novos.
+2. **Melhorias pontuais no Wix atual** — corrige o crítico (contato mock, links mortos, remover página órfã, trocar fotos de stock). Mais barato e rápido, mas — confirmado na pesquisa da seção 3 — **não dá para construir o resto do projeto (app de placas, painel de produção, estoque real) dentro do Wix.** Quem escolher esta opção sabe que fica só com o site institucional corrigido, sem o resto.
 3. **Não fazer nada agora** — opção do William, deve estar na mesa.
 
 Nenhuma dessas ainda está decidida. Este documento existe para embasar a proposta, não para fechar escopo.
 
 ---
 
+## 5. O que a entrega "Website" (2ª frente) inclui — resumo para apresentar ao William
+
+> Para deixar claro na proposta que App (1ª entrega) e Website (2ª entrega) são coisas separadas.
+
+- Diagnóstico completo do site Wix atual, com os problemas reais encontrados (seção 1 acima)
+- Resposta à dúvida que o Felipe levou ao William: dá para fazer tudo dentro do Wix? Não — motivos técnicos na seção 3
+- Recomendação de migração para site próprio, reaproveitando ~70% da infraestrutura já pronta no Brazilcomp (login, carrinho, frete, Mercado Pago, pedidos, painel admin)
+- O que ainda falta construir especificamente para a Wood Art: catálogo/copy/fotos, CRUD de produtos e estoque, e a conexão do site com o App de Placas (1ª entrega) e com a produção física
+- As 3 opções de caminho (seção 4), para o William escolher — sem estimativa de horas fechada ainda
+
 ## Próximo passo
 
-Com este diagnóstico e a spec do app de placas prontos, os dois documentos alimentam a **proposta comercial** (skill `proposta-comercial`). Antes de montar a proposta, confirmar com o William:
-- Escopo do configurador do app (pendente, ver [[WOOD-ART-APP-PLACAS-SPEC]])
-- Preferência entre migrar o site ou só corrigir o Wix atual (opções da seção 3 acima)
+Com este diagnóstico e a spec do app de placas prontos, os dois documentos alimentam a **proposta comercial** (skill `proposta-comercial`) — como **duas linhas de entrega separadas**: 1ª o App de Placas, 2ª o Website. Antes de montar a proposta, confirmar com o William:
+- Escopo do configurador do **app** (pendente, ver [[WOOD-ART-APP-PLACAS-SPEC]]) — define horas/valor da 1ª entrega
+- Preferência do William entre as 3 opções do **website** (seção 4 acima) — define horas/valor da 2ª entrega
