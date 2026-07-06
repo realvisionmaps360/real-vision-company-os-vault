@@ -5,6 +5,8 @@
 > Criado: 06/07/2026
 > 🎯 **Objetivo desta fase:** reunir evidências reais do site atual e avaliar a viabilidade técnica de reaproveitar o Brazilcomp. Nenhuma construção começa ainda — decisão de migrar ou não é do William.
 
+> ⚠️ **Este documento é a 2ª entrega da proposta ao William: o WEBSITE.** É separada da 1ª entrega, o **App de Placas Personalizadas** ([[WOOD-ART-APP-PLACAS-SPEC]]). São duas frentes distintas com escopo, horas e decisões próprias — não misturar as duas na hora de apresentar ou precificar. O app é a ferramenta de personalização/venda self-service; o website é a loja virtual própria que substitui (ou não) o Wix atual.
+
 ---
 
 ## 1. Site atual — woodartstore.com.br (Wix)
