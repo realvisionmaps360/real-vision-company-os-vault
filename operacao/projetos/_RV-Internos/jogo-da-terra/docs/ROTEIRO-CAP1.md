@@ -1,222 +1,233 @@
-# Roteiro — Capítulo 1: A Simbologia do Corpo Humano
+# Roteiro — Capítulo 1: A Simbologia do Corpo Humano (v2)
 
-> Roteiro do primeiro capítulo do EARTH GAME (Alexandria). Fonte de sabedoria: cap. 14 do livro-base, *The Human Body in Symbolism* — lido na íntegra em 05/07/2026 (resumo profundo em [[LIVRO-BASE]] seção 4). Estágio trabalhado: **Calcinação 🔥** (reconhecer o piloto automático).
-> Status: 🟡 **aguardando aprovação do Felipe**. Telas e regras visuais: [[TELAS]]. Última atualização: 05/07/2026.
+> Roteiro do primeiro capítulo do EARTH GAME. Reescrito em 05/07/2026 seguindo a visão registrada em [[VISAO-PROPOSITO]] — Felipe: *"o jogo não é um jogo, é uma tecnologia de despertar coletivo"*. Fonte de sabedoria: cap. 14 do livro-base, *The Human Body in Symbolism* ([[LIVRO-BASE]] seção 4).
+> Versão anterior preservada em [[ROTEIRO-CAP1-v1]] (não apagar — regra do Company OS).
+> Status: 🟡 **aguardando aprovação do Felipe**. Telas: [[TELAS]].
 
 ---
 
-## 1. O ano e o lugar
+## O que mudou da v1 para a v2 (e por quê)
+
+| v1 | v2 | Por quê ([[VISAO-PROPOSITO]]) |
+|---|---|---|
+| Começa direto em Alexandria, 393 d.C. | Começa **hoje**, no quarto do jogador | "A primeira cena não pode ser informação — tem que ser desconforto" |
+| Hipátia explica e conclui | Hipátia **pergunta**, nunca ensina | "A pessoa famosa da história não ensina — ela pergunta" |
+| HUD mostra a palavra "CALCINAÇÃO" | HUD mostra só o símbolo 🔥, sem jargão | "Nada de nomes complicados... o que está por trás" |
+| Clímax = reconhecer um padrão | Clímax = **"o que resta de você quando a tela apaga?"** | Reflexão do IDEIAS SOLTAS (IA sem alma vs. jogador com alma) |
+| Alexandria é só cenário histórico | Alexandria é **espelho explícito do hoje** (livro queimado ↔ censura/desinformação/IA manipulando) | "Cada viagem no tempo é um espelho" |
+| Ficha do personagem neutra | Três centros (cabeça/coração/ventre) **já desregulados** no início | Cap. 14 do livro + mecânica de progresso |
+
+Alexandria em cinzas (393 d.C.) e Hipátia foram **mantidas** da v1 — o teste de 5 minutos passa: a biblioteca queimada por uma multidão é o espelho mais direto e verificável de "censura e silenciamento" que existe na história antiga.
+
+---
+
+## 1. Prólogo — HOJE (o desconforto, antes de qualquer viagem)
+
+Tela: quarto pequeno, cinza, luz de tela. Sem nome de lugar, sem ano — só o presente. Nenhuma palavra difícil.
+
+*(Caixa de diálogo, sem nome de personagem — é o próprio jogador, em segunda pessoa. Cada linha é uma batida curta, quase um flash.)*
+
+**[silêncio. um alarme.]**
+
+**"Você abre o olho antes de abrir o olho — a mão já sabe onde está o vidro preto."**
+
+**"Rolar. Rolar. Rolar."**
+
+**"Uma notícia te deixa com raiva. Você nem lembra qual."**
+
+**"Você se levanta. Já sabe o caminho até o banheiro de olhos fechados."**
+
+**"Café. Rolar. Fila. Rolar. Trabalho."**
+
+**"Alguém pergunta como você está. Você responde antes de sentir a pergunta."**
+
+**"Você já fez esse dia antes. Muitas vezes. Não lembra quantas."**
+
+*(A tela treme — um instante só. O vidro preto do celular, por meio segundo, reflete algo que não é seu rosto: um brilho dourado, fraco, quase nada.)*
+
+**"Espera."**
+
+**"Isso... já aconteceu?"**
+
+*(Escurece por completo. Do escuro, uma voz — não se sabe de onde.)*
+
+**?????:** "Toda pessoa que já se libertou de alguma coisa começou exatamente aqui: percebendo que estava dormindo de olhos abertos."
+
+**?????:** "Quer ver com que fogo você apagou o seu?"
+
+*(Corte para o Globo — sequência de viagem de [[TELAS]] seção 3: linha atravessando o mapa, mergulho, tela preta com o ano.)*
+
+---
+
+## 2. O ano e o lugar
 
 **ALEXANDRIA — 393 d.C.**
 
-Por que esse ano (tudo história verificável, nada inventado):
+Motivo (mantido da v1, verificável): em **391 d.C.** o Serapeum foi destruído por uma multidão — parte da sabedoria do mundo antigo apagada por gente que decidiu que ninguém mais podia ler aquilo. Dois anos depois, a cidade ainda vive entre cinzas. **Hipátia de Alexandria** ensinava filosofia nessa década (citada no cap. 46 do livro-base); **Sinésio de Cirene** foi aluno real dela nos anos 390.
 
-- Em **391 d.C.** o Serapeum — o "templo-filho" que guardava parte da biblioteca de Alexandria — foi destruído por uma multidão. Dois anos depois, a cidade ainda vive entre **cinzas literais**: a Calcinação está no cenário antes de estar no jogador.
-- **Hipátia de Alexandria** (citada pelo próprio Hall no cap. 46) ensinava filosofia na cidade nessa década — é a mentora perfeita do capítulo.
-- **Sinésio de Cirene** foi aluno real de Hipátia nos anos 390 — serve de segundo personagem da abertura sem inventarmos ninguém.
-
-⚠️ Pendência leve: conferir mais uma vez as datas (391 / anos 390) antes do lançamento — são história padrão, mas a regra do projeto é verificar tudo.
-
-**Tema do capítulo em uma frase:** *o corpo é o templo mais antigo do mundo — e quase todo mundo mora nele no escuro, no automático.*
-
-O fio que liga o livro ao estágio: no cap. 14, Hall conta que os sacerdotes **continuaram adorando a estátua do altar depois de esquecerem o que ela significava** — ritual repetido sem consciência. É a imagem exata do piloto automático que a Calcinação queima.
+**O espelho, dito sem rodeio (regra da visão: mostrar, não explicar):** um livro foi queimado porque incomodava. Hoje ninguém queima papel — apaga posts, silencia contas, decide o que o algoritmo te deixa ver. É o mesmo gesto, ferramenta diferente. O roteiro NUNCA fala essa frase em voz alta — ela só precisa ficar óbvia quando o jogador olha as cinzas.
 
 ---
 
-## 2. Cena de abertura (tela preta → diálogo → clareia)
+## 3. Cena de chegada (a tela clareia)
 
-Sequência conforme a Tela 3 aprovada em [[TELAS]]: mergulho no globo → tela preta com o ano em pixel gigante → o diálogo surge do preto → a cena clareia pro cenário.
-
-```
-                    ALEXANDRIA
-                     393 d.C.
-```
-
-*(Do preto, duas vozes. Caixa de diálogo clássica, letra por letra.)*
+*(Do preto, duas vozes — mantido da v1, ajustado.)*
 
 **SINÉSIO:** Cheguei tarde demais? Dizem que a Biblioteca... queimou.
 
 **HIPÁTIA:** Parte dela. Há dois anos, os homens gritaram mais alto que os livros.
 
-**SINÉSIO:** Atravessei o mar desde Cirene. Vim encontrar cinzas.
+**SINÉSIO:** Por quê queimar palavras?
 
-**HIPÁTIA:** O fogo leva o que é de papiro. Mas repara — você atravessou o mar. Isso o fogo não queima.
+**HIPÁTIA:** Porque palavras mudam quem as lê. E gente mudada é gente difícil de comandar.
 
-**SINÉSIO:** Não entendo.
+*(Ela nota o jogador, parado entre as ruínas.)*
 
-**HIPÁTIA:** Os antigos diziam que o maior dos templos nunca foi feito de pedra. Cada pessoa carrega o seu. Quase ninguém sabe.
+**HIPÁTIA:** Você não é daqui. Nem desse tempo, acho.
 
-**SINÉSIO:** E onde fica esse templo?
+**HIPÁTIA:** Não importa. Toda cinza guarda a mesma pergunta, em qualquer século: o que sobrou depois que queimaram o que te incomodava?
 
-**HIPÁTIA:** *(pausa)* Você mora nele.
+**HIPÁTIA:** Anda entre as pessoas daqui. Ouça. Depois volta e me conta o que você ouviu de você mesmo nelas.
 
-**HIPÁTIA:** Vem. A aula de hoje é no meio das cinzas. É onde tudo começa.
-
-*(A cena clareia aos poucos — quase preto e branco, tons de cinza e carvão. O Buscador (jogador) surge no cenário: o único ponto de cor quente da tela.)*
+*(A cena clareia — quase preto e branco, carvão e osso. O jogador é o único ponto de cor quente.)*
 
 ---
 
-## 3. Estrutura do capítulo (beats)
+## 4. Estrutura do capítulo (beats)
 
 | # | Beat | O que acontece | Tela |
 |---|---|---|---|
-| 1 | Abertura | Ano + diálogo Hipátia × Sinésio (acima) | 3 |
-| 2 | Chegada | O Buscador anda pela praça das cinzas; NPCs em rodinhas; tudo cinza, só ele tem cor | 4 |
-| 3 | Rodinhas | 3 conversas pré-fabricadas para ouvir (e interromper) — seção 4 | 5 |
-| 4 | Hipátia | O braseiro de Hipátia: as perguntas-chave — seção 5 | 5 |
-| 5 | Desfecho | Destravou: a primeira brasa acende no mundo (primeiro tom quente da paleta) + conquista. Não destravou: missão do Diário de Padrões | 4/8 |
-| 6 | Gancho | Fala final de Hipátia semeia a dúvida — porta da Dissolução 💧 (capítulo futuro) | 5 |
+| 0 | Prólogo | HOJE — a rotina automática + a rachadura | — (tela própria) |
+| 1 | Viagem | Globo → mergulho → ano → chegada em Alexandria | 3 |
+| 2 | Chegada | Diálogo Hipátia × Sinésio; convite pra andar entre as pessoas | 3→4 |
+| 3 | Rodinhas | 3 conversas — cada uma é um espelho de algo de HOJE, sem dizer isso em voz alta | 5 |
+| 4 | Hipátia pergunta | Ela nunca ensina — devolve a pergunta. 2 perguntas, não 3 (mais enxuto) | 5 |
+| 5 | Clímax | "O que resta de você quando todas as telas se apagam?" | 5 |
+| 6 | Desfecho | Fogo sobe a coluna (barra de progresso); brasa acende no mundo — sem nome de estágio na tela | 4/6 |
+| 7 | Gancho | Hipátia devolve a dúvida pro jogador levar pra próxima viagem | 5 |
 
 ---
 
-## 4. Rodinhas de conversa — diálogos pré-fabricados
+## 5. Rodinhas de conversa — reescritas para o teste dos 5 minutos
 
-Regras gerais (de [[GAME-DESIGN]] seção 4): 2–3 NPCs, papo natural, falas curtas (máx. ~2 linhas na caixa), conceito do livro traduzido sem jargão. Cada rodinha tem **ganchos de pertinência** — os assuntos que a IA ao vivo aceita como interrupção pertinente — e as reações prontas para os dois casos.
+Regra da visão: **NPCs discutem entre si sobre a própria vida deles — o jogador reconhece a própria vida ali.** Sem citar hermetismo, alquimia ou "os antigos diziam". Personagens: **Héron** (copista), **Lídia** (aprendiz), **Baruc** (mercador) — mantidos da v1, falas reescritas.
 
-Personagens fictícios das rodinhas (arquétipos nossos, sem compromisso histórico): **Héron** (copista velho), **Lídia** (aprendiz curiosa), **Baruc** (mercador cético).
+### Rodinha 1 — "A mão que já sabe" (espelho: rotina no automático)
 
-### Rodinha 1 — "A estátua esquecida" *(fonte: o manequim filosófico, cap. 14)*
+**HÉRON:** Copiei esse hino a vida toda. Ontem percebi uma coisa: minha mão termina a frase antes de eu ler ela.
 
-> Conceito: os primeiros sacerdotes punham a estátua de um homem no altar como mapa do universo. Gerações depois, ninguém sabia mais o porquê — e seguiam adorando. Ritual sem consciência = piloto automático.
+**LÍDIA:** Isso é bom ou ruim?
 
-**HÉRON:** Meu avô copiava este mesmo hino todos os anos. Eu copio também.
+**HÉRON:** Não sei. Só sei que passei anos aqui sem estar aqui.
 
-**LÍDIA:** E o que ele significa?
+**LÍDIA:** E se parasse agora? Sem copiar nada?
 
-**HÉRON:** ...Sabe que eu nunca perguntei?
+**HÉRON:** *(silêncio)* ...Não sei o que eu faria com as mãos.
 
-**LÍDIA:** Você copia uma coisa a vida inteira sem saber o que é?
+- **Ganchos de pertinência:** hábito, rotina, automático, sem perceber, sem pensar, mão que sabe sozinha, fazer sem estar presente, "eu também".
+- **Interrupção pertinente:** **LÍDIA:** "Ouviu, Héron? Nem o viajante escapa disso. E você — o que sua mão faz sem te perguntar?"
+- **Não pertinente:** Héron vira, olha em silêncio, retoma: "Como eu dizia..."
 
-**HÉRON:** Minha mão sabe o caminho. Eu já não preciso estar aqui.
+### Rodinha 2 — "Quem decide o que a gente vê" (espelho: censura/algoritmo)
 
-**LÍDIA:** Isso não te assusta? Fazer sem estar?
+**BARUC:** Ontem um mercador foi impedido de vender no mercado central. Disseram que as palavras dele "confundiam o povo".
 
-**HÉRON:** Assustava. Agora nem isso.
+**LÍDIA:** Quem decidiu isso?
 
-**LÍDIA:** Dizem que os primeiros templos tinham uma estátua de homem no altar. Não era um deus — era um mapa.
+**BARUC:** Os mesmos que decidiram quais rolos a Biblioteca guarda e quais... não guarda mais.
 
-**HÉRON:** Um mapa de quê?
+**LÍDIA:** Então alguém escolhe o que a gente pode saber.
 
-**LÍDIA:** De tudo. O corpo mostrava o universo inteiro. Mas os sacerdotes esqueceram... e continuaram se ajoelhando.
+**BARUC:** Sempre alguém escolhe, Lídia. A pergunta é: você sabe quem, hoje, escolhe por você?
 
-**HÉRON:** *(pausa longa)* ...Como a minha mão.
+- **Ganchos de pertinência:** censura, algoritmo, quem decide, feed, notícia, escolher por mim, controle, manipulação, o que eu vejo.
+- **Interrupção pertinente:** **BARUC:** "Curioso — no seu tempo isso ainda acontece? Me conta: quem escolhe o que você vê, lá de onde você vem?"
+- **Não pertinente:** Baruc dá de ombros, retoma a venda.
 
-- **Ganchos de pertinência:** hábito, rotina, repetir sem pensar, ritual, esquecer o motivo, fazer no automático, o corpo que "sabe sozinho".
-- **Exemplo de interrupção pertinente + reação:** jogador diz algo como "eu também faço coisas sem perceber" → **LÍDIA:** "Ouviu, Héron? Até o viajante conhece isso. E o que você faz sem perceber, forasteiro?" *(a rodinha abre e devolve a pergunta — ensaio para as perguntas-chave)*.
-- **Interrupção não pertinente:** NPCs terminam a fala, Héron vira, olha o jogador em silêncio *(regra de legibilidade, [[DECISOES]])*, e retoma: "Como eu dizia..."
+### Rodinha 3 — "O corpo que ninguém habita" (espelho: presença/desconexão)
 
-### Rodinha 2 — "Os três fogos" *(fonte: os três centros universais — cérebro, coração, geração)*
+**SINÉSIO:** Hipátia me disse algo que não sai da cabeça: que eu moro num templo e nem percebi.
 
-> Conceito: todo corpo tem três centros — a cabeça (pensar), o coração (sentir/espírito) e o ventre (desejar/criar). O que muda uma vida é qual deles está no comando. No iniciado, é o do meio.
+**HÉRON:** Templo é a Biblioteca. Você mora na hospedaria do porto.
 
-**BARUC:** Vendi hoje a um homem que não precisava de nada. Ele comprou tudo.
+**SINÉSIO:** *(ri)* O templo é o corpo, Héron. Os antigos diziam que a maioria vive dentro dele... sem morar.
 
-**LÍDIA:** Comprou com o quê? Não digo moedas.
+**HÉRON:** Como assim, sem morar?
 
-**BARUC:** Com a fome. Aquele homem compra pra calar alguma coisa.
+**SINÉSIO:** Você já esteve num lugar de corpo inteiro e mente em outro canto? Isso. É essa a diferença.
 
-**LÍDIA:** Os filósofos dizem que temos três fogos: um na cabeça, um no peito, um no ventre.
+**HÉRON:** ...Isso acontece comigo toda hora.
 
-**BARUC:** O do ventre eu conheço bem. É o que paga meu pão.
-
-**LÍDIA:** E qual comanda você, Baruc?
-
-**BARUC:** *(ri)* Depende da hora do dia.
-
-**LÍDIA:** Hipátia diz que na maioria das pessoas nenhum comanda. Eles se revezam... e a pessoa só vai junto.
-
-**BARUC:** Vai junto pra onde?
-
-**LÍDIA:** É essa a questão. Ninguém pergunta pra onde.
-
-- **Ganchos de pertinência:** desejo, impulso, comprar/consumir, razão × emoção, quem manda em mim, fome que não é de comida.
-- **Interrupção pertinente + reação:** jogador toca em "quem comanda" → **BARUC:** "O viajante quer saber quem segura as rédeas. E na tua carroça, quem segura?"
-- **Não pertinente:** Baruc olha, dá de ombros, retoma a venda.
-
-### Rodinha 3 — "O templo com forma de gente" *(fonte: templos de iniciação construídos como o corpo humano)*
-
-> Conceito: os templos antigos eram construídos na forma de um corpo. O candidato entrava pelos pés e recebia o grau mais alto na câmara da cabeça — onde, surpresa, se ensinava o mistério do coração. Corpo = templo ou prisão, depende de quem mora nele.
-
-**SINÉSIO:** Hipátia me disse uma coisa que não me sai da cabeça. Que eu moro num templo.
-
-**HÉRON:** Você mora na hospedaria do porto.
-
-**SINÉSIO:** *(ri)* O templo é o corpo, Héron. Os antigos construíam os deles na forma de um homem deitado.
-
-**HÉRON:** Pra quê?
-
-**SINÉSIO:** O aprendiz entrava pelos pés. Subia sala por sala, ano por ano. O último segredo era dado na câmara da cabeça.
-
-**HÉRON:** E qual era o segredo?
-
-**SINÉSIO:** Que o tesouro nunca esteve na cabeça. A câmara mais alta ensinava... o coração.
-
-**HÉRON:** Subir tudo isso pra voltar ao peito?
-
-**SINÉSIO:** Subir tudo isso pra *acordar* no peito. Um templo onde ninguém acordou ainda não é templo.
-
-**HÉRON:** É o quê?
-
-**SINÉSIO:** Uma prisão com janelas bonitas.
-
-- **Ganchos de pertinência:** corpo, casa, morar em si, prisão × templo, acordar, cabeça × coração.
-- **Interrupção pertinente + reação:** jogador fala de sentir-se preso/adormecido → **SINÉSIO:** "Então você já notou as grades. Isso, amigo, é o começo de tudo. Fala com Hipátia — ela está no braseiro."  *(esta rodinha é a que aponta o jogador para as perguntas-chave)*
-- **Não pertinente:** Sinésio ergue a mão gentilmente ("um instante, amigo"), termina o raciocínio e retoma.
+- **Ganchos de pertinência:** presente, presença, distraído, corpo, mente em outro lugar, desconectado, sentir, aqui e agora.
+- **Interrupção pertinente:** **SINÉSIO:** "Então você já sentiu isso também. Vai falar com Hipátia — ela está no braseiro."
+- **Não pertinente:** Sinésio ergue a mão gentilmente, termina o raciocínio, retoma.
 
 ---
 
-## 5. Perguntas-chave — o portal da Calcinação 🔥
+## 6. Hipátia — ela pergunta, nunca ensina
 
-Local: o braseiro de Hipátia, entre as colunas queimadas. É a conversa mais importante do capítulo — e a que usa IA ao vivo de verdade ([[STACK]] seção 1).
+Local: o braseiro entre as colunas queimadas. Reduzido de 3 para **2 perguntas** — mais direto, testável em poucos minutos.
 
-### A escada de 3 perguntas
+**P1 — a pergunta que devolve (não a resposta):**
 
-**P1 — aquecimento (sem julgamento, calibra o tom):**
-**HIPÁTIA:** "Você não é daqui. O que te trouxe atravessando o mundo até uma biblioteca queimada?"
-*(qualquer resposta serve; a IA só ajusta o tom da conversa)*
+**HIPÁTIA:** "Me conta uma coisa que você faz todos os dias sem lembrar por que começou a fazer."
 
-**P2 — aproximação:**
-**HIPÁTIA:** "Me diz uma coisa que você faz todos os dias... sem nunca ter escolhido fazer."
-*(se o jogador travar, Hipátia ajuda: "Pode ser pequena. As correntes mais firmes são as miúdas.")*
+*(Se o jogador travar: "Pode ser pequena. As correntes mais firmes são as miúdas.")*
 
-**P3 — a pergunta-chave (destrava ou não o estágio):**
-**HIPÁTIA:** "Os sacerdotes do velho templo se ajoelhavam diante da estátua muito depois de esquecerem o que ela era. Agora olha pra tua vida — o que *você* repete sem lembrar por quê?"
+*(Resposta do jogador é ouvida sem julgamento — ela não corrige, só aponta de volta:)*
 
-### Rubrica da IA (critérios de avaliação da resposta à P3)
+**HIPÁTIA:** "E se eu te perguntasse: essa coisa que você faz... ela é sua, ou você a herdou de alguém e nunca devolveu?"
+
+**P2 — o clímax (a pergunta central do capítulo):**
+
+**HIPÁTIA:** "Vou te fazer uma pergunta que os sábios daqui fariam de outro jeito. Eu prefiro assim: imagina que toda tela que existe no seu tempo — todas — se apagam agora. Nenhuma resposta pronta, nenhuma voz te dizendo o que pensar."
+
+**HIPÁTIA:** "O que resta de você?"
+
+### Rubrica da IA (critérios da resposta à P2)
 
 | Critério | Destrava ✅ | Permanece ⏳ |
 |---|---|---|
-| Concretude | Nomeia um padrão **próprio e específico** ("eu pego o telefone antes de abrir os olhos") | Generalidade ("todo mundo tem manias") |
-| Propriedade | Fala de si, em primeira pessoa | Culpa só o externo (chefe, família, mundo) |
-| Reconhecimento | Admite que o padrão roda **sozinho**, sem escolha | Justifica o padrão como escolha racional |
+| Concretude | Nomeia algo real e pessoal ("minha curiosidade", "o jeito que eu cuido de quem eu amo") | Resposta genérica ("minha essência", "o meu eu verdadeiro" sem conteúdo) |
+| Propriedade | Fala de si mesmo, não de conceito abstrato importado | Cita frase de efeito sem dono |
+| Distinção do artificial | Reconhece algo que uma máquina não teria (sentir, escolher, se importar de verdade) | Não estabelece diferença nenhuma com IA |
 
-Regra: **2 dos 3 critérios = destrava.** A IA nunca envergonha — o tom de Hipátia é de quem reconhece coragem, não de quem corrige prova.
-
-### Desfecho A — destravou ✅
-
-**HIPÁTIA:** "Olha pro braseiro. O fogo não destrói — ele *revela*. O que sobra quando a casca queima é o que sempre foi verdadeiro. Você acabou de acender o seu."
-
-*(No mundo: a primeira brasa acende — primeiro tom quente da paleta entra no cenário. Conquista desbloqueada: **"As Cinzas Vistas"** 🔥. Ficha: estágio Calcinação completo.)*
-
-**Gancho da Dissolução (última fala do capítulo):**
-**HIPÁTIA:** "Descansa. Amanhã eu te faço a pergunta que ninguém quer ouvir: dessas certezas todas que te trouxeram até aqui... quantas são *suas*?"
-
-### Desfecho B — permaneceu ⏳
-
-**HIPÁTIA:** "Ainda não. E está tudo bem — ninguém enxerga as próprias correntes no primeiro olhar. Faz assim: sete dias, uma folha. Anota tudo o que fizer sem ter escolhido. Depois volta e me mostra."
-
-*(Missão de aprofundamento: **Diário de Padrões, 7 dias** — tela 8, aba Padrões. Ao registrar 7 entradas, Hipátia reabre a P3 com novas palavras. Alimenta a conquista "7 Dias de Diário".)*
+Regra: **2 de 3 = destrava.** Tom de Hipátia: reconhecimento, nunca correção.
 
 ---
 
-## 6. Ganchos com o presente (usar com parcimônia)
+## 7. Desfecho
 
-- **O espelho de vidro negro** (do brainstorm, [[GAME-DESIGN]] seção 3): em uma fala opcional perto do braseiro, Hipátia observa: *"Um dia farão espelhos de vidro negro, pequenos como a palma da mão. As pessoas vão morar dentro deles sem perceber."* — uma linha só, sem explicar. Quem entendeu, entendeu.
+### Destravou ✅
+
+**HIPÁTIA:** "Isso. Isso que você acabou de dizer, nenhuma máquina te diria — porque nenhuma máquina *é*. Guarda essa resposta. Ela é a primeira brasa."
+
+*(No mundo: a brasa se espalha pelo cenário — primeiro tom quente entra na paleta. Sem texto de "estágio completo"; a única confirmação é visual + a barra da coluna sobe uma vértebra na ficha. Conquista: **"A Primeira Brasa"** 🔥.)*
+
+**Gancho final:** **HIPÁTIA:** "Leva essa pergunta com você quando voltar pro seu tempo. E quando voltar aqui, eu vou te perguntar outra coisa: dessas certezas todas que você carrega... quantas você escolheu, e quantas só herdou?"
+
+### Permaneceu ⏳
+
+**HIPÁTIA:** "Ainda não veio, e tudo bem — essa pergunta não se responde na pressa. Volta pro seu tempo, repara nos próximos 7 dias: toda vez que fizer algo sem lembrar por quê, anota. Depois volta aqui."
+
+*(Missão: Diário de Padrões, 7 dias — tela 8.)*
 
 ---
 
-## 7. O que este roteiro NÃO decide (fica pro Felipe)
+## 8. Ficha do personagem — os três centros (desde o início desregulados)
 
-- Aprovação do ano **393 d.C.** e do par de abertura Hipátia × Sinésio
-- Nomes dos NPCs fictícios (Héron, Lídia, Baruc) e da conquista "As Cinzas Vistas"
-- A fala opcional do espelho negro (manter ou cortar)
+Por decisão da visão, o jogador **já começa** com os três centros do cap. 14 visíveis e desalinhados na ficha (não é um "defeito" a esconder — é o ponto de partida honesto de qualquer pessoa hoje):
+
+- **Cabeça** (pensar) — alta atividade, mente cheia de estímulo
+- **Coração** (sentir/espírito) — baixa atividade, quase apagado
+- **Ventre** (desejo/impulso) — alta atividade, reagindo o tempo todo
+
+A barra de progresso do capítulo é visual: **o fogo subindo os degraus da coluna** (referência aos 33 segmentos do cap. 15, mecânica emprestada adiantada porque funciona melhor que XP comum). Resposta reativa nas rodinhas = fogo não sobe (ou desce levemente); resposta presente e própria = sobe um degrau. Ao final do capítulo, o fogo alcança o coração — o centro apagado ganha o primeiro brilho.
+
+---
+
+## 9. O que este roteiro NÃO decide (fica pro Felipe)
+
+- Validar o tom do prólogo "HOJE" — está simples e direto o suficiente, ou ainda soa escrito demais?
+- Nomes dos NPCs fictícios (Héron, Lídia, Baruc) e da conquista "A Primeira Brasa"
+- Se a voz do prólogo ("?????") é apresentada depois como Hipátia mesma (ela "chamando" o jogador antes de ele saber quem ela é) ou fica anônima até o final do jogo
