@@ -28,7 +28,7 @@ Ver detalhamento completo em [[WOOD-ART-FRENTES-DE-TRABALHO]]. Resumo das 11 fre
 6. Tráfego pago Google Ads
 7. Dados financeiros de referência (ML e Shopee) para embasar ROI + painel administrativo financeiro unificado (site, ML e Shopee integrados) — spec em [[WOOD-ART-FINANCEIRO-ROI]]
 8. Google Merchant Center — detalhamento também em [[WOOD-ART-FINANCEIRO-ROI]]
-9. Pesquisa de mercado suíço (exportação)
+9. Pesquisa de mercado suíço (exportação) — pesquisa exploratória + plano de cálculo de custo em [[WOOD-ART-MERCADO-SUICO]]
 10. Linha de usinagem — estratégia de tráfego e marketing separada
 11. Estratégia comercial geral — entrega faseada, análise de produto-piloto de longo prazo
 

@@ -37,7 +37,7 @@
 
 ## 3. Novo site / loja virtual própria
 
-**O que é:** loja virtual própria, adaptada à realidade do William, reaproveitando a arquitetura já criada para o cliente Dorival (repo Brazilcomp) como base técnica — integração via API com a conta Mercado Pago do William, arquitetura própria da Real Vision, conexão com API dos Correios para envio, banco de dados, cadastro de produtos e gestão de estoque.
+**O que é:** loja virtual própria, adaptada à realidade do William, reaproveitando a arquitetura já criada para o cliente Dorival (repo Brazilcomp) como base técnica — integração via API com a conta Mercado Pago do William, arquitetura própria da Real Vision, conexão com API dos Correios para envio, banco de dados, cadastro de produtos e gestão de estoque. **O custo do "website" apresentado ao William já inclui essa loja virtual — não é item separado.** Estrutura pensada para comportar mais de uma categoria de produto (placas Wood Art + peças de usinagem, ver item 10) na mesma loja.
 
 **Por que importa:** objetivo principal do William hoje é captar mais clientes e fugir das taxas do Mercado Livre e Shopee, vendendo direto pelo próprio site — hoje ele só usa o gateway nativo do Wix, sem gateway próprio. O site também vai incluir um painel administrativo financeiro unificado (vendas do site + Mercado Livre + Shopee num só lugar) — detalhado em [[WOOD-ART-FINANCEIRO-ROI]].
 
@@ -110,9 +110,9 @@
 
 **Por que importa:** possível expansão internacional — a RV já tem experiência com o mercado suíço (clientes Solarium Aarau, Sunbite).
 
-**Status atual:** pesquisa ainda não iniciada.
+**Status atual:** pesquisa exploratória feita em 06/07/2026 — ver [[WOOD-ART-MERCADO-SUICO]] (existe mercado, mas nicho seletivo/patriótico; ângulo de entrada realista é personalização sob encomenda, não exotismo tropical; frete/alfândega/câmbio são o risco central, ainda não calculado).
 
-**Decisão pendente:** nenhuma ainda — é etapa de pesquisa exploratória, não de execução.
+**Decisão pendente:** esta é uma etapa futura, condicionada ao William decidir expandir — não faz parte do escopo atual da proposta. Plano de cálculo de custo (frete, alfândega, câmbio) documentado em [[WOOD-ART-MERCADO-SUICO]].
 
 ---
 
@@ -125,6 +125,8 @@
 **Status atual:** dependência total de Shopee/ML hoje.
 
 **Decisão pendente:** estratégia de aquisição de clientes específica para esse produto — separada da estratégia da Wood Art (placas personalizadas).
+
+**Recomendação (06/07/2026):** vender as peças de metal como categoria dentro da mesma loja virtual da Wood Art (item 3), não em site separado. O backend (banco, admin, pagamento, frete) já está sendo construído do zero para a loja principal — duplicar isso num segundo site dobraria custo de desenvolvimento/manutenção e dividiria a autoridade de domínio/SEO à toa. O tráfego pago pode rodar em campanhas separadas dentro do mesmo Google Ads, mirando o público de usinagem sem precisar de uma segunda infraestrutura.
 
 **Nota de longo prazo:** ao estruturar o sistema do William, será necessário analisar qual produto tem melhor venda, mais fluxo, é mais simples/barato de produzir e tem maior potencial — esse cálculo é um processo de longo prazo, feito aos poucos com o cliente, não uma decisão desta fase.
 
