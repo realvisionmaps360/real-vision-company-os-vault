@@ -38,6 +38,31 @@ Na seção "Clientes satisfeitos" da home, as imagens usadas são fotos de **pai
 ### 1.6 Leitura geral
 O diagnóstico anterior ("desenvolvedor não terminou o trabalho") se confirma com evidência concreta: não é um site quebrado, é um site **publicado antes de terminar a revisão de conteúdo** — sobrou template genérico do Wix junto com conteúdo real do William. Isso prejudica a credibilidade de um negócio que hoje fatura ~R$250k/mês somando ML+Shopee (ver [[WOOD-ART-FRENTES-DE-TRABALHO]], item 7) — o site próprio é a vitrine que deveria sustentar esse volume, e hoje não sustenta.
 
+### 1.7 Auditoria SEO e GEO do site atual (Wix)
+
+Leitura técnica feita em 07/07/2026 no código-fonte da home (`woodartstore.com.br`), usando o checklist da skill `05-marketing-seo`.
+
+**O que já está bem:**
+- `robots.txt` e `sitemap.xml` existem e estão referenciados corretamente
+- Meta title, meta description, canonical e Open Graph básico (title/description/url) presentes
+- Schema JSON-LD de `LocalBusiness` já implementado, com endereço completo (São Bernardo do Campo-SP) e telefone — isso ajuda SEO local e também GEO (IA generativa cita negócios com dados estruturados claros)
+- Schema `WebSite` com `SearchAction` (habilita sitelinks search box no Google)
+
+**Problemas encontrados:**
+1. **Nenhum `<h1>` na página inteira** (confirmado: 0 ocorrências) — o sinal semântico mais forte de "do que a página trata" está ausente, tanto para Google quanto para IA generativa resumir a página.
+2. **Sem `og:image`** — link compartilhado no WhatsApp/Instagram/LinkedIn não mostra nenhuma imagem de preview, o que derruba CTR em compartilhamento.
+3. **Meta description genérica e sem geolocalização** — não menciona cidade/região nem tem CTA; oportunidade perdida tanto para SEO local quanto para GEO (que se apoia em contexto geográfico explícito).
+4. **Title com keyword duplicada** — "tabuas e placas personalizadas em madeira | placas personalizadas em madeira" repete a mesma keyword, parecendo keyword stuffing.
+5. **45 de 58 imagens sem `alt` text** (13/58 com alt) — ruim para acessibilidade, SEO de imagem, e para IAs que leem a página via alt text.
+6. **Sem tags de geo (`geo.region`, `geo.position`)** no `<head>` — reforço de localidade ausente.
+7. **Sitemap de páginas institucionais é curto** (home, contato, sobre, brindes corporativos, bares/restaurantes) — catálogo de produtos fica em sitemap separado, não auditado a fundo nesta rodada.
+
+**Leitura geral:** o site não está "quebrado" em SEO — o básico funciona (schema, sitemap, meta tags) — mas está longe do ideal. Para GEO, o `LocalBusiness` schema é o ponto mais forte hoje; o resto (H1 ausente, alt text quase inexistente, copy sem geolocalização) ainda não dá munição suficiente para uma IA generativa "entender" e recomendar a Woodart com confiança.
+
+**Implicação de precificação (ver seção 4):**
+- Se o William escolher a **opção 2 (melhorias pontuais no Wix)**: os 7 pontos acima entram como itens de correção técnica de SEO/GEO, além dos críticos de conteúdo já listados (1.1 a 1.4) — ampliando levemente o escopo (e o preço) dessa opção, mas dentro da mesma lógica de "remendo no Wix".
+- Se o William escolher a **opção 1 (migração para site próprio)**: esses pontos já nascem resolvidos por padrão de construção da Real Vision (H1 correto, alt text em toda imagem, geo tags, og:image) — não é item à parte, é parte do que já vem embutido no novo site (reforça a seção 5.2 abaixo).
+
 ---
 
 ## 2. Avaliação técnica — reaproveitamento do Brazilcomp
