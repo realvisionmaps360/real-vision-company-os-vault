@@ -17,8 +17,8 @@ Navegação ao vivo feita em 06/07/2026. Achados confirmados com evidência (nã
 Os 4 links do rodapé (**Nossa história, Fale conosco, Políticas de Privacidade, Trocas e Devoluções**) não navegam para lugar nenhum — são texto estático, sem destino. Testado clique a clique, nenhum reage.
 
 ### 1.2 Página de contato com dados falsos (mock)
-O item **CONTATO** do menu principal *funciona* tecnicamente (é uma página real, `/contact-10`), mas mostra dados de exemplo do template Wix, nunca preenchidos:
-- Telefone: `(11) 3456-7890`
+O item **CONTATO** do menu principal *funciona* tecnicamente (é uma página real, `/contact-10`), mas mostra dado de exemplo do template Wix, nunca preenchidos:
+
 - Email: `info@meusite.com`
 
 Ou seja: qualquer cliente que tentar ligar ou mandar e-mail pelo site cai em contato fictício. Isso é mais grave do que "informação faltando" — é informação errada publicada.
