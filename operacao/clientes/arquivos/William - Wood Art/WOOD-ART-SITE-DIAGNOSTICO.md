@@ -126,6 +126,8 @@ Nenhuma dessas ainda está decidida. Este documento existe para embasar a propos
 - O que ainda falta construir especificamente para a Wood Art: catálogo/copy/fotos, CRUD de produtos e estoque, e a conexão do site com o App de Placas (1ª entrega) e com a produção física
 - As 3 opções de caminho (seção 4), para o William escolher — sem estimativa de horas fechada ainda
 
+> ⚠️ **Importante para a proposta:** sempre que o custo do "website" for apresentado ao William, deixar claro que **a loja virtual já está embutida nesse valor** — não é um item à parte. O site que a Real Vision entrega já nasce como loja online, com cadastro de todos os produtos da Wood Art (e futuramente da linha de usinagem, ver [[WOOD-ART-FRENTES-DE-TRABALHO]] item 10). Site sem loja não é a proposta.
+
 ## Próximo passo
 
 Com este diagnóstico e a spec do app de placas prontos, os dois documentos alimentam a **proposta comercial** (skill `proposta-comercial`) — como **duas linhas de entrega separadas**: 1ª o App de Placas, 2ª o Website. Antes de montar a proposta, confirmar com o William:
