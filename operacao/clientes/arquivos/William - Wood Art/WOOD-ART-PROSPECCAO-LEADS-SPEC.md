@@ -68,7 +68,7 @@ Nenhuma dessas buscas foi rodada ainda — isso é a descrição do processo par
 
 ## 6. Custo
 
-**Pendente de precificação.** Não existe hoje um valor definido pela Real Vision nem em memória de sessões anteriores para este serviço específico (planilha de prospecção B2B). Não inventar valor agora.
+**A combinar na proposta.** Ainda não existe um valor fechado pela Real Vision para este serviço específico (planilha de prospecção B2B) — vai ser apresentado ao William como item "a combinar", condicionado à região e ao volume de contatos por rodada (seção 5).
 
 Referência interna para quando for orçar: os outros documentos do William usam **R$120/h** como valor-hora de desenvolvimento (ver [[WOOD-ART-APP-PLACAS-SPEC]]) — pode servir de base para estimar o tempo de pesquisa/curadoria da planilha, mas o preço final desta frente ainda precisa ser calculado.
 

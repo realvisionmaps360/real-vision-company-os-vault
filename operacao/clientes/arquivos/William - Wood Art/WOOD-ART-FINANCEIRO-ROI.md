@@ -24,6 +24,8 @@ data: 2026-07-06
 
 ## 2. Lógica de ROI (sem números fechados)
 
+> Na proposta, esta seção entra como **estimativa explícita** — deixando claro ao William que os números são cenário hipotético/conservador, não cálculo fechado, até que os dois dados pendentes (investimento final e taxa de recompra) existam.
+
 Estrutura do cálculo, pronta para ser preenchida quando os dados existirem:
 
 ```
@@ -47,6 +49,8 @@ A "economia mensal estimada" depende de uma variável que hoje não temos: **que
 - **Por que é mais interessante do que parece:** o cadastro no Merchant Center é feito uma vez, mas abre elegibilidade para múltiplas superfícies de venda — Google Shopping Ads, listagens orgânicas gratuitas na busca, e cada vez mais superfícies emergentes de compra via inteligência artificial/agentes de IA que consultam catálogos de produtos.
 - **Por que importa pro William:** múltiplos canais de descoberta a partir de uma única integração, sem taxa por venda (diferente de ML/Shopee).
 - **Pré-requisito:** precisa do feed de produtos do site próprio para alimentar o Merchant Center — por isso faz mais sentido como parte do pacote de site próprio do que como item isolado.
+
+**Achado novo (07/07/2026):** a Wood Art ainda não tem perfil no Google Meu Negócio — não aparece no Google Maps. Criar o perfil do zero é um item à parte do Merchant Center, com custo de **R$300**. Uma vez com todos os produtos cadastrados no sistema interno que a RV vai construir, esse catálogo pode alimentar não só o Merchant Center (gratuito) como outras integrações futuras, de forma centralizada.
 
 ## Fechamento
 

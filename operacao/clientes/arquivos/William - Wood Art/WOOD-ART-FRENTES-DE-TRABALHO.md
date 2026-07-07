@@ -81,6 +81,8 @@
 
 **Decisão pendente:** orçamento mensal de mídia, público-alvo, e se roda em paralelo com o lançamento do site próprio (site precisa existir antes do tráfego fazer sentido).
 
+**Modelo de cobrança:** ainda em estudo pela Real Vision — a forma de cobrar a gestão de tráfego depende de dados que só o William pode definir: duração das campanhas, plataforma(s) escolhida(s), orçamento mensal de mídia que ele está disposto a investir. O custo mensal da gestão de tráfego pago pela RV só pode ser calculado depois desses três dados confirmados. Reforça-se: esta frente é etapa futura, só depois do site/loja estarem no ar.
+
 ---
 
 ## 7. Dados financeiros do cliente (referência para ROI)

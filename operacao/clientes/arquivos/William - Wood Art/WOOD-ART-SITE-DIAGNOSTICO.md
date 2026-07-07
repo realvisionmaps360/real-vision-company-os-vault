@@ -134,7 +134,7 @@ Felipe disse ao William que ia estudar se o Wix avançou o suficiente para dar c
 A proposta comercial deve apresentar as opções, não decidir por ele:
 
 1. **Migrar totalmente para site próprio** (reaproveitando arquitetura Brazilcomp) — resolve taxa de 1% do Wix, dá controle total, sustenta o App de Placas e o painel de produção, mas exige desenvolvimento e catálogo novos.
-2. **Melhorias pontuais no Wix atual** — corrige o crítico (contato mock, links mortos, remover página órfã, trocar fotos de stock). Mais barato e rápido, mas — confirmado na pesquisa da seção 3 — **não dá para construir o resto do projeto (app de placas, painel de produção, estoque real) dentro do Wix.** Quem escolher esta opção sabe que fica só com o site institucional corrigido, sem o resto.
+2. **Melhorias pontuais no Wix atual** — a partir de **R$1.000**, cobrindo as correções listadas na seção 1 (contato mock, links mortos, página órfã, fotos de stock) e os ajustes de SEO/GEO da seção 1.7. Mais barato e rápido, mas — confirmado na pesquisa da seção 3 — **não dá para construir o resto do projeto (app de placas, painel de produção, estoque real) dentro do Wix.** Quem escolher esta opção sabe que fica só com o site institucional corrigido, sem o resto.
 3. **Não fazer nada agora** — opção do William, deve estar na mesa.
 
 Nenhuma dessas ainda está decidida. Este documento existe para embasar a proposta, não para fechar escopo.
@@ -173,6 +173,17 @@ Junto com a loja virtual, a entrega do site inclui: acesso configurado ao Google
 ## 6. Evolução natural — idioma alemão (não é escopo agora)
 
 Como o site vai ser construído do zero com código próprio (não uma plataforma fechada como o Wix), adicionar um seletor de idioma (ex.: alemão, mirando o mercado suíço — ver [[WOOD-ART-MERCADO-SUICO]]) é tecnicamente uma extensão natural da mesma arquitetura (o Brazilcomp já usa `i18next`, ver seção 2.1). **Isso não deve ser incentivado nem apresentado como parte do escopo atual** — é uma etapa futura, condicionada ao William decidir expandir para exportação. A analogia certa para a proposta: antes de pensar em receber visita estrangeira, primeiro se arruma a casa — o site/loja virtual em português precisa existir e funcionar bem primeiro.
+
+## 8. Custos de operação mensal do site
+
+O site é entregue com: blog, painel admin, painel do cliente, gestão de produtos, estoque, financeiro, loja virtual, página "Nossa História", Google Analytics e Google Search Console já instalados.
+
+Manter tudo isso no ar tem dois custos mensais separados:
+
+- **Hospedagem (VisionCloud, servidor próprio da Real Vision): R$100/mês**
+- **Manutenção geral do site: R$400/mês** — já inclui o pacote de 2 posts de blog por mês, escritos com estratégia de SEO para ranquear na primeira página do Google.
+
+**Total mensal: R$500/mês**, separado do custo único de desenvolvimento do site (a definir conforme a opção escolhida na seção 4).
 
 ## Próximo passo
 
