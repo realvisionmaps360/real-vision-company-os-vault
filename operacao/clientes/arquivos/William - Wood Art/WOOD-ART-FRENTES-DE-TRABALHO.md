@@ -61,19 +61,19 @@
 
 ## 5. Ferramenta de prospecção de leads (restaurantes)
 
-**O que é:** ferramenta de prospecção voltada a restaurantes, para vender tábuas e placas maiores de madeira personalizada.
+**O que é:** prospecção B2B voltada a restaurantes, para vender tábuas e placas maiores de madeira personalizada — público diferente do B2C que o William atende hoje. É uma das duas frentes de aquisição possíveis para esse público (a outra é tráfego pago, item 6 abaixo). Processo detalhado + ferramentas (Apollo, Vibe Prospecting, metodologia `rv-prospeccao`) em [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
 
 **Por que importa:** William pediu para testar essa frente — é um público B2B diferente do B2C que ele atende hoje.
 
-**Status atual:** pedido do William, ainda não testado.
+**Status atual:** spec de processo pronta (06/07/2026, sem execução de busca real ainda). Modelo de entrega confirmado: RV pesquisa e entrega **apenas a planilha de contatos**, William aborda por conta própria.
 
-**Decisão pendente:** qual ferramenta/metodologia usar (a RV já tem experiência com prospecção via `rv-prospeccao`/Apollo — avaliar reaproveitamento).
+**Decisão pendente:** região(ões)-alvo e volume de contatos por rodada — ver [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
 
 ---
 
 ## 6. Tráfego pago (Google Ads)
 
-**O que é:** orçamento e escopo de tráfego pago no Google Ads, para vender fora do Mercado Livre.
+**O que é:** orçamento e escopo de tráfego pago no Google Ads, para vender fora do Mercado Livre. É a segunda frente de aquisição possível para o público de restaurantes (a primeira é prospecção ativa, item 5 acima) — podem rodar em paralelo ou separado.
 
 **Por que importa:** hoje esse é o maior gargalo do William — toda a venda depende de marketplaces com taxas altas.
 

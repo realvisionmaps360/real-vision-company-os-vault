@@ -22,6 +22,7 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 - 06/07/2026 — **1ª entrega (App):** spec técnica + custos do App de Placas: [[WOOD-ART-APP-PLACAS-SPEC]]. PWA recomendado vs. nativo, stack, integrações. Total de horas ainda pendente de confirmação de escopo com o William.
 - 06/07/2026 — **2ª entrega (Website):** diagnóstico do site Wix atual + avaliação do Brazilcomp + pesquisa "dá para fazer tudo dentro do Wix?": [[WOOD-ART-SITE-DIAGNOSTICO]]. Achados no Wix atual: rodapé com links mortos, página de Contato com dados mock, página órfã de template em inglês publicada no menu. Brazilcomp avaliado como reaproveitável (~70% da infra pronta). Pesquisa confirmou que o Wix não sustenta o projeto (banco fechado, backend limitado, e a própria Wix descontinua pagamento server-to-server em set/2026) — migração é a recomendação.
 - 06/07/2026 — **3ª entrega (Chatbot IA):** spec conceitual + custos: [[WOOD-ART-CHATBOT-IA-SPEC]]. Assistente humanizado treinado na base da Wood Art, mostra produtos no chat, integra com Google Merchant Center, transfere para ramais da equipe. Canais: WhatsApp, Telegram, site, Instagram ou qualquer link. Custo: R$1.800 desenvolvimento + R$300/mês manutenção + R$250 por integração de plataforma adicional. Entrega independente das outras duas.
+- 06/07/2026 — **4ª entrega (Prospecção de Leads — restaurantes):** spec de processo: [[WOOD-ART-PROSPECCAO-LEADS-SPEC]]. Duas frentes de aquisição independentes: prospecção ativa (Apollo + Vibe Prospecting + metodologia `rv-prospeccao`) e tráfego pago (Frente 6, já existente). Modelo confirmado: RV entrega só a planilha de contatos, William aborda por conta própria. Preço ainda pendente de definição.
 
 ## Próximos passos
 **1ª entrega (App):**
@@ -33,6 +34,10 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 
 **3ª entrega (Chatbot IA):**
 - Confirmar com o William: canal prioritário, multi-plataforma ou não, e volume esperado de conversas — ver [[WOOD-ART-CHATBOT-IA-SPEC]].
+
+**4ª entrega (Prospecção de Leads):**
+- Confirmar com o William: região(ões)-alvo e volume de contatos por rodada — ver [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
+- Precificar o serviço (sem valor de referência ainda).
 
 **Geral:**
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar.
