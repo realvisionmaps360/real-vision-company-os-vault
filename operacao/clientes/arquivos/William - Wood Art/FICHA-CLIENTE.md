@@ -45,5 +45,5 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 
 ## Observações
 - Idioma: PT-BR
-- Hoje vende via Mercado Livre (~R$80k/mês em mercadoria, R$20k/mês de taxa, R$4k/mês em anúncios) e Shopee (~R$170k/mês faturamento, R$50k/mês de taxa, R$6k/mês em anúncios) — dados usados só para embasar ROI, não republicar sem necessidade.
+- Hoje vende via Mercado Livre (~R$80k/mês em mercadoria, R$20k/mês de taxa, R$4k/mês em anúncios) e Shopee (~R$170k/mês faturamento, R$50k/mês de taxa, R$6k/mês em anúncios) — dados usados só para embasar ROI, não republicar sem necessidade. O site próprio vai incluir painel administrativo financeiro unificando site + ML + Shopee — ver [[WOOD-ART-FINANCEIRO-ROI]].
 - Maior gargalo dele hoje: depender das taxas de Mercado Livre/Shopee, sem canal de venda próprio.

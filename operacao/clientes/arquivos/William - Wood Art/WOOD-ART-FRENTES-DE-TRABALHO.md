@@ -39,7 +39,7 @@
 
 **O que é:** loja virtual própria, adaptada à realidade do William, reaproveitando a arquitetura já criada para o cliente Dorival (repo Brazilcomp) como base técnica — integração via API com a conta Mercado Pago do William, arquitetura própria da Real Vision, conexão com API dos Correios para envio, banco de dados, cadastro de produtos e gestão de estoque.
 
-**Por que importa:** objetivo principal do William hoje é captar mais clientes e fugir das taxas do Mercado Livre e Shopee, vendendo direto pelo próprio site — hoje ele só usa o gateway nativo do Wix, sem gateway próprio.
+**Por que importa:** objetivo principal do William hoje é captar mais clientes e fugir das taxas do Mercado Livre e Shopee, vendendo direto pelo próprio site — hoje ele só usa o gateway nativo do Wix, sem gateway próprio. O site também vai incluir um painel administrativo financeiro unificado (vendas do site + Mercado Livre + Shopee num só lugar) — detalhado em [[WOOD-ART-FINANCEIRO-ROI]].
 
 **Status atual:** ideia definida, nada construído. Ver opinião sobre reaproveitamento do Brazilcomp em [[WOOD-ART-PROJETO]].
 
@@ -88,15 +88,15 @@
 - **Mercado Livre:** vende em média R$80.000/mês em mercadoria; paga R$20.000/mês de taxa; gasta R$4.000/mês em anúncios.
 - **Shopee:** paga em média R$50.000/mês de taxa; fatura R$170.000/mês; gasta R$6.000/mês em anúncios na plataforma.
 
-**Por que importa:** esses números embasam o argumento de ROI da migração para canal próprio — quanto ele economizaria em taxas versus o investimento em site + tráfego pago.
+**Por que importa:** esses números embasam o argumento de ROI da migração para canal próprio — quanto ele economizaria em taxas versus o investimento em site + tráfego pago. Lógica do cálculo (sem números fechados, pendente de dados) e o painel financeiro unificado que vai organizar tudo isso: [[WOOD-ART-FINANCEIRO-ROI]].
 
 ---
 
 ## 8. Google Merchant Center
 
-**O que é:** cadastro dos produtos do William no Google Merchant Center, para aparecerem em buscas e Google Shopping.
+**O que é:** cadastro dos produtos do William no Google Merchant Center, para aparecerem em buscas e Google Shopping. Um único cadastro abre elegibilidade para múltiplas superfícies de venda — Shopping Ads, listagens orgânicas gratuitas, e superfícies emergentes de compra via IA. Detalhamento em [[WOOD-ART-FINANCEIRO-ROI]].
 
-**Por que importa:** mais um canal de descoberta de produto, complementar ao site próprio.
+**Por que importa:** mais um canal de descoberta de produto, complementar ao site próprio, sem taxa por venda.
 
 **Status atual:** verificar viabilidade.
 

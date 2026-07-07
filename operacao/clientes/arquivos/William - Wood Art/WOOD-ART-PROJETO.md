@@ -26,8 +26,8 @@ Ver detalhamento completo em [[WOOD-ART-FRENTES-DE-TRABALHO]]. Resumo das 11 fre
 4. Chatbot IA para vendas (WhatsApp/Telegram/site/Instagram) — entrega independente das outras, spec em [[WOOD-ART-CHATBOT-IA-SPEC]]
 5. Ferramenta de prospecção de leads (restaurantes — tábuas e placas grandes) — spec de processo em [[WOOD-ART-PROSPECCAO-LEADS-SPEC]]
 6. Tráfego pago Google Ads
-7. Dados financeiros de referência (ML e Shopee) para embasar ROI
-8. Google Merchant Center
+7. Dados financeiros de referência (ML e Shopee) para embasar ROI + painel administrativo financeiro unificado (site, ML e Shopee integrados) — spec em [[WOOD-ART-FINANCEIRO-ROI]]
+8. Google Merchant Center — detalhamento também em [[WOOD-ART-FINANCEIRO-ROI]]
 9. Pesquisa de mercado suíço (exportação)
 10. Linha de usinagem — estratégia de tráfego e marketing separada
 11. Estratégia comercial geral — entrega faseada, análise de produto-piloto de longo prazo

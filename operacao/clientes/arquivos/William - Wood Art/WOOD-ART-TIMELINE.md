@@ -37,6 +37,11 @@
 - Modelo de entrega confirmado por Felipe: a RV pesquisa e entrega **só a planilha de contatos**, o William aborda por conta própria. Variações (RV também aborda; William comprar o Sócio Digital) registradas como nota, não como decisão atual.
 - Preço desta frente ainda **pendente de precificação** — não há valor definido para esse serviço específico.
 
+### 06/07/2026 — 5ª entrega: documento financeiro/ROI + painel admin unificado
+- Produzido o documento [[WOOD-ART-FINANCEIRO-ROI]], consolidando 3 frentes: painel administrativo financeiro (nova ideia do Felipe — site próprio vai centralizar vendas do site + Mercado Livre + Shopee via integração de API), lógica de cálculo de ROI/payback sem números fechados (pendente: valor do investimento e taxa de recompra dos clientes — nenhum dos dois o Felipe sabe hoje), e versão expandida do Google Merchant Center (cadastro único abre elegibilidade para Shopping Ads, listagens gratuitas e superfícies de IA).
+- Cross-links atualizados em [[WOOD-ART-FRENTES-DE-TRABALHO]] (itens 3, 7 e 8), [[WOOD-ART-PROJETO]] e [[FICHA-CLIENTE]].
+- Nenhum número de ROI foi calculado — documento é insumo para a proposta comercial, cálculo real fica pendente dos dois dados em aberto.
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -46,6 +51,7 @@
 | 06/07/2026 | Correção App×Site + pesquisa técnica Wix (Velo, limites, Mercado Pago) | 0h30 |
 | 06/07/2026 | Spec conceitual + custos do Chatbot com IA | 0h30 |
 | 06/07/2026 | Spec de processo da Prospecção de Leads (restaurantes) | 0h30 |
+| 06/07/2026 | Documento financeiro/ROI + painel admin unificado | 0h30 |
 
 ## Próximos marcos
 **1ª entrega (App):**
