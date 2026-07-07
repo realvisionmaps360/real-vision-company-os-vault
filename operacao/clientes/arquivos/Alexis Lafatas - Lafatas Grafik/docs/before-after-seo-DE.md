@@ -66,12 +66,12 @@
 
 > Esta página é o maior diferencial do Marinos. 23 clientes reais, maioria do setor de saúde em toda a Suíça. Hoje é uma lista sem contexto. Proposta: reestruturar com H2s por setor + parágrafo introdutório.
 
-| Elemento | Antes (atual) | Depois (proposta) | Romana |
-|---|---|---|---|
-| H1 | *(nenhum)* | Unsere Referenzen – Kunden aus Gesundheit, Handel und öffentlichem Sektor | |
-| Meta title | CLIENTS \| Lafatas Photography & Print | Referenzen Schweiz \| Lafatas Photography & Print – Kunden aus Gesundheit & Handel | |
-| Meta description | *(ausente)* | Lafatas Photography & Print beliefert namhafte Institutionen in der ganzen Schweiz: Luzerner Kantonsspital, Migros, Marc O'Polo, Schweizer Paraplegiker Zentrum und viele mehr. | |
-| Estrutura da página | Lista sem categorias, sem texto | Parágrafo introdutório + clientes organizados por setor (ver abaixo) | |
+| Elemento            | Antes (atual)                          | Depois (proposta)                                                                                                                                                               | Romana |
+| ------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| H1                  | *(nenhum)*                             | Unsere Referenzen – Kunden aus Gesundheit, Handel und öffentlichem Sektor                                                                                                       |        |
+| Meta title          | CLIENTS \| Lafatas Photography & Print | Referenzen Schweiz \| Lafatas Photography & Print – Kunden aus Gesundheit & Handel                                                                                              |        |
+| Meta description    | *(ausente)*                            | Lafatas Photography & Print beliefert namhafte Institutionen in der ganzen Schweiz: Luzerner Kantonsspital, Migros, Marc O'Polo, Schweizer Paraplegiker Zentrum und viele mehr. |        |
+| Estrutura da página | Lista sem categorias, sem texto        | Parágrafo introdutório + clientes organizados por setor (ver abaixo)                                                                                                            |        |
 
 ### Proposta de estrutura para /clients
 
