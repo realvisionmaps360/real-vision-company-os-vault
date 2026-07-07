@@ -191,6 +191,25 @@ Manter tudo isso no ar tem dois custos mensais separados:
 
 **Pendente para a próxima etapa:** calcular o valor individual de cada módulo/sistema (hoje só o App de Placas tem breakdown de horas por bloco, ver [[WOOD-ART-APP-PLACAS-SPEC]] seção 5.1 — o Website ainda não tem essa quebra). Isso alimenta a montagem final da proposta (skill `proposta-comercial`), não foi calculado ainda nesta sessão.
 
+**Cálculo feito em 07/07/2026** — mesma lógica de horas × R$120/h já usada no App de Placas, aplicada aos módulos do site descritos na seção 8 acima. Estimativa apoiada no reaproveitamento de ~70% do Brazilcomp (seção 2): a maior parte do trabalho é ajuste/adaptação, não construção do zero.
+
+| Módulo | Horas estimadas | Valor (R$120/h) |
+|---|---|---|
+| Catálogo/loja (produto, carrinho, checkout Mercado Pago, frete Correios) | 12h | R$1.440 |
+| Painel administrativo (pedidos, produtos, integração ML/Shopee) | 10h | R$1.200 |
+| Painel do cliente (login, histórico de pedidos) | 6h | R$720 |
+| Gestão de estoque | 5h | R$600 |
+| Página institucional (home, sobre, "Nossa História", contato real) | 4h | R$480 |
+| Analytics/SEO/GEO (GA4, Search Console, correção dos achados da seção 1.7) | 5h | R$600 |
+| Deploy, testes e ajustes finais | 6h | R$720 |
+| **Total dos módulos somados** | **48h** | **R$5.760** |
+
+> Blog não entra nesta tabela como módulo do custo único — já está incluso na manutenção mensal de R$400/mês (seção 8). Painel financeiro unificado (site + ML + Shopee) também não entra aqui: custo/viabilidade técnica ainda pendente, ver [[WOOD-ART-FINANCEIRO-ROI]].
+
+**Apresentação na proposta:** mostrar a soma dos módulos (R$5.760), depois o valor fechado do pacote (**R$4.500**), destacando a economia de **R$1.260 (~22%)** ao contratar o site completo em vez dos módulos separados.
+
+⚠️ Este cálculo é estimativa de apoio à argumentação de desconto — não substitui nem reabre o valor final de R$4.500 já decidido pelo Felipe (fecha o total primeiro, divide depois).
+
 ## Próximo passo
 
 Com este diagnóstico e a spec do app de placas prontos, os dois documentos alimentam a **proposta comercial** (skill `proposta-comercial`) — como **duas linhas de entrega separadas**: 1ª o App de Placas, 2ª o Website. Antes de montar a proposta, confirmar com o William:

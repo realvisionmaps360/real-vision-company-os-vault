@@ -27,6 +27,7 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 - 06/07/2026 — **6ª entrega (Mercado Suíço):** [[WOOD-ART-MERCADO-SUICO]]. Pesquisa exploratória + plano de cálculo de custo de exportação (frete, alfândega, câmbio, food-safe, validação de demanda). Etapa futura, não faz parte do escopo atual. Decisão tomada: peças de usinagem vendem como categoria na mesma loja da Wood Art, não em site separado.
 - 06/07/2026 — **Complemento à 2ª entrega (Website):** registrado em [[WOOD-ART-SITE-DIAGNOSTICO]] o texto de proposta respondendo à pergunta do William sobre onde vender a usinagem, e a explicação de que Google Analytics, SEO e GEO fazem parte do pacote do site.
 - 07/07/2026 — **8ª entrega (Frente 11 — estratégia comercial):** ordem de sequenciamento recomendada registrada em [[WOOD-ART-FRENTES-DE-TRABALHO]] item 11 (Website → App de Placas → Chatbot IA + Prospecção em paralelo → Merchant Center → Tráfego pago). Custos novos incorporados: VisionCloud R$100/mês + manutenção R$400/mês (total R$500/mês, com blog incluso), Wix R$1.000, Google Meu Negócio do zero R$300, prospecção "a combinar", tráfego pago com cobrança pendente de 3 respostas do William. Ideia de precificação do site (R$4.500 final, mostrando desconto sobre módulos separados) registrada como pendente de cálculo em [[WOOD-ART-SITE-DIAGNOSTICO]] seção 8.1.
+- 07/07/2026 — **9ª entrega (consolidação para a proposta):** 6 agentes em paralelo analisaram cada frente com a lente "o que entra na proposta comercial", consolidados em [[WOOD-ART-PROPOSTA-CONSOLIDADO]]. Cálculo do valor dos módulos do Website feito e registrado na seção 8.1 de [[WOOD-ART-SITE-DIAGNOSTICO]]: soma dos módulos R$5.760 (catálogo/loja, painel admin, painel do cliente, estoque, página institucional, analytics/SEO/GEO, deploy) vs. valor fechado R$4.500 — desconto de ~22% mostrado na proposta.
 
 ## Próximos passos
 **1ª entrega (App):**
@@ -43,10 +44,10 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 - Confirmar com o William: região(ões)-alvo e volume de contatos por rodada — ver [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
 - Precificar o serviço (sem valor de referência ainda).
 
-**Próxima etapa (ainda não iniciada):**
-- Abrir agentes em paralelo para analisar cada documento de frente já produzido, sob a perspectiva de "o que vai para o texto da proposta" — consolidar tudo num único `.md` que alimenta a proposta comercial final.
-- Calcular o valor individual de cada módulo do Website (site/loja) para sustentar a estratégia de precificação com desconto (ver [[WOOD-ART-SITE-DIAGNOSTICO]] seção 8.1).
-- Skills já mapeadas para essa etapa: `proposta-comercial`, `rv-copy`, `karpathy-guidelines` (+ `realvision`, `wood-art`, `rv-termos` já ativas).
+**Próxima etapa (não iniciada):**
+- Felipe revisa [[WOOD-ART-PROPOSTA-CONSOLIDADO]] (documento-ponte pronto).
+- Confirmar com o William os pendentes de cada frente (escopo do configurador, decisão Website, canal do chatbot, região da prospecção).
+- Só depois: montar o texto final da proposta comercial (skill `proposta-comercial`) → versão em slides.
 
 **Geral:**
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar.

@@ -66,6 +66,14 @@
 - Ativadas nesta sessão: `rv-skill-scout` (mapeou skills para a próxima etapa: `proposta-comercial`, `rv-copy`, `karpathy-guidelines`) e `rv-termos` (checagem "modo proposta" — cláusulas 1, 2, 4, 7, 9, 11 e 12 relevantes para este projeto; nenhuma atualização nos Termos foi necessária).
 - **Sessão pausada aqui por decisão do Felipe** — a análise dos documentos por agentes em paralelo e a montagem do `.md` consolidado da proposta ficam para a próxima etapa, ainda não iniciadas.
 
+### 07/07/2026 — 9ª entrega: consolidação para a proposta + cálculo dos módulos do Website
+
+- 6 agentes rodados em paralelo (disciplina `karpathy-guidelines`), um por frente, cada um respondendo "o que deste documento vira texto/preço/argumento na proposta, e o que fica de fora": App de Placas, Website/diagnóstico Wix, Chatbot IA, Prospecção de Leads, Financeiro/ROI+Merchant Center, Mercado Suíço+sequenciamento (Frente 11).
+- Achados consolidados em [[WOOD-ART-PROPOSTA-CONSOLIDADO]] — documento-ponte entre o diagnóstico e o texto final da proposta, com uma seção por frente que entra na proposta (Website, App, Chatbot, Prospecção, Financeiro/Merchant Center) e uma seção separada para o que fica fora do escopo atual (Mercado Suíço, idioma alemão, tráfego pago condicionado).
+- Cálculo do valor dos módulos do Website feito (pendência da seção 8.1 de [[WOOD-ART-SITE-DIAGNOSTICO]]), usando a mesma lógica de horas × R$120/h do App de Placas, apoiado no reaproveitamento de ~70% do Brazilcomp: catálogo/loja (12h), painel admin (10h), painel do cliente (6h), estoque (5h), página institucional (4h), analytics/SEO/GEO (5h), deploy/testes (6h) — soma **48h / R$5.760**. Blog não entra (já incluso na manutenção mensal). Apresentação recomendada na proposta: soma dos módulos (R$5.760) vs. valor fechado (R$4.500) = desconto de ~22%.
+- Nenhum valor foi inventado — todo número é rastreável aos documentos de frente já existentes ou ao padrão de precificação (R$120/h) já usado no App de Placas.
+- **Próximo passo:** Felipe revisa [[WOOD-ART-PROPOSTA-CONSOLIDADO]] e confirma os pendentes com o William antes de montar o texto final da proposta (skill `proposta-comercial`).
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -79,6 +87,7 @@
 | 06/07/2026 | Pesquisa mercado suíço + decisão linha de usinagem | 0h30 |
 | 06/07/2026 | Texto de proposta: usinagem + Analytics/SEO/GEO | 0h20 |
 | 07/07/2026 | Sequenciamento Frente 11 + custos novos (VisionCloud, Wix, GMN) + ideia de precificação do site | 1h |
+| 07/07/2026 | Consolidação para a proposta (6 agentes em paralelo) + cálculo dos módulos do Website | 0h40 |
 
 ## Próximos marcos
 **1ª entrega (App):**
@@ -97,5 +106,6 @@
 
 **Geral:**
 - Reconciliar duplicata no VisionFlow (tentado em 06/07/2026, MCP Supabase com timeout de conexão — retomar quando resolver)
-- Montar a proposta comercial (skill `proposta-comercial`) — com as três entregas como linhas separadas
+- Felipe revisa [[WOOD-ART-PROPOSTA-CONSOLIDADO]] e confirma pendentes com o William
+- Montar a proposta comercial (skill `proposta-comercial`) — com as entregas como linhas separadas
 - Gerar versão em slides da proposta aprovada (skill `frontend-slides`)
