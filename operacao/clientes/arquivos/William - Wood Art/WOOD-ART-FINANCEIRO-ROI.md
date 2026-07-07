@@ -14,13 +14,15 @@ data: 2026-07-06
 
 ## 1. Painel administrativo financeiro unificado
 
-**O que é:** dentro do site próprio, um painel onde o William acessa e organiza toda a parte financeira do negócio num só lugar — vendas do site + vendas do Mercado Livre + vendas da Shopee, todas contabilizadas juntas via integração com as APIs dessas plataformas.
+**O que é:** dentro do site próprio, um painel onde o William acessa e organiza toda a parte financeira do negócio num só lugar — vendas do site + vendas do Mercado Livre + vendas da Shopee **+ Google Merchant Center**, todas contabilizadas juntas via integração com as APIs dessas plataformas, com rastreio de origem (saber exatamente de onde veio cada venda: site, ML, Shopee ou Google).
 
-**Por que importa:** hoje o dado financeiro do William está espalhado em 3 lugares (site, ML, Shopee), sem visão consolidada. O painel resolve isso independente de qualquer decisão sobre ROI ou migração de canal — é valor por si só.
+**Por que importa:** hoje o dado financeiro do William está espalhado em sistemas diferentes, sem visão consolidada. O painel resolve isso independente de qualquer decisão sobre ROI ou migração de canal — é valor por si só.
+
+**Integração com Google Merchant Center:** é uma integração nova para a Real Vision (nunca foi feita antes), mas tecnicamente viável — todas as plataformas envolvidas (ML, Shopee, Google Merchant) têm API documentada. Existe curva de aprendizado/tempo extra para construir essa ponte, mas é possível.
 
 **Status atual:** ideia definida nesta sessão (06/07/2026). Nada avaliado tecnicamente ainda.
 
-**Decisão/checagem pendente:** viabilidade técnica de puxar dados via API pública do Mercado Livre e da Shopee (o que cada uma expõe, limites de acesso) precisa ser checada antes de entrar na proposta como item fechado.
+**Decisão/checagem pendente:** viabilidade técnica de puxar dados via API pública do Mercado Livre e da Shopee (o que cada uma expõe, limites de acesso) precisa ser checada antes de entrar na proposta como item fechado. Preço da integração com Google Merchant Center também pendente.
 
 ## 2. Lógica de ROI (sem números fechados)
 
@@ -48,9 +50,15 @@ A "economia mensal estimada" depende de uma variável que hoje não temos: **que
 - **Cadastro e listagem de produtos: gratuito.** Custo real só aparece se ativar Google Shopping Ads (campanha paga dentro do Google Ads, orçamento definido pelo cliente).
 - **Por que é mais interessante do que parece:** o cadastro no Merchant Center é feito uma vez, mas abre elegibilidade para múltiplas superfícies de venda — Google Shopping Ads, listagens orgânicas gratuitas na busca, e cada vez mais superfícies emergentes de compra via inteligência artificial/agentes de IA que consultam catálogos de produtos.
 - **Por que importa pro William:** múltiplos canais de descoberta a partir de uma única integração, sem taxa por venda (diferente de ML/Shopee).
-- **Pré-requisito:** precisa do feed de produtos do site próprio para alimentar o Merchant Center — por isso faz mais sentido como parte do pacote de site próprio do que como item isolado.
+- **Pré-requisito:** precisa do feed de produtos do site próprio e do perfil do Google Meu Negócio (seção 3.1) já criados para alimentar o Merchant Center — por isso faz mais sentido como parte do pacote de site próprio do que como item isolado.
 
-**Achado novo (07/07/2026):** a Wood Art ainda não tem perfil no Google Meu Negócio — não aparece no Google Maps. Criar o perfil do zero é um item à parte do Merchant Center, com custo de **R$300**. Uma vez com todos os produtos cadastrados no sistema interno que a RV vai construir, esse catálogo pode alimentar não só o Merchant Center (gratuito) como outras integrações futuras, de forma centralizada.
+### 3.1 Google Meu Negócio — item próprio da proposta (ênfase forte)
+
+**Achado novo (07/07/2026):** a Wood Art ainda não tem perfil no Google Meu Negócio — não aparece no Google Maps. O William nunca precisou disso porque sempre vendeu via Mercado Livre e Shopee, mas hoje quem pesquisa "placa de madeira personalizada" ou "loja de arte" no Google Maps **não encontra a Wood Art** — confirmado por busca real do Felipe.
+
+**Isso deve ser apresentado na proposta como item próprio, com ênfase forte** — não como subitem enterrado dentro do Merchant Center. É uma dor real e concreta (oportunidade perdida todos os dias), resolvida com investimento pequeno: **R$300** para criar o perfil do zero.
+
+Uma vez com todos os produtos cadastrados no sistema interno que a RV vai construir, esse catálogo pode alimentar não só o Merchant Center (gratuito) como outras integrações futuras, de forma centralizada.
 
 ## Fechamento
 

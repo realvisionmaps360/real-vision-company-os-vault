@@ -86,13 +86,15 @@ Estimativa por bloco de trabalho × R$120/h:
 | Deploy PWA (instalável) + testes + ajustes | 7h | R$840 |
 | **Total** | **32h** | **R$3.840** |
 
-**⚠️ Total pendente de confirmação.** Essa estimativa só fecha depois que o William responder o que o configurador vai efetivamente oferecer (seção 6) — mais opções de personalização = mais horas. O número acima pode subir ou descer dependendo dessa resposta.
+**⚠️ Total pendente de confirmação — apresentar como faixa, não valor fechado.** Essa estimativa só fecha depois que o William responder o que o configurador vai efetivamente oferecer (seção 6) — mais opções de personalização = mais horas. **Faixa a apresentar na proposta: entre R$2.700 e R$6.000**, deixando claro que o valor final depende do escopo confirmado.
 
 > Precificação segue a filosofia [[feedback_proposta_fecha_total_divide_partes]] — fecha o total redondo e divide em pacotes depois. Âncora de mercado RV em [[project_rv_reativacao_skill]].
 
 ### 5.2 Valor mensal a cobrar do William (manutenção do app)
 
 **R$150 a R$300/mês** — cobrado pela Real Vision para manter o app rodando (suporte + atualizações). Esse valor é separado do custo único de desenvolvimento da seção 5.1.
+
+**Deixar claro ao William:** a Real Vision assume a gestão de todas as plataformas por trás (hospedagem, banco de dados, IA) para ele não ter dor de cabeça técnica nenhuma. Conforme o app cresce — mais uso, mais dados, mais gente comprando — pode ser necessário migrar para um plano mais caro de alguma dessas plataformas (ver infraestrutura abaixo). Isso deve estar explícito na proposta como possibilidade de reajuste futuro, não como surpresa.
 
 **Custo de infraestrutura por trás desse valor (referência interna, não repassar linha a linha ao cliente):**
 - Vercel: começa grátis; ~R$110/mês se precisar do plano Pro por volume.

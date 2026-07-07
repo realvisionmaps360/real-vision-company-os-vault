@@ -55,19 +55,23 @@ O William pode escolher começar por um canal só e ir expandindo — não preci
 
 ---
 
-## 5. Estrutura de custo (referência — a confirmar com a demanda real)
+## 5. Estrutura de custo (sem valor fechado — depende da necessidade real do negócio)
+
+**⚠️ Não apresentar preço fixo de desenvolvimento na proposta.** O custo real depende de: quantas integrações o William quer, que tipo de bot (canal, tom, complexidade das respostas), e principalmente **quanto trabalho de treinamento do modelo é necessário** para o bot ficar "redondinho" — isso não é um custo simples de programação, é um processo iterativo:
+- Treinar o bot na base real da Wood Art exige que o William envie dados e material (catálogo completo, dúvidas reais de clientes, casos de atendimento) — quanto mais dado, melhor e mais preciso fica o resultado.
+- Esse investimento de tempo e ajuste fino faz parte do valor entregue, não é trabalho "de graça" antes do desenvolvimento em si — é parte do que está sendo vendido.
 
 | Item | Valor | Tipo |
 |---|---|---|
-| Desenvolvimento do bot (base) | **R$1.800** | Custo único |
-| Manutenção mensal (bot online) | **R$300/mês** | Recorrente |
-| Integração por plataforma adicional | **R$250** cada | Custo único, por canal além do primeiro |
+| Desenvolvimento do bot (base + treinamento) | **sem valor fechado — depende do escopo e do volume de dados/treino necessário** | Custo único |
+| Manutenção mensal (bot online) | **R$300/mês** (referência — ajusta conforme volume de conversas e uso de API de IA) | Recorrente |
+| Integração por plataforma adicional | **R$250** cada | Custo único, por canal além do primeiro (este valor está confirmado, independente do escopo do bot) |
 
-**Como funciona a integração adicional:** o valor de R$1.800 cobre o desenvolvimento do bot e sua primeira integração (ex: WhatsApp). Se o William quiser o mesmo bot também no site, ou também no Instagram, cada plataforma extra soma R$250 — não é um bot novo, é uma nova porta de entrada para o mesmo cérebro.
+**Como funciona a integração adicional:** o desenvolvimento cobre o bot e sua primeira integração (ex: WhatsApp). Se o William quiser o mesmo bot também no site, ou também no Instagram, cada plataforma extra soma R$250 — não é um bot novo, é uma nova porta de entrada para o mesmo cérebro.
 
-*Exemplo:* bot no WhatsApp (incluso no R$1.800) + site próprio depois = +R$250. Bot no WhatsApp + site + Instagram = +R$250 × 2.
+*Exemplo:* bot no WhatsApp (incluso no desenvolvimento) + site próprio depois = +R$250. Bot no WhatsApp + site + Instagram = +R$250 × 2.
 
-**⚠️ Valor final pendente de confirmação.** Esses números são a referência-base da Real Vision. O custo real (principalmente a manutenção mensal, que inclui uso de API de IA) depende do volume de conversas e da complexidade das respostas que o William espera — isso só se define entendendo a demanda dele.
+**⚠️ Valor final pendente de confirmação.** O custo real (desenvolvimento + treinamento, e a manutenção mensal, que inclui uso de API de IA) depende do volume de conversas, da complexidade das respostas e de quanto material o William vai fornecer para o treinamento — isso só se define entendendo a demanda dele.
 
 
 ---

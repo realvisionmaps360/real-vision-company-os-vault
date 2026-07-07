@@ -135,6 +135,7 @@ A proposta comercial deve apresentar as opções, não decidir por ele:
 
 1. **Migrar totalmente para site próprio** (reaproveitando arquitetura Brazilcomp) — resolve taxa de 1% do Wix, dá controle total, sustenta o App de Placas e o painel de produção, mas exige desenvolvimento e catálogo novos.
 2. **Melhorias pontuais no Wix atual** — a partir de **R$1.000**, cobrindo as correções listadas na seção 1 (contato mock, links mortos, página órfã, fotos de stock) e os ajustes de SEO/GEO da seção 1.7. Mais barato e rápido, mas — confirmado na pesquisa da seção 3 — **não dá para construir o resto do projeto (app de placas, painel de produção, estoque real) dentro do Wix.** Quem escolher esta opção sabe que fica só com o site institucional corrigido, sem o resto.
+   > **Na proposta em HTML:** a menção a "correção pontual" deve linkar para um painel de detalhe sobreposto (overlay, fecha ao clicar fora, nunca nova aba) mostrando os problemas reais da seção 1 — padrão documentado em `proposta-comercial/SKILL.md`.
 3. **Não fazer nada agora** — opção do William, deve estar na mesa.
 
 Nenhuma dessas ainda está decidida. Este documento existe para embasar a proposta, não para fechar escopo.
@@ -148,6 +149,8 @@ Nenhuma dessas ainda está decidida. Este documento existe para embasar a propos
 - Diagnóstico completo do site Wix atual, com os problemas reais encontrados (seção 1 acima)
 - Resposta à dúvida que o Felipe levou ao William: dá para fazer tudo dentro do Wix? Não — motivos técnicos na seção 3
 - Recomendação de migração para site próprio, reaproveitando ~70% da infraestrutura já pronta no Brazilcomp (login, carrinho, frete, Mercado Pago, pedidos, painel admin)
+- **Controle completo das vendas** — pedido, mudança de status, código de rastreio — já incluso na entrega (era óbvio mas não estava escrito em lugar nenhum antes desta revisão)
+- **E-mails automáticos ao cliente** informando atualizações da compra (confirmado → pago → enviado → entregue), via Resend — já parte da base reaproveitada do Brazilcomp (seção 2.2)
 - O que ainda falta construir especificamente para a Wood Art: catálogo/copy/fotos, CRUD de produtos e estoque, e a conexão do site com o App de Placas (1ª entrega) e com a produção física
 - As 3 opções de caminho (seção 4), para o William escolher — sem estimativa de horas fechada ainda
 
@@ -176,7 +179,7 @@ Como o site vai ser construído do zero com código próprio (não uma plataform
 
 ## 8. Custos de operação mensal do site
 
-O site é entregue com: blog, painel admin, painel do cliente, gestão de produtos, estoque, financeiro, loja virtual, página "Nossa História", Google Analytics e Google Search Console já instalados.
+O site é entregue com (ordem pela jornada do cliente): página institucional (incluindo "Nossa História"), loja virtual, painel do cliente, painel admin, controle de vendas, gestão de produtos e estoque, e-mails automáticos ao cliente, financeiro, blog, Google Analytics e Google Search Console.
 
 Manter tudo isso no ar tem dois custos mensais separados:
 
@@ -184,6 +187,8 @@ Manter tudo isso no ar tem dois custos mensais separados:
 - **Manutenção geral do site: R$400/mês** — já inclui o pacote de 2 posts de blog por mês, escritos com estratégia de SEO para ranquear na primeira página do Google.
 
 **Total mensal: R$500/mês**, separado do custo único de desenvolvimento do site (a definir conforme a opção escolhida na seção 4).
+
+> **Ordem de apresentação na proposta:** correção pontual no Wix → migração completa → manutenção mensal (a mensalidade é recorrente e comum às duas opções de custo único, por isso vem depois de apresentar as duas alternativas).
 
 ### 8.1 Estratégia de precificação do custo único (opção 1 — migração completa)
 
