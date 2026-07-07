@@ -51,6 +51,21 @@
 - Registrado em [[WOOD-ART-SITE-DIAGNOSTICO]] (seções 5.1 e 5.2) o texto de referência para a proposta comercial, respondendo pergunta direta do William sobre onde vender as peças de usinagem (mesma loja, categoria separada — já decidido na sessão anterior) e explicando, em linguagem simples, por que Google Analytics, SEO e GEO fazem parte do pacote do site.
 - Confirmado com Felipe: a comunicação clara e o "porquê" por trás de cada decisão técnica são parte do padrão de atendimento da Real Vision — todo texto de proposta deve explicar o raciocínio, não só a decisão.
 
+### 07/07/2026 — 8ª entrega: Frente 11 (estratégia comercial/sequenciamento) + custos novos + precificação do site
+
+- Produzida a análise de sequenciamento da Frente 11 (item 11 de [[WOOD-ART-FRENTES-DE-TRABALHO]]): ordem recomendada — 1º Website/loja própria, 2º App de Placas, 3º Chatbot IA + Prospecção de leads em paralelo, 4º Google Merchant Center, 5º Tráfego pago; Mercado suíço e estratégia de longo prazo da usinagem fora do escopo desta fase. Registrado como sugestão da RV, decisão final é do William.
+- Felipe passou dados novos de precificação, incorporados nos documentos-fonte:
+  - Hospedagem VisionCloud (servidor próprio da RV): **R$100/mês**
+  - Manutenção geral do site: **R$400/mês** (já inclui pacote de 2 posts de blog/mês com estratégia SEO) — total **R$500/mês**, ver [[WOOD-ART-SITE-DIAGNOSTICO]] seção 8
+  - Corrigir o Wix (opção 2): **R$1.000** — seção 4 do mesmo documento
+  - Prospecção de leads: custo passou de "pendente" para **"a combinar na proposta"** — [[WOOD-ART-PROSPECCAO-LEADS-SPEC]]
+  - Tráfego pago: registrado que o modelo de cobrança depende de 3 respostas do William (duração, plataforma, orçamento de mídia) — [[WOOD-ART-FRENTES-DE-TRABALHO]] item 6
+  - Achado novo: Wood Art não tem perfil no Google Meu Negócio (não aparece no Google Maps) — criar do zero custa **R$300** — [[WOOD-ART-FINANCEIRO-ROI]] seção 3
+  - ROI reforçado como estimativa explícita na proposta, não cálculo fechado
+- **Ideia de precificação do Website (opção 1 — migração completa):** valor final de **R$4.500**, mas apresentado na proposta como soma de módulos separados com desconto até chegar nesse valor (efeito de "está barato"). Cálculo do valor de cada módulo ainda **pendente** — registrado em [[WOOD-ART-SITE-DIAGNOSTICO]] seção 8.1.
+- Ativadas nesta sessão: `rv-skill-scout` (mapeou skills para a próxima etapa: `proposta-comercial`, `rv-copy`, `karpathy-guidelines`) e `rv-termos` (checagem "modo proposta" — cláusulas 1, 2, 4, 7, 9, 11 e 12 relevantes para este projeto; nenhuma atualização nos Termos foi necessária).
+- **Sessão pausada aqui por decisão do Felipe** — a análise dos documentos por agentes em paralelo e a montagem do `.md` consolidado da proposta ficam para a próxima etapa, ainda não iniciadas.
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -63,6 +78,7 @@
 | 06/07/2026 | Documento financeiro/ROI + painel admin unificado | 0h30 |
 | 06/07/2026 | Pesquisa mercado suíço + decisão linha de usinagem | 0h30 |
 | 06/07/2026 | Texto de proposta: usinagem + Analytics/SEO/GEO | 0h20 |
+| 07/07/2026 | Sequenciamento Frente 11 + custos novos (VisionCloud, Wix, GMN) + ideia de precificação do site | 1h |
 
 ## Próximos marcos
 **1ª entrega (App):**

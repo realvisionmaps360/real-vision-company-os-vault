@@ -185,6 +185,12 @@ Manter tudo isso no ar tem dois custos mensais separados:
 
 **Total mensal: R$500/mês**, separado do custo único de desenvolvimento do site (a definir conforme a opção escolhida na seção 4).
 
+### 8.1 Estratégia de precificação do custo único (opção 1 — migração completa)
+
+**Ideia do Felipe (07/07/2026):** valor final de **R$4.500** pelo sistema completo (site + loja virtual própria). Em vez de apresentar só esse número fechado, a proposta deve mostrar o preço de cada sistema/módulo separado primeiro (ex.: catálogo/loja, painel admin, painel do cliente, gestão de estoque, blog, financeiro, página institucional, analytics/SEO/GEO), somar tudo, e então mostrar o desconto até chegar nos R$4.500 — para o William perceber visualmente o quanto está economizando ao contratar o pacote fechado em vez dos módulos soltos.
+
+**Pendente para a próxima etapa:** calcular o valor individual de cada módulo/sistema (hoje só o App de Placas tem breakdown de horas por bloco, ver [[WOOD-ART-APP-PLACAS-SPEC]] seção 5.1 — o Website ainda não tem essa quebra). Isso alimenta a montagem final da proposta (skill `proposta-comercial`), não foi calculado ainda nesta sessão.
+
 ## Próximo passo
 
 Com este diagnóstico e a spec do app de placas prontos, os dois documentos alimentam a **proposta comercial** (skill `proposta-comercial`) — como **duas linhas de entrega separadas**: 1ª o App de Placas, 2ª o Website. Antes de montar a proposta, confirmar com o William:
