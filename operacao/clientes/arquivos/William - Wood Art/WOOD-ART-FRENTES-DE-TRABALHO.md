@@ -134,9 +134,23 @@
 
 ## 11. Estratégia comercial geral
 
-**O que é:** fechar tudo em várias etapas, entregando os sistemas aos poucos — mas o Felipe está aberto a outras abordagens de sequenciamento.
+**O que é:** fechar tudo em várias etapas, entregando os sistemas aos poucos — mas o Felipe está aberto a outras abordagens de sequenciamento. Isso deve ser apresentado ao William como **sugestão da Real Vision**, não imposição — ele decide a ordem final.
 
 **Por que importa:** o volume de frentes é grande demais para uma entrega única; faseamento reduz risco e permite validar cada entrega antes da próxima.
+
+**Status atual:** análise de sequenciamento feita em 06/07/2026, com base nas dependências técnicas já documentadas em cada frente.
+
+**Ordem recomendada e porquê:**
+
+1. **Website / loja própria** (item 3, incl. categoria usinagem) — base técnica de quase tudo (painel admin, catálogo, Mercado Pago, Correios, estoque). Merchant Center (8) precisa do feed de produtos dela; tráfego pago (6) só faz sentido com ela no ar; usinagem (10) entra como categoria dentro da mesma loja. Fazer primeiro evita retrabalho nas frentes seguintes.
+2. **App de Placas Personalizadas** (item 1) — o configurador é uma feature construída em cima da loja (catálogo/checkout) do passo 1, não uma infraestrutura própria.
+3. **Chatbot IA** (item 4) **+ Prospecção de leads** (item 5) — em paralelo aos passos 1 e 2. São as únicas duas frentes explicitamente independentes (não dependem do site nem do app), baratas e rápidas — entregam valor visível ao William enquanto a parte maior é construída.
+4. **Google Merchant Center** (item 8) — ativado assim que o site tiver catálogo/feed pronto (pré-requisito técnico).
+5. **Tráfego pago / Google Ads** (item 6) — por último entre as frentes ativas; não faz sentido pagar anúncio direcionando tráfego para o Wix atual ou para um site que ainda não existe.
+
+**Fora do escopo desta fase:** mercado suíço (item 9) e a estratégia de longo prazo de produto-piloto da usinagem (nota do item 10) — futuros, condicionados a decisão do William.
+
+**Decisão pendente:** apresentar esta ordem ao William como recomendação da RV, deixando explícito que ele pode escolher outro sequenciamento.
 
 ---
 
