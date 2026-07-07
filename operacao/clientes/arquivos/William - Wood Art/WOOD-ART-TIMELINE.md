@@ -74,6 +74,19 @@
 - Nenhum valor foi inventado — todo número é rastreável aos documentos de frente já existentes ou ao padrão de precificação (R$120/h) já usado no App de Placas.
 - **Próximo passo:** Felipe revisa [[WOOD-ART-PROPOSTA-CONSOLIDADO]] e confirma os pendentes com o William antes de montar o texto final da proposta (skill `proposta-comercial`).
 
+### 07/07/2026 — 10ª entrega: revisão do Felipe no consolidado
+
+Felipe revisou [[WOOD-ART-PROPOSTA-CONSOLIDADO]] e trouxe 7 correções, aplicadas nos documentos de frente e no consolidado:
+1. **Website — reordenada** a lista "o que a loja inclui" pela jornada do cliente (institucional → loja → painel do cliente → admin → controle de vendas → estoque → e-mails automáticos → financeiro → blog → analytics).
+2. **Website — custos reordenados:** correção pontual → migração completa → manutenção mensal.
+3. **Novo componente de HTML documentado na skill `proposta-comercial`:** link de detalhe que abre em overlay/modal (fundo escurecido, fecha ao clicar fora), nunca em nova aba — primeiro uso: os problemas do Wix atual, linkados a partir da menção "correção pontual".
+4. **Faltava documentar (óbvio, mas ausente):** controle completo de vendas e e-mails automáticos ao cliente sobre status do pedido — já existiam na base técnica (Brazilcomp), agora explícitos em [[WOOD-ART-SITE-DIAGNOSTICO]] e no consolidado.
+5. **App de Placas — sem preço fechado:** trocado de R$3.840 fixo para faixa **R$2.700–R$6.000**; explicitado que a mensalidade de manutenção pode subir de plano conforme o app cresce em uso/dados.
+6. **Chatbot IA — sem preço fechado:** removido o R$1.800 fixo; custo passa a depender de integrações, complexidade e principalmente do esforço de treinamento do modelo na base real da Wood Art (processo iterativo, exige dados do William).
+7. **Painel Financeiro — Google Merchant Center incorporado** à integração unificada (rastreio de origem de venda: site/ML/Shopee/Google). **Google Meu Negócio elevado a item próprio** da proposta, com ênfase forte — dor real e imediata (não aparece no Maps hoje), R$300 de investimento.
+
+Arquivos atualizados: [[WOOD-ART-PROPOSTA-CONSOLIDADO]], [[WOOD-ART-SITE-DIAGNOSTICO]], [[WOOD-ART-APP-PLACAS-SPEC]], [[WOOD-ART-CHATBOT-IA-SPEC]], [[WOOD-ART-FINANCEIRO-ROI]], e a skill `proposta-comercial` (`SKILL.md`).
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -88,6 +101,7 @@
 | 06/07/2026 | Texto de proposta: usinagem + Analytics/SEO/GEO | 0h20 |
 | 07/07/2026 | Sequenciamento Frente 11 + custos novos (VisionCloud, Wix, GMN) + ideia de precificação do site | 1h |
 | 07/07/2026 | Consolidação para a proposta (6 agentes em paralelo) + cálculo dos módulos do Website | 0h40 |
+| 07/07/2026 | Revisão do Felipe no consolidado (7 correções + novo componente de overlay na skill) | 0h35 |
 
 ## Próximos marcos
 **1ª entrega (App):**
