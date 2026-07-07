@@ -5,6 +5,39 @@
 
 ---
 
+## 2026-07-07 — Dorival paga o débito, ameaça advogado, envia áudios agressivos. Site V1 reativado por 1 mês, encerramento definitivo confirmado.
+
+**Contexto:** desde o encerramento de 27/06, Dorival ficou em silêncio. Em 03/07 quebrou o silêncio no WhatsApp cobrando os logins/senhas ("Enviei os logins e senhas de tudo que for propriedade da Brazilcomp, site DNS etc"). Em 05/07 insistiu ("Favor enviar o que lhe pedi"). Hoje, 07/07, escreveu: *"Estou enviando o caso ao advogado da empresa"* — alegando que a Real Vision parou de se comunicar e não entregou o site, quando na verdade os avisos formais de 19/06 e 27/06 (com prazo) estão registrados como lidos (✔✔ azul) sem resposta dele.
+
+**Áudios recebidos hoje (07/07) — transcrição preservada:**
+Dorival enviou mensagens de voz altamente agressivas, sem atender chamadas de retorno. Conteúdo:
+- Acusa Felipe de ter "desviado o apontamento do DNS" sem direito, chamando de "crime".
+- Alega que a mensalidade seria "opcional" e só cabível se "toda a estrutura do site estivesse pronta" — contradiz a proposta original de jan/2026, que trata a mensalidade (hospedagem + chatbot + manutenção) como frente contratada, não condicional.
+- Oferece R$ 1.000 (valor muito abaixo do débito real) pra "encerrar" e exige reversão imediata do DNS.
+- Ameaça B.O. e processo judicial.
+- Usa apelo moral/religioso pra pressionar ("cara temente a Deus", "olha no espelho"), sem contestar os fatos com prova.
+- Reclama que Felipe "só manda áudio" e não atende ligação — tentando construir narrativa de que Felipe está evitando contato, quando o histórico mostra o oposto (mensagens formais, com prazo, todas registradas).
+
+**Correções de entendimento consolidadas nesta data:**
+- A mensalidade de R$ 450/mês cobre hospedagem + chatbot + manutenção do site — já embutida desde o início, não condicional a "site pronto". Frentes futuras (Instagram, tráfego pago, Google Merchant Center) seriam mensalidades adicionais, ainda não ativadas — não fazem parte do débito cobrado.
+- **V1** (a versão em uso desde fev/2026) foi desenvolvida integralmente pela Real Vision, hospedada na Vercel, com checkout integrado via Shopify — não é um site Shopify "pronto" de terceiros.
+- **V2** é a reconstrução completa em código próprio (repo GitHub `brazilcomp-visual-guide`, commit `78d92ec`), que nunca chegou a ser publicada no domínio definitivo — ficou em domínio de staging aguardando teste de pagamento real, etapa que dependia do cliente.
+- O atraso real de ~2 meses ocorreu na entrega da loja virtual completa (resolução dos problemas herdados do Shopify) — reconhecido como responsabilidade da Real Vision, mas não invalida a mensalidade contratada à parte.
+
+**Ações executadas hoje:**
+1. Dorival pagou os **R$ 2.250** em aberto (5 mensalidades: fev–jun/2026).
+2. Site **V1** reativado — projeto Vercel `brazilcomp_website` (domínio `brazilcompwebsite.vercel.app`) já estava ativo; domínio próprio reconectado:
+   - Registro A `@` → `216.198.79.1` (criado no Hostinger)
+   - Registro CNAME `www` → `5e7ed87c13bdc163.vercel-dns-017.com` (criado no Hostinger)
+   - Propagação confirmada via `nslookup` — ambos resolvendo corretamente.
+3. **Decisão final comunicada ao cliente:** a Real Vision não seguirá prestando serviços à BrazilComp. Motivo declarado: cultura de falta de comunicação incompatível com o padrão de trabalho da empresa.
+4. Site ficará online por **1 mês a partir de hoje — até 07/08/2026** — prazo para o cliente contratar novo responsável.
+5. Felipe vai organizar e entregar, nos próximos dias: arquivos do chatbot + as duas versões do site (V1 e V2), de propriedade do cliente.
+
+**Próximo passo:** entregar os arquivos dentro do prazo comunicado; monitorar se há resposta/novo contato do Dorival ou do advogado dele antes de 07/08/2026.
+
+---
+
 ## 2026-05-28 — Tentativa de retomada falhou. Dorival hostil. Vitória sumiu de reunião agendada.
 
 **Contexto da semana:**
