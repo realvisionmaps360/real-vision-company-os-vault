@@ -128,6 +128,23 @@ Nenhuma dessas ainda está decidida. Este documento existe para embasar a propos
 
 > ⚠️ **Importante para a proposta:** sempre que o custo do "website" for apresentado ao William, deixar claro que **a loja virtual já está embutida nesse valor** — não é um item à parte. O site que a Real Vision entrega já nasce como loja online, com cadastro de todos os produtos da Wood Art (e futuramente da linha de usinagem, ver [[WOOD-ART-FRENTES-DE-TRABALHO]] item 10). Site sem loja não é a proposta.
 
+### 5.1 Resposta à pergunta do William sobre a linha de usinagem
+
+William perguntou especificamente se as peças de metal da usinagem deveriam ter um site próprio ou entrar na mesma loja da Wood Art. Texto de referência para a proposta (linguagem simples, sem jargão técnico):
+
+> "Como o seu site vai ser construído do zero, especialmente pra sua marca, ele não é uma vitrine fechada — é uma estrutura flexível. Isso significa que as peças de usinagem podem entrar como uma seção própria dentro da mesma loja, com sua página e seus filtros, sem precisar criar um site novo do zero pra isso. Resultado: um único lugar pra cuidar, um único investimento de manutenção, e os anúncios pagos continuam podendo ser direcionados separadamente pra cada público — quem procura placa personalizada e quem procura peça de usinagem."
+
+Justificativa técnica por trás (não vai na proposta, fica registrada aqui): duplicar o backend (banco, admin, pagamento, frete) num segundo site dobraria custo de desenvolvimento e manutenção, e dividiria a autoridade de domínio/SEO à toa — ver decisão completa em [[WOOD-ART-FRENTES-DE-TRABALHO]], item 10.
+
+### 5.2 Analytics, SEO e GEO — parte do pacote do site
+
+Junto com a loja virtual, a entrega do site inclui: acesso configurado ao Google Analytics, SEO e GEO. Texto de referência para a proposta:
+
+> "Junto com o site, a gente já deixa configurado o acesso ao Google Analytics — assim você vai poder ver, com dados reais, qual página está trazendo mais visita, quais produtos estão vendendo melhor, e de onde vem esse cliente. Isso é o que permite tomar decisão baseada em fato, não em achismo: onde investir mais, o que tirar do catálogo, pra onde direcionar o próximo anúncio."
+
+- **SEO** — aparecer bem no Google quando alguém busca "placa de madeira personalizada" ou termos parecidos.
+- **GEO** — aparecer bem quando alguém pergunta isso pra uma inteligência artificial (ChatGPT, Gemini) em vez de buscar no Google. Referência de linguagem já usada pela Real Vision: post [site-maior-ativo-era-ia](https://realvisionmaps.com) (blog RV, ver [[project_blog_geo]] na memória).
+
 ## 6. Evolução natural — idioma alemão (não é escopo agora)
 
 Como o site vai ser construído do zero com código próprio (não uma plataforma fechada como o Wix), adicionar um seletor de idioma (ex.: alemão, mirando o mercado suíço — ver [[WOOD-ART-MERCADO-SUICO]]) é tecnicamente uma extensão natural da mesma arquitetura (o Brazilcomp já usa `i18next`, ver seção 2.1). **Isso não deve ser incentivado nem apresentado como parte do escopo atual** — é uma etapa futura, condicionada ao William decidir expandir para exportação. A analogia certa para a proposta: antes de pensar em receber visita estrangeira, primeiro se arruma a casa — o site/loja virtual em português precisa existir e funcionar bem primeiro.

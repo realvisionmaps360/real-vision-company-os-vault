@@ -47,6 +47,10 @@
 - Decisão registrada: as peças de metal (linha de usinagem, item 10) vendem como categoria dentro da mesma loja virtual da Wood Art, não em site separado — evita duplicar infraestrutura (banco, admin, pagamento, frete) que já está sendo construída do zero.
 - Reforço documentado em [[WOOD-ART-SITE-DIAGNOSTICO]] e [[WOOD-ART-FRENTES-DE-TRABALHO]] (itens 3, 9 e 10): o custo do "website" sempre inclui a loja virtual embutida, não é item separado; e o seletor de idioma (alemão) é uma evolução natural da arquitetura do site (feito do zero, já usa i18next no Brazilcomp), mas não deve ser incentivado nesta fase.
 
+### 06/07/2026 — 7ª entrega: resposta sobre usinagem + Analytics/SEO/GEO no site
+- Registrado em [[WOOD-ART-SITE-DIAGNOSTICO]] (seções 5.1 e 5.2) o texto de referência para a proposta comercial, respondendo pergunta direta do William sobre onde vender as peças de usinagem (mesma loja, categoria separada — já decidido na sessão anterior) e explicando, em linguagem simples, por que Google Analytics, SEO e GEO fazem parte do pacote do site.
+- Confirmado com Felipe: a comunicação clara e o "porquê" por trás de cada decisão técnica são parte do padrão de atendimento da Real Vision — todo texto de proposta deve explicar o raciocínio, não só a decisão.
+
 ## Tempo investido
 
 | Data | Sessão | Horas |
@@ -58,6 +62,7 @@
 | 06/07/2026 | Spec de processo da Prospecção de Leads (restaurantes) | 0h30 |
 | 06/07/2026 | Documento financeiro/ROI + painel admin unificado | 0h30 |
 | 06/07/2026 | Pesquisa mercado suíço + decisão linha de usinagem | 0h30 |
+| 06/07/2026 | Texto de proposta: usinagem + Analytics/SEO/GEO | 0h20 |
 
 ## Próximos marcos
 **1ª entrega (App):**
