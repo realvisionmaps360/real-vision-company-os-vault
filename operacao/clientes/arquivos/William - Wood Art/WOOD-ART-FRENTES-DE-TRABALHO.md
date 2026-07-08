@@ -59,8 +59,6 @@
 
 ---
 
-## 5. Ferramenta de prospecção de leads (restaurantes)
-
 **O que é:** prospecção B2B voltada a restaurantes, para vender tábuas e placas maiores de madeira personalizada — público diferente do B2C que o William atende hoje. É uma das duas frentes de aquisição possíveis para esse público (a outra é tráfego pago, item 6 abaixo). Processo detalhado + ferramentas (Apollo, Vibe Prospecting, metodologia `rv-prospeccao`) em [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
 
 **Por que importa:** William pediu para testar essa frente — é um público B2B diferente do B2C que ele atende hoje.
