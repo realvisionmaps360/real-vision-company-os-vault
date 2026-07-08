@@ -18,10 +18,10 @@ data: 2026-07-07
 ## Ordem recomendada de apresentação (sequenciamento — Frente 11)
 
 1. **Website / loja própria** — base técnica de tudo
-2. **App de Placas Personalizadas** — configurador construído em cima da loja
-3. **Chatbot IA + Prospecção de Leads** — em paralelo, independentes do site/app
-4. **Google Meu Negócio** — dor real e imediata (não aparece no Maps hoje), investimento pequeno
-5. **Google Merchant Center** (via Painel Financeiro Unificado) — depende do catálogo do site pronto
+2. **Google Meu Negócio** — dor real e imediata (não aparece no Maps hoje), investimento pequeno
+3. **Google Merchant Center**  — depende do catálogo do site pronto
+4. **Chatbot IA + Prospecção de Leads** — em paralelo, independentes do site/app
+5. **App de Placas Personalizadas** — configurador construído em cima da loja
 6. **Tráfego pago** — por último, não faz sentido anunciar sem site no ar
 
 Fora do escopo desta fase: Mercado Suíço (etapa futura, condicionada à decisão do William de exportar) e usinagem como linha separada (vende como categoria dentro da mesma loja — ver seção Website abaixo).
@@ -51,9 +51,9 @@ Fora do escopo desta fase: Mercado Suíço (etapa futura, condicionada à decis�
 A linha de usinagem (peças de metal) entra como categoria dentro da mesma loja, não como site separado.
 
 **Custos** (ordem: correção pontual → migração completa → manutenção mensal):
-- Correção pontual no Wix (opção 2): a partir de **R$1.000** — <span data-detail="wix-problemas">ver os problemas encontrados no site atual</span> (link que abre um painel sobreposto com o detalhe, ver [[WOOD-ART-SITE-DIAGNOSTICO]] seção 1 — padrão de interação documentado em `proposta-comercial/SKILL.md`)
+- Correção pontual no Wix (opção 2): a partir de **R$1.500** — <span data-detail="wix-problemas">ver os problemas encontrados no site atual</span> (link que abre um painel sobreposto com o detalhe, ver [[WOOD-ART-SITE-DIAGNOSTICO]] seção 1 — padrão de interação documentado em `proposta-comercial/SKILL.md`)
 - Migração completa (opção 1) — valor final: **R$4.500**, apresentado com breakdown de módulos (soma R$5.760) mostrando desconto de ~22% — ver seção 8.1 de [[WOOD-ART-SITE-DIAGNOSTICO]]
-- Manutenção mensal (qualquer opção com site próprio): **R$500/mês** (R$100 hospedagem + R$400 manutenção, já com 2 posts de blog/mês)
+- Manutenção mensal (qualquer opção com site próprio): **R$500/mês** (R$100 hospedagem + R$400 manutenção mensal do site e todas dependencias e modificações que sejam necessárias sem custo e piblicacao de 2 posts de blog/mês)
 
 **Confirmado vs. pendente:** decisão do William entre as 3 opções (migrar / corrigir Wix / não fazer nada agora) ainda em aberto.
 
