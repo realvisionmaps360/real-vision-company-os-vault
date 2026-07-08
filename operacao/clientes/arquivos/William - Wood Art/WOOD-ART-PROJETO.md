@@ -15,14 +15,14 @@
 
 ## Onde está o código
 - Nenhum código próprio do William ainda.
-- Referência interna de arquitetura: repo GitHub do projeto Brazilcomp — `https://github.com/realvisionmaps360/brazilcomp-2-97cf7219` (site + painel administrativo). Ideia do Felipe: usar como base técnica (banco de dados, painel admin, integração Mercado Pago, cadastro/estoque) e adaptar para a realidade do William — não é cópia direta, precisa de configurador de placa personalizada (feature nova) e todo o catálogo/copy refeitos. Ainda não validado tecnicamente; avaliação fica para a fase de protótipo/proposta.
+- Referência interna de arquitetura: **Template Interno Real Vision** — repo `https://github.com/realvisionmaps360/brazilcomp-2-97cf7219` (site + painel administrativo). Ideia do Felipe: usar como base técnica (banco de dados, painel admin, integração Mercado Pago, cadastro/estoque) e adaptar para a realidade do William — não é cópia direta, precisa de configurador de placa personalizada (feature nova) e todo o catálogo/copy refeitos. Ainda não validado tecnicamente; avaliação fica para a fase de protótipo/proposta.
 
 ## Pendências conhecidas
 Ver detalhamento completo em [[WOOD-ART-FRENTES-DE-TRABALHO]]. Resumo das 11 frentes levantadas em 03/07/2026:
 
 1. App de criação de placas personalizadas (self-service + integração com produção interna) — spec técnica + custos em [[WOOD-ART-APP-PLACAS-SPEC]]
 2. Diagnóstico do site atual no Wix (avaliação negativa) — decisão pendente: migrar ou não
-3. Loja virtual própria (Mercado Pago + Correios + estoque), reaproveitando arquitetura do Brazilcomp
+3. Loja virtual própria (Mercado Pago + Correios + estoque), reaproveitando arquitetura do **Template Interno Real Vision**
 4. Chatbot IA para vendas (WhatsApp/Telegram/site/Instagram) — entrega independente das outras, spec em [[WOOD-ART-CHATBOT-IA-SPEC]]
 5. Ferramenta de prospecção de leads (restaurantes — tábuas e placas grandes) — spec de processo em [[WOOD-ART-PROSPECCAO-LEADS-SPEC]]
 6. Tráfego pago Google Ads

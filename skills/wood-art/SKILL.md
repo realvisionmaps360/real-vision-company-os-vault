@@ -14,7 +14,7 @@ William, dono da Wood Art — placas de madeira personalizadas, tábuas e placas
 Nenhuma entrega ainda — cliente em fase de diagnóstico (desde 03/07/2026).
 
 ## Onde está o código
-Nenhum código próprio ainda. Referência técnica: repo GitHub do Brazilcomp (`realvisionmaps360/brazilcomp-2-97cf7219`) como base de arquitetura a adaptar — ver avaliação em [[WOOD-ART-PROJETO]].
+Nenhum código próprio ainda. Referência técnica: repo GitHub do **Template Interno Real Vision** (`realvisionmaps360/brazilcomp-2-97cf7219`) como base de arquitetura a adaptar — ver avaliação em [[WOOD-ART-PROJETO]].
 
 ## Pasta do cliente (documentação)
 `operacao/clientes/arquivos/William - Wood Art/`

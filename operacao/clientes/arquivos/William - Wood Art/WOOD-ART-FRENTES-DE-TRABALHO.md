@@ -37,11 +37,11 @@
 
 ## 3. Novo site / loja virtual própria
 
-**O que é:** loja virtual própria, adaptada à realidade do William, reaproveitando a arquitetura já criada para o cliente Dorival (repo Brazilcomp) como base técnica — integração via API com a conta Mercado Pago do William, arquitetura própria da Real Vision, conexão com API dos Correios para envio, banco de dados, cadastro de produtos e gestão de estoque. **O custo do "website" apresentado ao William já inclui essa loja virtual — não é item separado.** Estrutura pensada para comportar mais de uma categoria de produto (placas Wood Art + peças de usinagem, ver item 10) na mesma loja.
+**O que é:** loja virtual própria, adaptada à realidade do William, reaproveitando a arquitetura já criada para o **Template Interno Real Vision** como base técnica — integração via API com a conta Mercado Pago do William, arquitetura própria da Real Vision, conexão com API dos Correios para envio, banco de dados, cadastro de produtos e gestão de estoque. **O custo do "website" apresentado ao William já inclui essa loja virtual — não é item separado.** Estrutura pensada para comportar mais de uma categoria de produto (placas Wood Art + peças de usinagem, ver item 10) na mesma loja.
 
 **Por que importa:** objetivo principal do William hoje é captar mais clientes e fugir das taxas do Mercado Livre e Shopee, vendendo direto pelo próprio site — hoje ele só usa o gateway nativo do Wix, sem gateway próprio. O site também vai incluir um painel administrativo financeiro unificado (vendas do site + Mercado Livre + Shopee num só lugar) — detalhado em [[WOOD-ART-FINANCEIRO-ROI]].
 
-**Status atual:** ideia definida, nada construído. Ver opinião sobre reaproveitamento do Brazilcomp em [[WOOD-ART-PROJETO]].
+**Status atual:** ideia definida, nada construído. Ver opinião sobre reaproveitamento do **Template Interno Real Vision** em [[WOOD-ART-PROJETO]].
 
 **Decisão pendente:** precificar o desenvolvimento separadamente e montar pacotes de proposta. Também é preciso convencer o William de que ter sua própria experiência de compra é a melhor saída a longo prazo — construir esse argumento na proposta.
 
@@ -146,9 +146,10 @@
 
 1. **Website / loja própria** (item 3, incl. categoria usinagem) — base técnica de quase tudo (painel admin, catálogo, Mercado Pago, Correios, estoque). Merchant Center (8) precisa do feed de produtos dela; tráfego pago (6) só faz sentido com ela no ar; usinagem (10) entra como categoria dentro da mesma loja. Fazer primeiro evita retrabalho nas frentes seguintes.
 2. **App de Placas Personalizadas** (item 1) — o configurador é uma feature construída em cima da loja (catálogo/checkout) do passo 1, não uma infraestrutura própria.
-3. **Chatbot IA** (item 4) **+ Prospecção de leads** (item 5) — em paralelo aos passos 1 e 2. São as únicas duas frentes explicitamente independentes (não dependem do site nem do app), baratas e rápidas — entregam valor visível ao William enquanto a parte maior é construída.
-4. **Google Merchant Center** (item 8) — ativado assim que o site tiver catálogo/feed pronto (pré-requisito técnico).
-5. **Tráfego pago / Google Ads** (item 6) — por último entre as frentes ativas; não faz sentido pagar anúncio direcionando tráfego para o Wix atual ou para um site que ainda não existe.
+3. **Chatbot IA** (item 4) — entrega independente do site/app, pode ir no WhatsApp da operação atual do William sem depender das outras frentes. Valor visível rápido enquanto a parte maior é construída.
+4. **Prospecção de leads** (item 5) — segunda frente independente, roda em paralelo. Modelo: RV pesquisa e entrega planilha de contatos, William aborda. Baixo custo, retorno rápido.
+5. **Google Merchant Center** (item 8) — ativado assim que o site tiver catálogo/feed pronto (pré-requisito técnico).
+6. **Tráfego pago / Google Ads** (item 6) — por último entre as frentes ativas; não faz sentido pagar anúncio direcionando tráfego para o Wix atual ou para um site que ainda não existe.
 
 **Fora do escopo desta fase:** mercado suíço (item 9) e a estratégia de longo prazo de produto-piloto da usinagem (nota do item 10) — futuros, condicionados a decisão do William.
 
