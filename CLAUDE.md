@@ -44,6 +44,15 @@ Claude Code (desenvolvimento de sites e apps) · Pano2VR · Câmera 360° + Dron
 
 - **VisionFlow** — CRM interno da Real Vision. Pasta local: `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
 
+## Memórias Compartilhadas
+
+Todas as memórias e contexto da Real Vision ficam em:
+```
+C:\Users\Computador\Desktop\Real Vision\operacao\gestao\infraestrutura\memoria\
+```
+
+Sincronizam automaticamente entre **Claude Code local** e **Hermes Agent (VPS Hostinger)** via git privado. Consulte `MEMORY.md` para o índice completo. Ver [`README.md`](operacao/gestao/infraestrutura/memoria/README.md) para detalhes de sincronização.
+
 ---
 
 ## Diretrizes de Comportamento

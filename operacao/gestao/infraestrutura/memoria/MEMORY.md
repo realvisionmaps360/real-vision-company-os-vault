@@ -1,0 +1,96 @@
+- [Texto VisionFlow = para a IA do VisionFlow](feedback_texto_visionflow_ia.md) — "manda um texto pro VisionFlow" = texto pra IA criar cards, não edição manual
+- [proposta-comercial gera HTML, não PDF](feedback_proposta_comercial_html_nao_pdf.md) — corrigido 07/07/2026, mesmo padrão do rv-relatorio
+- [proposta-comercial — capa honeycomb, foto obrigatória](feedback_proposta_capa_honeycomb_foto.md) — usa template.html do rv-relatorio; sem foto do cliente, parar e pedir antes de gerar
+- [proposta-comercial — cidade sempre do cliente](feedback_proposta_cidade_do_cliente.md) — nunca base RV nem cidade de portfólio; bug corrigido 08/07/2026 (caso William/Bahia)
+- [rv-relatorio — tamanhos de imagem travados](feedback_rv_relatorio_tamanhos_imagem.md) — .shot-img 480px, .wide 600px, .compare-photos 338px (04/07/2026)
+- [Bug rv-relatorio — capa via script não embutia](feedback_rv_relatorio_bug_capa_script.md) — corrigido 03/07/2026: tag hive-source garante embutir no finalize.ps1
+- [Proposta Solarium LP — CHF 600](project_solarium_lp_proposta.md) — 3 partes (190/320/90), PT+DE, pendente revisão da Romana
+- [Precificação: fecha total, divide depois](feedback_proposta_fecha_total_divide_partes.md) — Felipe fecha valor redondo total, divide proporcionalmente depois
+- [Obsidian — base de conhecimento](feedback_obsidian_base_conhecimento.md) — `operacao/gestao/infraestrutura/obsidian/`; sync Desktop↔Android via repo privado, só .md
+- [Curso Sócio Digital (03)](project_curso_socio_digital.md) — porta de entrada R$89,90, meta 1000 vendas; pendência: GUIA-3-PERGUNTAS
+- [Pasta de clientes — localização correta](reference_pasta_clientes_correta.md) — `operacao/clientes/arquivos/[Nome-do-Cliente]/`, não em projetos
+- [Projeto de cliente dentro da pasta do cliente](feedback_projeto_dentro_pasta_cliente.md) — código/site vai em `arquivos/[Cliente]/site/`, nunca em `operacao/projetos/`
+- [Skill realvision primeiro](feedback_skill_realvision_primeiro.md) — sempre carregar antes de skills de negócio (rh, proposta, etc)
+- [Caminhos corretos do Company OS](feedback_skill_realvision_paths.md) — `Desktop\Real Vision\`, NÃO `Documents\Real Vision Staff` (não existe)
+- [Solarium Aarau — cliente Suíça](project_solarium_aarau.md) — 1º cliente internacional, Gabriel, tour 360° entregue, repo `solariumaarau`
+- [Estrutura de repos e projetos](project_repos_estrutura.md) — todos em `Desktop\Real Vision\operacao\projetos\`; pastas `.gemini` são duplicatas
+- [Lovable abandonado — nunca sugerir](feedback_lovable_abandonado.md) — conta banida mai/2026; dev é Claude Code + React/Vite + Vercel
+- [Site oficial — URL atual](project_site_url.md) — https://realvisionmaps.com (migrado mai/2026)
+- [Infra tours — Vercel + Hostinger](project_infra_tours_redirect.md) — `/public_html/tour/`; `tour.realvisionmaps.com` DNS A; Vercel redireciona `/tour/*`
+- [Romana Loznjakovic — co-fundadora Real Vision](project_romana_relacao.md) — Fotografia & Processos; Brasil↔Suíça; contexto pessoal em `Felipe Garcia\AGENTE.md`
+- [São Tomé das Letras — prospecção](project_sao_tome_prospeccao.md) — visita em breve; contatos Cultura/Turismo e Gabinete
+- [Blog post GEO — site maior ativo](project_blog_geo.md) — post ID 18, slug `site-maior-ativo-era-ia`; botão em ServicoSites.tsx aponta pra ele
+- [Skill rv-blogpost criada](project_rv_blogpost_skill.md) — copywriter Halbert+Ogilvy+Schwartz, `~/.claude/skills/rv-blogpost/`
+- [rv-relatorio — HTML, não PDF](project_rv_relatorio_skill.md) — capa honeycomb (2 versões); migrou de PDF pra HTML autocontido base64 em 03/07/2026, sem PNG preview, sem render.ps1/Chrome
+- [E-mails sem assinatura no corpo](feedback_email_sem_assinatura.md) — rascunhos terminam antes do "Abraço,"; Felipe usa a própria assinatura do Gmail
+- [Logo preto em documentos brancos](feedback_logo_preto_relatorios.md) — capa clara: rv-logo-black; capa escura: rv-logo-white; run-head: mark.png + `filter:brightness(0)` obrigatório
+- [Skill rv-skill-scout](feedback_rv_skill_scout.md) — meta-skill: mapear skills locais relevantes antes de qualquer tarefa nova
+- [Clientes Suíça — idioma alemão](project_clientes_suica.md) — DE neutro (Hochdeutsch) é o padrão pra CH+AT+DE
+- [Análise antes de executar](feedback_analise_antes_executar.md) — "analisa" = relatório completo antes de criar/implementar; executar só com aprovação
+- [Skill gnomo-monstro — Pano2VR](project_gnomo_monstro_skill.md) — especialista Pano2VR 7; base para curso futuro
+- [SUNBITE — vectorização stickers](project_sunbite_vectorizacao.md) — enviado ao Leonardo 29/05; aguardando posição dele
+- [SUNBITE — site (próximo projeto)](project_sunbite_site.md) — food bike da Romana, estética retrô; aguardando logo+fotos
+- [Email e LinkedIn do Felipe](user_email_gmail.md) — realvisionmaps360@gmail.com (MCP); linkedin.com/in/felipe-garcia-pereira-918565331
+- [Prospecção Real Vision — playbook e histórico](project_agente_prospeccao.md) — skill `rv-prospeccao`; Paraty jun/2026 executado; próximo: São Tomé
+- [Paraty — campanha pousadas jun/2026](project_paraty_campanha.md) — 35 pousadas, 31 WA+17 email 16/06; arquivo em `operacao/prospeccao/`
+- [Felipe não é técnico — linguagem adaptada](feedback_felipe_nao_tecnico.md) — linguagem simples, passo a passo, sempre pedir OK antes de executar
+- [Wise Wallet — app fila de projetos](project_wise_wallet.md) — finanças pessoal+empresa via WhatsApp; separado do VisionFlow
+- [Canva MCP para propostas](feedback_canva_propostas.md) — usar sempre em proposta comercial; verificar brand kits antes
+- [Regra: salvar aprendizados ao final de entregas](feedback_salvar_aprendizados.md) — apresentar automaticamente o que vale salvar em memória/skill antes de fechar sessão
+- [Expansão social media — Instagram + TikTok](project_social_media_expansion.md) — plano futuro; MCP TikTok/Instagram + Windsor; não iniciado
+- [Detecção proativa de novas skills](feedback_skill_detection_proativa.md) — sugerir skill sem Felipe pedir; lógica na rv-skill-scout
+- [n8n-MCP — instalar no futuro](project_n8n_mcp.md) — czlonkowski/n8n-mcp; NÃO instalar agora
+- [Linguagem natural nos planos](feedback_linguagem_natural.md) — sem termos técnicos (useState, hook, componente etc); usar linguagem simples
+- [Posicionamento — sites são o carro-chefe](project_posicionamento_sites_carro_chefe.md) — foto/drone é complementar; NÃO apresentar como "empresa de tours"
+- [Curso Profissão 360°](project_curso_profissao_360.md) — 6 módulos ~5min, área de membros própria; `operacao/cursos/02-profissional-360/`
+- [VisionFlow — migração Supabase](project_visionflow_migracao.md) — ✅ concluída 15/06/2026; Supabase próprio ghwjetvazmdlaqidgxqi; 35 clientes; Google OAuth
+- [MCP Supabase — PRÉ-VOO OBRIGATÓRIO](feedback_supabase_mcp_proxima_vez.md) — verificar MCP conectado antes de sessão com banco; project_id ghwjetvazmdlaqidgxqi
+- [VisionFlow Fase 1 — concluída](project_visionflow_fase1.md) — email, Serviços, Diário, Tarefas, Calendário, Busca — 15/06/2026, só frontend
+- [Felipe quer aprender no caminho](feedback_aprender_no_caminho.md) — explicar a lógica de cada etapa, sem jargão, contextualizar após entrega
+- [Skill rv-termos — Termos de Serviço](project_rv_termos_skill.md) — v1.1 jun/2026; `operacao/comercial/`; usar em problema com cliente ou antes de proposta
+- [Skill rv-contrato — gerador de contratos](project_rv_contrato_skill.md) — Service Agreement em PDF (capa navy + Termos anexados); gatilho "novo cliente"
+- [Contrato — Resumo Executivo (decisão tomada)](project_rv_contrato_exec_summary.md) — pág. 2 obrigatória: dashboard 2×2 + Próximos Passos; jun/2026
+- [Aquisição Mission 1 — papel Acquisition Claude](project_acquisition_claude_role.md) — maestro clarisso+rv-prospeccao+rv-relatorio; Opportunity Score 0-100
+- [Aquisição Mission 2 — arquitetura](project_acquisition_system_arquitetura.md) — Supabase próprio + ficha canônica + eventos append-only; só desenho
+- [Aquisição Mission 3 — modelo congelado](project_acquisition_mission3_modelo.md) — 8 tabelas (24/06/2026); próxima etapa: construir Supabase `rv-acquisition`
+- [Catálogo de serviços RV](project_catalogo_servicos.md) — 12 serviços; lista viva usada como oportunidades por lead na aquisição
+- [Company OS TEM git (vault Obsidian)](reference_company_os_git_vault.md) — repo privado sincroniza .md com celular; binário/dado crítico vai pro banco
+- [Gitignore por repositório nomeado](feedback_gitignore_repos_nomeados.md) — excluir repo pelo nome, não a pasta `operacao/projetos/` inteira
+- [Projeto Hermes — email marketing](project_email_marketing_hermes.md) — Resend+Supabase; docs em `operacao/marketing/email-marketing/`
+- [Cartão Digital — metodologia](project_cartao_digital_metodologia.md) — Vite+React+Tailwind+glassmorphism; GitHub→Vercel→CNAME Hostinger
+- [VisionFlow — git antes do banco](feedback_visionflow_git_antes_banco.md) — sempre `git status` antes de inserir dados (incidente 23/06/2026)
+- [Whisper — ferramenta padrão de transcrição](feedback_whisper_transcricao.md) — instalado local, modelo `base`, pt; nunca usar nuvem
+- [Links clicáveis de arquivos no final de entregas](feedback_links_arquivos_entrega.md) — sempre markdown links + cross-links estilo Obsidian
+- [Raiz da pasta Real Vision — manter limpa](feedback_pasta_raiz_limpa.md) — temporários em `TEMP/`; limpar ao final de cada sessão
+- [Referências de email marketing — 4 mestres](reference_email_marketing_mestres.md) — Jeff Walker, Ferdy Korpershoek, Hormozi, Lead Gen Jay em `referencias/`
+- [Prompt primeiro, nunca executar](feedback_prompt_primeiro_nunca_executar.md) — "cria um prompt" = só o prompt, nunca executar sem aprovação
+- [Verificar antes de afirmar estado do site](feedback_verificar_antes_afirmar.md) — nunca afirmar com base em auditoria antiga; verificar em tempo real
+- [Skill rv-visionflow-handoff](project_rv_visionflow_handoff_skill.md) — texto pronto pra Observações do VisionFlow, IA cria cards automáticos
+- [VisionFlow handoff — filtro de conteúdo](feedback_visionflow_handoff_filtro.md) — só status/entregas/decisões/tarefas; nunca detalhe técnico interno
+- [Skill rv-copy — copywriter Hormozi](project_rv_copy_skill.md) — "Engenheiro da Persuasão"; sem em-dash, tom consultor, nomes de marca exatos
+- [Skill rv-reativacao + preços jun/2026](project_rv_reativacao_skill.md) — 13 clientes tours vencidos; tour R$100, domínio R$40, cartão R$300, LP R$800, site R$1.500
+- [Skill rv-novo-cliente](project_rv_novo_cliente_skill.md) — consulta Supabase, anti-duplicata, cria pasta+docs+skill por cliente
+- [Pasta canônica Sunbite](reference_pasta_sunbite_canonica.md) — `arquivos/Romana Loznjakovic - Sunbite.ch/` (renomeada 29/06/2026)
+- [Skill rv-fim-sessao — maestro de encerramento](project_rv_fim_sessao_skill.md) — unifica handoff + FICHA-CLIENTE; índice em `obsidian/CICLO-Sessao.md`
+- [Ponytail — filosofia ativa no VisionFlow e site RV](feedback_ponytail_projetos.md) — novos projetos aplicam automaticamente; PONYTAIL.md em cada pasta
+- [Conecta Saúde — migração em andamento](project_conecta_saude_migracao.md) — Lovable→Vercel + GA4; DNS propagando (01/07/2026)
+- [Playbook: migrar cliente de Lovable pro Vercel](project_lovable_para_vercel_migracao.md) — clone, tag, build, push, import Vercel, DNS — validado no Conecta Saúde
+- [Playbook: testar/diagnosticar ponte GA4](reference_playbook_teste_ga4_bridge.md) — falta de tag vs. falta de tráfego; repo sincronizado ≠ site publicado
+- [Como diagnosticar hospedagem real de um site](reference_diagnostico_hospedagem_real.md) — nslookup + curl headers + ipinfo.io
+- [Push pro main e DNS exigem confirmação literal na hora](feedback_permissao_push_main_dns.md) — aprovação do plano geral não basta
+- [Relatório com prints/evidências visuais](feedback_relatorio_prints_evidencias.md) — desde 30/06/2026, relatórios incluem screenshots, não só texto
+- [Controle de tempo por cliente](feedback_controle_tempo_cliente.md) — toda sessão registra horas no TIMELINE.md (via rv-fim-sessao)
+- [Hallan Costa / Lavanderia Magnólia](project_hallan_costa_magnolia.md) — permuta LP x 1000 cartões RV; skill `hallan-magnolia`; falta briefing+proposta
+- [Linguagem técnica flexível em textos de cliente](feedback_linguagem_tecnica_flexivel.md) — julgar caso a caso (rv-copy + rv-relatorio)
+- [Graphify instalado no repo do site RV](project_graphify_real_vision_site.md) — sem hook de git; rodar `graphify update .` manualmente
+- [Catálogo de skills — visão geral](reference_catalogo_skills.md) — todas por categoria; consultar quando não souber qual skill usar
+- [O Maná'h — lead em onboarding](project_manahh_onboarding.md) — Fabiano, cerealista SBC-SP; contato via Arthur; skill `manahh`
+- [Mostrar skills ativadas na resposta](feedback_mostrar_skills_ativadas.md) — linha "→ skills ativadas: X, Y" sempre que skill carregar
+- [rv-email tem escopo amplo](feedback_rv_email_escopo_amplo.md) — Hermes é infra real de envio, não só marketing; voz vale pra qualquer email
+- [rv-skill-scout — gatilho de nova skill](feedback_skill_scout_gatilho_nova_skill.md) — toda skill nova deve ser auto-mapeada e reportada antes de fechar tarefa
+- [Blog comentários — bug é do Supabase, não do código](project_blog_comentarios_supabase_bug.md) — confirmado 03/07/2026 no painel
+- [Skill rv-i18n criada](project_rv_i18n_skill.md) — internacionalização real-vision-site (PT/EN/DE); progresso documentado na skill
+- [William — Wood Art (novo cliente)](project_william_wood_art.md) — 11 frentes; skill `wood-art`; meta: proposta → slides; pendência VisionFlow duplicata
+- [O Jogo da Terra — primeiro jogo RV](project_jogo_da_terra.md) — RPG pixel art Android, base Manly P. Hall; foco atual: design das telas
+- [PC do Felipe — GPU](reference_pc_felipe_gpu.md) — GTX 1060 3GB; modelos locais grandes não rodam, propor GPU nuvem/API
+- [Fase de diagnóstico = só coleta info](feedback_fase_diagnostico_so_coleta_info.md) — specs/custos alimentam proposta, nunca é luz verde pra construir

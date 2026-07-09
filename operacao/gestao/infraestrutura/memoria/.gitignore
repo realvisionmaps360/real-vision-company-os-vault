@@ -1,0 +1,38 @@
+# Arquivos de sistema
+.DS_Store
+.obsidian/
+.obsidian-ignore
+
+# Node/npm
+node_modules/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Temporários
+*.tmp
+*.swp
+*.swo
+*~
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Binários (não sincronizam .md mesmo, mas deixar claro)
+*.pdf
+*.docx
+*.xlsx
+*.jpg
+*.png
+*.gif
+*.mp4
+
+# Segurança: NUNCA commitar
+secrets.md
+credentials.md
+api-keys.md
+tokens.md
