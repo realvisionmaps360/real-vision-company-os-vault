@@ -1,1 +1,1 @@
-![[PROPOSTA-REVISADA por felipe-WOOD-ART_09-07-2026]]
+![[proposta revisada final]]
