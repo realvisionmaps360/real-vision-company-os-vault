@@ -1,4 +1,4 @@
-# Contexto Global — Felipe Garcia / Real Vision 360
+# Contexto Global — Felipe Garcia / Real Vision
 
 > **Company OS completo em:**
 > `C:\Users\Computador\Desktop\Real Vision\`
@@ -7,23 +7,23 @@
 
 ## Quem é o usuário (resumo de 30 segundos)
 
-- **Felipe Garcia** — fundador da Real Vision 360
-- Trajetória: Local Guide do Google → câmera 360° + drone → vibe coder → engenheiro de IA
-- Operação **global** (cidades já atendidas: Itacaré, Barra Grande, Maraú, Igrapiúna, Ituberá — BA)
+- **Felipe Garcia** — fundador da Real Vision
+- Trajetória: Local Guide do Google → câmera 360° + drone → vibe coder → engenheiro de Software / IA
+- Operação **global** (São Paulo, Bahia, Ceará, Rio de Janeiro, Aarau (suiça))
 - Idiomas: PT + EN fluente
 
 ## O que é a Real Vision
 
 Operação de **presença digital integrada para negócios locais e globais**, com 5 pilares:
-1. Sites profissionais (Landing, Institucional, E-commerce)
-2. Google Meu Negócio
+1. Sites profissionais (Landing, Institucional, E-commerce, Digital Card)
+2. Automações & Agentes de IA
 3. Tour Virtual 360° (Pano2VR + Street View)
-4. Fotografia & Drone
-5. Automações & Agentes de IA
+4. Google Meu Negócio
+5. Fotografia & Drone
 
 ## Stack
 
-Claude Code (desenvolvimento de sites e apps) · Pano2VR · Câmera 360° + Drone próprios · Google Street View · Agentes IA
+Claude Code (desenvolvimento de sites e apps) · Pano2VR · Câmera 360° + Drone próprios · Google Street View · Vercel · Supabase · Hostinger
 
 ## Regras de trabalho
 
