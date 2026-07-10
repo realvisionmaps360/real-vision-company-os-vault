@@ -18,6 +18,7 @@ operacao/projetos/_RV-Internos/real-vision-site/
 operacao/projetos/solariumaarau/
 operacao/projetos/sunbite-site/
 operacao/projetos/rv-cartaodigital-paraty-onboard/
+operacao/projetos/site-template-rv-01/
 operacao/clientes/arquivos/MSV-Aarau/site/
 operacao/projetos/_RV-Internos/jogo-da-terra/prototipo/
 
@@ -29,6 +30,7 @@ TEMP/
 .obsidian/
 .claude/
 .claude-skills/
+.agents/
 .env
 *.env
 node_modules/
