@@ -103,6 +103,22 @@ Arquivos atualizados: [[WOOD-ART-PROPOSTA-CONSOLIDADO]], [[WOOD-ART-SITE-DIAGNOS
 | 07/07/2026 | Consolidação para a proposta (6 agentes em paralelo) + cálculo dos módulos do Website | 0h40 |
 | 07/07/2026 | Revisão do Felipe no consolidado (7 correções + novo componente de overlay na skill) | 0h35 |
 
+### 08/07/2026 — Proposta comercial HTML gerada e enviada
+- HTML single-file com identidade RV (fundo escuro, âmbar #F5A623, Bebas Neue/Inter/JetBrains Mono via Google Fonts)
+- Estrutura: Capa honeycomb → Sumário Executivo → Diagnóstico (5 problemas Wix + números financeiros) → Escopo por Fase (6 fases com acordeão CSS) → Investimento (placeholders) → Cronograma → Próximos Passos
+- Skills usadas: `realvision` + `rv-copy` + `rv-design` + `proposta-comercial` + `rv-relatorio`
+- Preços mantidos como `[A DEFINIR COM FELIPE]` — nenhum valor inventado
+- Fases independentes (3 Chatbot, 4 Prospecção) destacadas com badge verde/azul
+- Arquivo local: `PROPOSTA-COMERCIAL-WOOD-ART_08-07-2026.html`
+- **Upload para Google Drive:** pasta "Wood Art" → `PROPOSTA-COMERCIAL-WOOD-ART_08-07-2026.html` (https://drive.google.com/file/d/1GUiBmernNeng4Eha36Yz73SExsFwIbHA/view?usp=drivesdk)
+
+### 09/07/2026 — Proposta comercial v2 com foto de capa (honeycomb)
+- Foto `Bairro_Orquideas.png` copiada para a pasta do cliente e embutida como data URI base64 no script do honeycomb da capa
+- Arquivo local: `PROPOSTA-COMERCIAL-WOOD-ART_09-07-2026_v2.html` (26.8 KB)
+- **Upload para Google Drive:** pasta "Wood Art" → `PROPOSTA-COMERCIAL-WOOD-ART_09-07-2026_v2.html` (https://drive.google.com/file/d/1hFhcfF9mZwCvKrkgzc1AVU02zCp9L_sv/view?usp=drivesdk)
+- Skills usadas: `realvision` + `rv-copy` + `rv-design` + `proposta-comercial` + `rv-relatorio`
+- Conteúdo idêntico ao v1 (08/07) — única mudança: capa honeycomb agora usa a foto do cliente em vez de placeholder vazio
+
 ## Próximos marcos
 **1ª entrega (App):**
 - Confirmar com o William o escopo do configurador (define horas/valor final do app)
