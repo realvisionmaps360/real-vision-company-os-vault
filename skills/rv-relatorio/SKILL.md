@@ -1,11 +1,13 @@
 ---
 name: rv-relatorio
-description: Gera relatórios e documentos de cliente da Real Vision em HTML (documento final, não PDF) com identidade da marca e capa no estilo honeycomb (colmeia mascarando uma foto). Use SEMPRE que o Felipe pedir relatório de cliente, relatório de status, documento de alinhamento, relatório de projeto, "monta um relatório", "documento pro cliente X", ou apresentar status/andamento de um projeto a um cliente. NÃO usar para proposta comercial (use proposta-comercial) nem para arte solta/pôster (use canvas-design).
+description: Gera relatórios e documentos de cliente da Real Vision em HTML (documento final, não PDF) com identidade da marca e capa no estilo honeycomb (colmeia mascarando uma foto). Use SEMPRE que o Felipe pedir relatório de cliente, relatório de status, documento de alinhamento, relatório de projeto, "monta um relatório", "documento pro cliente X", ou apresentar status/andamento de um projeto a um cliente. **TAMBÉM serve para proposta comercial** — a arquitetura HTML (capa honeycomb, miolo, identidade, finalize.ps1) é a mesma; só muda o conteúdo e o tipo no nome do arquivo (`*_Proposta_<DD-MM-AA>.html`). NÃO usar para arte solta/pôster (use canvas-design).
 ---
 
-# RV Relatório — Gerador de relatórios de cliente
+# RV Relatório — Gerador de relatórios de cliente e propostas comerciais
 
-Skill para produzir documentos de cliente da Real Vision (relatórios de status, alinhamento de projeto, prestação de contas) em **HTML** — scroll contínuo, sem paginação de papel — com a identidade da marca e a **capa honeycomb** (colmeia de hexágonos mascarando uma foto do cliente). O HTML é o documento final entregue ao cliente (anexo de email), não um PDF.
+Skill para produzir documentos de cliente da Real Vision (relatórios de status, alinhamento de projeto, prestação de contas, **propostas comerciais**) em **HTML** — scroll contínuo, sem paginação de papel — com a identidade da marca e a **capa honeycomb** (colmeia de hexágonos mascarando uma foto do cliente). O HTML é o documento final entregue ao cliente (anexo de email), não um PDF.
+
+> ⚠️ **OBRIGATÓRIO:** carregar esta skill SEMPRE que o Felipe pedir proposta comercial. O template honeycomb (capa, miolo claro, identidade RV) é o padrão oficial — não gerar proposta sem ele. Carregue junto com `proposta-comercial` (que define o conteúdo/estrutura) e `realvision` primeiro.
 
 > Primeiro ative `realvision` (regra: carregar o contexto da empresa antes de skills de negócio). Idioma sempre PT-BR.
 
@@ -124,12 +126,20 @@ Nunca espremer uma imagem/logo em tamanho de ícone (~24-26px) do lado de um tí
 
 ## Finalização (embutir imagens, sem Chrome/PDF)
 
-Não existe mais renderização para PDF — o `.html` finalizado **é** o documento entregue (anexo de email). O `finalize.ps1` varre o HTML em busca de `<img src="arquivo.png">` com caminho relativo, procura o arquivo em `assets/brand/` e nas pastas do HTML de origem/destino, e substitui por `data:image/...;base64,...` — assim o arquivo final abre em qualquer navegador, mesmo movido para outra pasta ou anexado a um email, sem depender de nada no disco do Felipe.
+Não existe mais renderização para PDF — o `.html` finalizado **é** o documento entregue (anexo de email).
 
+### Windows (PowerShell)
 ```powershell
 & "C:\Users\Computador\.claude\skills\rv-relatorio\assets\finalize.ps1" `
   -Html "<scratchpad>\<arquivo>.html" -Out "<pasta-cliente>\<Cliente>_<Tipo>_<DD-MM-AA>.html"
 ```
+
+### Linux / Hermes WebUI (Python)
+```bash
+python scripts/finalize_linux.py --html <scratchpad>/<arquivo>.html --out <pasta-cliente>/<Cliente>_<Tipo>_<DD-MM-AA>.html
+```
+
+Ambos varrem o HTML em busca de `<img src="arquivo.png">` com caminho relativo, procuram o arquivo em `assets/brand/` e nas pastas do HTML de origem/destino, e substituem por `data:image/...;base64,...` — assim o arquivo final abre em qualquer navegador, mesmo movido para outra pasta ou anexado a um email, sem depender de nada no disco.
 
 ## Arquivos da skill
 
@@ -137,8 +147,10 @@ Não existe mais renderização para PDF — o `.html` finalizado **é** o docum
 - `assets/finalize.ps1` — embute logos/capa/prints como base64 e salva o `.html` final.
 - `assets/brand/` — logos oficiais (white/black/mark).
 
+> **Nota para Linux/Hermes WebUI:** estes assets foram baixados do Google Drive em 08/07/2026 (pasta `rv-relatorio-template/` do Felipe). Os arquivos originais estão no Windows do Felipe (`C:\Users\Computador\.claude\skills\rv-relatorio\assets\`). No Linux/Hermes, ficam em `/home/hermeswebui/.hermes/skills/real-vision/operacao/rv-relatorio/assets/`. O `finalize.ps1` é PowerShell (Windows-only) — no Linux, embutir imagens como base64 via script Python manualmente.
+
 ## Referência
 
 - Primeiro relatório feito com esta skill (formato antigo, PDF paginado): **BrazilComp — Alinhamento do Projeto (11/06/2026)**, em `operacao/clientes/arquivos/Dorival  Martins - Brazilcomp/` (`brazilcomp-relatorio.html`) — útil como referência de conteúdo/tom, mas o layout não reflete mais o padrão atual.
 - Relatório de referência atual (o mais completo e revisado até agora, base para todo relatório novo): **Lafatas — Relatório de Otimização SEO**, em `operacao/clientes/arquivos/Alexis Lafatas - Lafatas Grafik/Lafatas_Relatorio-SEO_04-07-26.html` (PT-BR) e `Lafatas_Bericht-SEO_04-07-26.html` (DE) — passou por 2 rodadas de revisão do Felipe (04/07/2026): prints reais embutidos, comparações antes/depois lado a lado (360°, H1 visível/invisível), checklist com destaque visual, callout de atenção (não mais de upsell — o Merchant Center foi reservado para um documento futuro, ver `docs/proximos-passos-pendente.md` na pasta do cliente), e os 3 tamanhos de imagem travados na seção acima. Use como exemplo real e completo do documento final.
-- Ao gerar uma **nova versão** de um relatório já entregue (o cliente/Felipe precisa comparar ou o navegador está com cache do arquivo antigo), salvar com sufixo `_v2`, `_v3` etc. no nome — nunca sobrescrever o arquivo original com o mesmo nome.
+- Ao gerar uma **nova versão** de um relatório já entregue (o cliente/Felipe precisa comparar ou o navegador está com cache do arquivo antigo), salvar com sufixo `_v2`, `_v3` etc. no nome — nunca sobrescrever o arquivo original com o mesmo nome.\n\n## Skills relacionadas\n\n- `proposta-comercial` — define a estrutura de conteúdo/sequenciamento das propostas. Carregue ambas: `rv-relatorio` fornece o template honeycomb visual, `proposta-comercial` fornece a estrutura de seções e o tom educativo.\n\n## Referências técnicas\n\n- `references/drive-api.md` — workflow de download/upload de arquivos via Google Drive API (OAuth2 + REST), útil quando o browser tool não está disponível para mover relatórios entre o servidor e o Drive do cliente.\n\n## Pitfalls\n\n- ❌ **NÃO gerar proposta sem carregar esta skill** — o Felipe exige o template honeycomb para propostas. O `proposta-comercial` define o conteúdo, mas o layout visual é aqui.

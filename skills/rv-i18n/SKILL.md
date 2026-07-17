@@ -65,6 +65,15 @@ const { t } = useTranslation();
 3. postCta (título/label/texto dos botões de CTA no fim de cada post) não foi localizado — fica só
    em PT mesmo quando o post está traduzido. Decisão consciente pra não inflar ainda mais o escopo;
    avaliar com Felipe se vale traduzir também.
+4. `metaTitle`/`metaDescription` (campos usados no preview de link — Open Graph/WhatsApp/Facebook e
+   `<title>`/meta description da aba) são strings únicas por post, sem versão EN/DE. Um post aberto
+   em `/en/blog/...` ou `/de/blog/...` mostra o preview e o título da aba em português mesmo assim.
+   Identificado em 16/07/2026 ao corrigir o bug da imagem de capa no preview (ver
+   `scripts/generate-blog-og.mjs`, que gera o HTML de preview por post e por idioma, mas hoje
+   replica o mesmo texto PT nos 3 arquivos porque a fonte também não é localizada). Corrigir exigiria
+   virar `metaTitle`/`metaDescription` em `LocalizedText` (mesmo padrão de `title`/`summary`) e
+   atualizar o script gerador pra usar o idioma certo por variante. Não é regressão do gerador — é
+   o mesmo gap que já existia antes, só "congelado" em build agora.
 
 ## Links do menu/rodapé — arquitetura implementada
 

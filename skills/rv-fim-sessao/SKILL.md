@@ -1,6 +1,6 @@
 ---
 name: rv-fim-sessao
-description: Maestro de fim de sessão da Real Vision — e ponto de entrada padrão pra "handoff"/"session handoff" dentro do contexto Real Vision. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", "handoff", "session handoff", ou /rv-fim-sessao. Orquestra os artefatos de encerramento conforme o assunto da sessão: (1) cliente RV → SEMPRE atualiza FICHA-CLIENTE.md + TIMELINE do cliente + texto do VisionFlow; (2) projeto interno RV ou assunto pessoal do Felipe → SEMPRE grava documentação permanente (TIMELINE do projeto + playbook de conhecimento reutilizável, se houver + atualização da skill relacionada); (3) fora do escopo RV/pessoal → sugere organização, não presume; (4) em qualquer caso, se a obra ficou pela metade, complementa com o bilhete técnico efêmero estilo session-handoff. Carregar sempre junto com a skill realvision.
+description: Maestro de fim de sessão da Real Vision 360 — e ponto de entrada padrão pra "handoff"/"session handoff" dentro do contexto Real Vision. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", "handoff", "session handoff", ou /rv-fim-sessao. Orquestra os artefatos de encerramento conforme o assunto da sessão: (1) cliente RV → SEMPRE atualiza FICHA-CLIENTE.md + TIMELINE do cliente + texto do VisionFlow; (2) projeto interno RV ou assunto pessoal do Felipe → SEMPRE grava documentação permanente (TIMELINE do projeto + playbook de conhecimento reutilizável, se houver + atualização da skill relacionada); (3) fora do escopo RV/pessoal → sugere organização, não presume; (4) em qualquer caso, se a obra ficou pela metade, complementa com o bilhete técnico efêmero estilo session-handoff. Carregar sempre junto com a skill realvision.
 ---
 
 # Skill: rv-fim-sessao — Maestro de Fim de Sessão
@@ -96,6 +96,21 @@ Isso soma à documentação permanente (Passos 1-3 ou 1b) — nunca a substitui.
 ### Passo 5 — Confirmar antes de escrever no Company OS
 Antes de gravar em qualquer arquivo permanente (FICHA/TIMELINE de cliente no Passo 1-2, ou TIMELINE/playbook/skill de projeto no Passo 1b), **mostrar ao Felipe** o que será escrito e esperar OK (regra 3 do AGENTS).
 O texto do VisionFlow (Passo 3) e o bilhete técnico (Passo 4) são sempre só exibidos — Felipe usa manualmente, nunca viram arquivo.
+
+### Passo 6 — Sincronizar com o GitHub (auto-commit + push)
+Após todas as gravações e confirmações do Felipe, **rodar o script de sync do vault**:
+
+```
+bash ~/.hermes/scripts/vault-sync.sh
+```
+
+O script:
+- Só comita se houver mudanças (seguro contra execução sem trabalho)
+- Usa a mensagem `vault auto-sync · <data>` no commit
+- Pusha silenciosamente para o GitHub
+- O cron job de 1h já protege contra sessões interrompidas; este passo garante o sync **imediato** ao fechar a sessão
+
+**Mensagem ao Felipe após o sync:** `✅ Vault sincronizado com o GitHub.`
 
 ---
 

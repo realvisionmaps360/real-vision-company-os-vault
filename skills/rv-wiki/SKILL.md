@@ -32,6 +32,8 @@ Desktop\Real Vision\operacao\gestao\infraestrutura\obsidian\
 
 Se a pasta `wiki/` não existir ainda, criar a estrutura antes do primeiro ingest.
 
+> ⚠️ **Distinção importante:** Este `rv-wiki` (dentro do vault, gerenciado pelo Claude) é diferente do **LLM Wiki (Karpathy-style)** gerenciado pelo Hermes Agent em `/workspace/wiki/`. Um não substitui o outro — o LLM Wiki compila conhecimento consolidado e pesquisa; o rv-wiki indexa documentos operacionais do Company OS. Veja `real-vision-hermes-setup` → LLM WIKI section para mais detalhes sobre o wiki gerenciado pelo Hermes.
+
 ## Gatilhos (linguagem natural)
 
 | O Felipe diz... | O Claude faz... |
@@ -147,6 +149,10 @@ Reportar como lista priorizada. Não corrigir destrutivamente sem confirmar com 
 6. Resto (infra, gestão, tools)
 
 ---
+
+## Referências
+
+- `references/real-vision-schema-example.md` — SCHEMA.md completo e pronto para produção do domínio Real Vision 360. Use como modelo ao iniciar novo wiki para domínios similares (negócio/operação).
 
 ## Exemplos de uso na Real Vision
 

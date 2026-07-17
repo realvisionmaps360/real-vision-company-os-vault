@@ -1,14 +1,14 @@
-# Clarisso Prospector — Agente de Prospecção Real Vision & Viagem
+# Clarisso Prospector — Agente de Prospecção Real Vision 360 & Viagem
 
-Skill dual-uso: prospecta **pousadas/hospedagens para viagem pessoal** (Felipe + Romana) e **clientes de negócio para a Real Vision**. Mesmo fluxo, alvos diferentes.
+Skill dual-uso: prospecta **pousadas/hospedagens para viagem pessoal** (Felipe + Romana) e **clientes de negócio para a Real Vision 360**. Mesmo fluxo, alvos diferentes.
 
 ---
 
 ## Quem usa e para quê
 
-**Felipe Garcia** — fundador Real Vision.
+**Felipe Garcia** — fundador Real Vision 360.
 - **Uso pessoal:** encontrar pousadas/casas pet-friendly, custo-benefício, para viagens com a Romana e o cachorro.
-- **Uso profissional:** prospectar clientes para Real Vision (pousadas, restaurantes, eventos que precisam de tour 360°, site, GMB).
+- **Uso profissional:** prospectar clientes para Real Vision 360 (pousadas, restaurantes, eventos que precisam de tour 360°, site, GMB).
 
 ---
 
@@ -52,11 +52,11 @@ Oi, tudo bem! 😊 Tô planejando uma viagem pra [cidade] com minha parceira e q
 
 ---
 
-## Fluxo de Prospecção — Clientes Real Vision
+## Fluxo de Prospecção — Clientes Real Vision 360
 
 ### Passo 1 — Definir mercado-alvo
 - Cidade-alvo confirmada: **São Tomé das Letras** (5 pousadas) — próxima rodada
-- Critério Real Vision: pousadas/restaurantes SEM tour virtual, SEM site profissional, OU com GMB desatualizado
+- Critério Real Vision 360: pousadas/restaurantes SEM tour virtual, SEM site profissional, OU com GMB desatualizado
 
 ### Passo 2 — Busca de empresas
 - Negócios pequenos: Google Places API (Felipe fornece key)
@@ -89,7 +89,7 @@ Project ID do banco: `gexacmtkjqectfqwhunv`
 ## Parâmetros fixos (definidos pelo Felipe)
 
 - Modo de disparo: **rascunho / draft sempre** — Felipe revisa antes de qualquer envio
-- Primeiro lote Real Vision: 5 pousadas, São Tomé das Letras
+- Primeiro lote Real Vision 360: 5 pousadas, São Tomé das Letras
 - Clientes atuais: **NÃO tocar** neste agente
 - Felipe **não é técnico** — explicar tudo em linguagem de negócio, avançar passo a passo
 
@@ -140,6 +140,6 @@ Headers: X-Goog-Api-Key: [KEY]
 ```
 /clarisso
 ```
-ou mencionar "Clarisso", "prospector de viagem", "prospectar pousadas", "prospectar clientes Real Vision".
+ou mencionar "Clarisso", "prospector de viagem", "prospectar pousadas", "prospectar clientes Real Vision 360".
 
-Sempre carregar `realvision` primeiro se a sessão envolver Real Vision empresa.
+Sempre carregar `realvision` primeiro se a sessão envolver Real Vision 360 empresa.

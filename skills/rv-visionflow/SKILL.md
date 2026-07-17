@@ -1,19 +1,22 @@
-﻿# Skill: rv-visionflow
+---
+name: rv-visionflow
+description: "Guia operacional para sessoes de trabalho no VisionFlow — CRM interno da Real Vision 360 (React + Supabase). Cobré schema do banco, regras de insercao JWT, deploy Vercel e sincronia codigo/banco. Use SEMPRE quando Felipe for trabalhar no VisionFlow: codigo, banco, deploy, correcao de bug ou nova feature."
+---
 
-Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM interno da Real Vision.
+# Skill: rv-visionflow
+
+Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM interno da Real Vision 360.
 
 ---
 
 ## O que é o VisionFlow
 
 CRM interno construído em React + Supabase. Repositório local em:
-`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\visionflow`
+`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
 
 GitHub: `realvisionmaps360/visionflow-crm-48fe197a`
-Deploy: Vercel, projeto `visionflow-crm` (owner: Felipe's projects) — URL: `https://visionflow.realvisionmaps.com`
+Deploy: Vercel (auto-deploy a cada push na branch `main`)
 Banco: Supabase project `ghwjetvazmdlaqidgxqi`
-
-**⚠️ Deploy NÃO é automático por push (incidente 16/07/2026, ver `docs/INCIDENTS.md`).** O projeto no Vercel não tem integração Git conectada — `git push` sozinho não publica nada. Antes de dizer pro Felipe que "subiu", ou: (a) rode `npx vercel --prod` da pasta do repo (requer `npx vercel link --yes --project visionflow-crm --scope felipes-projects-26a2b9dd` uma vez), ou (b) confirme que a integração Git já foi conectada no painel (`npx vercel project inspect visionflow-crm` deve mostrar uma seção "Git").
 
 ---
 
@@ -25,6 +28,10 @@ Execute ANTES de qualquer ação — código ou banco:
 1. git status         → verificar se há arquivos modificados não commitados
 2. git pull           → garantir que o código local está atualizado
 3. Verificar MCP Supabase conectado (project_id: ghwjetvazmdlaqidgxqi)
+4. Verificar migrations pendentes no Supabase
+   → Migration commitada não é migration aplicada. Olhar `supabase/migrations/`
+   e confirmar no Dashboard (SQL Editor) se as migrations mais recentes já
+   rodaram. Se não, aplicar manualmente ou via `supabase db push`.
 ```
 
 ### Por que o git status é obrigatório?
@@ -101,6 +108,32 @@ Usar exatamente esses valores. Qualquer outro valor quebra a renderização do c
 
 Inserir qualquer outro valor quebra a aba Insights (crash em `AREA_META[item.targetTable].icon`).
 
+## PITFALL: Código commitado + migration não aplicada
+
+A Vercel deploya automaticamente o código do frontend, mas **migrations do Supabase são manuais** (via Dashboard ou `supabase db push`). Um commit pode conter código que depende de colunas/tabelas que ainda não existem no banco.
+
+**Incidente — 15/07/2026 — Arquivos (files table):**
+Migration `20260715193000_add_created_by_updated_at_to_files.sql` foi commitada e pusheada, mas NUNCA aplicada no Supabase. Resultado:
+- O código do frontend (`ClientArquivos.tsx`) tentava ler `created_by` e `created_at` → colunas não existiam → metadata de autor/data nunca aparecia
+- O `addFile()` tentava inserir `created_by` → Supabase ignorava ou falhava silenciosamente
+- A feature parecia quebrada mesmo com o código deployado
+
+**Regra derivada:** Feature completa = código deployado + migration aplicada + teste no ambiente. Nunca assumir que migration foi aplicada só porque o commit existe.
+
+## PITFALL: Naming collision em DROP POLICY (PostgreSQL 42710)
+
+Migration SQLs que recriam policies (DROP + CREATE) podem falhar com erro 42710 se o nome da policy no DROP nao bater com o nome real no banco.
+
+**Causa:** O banco pode ter policies nomeadas com ou sem prefixo Admin. Ex: `Insert files` vs `Admin insert files`. O Supabase gera nomes diferentes dependendo se a policy foi criada por migration anterior ou manualmente.
+
+**Solucao:** Sempre dropar AMBAS as variacoes antes de recriar:
+```sql
+DROP POLICY IF EXISTS "Insert files" ON public.files;
+DROP POLICY IF EXISTS "Admin insert files" ON public.files;
+```
+
+**Verificacao pre-migration:** `SELECT * FROM pg_policies WHERE tablename = 'files';`
+
 ## PITFALL: Ao adicionar nova área ao sistema de IA
 
 Toda vez que uma nova área for adicionada ao `analyze-notes`, atualizar obrigatoriamente em 4 lugares:
@@ -118,9 +151,5 @@ Esquecer o item 3 causa **Edge Function 400 silencioso**: o banco rejeita o INSE
 
 ## Deploy
 
-**Push para `main` NÃO deploya sozinho** — o projeto Vercel não tem Git conectado (incidente 16/07/2026). Duas opções:
-
-1. **Deploy manual (funciona hoje):** `npx vercel --prod` de dentro do repo. Primeira vez, linkar antes: `npx vercel link --yes --project visionflow-crm --scope felipes-projects-26a2b9dd`.
-2. **Correção definitiva (fazer uma vez):** painel do Vercel → projeto `visionflow-crm` → Settings → Git → Connect Git Repository → `realvisionmaps360/visionflow-crm-48fe197a`, branch `main`. Depois disso, push volta a deployar sozinho de verdade.
-
-Verificar status: `npx vercel ls visionflow-crm` (idade do deployment mais recente) ou https://vercel.com (projeto visionflow-crm).
+Push para `main` → Vercel deploya automaticamente em ~1-2 minutos.
+Verificar em: https://vercel.com (projeto visionflow-crm)

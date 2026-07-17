@@ -81,7 +81,7 @@ Quando Felipe confirma que é um lead genuíno e ainda não está no banco:
 - Pointer no `MEMORY.md` para a nova skill por-cliente e para a pasta canônica do cliente.
 
 ### 6. Fase de onboarding — só diagnóstico, sem antecipar execução
-Enquanto o cliente estiver em fase de prospecção/diagnóstico (status `lead`, sem decisão de serviço confirmada), ativar **só** `realvision` + `rv-novo-cliente`. Skills de execução (`gnomo-monstro`, `landing-page-copywriter`, `05-marketing-seo`, `cro`, `03-vercel-react` etc.) só entram depois de decisão concreta de serviço — normalmente pós-call. Ver `rv-skill-scout` para o mapeamento completo por fase.
+Enquanto o cliente estiver em fase de prospecção/diagnóstico (status `lead`, sem decisão de serviço confirmada), ativar **só** `realvision` + `rv-novo-cliente`. Skills de execução (`gnomo-monstro`, `landing-page-copywriter`, `marketing-seo`, `cro`, `vercel-react` etc.) só entram depois de decisão concreta de serviço — normalmente pós-call. Ver `rv-skill-scout` para o mapeamento completo por fase.
 
 ---
 

@@ -5,6 +5,8 @@ description: "Produce a repeatable end-of-session summary so the user can /clear
 
 # Session Handoff Skill
 
+> **Nota de escopo Real Vision (12/07/2026):** dentro do contexto Real Vision, esta skill não é mais o ponto de entrada padrão pra "handoff"/"session handoff" — quem recebe esse gatilho primeiro é [[rv-fim-sessao]], que decide o que gravar permanentemente (FICHA-CLIENTE/TIMELINE de cliente, ou TIMELINE/playbook de projeto interno) e só invoca este bilhete efêmero como complemento, se sobrar trabalho técnico pela metade. O comportamento desta skill em si não mudou — continua chat-only, nunca grava arquivo. Fora do contexto Real Vision (outros projetos), esta skill funciona exatamente como sempre, sem essa camada.
+
 Produce a repeatable end-of-session summary so the user can `/clear` and start a fresh agent without losing continuity. The next agent should be able to pick up by reading this summary alone.
 
 This is a context-handoff artifact, not a status report. The audience is a future instance of you, not a stakeholder.
@@ -19,6 +21,7 @@ This is a context-handoff artifact, not a status report. The audience is a futur
    * Files created or modified this session — you know what you touched; don't grep to re-discover.
    * Memory files written or updated (`C:\Users\Computador\.claude\projects\<project>\memory\`).
    * Unresolved questions — things you asked the user that never got a clear answer, or things the user asked that got deflected.
+   * Skills loaded via the `Skill` tool this session — every one you invoked, even if only used briefly. Skills never carry over automatically after `/clear`; this list is the only way the next agent knows to reload them.
 3. Do NOT audit the filesystem. This is synthesis of what happened in THIS session. No `git log`, no broad `Glob` sweeps. If you didn't touch it this session, it doesn't belong here.
 4. Produce the output in chat. Do not write a file. Do not update memory. Chat-only.
 
@@ -38,6 +41,9 @@ This is a context-handoff artifact, not a status report. The audience is a futur
 - `<absolute path>` — <why the next agent should read this first>
 - Plan file: `<path>` (if a plan drove the session)
 - Memory files touched: `<paths>` (if any)
+
+## Skills to reload next session
+- `<skill-name>` — <why it's needed to continue this work> — or "none"
 
 ## Running state
 - Background processes: <shell IDs + what they are + how to kill> — or "none"
@@ -64,6 +70,7 @@ This is a context-handoff artifact, not a status report. The audience is a futur
 4. If a plan file drove the session, name it first in "Key files" so the next agent reads it before anything else.
 5. No emojis, no hype, no "great job" summaries. Terse and concrete — paths, commands, shell IDs, decisions. Match the tone of a seasoned engineer handing off at end-of-shift.
 6. Background process IDs are critical. If you started any `run_in_background` shells, their IDs must appear in "Running state" with the kill command — the next agent cannot find them otherwise.
+7. Skills do not persist across `/clear`. If this session loaded any skill via the `Skill` tool, it must appear in "Skills to reload next session" — omitting it leaves the next agent blind to work that depended on it.
 
 ## Anti-patterns — do not do these
 

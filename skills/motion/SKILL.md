@@ -53,6 +53,15 @@ const { ref, inView } = useInView({ triggerOnce: true })
 const { scrollYProgress } = useScroll()
 const y = useTransform(scrollYProgress, [0, 1], [0, -100])
 
+// Conditional reveal (quando visibility depende de prop booleana — NAO usar CSS data-active)
+<motion.div
+  variants={containerVariants}
+  initial="hidden"
+  animate={active ? 'visible' : 'hidden'}
+>
+  <motion.div variants={itemVariants}>Item com stagger</motion.div>
+</motion.div>
+
 // Variants (coordenar múltiplos elementos)
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } }
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }
@@ -60,14 +69,15 @@ const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }
 
 ---
 
-## Padrões para Claude Code
+## Padroes para Claude Code
 
 Ao implementar Motion:
-- Sempre usar `framer-motion` como pacote (é o nome npm — Motion e Framer Motion são o mesmo pacote)
+- Sempre usar `framer-motion` como pacote (e o nome npm — Motion e Framer Motion sao o mesmo pacote)
 - Preferir `initial/animate/transition` em vez de CSS keyframes
 - Para scroll reveals em landing pages: `useInView` com `triggerOnce: true`
-- Não animar mais de 3 propriedades simultaneamente — prejudica performance
-- Usar `will-change: transform` implícito via `motion.div` (já otimizado pela lib)
+- Nao animar mais de 3 propriedades simultaneamente — prejudica performance
+- Usar `will-change: transform` implicito via `motion.div` (ja otimizado pela lib)
+- **Para reveal animations condicionais (dependendo de prop booleana `active`), usar `motion.div` com `variants` + `staggerChildren` — NAO usar CSS `data-active` + classe `.rv`.** O minificador Lightning CSS (Tailwind v4) remove seletores pai como `.panel[data-active=true] .rv { opacity:1 }`, quebrando o comportamento. framer-motion e JS runtime, nao passa pelo minifier.
 
 ---
 

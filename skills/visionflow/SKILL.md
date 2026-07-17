@@ -15,7 +15,7 @@ CRM interno usado por Felipe e time da Real Vision para gerenciar o pipeline de 
 
 **Usuários:** Felipe (admin) + colaboradoras (acesso limitado por cliente)  
 **Deploy:** Vercel  
-**Repo local:** `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
+**Repo local:** `C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\visionflow`
 
 ---
 
@@ -42,25 +42,25 @@ CRM interno usado por Felipe e time da Real Vision para gerenciar o pipeline de 
 ## 3. Banco de dados Supabase
 
 **Project ID:** `ghwjetvazmdlaqidgxqi`  
-**Auth:** Google OAuth (verificar se token está ativo — ver `docs/AUTH_REACTIVATION_GUIDE.md`)
+**Auth:** Google OAuth via Supabase Auth (`AuthContext.tsx`). ⚠️ `docs/AUTH_REACTIVATION_GUIDE.md` é da fase PRÉ-migração Lovable→Supabase (RLS desabilitado, tabelas antigas, `user_id` fictício) — não usar como referência do estado atual.
 
 ### Tabelas principais
 
 | Tabela | Descrição |
 |---|---|
 | `clients` | Clientes no pipeline |
-| `activities` | Histórico de atividades (timeline) |
+| `activities` | **Diário do cliente** (não existe tabela `diary_entries` — o Diário é a própria `activities`; Observações fixadas também moram aqui, ver [[project_visionflow_diario_observacoes]]) |
 | `client_services` | Serviços contratados por cliente |
 | `deliveries` | Entregas/links por cliente |
 | `finances` | Pagamentos e valores |
-| `reminders` | Tarefas/lembretes (vinculados a cliente ou internos) |
+| `tasks` | Tarefas/lembretes (vinculados a cliente ou internos; não é `reminders`) |
 | `files` | Arquivos por cliente |
 | `team_members` | Usuários do sistema (admin/collaborator) |
-| `client_access` | Quais colaboradores acessam quais clientes |
-| `checklist_items` | Itens de checklist por cliente |
-| `diary_entries` | Entradas do diário por cliente |
+| `client_assignments` | Quais colaboradores acessam quais clientes (não é `client_access`) |
+| `client_checklist` | Itens de checklist por cliente (não é `checklist_items`) |
+| `client_pending_updates` | Fila de propostas da IA Insights (pending/applied/rejected) |
 
-**RLS ativo em todas as tabelas.** Antes de qualquer migration, verificar o MCP Supabase conectado.
+**RLS: status a CONFIRMAR com Felipe.** Esta skill dizia "RLS ativo em todas as tabelas", mas `docs/TIMELINE.md` lista "Fase 2B — Segurança (RLS)" como PENDENTE ("Prioridade: alta antes de qualquer acesso externo"). Não presumir nenhum dos dois lados até confirmar diretamente no projeto (`list_tables`/`get_advisors` via MCP Supabase) ou com o Felipe. Antes de qualquer migration, verificar o MCP Supabase conectado.
 
 ---
 
