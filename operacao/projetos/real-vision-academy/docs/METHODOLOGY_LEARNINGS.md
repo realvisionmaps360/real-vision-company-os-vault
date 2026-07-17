@@ -27,6 +27,24 @@ updated: 2026-07-17
 
 ## Aprendizados registrados
 
+### 2026-07-17 — Fase 2 executada a frio, sem histórico de chat
+- **`CONTEXT.md` como porta de entrada única: validado.** Sessão nova (Fable 5, zero histórico de
+  chat) leu só `CONTEXT.md` → `ARCHITECTURE.md` §3/§7 → `ROADMAP.md` Fase 2 → `DECISIONS.md`, e
+  reconstruiu contexto suficiente para executar a fase inteira (schema + RLS + painel admin) sem
+  perguntar nada que já estivesse documentado. Confirma a aposta do setup inicial.
+- **Credencial operacional em `TEMP/ggg.txt` é frágil entre sessões.** A "Nota operacional" do
+  `CONTEXT.md` apontava pro arquivo, mas ele já tinha sido limpo quando a sessão seguinte precisou —
+  Felipe teve que recolar o PAT. Funciona, mas depende de lembrete manual toda vez. Considerar: manter
+  o PAT lá até o fim do projeto (risco baixo, é só Management API) em vez de "limpar após uso", ou
+  documentar de forma que sobreviva a limpezas.
+- **Hook estreito virando compartilhado espalha bugs adormecidos.** `useIsAdmin` foi criado só para a
+  página `/academy/admin` com `.single()` (lança erro se não achar perfil). Quando uma tarefa
+  *seguinte* (login no header) reusou o mesmo hook globalmente, o erro (406 pra usuário sem linha em
+  `profiles`) passou a aparecer em toda página — sintoma só ficou visível ao ampliar o raio de uso, não
+  na criação original. Lição pra Fase 3 (que vai criar `useEnrollment`/`useProgress` também
+  compartilhados): tratar ausência de linha como caso normal (`.maybeSingle()`) desde a criação do
+  hook, não só quando o bug aparecer.
+
 ### 2026-07-17 — Setup inicial
 - **Frontmatter + backlinks desde o dia 1:** criar a teia de `[[ ]]` junto com os docs (não depois)
   custou pouco e já deixou o `PROJECT_INDEX` navegável. A validar: se isso realmente acelera a

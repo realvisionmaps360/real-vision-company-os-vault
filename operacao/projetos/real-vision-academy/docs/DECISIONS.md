@@ -65,6 +65,34 @@ related:
   Supabase Storage (materiais/prompts). Ver [[video-hosting]].
 - **Impacto:** Só trava a Fase 3 (player/área de membros). Não bloqueia Fases 1–2.
 
+## D-007 — Login do blog: recomeçar limpo (sem migrar dados)
+- **Data:** 2026-07-17
+- **Contexto:** A auth/likes/comentários do blog rodavam no Supabase do VisionFlow. Ao repontar para o
+  banco novo, era preciso decidir migrar os dados existentes ou recomeçar do zero.
+- **Decisão:** **Recomeçar limpo.** Tabelas recriadas vazias no banco novo; dados antigos ficam no
+  Supabase do VisionFlow como arquivo (não migrados).
+- **Justificativa:** Simplicidade; volume de likes/comentários do blog é baixo; evita risco de migração.
+- **Impacto:** Ao publicar, likes/comentários antigos do blog em produção deixam de aparecer. Esperado.
+
+## D-008 — Fase 1 executada direto no Claude Code (sem Fable 5)
+- **Data:** 2026-07-17
+- **Contexto:** Felipe cogitou usar o Fable 5 para construir tudo de uma vez.
+- **Decisão:** Fase 1 (mecânica: repontar config, tela de auth, ativar provider) feita direto no Claude
+  Code. Fable 5 fica reservado para fases com muitas decisões de arquitetura acumuladas (Fase 2/3).
+- **Justificativa:** Fable custa 10x input / 50x output vs. Sonnet; o ganho dele só compensa em trabalho
+  longo e denso em decisões. Regra registrada na skill [[master-visionair]].
+- **Impacto:** Fase 1 concluída nesta sessão.
+
+## D-009 — Tabelas de comunidade: adiadas (não criadas na Fase 2)
+- **Data:** 2026-07-17
+- **Contexto:** O escopo "2B" pedia preparar tabelas de comunidade na Fase 2 sem construir UI, mas não
+  existe spec de comunidade.
+- **Problema:** Criar schema sem spec ou adiar?
+- **Decisão:** **Adiar.** Nenhuma tabela de comunidade criada. Felipe confirmou a recomendação.
+- **Justificativa:** YAGNI — schema sem spec vira retrabalho quase certo; adicionar tabelas depois no
+  Supabase é trivial, sem custo de adiar.
+- **Impacto:** Comunidade entra só após spec própria (novo PRD + decisão). Ver [[ROADMAP]] "Futuro".
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]

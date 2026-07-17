@@ -16,7 +16,7 @@ updated: 2026-07-17
 > **Comece por [[CONTEXT]]** para saber o estado atual em 30 segundos.
 
 ## 🚦 Estado atual
-- **Fase:** Planejamento (fundação documental)
+- **Fase:** Fases 1+2 publicadas em produção (auth unificada + Google OAuth + modelo de dados + painel admin + login global no header)
 - Resumo executivo → [[CONTEXT]]
 
 ## 📌 Visão do produto & requisitos
@@ -44,7 +44,7 @@ updated: 2026-07-17
 - `references/` — materiais de referência externos
 
 ## 📂 PRDs por módulo
-- `prds/` — PRDs detalhados por funcionalidade (a criar conforme as fases)
+- [[PRD-002-modelo-de-dados]] — schema do catálogo + RLS (Fase 2, implementado)
 
 ## 🔗 Fora deste vault
 - **Código:** `operacao/projetos/_RV-Internos/real-vision-site` (rota `/academy`)
