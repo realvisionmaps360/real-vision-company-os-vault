@@ -9,6 +9,16 @@ Biblioteca open source MIT para animações React, JS e Vue. Usada por Framer e 
 
 ---
 
+## Setup
+
+```bash
+npm install framer-motion
+```
+
+Projetos novos da Real Vision já nascem com essa dependência instalada — só rodar o comando acima se o projeto ainda não tiver o pacote (`framer-motion` no `package.json`).
+
+---
+
 ## Onde se encaixa na Real Vision
 
 | Projeto | Uso principal |

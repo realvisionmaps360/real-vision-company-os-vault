@@ -99,6 +99,44 @@ Sempre presente. Direto ao próximo passo. Link para WhatsApp com mensagem pré-
 
 ---
 
+## Preview de link (WhatsApp/Facebook/Instagram) — automático, mas com cache externo
+
+Desde 16/07/2026, todo post do blog gera automaticamente sua própria página de preview
+(`og:image`/`og:title`/`og:description`/`canonical` corretos, apontando pra imagem de capa do
+post, não pra imagem genérica da home). Isso acontece sozinho: o script
+`scripts/generate-blog-og.mjs` roda depois de cada `npm run build`, lendo `blog-posts.ts` e
+gerando um HTML estático por post × idioma (pt/en/de) em `dist/blog/<slug>/`. **Nenhuma ação
+manual é necessária ao criar um post novo** — o próximo build já cobre ele.
+
+**Se o preview não aparecer certo ao testar no WhatsApp logo após publicar, isso quase sempre
+NÃO é bug — é cache do lado do WhatsApp/Meta.** O WhatsApp guarda o preview da primeira vez que
+alguém compartilhou aquele link específico, e não refaz essa busca só porque o tempo passou
+(esperar meia hora não adianta). Mesmo padrão do problema de favicon desatualizado no Google
+(skill `favicon-setup`) — a correção já está no servidor, falta forçar o cache externo a
+atualizar. Dois jeitos de confirmar/forçar:
+
+1. **Confirmar que o servidor está certo** (sempre o primeiro passo, elimina dúvida sobre o
+   código): `curl -s "https://realvisionmaps.com/blog/<slug>" | grep og:image` — se aparecer a
+   imagem certa aqui, o problema é 100% cache do WhatsApp, não do site.
+2. **Forçar o WhatsApp a atualizar**: colar a URL do post no
+   [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e clicar no botão
+   **"Buscar informações novas"** (nome real do botão na interface em PT-BR, confirmado
+   16/07/2026 — não é "Scrape Again"). Se a URL nunca foi compartilhada no Facebook antes, a
+   ferramenta mostra o aviso "Essa URL não foi compartilhada no Facebook antes" — isso é normal,
+   não é erro, só significa que ainda não tem nada em cache lá; o botão "Buscar informações
+   novas" força a primeira busca. Isso deixa o preview correto no Facebook — ainda não temos
+   confirmação 100% de que sempre também limpa o cache específico do WhatsApp (infraestrutura
+   relacionada, mas não garantida como idêntica). Testar com uma URL nunca compartilhada antes
+   em lugar nenhum é o jeito mais confiável de provar que o gerador está funcionando, sem
+   depender de cache de terceiros.
+
+## Pipeline obrigatório — 2 etapas
+
+Todo post passa pelas duas etapas abaixo, nessa ordem. Nunca pular direto pra escrita.
+
+**Etapa 1 — Pesquisa de intenção de busca** (Fase 0 abaixo).
+**Etapa 2 — Escrita com `rv-copy`.** Depois da pesquisa, ativar a skill `rv-copy` junto pra escrever/revisar o texto — ela aplica as regras de escrita da Real Vision (sem travessão, VOZ.md, nomes de marca exatos) por cima da persona de copywriter desta skill.
+
 ## Fase 0 — Pesquisa de Intenção de Busca (sempre antes de escrever)
 
 Escrever em torno de uma palavra-chave genérica faz o post disputar tráfego. Escrever respondendo a **pergunta real** que alguém digitou no Google constrói autoridade — é a diferença entre "mais um artigo sobre X" e a resposta exata que a pessoa procurava. Essa lógica vale tanto para o site da própria Real Vision quanto para blogs de cliente (ver caso Lafatas, `rv-lafatas`, 04/07/2026).
@@ -123,7 +161,8 @@ Quando Felipe pedir um post sobre X:
 4. Mapear como o tema conecta ao diferencial Real Vision
 5. Escrever os `contentBlocks` completos
 6. Propor o ID (último + 1), slug, metaTitle e metaDescription
-7. Apresentar para aprovação antes de inserir no arquivo
+7. **Título — 5 opções obrigatórias.** Nunca propor um título só. Apresentar 5 variações de título pro Felipe escolher (ou pedir uma 6ª rodada), cada uma testando um ângulo diferente (dado surpreendente, pergunta, dor, benefício direto, etc.)
+8. Apresentar para aprovação antes de inserir no arquivo
 
 ---
 

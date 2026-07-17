@@ -23,8 +23,10 @@ Nenhum código próprio ainda. Referência técnica: repo GitHub do **Template I
 - `WOOD-ART-FRENTES-DE-TRABALHO.md` — as 11 frentes de trabalho detalhadas
 - `FICHA-CLIENTE.md` — contexto de sessão
 
-## Status atual (03/07/2026)
-Fase de diagnóstico. 11 frentes levantadas (app de placas, migração do Wix, loja própria, chatbot, prospecção, tráfego pago, Merchant Center, mercado suíço, usinagem). William já existe no VisionFlow, mas duplicata precisa ser reconciliada quando o Supabase voltar. Meta: proposta comercial pronta → depois, versão em slides (`frontend-slides`).
+## Status atual (09/07/2026)
+Proposta comercial finalizada (08/07 + 09/07), revisada pelo Felipe, HTML gerado e enviado ao Google Drive (`PROPOSTA-COMERCIAL-WOOD-ART_09-07-2026_v2.html`). Pendente: Felipe aprovar o HTML final. Próximo passo: slides (`frontend-slides`) pra apresentar ao William, depois contrato (`rv-contrato`). Duplicata no VisionFlow ainda não reconciliada.
+
+**Histórico:** fase de diagnóstico concluída em 03/07/2026 (11 frentes levantadas: app de placas, migração do Wix, loja própria, chatbot, prospecção, tráfego pago, Merchant Center, mercado suíço, usinagem).
 
 ## Como trabalhar este cliente
 - Fase atual: só `realvision` + `rv-novo-cliente` ativas. Skills de execução (`proposta-comercial`, `frontend-slides`, site, tráfego pago) entram só após decisão de escopo.

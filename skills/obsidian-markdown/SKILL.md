@@ -181,6 +181,10 @@ The algorithm uses $O(n \log n)$ sorting. See [[Algorithm Notes#Sorting]] for de
 Reviewed in [[Meeting Notes 2024-01-10#Decisions]].
 ````
 
+## Convenção de nomenclatura do Company OS (Real Vision)
+
+Ao criar ou renomear um arquivo `.md` dentro do vault da Real Vision, seguir sempre `kebab-case`: sem espaços, sem acentos, sem maiúsculas (ex.: `proposta-comercial-v1.md`, `lancamentos-2025-07.md`). Datas no nome do arquivo em `YYYY-MM-DD` ou `YYYY-MM`. Versões com sufixo `-v1`, `-v2`, `-CORRIGIDO`, `-REVISAO`. Ver `CLAUDE.md` (seção 3) para a convenção completa.
+
 ## References
 
 - [Obsidian Flavored Markdown](https://help.obsidian.md/obsidian-flavored-markdown)
