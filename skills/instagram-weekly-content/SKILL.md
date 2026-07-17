@@ -1,131 +1,202 @@
 ---
 name: instagram-weekly-content
-description: Gera copy + briefings de criativo para 1 post no Instagram da Real Vision
-category: marketing
-version: 1.0
-author: Felipe Garcia
-created: 2026-07-05
+description: "Gera o conteudo semanal do Instagram da Real Vision -- copy + briefings Higgsfield (feed 1:1, Reels 9:16, portrait 4:5) alinhado ao pipeline de aquisicao, blog posts e lancamentos. Roda toda 2a feira via cron job. Carregar junto com: realvision, rv-copy, rv-prospeccao, rv-blogpost."
 ---
 
-# Instagram Weekly Content — Post Semanal do Instagram
+# Instagram Weekly Content -- Real Vision 360
 
-Skill para gerar copy persuasiva (estilo Hormozi via rv-copy) + 3 briefings de criativo prontos para Higgsfield Marketing Studio.
+## Objetivo
+Produzir toda 2a feira o pacote semanal de Instagram: **copy final validada contra VOZ.md** + **3 briefings JSON para Higgsfield** (feed carousel 1:1, Reels 9:16, portrait carousel 4:5) + hashtags estrategicas + CTAs WhatsApp pre-preenchidos + LOG.md para rastreamento.
+
+**Entrega:** Texto para Telegram aguardando aprovacao do Felipe -> apos OK, gerar no Higgsfield -> agendar posts.
 
 ## Quando usar
-- Toda 2ª feira 10h (scheduled job) — ou manual quando Felipe definir tema
-- Quando precisar de post para alimentar presença digital / prova social / prospecção passiva
+- Cron job `instagram-weekly-content` (toda 2a feira, 08:00 BRT / 11:00 UTC)
+- Quando Felipe disser "conteudo semanal Instagram", "post pro Instagram essa semana", "Higgsfield briefing"
+- Sempre que houver lancamento, campanha de prospeccao ativa, ou blog post novo no pipeline
 
-## Inputs
-- `tema_da_semana` (ex: "SEO para pousadas", "Tour 360° vende mais", "Sócio Digital case", "Google Meu Negócio para restaurantes")
-- Se vazio: Hermes sugere baseado em:
-  - Pipeline quente (segmento/cidade dos leads 80-100)
-  - Blog posts em andamento (rv-blogpost pipeline)
-  - Datas sazonais / eventos do setor
+## Skills necessarias (carregar JUNTO no inicio)
+- `realvision` -- contexto da empresa, VOZ, DESIGN, EMPRESA
+- `rv-copy` -- principios Hormozi, loop de auto-critica, regras de escrita
+- `rv-prospeccao` -- 10 lentes de analise de dor, playbooks ativos
+- `rv-blogpost` -- pipeline de posts em andamento (Fase 0: intencao de busca)
 
-## Passo a passo
+---
 
-### 1. Pesquisar dor concreta do público (Fase 0 - rv-blogpost + rv-prospeccao)
-- Rodar `rv-intencao-busca` com termo-base do tema → matriz de intenção (perguntas reais, volume, concorrência)
-- Consultar `rv-prospeccao` playbook: quais dores reais apareceram nas 10 lentes dos leads quentes?
-- Exemplo: "Pousada em Itacaré não aparece no Google → hóspede reserva concorrente com tour 360°"
+## Fluxo de Execucao (Passo a Passo)
 
-### 2. Aplicar rv-copy loop (11 checks - skills/rv-copy/SKILL.md)
-Estrutura obrigatória:
-```
-HOOK (maior alavanca) → primeira linha prende sem introdução genérica
-DOR CONCRETA → momento específico, termos do leitor ("quando alguém pesquisa pousada no celular...")
-ESPECIFICIDADE → "40 fotos do concorrente vs. 0 suas" (não "melhoramos presença")
-VALUE EQUATION → Rápido (tour no ar em X dias) + Fácil (você não mexe em nada) + Sem risco (aprova antes)
-CTA WHATSAPP CONTEXTUAL → link wa.me com mensagem pré-preenchida sobre o tema
-```
+### PASSO 0 -- Carregar Contexto (sempre primeiro)
+1. Ler `contexto/VOZ.md` -- tom, palavras certas/proibidas, estrutura
+2. Ler `contexto/DESIGN.md` -- brand kit (cores, fontes, logo, style)
+3. Ler `contexto/EMPRESA.md` -- portfolio, oferta principal (Socio Digital), pilares
+4. Ler `operacao/prospeccao/ACQUISITION-OPERATING-SYSTEM.md` -- hot leads (score 80-100), ICP Tier A
+5. Ler `operacao/projetos/_RV-Internos/socio-digital/04-MARKETING-CRIATIVOS.md` -- blog posts pipeline, conceitos de criativo Higgsfield
+6. Verificar se ha data sazonal/evento da semana (ex: Dia do Turismo, alta temporada BA)
 
-### 3. Cruzar com VOZ.md (regras inegociáveis)
-- [ ] **ZERO travessão (—) entre frases** → usar ponto final ou vírgula natural
-- [ ] **ZERO hipérbole** ("incrível", "sensacional", "fantástico", "o melhor", "100%")
-- [ ] **Tom consultor** — convence pela precisão, não empolgação
-- [ ] **Capitalização correta** → toda frase e início do texto em MAIÚSCULA
-- [ ] **Marcas exatas** → "Universo Paralello" (2 L), "Real Vision", "Sócio Digital", "Tríade do Sucesso"
-- [ ] **Estrutura** → ponto direto primeiro, contexto só o necessário, CTA clara
-- [ ] **Nada inventado** → tudo rastreável ao Company OS ou sessão
+### PASSO 1 -- Definir Tema da Semana
+**Prioridade (ordem decrescente):**
+1. **Hot leads no pipeline** -- segmento/cidade dos leads score 80-100 (ex: pousadas Paraty, restaurantes Itacare)
+2. **Blog posts em andamento** -- tema do post 1/2/3 do pipeline Socio Digital
+3. **Lancamento ativo** -- curso Socio Digital, servico, campanha prospeccao
+4. **Sazonalidade** -- alta temporada (dez-mar BA), eventos (Universo Paralello), datas comemorativas
 
-### 4. Gerar 3 briefings para Higgsfield Marketing Studio
-Salvar em `operacao/projetos/socio-digital/criativos-higgsfield/LOG.md`
+**Regra:** Tema deve ter **dor concreta validada** nas 10 lentes, nao "assunto generico".
 
-| Formato | Aspect Ratio | Uso | Briefing deve incluir |
-|---------|--------------|-----|----------------------|
-| **Imagem feed** | 1:1 | Instagram Feed, Display | Conceito visual, headline, brand kit RV (âmbar #F5A623, fundo #0a0d14, Bebas Neue/Inter) |
-| **Vídeo Reels** | 9:16 | Reels, Shorts, Stories | Roteiro 8-15s, hook visual nos 3 primeiros segundos, áudio gerado opcional |
-| **Imagem portrait** | 4:5 | Feed (mais área), Performance Max | Variação do feed com mais espaço vertical para legenda |
+### PASSO 2 -- Pesquisar Dor Concreta (10 Lentes + rv-intencao-busca)
+Para o tema escolhido, passar pelas **10 lentes do ACQUISITION-OS (Secao 2)**:
 
-**Brand Kit Real Vision (obrigatório nos briefings):**
+| Lente | O que extrair para o copy |
+|-------|---------------------------|
+| 1. Website | "site fraco/lento/nao atualiza/precisa pagar agencia pra mudar preco" |
+| 2. GMB | "ficha parada, fotos antigas, reviews sem resposta, horario errado" |
+| 3. Branding | "logo Canva, cores diferentes Instagram vs site vs fisico" |
+| 4. Reviews | "X reviews, Y sem resposta, ultima resposta ha Z meses" |
+| 5. Customer Journey | "acha no Google -> site sem foto -> WhatsApp -> demora -> concorrente" |
+| 6. Trust | "concorrente tem tour 360, eu tenho 3 fotos escuras" |
+| 7. Digital Maturity | "nivel 1/5, WhatsApp pessoal, planilha Excel, posta 'quando da'" |
+| 8. Automation | "responde tudo na mao: cotacao, reserva, duvida, review, toalha" |
+| 9. AI Opportunity | "queria chatbot, agencia cobrou R$15k, precisa programador" |
+| 10. Growth | "cheio na alta, vazio na baixa, nao captura lead, nao reativa" |
+
+**Output:** 1 paragrafo "DOR MAIS AGUDA" em primeira pessoa do dono do negocio (pain is the pitch).
+
+**Opcional:** Rodar `rv-intencao-busca` com termo-chave do tema (ex: "ia para pousada", "automatizar restaurante") para enriquecer vocabulario da dor.
+
+### PASSO 3 -- Escrever Copy (rv-copy Loop)
+Para cada formato (feed, Reels, portrait), aplicar o **loop de auto-critica Hormozi** ate passar nos 11 checks:
+
+**Estrutura obrigatoria por peca:**
+1. **Hook** -- primeira linha prende sem introducao generica (maior esforco aqui)
+2. **Dor concreta** -- momento especifico, termos do leitor, numeros reais
+3. **Especificidade** -- "mais clientes" -> "estrangeiros que pesquisam no Google Maps"
+4. **Value Equation** -- Rapido (4h), Facil (zero codigo, a gente faz), Sem risco (garantia 7 dias 100%)
+5. **CTA WhatsApp** -- link pre-preenchido contextual a peca
+
+**Checks finais (VOZ.md + rv-copy Regras):**
+- [ ] Zero travessao/em-dash entre frases (usar ponto final ou virgula natural)
+- [ ] Capitalizacao correta (toda frase e inicio do texto em maiuscula)
+- [ ] Nomes de marca exatos: "Socio Digital", "Real Vision", "Claude Code", "Google Meu Negocio", "Universo Paralello" (2 L), "Pano2VR"
+- [ ] Tom consultor, nao vendedor
+- [ ] Zero hipérbole: nada de "incrivel", "sensacional", "fantastico", "transformador"
+- [ ] Zero "agencia criativa" / "fotografo de tour"
+- [ ] Zero superlativo sem prova ("o melhor", "100% satisfacao")
+- [ ] Estrutura: ponto direto -> contexto necessario -> CTA clara
+- [ ] Dados rastreaveis ao Company OS ou sessao (nada inventado)
+- [ ] Operacionalizavel: leitor sabe exatamente o proximo passo
+
+### PASSO 4 -- Gerar 3 Briefings Higgsfield (JSON)
+Usar **brand kit do DESIGN.md**:
+
 ```json
 {
-  "brand_name": "Real Vision",
-  "tagline": "Sócio Digital — o parceiro de IA que executa pela sua empresa",
-  "industry": "Tecnologia / Marketing Digital",
-  "tone_of_voice": ["direto", "técnico", "sem rodeios", "premium"],
-  "brand_values": ["execução", "transparência", "autonomia do cliente"],
-  "colors": ["#F5A623", "#C58B2A", "#0a0d14", "#161c2b", "#ffffff", "#A8A8B0"],
-  "fonts": ["Bebas Neue", "Inter", "JetBrains Mono"],
-  "website_url": "https://realvisionmaps.com",
-  "social_links": { "youtube": "https://www.youtube.com/@RealVisionMaps" }
+  "bg_color": "#0a0d14",
+  "accent_color": "#F5A623",
+  "accent_muted": "#C58B2A",
+  "surface_color": "#161c2b",
+  "text_primary": "#ffffff",
+  "text_muted": "#A8A8B0",
+  "text_dim": "#7A7A85",
+  "font_heading": "Bebas Neue",
+  "font_body": "Inter",
+  "font_mono": "JetBrains Mono",
+  "logo_path": "src/assets/rv-logo-white.png"
 }
 ```
 
-### 5. Salvar no LOG
-```markdown
-## YYYY-MM-DD — Tema: [tema_da_semana]
-- Copy: [link/arquivo]
-- Briefing 1:1: [JSON Higgsfield]
-- Briefing 9:16: [JSON Higgsfield]
-- Briefing 4:5: [JSON Higgsfield]
-- Status: [aguardando_aprovacao / aprovado / postado]
-- Postado em: [data] / Link: [url]
+**3 Briefings obrigatorios:**
+
+| Formato | Aspect Ratio | Uso | Slides/Duracao |
+|---------|-------------|-----|----------------|
+| **Feed Carousel** | 1:1 (1080x1080) | Educativo, carousel 5 slides | 5 slides PNG + MP4 |
+| **Reels** | 9:16 (1080x1920) | Storytelling visual, video 30-45s | 1 MP4 H.264 |
+| **Portrait Carousel** | 4:5 (1080x1350) | Objecoes "Mitos vs Realidade", 5 slides | 5 slides PNG + MP4 |
+
+Cada briefing deve conter: `slide_specs`/`scenes` com `headline`, `body`, `overlay_text`, `visual`, `accent_element`, `text_style`, `audio_cue` (Reels), `export_specs`.
+
+### PASSO 5 -- Hashtags Estrategicas (15 total)
+- **5 Primarias:** #SocioDigital #RealVision360 #IAparaEmpresas #AutomacaoEmpresarial + 1 nicho
+- **5 Secundarias:** Segmento + dor (ex: #PousadasBrasil #GestaoHoteleira #GoogleMeuNegocio #TourVirtual360 #MarketingDigitalParaPousadas)
+- **3 Terciarias:** Descoberta/algoritmo (#EmpreendedorismoDigital #ProdutividadeComIA #FerramentasIA)
+- **2 Geo:** Cidade/regiao ativa (ex: #Itacare #Bahia)
+
+### PASSO 6 -- CTAs WhatsApp Pre-preenchidos (1 por peca)
+Formato: `https://wa.me/5511912931924?text=[mensagem_URL_encoded]`
+
+| Peca | Mensagem |
+|------|----------|
+| Feed | "Quero agendar diagnostico gratuito do Socio Digital" |
+| Reels | "Vi o Reels do Socio Digital e quero saber como funciona na minha pousada" |
+| Portrait | "Quero ver os numeros na minha realidade com o Socio Digital" |
+| Stories | "Oi Felipe, vi nos Stories e quero o diagnostico gratis" |
+
+### PASSO 7 -- Salvar LOG.md
+Arquivo: `operacao/projetos/socio-digital/criativos-higgsfield/LOG.md`
+
+Conteudo:
+- Semana / Tema
+- Briefings gerados (checklist)
+- Brand kit aplicado
+- Status de aprovacao (aguardando Felipe / aprovado / gerado no Higgsfield / agendado)
+- Proximos passos
+- Sugestao tema semana seguinte
+
+### PASSO 8 -- Entregar para Telegram (aguardar aprovacao)
+Formato da mensagem:
 ```
+INSTAGRAM SEMANAL -- [DD/MM a DD/MM]
+Tema: [tema escolhido + justificativa baseada em hot leads/blog pipeline]
 
-## Tools necessárias
-- `web_search` (pesquisa dor/concorrente)
-- `read_file`: `skills/rv-copy/SKILL.md`, `skills/rv-blogpost/SKILL.md`, `skills/rv-prospeccao/SKILL.md`, `contexto/VOZ.md`, `contexto/DESIGN.md`, `contexto/EMPRESA.md`
-- `rv-intencao-busca` (script `pesquisar_intencao.py` local)
-- `higgsfield_mcp` (Marketing Studio Image/Video) — para GERAR criativos após aprovação do briefing
+Copy final (3 pecas) -- validada VOZ.md (11 checks)
+3 Briefings Higgsfield JSON (feed 1:1, Reels 9:16, portrait 4:5)
+Hashtags (15) + CTAs WhatsApp (4 links)
+LOG.md template
 
-## Safety boundaries
-- **APENAS rascunha copy + briefings** — NÃO posta, NÃO publica, NÃO gasta budget de ads
-- Você **aprova copy** → você **escolhe/ aprova criativo** → **você posta**
-- Antes de gerar criativo no Higgsfield: mostrar briefing JSON → seu OK → gerar
-- Não usar budget de Higgsfield sem aprovação
-
-## Verificação antes de entregar (loop de auto-crítica rv-copy)
-- [ ] **Dor:** nomeia dor concreta nos termos do leitor, momento específico?
-- [ ] **Especificidade:** trocou vago por específico? ("mais clientes" → "estrangeiros que pesquisam no Google")
-- [ ] **Value Equation:** oferta sinaliza rápido, fácil, sem risco?
-- [ ] **Hook:** primeira linha prende sem introdução genérica?
-- [ ] **Concisão:** dá para cortar mais palavra? Cortou advérbios? Palavra mais simples?
-- [ ] **Congruência:** corpo entrega o que hook/assunto prometeu?
-- [ ] **Operacionalizável:** leitor sabe próximo passo exato? (CTA WhatsApp contextual)
-- [ ] **ZERO travessão entre frases** (caçou "—")?
-- [ ] **Capitalização:** toda frase e início em maiúscula?
-- [ ] **Marcas exatas** (Universo Paralello, Real Vision, Sócio Digital, Tríade do Sucesso)?
-- [ ] **VOZ.md:** sem hipérbole, tom consultor, nada de "agência criativa" ou "fotógrafo de tour"?
-
-## Erros comuns a evitar
-- Começar com "Hoje vamos falar sobre", "Espero que esteja tudo bem", "Neste post..."
-- Usar "incrível", "sensacional", "fantástico", "transformar", "revolucionário"
-- Copy genérica sem dor concreta ("melhoramos sua presença digital")
-- CTA genérica ("entre em contato", "saiba mais") — sem link WhatsApp contextual
-- Briefing Higgsfield sem brand kit RV (cores, fontes, tom)
-- Aspect ratios errados (feed = 1:1, Reels = 9:16, Portrait = 4:5)
-- Não salvar no LOG.md
-
-## Formato de saída
-**Copy final (PT-BR, pronta para postar)** + **3 Briefings Higgsfield (JSON pronto para Marketing Studio)** + **Hashtags sugeridas (5-8)** + **CTA WhatsApp link** + **Arquivo de log atualizado**
+Aguardando seu "pode gerar" para rodar no Higgsfield.
+```
 
 ---
 
-## Como ativar
-```
-/instagram-weekly-content [tema_da_semana]
-```
-ou mencionar "post instagram", "conteúdo instagram", "instagram essa semana".
+## Regras de Ouro
 
-Sempre carregar `realvision` + `rv-copy` + `rv-blogpost` primeiro.
+1. **NUNCA gerar no Higgsfield sem aprovacao explicita do Felipe.** O briefing e o entregavel; a geracao vem depois.
+2. **Copy passa pelo loop rv-copy COMPLETO.** Se reprovar em qualquer check, reescrever e rodar de novo.
+3. **Dor vem das 10 lentes + dados reais.** Nada de "dores genericas de marketing".
+4. **Brand kit e LEI.** Cores, fontes, style do DESIGN.md -- sem improvisacao.
+5. **Tema justificado.** Sempre explicar POR QUE esse tema (hot lead X, blog post Y, lancamento Z).
+6. **Zero invenção.** Numeros, precos, portfolio, clientes -- so do Company OS.
+
+---
+
+## Referencias
+
+- `references/brand-kit.md` -- Brand kit extraido do DESIGN.md para colar nos briefings
+- `references/higgsfield-briefing-template.json` -- Template base dos 3 briefings
+- `references/hashtag-bank.md` -- Banco de hashtags por segmento/tema
+- `references/cta-templates.md` -- Templates de CTA WhatsApp por peca/campanha
+
+---
+
+## Erros Comuns (Pitfalls)
+
+| Erro | Como evitar |
+|------|-------------|
+| Gerar briefing sem validar copy contra VOZ.md | Rodar loop rv-copy ANTES de montar briefing |
+| Usar cores/fontes erradas no briefing | Sempre copiar brand kit de `references/brand-kit.md` |
+| Tema generico ("dicas de IA") sem dor concreta | Obrigar PASSO 2: 10 lentes + pain is the pitch |
+| Esquecer CTA WhatsApp pre-preenchido | Checklist PASSO 6 obrigatorio |
+| Gerar no Higgsfield antes do "pode gerar" | Regra de ouro #1 -- aguardar aprovacao explicita |
+| Hashtags aleatorias | Usar banco `references/hashtag-bank.md` + regra 5+5+3+2 |
+| Nao salvar LOG.md | PASSO 7 e obrigatorio, nao opcional |
+
+---
+
+## Como testar se fez certo
+
+Apos entregar no Telegram, o Felipe deve conseguir:
+1. Ler a copy e nao achar nada que viole VOZ.md
+2. Ver os 3 briefings JSON e colar direto no Higgsfield MCP
+3. Ver os links WhatsApp e clicar -- abrem com mensagem certa
+4. Ver o LOG.md e saber exatamente o status de cada peca
+5. Entender por que esse tema (hot lead / blog post / lancamento)
+
+Se qualquer um falhar -> revisar o passo correspondente.

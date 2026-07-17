@@ -1,10 +1,10 @@
 ---
 name: rh-real-vision
 description: |
-  Carrega automaticamente o contexto completo de RH da Real Vision. Use SEMPRE que Felipe mencionar candidatos, funcionários, contratação, processo seletivo, entrevistas, vagas, Milena, Geiziane, ou qualquer nome de candidata/funcionária. Também use quando ele disser coisas como "vamos trabalhar os candidatos", "como está o processo seletivo", "quero estruturar a reunião com X", "funcionária", "assistente", "time". Não espere ele pedir — se o assunto for gente/contratação/RH da Real Vision, acesse os arquivos primeiro e responda com contexto completo.
+  Carrega automaticamente o contexto completo de RH da Real Vision 360. Use SEMPRE que Felipe mencionar candidatos, funcionários, contratação, processo seletivo, entrevistas, vagas, Milena, Geiziane, ou qualquer nome de candidata/funcionária. Também use quando ele disser coisas como "vamos trabalhar os candidatos", "como está o processo seletivo", "quero estruturar a reunião com X", "funcionária", "assistente", "time". Não espere ele pedir — se o assunto for gente/contratação/RH da Real Vision, acesse os arquivos primeiro e responda com contexto completo.
 ---
 
-# RH — Real Vision
+# RH — Real Vision 360
 
 ## O que fazer quando esta skill é ativada
 
@@ -47,4 +47,4 @@ Antes de qualquer resposta, leia estes arquivos **nesta ordem**:
 5. Avaliação e decisão
 
 **Objetivo estratégico da contratação:**
-Liberar o tempo do Felipe para criar cursos, conteúdo (PT + EN) e desenvolver a rede global de fotógrafos certificados — o modelo de expansão da Real Vision.
+Liberar o tempo do Felipe para criar cursos, conteúdo (PT + EN) e desenvolver a rede global de fotógrafos certificados — o modelo de expansão da Real Vision 360.

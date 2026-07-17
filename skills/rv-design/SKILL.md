@@ -1,11 +1,11 @@
 ---
 name: rv-design
-description: "Padrões de UI/UX específicos para projetos Real Vision: pousadas, restaurantes, food trucks, operadoras de turismo e negócios locais em Bahia e mercado internacional. Ativar em sessões de código React, landing pages, sites de clientes. Complementa frontend-design e motion com contexto específico de turismo, hospitalidade e negócios locais."
+description: "Padrões de UI/UX específicos para projetos Real Vision 360: pousadas, restaurantes, food trucks, operadoras de turismo e negócios locais em Bahia e mercado internacional. Ativar em sessões de código React, landing pages, sites de clientes. Complementa frontend-design e motion com contexto específico de turismo, hospitalidade e negócios locais."
 ---
 
 # RV Design — UI/UX para Turismo e Negócios Locais
 
-Guia compacto de design para os projetos da Real Vision. Cobre paletas, tipografia, layouts e padrões de conversão adequados para pousadas, restaurantes, food trucks, tour operators e negócios locais no Brasil e exterior.
+Guia compacto de design para os projetos da Real Vision 360. Cobre paletas, tipografia, layouts e padrões de conversão adequados para pousadas, restaurantes, food trucks, tour operators e negócios locais no Brasil e exterior.
 
 ---
 
@@ -36,7 +36,7 @@ Guia compacto de design para os projetos da Real Vision. Cobre paletas, tipograf
 
 ## 2. Tipografia
 
-### Stack recomendada para projetos Real Vision
+### Stack recomendada para projetos Real Vision 360
 ```
 Títulos: "Playfair Display" (turismo premium) OU "Outfit" (moderno, tech)
 Corpo: "Inter" OU "Plus Jakarta Sans"
@@ -99,7 +99,7 @@ Turistas acessam em celular, frequentemente sem WiFi excelente:
 3. **Horários de funcionamento** no primeiro scroll
 4. **Urgência genuína** — "apenas X vagas", "temporada alta aproximando"
 
-### Para tour operators e Real Vision como serviço
+### Para tour operators e Real Vision 360 como serviço
 1. **Antes/Depois** — perfil GMB sem tour vs. com tour 360°
 2. **ROI numérico** — tempo no site, mais visualizações no Maps
 3. **Portfolio com link clicável** — cliente vê o próprio tipo de negócio no exemplo
@@ -120,7 +120,7 @@ Turistas acessam em celular, frequentemente sem WiFi excelente:
 
 ---
 
-## 7. Stack Técnica Real Vision
+## 7. Stack Técnica Real Vision 360
 
 ```
 React + Vite + TypeScript

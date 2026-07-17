@@ -1,3 +1,8 @@
+---
+name: rv-visionflow-handoff
+description: Handoff técnico do VisionFlow — roadmap, próximos passos e pendências do CRM interno da Real Vision 360. Use quando Felipe precisar retomar o desenvolvimento do VisionFlow após uma pausa, ou quando houver mudança de contexto entre sessões de código do VisionFlow.
+---
+
 # Skill: rv-visionflow-handoff
 
 **Data:** 28/06/2026  

@@ -1,6 +1,6 @@
 ---
 name: rv-fim-sessao
-description: Maestro de fim de sessão da Real Vision. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", ou /rv-fim-sessao. Orquestra três artefatos de encerramento: (1) SEMPRE atualiza a FICHA-CLIENTE.md + TIMELINE do cliente — memória que fecha o círculo com o início da próxima sessão; (2) gera o texto do VisionFlow se for sessão de cliente; (3) gera o bilhete técnico estilo session-handoff se a obra ficou pela metade e Felipe vai dar /clear. Carregar sempre junto com a skill realvision.
+description: Maestro de fim de sessão da Real Vision 360. Use SEMPRE que Felipe disser "fim de sessão", "encerrar sessão", "vamos encerrar", "fechar a sessão do cliente X", "terminamos por hoje", "wrap up", ou /rv-fim-sessao. Orquestra três artefatos de encerramento: (1) SEMPRE atualiza a FICHA-CLIENTE.md + TIMELINE do cliente — memória que fecha o círculo com o início da próxima sessão; (2) gera o texto do VisionFlow se for sessão de cliente; (3) gera o bilhete técnico estilo session-handoff se a obra ficou pela metade e Felipe vai dar /clear. Carregar sempre junto com a skill realvision.
 ---
 
 # Skill: rv-fim-sessao — Maestro de Fim de Sessão
@@ -74,6 +74,21 @@ chat-only, nunca salva arquivo, caminhos absolutos, seções: Where it started �
 ### Passo 5 — Confirmar antes de escrever no Company OS
 Antes de gravar na ficha/timeline (Passos 1 e 2), **mostrar ao Felipe** o que será escrito e esperar OK (regra 3 do AGENTS).
 O texto do VisionFlow (Passo 3) e o bilhete técnico (Passo 4) são sempre só exibidos — Felipe usa manualmente.
+
+### Passo 6 — Sincronizar com o GitHub (auto-commit + push)
+Após todas as gravações e confirmações do Felipe, **rodar o script de sync do vault**:
+
+```
+bash ~/.hermes/scripts/vault-sync.sh
+```
+
+O script:
+- Só comita se houver mudanças (seguro contra execução sem trabalho)
+- Usa a mensagem `vault auto-sync · <data>` no commit
+- Pusha silenciosamente para o GitHub
+- O cron job de 1h já protege contra sessões interrompidas; este passo garante o sync **imediato** ao fechar a sessão
+
+**Mensagem ao Felipe após o sync:** `✅ Vault sincronizado com o GitHub.`
 
 ---
 

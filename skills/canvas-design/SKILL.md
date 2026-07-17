@@ -1,10 +1,10 @@
 ---
 name: canvas-design
-description: Cria arte visual de alta qualidade em arquivos .png e .pdf usando filosofia de design — pôsteres, capas, peças de arte, posts visuais para redes sociais, e PDFs comerciais como propostas e apresentações com design profissional. Use esta skill quando o Felipe pedir qualquer peça visual estática: pôster, capa de YouTube, arte para Instagram/TikTok, proposta em PDF com design sofisticado, apresentação visual. NÃO usar para UI de sites ou componentes React — essas tarefas pertencem à ui-ux-pro-max e 02-frontend-design.
+description: Cria arte visual de alta qualidade em arquivos .png e .pdf usando filosofia de design — pôsteres, capas, peças de arte, posts visuais para redes sociais, e PDFs comerciais como propostas e apresentações com design profissional. Use esta skill quando o Felipe pedir qualquer peça visual estática: pôster, capa de YouTube, arte para Instagram/TikTok, proposta em PDF com design sofisticado, apresentação visual. NÃO usar para UI de sites ou componentes React — essas tarefas pertencem à `frontend-design` e `web-design-guidelines`.
 license: Complete terms in LICENSE.txt
 ---
 
-> **Escopo Real Vision**: esta skill cobre arte estática (PNG/PDF) — pôsteres, capas, posts de redes sociais, propostas comerciais com design premium, apresentações visuais. Para UI de sites React, usar `ui-ux-pro-max` e `02-frontend-design`.
+> **Escopo Real Vision**: esta skill cobre arte estática (PNG/PDF) — pôsteres, capas, posts de redes sociais, propostas comerciais com design premium, apresentações visuais. Para UI de sites React, usar `frontend-design` e `web-design-guidelines`.
 
 ---
 

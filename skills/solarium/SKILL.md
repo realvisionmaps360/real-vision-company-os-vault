@@ -94,7 +94,7 @@ Fase 0 ✅ Concluída. **Desenvolvimento em andamento.** Próximo passo: `/willk
 
 ## Como trabalhar este cliente
 - **Comunicação com Gabriel:** sempre em **alemão**, via Romana.
-- **Código:** ativar `02-frontend-design` + `motion` + `vercel-react`; reaproveitar componentes existentes.
+- **Código:** ativar `frontend-design` + `motion` + `vercel-react`; reaproveitar componentes existentes.
 - **Copy alemã:** revisar contra o tom do site atual; padrão Hochdeutsch.
 - **Decisões/novos fatos:** avisar Felipe antes de atualizar Company OS.
 - Ao retomar, **comece confirmando se Gabriel já respondeu as 4 perguntas** — é o que destrava tudo.

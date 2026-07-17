@@ -29,7 +29,7 @@ Esse arquivo contém:
 ### `rv-skill-scout` — SEMPRE
 Ativar junto com `realvision` em toda sessão de trabalho. É a skill orquestradora: analisa a tarefa, mapeia quais outras skills são relevantes e emite o sinal sutil de ativação para cada uma.
 
-### `07-superpowers` + `02-frontend-design` — SEMPRE quando houver código
+### `superpowers` + `frontend-design` — SEMPRE quando houver código
 Ativar **no início**, junto com `realvision`, se a sessão envolver: site, código, componentes React, arquivos `.tsx`/`.ts`/`.css`, git, deploy, Vercel, VisionFlow, repos locais, build ou ambiente de desenvolvimento.
 **NÃO esperar o momento de executar** — ativar logo na leitura do pedido.
 Sessões de conteúdo puro (blog post, proposta, RH, copy sem tocar em código) estão isentas.
@@ -38,22 +38,21 @@ Sessões de conteúdo puro (blog post, proposta, RH, copy sem tocar em código) 
 Ativar se a sessão envolver: animações, transições, hover effects, scroll effects, UI polish, efeito visual, fade, slide, reveal, parallax, micro-interação, ou qualquer pedido de melhoria visual em projeto React (site, VisionFlow, sites de clientes, Solarium).
 Pode ser ativada no início ou no meio da conversa quando o assunto virar visual.
 
-### `ui-ux-pro-max`
+### `frontend-design` + `web-design-guidelines` — Alternativa Hermes ao `ui-ux-pro-max`
 Ativar no início de todo projeto novo de site ou redesign. Usar para gerar o design system do cliente antes de desenvolver.
 Trigger: "que estilo combina com X", "que cores usar para Y negócio", início de site novo, escolha de tipografia, redesign de página.
-**Atenção Windows:** o comando é `python` (não `python3`). Python 3.14.5 instalado em `C:\Users\Computador`.
 
 ### Skills complementares — tabela de referência rápida
 
 | Skill | Ativar quando... |
 |---|---|
-| `ruflo` | Tarefas complexas multi-sessão, planejamento de curso/lançamento, conteúdo em escala, automações |
-| `01-supabase-postgres` | Banco de dados, VisionFlow (backend), auth, queries, migrations |
-| `02-frontend-design` | UI/UX, novos componentes, dark mode, CSS, sistema de design |
-| `03-vercel-react` | Build, deploy, performance, Core Web Vitals, Vercel configs |
-| `04-favicon-setup` | Configuração inicial de site novo — favicon, manifest, PWA |
-| `05-marketing-seo` | SEO, meta tags, Schema JSON-LD, GA4, GTM, presença no Google |
-| `06-awesome-claude` | Qualquer sessão de codificação — boas práticas TS/React |
+| `frontend-design` + `web-design-guidelines` | UI/UX + design system + acessibilidade | Início de todo projeto novo de site ou redesign. Usar para gerar o design system do cliente antes de desenvolver. |
+| `supabase-postgres` | Banco de dados, VisionFlow (backend), auth, queries, migrations |
+| `frontend-design` | UI/UX, novos componentes, dark mode, CSS, sistema de design |
+| `vercel-react` | Build, deploy, performance, Core Web Vitals, Vercel configs |
+| `favicon-setup` | Configuração inicial de site novo — favicon, manifest, PWA |
+| `marketing-seo` | SEO, meta tags, Schema JSON-LD, GA4, GTM, presença no Google |
+| `awesome-claude` | Qualquer sessão de codificação — boas práticas TS/React |
 | `rv-blogpost` | Posts do blog, copy de email, scripts de conteúdo |
 | `rv-intencao-busca` | Pesquisa de intenção de busca (perguntas reais no Google) antes de escrever qualquer blog post — ativa sempre junto com `rv-blogpost` |
 | `rv-relatorio` | Relatório de cliente, relatório de status, documento de alinhamento, prestação de contas em PDF (capa honeycomb, escura ou clara) |
