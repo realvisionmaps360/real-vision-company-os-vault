@@ -56,7 +56,7 @@ Felipe pediu (jul/2026) uma visão geral de todas as skills porque perdeu o cont
 
 ## Gestão interna & Cliente
 - **rv-novo-cliente** — onboarding cliente novo (pasta, docs, skill)
-- **rv-fim-sessao** — maestro de encerramento (ficha + timeline + VisionFlow)
+- **rv-fim-sessao** — maestro de encerramento; ponto de entrada de "handoff" na RV (cliente: ficha+timeline+VisionFlow; interno/pessoal: timeline+playbook+skill)
 - **rv-visionflow-handoff** — texto estruturado pro VisionFlow
 - **visionflow** / **rv-visionflow** — desenvolvimento do CRM interno
 

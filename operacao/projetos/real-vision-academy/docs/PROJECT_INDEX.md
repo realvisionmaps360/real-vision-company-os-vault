@@ -1,0 +1,52 @@
+---
+id: PROJECT_INDEX
+title: Índice do Projeto — Real Vision Academy
+type: index
+status: active
+project: real-vision-academy
+phase: planning
+owner: master-visionair
+created: 2026-07-17
+updated: 2026-07-17
+---
+
+# 🎓 Real Vision Academy — Índice do Projeto
+
+> Índice central da documentação viva da Academy. Mantido por [[master-visionair]].
+> **Comece por [[CONTEXT]]** para saber o estado atual em 30 segundos.
+
+## 🚦 Estado atual
+- **Fase:** Planejamento (fundação documental)
+- Resumo executivo → [[CONTEXT]]
+
+## 📌 Visão do produto & requisitos
+- [[MASTER_PRD]] — visão, escopo, requisitos, evolução
+- [[GLOSSARY]] — termos do projeto
+
+## 🏗️ Arquitetura
+- [[ARCHITECTURE]] — visão técnica, modelo de dados, integrações
+- `diagrams/` — diagramas (a criar)
+
+## 🗺️ Planejamento
+- [[ROADMAP]] — fases de desenvolvimento e evolução
+- [[TIMELINE]] — registro cronológico do desenvolvimento
+
+## 🧠 Decisões & conhecimento
+- [[DECISIONS]] — decisões arquiteturais (contexto, problema, decisão, justificativa)
+- [[KNOWN_ISSUES]] — problemas conhecidos, limitações, riscos
+- [[IDEAS]] — ideias e oportunidades futuras
+- [[CHANGELOG]] — histórico de alterações
+- [[METHODOLOGY_LEARNINGS]] — validação da metodologia de engenharia
+
+## 🔬 Pesquisa (destrava decisões pendentes)
+- [[pagamento]] — comparativo de gateways/taxas (curso avulso BR)
+- [[video-hosting]] — comparativo de hospedagem de vídeo
+- `references/` — materiais de referência externos
+
+## 📂 PRDs por módulo
+- `prds/` — PRDs detalhados por funcionalidade (a criar conforme as fases)
+
+## 🔗 Fora deste vault
+- **Código:** `operacao/projetos/_RV-Internos/real-vision-site` (rota `/academy`)
+- **Conteúdo do curso Profissional 360:** `operacao/cursos/02-profissional-360/`
+- Skill condutora: [[master-visionair]] · contexto da empresa: [[realvision]]

@@ -2,8 +2,8 @@
 title: William — Wood Art
 tags:
   - cliente
-  - diagnostico
-status: diagnostico
+  - proposta-enviada
+status: proposta-enviada
 data_inicio: 2026-07-03
 servicos: []
 ---
@@ -29,26 +29,19 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 - 07/07/2026 — **8ª entrega (Frente 11 — estratégia comercial):** ordem de sequenciamento recomendada registrada em [[WOOD-ART-FRENTES-DE-TRABALHO]] item 11 (Website → App de Placas → Chatbot IA + Prospecção em paralelo → Merchant Center → Tráfego pago). Custos novos incorporados: VisionCloud R$100/mês + manutenção R$400/mês (total R$500/mês, com blog incluso), Wix R$1.000, Google Meu Negócio do zero R$300, prospecção "a combinar", tráfego pago com cobrança pendente de 3 respostas do William. Ideia de precificação do site (R$4.500 final, mostrando desconto sobre módulos separados) registrada como pendente de cálculo em [[WOOD-ART-SITE-DIAGNOSTICO]] seção 8.1.
 - 07/07/2026 — **9ª entrega (consolidação para a proposta):** 6 agentes em paralelo analisaram cada frente com a lente "o que entra na proposta comercial", consolidados em [[WOOD-ART-PROPOSTA-CONSOLIDADO]]. Cálculo do valor dos módulos do Website feito e registrado na seção 8.1 de [[WOOD-ART-SITE-DIAGNOSTICO]]: soma dos módulos R$5.760 (catálogo/loja, painel admin, painel do cliente, estoque, página institucional, analytics/SEO/GEO, deploy) vs. valor fechado R$4.500 — desconto de ~22% mostrado na proposta.
 - 07/07/2026 — **10ª entrega (revisão do Felipe no consolidado):** reordenação da lista "o que a loja inclui" pela jornada do cliente; adicionado controle de vendas e e-mails automáticos ao cliente (já existiam na base técnica, faltava documentar); custos do Website reordenados (correção → migração → mensalidade); App de Placas e Chatbot IA deixaram de ter preço fechado (agora faixa/variável, dependendo do escopo real); Google Meu Negócio virou item próprio da proposta (antes enterrado no financeiro); Google Merchant Center incorporado ao painel financeiro unificado. Nova funcionalidade documentada na skill `proposta-comercial`: link de detalhe em overlay (modal), não em nova aba — usado para os problemas do Wix.
+- 10-11/07/2026 — **11ª entrega (proposta final enviada):** textos finais das 6 fases fechados, Fase 7 (Prospecção B2B) e Fase 8 (Painel Financeiro) removidas como itens separados — o Painel Financeiro virou um bloco "Diferencial exclusivo" dentro da própria Fase 1, sem custo à parte. Regra de rótulo de valor fixada ("Valor:" = fechado, "Valor indicativo:" = faixa/estimativa). Novo layout "Full Accordion" criado: as 6 fases viram accordion nativo (fechado por padrão, sombra + movimento no hover), testado antes num arquivo isolado. **Arquivo único e oficial: `PROPOSTA-COMERCIAL-WOOD-ART_11-07-2026_final.html`** (versões anteriores apagadas pelo Felipe). **Enviada ao William em 11/07/2026.**
 
 ## Próximos passos
-**1ª entrega (App):**
-- Confirmar com o William o escopo do configurador (tamanhos, materiais, opções de personalização) — define o total de horas/valor do app.
-- Confirmar se domínio próprio se aplica ou se ele já usa o dele.
+**Aguardando o William (proposta enviada em 11/07/2026):**
+- Decisão sobre quais fases fazer agora (fases independentes, pode aprovar parcialmente).
+- Confirmar escopo do configurador do App de Placas (tamanhos, materiais, opções de personalização) — define o valor final da Fase 2.
+- Decidir entre migrar para site próprio, corrigir pontualmente o Wix ou não fazer nada agora (recomendação técnica é migrar) — ver [[WOOD-ART-SITE-DIAGNOSTICO]].
+- Escolher canal prioritário do Chatbot IA (WhatsApp, Instagram, site, multi-plataforma) — ver [[WOOD-ART-CHATBOT-IA-SPEC]].
+- Agendar call com a Real Vision para alinhar cronograma e dar o start.
 
-**2ª entrega (Website):**
-- Confirmar com o William: migrar para site próprio vs. corrigir pontualmente o Wix atual vs. não fazer nada agora — ver opções e pesquisa técnica em [[WOOD-ART-SITE-DIAGNOSTICO]].
-
-**3ª entrega (Chatbot IA):**
-- Confirmar com o William: canal prioritário, multi-plataforma ou não, e volume esperado de conversas — ver [[WOOD-ART-CHATBOT-IA-SPEC]].
-
-**4ª entrega (Prospecção de Leads):**
-- Confirmar com o William: região(ões)-alvo e volume de contatos por rodada — ver [[WOOD-ART-PROSPECCAO-LEADS-SPEC]].
-- Precificar o serviço (sem valor de referência ainda).
-
-**Próxima etapa (não iniciada):**
-- Felipe revisa [[WOOD-ART-PROPOSTA-CONSOLIDADO]] (documento-ponte pronto).
-- Confirmar com o William os pendentes de cada frente (escopo do configurador, decisão Website, canal do chatbot, região da prospecção).
-- Só depois: montar o texto final da proposta comercial (skill `proposta-comercial`) → versão em slides.
+**Se o William aprovar:**
+- Gerar versão em slides da proposta aprovada (skill `frontend-slides`).
+- Prospecção de Leads B2B ficou fora desta proposta — avaliar com o Felipe se retoma como frente separada depois.
 
 **Geral:**
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar.

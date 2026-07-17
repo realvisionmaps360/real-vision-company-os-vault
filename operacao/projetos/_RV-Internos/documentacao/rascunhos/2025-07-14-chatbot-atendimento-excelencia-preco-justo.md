@@ -28,7 +28,7 @@ Seu cliente não liga mais. Ele abre o WhatsApp, manda a mensagem e espera. Se n
 
 ### A dor que ninguém fala: seu atendimento dorme às 18h
 
-A pousada em Itacaré, o restaurante em Barra Grande, a clínica em Aarau — todos têm a mesma dor. O telefone toca até 18h. Depois, silêncio. O cliente manda mensagem no Instagram, no WhatsApp, no site. Ninguém vê. No dia seguinte, a reserva foi pro concorrente que respondeu na hora.
+A pousada em no litoral, o restaurante em no centro da cidade, a clínica em chique na Suiça — todos têm a mesma dor. O telefone toca até 18h. Depois, silêncio. O cliente manda mensagem no Instagram, no WhatsApp, no site. Ninguém vê. No dia seguinte, a reserva foi pro concorrente que respondeu na hora.
 
 > **76% das consultas de suporte são resolvidas sem humano tocar.** O benchmark da Fin (comprada pela Salesforce por $3,6 bi). A Real Vision entrega 70%+ com stack open source.
 

@@ -69,7 +69,7 @@
 - **2.8** — Skin e entrega profissional
 - **2.9** — Como empacotar e cobrar (R$500–5.000+)
 
-### MÓDULO 3 — Sites com IA / Vibe Coding *(Claude Code)*
+### MÓDULO 3 — Sites com IA / Engenharia de Software *(Claude Code)*
 8 aulas. → **Resultado: sites de R$500 a R$3.000+.**
 - **3.1** — Como um site profissional é feito hoje com IA
 - **3.2** — Montando o ambiente (passo a passo, sem ser técnico)

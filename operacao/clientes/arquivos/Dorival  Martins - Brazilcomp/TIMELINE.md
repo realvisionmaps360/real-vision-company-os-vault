@@ -5,6 +5,90 @@
 
 ---
 
+## 2026-07-11 (sessão 4) — Entrega final enviada. Caso encerrado.
+
+**Ações executadas:**
+1. Conferidos os 5 documentos explicativos (código V1, código V2, banco de dados, chatbot, tour virtual) — completos e no tom correto.
+2. Pasta `entrega-final/` organizada e renomeada para facilitar entendimento do cliente: `PROXIMA-SESSAO.md` (uso interno) removido; arquivos renomeados com nomes claros e numerados (`01-codigo-site-versao-1`, `02-codigo-site-versao-2`, `03-banco-de-dados-versao-1/2.sql` + leiame, `04-chatbot-fluxo-automacao.rar` + leiame, `05-tour-virtual-360.zip` + leiame); pastas `v1-site`/`v2-site` renomeadas para `site-versao-1`/`site-versao-2`.
+3. **Decisões confirmadas com Felipe:** não executar a transferência de propriedade da loja Shopify (fica a critério do Dorival mudar o email de recuperação, que hoje é do Felipe); não limpar o histórico git de `v1-site`/`v2-site` (mantido como está); zip e upload no Google Drive feitos pelo Felipe.
+4. Email final de entrega escrito, revisado com Felipe (2 rodadas de ajuste: e-mail correto do destinatário `vendas@brazilcomp.com.br`, e inclusão do aviso sobre o domínio/DNS — Felipe não tem mais a senha que o Dorival passou, orientado a resetar pelo email de recuperação cadastrado no registro).
+5. **Email enviado por Felipe ao Dorival em 11/07/2026 21:24**, de `adm@realvisionmaps.com`, com link do Google Drive (pasta `entrega-final` completa) e os 3 avisos: conteúdo da entrega, situação do domínio, situação do Shopify.
+
+**Status final: entrega concluída e enviada. Caso BrazilComp encerrado — sem pendências abertas da Real Vision.**
+
+---
+
+## 2026-07-11 (sessão 3) — Dump dos bancos Supabase (V1 + V2) concluído
+
+**Ações executadas:**
+1. Tentativa de backup pelo painel visual do Supabase (Database → Backups) falhou — recurso agora exclusivo do plano Pro no Supabase (mudança na plataforma desde o `PROXIMA-SESSAO.md` anterior).
+2. Alternativa via `pg_dump` funcionou. Dois obstáculos técnicos resolvidos no caminho:
+   - Conta grátis do Felipe tem limite de 2 projetos Supabase ativos simultaneamente, somando **todas** as organizações onde ele é dono/admin (BrazilComp + RV Felipe Garcia contam juntas). Resolvido pausando temporariamente o `rv-acquisition` (RV) pra liberar vaga, depois restaurado.
+   - Connection string "Direct connection" só resolve em IPv6 — rede local sem IPv6 dava erro de DNS. Resolvido usando a connection string do **Session Pooler** em vez da direta.
+3. Gerados `brazilcomp-v1-backup.sql` (238 KB) e `brazilcomp-v2-backup.sql` (549 KB) em `entrega-final/`.
+4. Documentação atualizada: `entrega-final/03-banco-de-dados.md` (agora reflete os 2 arquivos) e `entrega-final/PROXIMA-SESSAO.md` (passo do banco marcado concluído, com o caminho técnico que funcionou registrado pra próxima vez).
+
+**Pendências que seguem da sessão anterior (ver TIMELINE 2026-07-10):**
+- Criar os documentos explicativos `.md` restantes (código V1, código V2, chatbot, tour) — os de `01` a `05` já existem, conferir se estão completos.
+- Executar a Transferência de propriedade da loja Shopify pro Dorival.
+- Fechar o texto final do email de entrega e revisar com Felipe.
+- Avaliar se vale limpar o histórico git de `v1-site`/`v2-site` (`.env` antigo no histórico).
+- Zipar `entrega-final/` completa e subir num link do Google Drive.
+- Enviar o email final ao Dorival.
+
+**Próximo passo:** revisar os documentos explicativos, resolver Shopify, e preparar o envio final.
+
+---
+
+## 2026-07-10 (sessão 2) — Repositórios V1/V2 clonados para entrega, .env limpo, tour e chatbot organizados
+
+**Decisões confirmadas com Felipe nesta sessão:**
+- Entra na entrega ao Dorival: código V1, código V2 (originais, não o `site-template-rv-01` — esse é template interno da RV, não vai pro cliente), dump do banco Supabase, export do fluxo do chatbot (n8n), pasta completa do tour virtual 360°.
+- Não entra: nenhuma credencial de conta própria da Real Vision (Supabase, Resend, GA4, tokens/API keys). Mercado Pago é conta do próprio Dorival — não é assunto da entrega.
+- Domínio (Locaweb/RegistroBR): Felipe não tem mais a senha que o Dorival passou — orientação será resetar pelo email cadastrado no registro, RV não entrega login nenhum aqui.
+- Shopify: conta está no email `time@realvision.com.br` (email da própria RV) — decisão: usar a função "Transfer store ownership" do Shopify pra passar a titularidade pro Dorival, sem expor esse email de recuperação.
+- Entrega será feita via zip + Google Drive (não via GitHub/convite de colaborador) — mais simples, não depende do Dorival ter conta no GitHub.
+- Cada item da entrega vem com um documento explicativo em linguagem simples (o que é, como colocar em funcionamento), sem tom acusatório.
+
+**Confirmação de nomenclatura dos repositórios (checada por `git ls-remote`):**
+- **V1** = `github.com/realvisionmaps360/brazilcomp-visual-guide` (commit `78d92ec`)
+- **V2** = `github.com/realvisionmaps360/brazilcomp-2-97cf7219` — confirmado como o repo de origem do template interno (contém os mesmos docs internos `BRAZILCOMP-2.0-ARQUITETURA-LEGADO.md` etc. encontrados também no `site-template-rv-01`)
+
+**Ações executadas:**
+1. Criada a pasta `entrega-final/` dentro da pasta do cliente.
+2. Clonados os dois repositórios do GitHub para dentro dela: `entrega-final/v1-site/` e `entrega-final/v2-site/`.
+3. **Achado de segurança:** ambos os repos tinham `.env` comitado e rastreado no Git (não era `service_role key` nem senha de banco — só a chave pública/anon do Supabase do Felipe — mas ainda assim apontava pra conta que não será entregue). Corrigido: `.env` removido do tracking, substituído por `.env.example` (só os nomes das variáveis, sem valores reais), commitado em ambos os repos. Histórico antigo do Git ainda contém o `.env` original (não foi feito squash, por não ser segredo crítico) — avaliar se vale limpar o histórico antes do envio final.
+4. Movidos pra dentro de `entrega-final/`: `tour-virtual-brazilcomp.zip` (renomeado de `TEMP/tour virtual brazilcomp.zip`) e `chatbot-agente-ia-brazilcomp.rar` (renomeado de `TEMP/AGENTE DE IA - BRAZILCOMP.rar`).
+
+**Pendências para a próxima sessão:**
+- Gerar o dump do banco Supabase (`.sql`) e colocar em `entrega-final/`.
+- Criar os documentos explicativos `.md` de cada item (código V1, código V2, banco, chatbot, tour) dentro de `entrega-final/`.
+- Executar a Transferência de propriedade da loja Shopify pro Dorival.
+- Fechar o texto final do email de entrega e revisar com Felipe antes de enviar.
+- Avaliar se vale limpar o histórico git de `v1-site`/`v2-site` antes de zipar (por causa do `.env` antigo no histórico).
+
+**Próximo passo:** ver seção "Missões da próxima sessão" nos documentos gerados em `entrega-final/PROXIMA-SESSAO.md`.
+
+---
+
+## 2026-07-10 — Preparação da entrega de ativos em andamento (template V2 finalizado)
+
+**Contexto:** análise dos áudios agressivos de 07/07 (transcrição enviada por Felipe) confirmou que as ameaças (BO, processo, "crime") não têm base factual — mensalidade era contratada, não opcional; débito foi pago pelo próprio Dorival no mesmo dia, o que indica reconhecimento tácito da cobrança.
+
+**Trabalho realizado nesta sessão (preparação da entrega V1+V2):**
+- Estratégia de entrega definida: Dorival recebe cópias limpas dos repositórios (V1 + V2), sem acesso a credenciais pessoais da Real Vision.
+- Repositório V2 (`brazilcomp-2-97cf7219`) clonado e transformado em template interno da RV (`site-template-rv-01`): removidas todas as credenciais reais (Supabase, Mercado Pago, Resend, GA4), branding e dados institucionais do cliente substituídos por mock genérico.
+- Histórico git squashado antes de qualquer push (commits antigos continham `.env` reais com service_role key e senha do banco — risco de segurança eliminado).
+- Novo repositório privado criado: `realvisionmaps360/site-template-rv-01`. Deploy de visualização no ar: https://site-template-rv-01.vercel.app
+
+**Prazo:** site V1 no ar até 07/08/2026 (7 de agosto) — ainda dentro do prazo. Entrega dos arquivos (V1 + V2 limpos) ao Dorival ainda não foi enviada.
+
+**Pendência à parte:** Locaweb/RegistroBR — Felipe não tem mais acesso aos logins que Dorival passou; precisa orientar reset via e-mail dele quando for entregar.
+
+**Próximo passo:** preparar e enviar a entrega real (V1 + V2 limpos) a Dorival, dentro do prazo de 07/08/2026.
+
+---
+
 ## 2026-07-07 — Dorival paga o débito, ameaça advogado, envia áudios agressivos. Site V1 reativado por 1 mês, encerramento definitivo confirmado.
 
 **Contexto:** desde o encerramento de 27/06, Dorival ficou em silêncio. Em 03/07 quebrou o silêncio no WhatsApp cobrando os logins/senhas ("Enviei os logins e senhas de tudo que for propriedade da Brazilcomp, site DNS etc"). Em 05/07 insistiu ("Favor enviar o que lhe pedi"). Hoje, 07/07, escreveu: *"Estou enviando o caso ao advogado da empresa"* — alegando que a Real Vision parou de se comunicar e não entregou o site, quando na verdade os avisos formais de 19/06 e 27/06 (com prazo) estão registrados como lidos (✔✔ azul) sem resposta dele.

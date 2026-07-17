@@ -119,6 +119,16 @@ Arquivos atualizados: [[WOOD-ART-PROPOSTA-CONSOLIDADO]], [[WOOD-ART-SITE-DIAGNOS
 - Skills usadas: `realvision` + `rv-copy` + `rv-design` + `proposta-comercial` + `rv-relatorio`
 - Conteúdo idêntico ao v1 (08/07) — única mudança: capa honeycomb agora usa a foto do cliente em vez de placeholder vazio
 
+### 10-11/07/2026 — Textos finais das 6 fases + novo layout "Full Accordion" + envio ao cliente
+
+- **Sumário e Fase 1 fechados**, depois textos finais das Fases 2 a 6 (App de Placas, Chatbot IA, Google Meu Negócio, Google Merchant Center, Tráfego Pago) reescritos com o texto revisado do Felipe.
+- **Fases 7 e 8 removidas** (Prospecção de Leads B2B e Painel Financeiro Unificado como itens separados) — o conteúdo do Painel Financeiro foi incorporado dentro da própria Fase 1, como bloco "Diferencial exclusivo — Painel Inteligente de Gestão" (não é mais item cobrado à parte). Documento passou de 8 para 6 fases. Prospecção B2B ficou de fora da proposta enviada (confirmar com o Felipe se deve voltar como "fora do escopo atual" numa próxima rodada).
+- **Regra de rótulo de valor fixada:** "Valor:" = preço fechado (ex: GMB R$300, Chatbot R$2.900); "Valor indicativo:" = faixa, pacote com desconto ou "a partir de" (Website, App, Merchant Center, Tráfego Pago). Corrigida inconsistência na Fase 3 (Chatbot), que não usava nenhum dos dois rótulos.
+- **Novo padrão de layout criado e batizado "Full Accordion"** (nome dado pelo Felipe): as 6 fases inteiras viraram accordion nativo (`<details><summary>`, sem JS) — fechadas por padrão, abrem com sombra em camadas + leve elevação no hover/estado aberto. O "Saber mais" (accordion de nível 2, já existente) ganhou fundo âmbar mais visível, mantendo hierarquia menor que o card da fase. Documentado como versão de referência na skill `proposta-comercial` (seção "Versões de layout desta skill").
+- Testado primeiro em arquivo isolado (`TESTE-LAYOUT-ACCORDION-FASES.html`, mesma pasta) antes de aplicar no documento oficial — validado no navegador (fases fechadas por padrão, abrir/fechar, hover, hierarquia visual entre os dois níveis de accordion).
+- **Arquivo final único: `PROPOSTA-COMERCIAL-WOOD-ART_11-07-2026_final.html`** — Felipe apagou as versões anteriores (08/07, 09/07, 10/07) e manteve só esta como oficial. Esta é a versão "Full Accordion" v1.
+- **Proposta enviada ao William em 11/07/2026.**
+
 ## Próximos marcos
 **1ª entrega (App):**
 - Confirmar com o William o escopo do configurador (define horas/valor final do app)

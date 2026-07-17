@@ -20,8 +20,9 @@ Nenhum ainda — fase de diagnóstico/prospecção.
 Nenhuma ainda.
 
 ## Próximos passos
-- [ ] Felipe envia áudio de apresentação no WhatsApp (via contato do Arthur)
-- [ ] Agendar call de 15min com Fabiano
+- [ ] Felipe grava e envia o áudio de apresentação v2 no WhatsApp oficial da loja (script em [[SCRIPT-AUDIO-EMAIL-16-07]])
+- [ ] Felipe revisa e envia o email (draft já criado no Gmail, destinatário fabianovalentim1@gmail.com)
+- [ ] Agendar call de 15min com Fabiano (prazo informado: responder na semana de 16/07/2026)
 - [ ] Coletar na call: plataforma/CMS do site, volume de vendas online, dor principal, interesse em tour 360°, timeline, budget
 - [ ] Preencher esta ficha com os dados coletados na call
 

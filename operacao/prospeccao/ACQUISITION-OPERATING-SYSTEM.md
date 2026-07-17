@@ -610,6 +610,35 @@ Fit fraco (pouca lacuna, pouca capacidade, ou contato difícil). Mantém ficha; 
 - Sem presença física para sustentar relação digital.
 - `do_not_contact = true`.
 
+### Indicadores positivos (somam fit)
+
+- Negócio **estabelecido**, com operação real e histórico (reviews antigas, presença consistente).
+- **Potencial de recorrência**: builds que abrem espaço para gestão mensal (site, chatbot, GMB).
+- **Fit remoto**: carro-chefe (site, automação, IA, GMB) resolve sem depender de deslocamento.
+- **Lacuna digital visível**: sem site ou site fraco, GMB parado, atendimento manual no WhatsApp.
+- **Decisor acessível**: WhatsApp direto ou e-mail válido, dono/gerente identificável.
+- **Porte ou recorrência**: multi-unidade, posicionamento premium, sinal de expansão.
+- Segmento-âncora (pousada, restaurante, evento, condomínio, hub, operadora de turismo) — onde a Real Vision já tem portfólio e prova social.
+
+### Indicadores desqualificantes (tiram ou reduzem fit)
+
+- Rede/franquia — decisão não é local.
+- Hotel grande (100+ quartos) — costuma ter fotógrafo/agência própria.
+- Já tem presença digital forte em tudo — pouca lacuna para vender.
+- Sem presença física / sem operação real para sustentar relação de longo prazo.
+- Só telefone fixo, sem WhatsApp/celular — contactabilidade baixa.
+- Sinais de fechamento (reviews paradas há 1+ ano, "fechado permanentemente").
+- Já é cliente Real Vision (cruzar com VisionFlow) — fora do escopo de aquisição.
+- `do_not_contact = true`.
+
+### ICP × categorias de oferta
+
+O fit do ICP também se mede pela oferta que o negócio comporta (catálogo completo na Seção 3):
+
+- **Core (carro-chefe)** — Website, Landing Page, Cartão Digital, Chatbot IA, gestão mensal. É o que define Tier A/B: negócio comporta e sustenta uma relação recorrente nessas frentes.
+- **Supporting (suporte)** — Google Business, sistemas de reserva, hosting, domínio, CRM, automações. Reforça o fit, mas raramente é a porta de entrada sozinho.
+- **Visual (porta de entrada / upsell)** — 360°, fotografia, drone. Serve para negócios frios ou cidades novas ainda não validadas (tripwire), nunca como critério principal de Tier.
+
 ### Decisões (IF → THEN)
 
 - **IF** Tier A **→ THEN** topo da fila + tende ao carro-chefe (`digital_partner`/site+gestão).
@@ -641,6 +670,9 @@ Fit fraco (pouca lacuna, pouca capacidade, ou contato difícil). Mantém ficha; 
 | **Nova abordagem por semana** | **~25 rascunhos** | eventos `abordado_*` da semana |
 | **Reuniões por semana** | **4** | status `reuniao_marcada` |
 | **Propostas por semana** | **3** | status `proposta_enviada` |
+| **Follow-ups vencendo por semana** | **~20** | `next_followup_date` na semana, status `abordado`/`sem_resposta` |
+
+**Base dos números.** Provisórios, calculados sobre ~35h/semana de capacidade operacional de Felipe + Romana (tempo de aquisição, não de entrega de projeto). Referência aproximada: 25 rascunhos de abordagem (~10min cada) + 20 follow-ups (~5min cada) + preparação de 4 reuniões e 3 propostas ficam dentro de poucas horas semanais dedicadas à aquisição — o resto da capacidade é fundo de funil e entrega. **Ajustar livremente conforme a realidade real do time.**
 
 ### Regra-mãe (IF → THEN)
 
@@ -676,6 +708,7 @@ Fit fraco (pouca lacuna, pouca capacidade, ou contato difícil). Mantém ficha; 
 | Qual **canal** rendeu mais? | response rate por `channel` (wa vs email) |
 | Quais **mensagens** funcionaram melhor? | comparar variantes de template pelos eventos `abordado_*` → `resposta_recebida` |
 | Quais **objeções** apareceram mais? | taxonomia dos `resposta_recebida` (já tem agência / sem orçamento / sem tempo / depois…) |
+| Quais **scores** realmente levaram a reunião/proposta/venda? | comparar `opportunity_score` no momento da abordagem (`score_atualizado` mais próximo do evento `abordado_*`) contra o status final alcançado (`reuniao_marcada`/`proposta_enviada`/`ganho`) — valida se o score da Seção 4 está calibrado |
 
 ### O que o loop faz com isso (IF → THEN)
 

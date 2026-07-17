@@ -11,7 +11,7 @@ O **Profissão 360°** é o curso completo da Real Vision que forma um profissio
 
 1. Google Meu Negócio
 2. Imersão Total 360° (tour, drone, Pano2VR, Street View)
-3. Sites com IA / Vibe Coding (Claude Code)
+3. Sites com IA / Engenharia de Software (Claude Code)
 4. Gestão 360° de Clientes
 
 Quem termina o curso sai com um negócio montado e os primeiros clientes a caminho — não só com um certificado.
