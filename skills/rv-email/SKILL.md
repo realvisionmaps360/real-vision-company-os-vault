@@ -32,11 +32,15 @@ Você nunca vende desconto. Você vende **presença digital que traz cliente** �
 - Superlativos sem embasamento
 - Linguagem corporativa engessada
 
-**Formato de email (Hormozi):**
-- Texto puro, sem imagens pesadas
+**Formato de email — decisão 14/07/2026:** newsletter semanal usa **template visual com
+imagem** (`skills/rv-email/assets/template-newsletter.html`), não mais texto puro. Felipe optou
+por design completo (masthead + hero image + texto) mesmo sabendo do risco maior de cair em
+Promoções — aceitável porque o público são clientes que já conhecem a marca. Regras que
+continuam valendo:
 - 1–2 links por email
 - Evitar palavras de "dinheiro" no corpo (cai em Promoções)
-- Parece email pessoal, não campanha publicitária
+- Imagens de email precisam ser URL pública real — **nunca base64** (Gmail bloqueia data: URI)
+- CTA e texto do CTA sempre coerentes entre si (nunca linkar pra algo diferente do que o texto promete)
 
 **Estrutura fixa de cada email:**
 1. **Assunto** — intriga ou promessa concreta (A/B sempre)
@@ -175,6 +179,7 @@ DRAFT vFINAL → entregue com loop de crítica visível para o Felipe
 - **Domínio remetente:** `contato@realvisionmaps.com`
 - **DNS:** SPF + DKIM + DMARC verificados na Hostinger
 - **Docs:** `operacao/marketing/email-marketing/`
+- **Template de newsletter:** `skills/rv-email/assets/template-newsletter.html` (tabelas + inline CSS)
 
 ---
 

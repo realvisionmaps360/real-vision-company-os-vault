@@ -28,6 +28,7 @@ Se houver skills relevantes além das já carregadas, apresente-as **antes de co
 | `05-marketing-seo` | SEO local, Schema JSON-LD, hreflang, GA4/GTM | SEO, meta tags, analytics, rastreamento, i18n, presença Google |
 | `06-awesome-claude` | Qualidade de código, tipagem, pair programming | Qualquer codificação — reforça boas práticas de TS/React |
 | `07-superpowers` | Git, diagnóstico, build, ambiente local | Git commit/push, build errors, porta travada, node_modules |
+| `rv-incidente-supabase` | Diagnóstico de outage/instabilidade Supabase (billing, status, logs, decisão por código de erro) | Erro 522/502/503/504, app não carrega, suspeita de outage — ANTES de mexer em código |
 | `motion` | Animações React, transições, scroll effects, gestos | Animações, hover effects, fade, reveal, parallax, UI polish em React |
 | `rv-blogpost` | Copywriting, estrutura de post, ContentBlocks | Posts do blog, textos de conteúdo, copy de email |
 | `karpathy-guidelines` | Precisão, planejamento antes de executar, mudanças cirúrgicas | Tarefas complexas multi-etapa, refatorações, decisões de arquitetura |
@@ -110,6 +111,9 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 
 ### Banco de dados / backend
 `01-supabase-postgres` + `06-awesome-claude`
+
+### Outage / instabilidade / erro 522-502-503-504 no backend
+`rv-incidente-supabase` (diagnóstico primeiro, sempre) + `01-supabase-postgres` (se a causa raiz for RLS/schema/client) + skill do projeto específico (`visionflow` ou outro, para contexto de schema/stack)
 
 ### Arquitetura / refatoração grande
 `karpathy-guidelines` + `06-awesome-claude` + `07-superpowers`
