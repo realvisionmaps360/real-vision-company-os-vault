@@ -7,11 +7,13 @@ Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM inter
 ## O que é o VisionFlow
 
 CRM interno construído em React + Supabase. Repositório local em:
-`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
+`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\visionflow`
 
 GitHub: `realvisionmaps360/visionflow-crm-48fe197a`
-Deploy: Vercel (auto-deploy a cada push na branch `main`)
+Deploy: Vercel, projeto `visionflow-crm` (owner: Felipe's projects) — URL: `https://visionflow.realvisionmaps.com`
 Banco: Supabase project `ghwjetvazmdlaqidgxqi`
+
+**⚠️ Deploy NÃO é automático por push (incidente 16/07/2026, ver `docs/INCIDENTS.md`).** O projeto no Vercel não tem integração Git conectada — `git push` sozinho não publica nada. Antes de dizer pro Felipe que "subiu", ou: (a) rode `npx vercel --prod` da pasta do repo (requer `npx vercel link --yes --project visionflow-crm --scope felipes-projects-26a2b9dd` uma vez), ou (b) confirme que a integração Git já foi conectada no painel (`npx vercel project inspect visionflow-crm` deve mostrar uma seção "Git").
 
 ---
 
@@ -116,5 +118,9 @@ Esquecer o item 3 causa **Edge Function 400 silencioso**: o banco rejeita o INSE
 
 ## Deploy
 
-Push para `main` → Vercel deploya automaticamente em ~1-2 minutos.
-Verificar em: https://vercel.com (projeto visionflow-crm)
+**Push para `main` NÃO deploya sozinho** — o projeto Vercel não tem Git conectado (incidente 16/07/2026). Duas opções:
+
+1. **Deploy manual (funciona hoje):** `npx vercel --prod` de dentro do repo. Primeira vez, linkar antes: `npx vercel link --yes --project visionflow-crm --scope felipes-projects-26a2b9dd`.
+2. **Correção definitiva (fazer uma vez):** painel do Vercel → projeto `visionflow-crm` → Settings → Git → Connect Git Repository → `realvisionmaps360/visionflow-crm-48fe197a`, branch `main`. Depois disso, push volta a deployar sozinho de verdade.
+
+Verificar status: `npx vercel ls visionflow-crm` (idade do deployment mais recente) ou https://vercel.com (projeto visionflow-crm).
