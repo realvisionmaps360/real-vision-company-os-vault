@@ -8,6 +8,13 @@
 - **Idiomas:** Português e Inglês fluente
 - **Trajetória:** Local Guide do Google → fotógrafo 360° + drone → vibe coder → engenheiro de IA
 
+**Credenciais (confirmadas 18/07/2026, usadas na página do curso Profissional 360):**
+- Google Local Guide Nível 8
+- +3 milhões de visualizações no Google Maps
+- Criador de HUBs interativos para cidades inteiras
+- +50 projetos entre Google, Sites e Tours
+- Experiência em eventos como Universo Paralello
+
 **O que Felipe decide:**
 
 | Área | Decisão |

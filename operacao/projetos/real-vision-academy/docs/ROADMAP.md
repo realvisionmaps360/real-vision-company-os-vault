@@ -60,10 +60,16 @@ diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
   concede a matrícula pelo admin (`EnrollmentManager.tsx`, já existe). Testado ponta a ponta —
   detalhe em [[TIMELINE]] e [[CHANGELOG]].
 
-## Fase 5 — Conteúdo & lançamento do Profissional 360 (próxima)
+## Fase 5 — Conteúdo & lançamento do Profissional 360 (em andamento)
 - **Objetivo:** curso pronto para venda.
 - **Escopo:** produção/carga do conteúdo (vídeos + prompts), revisão de copy (ver [[realvision]]/VOZ),
   testes ponta a ponta, publicação.
+- **Decisão 18/07/2026:** a landing promete "Comunidade exclusiva" e "Certificado Real Vision" como
+  incluídos na compra, mas nenhum dos dois tinha spec/tabela até então (D-009 na Fase 2 adiou
+  "comunidade" por YAGNI; "certificados" também listado em "Futuro" abaixo). Felipe decidiu manter
+  a promessa na oferta e planejar a construção dentro da própria Fase 5, em vez de tirar da página.
+  Certificado é mais simples (tela/PDF gerado ao concluir o curso, sem tabela nova); comunidade seguirá
+  sem spec até ser desenhada.
 
 ## Futuro (exige novo planejamento)
 Assinatura · comunidade · certificados · trilhas · tutor de IA · i18n (EN/DE) · ferramentas digitais.
