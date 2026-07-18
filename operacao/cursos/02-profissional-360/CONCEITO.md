@@ -92,7 +92,7 @@
 
 ### MÓDULO 5 — Montando seu negócio 360° *(juntar tudo)*
 4 aulas. → **Resultado: os 3 primeiros clientes no caminho.**
-- **5.1** — Juntando os 4 pilares numa oferta só (a Tríade do Sucesso)
+- **5.1** — Juntando os 4 pilares numa oferta só (o Sistema PDI)
 - **5.2** — Seu posicionamento e seu portfólio
 - **5.3** — O plano dos 3 primeiros clientes
 - **5.4** — Escalando: de freelancer a operação
@@ -115,7 +115,7 @@
 
 ## Diferencial
 
-A maioria dos cursos ensina UMA ferramenta solta — só tour, só site, só Google. O Profissão 360° ensina **o sistema integrado** (a Tríade do Sucesso) e termina com o aluno fechando cliente. Não é "aprenda a fazer tour"; é "monte sua profissão".
+A maioria dos cursos ensina UMA ferramenta solta — só tour, só site, só Google. O Profissão 360° ensina **o sistema integrado** (o Sistema PDI — Presença Digital Integrada) e termina com o aluno fechando cliente. Não é "aprenda a fazer tour"; é "monte sua profissão".
 
 ---
 

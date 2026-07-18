@@ -32,8 +32,8 @@ Falar de GEO (Generative Engine Optimization) ao lado de SEO é vantagem competi
 - Portfólio mostra: 100% Bahia
 - **Ação:** decidir se atende SP, BA ou ambos. Atualizar meta tags e copy do hero.
 
-### 2. "Tríade do Sucesso" sem explicação
-- Mencionada no projeto Vila Mandela mas sem página/seção própria
+### 2. "Sistema PDI" sem explicação
+- Mencionado no projeto Vila Mandela (renomeado de "Tríade do Sucesso" em jul/2026) mas sem página/seção própria
 - **Ação:** criar página dedicada — vira ativo de marca e diferencial
 
 ### 3. Página de serviços é muralha de texto
@@ -73,7 +73,7 @@ Falar de GEO (Generative Engine Optimization) ao lado de SEO é vantagem competi
 |---|---|---|---|
 | Alta | Resolver contradição SP vs BA | Baixo | Alto |
 | Alta | Página "Sobre o Felipe" | Médio | Alto |
-| Média | Página da Tríade do Sucesso | Médio | Alto |
+| Alta | Trocar toda menção a "Tríade do Sucesso" no site por "Sistema PDI" (ver mapeamento no item 2 acima) + página do Sistema PDI | Médio | Alto |
 | Média | Pilar de Agentes de IA em destaque | Médio | Médio |
 | Baixa | Trocar números genéricos por métricas reais | Baixo | Médio |
 | Baixa | Quebrar página de serviços em sub-páginas | Alto | Médio |

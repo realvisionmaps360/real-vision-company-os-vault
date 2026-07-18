@@ -329,7 +329,7 @@ entregue com publicação no Street View."
 
 Card 3 — CONDOMÍNIO VILA MANDELA
 Tipo: Sistema Integrado · Local: Itacaré (BA)
-Mini descrição: "Aplicação completa da Tríade do Sucesso: site +
+Mini descrição: "Aplicação completa do Sistema PDI: site +
 GMN + tour 360°."
 
 Card 4 — HUB ILHA DO CONTRATO
