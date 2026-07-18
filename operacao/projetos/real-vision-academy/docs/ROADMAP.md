@@ -20,6 +20,12 @@ related:
 > Fases de desenvolvimento. Cada fase só começa após a anterior concluída, documentada e aprovada.
 > Sequência pensada para minimizar risco e retrabalho.
 
+## Skill operacional: `superpowers`
+Ativar em toda fase de implementação (Fase 1 em diante) — não necessária na Fase 0 (só documentação).
+Cobre: checkpoints de git (commit em pontos claros, `git status` antes de commitar pra não subir lixo
+de build), build de produção antes de fechar cada fase (evita quebrar o deploy na Vercel), e
+diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
+
 ## Fase 0 — Planejamento e fundação documental ✅ (em curso)
 - **Objetivo:** documentação de fundação + skill [[master-visionair]] + pesquisas técnicas.
 - **Critério de conclusão:** [[MASTER_PRD]], [[ARCHITECTURE]], [[ROADMAP]] escritos; [[pagamento]] e
@@ -47,9 +53,11 @@ related:
 
 ## Fase 4 — Checkout e pagamento
 - **Objetivo:** vender o curso avulso.
-- **Escopo:** integração do gateway escolhido; webhook server-side → cria matrícula; página de
-  compra + pós-compra.
-- **Conclusão:** compra real gera acesso automático.
+- **Escopo (D-011, MVP):** botão "Comprar" na landing (`Profissional360.tsx`) e/ou `CoursePage.tsx`;
+  grava `orders` (`pending`); monta mensagem e abre `wa.me` pré-preenchido, reaproveitando o padrão
+  de `CartDrawer.tsx` da Loja. Sem gateway, sem webhook — Stripe (D-005) fica pra depois.
+- **Conclusão:** aluno consegue iniciar a compra pelo site; Felipe confirma pagamento no WhatsApp e
+  concede a matrícula pelo admin (`EnrollmentManager.tsx`, já existe).
 
 ## Fase 5 — Conteúdo & lançamento do Profissional 360
 - **Objetivo:** curso pronto para venda.

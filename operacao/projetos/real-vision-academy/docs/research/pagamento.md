@@ -64,7 +64,7 @@ Profissional 360 sem esperar as Fases 1–4), **Kiwify** é o atalho — aceita-
 de velocidade, e migra-se para a plataforma própria depois.
 
 ## Decisão do Felipe
-- [x] **Stripe escolhido** (2026-07-17) → registrado em [[DECISIONS]] D-005.
+- [x] nao vamos mexer em nada disso agora, nao é problema pra agora, vamos por tudo pra funcionar, por enquanto voce vai enviar o pagamento pra mim pelo whats app, com toda a informação pré preenchida do que a pessoa comprou e todos os detalhes pro meu numero dewhats app, o mesmo que tem cadastrado no site. 
 
 ## Fontes
 - [Stripe pricing](https://stripe.com/pricing)

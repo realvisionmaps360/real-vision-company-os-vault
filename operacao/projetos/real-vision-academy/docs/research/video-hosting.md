@@ -45,8 +45,7 @@ controle de proteção via token. Se o Felipe priorizar simplicidade máxima sob
 largada, Vimeo é aceitável — mas o setup do Bunny é pontual e se paga rápido.
 
 ## Decisão do Felipe
-- [ ] **Adiada** (2026-07-17) — Felipe optou por decidir depois. Ver [[DECISIONS]] D-006 (pendente).
-  Recomendação em pé: Bunny Stream. Só trava a Fase 3.
+- [x] **Bunny Stream** (2026-07-18) — Felipe seguiu a recomendação. Ver [[DECISIONS]] D-006.
 
 ## Fontes
 - [Bunny Stream pricing](https://bunny.net/pricing/stream/)

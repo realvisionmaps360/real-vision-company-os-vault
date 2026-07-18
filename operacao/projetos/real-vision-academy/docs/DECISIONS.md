@@ -59,11 +59,17 @@ related:
 - **Impacto:** Fase 4 constrói checkout + webhook server-side (Vercel function) → cria matrícula.
   Avaliar habilitar Pix via Stripe depois do lançamento, com dado real.
 
-## D-006 — Hospedagem de vídeo: PENDENTE
-- **Data:** 2026-07-17
-- **Status:** Felipe optou por **decidir depois**. Recomendação em aberto: **Bunny Stream** (vídeo) +
-  Supabase Storage (materiais/prompts). Ver [[video-hosting]].
-- **Impacto:** Só trava a Fase 3 (player/área de membros). Não bloqueia Fases 1–2.
+## D-006 — Hospedagem de vídeo: Bunny Stream
+- **Data:** 2026-07-17 (pesquisa) · decidido em 2026-07-18
+- **Contexto:** Pesquisa [[video-hosting]] comparou YouTube não-listado, Vimeo, Bunny Stream e
+  Supabase Storage, para vídeos de curso pago (exige proteger contra acesso sem matrícula).
+- **Decisão:** **Bunny Stream** para os vídeos das aulas + **Supabase Storage** para materiais
+  complementares (prompts `.md`, PDFs).
+- **Justificativa:** Custo baixíssimo no volume da Academy (~US$1–5/mês) e a melhor proteção de
+  conteúdo pago das opções avaliadas (link com expiração + trava de download), contra ~US$12–33/mês
+  do Vimeo por proteção equivalente ou inferior. YouTube não serve (sem trava nenhuma).
+- **Impacto:** Destrava a Fase 3 (player/área de membros). Setup inicial: conta Bunny Stream +
+  biblioteca de vídeo + integração de link com expiração no player.
 
 ## D-007 — Login do blog: recomeçar limpo (sem migrar dados)
 - **Data:** 2026-07-17
@@ -92,6 +98,45 @@ related:
 - **Justificativa:** YAGNI — schema sem spec vira retrabalho quase certo; adicionar tabelas depois no
   Supabase é trivial, sem custo de adiar.
 - **Impacto:** Comunidade entra só após spec própria (novo PRD + decisão). Ver [[ROADMAP]] "Futuro".
+
+## D-010 — Materiais: assinatura client-side via RLS de Storage (sem função serverless)
+- **Data:** 2026-07-18
+- **Contexto:** O plano da Fase 3 previa `api/material-sign.ts` (Vercel function + service role key)
+  para assinar URLs dos materiais no bucket privado `course-materials`.
+- **Problema:** A função exigiria a `SUPABASE_SERVICE_ROLE_KEY` circulando no ambiente (e não seria
+  testável antes de configurá-la no Vercel), sendo que o Storage do Supabase já suporta a mesma
+  guarda nativamente.
+- **Decisão:** **Policy de RLS em `storage.objects`** (`materials_read_enrolled`: leitura só se
+  existe matrícula no curso extraído do caminho `{course_id}/...`) + `createSignedUrl` chamado
+  **direto do client** com a sessão do aluno. A função serverless ficou só onde é inevitável:
+  `api/bunny-sign.ts` (token key do Bunny é segredo de servidor).
+- **Justificativa:** Recurso nativo da plataforma > código próprio (escada Ponytail); um segredo a
+  menos; menos um endpoint pra manter; testável de imediato. Segurança equivalente — a policy roda
+  no banco.
+- **Impacto:** `api/material-sign.ts` não existe. `SUPABASE_SERVICE_ROLE_KEY` não é necessária na
+  Fase 3 (o `bunny-sign` valida sessão e matrícula com a anon key, como o usuário, via RLS).
+
+## D-011 — Fase 4 (MVP): checkout manual via WhatsApp, não Stripe
+- **Data:** 2026-07-18
+- **Contexto:** D-005 (Stripe) decidiu o gateway formal, mas [[pagamento]] registra uma decisão mais
+  recente do Felipe, informal, direto no documento de pesquisa: não mexer em gateway agora, o site
+  monta o pedido com os dados da compra e manda pro WhatsApp do Felipe (mesmo número cadastrado no
+  site), que confirma o pagamento manualmente. Confirmado de novo com o Felipe nesta sessão, depois
+  de eu ter corrigido `ARCHITECTURE.md` §5 pra Stripe achando que D-005 ainda valia como está.
+- **Decisão:** Fase 4 do MVP usa **fluxo manual via WhatsApp**, reaproveitando o padrão que a Loja do
+  site já usa (`src/components/shop/CartDrawer.tsx`): monta uma mensagem com os dados do pedido e
+  abre `wa.me/5511912931924?text=...` com tudo pré-preenchido. Nenhum SDK de pagamento, nenhum
+  webhook. Grava um registro em `orders` (`status: pending`) no clique de compra; Felipe confirma o
+  pagamento pelo WhatsApp e concede a matrícula manualmente pelo `EnrollmentManager.tsx` (já existe,
+  não precisa criar nada novo ali).
+- **Justificativa:** Simplicidade — reusa código e schema que já existem, sem custo de integração de
+  gateway agora. Felipe pode migrar pra Stripe depois, com volume real, sem essa decisão travar o
+  lançamento do curso.
+- **Impacto:** D-005 (Stripe) não foi descartado — vira upgrade futuro, não escopo do MVP. Escopo real
+  da Fase 4: botão "Comprar" na landing (`Profissional360.tsx`) e/ou `CoursePage.tsx`, insert em
+  `orders`, link `wa.me` formatado. Trabalho leve — não densificado em decisão, então não se enquadra
+  na regra do Fable 5 (D-008); cabe em qualquer modelo, feito nesta sessão foi só o escopo, a
+  implementação ficou pra próxima. `ARCHITECTURE.md` §5 e `ROADMAP.md` Fase 4 atualizados.
 
 ## Documentos relacionados
 - [[ARCHITECTURE]]

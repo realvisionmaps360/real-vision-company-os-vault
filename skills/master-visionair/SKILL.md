@@ -40,6 +40,62 @@ apresentar **antes** de escrever qualquer código.
 
 ---
 
+## Escolha de modelo de execução: Fable 5 vs. Claude Code direto
+
+Fable 5 é o modelo mais capaz da Anthropic, feito para **long-horizon agentic work** — contexto de
+1M tokens, raciocínio pesado, autonomia longa. Mas custa 10x mais em input e 50x mais em output que
+Sonnet. Reservar pra quando o ganho compensa o custo.
+
+**Usar Fable 5 quando:**
+- A fase tem muitas decisões de arquitetura/schema que se acumulam (ex: Fase 2 — modelo de dados +
+  painel admin; Fase 3 — área de membros + player + progresso).
+- Escopo grande, muitos arquivos, sessão longa sem supervisão.
+
+**Resolver direto no Claude Code (sem Fable) quando:**
+- Tarefa mecânica, bem definida, poucos arquivos (ex: Fase 1 — repontar config, trocar tela de auth,
+  ativar provider).
+- Correções pontuais, ajustes de config, tarefas curtas mesmo dentro de um projeto grande.
+
+Regra prática: se dá pra descrever o resultado esperado em uma frase e não envolve decisão de
+arquitetura nova, não precisa do Fable.
+
+**Doc oficial do Fable 5** (ler antes de decidir/prompt):
+https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5
+Pontos que importam pra nós: feito pra *long-horizon agentic work*; contexto de 1M tokens; até 128k de
+saída; thinking adaptativo sempre ligado (controlar profundidade pelo parâmetro de *effort*); preço
+US$10/M input e US$50/M output (10x/50x vs. Sonnet); pode recusar requests (safety classifiers) —
+planejar fallback pra outro modelo.
+
+### Como preparar um bom prompt de execução pro Fable 5
+
+O Fable roda longe sozinho — o prompt precisa ser um **briefing autocontido**, não uma conversa. Um
+prompt de missão bom tem, nesta ordem:
+1. **Papel + regra máxima** — "Você é o executor da Fase X da Real Vision Academy. Nada de código de
+   produto fora do escopo desta fase." Apontar a skill [[master-visionair]] e [[realvision]].
+2. **Onde reconstruir contexto** — mandar ler os docs vivos primeiro (`CONTEXT.md`, depois
+   `ARCHITECTURE.md`, `ROADMAP.md`, `DECISIONS.md`). O Fable não tem o histórico do chat; a fonte de
+   verdade é o vault.
+3. **Escopo fechado da fase** — lista explícita do que entra e do que NÃO entra (evita ele "adiantar"
+   fases seguintes).
+4. **Fatos e credenciais operacionais** — banco (`xomtfkbvathddfpbknyo`), como rodar SQL (Management
+   API com PAT, porque o MCP não alcança), arquivos-chave já existentes, padrões do repo (CLAUDE.md).
+5. **Critério de conclusão verificável** — o que precisa estar funcionando pra fase ser dada como
+   pronta (ex: "admin cadastra curso completo pelo painel"), e a exigência de rodar `npm run build` +
+   verificar no preview.
+6. **Regras invioláveis** — sem push/deploy sem OK do Felipe; mudanças cirúrgicas; atualizar os docs
+   vivos ao fim (procedimento de encerramento). Ativar `/goal` pra manter o foco no escopo.
+
+---
+
+## Meta final — PostHog
+
+Ao concluir a implementação da Real Vision Academy, **instalar o PostHog** como etapa final
+(analytics/product de uso da plataforma). A documentação do que será feito está salva nos
+Documentos do Google — acessar lá quando essa etapa chegar (Felipe não passou o link ainda;
+perguntar a ele nesse momento).
+
+---
+
 ## Onde vive tudo (mapa)
 
 | O quê | Onde |
@@ -49,6 +105,55 @@ apresentar **antes** de escrever qualquer código.
 | Ponteiro no repo de código | `real-vision-site/docs/academy/README.md` → aponta pro vault |
 | Supabase da Academy | `xomtfkbvathddfpbknyo` (conta email smarthome) — banco único de usuários finais |
 | Curso Profissional 360 (conteúdo bruto) | `operacao/cursos/02-profissional-360/` |
+
+---
+
+## Roteamento de skills por tipo de tarefa
+
+`master-visionair` + `realvision` são a base fixa de toda sessão da Academy. Além delas, ativar
+automaticamente a skill técnica correspondente ao tipo de tarefa do momento — sem esperar o Felipe
+pedir explicitamente:
+
+| Momento / tipo de tarefa na Academy | Skill(s) a carregar junto |
+|---|---|
+| UI de qualquer página (aluno ou admin) — layout, componente, tela nova | [[frontend-design]] |
+| Comportamento visual — hover, transição, scroll, micro-interação | [[motion]] |
+| Padrão específico de turismo/hospitalidade/negócio local no design | [[rv-design]] |
+| Qualquer texto voltado ao aluno/cliente — copy de página, CTA, headline, e-mail | [[rv-copy]] |
+| Escrever ou revisar um post de blog ligado à Academy | [[rv-blogpost]] (+ [[rv-intencao-busca]] antes de escrever) |
+| Modelagem de tabela, schema, RLS, policy, query no Supabase da Academy (`xomtfkbvathddfpbknyo`) | [[supabase-postgres]] |
+| App fora do ar / erro 5xx / login travando / suspeita de instabilidade do backend | [[rv-incidente-supabase]] (**antes** de mexer em código) |
+| Deploy, performance de build, Core Web Vitals, config Vercel | [[vercel-react]] |
+| Favicon / config de indexação | [[favicon-setup]] |
+| SEO local, Schema.org, GA4, tags de busca | [[marketing-seo]] |
+| Estruturar grade pedagógica de um novo curso (módulos, aulas, cronograma) | [[rv-course-builder]] |
+| Sessão de código: commits, git status, build local, porta travada, node_modules | [[superpowers]] |
+| Consulta ou atualização do vault Obsidian fora do fluxo padrão da Academy | [[obsidian]] / [[obsidian-cli]] |
+| Fim de sessão / fim de etapa relevante | [[rv-fim-sessao]] |
+
+Isso não substitui o procedimento de inicialização/encerramento abaixo — é uma camada adicional que
+decide quais outras skills entram em cena durante a sessão.
+
+### Anúncio obrigatório de skills ativadas
+
+Toda vez que uma skill for carregada — **desde a primeira mensagem da sessão**, incluindo `realvision`
+e a própria `master-visionair` — isso precisa aparecer explícito no chat pro Felipe, não só acontecer
+por trás. Formato fixo, uma linha, logo no início da resposta:
+
+```
+→ skills ativadas: master-visionair, realvision
+```
+
+E de novo, a qualquer momento no meio da sessão, sempre que uma skill nova entrar em cena pelo
+roteamento acima:
+
+```
+→ skill ativada: rv-copy (copy da página de vendas)
+```
+
+Regra: nunca ativar uma skill em silêncio. Se o roteamento decidiu carregar `frontend-design` porque a
+tarefa virou UI, isso aparece na resposta antes de qualquer trabalho — não depois, não só se o Felipe
+perguntar.
 
 ---
 
@@ -130,3 +235,15 @@ metodologia for burocrática ou inútil, registrar o problema e **propor melhori
 - [[obsidian]]
 - [[rv-course-builder]]
 - [[rv-fim-sessao]]
+- [[frontend-design]]
+- [[motion]]
+- [[rv-design]]
+- [[rv-copy]]
+- [[rv-blogpost]]
+- [[rv-intencao-busca]]
+- [[supabase-postgres]]
+- [[rv-incidente-supabase]]
+- [[vercel-react]]
+- [[favicon-setup]]
+- [[marketing-seo]]
+- [[superpowers]]

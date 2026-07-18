@@ -75,14 +75,19 @@ protegidos exigem matrícula ativa. Escrita em catálogo só para `role = admin`
 
 ## 5. Pagamento
 
-Curso avulso. Gateway a definir por [[pagamento]]. Fluxo previsto: checkout → webhook confirma
-pagamento → cria `enrollment` → libera acesso. O webhook exige função server-side (Vercel
-serverless function — o repo já usa `@vercel/node`).
+Curso avulso. **Fluxo manual via WhatsApp para o MVP** (D-011) — Stripe (D-005) fica como upgrade
+futuro, fora do escopo atual. Botão "Comprar" monta a mensagem do pedido e abre
+`wa.me/5511912931924` pré-preenchido, reaproveitando o padrão de `src/components/shop/CartDrawer.tsx`
+da Loja. Grava `orders` (`status: pending`) no clique; Felipe confirma o pagamento no WhatsApp e
+concede a matrícula manualmente pelo painel admin (`EnrollmentManager.tsx`, já existe). Sem SDK de
+pagamento, sem webhook.
 
 ## 6. Entrega de vídeo
 
-A definir por [[video-hosting]]. Requisito: proteção razoável do conteúdo pago + custo controlado +
-boa DX de player.
+**Bunny Stream** (D-006). Aula (`lessons.video_ref`) guarda o ID do vídeo na biblioteca Bunny; o
+player busca uma URL assinada (link com expiração) por usuário matriculado, sem baixar/gravar direto.
+Materiais complementares (prompts `.md`, PDFs) ficam no Supabase Storage, também com URL assinada por
+matrícula. Ver [[video-hosting]].
 
 ## 7. Painel admin
 

@@ -45,6 +45,20 @@ updated: 2026-07-17
   compartilhados): tratar ausência de linha como caso normal (`.maybeSingle()`) desde a criação do
   hook, não só quando o bug aparecer.
 
+### 2026-07-18 — Fase 3: seed de teste descartável revelou um falso alarme e validou D-006/D-010
+- **"Verificar antes de criar" (padrão da Fase 2) se pagou de novo:** `lesson_progress` já existia
+  no banco desde a Fase 2 — checar salvou de recriar/duplicar RLS.
+- **Consulta dentro da mesma transação/CTE pode mentir sobre efeito de trigger.** Ao testar o KI-11
+  com um seed de aluno via múltiplas CTEs encadeadas, o `SELECT` final (mesma query) leu `NULL` pro
+  perfil que o trigger deveria ter criado — parecia bug. Uma consulta **separada**, rodada depois,
+  confirmou o perfil certinho. Lição: nunca confiar num `SELECT` de verificação que roda dentro do
+  mesmo `INSERT` que dispara o trigger — sempre validar em uma query à parte.
+- **Ponytail se pagou na prática (D-010):** o plano previa uma função serverless
+  (`api/material-sign.ts`) pra assinar materiais; na hora de implementar, ficou claro que a policy
+  de RLS do Storage + `createSignedUrl` no client resolvia igual, sem servidor nem segredo extra.
+  Escada "recurso nativo da plataforma > código próprio" funcionou puxando pra trás um item já
+  planejado.
+
 ### 2026-07-17 — Setup inicial
 - **Frontmatter + backlinks desde o dia 1:** criar a teia de `[[ ]]` junto com os docs (não depois)
   custou pouco e já deixou o `PROJECT_INDEX` navegável. A validar: se isso realmente acelera a

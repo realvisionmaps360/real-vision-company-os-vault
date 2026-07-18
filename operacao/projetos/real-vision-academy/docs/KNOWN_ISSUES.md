@@ -94,6 +94,21 @@ related:
 ## Metodologia
 - **KI-06 — Obsidian CLI exige Obsidian aberto.** O comando `obsidian` está instalado, mas só opera
   com o app aberto. Fallback: edição direta dos `.md` (mesma estrutura). Ver [[master-visionair]].
+- **KI-17 — Cuidado ao apagar `TEMP/ggg.txt`: pode conter mais de uma credencial.** Em 2026-07-18 o
+  arquivo foi apagado (aprovado pelo Felipe como "credenciais do Bunny") sem ler o conteúdo antes —
+  na prática também guardava o PAT da Supabase Management API (conta smarthome), exigindo gerar um
+  PAT novo na hora para destravar a sessão. **Regra daqui pra frente:** sempre ler arquivos
+  `TEMP/*.txt` de credenciais antes de apagar, mesmo com aprovação — o nome/contexto do arquivo pode
+  não listar tudo que ele guarda.
+- **KI-17b — `curl` via Bash (Windows) corrompe acentuação em queries pra Management API.** Passar
+  SQL com `à`, `ç`, `õ`, `°`, `—` etc. direto como argumento `-d '...'` no Bash tool deste PC gera
+  perda real de dado (caracteres viram `�` no banco, não é só exibição). Causa: encoding do
+  argumento de linha de comando no Git Bash/Windows, não da API. **Fluxo seguro confirmado:** montar
+  a query em um heredoc (`--data-binary @- <<'EOF' ... EOF`) ou gravar em arquivo e usar `-d @arquivo`
+  — nunca inline com `-d '...'` quando o texto tem acentuação. Para conferir se o dado gravou certo,
+  salvar a resposta em arquivo (`-o arquivo.json`) e ler com a ferramenta de leitura de arquivo — o
+  console do PowerShell 5.1 exibe mojibake (`Ã©`, `Ã£`) mesmo quando o dado no banco está correto, o
+  que pode levar a "corrigir" algo que não estava quebrado.
 
 ## Decisões em aberto (não são problemas, mas travam fases)
 - Nenhuma no momento — pagamento (D-005, Stripe) e vídeo (D-006, Bunny Stream) já decididos.

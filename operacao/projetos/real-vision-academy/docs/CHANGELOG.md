@@ -16,6 +16,20 @@ related:
 
 > Histórico de alterações. Formato: data + o que mudou.
 
+## [Fix] — 2026-07-17 — Correção de login em produção (Site URL, Redirect URLs, OAuth Client Google)
+### Supabase (projeto `xomtfkbvathddfpbknyo`, via Management API)
+- `site_url`: `http://localhost:3000` → `https://realvisionmaps.com`.
+- `uri_allow_list`: vazio → `https://realvisionmaps.com/**,http://localhost:3000/**`.
+- `external_google_client_id`/`external_google_secret`: trocados pro client novo (ver abaixo).
+### Google Cloud (projeto "Academy RV")
+- Novo OAuth Client `Real Vision Academy Web`, tipo **Aplicativo da Web** (o anterior era tipo
+  Desktop e não suportava redirect URI custom — causa raiz do `redirect_uri_mismatch`).
+  Redirect URI autorizado: `https://xomtfkbvathddfpbknyo.supabase.co/auth/v1/callback`.
+- Client antigo (tipo Desktop, `...dommiq896qt2...`) não foi excluído — só desvinculado do provider.
+### Verificação
+- Felipe testou login por Google e por e-mail/senha em produção: funcionando. Detalhe da investigação
+  em [[TIMELINE]] e pendência de limpeza em [[KNOWN_ISSUES]] (KI-13).
+
 ## [Publicação] — 2026-07-17 — Fases 1+2 + login global em produção
 - OK explícito do Felipe ("pode publicar tudo").
 - Commit `7e9526f` (+ `f4efc4d` ajuste de `.gitignore`) direto em `main`, push pro GitHub

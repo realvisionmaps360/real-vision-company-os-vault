@@ -284,6 +284,51 @@ related:
   teste); limpar as matrículas e a aula de teste quando for usar o curso de verdade; Fase 4 (checkout
   Stripe) só depois do conteúdo real publicado; limpar `TEMP/ggg.txt`.
 
+## 2026-07-18 — Estrutura real do Profissional 360 cadastrada + limpeza de teste
+- **Objetivo:** substituir o rascunho de teste do curso "Profissional 360" pela grade-mestra real
+  (sem vídeos ainda, que dependem de gravação) e limpar os resíduos de teste da sessão anterior.
+- **Atividades:**
+  - Removidos do banco (via Supabase Management API): módulo + aula de teste (vídeo Bunny de
+    validação) e as 2 matrículas de teste (`smarthomefg@gmail.com` e `realvisionmaps360@gmail.com`).
+  - Cadastrados os **6 módulos e 40 aulas** da grade-mestra de [[CONCEITO]]
+    (`operacao/cursos/02-profissional-360/CONCEITO.md`), títulos conferidos um a um contra a fonte.
+    `video_ref` vazio em todas (aulas ainda não gravadas — Felipe grava no próprio ritmo). Curso
+    continua `published = false`.
+  - Corrigido `ARCHITECTURE.md` §5 (pagamento): "gateway a definir" → Stripe (D-005).
+  - Limpo `TEMP/ggg.txt`.
+- **Incidente durante a sessão:** o `ggg.txt` apagado continha, além das credenciais Bunny, o **PAT da
+  Supabase Management API** (conta smarthome) — não lido antes de apagar. Felipe gerou um PAT novo na
+  hora para destravar a sessão. Detalhe e correção de processo em KI-17.
+- **Achado técnico:** primeira tentativa de INSERT via `curl` (Bash) corrompeu acentuação
+  (caracteres viraram `�` — perda real de dado, não só exibição). Corrigido rodando os inserts via
+  PowerShell/heredoc gravando em arquivo, e todo dado foi verificado lendo a resposta bruta salva em
+  disco (não confiar no display do console PowerShell 5.1, que também mostra mojibake mesmo com dado
+  correto). Ver KI-17.
+- **Próximos passos:** Felipe grava as aulas (tela + voz) e vai passando os GUIDs do Bunny Stream por
+  aula; materiais complementares via Supabase Storage (KI-16); publicar (`published = true`) só com
+  conteúdo completo; Fase 4 (Stripe) só depois disso.
+
+## 2026-07-18 — Fase 4 replanejada: WhatsApp manual, não Stripe (D-011)
+- **Objetivo:** definir o "trabalho bruto" restante depois da estruturação do curso, e decidir se
+  valia a pena usar o Fable 5 no último dia de acesso.
+- **Achado:** ao revisar `pagamento.md` pra confirmar o escopo da Fase 4, encontrei uma decisão do
+  Felipe registrada informalmente no próprio documento de pesquisa (não no `DECISIONS.md` formal)
+  que contradiz o D-005: em vez de Stripe, o MVP deveria mandar o pedido pronto pro WhatsApp dele.
+  Eu já tinha corrigido `ARCHITECTURE.md` §5 pra "Stripe" na sessão anterior sem notar essa nota —
+  parei, mostrei o conflito e confirmei com o Felipe antes de seguir.
+- **Decisão (D-011):** Fase 4 do MVP = fluxo manual via WhatsApp, reaproveitando o padrão já usado na
+  Loja do site (`src/components/shop/CartDrawer.tsx` monta a mensagem e abre `wa.me` pré-preenchido).
+  Grava `orders` (`pending`) no clique; Felipe confirma pagamento no WhatsApp e concede matrícula pelo
+  `EnrollmentManager.tsx` (já existe). Stripe (D-005) vira upgrade futuro, não descartado.
+  `ARCHITECTURE.md` §5 e `ROADMAP.md` Fase 4 atualizados de novo pra refletir isso.
+- **Decisão de modelo:** como a Fase 4 caiu de "integração de gateway" pra "reusar um padrão que já
+  existe", não é mais trabalho denso em decisão — pela própria regra do Felipe (D-008), não justifica
+  Fable 5. Felipe confirmou seguir no Sonnet quando for implementar.
+- **Estado:** só o escopo foi fechado nesta sessão — a implementação (botão comprar, insert em
+  `orders`, link `wa.me`) ainda não foi feita. Ver bilhete técnico da sessão pra retomar.
+- **Próximos passos:** implementar a Fase 4 (Sonnet, conforme decidido); depois disso, Felipe grava as
+  aulas do Profissional 360 e vai passando os GUIDs do Bunny.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]
