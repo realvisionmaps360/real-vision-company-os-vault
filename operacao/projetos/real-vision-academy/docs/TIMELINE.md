@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 related:
   - ROADMAP
   - CHANGELOG
@@ -362,6 +362,28 @@ related:
   Editor manual ou Management API. Ver KI-20.
 - **Próximos passos:** Fase 4 fechada. Fase 5 (conteúdo real das aulas + copy + testes e2e +
   publicação) é a próxima.
+
+## 2026-07-18 — Fase 5 iniciada: revisão de copy, certificado de conclusão, revisão visual
+- **Objetivo:** abrir a Fase 5 (conteúdo & lançamento) — começar pelo que não depende dos vídeos do
+  Felipe: revisão de copy e construção do certificado.
+- **Atividades:**
+  - Copy da landing/loja revisada contra VOZ.md: achado e corrigido texto desatualizado (citava
+    Lovable, mostrava só 4 dos 6 módulos, `products.ts` descrevia o curso como "só tours virtuais"
+    com 12 módulos/40+ horas em vez de 6 módulos/~3h30). Corrigido em PT/EN/DE.
+  - Certificado de conclusão construído (D-012): coluna nova no banco, botão de liberação no painel
+    admin, botão de download em Meus Cursos, página `/academy/certificado/:id` com identidade RV.
+    Testado ponta a ponta com matrícula de teste (Teste D011).
+  - Revisão visual de todas as páginas da Academy (Playwright): achados — duas fotos placeholder
+    vazias na seção "Quem é Felipe Garcia" (pendente, precisa de foto real), páginas internas sem
+    nenhuma marca do site (corrigido: logo adicionado nas 4 telas), certificado sem login mostrava
+    erro genérico em vez de pedir login (corrigido).
+  - 2 mockups do certificado (versão escura/clara) gerados em `TEMP/certificado-mockups/` pra revisão
+    do Felipe — decisão de qual fica pendente.
+  - 6 commits enviados pro GitHub (push liberado pelo Felipe) — deploy Vercel disparado.
+- **Decisões:** D-012 (certificado — liberação manual, sem serviço novo).
+- **Próximos passos:** Felipe escolhe o mockup do certificado; Felipe passa foto(s) pra seção do
+  instrutor; aguardando Felipe gravar as 40 aulas e passar os GUIDs do Bunny Stream; materiais
+  complementares por aula; testes finais; só então `published=true`.
 
 ## Documentos relacionados
 - [[ROADMAP]]

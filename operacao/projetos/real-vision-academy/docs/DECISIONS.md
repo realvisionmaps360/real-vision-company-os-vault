@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 related:
   - ARCHITECTURE
   - MASTER_PRD
@@ -137,6 +137,19 @@ related:
   `orders`, link `wa.me` formatado. Trabalho leve — não densificado em decisão, então não se enquadra
   na regra do Fable 5 (D-008); cabe em qualquer modelo, feito nesta sessão foi só o escopo, a
   implementação ficou pra próxima. `ARCHITECTURE.md` §5 e `ROADMAP.md` Fase 4 atualizados.
+
+## D-012 — Certificado de conclusão: liberação manual, sem serviço novo
+- **Data:** 2026-07-18
+- **Contexto:** A landing promete certificado desde a Fase 2, mas não havia spec nem tabela. Ao decidir
+  construir dentro da Fase 5, era preciso escolher gatilho de liberação, formato e onde gerar o PDF.
+- **Decisão:** Liberação **manual pelo admin** (coluna `enrollments.certificate_issued_at`, botão no
+  painel de Matrículas) — não automática ao completar 100%. Certificado é uma página HTML com a
+  identidade visual da RV; o aluno usa a função nativa de imprimir do navegador pra gerar o PDF
+  (mesmo padrão do `rv-relatorio`). Nenhuma biblioteca nova instalada.
+- **Justificativa:** Recurso nativo da plataforma > dependência nova (escada Ponytail); liberação manual
+  dá controle ao Felipe sobre quem recebe, sem exigir lógica de "conclusão" ainda não definida.
+- **Impacto:** 1 coluna nova em `enrollments`. Rota `/academy/certificado/:id`. Painel admin ganhou aba
+  de liberação. Pendente: decidir entre 2 mockups de design (escuro/claro) e formalizar como padrão.
 
 ## Documentos relacionados
 - [[ARCHITECTURE]]
