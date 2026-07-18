@@ -22,17 +22,17 @@ Texto-base de apresentação: [[apresentacao-base-PT]]
 
 Status: ⬜ não iniciado · 🟡 perfil em construção · ✅ publicado
 
-| # | Plataforma | Tipo | Versão do texto | Idioma | Status |
-|---|---|---|---|---|---|
-| 1 | Malt | Contrato direto (Europa/CH) | Completa | PT/EN | ⬜ |
-| 2 | Workana | Marketplace (Brasil/LatAm) | Completa | PT | ⬜ |
-| 3 | 99Freelas | Marketplace (Brasil) | Completa | PT | ⬜ |
-| 4 | Trampos.co | Vitrine tech (Brasil) | Curta | PT | ⬜ |
-| 5 | Upwork | Marketplace (Global) | Completa | EN (PT opcional) | ⬜ |
-| 6 | Fiverr | Pacotes/Gigs (Global) | Curta + pacotes | PT/EN | ⬜ |
-| 7 | Contra | Contrato direto 0% (Global) | Completa | PT/EN | ⬜ |
-| 8 | LinkedIn | Rede B2B | Headline + Completa | PT (depois EN) | ⬜ |
-| 9 | Behance | Vitrine de portfólio | Curta + projetos | PT/EN | ⬜ |
+|| # | Plataforma | Tipo | Versão do texto | Idioma | Status |
+||---|---|---|---|---|---|
+|| 1 | Malt | Contrato direto (Europa/CH) | Completa | PT/EN | 🟡 ||
+|| 2 | Workana | Marketplace (Brasil/LatAm) | Completa | PT | ⬜ ||
+|| 3 | 99Freelas | Marketplace (Brasil) | Completa | PT | ⬜ ||
+|| 4 | Trampos.co | Vitrine tech (Brasil) | Curta | PT | ⬜ ||
+|| 5 | Upwork | Marketplace (Global) | Completa | EN (PT opcional) | ⬜ ||
+|| 6 | Fiverr | Pacotes/Gigs (Global) | Curta + pacotes | PT/EN | ⬜ ||
+|| 7 | Contra | Contrato direto 0% (Global) | Completa | PT/EN | ⬜ ||
+|| 8 | LinkedIn | Rede B2B | Headline + Completa | PT (depois EN) | ⬜ ||
+|| 9 | Behance | Vitrine de portfólio | Curta + projetos | PT/EN | ⬜ ||
 
 ---
 
