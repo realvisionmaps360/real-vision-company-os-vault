@@ -51,15 +51,16 @@ diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
   (prompts `.md`), registro/exibição de progresso.
 - **Conclusão:** aluno matriculado assiste, baixa prompts e vê progresso.
 
-## Fase 4 — Checkout e pagamento
+## Fase 4 — Checkout e pagamento ✅ concluída (2026-07-18)
 - **Objetivo:** vender o curso avulso.
-- **Escopo (D-011, MVP):** botão "Comprar" na landing (`Profissional360.tsx`) e/ou `CoursePage.tsx`;
-  grava `orders` (`pending`); monta mensagem e abre `wa.me` pré-preenchido, reaproveitando o padrão
-  de `CartDrawer.tsx` da Loja. Sem gateway, sem webhook — Stripe (D-005) fica pra depois.
+- **Escopo (D-011, MVP):** botão "Comprar" na landing (`Profissional360.tsx`); grava `orders`
+  (`pending`); monta mensagem e abre `wa.me` pré-preenchido, reaproveitando o padrão de
+  `CartDrawer.tsx` da Loja. Sem gateway, sem webhook — Stripe (D-005) fica pra depois.
 - **Conclusão:** aluno consegue iniciar a compra pelo site; Felipe confirma pagamento no WhatsApp e
-  concede a matrícula pelo admin (`EnrollmentManager.tsx`, já existe).
+  concede a matrícula pelo admin (`EnrollmentManager.tsx`, já existe). Testado ponta a ponta —
+  detalhe em [[TIMELINE]] e [[CHANGELOG]].
 
-## Fase 5 — Conteúdo & lançamento do Profissional 360
+## Fase 5 — Conteúdo & lançamento do Profissional 360 (próxima)
 - **Objetivo:** curso pronto para venda.
 - **Escopo:** produção/carga do conteúdo (vídeos + prompts), revisão de copy (ver [[realvision]]/VOZ),
   testes ponta a ponta, publicação.

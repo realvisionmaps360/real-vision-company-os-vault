@@ -16,6 +16,25 @@ related:
 
 > Histórico de alterações. Formato: data + o que mudou.
 
+## [Fase 4] — 2026-07-18 — Checkout manual via WhatsApp (D-011) implementado
+### Código (`real-vision-site`)
+- `src/hooks/usePurchase.ts` (novo) — grava `orders` (`pending`) e abre `wa.me` pré-preenchido,
+  reaproveitando o padrão do `CartDrawer.tsx` da Loja.
+- `src/components/sections/pro360/Pro360Options.tsx` e `Pro360FinalCTA.tsx` — botão "Garantir Acesso
+  à Formação" ligado ao hook; gate de login via `AuthModal` se não logado.
+- `src/components/academy/CourseEditor.tsx` — campo de preço: `type="number"` →
+  `type="text" inputMode="decimal"`, normaliza vírgula pra ponto (KI-19).
+### Banco (Supabase `xomtfkbvathddfpbknyo`, aplicado manualmente via SQL Editor — MCP não alcança
+este projeto, ver KI-20)
+- Policy `orders_insert_own_pending` (INSERT, `to authenticated`,
+  `user_id = auth.uid() and status = 'pending'`).
+- Policy `courses_select_authenticated_presale` (SELECT, `to authenticated`, `using (true)`) —
+  corrige KI-18 (curso não publicado ficava ilegível pro fluxo de compra durante a pré-venda).
+- Dado: `courses.price_cents` do Profissional 360 corrigido de `0` pra `99700`.
+### Verificação
+- Testado ponta a ponta pelo Felipe (`smarthomefg@gmail.com`): clique → WhatsApp abre com pedido e
+  preço certos (R$ 997,00). `npx tsc --noEmit` limpo.
+
 ## [Fix] — 2026-07-17 — Correção de login em produção (Site URL, Redirect URLs, OAuth Client Google)
 ### Supabase (projeto `xomtfkbvathddfpbknyo`, via Management API)
 - `site_url`: `http://localhost:3000` → `https://realvisionmaps.com`.

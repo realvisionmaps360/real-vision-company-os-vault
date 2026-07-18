@@ -46,9 +46,15 @@ Função helper `public.is_admin()` (security definer) → `profiles.role = 'adm
   (necessário para o painel listar alunos e conceder matrícula por e-mail; a política da Fase 1
   restringia ao próprio registro).
 - **`lesson_progress`:** usuário lê/escreve/apaga só o próprio; admin lê.
-- **`orders`:** usuário lê os próprios; escrita via service role (webhook) ou admin.
+- **`orders`:** usuário lê os próprios; escrita via service role (webhook) ou admin — **atualizado na
+  Fase 4 (D-011):** também aceita INSERT de qualquer usuário autenticado no próprio pedido pendente
+  (policy `orders_insert_own_pending`, `user_id = auth.uid() and status = 'pending'`), já que o
+  checkout do MVP é manual via WhatsApp, não webhook. Ver [[DECISIONS]] D-011.
 
-Total: 17 policies novas. SQL fonte: aplicado direto (sem arquivo de migração no repo — banco é a
+Total: 17 policies novas (Fase 2) + 2 na Fase 4 (`orders_insert_own_pending` e
+`courses_select_authenticated_presale` — esta última libera leitura do curso pra qualquer usuário
+autenticado mesmo com `published = false`, necessária pro fluxo de compra funcionar durante a
+pré-venda; corrige KI-18). SQL fonte: aplicado direto (sem arquivo de migração no repo — banco é a
 fonte de verdade; recriável a partir deste PRD).
 
 ## Verificação feita (2026-07-17) — anon + autenticada

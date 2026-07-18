@@ -329,6 +329,40 @@ related:
 - **Próximos passos:** implementar a Fase 4 (Sonnet, conforme decidido); depois disso, Felipe grava as
   aulas do Profissional 360 e vai passando os GUIDs do Bunny.
 
+## 2026-07-18 — Fase 4 implementada e testada ponta a ponta: compra manual via WhatsApp (D-011)
+- **Objetivo:** implementar o escopo fechado na sessão anterior (D-011) — botão "Comprar" grava
+  pedido pendente e abre WhatsApp pré-preenchido.
+- **Atividades:**
+  - `src/hooks/usePurchase.ts` (novo): busca o curso pelo slug, insere em `orders` (`status:
+    pending`, `gateway: whatsapp`), monta a mensagem e abre `wa.me` — reaproveitando o padrão do
+    `CartDrawer.tsx` da Loja.
+  - `Pro360Options.tsx` e `Pro360FinalCTA.tsx`: botão "Garantir Acesso à Formação" trocado de link
+    estático `wa.me` pra usar o hook; gate de login via `AuthModal` se o visitante não estiver logado.
+  - Duas policies de RLS novas, aplicadas pelo Felipe direto no SQL Editor do Supabase (MCP não
+    alcança esse projeto — mesma limitação de KI-05, causa raiz detalhada em KI-20):
+    - `orders_insert_own_pending` — aluno autenticado grava o próprio pedido pendente.
+    - `courses_select_authenticated_presale` — aluno autenticado lê o "cartão" do curso (id/título/
+      preço) mesmo com `published = false`. Achado durante o teste: a policy original de catálogo só
+      liberava leitura de curso publicado, o que bloqueava a compra durante a pré-venda (o Profissional
+      360 é intencionalmente não publicado ainda). Detalhe em KI-18.
+  - Bug de dado: `courses.price_cents` do Profissional 360 estava zerado (preço nunca preenchido no
+    admin). Corrigido pelo Felipe pra `99700` (R$ 997) via `/academy/admin`.
+  - Bug de código: campo "Preço (R$)" do `CourseEditor.tsx` era `<Input type="number">`, que rejeita
+    vírgula como separador decimal e zera o campo silenciosamente se digitado "997,00" (padrão BR).
+    Trocado pra `type="text" inputMode="decimal"`, normalizando vírgula pra ponto no `onChange`
+    (KI-19).
+- **Verificado ponta a ponta:** Felipe logado como `smarthomefg@gmail.com` clicou em "Garantir Acesso
+  à Formação" — WhatsApp abriu com "*Pedido — Real Vision Academy* Curso: Profissional 360 · Valor:
+  R$ 997,00 · E-mail: smarthomefg@gmail.com".
+- **Achado de metodologia:** a organização Supabase do Felipe (`omxmoraydyhocfwkuxnv`) já usa as 2
+  vagas de projeto ativo do plano grátis (VisionFlow + rv-acquisition) — mover o projeto da Academy
+  pra lá esbarraria nesse limite (confirmado por pesquisa: 2 projetos ativos por organização no free
+  tier, [Supabase Billing FAQ](https://supabase.com/docs/guides/platform/billing-faq)). Decidido manter
+  o projeto da Academy separado (conta smarthome), sem MCP — mudanças de banco continuam via SQL
+  Editor manual ou Management API. Ver KI-20.
+- **Próximos passos:** Fase 4 fechada. Fase 5 (conteúdo real das aulas + copy + testes e2e +
+  publicação) é a próxima.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]

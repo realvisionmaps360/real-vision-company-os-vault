@@ -110,6 +110,24 @@ related:
   console do PowerShell 5.1 exibe mojibake (`Ã©`, `Ã£`) mesmo quando o dado no banco está correto, o
   que pode levar a "corrigir" algo que não estava quebrado.
 
+## Fase 4
+- **KI-18 — ✅ RESOLVIDO (2026-07-18).** A policy de catálogo (`courses` SELECT só `published = true`)
+  bloqueava a compra durante a pré-venda — aluno autenticado não conseguia ler o curso pra montar o
+  pedido, mesmo logado, porque o Profissional 360 é intencionalmente não publicado ainda. Nova policy
+  `courses_select_authenticated_presale` (SELECT, `to authenticated`, `using (true)`) libera leitura
+  do curso pra qualquer autenticado, publicado ou não — módulos/aulas/materiais continuam gated como
+  antes (`published` + matrícula), só o "cartão" do curso (título/preço/slug) ficou visível antes de
+  publicar. Detalhe em [[TIMELINE]].
+- **KI-19 — ✅ RESOLVIDO (2026-07-18).** `CourseEditor.tsx` — campo de preço era `type="number"`,
+  rejeitava vírgula (padrão BR) e zerava o valor silenciosamente. Trocado pra
+  `type="text" inputMode="decimal"` com normalização de vírgula pra ponto no `onChange`.
+- **KI-20 — Organização Supabase do Felipe já no limite de 2 projetos ativos grátis** (VisionFlow +
+  rv-acquisition). O projeto da Academy (conta smarthome, `xomtfkbvathddfpbknyo`) fica de fora do MCP
+  por esse motivo — não é só questão de reconectar o conector, é limite real do plano free (confirmado
+  em [Supabase Billing FAQ](https://supabase.com/docs/guides/platform/billing-faq)). Mudanças de
+  schema/RLS nesse projeto continuam precisando ser rodadas manualmente pelo Felipe (SQL Editor) ou
+  via Management API com PAT — mesma raiz de KI-05.
+
 ## Decisões em aberto (não são problemas, mas travam fases)
 - Nenhuma no momento — pagamento (D-005, Stripe) e vídeo (D-006, Bunny Stream) já decididos.
 
