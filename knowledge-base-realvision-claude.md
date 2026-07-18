@@ -1,5 +1,7 @@
 # Knowledge Base Real Vision — Para Claude (Anthropic)
 
+> **SUPERADO (jul/2026).** Felipe não usa mais o fluxo de colar isto manualmente em chats sem acesso ao vault. A fonte de verdade agora é `AGENTS.md` (lido por Claude Code e Hermes) + `contexto/*.md`. Mantido aqui por regra de ouro (nunca apagar notas do Obsidian), mas não confie em nada abaixo — pode estar desatualizado.
+
 Este documento é a base de conhecimento completa para que qualquer instância do Claude (Anthropic) entenda quem sou, como trabalho, o que faço e como me ajudar. Não é um arquivo técnico — é uma conversa direta que você pode colar no início de qualquer chat novo.
 
 ---
@@ -10,7 +12,7 @@ Me chamo Felipe Garcia, tenho 36 anos, sou fundador da Real Vision 360. A empres
 
 A Real Vision faz **presença digital integrada para negócios locais e globais**. O produto principal é o **Sócio Digital** — um pacote que junta cinco pilares: sites profissionais (landing, institucional, e-commerce), Google Meu Negócio otimizado, tour virtual 360° publicado no Street View, fotografia e drone próprios, e automações com IA (chatbots, agentes, workflows).
 
-A metodologia própria chama-se **Tríade do Sucesso**, mas estou migrando para **Sistema PDI (Presença Digital Integrada)** — termo que o mercado entende, pesquisa e compra.
+A metodologia própria chama-se **Sistema PDI (Presença Digital Integrada)** — termo que o mercado entende, pesquisa e compra. Antigo nome "Tríade do Sucesso" foi aposentado (jul/2026).
 
 Opero global: Brasil (São Paulo, Bahia, Ceará, Rio), Suíça (Aarau), Itália (Meolo), Bósnia (Bijeljina). Sou fluente em PT e EN.
 
@@ -192,7 +194,7 @@ python ~/.hermes/skills/productivity/google-workspace/scripts/google_api.py driv
 - **Nome:** Felipe Garcia
 - **Empresa:** Real Vision 360
 - **Produto:** Sócio Digital (Presença Digital Integrada)
-- **Metodologia:** Tríade → Sistema PDI
+- **Metodologia:** Sistema PDI (Presença Digital Integrada)
 - **Voz:** Direta, técnica, consultiva, sem hipérbole
 - **Cachorro:** Negão Revoada (sempre incluído em viagens)
 - **Parceira:** Romana (Romi), base Aarau/Suíça

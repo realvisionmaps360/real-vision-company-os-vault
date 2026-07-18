@@ -20,7 +20,7 @@ Leia o contexto principal da empresa:
 Esse arquivo contém:
 - O que a Real Vision faz e para quem
 - Portfólio completo (clientes na BA + pipeline internacional)
-- Metodologia própria ("Tríade do Sucesso", processos de site e tour)
+- Metodologia própria ("Sistema PDI — Presença Digital Integrada", processos de site e tour)
 - Visão estratégica & expansão (curso online, rede de fotógrafos 360, alcance bilíngue)
 - Stack e links principais
 

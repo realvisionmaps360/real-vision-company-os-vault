@@ -24,7 +24,7 @@ O texto-base é a fonte. Nunca reescrever do zero — **adaptar** a partir dele.
 
 - Liderar sempre com o carro-chefe: **sites, automações/IA e tours 360°**. Foto/drone só como complemento.
 - **Nunca usar:** "incrível", "sensacional", "fantástico", "agência criativa", "fotógrafo de tour", "o melhor", "100% de satisfação", superlativo sem dado.
-- **Usar:** presença digital integrada, sistema digital funcional, visibilidade no Google, conversão, GEO, resultado mensurável, Tríade do Sucesso.
+- **Usar:** presença digital integrada, sistema digital funcional, visibilidade no Google, conversão, GEO, resultado mensurável, Sistema PDI (Presença Digital Integrada).
 - **Não inventar dados.** Confirmados: 30+ projetos, 5+ segmentos, 10+ cidades, cliente na Suíça (Solarium Aarau). Qualquer número novo → perguntar ao Felipe.
 - Estrutura de texto: ponto direto → contexto curto → CTA clara.
 

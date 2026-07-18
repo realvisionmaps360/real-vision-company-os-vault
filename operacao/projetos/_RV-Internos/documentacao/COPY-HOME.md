@@ -183,7 +183,7 @@ Toda copy aqui está pronta pra ir direto pro briefing do Claude Design (Fase 4)
 > Primeiro cliente internacional. Tour 360° entregue com publicação no Street View.
 
 **Condomínio Vila Mandela** — Sistema Integrado · Itacaré (BA)
-> Aplicação completa da Tríade do Sucesso: site + GMN + tour 360°.
+> Aplicação completa do Sistema PDI: site + GMN + tour 360°.
 
 **HUB Ilha do Contrato** — HUB · Igrapiúna (BA)
 > Portal imersivo unindo múltiplos negócios da região num só ambiente digital.

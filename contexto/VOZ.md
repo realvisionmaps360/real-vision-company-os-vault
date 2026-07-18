@@ -24,7 +24,7 @@ Misturamos linguagem de resultado (conversão, escalabilidade, ROI, visibilidade
 - Sistema digital funcional
 - Visibilidade no Google
 - Conversão / Taxa de conversão
-- Tríade do Sucesso
+- Sistema PDI (Presença Digital Integrada)
 - GEO (Generative Engine Optimization)
 - Tour virtual / Tour imersivo
 - Otimização estratégica

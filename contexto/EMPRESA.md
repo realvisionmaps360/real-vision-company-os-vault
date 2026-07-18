@@ -43,7 +43,7 @@ Negócios locais e globais que precisam de presença digital coerente: pousadas,
 | Projeto | Categoria | Local |
 |---|---|---|
 | Solarium Aarau | Ecossistema Digital Completo | Aarau – Suíça 🇨🇭 |
-| Vila Mandela | Website & Tríade do Sucesso | Itacaré – BA |
+| Vila Mandela | Website & Sistema PDI | Itacaré – BA |
 | Universo Paralello 18° | Tour Virtual / HUB | Pratigi, Ituberá – BA |
 | Itacaré Virtual | Portal Turístico | Itacaré – BA |
 | Casa Amarela | Landing Page & Tour Virtual | Barra Grande – BA |
@@ -62,7 +62,7 @@ Negócios locais e globais que precisam de presença digital coerente: pousadas,
 
 ## Metodologia própria
 
-**"Tríade do Sucesso"** — metodologia que orienta a entrega de presença digital integrada para PMEs.
+**Sistema PDI (Presença Digital Integrada)** — metodologia que orienta a entrega de presença digital integrada para PMEs. Substitui o nome antigo "Tríade do Sucesso" (renomeado em jul/2026).
 
 **Processo de site (6 etapas):**
 Diagnóstico estratégico → Arquitetura de informação → Design e prototipagem → Desenvolvimento técnico → Revisão estruturada → Publicação + suporte inicial
