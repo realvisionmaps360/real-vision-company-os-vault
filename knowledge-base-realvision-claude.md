@@ -1,5 +1,7 @@
 # Knowledge Base Real Vision — Para Claude (Anthropic)
 
+> **SUPERADO (jul/2026).** Felipe não usa mais o fluxo de colar isto manualmente em chats sem acesso ao vault. A fonte de verdade agora é `AGENTS.md` (lido por Claude Code e Hermes) + `contexto/*.md`. Mantido aqui por regra de ouro (nunca apagar notas do Obsidian), mas não confie em nada abaixo — pode estar desatualizado.
+
 Este documento é a base de conhecimento completa para que qualquer instância do Claude (Anthropic) entenda quem sou, como trabalho, o que faço e como me ajudar. Não é um arquivo técnico — é uma conversa direta que você pode colar no início de qualquer chat novo.
 
 ---
