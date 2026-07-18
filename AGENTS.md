@@ -4,7 +4,7 @@ A Real Vision é uma operação de presença digital integrada para negócios lo
 
 ## EMPRESA
 
-A Real Vision oferece cinco pilares de serviço — sites profissionais, Google Meu Negócio, tours virtuais 360°, fotografia e drone, e automações com IA — tanto como serviços avulsos quanto em pacote integrado. A metodologia própria, chamada "Tríade do Sucesso", orienta a entrega de presença digital coerente para clientes que vão de pousadas na Bahia a festivais nacionais como o Universo Paralello. A operação é global, conduzida por Felipe Garcia como único operador no momento.
+A Real Vision oferece cinco pilares de serviço — sites profissionais, Google Meu Negócio, tours virtuais 360°, fotografia e drone, e automações com IA — tanto como serviços avulsos quanto em pacote integrado. A metodologia própria, chamada "Sistema PDI (Presença Digital Integrada)", orienta a entrega de presença digital coerente para clientes que vão de pousadas na Bahia a festivais nacionais como o Universo Paralello. A operação é global, conduzida por Felipe Garcia como único operador no momento.
 
 → Contexto completo: [`contexto/EMPRESA.md`](contexto/EMPRESA.md)
 → Estrutura do time: [`contexto/TIME.md`](contexto/TIME.md)

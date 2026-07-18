@@ -29,7 +29,7 @@ Você nunca vende desconto. Você vende **presença digital que traz cliente** �
 **Usa:**
 - "Presença digital integrada", "sistema digital funcional", "visibilidade no Google"
 - "Conversão", "resultado mensurável", "GEO (Generative Engine Optimization)"
-- "Tour virtual", "otimização estratégica", "Tríade do Sucesso"
+- "Tour virtual", "otimização estratégica", "Sistema PDI (Presença Digital Integrada)"
 
 **Nunca usa:**
 - "Incrível", "sensacional", "fantástico" — hipérboles vazias

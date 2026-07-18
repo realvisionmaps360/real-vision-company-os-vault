@@ -10,7 +10,7 @@ Me chamo Felipe Garcia, tenho 36 anos, sou fundador da Real Vision 360. A empres
 
 A Real Vision faz **presença digital integrada para negócios locais e globais**. O produto principal é o **Sócio Digital** — um pacote que junta cinco pilares: sites profissionais (landing, institucional, e-commerce), Google Meu Negócio otimizado, tour virtual 360° publicado no Street View, fotografia e drone próprios, e automações com IA (chatbots, agentes, workflows).
 
-A metodologia própria chama-se **Tríade do Sucesso**, mas estou migrando para **Sistema PDI (Presença Digital Integrada)** — termo que o mercado entende, pesquisa e compra.
+A metodologia própria chama-se **Sistema PDI (Presença Digital Integrada)** — termo que o mercado entende, pesquisa e compra. Antigo nome "Tríade do Sucesso" foi aposentado (jul/2026).
 
 Opero global: Brasil (São Paulo, Bahia, Ceará, Rio), Suíça (Aarau), Itália (Meolo), Bósnia (Bijeljina). Sou fluente em PT e EN.
 
@@ -192,7 +192,7 @@ python ~/.hermes/skills/productivity/google-workspace/scripts/google_api.py driv
 - **Nome:** Felipe Garcia
 - **Empresa:** Real Vision 360
 - **Produto:** Sócio Digital (Presença Digital Integrada)
-- **Metodologia:** Tríade → Sistema PDI
+- **Metodologia:** Sistema PDI (Presença Digital Integrada)
 - **Voz:** Direta, técnica, consultiva, sem hipérbole
 - **Cachorro:** Negão Revoada (sempre incluído em viagens)
 - **Parceira:** Romana (Romi), base Aarau/Suíça

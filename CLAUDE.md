@@ -38,7 +38,7 @@ Fatos sobre a empresa vivem nos arquivos dedicados abaixo — **eles são a font
 
 ### Real Vision 360 — A Empresa
 **Produto principal:** **Sócio Digital** — presença digital integrada com IA, reunindo os 5 pilares.
-**Metodologia:** **Tríade do Sucesso** (nome vigente — qualquer rebranding só entra aqui depois de confirmado em `contexto/EMPRESA.md`).
+**Metodologia:** **Sistema PDI (Presença Digital Integrada)** — sucede o antigo nome "Tríade do Sucesso" (renomeado em jul/2026, confirmado em `contexto/EMPRESA.md`).
 
 **5 Pilares de Serviço:**
 1. Sites Profissionais (Landing, Institucional, E-commerce)

@@ -83,7 +83,7 @@ Cada argumento sustentado por dado real, case da Real Vision ou exemplo concreto
 Todo post conecta ao que a Real Vision faz. Formas de ancorar:
 - Mostrar o que a Real Vision entrega por padrão que outros não fazem
 - Citar um case real do portfólio (com link-card quando existir)
-- Referenciar a metodologia Tríade do Sucesso quando relevante
+- Referenciar a metodologia Sistema PDI (Presença Digital Integrada) quando relevante
 
 ### 4. CTA (postCta)
 Sempre presente. Direto ao próximo passo. Link para WhatsApp com mensagem pré-preenchida contextual ao post. Use este formato:
