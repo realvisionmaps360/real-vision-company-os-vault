@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-18
+updated: 2026-07-19
 related:
   - ARCHITECTURE
   - MASTER_PRD
@@ -151,7 +151,42 @@ related:
 - **Impacto:** 1 coluna nova em `enrollments`. Rota `/academy/certificado/:id`. Painel admin ganhou aba
   de liberação. Pendente: decidir entre 2 mockups de design (escuro/claro) e formalizar como padrão.
 
+## D-013 — Anuidade (membership) como entitlement novo, separado da matrícula
+- **Data:** 2026-07-19
+- **Contexto:** A área de membros evolui para um hub com comunidade (ver [[PRD-006-hub-comunidade]]).
+  Felipe quer cobrar uma anuidade pelo acesso à comunidade + Mentor IA, mantendo os cursos como
+  produtos avulsos (D-003).
+- **Problema:** A anuidade dá acesso a tudo (modelo assinatura) ou é um direito à parte dos cursos?
+- **Decisão:** Anuidade é um **entitlement próprio** (`memberships`), **independente** de `enrollments`.
+  Duas trilhas ortogonais: **Membro** (anuidade → comunidade + Biblioteca de Prompts + Mentor IA futuro)
+  e **Aluno** (matrícula → curso adquirido). A pessoa pode ter uma, outra, ou as duas.
+- **Justificativa:** Reusa `enrollments`, que já existe pros cursos; separa a receita de comunidade da
+  de curso; modelagem simples (uma tabela nova).
+- **Impacto:** Nova tabela `memberships`. D-003 (curso avulso) permanece válida — a anuidade é produto
+  novo, não a substitui. "Comprar curso dá X meses de anuidade de brinde" fica como gatilho futuro,
+  fora do MVP.
+
+## D-014 — Comunidade nativa no Supabase (não plataforma pronta)
+- **Data:** 2026-07-19
+- **Contexto:** D-009 adiou as tabelas de comunidade por falta de spec. Agora há spec
+  ([[PRD-006-hub-comunidade]]). Referência estrutural: Circle (comunidade ibe.IA / Sem Codar).
+- **Problema:** Construir a comunidade nativa no nosso Supabase, ou usar Circle/Skool e integrar?
+- **Decisão:** **Nativa**, dentro do `/academy`, no Supabase da Academy (`xomtfkbvathddfpbknyo`).
+- **Justificativa:** Tudo nosso, integração total com cursos/progresso/tiers, zero custo de plataforma,
+  zero vendor lock-in (filosofia RV). Recria a estrutura do Circle com a marca própria.
+- **Impacto:** Atualiza D-009 (deixa de ser "adiado sem spec"). Banco: `spaces`, `posts`, `comments`,
+  `reactions` + extensão de `profiles`. Mais trabalho de dev, assumido conscientemente.
+
+## D-015 — Nomenclatura de tiers de acesso
+- **Data:** 2026-07-19
+- **Decisão:** **Visitante** (não logado) · **Usuário** (logado, grátis) · **Membro** (anuidade ativa) ·
+  **Aluno** (matrícula em curso). Gating do conteúdo da comunidade por `min_tier` (`free`/`member`).
+- **Justificativa:** Linguagem única entre Felipe, docs e código; evita confundir "usuário" com
+  "membro" — uma fonte clássica de bug de controle de acesso.
+- **Impacto:** Coluna `min_tier` nas tabelas de conteúdo; a UI diferencia o que cada tier enxerga.
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]
 - [[CONTEXT]]
+- [[PRD-006-hub-comunidade]]

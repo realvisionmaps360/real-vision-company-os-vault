@@ -40,24 +40,26 @@ apresentar **antes** de escrever qualquer código.
 
 ---
 
-## Escolha de modelo de execução: Fable 5 vs. Claude Code direto
+## Escolha de modelo de execução: Opus 4.8 vs. Fable 5
 
-Fable 5 é o modelo mais capaz da Anthropic, feito para **long-horizon agentic work** — contexto de
-1M tokens, raciocínio pesado, autonomia longa. Mas custa 10x mais em input e 50x mais em output que
-Sonnet. Reservar pra quando o ganho compensa o custo.
+Todos os modelos (Opus 4.8, Fable 5, Sonnet, Haiku) rodam **dentro do Claude Code** — Claude Code é a
+ferramenta, não um modelo. A decisão é qual modelo apontar pra construir cada fase. O padrão atual é o
+**Opus 4.8**: topo de linha e rápido, dá conta de schema + arquitetura no nosso fluxo incremental
+(fase por fase, com aprovação do Felipe no meio).
+
+Fable 5 é feito para **long-horizon agentic work** — contexto de 1M tokens, autonomia longa — mas
+custa 10x mais em input e 50x mais em output que o Sonnet. Reservar só pra quando o ganho compensa o
+custo.
 
 **Usar Fable 5 quando:**
-- A fase tem muitas decisões de arquitetura/schema que se acumulam (ex: Fase 2 — modelo de dados +
-  painel admin; Fase 3 — área de membros + player + progresso).
-- Escopo grande, muitos arquivos, sessão longa sem supervisão.
+- Uma fase vira uma maratona longa que você quer deixar rodando **sem supervisão** (escopo grande,
+  muitos arquivos, sessão autônoma).
 
-**Resolver direto no Claude Code (sem Fable) quando:**
-- Tarefa mecânica, bem definida, poucos arquivos (ex: Fase 1 — repontar config, trocar tela de auth,
-  ativar provider).
-- Correções pontuais, ajustes de config, tarefas curtas mesmo dentro de um projeto grande.
+**Ficar no Opus 4.8 (padrão) quando:**
+- O trabalho é tocado fase por fase, com aprovação no meio — que é o nosso jeito. Cobre schema, área
+  de membros, comunidade, correções e ajustes.
 
-Regra prática: se dá pra descrever o resultado esperado em uma frase e não envolve decisão de
-arquitetura nova, não precisa do Fable.
+Regra prática: no fluxo incremental da RV, o padrão é Opus 4.8. Fable 5 é a exceção pra autonomia longa.
 
 **Doc oficial do Fable 5** (ler antes de decidir/prompt):
 https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5
