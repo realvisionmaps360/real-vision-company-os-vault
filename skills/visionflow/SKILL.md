@@ -232,4 +232,29 @@ Só escreve em `client_pending_updates`. O app grava nas tabelas reais ao Aprova
 supabase functions deploy analyze-notes --project-ref ghwjetvazmdlaqidgxqi
 ```
 
+---
+
+## 13. PITFALL: como testar RLS de verdade (não só "criei a policy")
+
+Criar a policy não prova que ela funciona. Testar de verdade exige simular um usuário autenticado SEM a role em questão, dentro de uma transação que não deixa rastro:
+
+```sql
+begin;
+set local role authenticated;
+set local request.jwt.claims = '{"sub":"00000000-0000-0000-0000-000000000000","role":"authenticated"}';
+select count(*) from public.<tabela>;  -- deve ser 0 se a policy é admin-only
+rollback;
+```
+
+Usado para validar `monitored_sites`/`uptime_checks`/`status_changes` no Plano 006 Fase 2 (20/07/2026) — confirmou 0 linhas visíveis a não-admin. Rodar sempre depois de `get_advisors(type: security)`, não no lugar dele — o advisor pega policy ausente/mal configurada, mas não prova que uma policy existente está fazendo o que deveria.
+
+## 14. PITFALL: verificar dark mode manualmente no navegador engana
+
+Duas pegadinhas descobertas testando o Plano 006 Fase 3 (tema âmbar/dark):
+
+1. **`useTheme()` (`src/hooks/useTheme.ts`) só aplica a classe `.dark` quando `<Header />` está montado** — ou seja, só depois de logado. Alternar `document.documentElement.classList.add('dark')` manualmente via DevTools/JS na tela de login funciona para inspecionar CSS variables (`getComputedStyle(...).getPropertyValue('--x')`), mas não reflete o app real logado.
+2. **HMR do Vite pode deixar `getComputedStyle()` de um elemento específico preso num valor antigo** mesmo com a variável CSS já atualizada na raiz — um teste com elemento recém-criado (`document.createElement`) sempre reflete o valor atual; um elemento que já existia na página antes da edição pode mentir. Se o computed style de um botão/elemento parecer "errado" depois de editar `index.css` em sessão com dev server já rodando, **reiniciar o servidor** (`preview_stop` + `preview_start`) antes de desconfiar do CSS.
+
+Sem login real disponível (Google OAuth), a verificação ficou limitada a CSS computado + build limpo — não substitui uma conferência visual do Felipe logado.
+
 Documentação completa: `visionflow/docs/FEATURE-IA-INSIGHTS.md`
