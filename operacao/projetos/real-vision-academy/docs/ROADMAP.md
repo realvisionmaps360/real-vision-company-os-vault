@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-19
 depends_on:
   - MASTER_PRD
   - ARCHITECTURE
@@ -70,9 +70,24 @@ diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
   a promessa na oferta e planejar a construção dentro da própria Fase 5, em vez de tirar da página.
   Certificado é mais simples (tela/PDF gerado ao concluir o curso, sem tabela nova); comunidade seguirá
   sem spec até ser desenhada.
+- **Item adicionado 18/07/2026 (KI-21):** área de membros sem porta de entrada no header + evolução
+  do `/academy` (resumo agregado de progresso, perfil básico). Plano completo em
+  [[PRD-005-area-de-membros]].
+
+## Fase 6 — Hub da área de membros + Comunidade v1 ✅ concluída (2026-07-19)
+- **Objetivo:** transformar o `/academy` de grade de cursos num hub/ecossistema com comunidade nativa
+  (referência estrutural: Circle / ibe.IA), recriada com a identidade da RV.
+- **Escopo (MVP):** casca do hub (sidebar) + Dashboard + Comunidade v1 (feed/espaços/post/comentário/
+  curtida) + perfil público do membro + Biblioteca de Prompts + gating por tier. Pré-requisito duro:
+  trigger de auto-criação de `profiles` (KI-11).
+- **Decisões:** D-013 (anuidade/`memberships`), D-014 (comunidade nativa), D-015 (tiers). Plano completo:
+  [[PRD-006-hub-comunidade]].
+- **Fora do MVP (fases seguintes):** gamificação, missões, quiz por módulo, Mentor IA (RAG), marketplace
+  interno, mapa de oportunidades, IA proativa de acompanhamento.
 
 ## Futuro (exige novo planejamento)
-Assinatura · comunidade · certificados · trilhas · tutor de IA · i18n (EN/DE) · ferramentas digitais.
+Assinatura de todos os cursos · certificados (parcial, D-012) · trilhas · gamificação · missões ·
+Mentor IA (RAG) · marketplace · mapa de oportunidades · i18n (EN/DE) · ferramentas digitais.
 Ver [[IDEAS]].
 
 ## Documentos relacionados

@@ -128,6 +128,25 @@ related:
   schema/RLS nesse projeto continuam precisando ser rodadas manualmente pelo Felipe (SQL Editor) ou
   via Management API com PAT — mesma raiz de KI-05.
 
+## Fase 5
+- **KI-21 — Header sem link pra área de membros.** `HomeNav.tsx` só mostra "Painel Admin" no dropdown
+  de conta pra quem é admin; não existe item "Meus Cursos" pra ninguém, admin ou aluno comum. Somado
+  ao fato de `AuthModal.tsx` não redirecionar após login (proposital — o mesmo modal serve pro
+  like/comentário do blog), o aluno loga e não tem nenhum caminho até `/academy` a partir do header,
+  só digitando a URL direto. Achado 18/07/2026 a partir de relato do Felipe (login "não leva a lugar
+  nenhum"). Ninguém pegou isso na Fase 3 porque os testes de então usaram URL direta ou a conta admin
+  (que tem o link). Plano de correção + evolução do `/academy` em [[PRD-005-area-de-membros]].
+
+## Fase 6
+- **KI-22 — ✅ RESOLVIDO (2026-07-19, Passo 6).** `usePrompts`/`useSkills` tinham `queryKey` sem o
+  `user.id` (`["prompts"]`/`["skills"]`). Ao trocar de conta **na mesma aba** (sign out → login com
+  outra conta, sem recarregar a página), o react-query servia o cache da conta anterior — Felipe viu
+  um item `member` aparecer destravado pra uma conta sem membership. Corrigido incluindo `user?.id`
+  no `queryKey` das duas hooks. **Suspeita não confirmada:** `useSpaces`/`useCommunityPosts`/
+  `useReactions` (Passo 5) usam o mesmo padrão de `queryKey` sem `user.id` — mesmo risco pode existir
+  lá, mas não verificado nem corrigido (fora do escopo do Passo 6; a verificação da Comunidade usou
+  contas separadas via Playwright, que não expõe esse cache cruzado). Avaliar no futuro.
+
 ## Decisões em aberto (não são problemas, mas travam fases)
 - Nenhuma no momento — pagamento (D-005, Stripe) e vídeo (D-006, Bunny Stream) já decididos.
 

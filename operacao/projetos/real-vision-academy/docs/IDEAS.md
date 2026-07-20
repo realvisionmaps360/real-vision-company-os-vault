@@ -31,6 +31,14 @@ related:
 - Prompts `.md` como produto destacado — biblioteca de prompts por curso/nicho.
 - Cupons/afiliados para parceiros.
 - Gamificação de progresso (badges).
+- **Captação via Instagram → recompensa na Biblioteca de Prompts/Skills (2026-07-19).** Felipe comenta
+  em posts/Reels, ferramenta de automação externa (ex: ManyChat, ou "respostas automáticas" nativas do
+  Instagram) detecta a palavra-chave no comentário e manda uma DM automática com um link de cadastro.
+  A parte da Academy é só o destino do link (página de cadastro por e-mail) — a automação do Instagram
+  em si não é construída aqui. Decisões pendentes antes de implementar: (1) o que conta como
+  "recompensa" — liberar conteúdo hoje `member` pra quem se cadastra por essa campanha (bypass de
+  tier) ou só mostrar o conteúdo `free` que qualquer cadastro novo já vê; (2) como marcar a origem do
+  cadastro (parâmetro na URL do link, salvo no perfil) pra Felipe medir quantos vieram do Instagram.
 
 ## Documentos relacionados
 - [[ROADMAP]]

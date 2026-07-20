@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-19
 ---
 
 # 🎓 Real Vision Academy — Índice do Projeto
@@ -16,7 +16,9 @@ updated: 2026-07-17
 > **Comece por [[CONTEXT]]** para saber o estado atual em 30 segundos.
 
 ## 🚦 Estado atual
-- **Fase:** Fases 1+2 publicadas em produção (auth unificada + Google OAuth + modelo de dados + painel admin + login global no header)
+- **Fase:** Fase 6 (Hub + Comunidade v1) concluída no código e verificada no preview — passos 3 a 6 do
+  [[PRD-006-plano-execucao]] fechados (memberships/gating, casca do hub, Comunidade, Biblioteca de
+  Prompts+Skills). Aguardando Felipe decidir próxima fase.
 - Resumo executivo → [[CONTEXT]]
 
 ## 📌 Visão do produto & requisitos
@@ -45,6 +47,9 @@ updated: 2026-07-17
 
 ## 📂 PRDs por módulo
 - [[PRD-002-modelo-de-dados]] — schema do catálogo + RLS (Fase 2, implementado)
+- [[PRD-004-analytics-posthog]] — analytics PostHog no site inteiro (draft, aguardando aprovação)
+- [[PRD-005-area-de-membros]] — entrada da área de membros no header + resumo + perfil (draft, aguardando aprovação)
+- [[PRD-006-hub-comunidade]] — hub da área de membros + comunidade nativa v1 (draft, aguardando aprovação)
 
 ## 🔗 Fora deste vault
 - **Código:** `operacao/projetos/_RV-Internos/real-vision-site` (rota `/academy`)

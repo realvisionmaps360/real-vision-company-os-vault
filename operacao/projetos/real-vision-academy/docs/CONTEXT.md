@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-19
 related:
   - MASTER_PRD
   - ARCHITECTURE
@@ -18,6 +18,37 @@ related:
 # Contexto Atual — Real Vision Academy
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
+
+## Fase 6 em curso (2026-07-19) — Hub + Comunidade v1
+Decidido evoluir o `/academy` de grade de cursos para um **hub/ecossistema** com **comunidade nativa**
+(referência estrutural: Circle / ibe.IA). Plano completo em [[PRD-006-hub-comunidade]] — **aprovado pelo
+Felipe em 2026-07-19**. Modelo de acesso: duas trilhas ortogonais — **Membro** (anuidade → comunidade +
+Mentor IA futuro) e **Aluno** (matrícula → curso). Decisões novas: D-013 (anuidade), D-014 (comunidade
+nativa), D-015 (nomenclatura de tiers). Execução: Opus 4.8, fase por fase.
+**Fase 0 fechada (2026-07-19):** o trigger de `profiles` já existia da Fase 3 (KI-11 estava resolvido;
+o PRD é que citava a versão velha); backfill de 1 órfão executado → 4 usuários / 4 perfis, verificado.
+**Passo 2 fechado (2026-07-19):** `profiles` estendido (`handle`, `company`, `city`, `segment`, `links`,
+`headline`, `bio`, `avatar_url`) + view `public.public_profiles` (segura, sem email/role) + telas
+`/academy/conta` e `/academy/membro/:handle`. Verificado ponta a ponta (build, RLS/segurança por fora do
+app, fluxo autenticado completo via Playwright). Detalhe em [[TIMELINE]].
+**Passo 3 fechado (2026-07-19):** tabela `memberships` (status active/expired) + hook `useMembership()`.
+**Passo 4 fechado (2026-07-19):** casca `AcademyShell` (sidebar Início/Aprender/Comunidade/Prompts/
+Conta) + `Dashboard.tsx` em `/academy`.
+**Passo 5 fechado (2026-07-19):** Comunidade v1 — tabelas `spaces`/`posts`/`comments`/`reactions` + RLS
+por tier + telas `/academy/comunidade` e `/academy/comunidade/post/:id`. Verificado ponta a ponta
+(gate de canal `member`, post, curtida, comentário). Detalhe em [[TIMELINE]].
+**Passo 6 fechado (2026-07-19):** Biblioteca de Prompts + Skills — escopo ampliado na revisão (duas
+tabelas separadas `prompts`/`skills`, campo `description`, cadastro por tela de admin em vez de SQL
+manual). Views `prompts_gated`/`skills_gated` com redação de coluna por tier + hooks `usePrompts`/
+`useSkills` + `PromptsPage.tsx` (`/academy/prompts`) + abas de admin em `AdminAcademy.tsx`. Bug de
+cache entre contas achado e corrigido (KI-22). Verificado ponta a ponta (admin CRUD + aluno com/sem
+membership). Detalhe em [[TIMELINE]].
+**MVP da Fase 6 (Hub + Comunidade) fechado** — passos 3 a 6 do [[PRD-006-plano-execucao]] concluídos.
+Roteiros dos cursos: Felipe decidiu **não** mexer agora. Ideia da automação de Instagram (captação →
+recompensa na biblioteca) registrada em [[IDEAS]], sem implementação.
+**Próximo passo:** nenhum item de código aberto no momento — aguardar Felipe decidir a próxima fase
+(ver "Futuro" no [[ROADMAP]]: gamificação, Mentor IA, marketplace, i18n, etc.) ou retomar pendências
+antigas (Bunny Stream real, conteúdo do Profissional 360, Stripe).
 
 ## Fase atual
 **Fase 3 (área de membros + player + progresso) implementada e verificada ponta a ponta** (2026-07-18).

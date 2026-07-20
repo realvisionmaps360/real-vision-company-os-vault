@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-18
+updated: 2026-07-19
 related:
   - ROADMAP
   - CHANGELOG
@@ -384,6 +384,180 @@ related:
 - **Próximos passos:** Felipe escolhe o mockup do certificado; Felipe passa foto(s) pra seção do
   instrutor; aguardando Felipe gravar as 40 aulas e passar os GUIDs do Bunny Stream; materiais
   complementares por aula; testes finais; só então `published=true`.
+
+## 2026-07-19 — Planejamento do Hub + Comunidade v1 (PRD-006)
+- **Objetivo:** transformar o `/academy` de grade de cursos num hub/ecossistema (aprende, aplica,
+  encontra parceiros, acompanha evolução), com comunidade nativa. Referência estrutural: Circle
+  (comunidade ibe.IA / Sem Codar), recriada com a identidade da RV.
+- **Atividades:**
+  - Sessão de conversa/análise com o Felipe. Leitura da doc viva + das 20 telas da comunidade de
+    referência (pasta `TEMP/COMUNIDADE RV`).
+  - Correção de rota importante do processo: a análise inicial foi feita sem carregar as skills certas
+    (`master-visionair`, `rv-skill-scout`, `rv-course-builder`). Ao recarregá-las, surgiram dois furos:
+    (1) "gravar hoje" é parcial — só o Módulo 1 do Profissional 360 tem roteiro; (2) a comunidade exige
+    trigger de auto-criação de `profiles` (KI-11), que não existe.
+  - Escrita do [[PRD-006-hub-comunidade]] (7 telas, delta de schema, Fase 0, sequência, fora de escopo).
+- **Decisões:** D-013 (anuidade/`memberships` separada de matrícula), D-014 (comunidade nativa no
+  Supabase), D-015 (nomenclatura de tiers: Visitante/Usuário/Membro/Aluno).
+- **Modelo de execução:** construir com Opus 4.8, fase por fase (Fable 5 só pra maratona longa não
+  supervisionada — regra da `master-visionair` sobre "Fable vs. Claude Code" está desatualizada, a
+  corrigir).
+- **Próximos passos:** aprovação do Felipe do PRD-006; Fase 0 (trigger de `profiles` + backfill);
+  frente paralela de roteiros via [[rv-course-builder]] (Módulos 0, 2, 3, 4, 5).
+
+## 2026-07-19 — PRD-006 aprovado + Fase 0 verificada e fechada
+- **Objetivo:** aprovação do plano do hub e execução da Fase 0 (pré-requisito de `profiles`).
+- **Atividades:**
+  - Felipe aprovou o [[PRD-006-hub-comunidade]] (status → approved). Roteiros dos cursos: decidiu
+    **não** mexer agora.
+  - Skill `master-visionair` corrigida: seção "Fable 5 vs. Claude Code direto" → "Opus 4.8 vs.
+    Fable 5" (Claude Code é a ferramenta, não um modelo; padrão atual é Opus 4.8, Fable só pra
+    maratona autônoma).
+  - Diagnóstico ao vivo do banco (Management API + PAT da sessão): o trigger de auto-criação de
+    `profiles` **já existia** (`on_auth_user_created` → `handle_new_user()`, da Fase 3) — a
+    afirmação do PRD-006 vinha do KI-11 desatualizado; KNOWN_ISSUES já estava correto. Restava 1
+    usuário órfão (conta pessoal do Felipe, `felipegarciajericoacoara@gmail.com`, criada antes do
+    trigger).
+  - Backfill executado (`INSERT ... SELECT` genérico) → estado final verificado: **4 usuários, 4
+    perfis**. PRD-006 corrigido (Fase 0 marcada resolvida).
+- **Lição:** verificar estado de produção ao vivo antes de afirmar — a doc (e a memória da sessão)
+  estava um passo atrás do banco.
+- **Próximos passos:** passo 2 do PRD-006 — estender `profiles` (handle, company, city, segment,
+  links, headline, bio) + telas de Perfil público e Conta.
+
+## 2026-07-19 — Passo 2 do PRD-006: `profiles` estendido + Perfil público + Conta
+- **Objetivo:** base de identidade pra qualquer post/comunidade ter autor (item 7 + 5 do PRD-006).
+- **SQL aplicado no Supabase `xomtfkbvathddfpbknyo`** (Felipe rodou no SQL Editor, PAT usado só pra
+  leitura de confirmação): `profiles` ganhou `handle` (unique case-insensitive, formato
+  `^[a-z0-9_]{3,30}$`), `company`, `city`, `segment`, `links` (jsonb), `headline` (≤120),
+  `bio` (≤600), `avatar_url`. Política `profiles_update_own` já existia (Fase 1) — não duplicada.
+  Criada view `public.public_profiles` (`security_barrier`, sem `email`/`role`) com
+  `grant select` para `anon, authenticated` — perfil público lido sem sessão, sem vazar dado sensível.
+- **Telas novas:**
+  - `/academy/conta` (`AccountPage.tsx`) — form de perfil público (handle com preview do link,
+    nome, headline, empresa, cidade, segmento, instagram/whatsapp/site, bio) + bloco Acesso
+    (email read-only, troca de senha via `supabase.auth.updateUser`, sair). Absorve o Bloco B do
+    [[PRD-005-area-de-membros]].
+  - `/academy/membro/:handle` (`MemberProfile.tsx`) — leitura pública via `public_profiles`,
+    header com avatar/nome/@handle/headline/meta, links clicáveis, bio, placeholders de
+    Conquistas e Publicações (ficam vivos nas Fases B e 5), botão Editar só pro dono do perfil,
+    404 amigável pra handle inexistente.
+  - Hook `useProfile.ts`: `useMyProfile`/`useUpdateProfile` (própria linha, `.update` por
+    `id = auth.uid()`) + `usePublicProfile(handle)` (lê só a view, anônimo inclusive).
+- **Verificação (Playwright + REST direto, usuário descartável removido ao final):**
+  - `npm run build` limpo.
+  - `/academy/conta` deslogado → gate de login; `/academy/membro/inexistente` → 404 amigável.
+  - **Segurança validada por fora do app:** cliente anônimo com a chave `anon` lê `public_profiles`
+    (200) mas pedir `email` nela dá `42703` (coluna não existe na view); ler `email` direto em
+    `profiles` como anônimo retorna `[]` (RLS intacta) — zero vazamento por dois caminhos.
+  - Fluxo autenticado (precisou de `mailer_autoconfirm` temporário — Felipe ligou e desligou pelo
+    dashboard): signup cria `profiles` via trigger; salvar com handle já em uso → erro amigável
+    (23505); salvar perfil completo persiste e recarrega certo; perfil público renderiza tudo
+    (avatar fallback com inicial, links formatados, botão Editar só pro dono); troca de senha
+    nativa funcionando. Usuário e perfil de teste apagados via `delete from auth.users` (cascade).
+- **Decisão nova:** perfil público exposto por **view** (não RLS de linha aberta) — mantém
+  `profiles` fechada e evita ter que allowlistar colunas sensíveis manualmente a cada policy nova.
+- **Próximos passos:** passo 3 do PRD-006 — `memberships` + gating por tier (regra central de
+  acesso à comunidade e à Biblioteca de Prompts).
+
+## 2026-07-19 — PRD-006: plano de execução formalizado + passos 3 e 4 implementados
+
+- **Processo:** sessão começou com o passo 3 sendo codado direto após uma aprovação verbal ("sim") que
+  na verdade só valia pro plano, não pra execução. Felipe corrigiu — daqui pra frente, todo o
+  desenvolvimento do PRD-006 segue um plano único por escrito, aprovado inteiro antes de qualquer
+  código, com trava de OK explícito entre cada passo. Documento criado:
+  [[PRD-006-plano-execucao]] (passos 3 a 6 detalhados: SQL, hooks, telas, critério de conclusão).
+- **Passo 3 — `memberships` + gating por tier:** tabela criada no Supabase Academy (`user_id`, `status`
+  active/expired, `started_at`, `expires_at`) com RLS (`select` só da própria linha; sem
+  insert/update/delete pelo client — concessão de anuidade é manual). Hook `useMembership()` criado
+  em `src/hooks/useMembership.ts`, espelha `useEnrollment.ts`, expõe `error` separado de `isMember` de
+  propósito (erro transitório de rede não pode virar falso "não é Membro"). Validado por fora via REST
+  com a chave anon: leitura anônima retorna `[]`, insert anônimo é negado (`42501`) — RLS confirmada
+  nos dois sentidos. Felipe já tem uma linha `active` própria (via SQL Editor) pra testar como Membro
+  quando a UI de gating existir (passos 5/6).
+- **Passo 4 — casca do hub + Dashboard:** `AcademyShell.tsx` novo (sidebar Início · Aprender ·
+  Comunidade · Prompts · Conta — os dois últimos ainda "Em breve", sem rota; desktop fixo, mobile em
+  chips horizontais). `Dashboard.tsx` novo assume a rota `/academy` (progresso agregado, "Continuar
+  aprendendo" reaproveitando `CourseCard`, placeholder honesto de atividade da comunidade — sem
+  inventar avisos ou atividade que não existem). A antiga tela de lista de cursos virou
+  `/academy/cursos`; links internos que diziam "Meus Cursos" foram corrigidos pra apontar pra lá
+  (CoursePage, CertificatePage). As 5 telas de membro (`MyCourses`, `CoursePage`, `CertificatePage`,
+  `AccountPage`, `MemberProfile`) tiveram o wrapper duplicado (fundo/padding/logo) removido — a casca
+  assume isso agora via `<Outlet/>`. `/academy/admin` ficou **fora** da casca de propósito (ferramenta
+  interna, não parte da experiência de hub).
+- **Verificação:** `tsc --noEmit` e `npm run build` limpos nos dois passos. No preview: todas as rotas
+  de `/academy/*` navegadas (Dashboard, cursos, conta, curso inexistente, membro inexistente, admin) —
+  zero erro de console; sidebar mobile confirmada em 375px. Print do certificado manteve as classes
+  `print:` originais + herdou `print:bg-white print:p-0` da casca, mas **não foi testado de fato**
+  (nenhum certificado emitido disponível pra esse teste específico).
+- **Próximo passo:** passo 5 do [[PRD-006-plano-execucao]] — Comunidade v1 (tabelas `spaces`/`posts`/
+  `comments`/`reactions` com RLS por tier + telas de feed/canais/post). Segue o mesmo fluxo: eu entrego
+  o SQL, Felipe roda no SQL Editor (MCP do Supabase nesta máquina não enxerga o projeto Academy).
+
+## 2026-07-19 — Passo 5 do PRD-006 implementado e verificado: Comunidade v1
+
+- **Objetivo:** feed + espaços (canais) + post + comentário + curtida, com gating por tier (`free`/
+  `member`), conforme [[PRD-006-plano-execucao]].
+- **SQL aplicado no Supabase `xomtfkbvathddfpbknyo`** (Felipe rodou no SQL Editor): tabelas `spaces`,
+  `posts`, `comments`, `reactions` (constraint garantindo `reactions` mira post OU comentário, nunca os
+  dois) + função `is_active_member()` (security definer, reusa `memberships` do passo 3) + RLS por tier
+  em `posts`/`comments`/`reactions` (canal `free` sempre legível; canal `member` exige membership ativa)
+  + 5 canais iniciais semeados: Apresente-se/Dúvidas/Sugestões (`free`), Vitrine/Vagas & Parcerias
+  (`member`). Um erro de execução no meio do caminho (`relation "memberships" already exists`) foi só
+  o Felipe colando o documento inteiro em vez do bloco SQL do passo — resolvido reenviando o bloco
+  isolado.
+- **Código:** hooks `useSpaces`, `useCommunityPosts` (`usePosts`/`usePost`/`useCreatePost`),
+  `useComments`, `useReactions` (`useTogglePostReaction`) — todos em react-query, espelhando
+  `useEnrollment`/`useProfile`. Telas `ComunidadePage.tsx` (chips de canal, composer, feed, gate visual
+  pros canais `member`) e `PostPage.tsx` (post + comentários + curtida). Rotas `/academy/comunidade` e
+  `/academy/comunidade/post/:id`; nav "Comunidade" do `AcademyShell` ativada.
+- **Verificação ponta a ponta (Playwright, logado com conta sem membership ativa):** os 5 canais
+  aparecem com cadeado nos dois `member`; clicar em canal `member` sem ser Membro mostra o gate (RLS
+  bloqueando de verdade, não só UI); post criado em canal `free` aparece no feed na hora; curtida vai de
+  0→1 e persiste; comentário aparece e atualiza o contador; zero erro de console.
+- **Bug achado e corrigido durante o teste:** autor sem `handle` no perfil gerava link quebrado
+  `/academy/membro/undefined` (feed, post e comentários). Corrigido pra exibir texto "Membro" sem link
+  quando não há `handle`. `tsc --noEmit` e `npm run build` limpos depois da correção.
+- **Pendência deixada no ar:** 1 post de teste ("Teste de verificação Passo 5", canal Apresente-se)
+  sem UI de exclusão ainda (fora do escopo do MVP) — remover via SQL Editor quando conveniente.
+- **Próximo passo:** passo 6 do [[PRD-006-plano-execucao]] — Biblioteca de Prompts (tabela `prompts` +
+  view `prompts_gated` com redação de coluna por tier, distinto do gate de linha inteira usado no passo
+  5). Plano detalhado já escrito no documento, aguardando início em sessão nova.
+
+## 2026-07-19 — Passo 6 do PRD-006 implementado e verificado: Biblioteca de Prompts + Skills
+
+- **Objetivo:** biblioteca navegável por categoria, com prévia truncada pra grátis e conteúdo completo
+  pra Membro, conforme [[PRD-006-plano-execucao]].
+- **Mudança de escopo pedida por Felipe na revisão do plano:** em vez de uma tabela `prompts` só-leitura
+  com cadastro manual via SQL, virou (1) **duas tabelas separadas** — `prompts` e `skills`, mesmo
+  schema; (2) campo **`description`** novo (resumo curto, sempre visível, sem gate) além do corpo
+  completo; (3) cadastro por **tela de admin** (CRUD), não mais manual.
+- **SQL aplicado no Supabase `xomtfkbvathddfpbknyo`** (Felipe rodou no SQL Editor,
+  `PRD-006-passo6-sql.sql`): tabelas `prompts`/`skills` (`category`, `title`, `description`, `body_md`,
+  `min_tier` free/member, `sort_order`) + RLS (metadado sempre legível pra autenticado; `insert`/
+  `update`/`delete` só admin via `is_admin()`) + views `prompts_gated`/`skills_gated`
+  (`security_invoker = true`) que redigem `body_md` por coluna (trunca em 220 caracteres + flag
+  `locked`), reusando `is_active_member()` do passo 5.
+- **Código:** hooks `usePrompts`/`useSkills` (espelham `useSpaces`) consultando as views gated;
+  `LibraryManager.tsx` — CRUD genérico parametrizado por tabela (`prompts`/`skills`), usado nas duas
+  abas novas do `AdminAcademy.tsx` (ao lado de "Cursos"/"Matrículas"); `PromptsPage.tsx`
+  (`/academy/prompts`) com alternância Prompts/Skills + chips de categoria + accordion. Nav "Prompts"
+  do `AcademyShell` ativada (saiu do badge "Em breve").
+- **Bug achado e corrigido durante o teste:** `queryKey` das duas hooks não incluía `user.id`
+  (`["prompts"]`/`["skills"]`) — ao trocar de conta na mesma aba do navegador (sem recarregar), o
+  react-query servia o cache da conta anterior, mostrando um item `member` destravado pra uma conta
+  sem membership. Corrigido incluindo `user?.id` no `queryKey`. Ver [[KNOWN_ISSUES]] KI-22 (inclui
+  suspeita não confirmada do mesmo padrão em `useSpaces`/`useCommunityPosts`/`useReactions`).
+- **Verificação ponta a ponta:** admin (conta `realvisionmaps360@gmail.com`) criou/editou/excluiu
+  prompt e skill de teste pelo painel — RLS de admin funcionando; Felipe testou manualmente com conta
+  descartável sem membership em `/academy/prompts` — item `free` completo, item `member` com cadeado +
+  texto truncado + CTA "Torne-se Membro" (confirmado após a correção do bug de cache). `tsc --noEmit` e
+  `npm run build` limpos.
+- **Itens de teste removidos** do banco (2 prompts + 1 skill usados só pra verificação).
+- **Ideia registrada, fora de escopo:** automação de Instagram (comentário → DM → cadastro → recompensa
+  na biblioteca) discutida com Felipe, documentada em [[IDEAS]], não implementada.
+- **MVP da Fase 6 (Hub + Comunidade) fechado** — todos os passos do [[PRD-006-plano-execucao]] (3 a 6)
+  concluídos e verificados.
 
 ## Documentos relacionados
 - [[ROADMAP]]
