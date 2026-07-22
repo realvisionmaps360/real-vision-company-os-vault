@@ -65,3 +65,23 @@ Primeira campanha de tráfego pago da Real Vision. Ver briefing completo em [`CA
 **Pendente:**
 - [ ] Atualizar o checklist final em `CAMPANHA-SLM-LLM-WHATSAPP-2026-07.md`
 - [ ] Acompanhar performance nos próximos dias (cliques, custo, conversões de `blog_cta_whatsapp_click`)
+
+## 22/07/2026 — Diagnóstico: zero conversão em 9 dias, tráfego pago não aparece no GA4
+
+Contexto: campanha ativa desde 13/07, R$7/dia, 9 dias rodando. Felipe pediu status.
+
+**Números do Google Ads (via API, 13-21/07):**
+- Gasto: R$77,45 | Cliques: 57 | Impressões: 1126 | CTR ~5%
+- Conversões: 0 em todos os 9 dias
+
+**Investigação passo a passo:**
+1. PostHog instalado no site (`src/lib/posthog.ts`) confirmado funcionando — captura autocapture geral normalmente, mas é opt-in (só grava quem aceita cookie), amostra pequena.
+2. Evento de conversão `blog_cta_whatsapp_click` dispara via `gtag` (BlogPost.tsx:760), independente do consentimento de cookie do PostHog — não é a causa.
+3. GA4 (property 506885567, realvisionmaps.com) checado direto via API para a página `/blog/site-maior-ativo-era-ia`, período 13-21/07: **nenhuma sessão com `sessionSourceMedium = google / cpc`.** Só orgânico, direto e referral interno.
+4. Conclusão: o vínculo GA4↔Ads já foi resolvido uma vez em 13/07 (ver entrada acima) para a conta `414-120-1211` — mas os dados de hoje mostram tráfego pago não sendo atribuído no GA4. Precisa reconfirmar se o vínculo ainda está ativo, se o gclid/UTM está chegando na URL de destino, ou se há divergência entre a conta que originou o clique cobrado e a conta vinculada.
+
+**Pendente para próxima sessão:**
+- [ ] Reconfirmar vínculo GA4↔Ads na conta filha `414-120-1211` (GA4 → Admin → Vinculações do Google Ads)
+- [ ] Checar se a URL final do anúncio carrega parâmetros de rastreamento (gclid) corretamente
+- [ ] Se vínculo ok, investigar se é problema de atribuição/latência do GA4 (import de conversão pode levar até 24-48h) ou cliques inválidos/bot
+- [ ] Depois de resolvido, reprocessar conversões perdidas se possível
