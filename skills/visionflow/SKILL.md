@@ -198,6 +198,23 @@ Aba Calendário → ver agenda mensal
 - **Ordem das abas:** confirmada em 16/06/2026 (ver seção 7)
 - **Verificação visual:** Chrome DevTools → modo dispositivo → iPhone SE (375px) e iPhone 14 (390px)
 
+### Vercel — deploy
+
+```bash
+# Na raiz do projeto
+npm run build
+vercel --prod
+```
+
+O `vercel.json` já existe com rewrite SPA (`/* → /index.html`).
+
+### ⚠️ Pitfall: Edge Functions + pg_cron
+
+- **Edge Functions criadas via Dashboard (colando código) podem não ter `SUPABASE_SERVICE_ROLE_KEY` injetada** como env var — diferente do `supabase functions deploy` via CLI. Se o código da função verifica auth manualmente (`Bearer SUPABASE_SERVICE_ROLE_KEY`), vai falhar com 401 mesmo com a key correta.
+- **Solução A:** configurar a env var manualmente no Dashboard (Edge Functions → Settings → Secrets).
+- **Solução B:** remover a verificação de auth do código e desligar `verify_jwt: false` na Edge Function — já que a função só roda via pg_cron interno, não precisa de auth dupla.
+- **`verify_jwt` deve ser `false`** para funções chamadas via pg_cron/pg_net. O padrão é `true` ao criar pelo Dashboard. Desligar em Settings → Verify JWT.
+
 ---
 
 ## 12. Feature: IA Insights (entregue 16/06/2026)
