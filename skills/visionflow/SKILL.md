@@ -215,6 +215,22 @@ O `vercel.json` já existe com rewrite SPA (`/* → /index.html`).
 - **Solução B:** remover a verificação de auth do código e desligar `verify_jwt: false` na Edge Function — já que a função só roda via pg_cron interno, não precisa de auth dupla.
 - **`verify_jwt` deve ser `false`** para funções chamadas via pg_cron/pg_net. O padrão é `true` ao criar pelo Dashboard. Desligar em Settings → Verify JWT.
 
+### ⚠️ Bug conhecido: HTTP 404 tratado como "online"
+
+**Causa:** `expected_status_max = 399` no schema (`20260720180000_create_monitored_sites.sql`). Qualquer código HTTP entre 200-399 é considerado OK, incluindo 404 (Not Found).
+
+**Correção:** alterar o default para `expected_status_max = 299`. Só respostas 2xx devem ser consideradas online — 3xx são seguidas pelo `redirect: "follow"` no código, e 4xx/5xx são erros.
+
+**SQL de correção (rodar no SQL Editor):**
+```sql
+ALTER TABLE public.monitored_sites
+  ALTER COLUMN expected_status_max SET DEFAULT 299;
+-- Atualizar sites existentes que ainda usam 399
+UPDATE public.monitored_sites
+  SET expected_status_max = 299
+  WHERE expected_status_max = 399;
+```
+
 ---
 
 ## 12. Feature: IA Insights (entregue 16/06/2026)
