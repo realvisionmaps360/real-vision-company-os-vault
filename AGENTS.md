@@ -169,6 +169,7 @@ Skills do vault (`skills/`) usadas nos workflows abaixo — usar `rv-skill-scout
 - **Skills:** `rv-blogpost`, `rv-copy`, `rv-intencao-busca`, `rv-trafego-pago`, `rv-reativacao`, `rv-varredura`, `rv-email`, `rv-i18n`, `rv-design`
 - **SEO:** Intenção de busca ANTES de escrever (`rv-intencao-busca` → Google Autocomplete)
 - **Copy:** Estilo Hormozi + `contexto/VOZ.md`
+- **Blog post — processo oficial:** `operacao/projetos/_RV-Internos/documentacao/PROCESSO-BLOG-POST-REFINADO.md` — passo a passo completo, vivo (atualizar a cada post), seguido igualmente por Claude Code e Hermes
 
 ### 4.7 Real Vision Academy (Cursos)
 - **Skill:** `rv-course-builder`

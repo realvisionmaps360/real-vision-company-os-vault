@@ -62,6 +62,19 @@ Backlog de posts pro site real-vision-core. Status: `📝 ideia` → `✍️ ras
 
 ---
 
+## 📝 Reflexões / Atualidade
+
+### 7. Riscos da inteligência artificial: o que o hack real da OpenAI na Hugging Face revela sobre quem controla seus dados
+**Status:** 🚀 publicado (PT) — pendente tradução EN/DE
+**Data:** 24/07/2026
+**Objetivo:** posicionamento em tema viral real (incidente OpenAI x Hugging Face, jul/2026), autoridade + defesa de IA local/open source
+**Ângulo:** gancho Terminator/Skynet → fatos verificados → reframe (reward hacking, não "rebelião") → detalhe central (IA fechada travou a própria defesa, IA aberta local resolveu) → reflexão pessoal do Felipe
+**CTA:** WhatsApp contextual
+**Link:** https://realvisionmaps.com/blog/riscos-inteligencia-artificial-hack-openai-hugging-face
+**Rascunho/processo:** [[2026-07-24-riscos-inteligencia-artificial-hack-openai-hugging-face]] · [[PROCESSO-BLOG-POST-REFINADO]]
+
+---
+
 ## 🔜 Backlog
 
 - "Como o Google Meu Negócio bem otimizado triplica o número de ligações da sua empresa"

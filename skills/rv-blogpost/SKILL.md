@@ -141,8 +141,16 @@ Sempre presente. Direto ao próximo passo. Link para WhatsApp com mensagem pré-
 | **Confundir vault Company OS com site público** | O vault (`real-vision-company-os-vault`) é "segundo cérebro" / docs internos. O site (`real-vision-site` / `realvisionmaps.com`) é produção. Não misture. | Rascunho no vault → Aprovação → Gera HTML/TypeScript pro site → Deploy separado |
 | **Não usar rv-copy (Hormozi) para educar + vender** | Primeiro rascunho foi técnico demais, não usou a skill `rv-copy` que já tinha a transcrição do Hormozi. Felipe quer copy que educa o cliente sobre o futuro, conecta com a realidade da RV (chatbot sem CRM hoje), e vende pela dor/especificidade/value equation. | **SEMPRE carregar `rv-copy` junto com `rv-blogpost`**. Aplicar princípios Hormozi: Pain is the pitch, Especificidade, Value Equation (rápido/fácil/sem risco), Concisão. O post deve educar o cliente sobre o futuro + conectar com realidade atual da RV (chatbot sem CRM hoje). |
 | **Entregar tudo de uma vez sem aprovação em 2 etapas** | Primeira versão entregou título + metadados + contentBlocks + CTA completo sem alinhar ângulo/título antes. | **Aprovação em 2 etapas OBRIGATÓRIA**: (1) Felipe aprova tema/ângulo + 3-5 opções de título ANTES do rascunho. (2) Felipe aprova contentBlocks completo ANTES dos metadados finais. |
+| **Termo técnico emendado no meio do texto** | "Sandbox" e "zero-day" citados sem explicação dentro de parágrafo/lista corrida — leitor leigo não entende | Termo técnico ganha bloco `highlight` próprio, curto, com analogia simples (ex: sandbox = caixinha de areia do parquinho) |
+| **`two-col.label` com frase longa** | Label tipo "IA fechada, com guardrail" corta visualmente na faixa vertical estreita do card | `label` do `two-col` leva só um termo curto — nome de marca/produto, não frase descritiva |
+| **Post saindo com pouco negrito** | Texto corrido sem destaque nas frases/dados centrais, difícil de escanear | Usar `**negrito**` deliberadamente nas frases-chave de cada bloco, não só 1-2 vezes no post inteiro |
+| **Crítica virando julgamento de caráter** | Rascunho quase chamou executivo real de termo pejorativo (ex: "sociopata") sem base verificável | Crítica fica no fato concreto e verificável ("colocou infraestrutura de terceiro em risco"), nunca em acusação de caráter contra pessoa física — risco de difamação |
+| **Tema partindo de vídeo/notícia viral sem checar** | Conteúdo de origem (transcrição de vídeo) tinha nomes/datas distorcidos do fato real | Antes de escrever sobre qualquer alegação externa, rodar WebSearch pra confirmar o que de fato aconteceu — regra de ouro "nunca inventar dado" vale também pra fontes de terceiros |
+| **Presumir tradução automática** | — | **Todo post sai sempre em PT primeiro.** EN/DE só depois de aprovação do post em PT já publicado — regra fixa, ver `rv-i18n` quando chegar a hora |
 
 **Regra de ouro:** *Rascunho no lugar certo → Revisão do Felipe → Só então publica.*
+
+**Processo espelho no vault:** o passo a passo completo, vivo e atualizado a cada post, também vive em `operacao/projetos/_RV-Internos/documentacao/PROCESSO-BLOG-POST-REFINADO.md` — é a versão que o Hermes (agente do VPS) segue, já que ele não enxerga esta skill. Ao aprender algo novo aqui, replicar lá também.
 
 ---
 
