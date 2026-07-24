@@ -71,11 +71,22 @@ Post sai **sempre em PT primeiro**. EN/DE só entram depois que o post em PT já
 - **Crítica a empresas/pessoas: ficar no fato concreto e verificável, nunca em julgamento de caráter.** Acusação de caráter (ex: chamar pessoa física de algo pejorativo) é risco de difamação e foge da voz consultora da RV — o mesmo ponto crítico pode ser feito com o fato objetivo ("colocaram infraestrutura de terceiro em risco pra um teste interno").
 - **Heading não deve carregar qualificador defensivo** tipo "(sem exagero, sem viral de vídeo)" — se o texto já entrega isso, o heading fica só com o assunto direto.
 
+## Lições da sessão de 24/07/2026 (segunda rodada — post 23)
+
+- **O repo do site se chama `real-vision-core`**, não `real-vision-site`. O nome exato está em `contexto/EMPRESA.md` e no AGENTS.md — não assumir nome genérico.
+- **Post grande (12+ min de leitura, 40+ ContentBlocks) funciona bem** sem estourar limites do TypeScript. Manter um summary forte pro card.
+- **Post que não é sobre serviço RV:** âncora Real Vision vai no `postCta` e na conexão final, não no corpo do texto. Posts de reflexão não precisam forçar venda.
+- **Import de imagem:** usar `import nomeVar from "@/assets/blog/arquivo.png"` e passar a variável no campo `image`. Nunca string de caminho.
+- **Commit seletivo:** `git add src/data/blog-posts.ts src/assets/blog/<slug>.png` — só os 2 arquivos. `package-lock.json` não vai.
+- **Conflito de skills duplicadas:** backup `real-vision.backup.1784253085` causa erro de ambiguidade no `skill_view`. Usar caminho categorizado (ex: `real-vision/core/rv-skill-scout`) em vez do nome simples.
+- **Google Drive sem MCP:** funciona com `curl -sL -o output.png "https://drive.google.com/uc?export=download&id=..."`.
+
 ---
 
 ## Pendência aberta
 
 - **Tradução EN/DE do post "Riscos da inteligência artificial: o hack real da OpenAI na Hugging Face"** — publicado em PT em 24/07/2026, aguardando revisão final do Felipe antes de traduzir. Ver [[2026-07-24-riscos-inteligencia-artificial-hack-openai-hugging-face]].
+- **Tradução EN do post "Elon Musk diz que o trabalho será opcional. Mas quem será dono dos robôs?"** — publicado em PT em 24/07/2026, aguardando definição se vai traduzir.
 
 ---
 

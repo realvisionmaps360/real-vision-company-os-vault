@@ -73,6 +73,15 @@ Backlog de posts pro site real-vision-core. Status: `📝 ideia` → `✍️ ras
 **Link:** https://realvisionmaps.com/blog/riscos-inteligencia-artificial-hack-openai-hugging-face
 **Rascunho/processo:** [[2026-07-24-riscos-inteligencia-artificial-hack-openai-hugging-face]] · [[PROCESSO-BLOG-POST-REFINADO]]
 
+### 8. Elon Musk diz que o trabalho será opcional. Mas quem será dono dos robôs?
+**Status:** 🚀 publicado (PT)
+**Data:** 24/07/2026
+**Objetivo:** posicionamento em tema quente (previsões de Elon Musk), autoridade + reflexão sobre propriedade, tecnologia e distribuição
+**Ângulo:** previsão de Musk (Forbes 2025/2026) → reframe ("quem será dono dos robôs?") → dados OIT, WEF, FGV, OCDE → inteligência vs sabedoria → internet artificial → perguntas finais
+**CTA:** WhatsApp contextual
+**Link:** https://realvisionmaps.com/blog/trabalho-opcional-elon-musk-donos-robos
+**Rascunho/processo:** [[2026-07-24-trabalho-opcional-elon-musk-donos-robos]] · [[PROCESSO-BLOG-POST-REFINADO]]
+
 ---
 
 ## 🔜 Backlog
