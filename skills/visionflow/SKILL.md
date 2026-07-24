@@ -231,6 +231,30 @@ UPDATE public.monitored_sites
   WHERE expected_status_max = 399;
 ```
 
+### ⚠️ Pitfall: Realtime subscription precisa de publication ativa
+
+A subscription `postgres_changes` no frontend só funciona se a tabela estiver na publication `supabase_realtime`. Verificar no Dashboard:
+
+```sql
+SELECT * FROM pg_publication_tables 
+WHERE pubname = 'supabase_realtime' AND tablename = 'monitored_sites';
+```
+
+Se não retornar nada, adicionar:
+```sql
+ALTER PUBLICATION supabase_realtime ADD TABLE public.monitored_sites;
+```
+
+### ⚠️ Pitfall: circuito de falhas com status "unknown"
+
+O primeiro check de um site novo parte de `current_status = "unknown"`. A Edge Function Fase 5 **não** gera `status_changes` nessa transição — o primeiro check estabelece o status inicial, não é uma "mudança". Se precisar resetar o contador manualmente (testes), rodar:
+
+```sql
+UPDATE public.monitored_sites 
+SET consecutive_failures = 0, current_status = 'unknown'
+WHERE id = '<site-id>';
+```
+
 ---
 
 ## 12. Feature: IA Insights (entregue 16/06/2026)
