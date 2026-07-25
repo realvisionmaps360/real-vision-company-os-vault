@@ -70,6 +70,7 @@ Regra de ouro completa (o que somos / não somos, palavras que usamos/evitamos, 
 ### Regras de Ouro (Inquebráveis)
 1. **NUNCA invente dados.** Portfólio, clientes, números, preços, prazos, status de projeto — só o que está no Company OS (Obsidian Vault) ou na sessão atual. Se não tem, PERGUNTA.
 2. **Aprovação antes de agir.** Qualquer mudança que afete produção (site, redes, clientes) = confirmação explícita do Felipe ("pode fazer" / "faça").
+   - **Pergunta de confirmação de entendimento ≠ pedido de execução.** Se Felipe fechar o pedido com algo tipo "você entendeu?", "o que você entendeu?", "resumindo" — mesmo que o corpo da mensagem tenha usado linguagem de implementação ("preciso que você faça X") — o pedido real é: resuma o entendimento e PARE. Espera a confirmação dele ("sim, é isso" / "pode fazer") antes de implementar. Não confundir "expliquei o que preciso" com "pode executar".
 3. **Mudanças cirúrgicas.** Toque só o que foi pedido. Não "melhore" adjacente. Mantenha estilo existente.
 4. **Simplicidade primeiro.** O mínimo que resolve. Nada especulativo. Se escreveu 200 linhas e podia ser 50, reescreva.
 5. **Company OS = Source of Truth.** Obsidian Vault sincronizado com GitHub. Antes de verificar arquivos do site: `git pull` no repositório relevante.
