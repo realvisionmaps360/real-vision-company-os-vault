@@ -23,6 +23,83 @@ const { t } = useTranslation();
 // no JSON: "key": "texto com <bold>destaque</bold> no meio"
 ```
 
+## Estado em 25/07/2026 (3ª sessão — bug do seletor de idioma + i18n 100% do blog)
+
+**Gatilho da sessão:** Felipe reportou dois problemas ao navegar o site em EN/DE — (1) clicar no
+seletor de idioma em qualquer página (blog, post) sempre voltava pra home do idioma escolhido, em
+vez de manter a página atual; (2) vários posts do blog ainda apareciam em português mesmo com EN/DE
+selecionado (citou como exemplo `fotografia-360-era-dslr-acabou-2026` e
+`drones-em-2026-alem-da-fotografia`).
+
+### 1. Bug do seletor de idioma — corrigido
+
+Causa raiz: `HomeNav.tsx` tinha um array `LANGS` com paths fixos (`/`, `/en`, `/de`) e `switchLang()`
+simplesmente navegava pra esse path fixo, ignorando a rota atual. O projeto já tinha a peça certa
+pronta (`localizedHref` em `i18n-routes.ts`) mas ela não era usada no switcher.
+
+Fix: nova função `switchLanguagePath(currentPathname, targetLang)` em `src/lib/i18n-routes.ts` —
+detecta o idioma atual pelo prefixo do path, extrai o path canônico em PT (tratando rotas com slug
+dinâmico como `/blog/:slug` e `/portfolio/:slug`, que mantêm o mesmo slug em qualquer idioma), e
+remonta o path de destino via `localizedHref` (ou o path puro se destino for PT). `HomeNav.tsx`
+passou a usar `useLocation()` + essa função. Testado manualmente nos três sentidos (PT↔EN↔DE) em
+rota simples e rota com slug — sempre mantém a página atual.
+
+### 2. Tradução do blog — **22/22 posts agora 100% em PT/EN/DE**
+
+Os **10 posts que faltavam** foram traduzidos (título, resumo, content, contentBlocks, seguindo
+exatamente o padrão `LocalizedText`/`localizeBlocks` já estabelecido):
+`bastidores-tour-360-universo-paralello-18` (id 3), `por-que-seu-negocio-precisa-site-profissional`
+(id 4), `fotografia-360-era-dslr-acabou-2026` (id 5), `como-escolher-camera-360-producao-profissional`
+(id 6), `street-view-linha-azul-pratigi` (id 7), `reflexoes-presenca-digital-negocios-locais` (id 8),
+`drones-em-2026-alem-da-fotografia` (id 9), `anthropic-ia-chinesa-eua-baniram-proprios-modelos`
+(id 21 — só faltava o metaTitle/metaDescription localizado, contentBlocks já estava completo),
+`riscos-inteligencia-artificial-hack-openai-hugging-face` (id 22 — faltava o bloco `en` inteiro),
+`trabalho-opcional-elon-musk-donos-robos` (id 23 — o mais longo, só existia em PT).
+
+### 3. Gaps identificados na sessão anterior — todos fechados agora
+
+- **`metaTitle`/`metaDescription`**: viraram `LocalizedText` no `BlogPost` interface (eram `string`).
+  `BlogPost.tsx` agora chama `localizeText(post.metaTitle, i18n.language)` /
+  `localizeText(post.metaDescription, i18n.language)` antes de setar `document.title`, meta tags
+  OG/Twitter e o JSON-LD `description`. Sem isso, o título da aba e o preview de link (OG/WhatsApp)
+  ficavam em PT mesmo em post traduzido — bug só percebido ao testar no navegador (título virava
+  `[object Object]` até o fix, porque o campo passou a ser objeto sem o código saber ler).
+- **`postCta`** (CTA no fim de cada post — label, title, texto dos botões): interface `PostCta`
+  virou `LocalizedText` em `label`/`title`/`buttons[].text`. Novo helper `localizePostCta(cta, lang)`
+  em `blog-posts.ts`. `BlogPost.tsx` usa via IIFE (`post.postCta && (() => {...})()`) pra resolver o
+  CTA localizado antes de renderizar. Todos os **21 postCta** do arquivo foram traduzidos EN/DE.
+- **UI hardcoded de `Blog.tsx`/`BlogPost.tsx`**: novo namespace `blogPage`/`blogPostPage` nos 3
+  `translation.json` — busca, "limpar filtros", "nenhum artigo encontrado", "ler artigo completo",
+  "voltar ao blog", "neste artigo", "post anterior/próximo", tempo de leitura (`{{time}} de leitura`
+  / `{{time}} read` / `{{time}} Lesezeit`). Formato de data (`toLocaleDateString`) também passou a
+  seguir o idioma ativo via mapa `DATE_LOCALES = { pt: "pt-BR", en: "en-US", de: "de-DE" }`.
+- **`ShareButtons.tsx`/`PostLikeButton.tsx`**: componentes passaram a usar `useTranslation()` —
+  namespace `shareButtons`/`postLikeButton`. Texto "Compartilhar:", aria-labels de cada rede,
+  "copiar link"/"link copiado", aria-label de curtir/descurtir.
+- **`BlogComments.tsx`**: namespace `blogComments` — placeholders, mensagens de erro, botão
+  comentar/enviando, "carregando comentários", "seja o primeiro a comentar", tempo relativo
+  (`relativeTime` refeita pra receber `t` e `lang` como parâmetro em vez de string fixa em PT — usa
+  chaves i18next com plural automático `timeDays_one`/`timeDays_other`), aria-label de curtir
+  comentário.
+- **Categorias fixas do blog** (`Destinos 360°`, `Presença Digital`, `Tutoriais`, `Cases Reais`,
+  `Bastidores`, `Reflexões`): novo `CATEGORY_LABELS` + `localizeCategory(category, lang)` em
+  `blog-posts.ts` (fallback pro valor original se a categoria não estiver no mapa — cobre tags
+  soltas tipo "Inteligência Artificial" que não são traduzidas, decisão consciente pra não expandir
+  escopo pra taxonomia livre). Usado nos chips de filtro (`Blog.tsx`), badge de categoria
+  (`Blog.tsx` + `BlogPost.tsx`) e tags no rodapé do post (`BlogPost.tsx`).
+
+**Ainda não traduzido (fora do escopo desta sessão, não pedido):** sistema de comentários usa
+Supabase — dados dos comentários em si (o texto que o usuário escreve) nunca são traduzidos, isso é
+esperado. Nomes de tags livres além das 6 categorias fixas (ex: "Futuro do Trabalho", "Inteligência
+Artificial") continuam só em PT.
+
+**Verificação:** cada etapa rodou `npx tsc --noEmit -p .` + `npm run build` + teste manual real no
+Browser pane (PT/EN/DE, rota simples e rota com slug, seletor de idioma nos 3 sentidos) antes de
+fechar. 3 commits nesta sessão, todos pushados pro `origin/main`:
+- `d4ba434` — fix do seletor de idioma + tradução dos 10 posts pendentes + metaTitle/metaDescription
+- `8e49d39` — localização de postCta + UI de Blog/BlogPost + ShareButtons/PostLikeButton
+- `b60eb6b` — localização de BlogComments + categorias
+
 ## Estado em 03/07/2026 (2ª sessão — ProjectDetail + links + 1º post do blog)
 
 **Traduzido e testado nesta sessão (build + preview PT/EN/DE, sem erros de console):**
@@ -88,22 +165,14 @@ que é **problema interno do próprio Supabase** (eles já sabem e estão resolv
 código do site. Ver [[project_blog_comentarios_supabase_bug]]. Não investigar como bug de código
 se o sintoma reaparecer — checar primeiro se é o mesmo incidente do lado deles.
 
-## Prompt para retomar em outra sessão
+## Status geral (25/07/2026): i18n do blog e do seletor de idioma concluídos
 
-```
-Continuar o trabalho de i18n do site Real Vision (real-vision-site). Ativar a skill rv-i18n
-para ver o estado completo do progresso.
+Todos os pontos abertos nas sessões anteriores (posts pendentes, metaTitle/metaDescription, postCta,
+UI hardcoded, comentários, categorias, bug do seletor) foram resolvidos — ver seção "Estado em
+25/07/2026" no topo deste arquivo. Não há prompt de retomada pendente para este escopo.
 
-A estrutura de dados do blog já está pronta (LocalizedText + localizeText/localizeBlocks em
-src/data/blog-posts.ts) e os posts id 20, 19, 18, 17, 16, 14, 10, 11, 12, 13, 1, 2 já estão 100%
-traduzidos.
-
-Falta traduzir os outros 7 posts em src/data/blog-posts.ts para EN e DE — título, resumo,
-todos os contentBlocks. Usar a skill rv-copy pra manter tom de marca, não tradução literal.
-Seguir exatamente o padrão já usado nos posts anteriores (contentBlocks: { pt: [...], en: [...],
-de: [...] } satisfies ContentBlock[]). Fazer em lotes pequenos (2-3 posts) pra revisão, sempre
-rodando npx tsc --noEmit + build + preview PT/EN/DE antes de fechar cada lote.
-
-Atenção: os ids não são sequenciais no arquivo — usar grep -n 'id: "N"' src/data/blog-posts.ts
-pra achar a posição real de cada post. Próximo da fila: id 3, depois 8, 9 e os demais.
-```
+Se surgir trabalho novo de i18n (nova rota, novo post, novo componente com texto hardcoded), seguir
+o mesmo padrão já estabelecido:
+- Texto de UI → `useTranslation()` + chave em `src/locales/pt|en|de/translation.json`
+- Conteúdo de dado (posts, cards) → `LocalizedText`/`localizeText`/`localizeBlocks` em `blog-posts.ts`
+- Sempre `npx tsc --noEmit -p .` + `npm run build` + teste manual PT/EN/DE antes de considerar pronto
