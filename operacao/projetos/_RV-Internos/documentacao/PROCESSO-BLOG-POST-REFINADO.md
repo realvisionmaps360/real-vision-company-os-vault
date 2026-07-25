@@ -91,8 +91,10 @@ Post sai **sempre em PT primeiro**. EN/DE só entram depois que o post em PT já
 ---
 
 ## Conexões
-- [[BLOG-POSTS-PIPELINE]] — backlog de temas/posts planejados (fonte de status de publicação)
-- Skill `rv-blogpost` (`C:\Users\Computador\.claude\skills\rv-blogpost\SKILL.md`) — versão operacional do mesmo processo, usada pelo Claude Code
-- Skill `rv-intencao-busca` — Fase 0, pesquisa de palavra-chave real via Google Autocomplete
-- Skill `rv-copy` — princípios Hormozi aplicados ao texto (dor, especificidade, value equation)
-- [[2026-07-24-riscos-inteligencia-artificial-hack-openai-hugging-face]] — rascunho de referência, primeiro post a seguir esse processo v2
+|- [[BLOG-POSTS-PIPELINE]] — backlog de temas/posts planejados (fonte de status de publicação)
+|- Skill `rv-blogpost` (SKILL.md na pasta `operacao/projetos/_RV-Internos/documentacao/`) — versão operacional do mesmo processo, usada pelo Claude Code
+|- Skill `rv-intencao-busca` — Fase 0, pesquisa de palavra-chave real via Google Autocomplete
+|- Skill `rv-copy` — princípios Hormozi aplicados ao texto (dor, especificidade, value equation)
+|- [[2026-07-24-riscos-inteligencia-artificial-hack-openai-hugging-face]] — rascunho de referência, primeiro post a seguir esse processo v2
+|- [[2026-07-24-trabalho-opcional-elon-musk-donos-robos]] — segundo post seguindo o processo v2
+|> Skill desta pasta: `rv-blogpost` · `rv-intencao-busca` · `rv-copy`
