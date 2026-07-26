@@ -8,6 +8,91 @@ description: Internacionalização (PT/EN/DE) do site real-vision-site — estad
 Projeto: `real-vision-site` (repo `real-vision-core`), pasta local
 `operacao/projetos/_RV-Internos/real-vision-site`.
 
+## Checklist DoD — todo post novo/traduzido (RF7 do PRD SEO Internacional)
+
+Aplicar sempre que um post for traduzido pra EN/DE (não só na criação em PT). Fonte: RF7 do PRD em
+`operacao/projetos/_RV-Internos/real-vision-site/docs/seo-internacional/PRD.md`.
+
+- [ ] `slug` traduzido em `{pt,en,de}` — nunca idêntico ao PT em en/de (schema desde RF4.1)
+- [ ] `metaTitle`/`metaDescription` traduzidos de verdade — nunca idênticos ao PT
+- [ ] `title`/`summary`/`content`/`contentBlocks` traduzidos (padrão já estabelecido antes do RF4.1)
+- [ ] Roda `npm run build` — confirma que `generate-sitemap.mjs` pegou o post com as 3 URLs e `lastmod`
+- [ ] Cluster de hreflang correto — abrir a página no navegador, checar `<link rel="alternate" hreflang="...">` no `<head>` das 3 variantes (automático via `HreflangSync.tsx`, mas testar depois de post novo)
+- [ ] Link interno crawlável — seletor de idioma (`HomeNav`) já é `<a href>` real (RF5); conferir que cards/prev-next do post também apontam pro slug certo por idioma
+- [ ] **`link-card` dentro do conteúdo (se o post citar outro post/projeto):** o `href` do bloco EN precisa apontar pro slug EN com prefixo `/en/`, o do bloco DE pro slug DE com `/de/` — nunca reusar o link do bloco PT. Bug real, já aconteceu (ver Pitfalls) — checar sempre que um post tiver `link-card`.
+- [ ] **Só Felipe faz:** testar as 3 URLs na Ferramenta de Inspeção de URL do Google Search Console antes de considerar o post publicado de verdade nos 3 idiomas
+- [ ] **Só Felipe faz:** Solicitar indexação no GSC (pt/en/de) pra toda URL nova ou alterada — processo completo, log de progresso e limite de cota em `docs/seo-internacional/STATUS.md` (RF9)
+
+**Aplicado retroativamente aos 22 posts existentes em 26/07/2026** — todos os itens confirmados, incluindo os 12 `link-card` que apontavam pro slug PT em blocos EN/DE (corrigido no mesmo dia). Item do GSC é manual, fica com o Felipe post a post.
+
+### Pitfall — `link-card` com href do idioma errado
+
+Post A (em EN) linkava pro Post B via `link-card` usando `href: "/blog/<slug-pt-do-post-B>"` — mesmo dentro do bloco de conteúdo em inglês. Resultado: leitor lendo em inglês clicava e caía na versão em português do Post B, perdendo o idioma no meio da leitura (não quebra nada, não afeta SEO, só a experiência). Encontrado em 4 posts que linkam pra outro post do blog e 2 que linkam pro portfólio (portfólio ainda não tem slug próprio por idioma — nesse caso corrigido só com o prefixo `/en/`/`/de/`, mantendo o slug).
+
+**Regra:** todo `link-card` dentro de um bloco EN aponta pra URL EN do alvo (`/en/blog/<slug-en>`); todo `link-card` dentro de um bloco DE aponta pra URL DE (`/de/blog/<slug-de>`). Nunca copiar o `href` do bloco PT pros outros idiomas.
+
+### Pitfall — migração de coluna sem soltar o `NOT NULL` da antiga quebra tudo em silêncio
+
+Na migração `post_slug` → `post_id` (Pendência 1 do STATUS.md), a coluna nova foi adicionada e o código passou a usá-la, mas a coluna antiga (`post_slug`) continuou `NOT NULL`. Todo insert (curtir, comentar) começou a falhar com `23502: null value in column "post_slug" violates not-null constraint` — e como nem `BlogComments.tsx` nem `usePostLike.ts` logavam o erro real do Supabase (só mensagem genérica na UI), o bug ficou invisível no console por dias. Corrigido em 26/07/2026 com `ALTER TABLE ... ALTER COLUMN post_slug DROP NOT NULL` nas duas tabelas + `console.error(error)` adicionado nos dois arquivos.
+
+**Regra:** ao trocar qual coluna uma tabela usa como chave (aqui ou em qualquer outra migração futura), ou `DROP` a coluna antiga de vez, ou solta o `NOT NULL` dela — nunca deixar coluna antiga como obrigatória se o código parou de preenchê-la. E teste manual de "funciona" depois de uma migração de schema **tem que cobrir um insert de verdade**, não só leitura — um select vazio parece "correto" mesmo quando todo insert está quebrado.
+
+## Estado em 26/07/2026 (5ª sessão — slug do blog vira {pt,en,de}, projeto SEO Internacional RF1-RF5)
+
+Sessão rodou dentro do projeto **SEO Internacional** (RF4/RF4.1/RF5 do PRD) — ver
+[[operacao/projetos/_RV-Internos/real-vision-site/docs/seo-internacional/STATUS|STATUS]]
+pro detalhe completo. Resumo do que muda pra quem trabalhar em i18n do blog dali pra frente:
+
+- **`slug` deixou de ser campo único.** Era `slug: string` compartilhado pelos 3 idiomas — virou
+  `slug: { pt, en, de }`, igual `title`/`summary`. Os 22 posts já têm os 3 preenchidos. Qualquer
+  código novo que resolva um post pelo slug da URL precisa localizar (`localizeText(post.slug, lang)`),
+  nunca comparar direto com `post.slug` (isso agora é objeto).
+- **12 posts que só tinham `metaTitle`/`metaDescription` em PT** (achado do RF1 — o restante já era
+  `{pt,en,de}` desde sessões anteriores) ganharam a tradução en/de.
+- **Lang da rota, não do `i18n.language`:** `BlogPost.tsx` agora descobre o idioma ativo pelo
+  `pathname` (`/en/`, `/de/` ou raiz), não pelo estado do i18next — evitava um bug de race condition
+  no primeiro render (slug já tinha mudado, idioma ainda não tinha sincronizado).
+- **Seletor de idioma (`HomeNav`) virou `<Link>` de verdade** (era `<button onClick={navigate()}>`,
+  invisível pro Googlebot — RF5 do PRD). `switchLanguagePath` (`i18n-routes.ts`) ficou blog-aware:
+  resolve o post pelo slug do idioma atual e devolve o slug do idioma de destino.
+- **Pendência que ainda não foi feita:** `BlogComments.tsx`/`usePostLike.ts` continuam chaveados pelo
+  slug **pt-BR** no Supabase (`post_slug`), não pelo `id` numérico — funciona porque o slug pt não
+  muda, mas não é a versão final. Migração (`post_id`) documentada no STATUS.md, aguardando o Felipe
+  rodar a SQL (Supabase do site fora do MCP desta sessão).
+
+## Estado em 26/07/2026 (4ª sessão — Loja 100% traduzida)
+
+**Gatilho:** Felipe pediu pra conferir o estado de tradução de `/loja` antes de decidir o que fazer.
+Diagnóstico: a Loja tinha 0% de i18n (nenhum componente usava `useTranslation`, dados de produto eram
+strings puras) mesmo a rota `/en/shop` e `/de/shop` já existindo em `App.tsx`.
+
+**Traduzido e testado nesta sessão** (`npx tsc --noEmit` + `npm run build` + teste manual PT/EN/DE no
+Browser pane — produto simples, produto configurável, carrinho, desconto dinâmico do configurador):
+- `src/data/products.ts` — novo tipo `LocalizedText` + helper `localizeText` (definidos localmente
+  neste arquivo, não importados de `blog-posts.ts`, pra não puxar as imagens do blog pro bundle da
+  Loja). `categoryLabels` e todos os campos de conteúdo dos 25 produtos (`description`,
+  `longDescription`, `priceLabel`, `savings`, `targetAudience`, `warranty`, `specs[].label`,
+  `includedItems[]`) viraram `LocalizedText`. `name`/`slug`/`specs[].value` continuam string simples —
+  nome de produto/marca e specs técnicas (unidades, modelos) não traduzem, mesma lógica de nomes
+  próprios do `rv-copy`.
+- `src/pages/Shop.tsx` e `src/pages/ShopProduct.tsx` — UI completa (hero, busca, filtros, badges,
+  specs, "Inclui", garantia, botões, modo admin) via novos namespaces `shopPage`/`shopProductPage`.
+- `src/components/shop/CartDrawer.tsx` — namespace `cartDrawer` (título com contador, vazio, total,
+  checkout via WhatsApp, limpar carrinho).
+- `src/components/shop/configurators/{Google,Tour,Site}Configurator.tsx` — namespace
+  `shopConfigurators` (+ sub-namespaces `google`/`tour`/`site`). Textos calculados dinamicamente
+  (breakdown de preço, resumo de opções pro carrinho/WhatsApp) também passaram a usar `t()`.
+
+**Decisão consciente, não regressão:** os links de produto (`Link to={`/loja/${slug}`}`) continuam
+sem prefixo de idioma, igual ao padrão já usado nos cards do blog (`/blog/${slug}`) — comportamento
+pré-existente e aceito, não mexido nesta sessão. Moeda sempre em BRL (Felipe confirmou explicitamente
+que não quer conversão por idioma).
+
+**Fora de escopo, não pedido:** `metaTitle`/`metaDescription` por produto para preview de link (a Loja
+não gera OG dinâmico como o blog via `scripts/generate-blog-og.mjs`).
+
+Commit: `5b67676` no repo `real-vision-site`, não pushado (aguardando aprovação pra push).
+
 Stack: React + Vite + react-i18next. Idiomas: PT (padrão, sem prefixo), EN (`/en/...`), DE (`/de/...`).
 Arquivos de tradução: `src/locales/pt|en|de/translation.json` — sempre mantidos com as mesmas chaves
 (estrutura espelhada nos 3 arquivos).
@@ -170,6 +255,11 @@ se o sintoma reaparecer — checar primeiro se é o mesmo incidente do lado dele
 Todos os pontos abertos nas sessões anteriores (posts pendentes, metaTitle/metaDescription, postCta,
 UI hardcoded, comentários, categorias, bug do seletor) foram resolvidos — ver seção "Estado em
 25/07/2026" no topo deste arquivo. Não há prompt de retomada pendente para este escopo.
+
+Projeto SEO Internacional (RF4/RF4.1/RF5 — slug e metadados por idioma) concluído em 26/07/2026,
+5ª sessão (ver seção no topo deste arquivo). Ver
+[[operacao/projetos/_RV-Internos/real-vision-site/docs/seo-internacional/STATUS|SEO Internacional — STATUS]]
+pro detalhe técnico completo e as pendências (migração Supabase, links cruzados internos).
 
 Se surgir trabalho novo de i18n (nova rota, novo post, novo componente com texto hardcoded), seguir
 o mesmo padrão já estabelecido:

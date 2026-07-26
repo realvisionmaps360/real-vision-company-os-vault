@@ -1,3 +1,6 @@
+- [Blog comentários/curtidas — bug do NOT NULL (26/07)](operacao/gestao/infraestrutura/memoria/project_blog_comentarios_supabase_bug.md) — projeto certo é xomtfkbvathddfpbknyo, não ghwjetvazmdlaqidgxqi
+- [Verificar insert de verdade, não só leitura](operacao/gestao/infraestrutura/memoria/feedback_verificar_insert_nao_so_leitura.md) — teste pós-migração precisa cobrir escrita
+- [Confirmar projeto Supabase antes de migrar](operacao/gestao/infraestrutura/memoria/feedback_confirmar_projeto_supabase_antes_migrar.md) — checar .env, MCP não cobre todos os projetos
 - [Texto VisionFlow = para a IA do VisionFlow](feedback_texto_visionflow_ia.md) — "me manda um texto pro VisionFlow" = texto para a IA analisar e criar cards, não edição manual
 - [rv-relatorio — tamanhos de imagem travados](feedback_rv_relatorio_tamanhos_imagem.md) — .shot-img 480px (recorte), .shot-img.wide 600px (página inteira), .compare-photos 338px (antes/depois); padrão definitivo 04/07/2026
 - [Bug rv-relatorio — capa via script não embutia](feedback_rv_relatorio_bug_capa_script.md) — corrigido 03/07/2026: tag hive-source oculta garante que finalize.ps1 embuta a foto de capa
