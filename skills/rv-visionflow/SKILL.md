@@ -12,7 +12,7 @@ Guia operacional para qualquer sessão de trabalho no VisionFlow — o CRM inter
 ## O que é o VisionFlow
 
 CRM interno construído em React + Supabase. Repositório local em:
-`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\visionflow`
+`C:\Users\Computador\Desktop\Real Vision\operacao\projetos\_RV-Internos\visionflow`
 
 GitHub: `realvisionmaps360/visionflow-crm-48fe197a`
 Deploy: Vercel (auto-deploy a cada push na branch `main`)
@@ -146,6 +146,27 @@ Toda vez que uma nova área for adicionada ao `analyze-notes`, atualizar obrigat
 Esquecer o item 3 causa **Edge Function 400 silencioso**: o banco rejeita o INSERT, a função retorna 400, o app exibe "Erro ao analisar".
 
 **Incidente:** 29/06/2026 — área `arquivo -> files` adicionada ao código mas constraint não atualizado.
+
+## PITFALL: Sessões concorrentes no mesmo repositório local
+
+Se Felipe tem o VisionFlow aberto em mais de uma sessão/janela ao mesmo tempo (ex: uma sessão codando uma feature, outra de conversa geral no mesmo diretório), `git status` pode mostrar arquivos modificados/untracked que **não são da sua sessão** — inclusive arquivos-lixo de 0 bytes com nomes bizarros (ex: `Queria`, `Skill`, `p.user_id`), resíduo de algum comando de shell mal formado na outra sessão.
+
+**Regra derivada:**
+1. Antes de `git add`, sempre olhar `git status --short` e conferir se cada arquivo modificado faz sentido pro que VOCÊ fez nesta sessão. Nunca `git add -A` às cegas quando há sinal de outra sessão ativa.
+2. `git add` só os arquivos específicos por nome (não `.`/`-A`).
+3. Se o `main` remoto avançou (outra sessão já deu push) e você tem commit local: **não** force push. Rotina segura:
+   ```bash
+   git stash push -m "wip-outra-sessao" -- <arquivos modificados que não são seus>
+   git pull --rebase origin main
+   # resolver conflito se houver (comum: linha de "Última atualização" na TIMELINE.md)
+   git add <arquivo-conflitante> && git rebase --continue
+   git stash pop   # devolve as mudanças da outra sessão intocadas
+   npm run build   # confirma que o rebase não quebrou nada
+   git push origin main
+   ```
+4. Nunca deletar os arquivos-lixo/mudanças da outra sessão sem perguntar — podem ser trabalho em andamento.
+
+**Incidente:** 26/07/2026 — Plano 007 (Google Calendar Sync) commitado enquanto outra sessão tinha `ClientServices.tsx` e `ai-parse-service/index.ts` modificados sem commit no mesmo working tree. Resolvido com o fluxo acima, sem perder nada de nenhuma das duas sessões.
 
 ---
 
