@@ -18,33 +18,120 @@ Se houver skills relevantes além das já carregadas, apresente-as **antes de co
 
 ## Mapa de skills locais
 
+> Espelha `skills/README.md` — sempre que uma skill entrar/sair lá, atualizar aqui também (ver gatilho no final deste arquivo).
+
+### Clientes específicos
+Carregam histórico, status e contexto de um cliente. Ativam pelo nome do cliente, não por domínio.
+
+| Skill | Cliente |
+|---|---|
+| `solarium` | Solarium Aarau (Gabriel, Suíça) — tour 360°, site, Meta Ads |
+| `hallan-magnolia` | Hallan Costa / Lavanderia Magnólia — parceria por permuta |
+| `sunbite-site` | Sunbite (food bike da Romana) |
+| `rv-lafatas` | Alexis Lafatas (Suíça) — site Wix, PT+DE |
+| `coroa-azul` | Francisco / Fazenda Coroa Azul (cacau, Ilhéus-BA) |
+| `manahh` | O Maná'h / Fabiano (cerealista, SBC) |
+| `wood-art` | William / Wood Art (placas de madeira) |
+
+### Contexto & base da empresa
 | Skill | Domínio | Ativa quando... |
 |---|---|---|
 | `realvision` | Contexto empresa, voz, portfólio | **Sempre** — qualquer tarefa do negócio Real Vision |
-| `supabase-postgres` | Banco de dados, RLS, queries, migrations | Banco de dados, backend, persistência, auth, APIs com dados |
-| `frontend-design` | Design visual, tipografia, animações, paleta | UI/UX, novos componentes, redesign, CSS, dark mode |
-| `vercel-react` | Performance, code splitting, imagens, deploy | Build, Vercel, lazy loading, Core Web Vitals, otimização |
-| `favicon-setup` | Favicon, ícones, PWA manifest | Configuração inicial de site, manifest.json, ícones |
-| `marketing-seo` | SEO local, Schema JSON-LD, hreflang, GA4/GTM | SEO, meta tags, analytics, rastreamento, i18n, presença Google |
-| `awesome-claude` | Qualidade de código, tipagem, pair programming | Qualquer codificação — reforça boas práticas de TS/React |
-| `superpowers` | Git, diagnóstico, build, ambiente local | Git commit/push, build errors, porta travada, node_modules |
-| `rv-incidente-supabase` | Diagnóstico de outage/instabilidade Supabase (billing, status, logs, decisão por código de erro) | Erro 522/502/503/504, app não carrega, suspeita de outage — ANTES de mexer em código |
-| `motion` | Animações React, transições, scroll effects, gestos | Animações, hover effects, fade, reveal, parallax, UI polish em React |
-| `rv-blogpost` | Copywriting, estrutura de post, ContentBlocks | Posts do blog, textos de conteúdo, copy de email |
-| `karpathy-guidelines` | Precisão, planejamento antes de executar, mudanças cirúrgicas | Tarefas complexas multi-etapa, refatorações, decisões de arquitetura |
 | `rh-real-vision` | Processo seletivo, fichas de candidatas, Upwork | Contratação, RH, avaliação de candidatos |
-| `gnomo-monstro` | Pano2VR 7 — interface, hotspots, patches, skin editor, GSV, workflows | Qualquer dúvida ou trabalho com Pano2VR: tours, Street View, skin, animações, patches |
-| `frontend-design` | Design visual premium, interfaces, tipografia moderna | UI/UX, novos componentes, redesign, CSS, dark mode |
-| `landing-page-copywriter` | Copy de landing page — frameworks PAS, AIDA, StoryBrand, headlines, CTAs | Escrever copy para site de cliente, proposta com texto, landing page nova, copy de hero section |
-| `cro` | Otimização de conversão — análise de página, UX de formulário, hierarquia visual, trust signals | "Esta página não está convertendo", "melhorar CTA", auditoria de landing page, página de preços |
-| `script-writer` | Scripts de vídeo para YouTube — hooks, estrutura, retenção, variações de formato | Roteiro para YouTube da Real Vision, scripts do curso online, vídeos de vendas |
-| `web-design-guidelines` | Auditoria de UI contra Web Interface Guidelines (Vercel) — acessibilidade, performance, UX | "Revisa minha UI", "audita o design", "checa acessibilidade", revisão de componente antes de publicar |
-| `landing-page-design` | Layout de alta conversão + geração de imagem hero com IA (belt CLI) — above-the-fold, social proof, CTA psychology | Site novo para cliente, hero section, "quero uma imagem de hero", estrutura de landing page |
-| `canvas-design` | Arte visual estática (PNG/PDF) — pôsteres, capas, posts de redes sociais, PDFs comerciais com design premium | "cria um pôster", "quero uma capa de YouTube", "proposta com design bonito", arte para Instagram/TikTok, qualquer peça visual em PNG ou PDF. **NÃO usar para UI de site** — isso é `frontend-design` + `web-design-guidelines` |
-| `skill-creator` | Criar, testar, avaliar e otimizar skills — inclui evals, benchmark e otimização de trigger. Substitui o `skill-builder` | "quero criar uma skill", "melhora esta skill", "testa se o trigger está correto", "otimiza a description da skill X" |
-| `rv-i18n` | Internacionalização PT/EN/DE do real-vision-site — estado do progresso, padrão de código (useTranslation/Trans), o que já foi traduzido e o que falta | "continua o i18n do site", "traduz o blog/página X pra inglês/alemão", trabalho no seletor de idiomas do site RV |
-| `earth-game` | EARTH GAME (jogo da RV) — contexto do projeto, filosofia visual Nigredo Luminoso, paleta oficial, método de mockup por tela | Qualquer sessão do jogo: design, mockups, roteiro, decisões, protótipo |
-| `rv-intencao-busca` | Pesquisa de intenção de busca — réplica gratuita do AnswerThePublic via Google Autocomplete (pipeline Python, sem custo de assinatura) | Antes de escrever qualquer blog post (sempre junto com `rv-blogpost`), "pesquisa de palavra-chave", "que perguntas as pessoas fazem sobre X", "AnswerThePublic", "FindQuestions" |
+
+### Conteúdo & copywriting
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `rv-copy` | Copywriter mestre (base Hormozi) — regras de escrita RV | Qualquer copy/texto pra cliente ou site RV: email, WhatsApp, landing page, headline, CTA, post |
+| `rv-blogpost` | Copywriting, estrutura de post, ContentBlocks | Posts do blog, textos de conteúdo |
+| `rv-intencao-busca` | Pesquisa de intenção de busca (réplica AnswerThePublic via Google Autocomplete) | Antes de escrever qualquer blog post (sempre junto com `rv-blogpost`), "pesquisa de palavra-chave" |
+| `landing-page-copywriter` | Copy de landing page — PAS, AIDA, StoryBrand, headlines, CTAs | Copy de site de cliente, proposta com texto, hero section |
+| `script-writer` | Scripts de vídeo YouTube — hooks, estrutura, retenção | Roteiro YouTube RV, scripts de curso, vídeos de vendas |
+| `instagram-weekly-content` | Conteúdo semanal de Instagram | Planejar/gerar posts semanais de Instagram |
+| `humanizer` | Remove "cara de texto de IA" | Texto que precisa soar mais humano antes de publicar |
+
+### Documentos, propostas & contratos
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `rv-contrato` | Gera contrato de prestação de serviço (PDF) com Termos anexados | "novo cliente", "gerar contrato", "fechar contrato", transformar proposta aprovada em contrato |
+| `rv-termos` | Consulta os Termos de Serviço da RV | Problema com cliente, dúvida sobre cláusula/cobrança/cancelamento, antes de montar proposta |
+| `rv-relatorio` | Relatório/proposta em HTML (capa honeycomb, autocontido) | Relatório de status pro cliente, documento de alinhamento, proposta comercial (mesma arquitetura) |
+| `rv-doc-renovacao` | Documento de renovação de tour 360° — desde quando, vencimento, upsell | Campanha de reativação: "monta o documento de renovação do cliente X" |
+| `canvas-design` | Arte visual estática (PNG/PDF) — pôsteres, capas, posts | "cria um pôster", "capa de YouTube", "proposta com design bonito". **NÃO** pra UI de site |
+
+### Marketing & prospecção
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `rv-prospeccao` | Playbook de prospecção (oferta de entrada, PLF) | Prospecção nova, abordagem de lead frio |
+| `clarisso` | Prospecção dual-uso — pousadas viagem pessoal + clientes RV | Buscar pousada/hospedagem OU prospectar cliente de negócio |
+| `client-briefing-generator` | Briefing de prospecção (10 lentes + score) a partir de nome/cidade/segmento | Lead cru virou nome+cidade, precisa virar briefing acionável |
+| `pipeline-weekly-update` | Atualiza pipeline de prospecção — pontua leads, follow-ups, métricas | Rotina semanal (2ª feira) ou sob demanda de revisão de pipeline |
+| `rv-reativacao` | Campanha de reativação — clientes com tour vencido | Trabalhar nos 13 clientes vencidos, emails/WhatsApp de reativação |
+| `rv-email` | Email marketing (Jeff Walker + Hormozi) — inclui infra real de envio (Hermes) | "criar email", "sequência de emails", campanha de email, disparo via Hermes |
+| `rv-plataformas` | Divulgação em Malt/Workana/Upwork/Fiverr/LinkedIn/Behance | Criar perfil de freelancer, divulgar a empresa nas plataformas |
+| `marketing-seo` | SEO local, Schema JSON-LD, hreflang, GA4/GTM | SEO, meta tags, analytics, rastreamento, i18n, presença Google |
+| `cro` | Otimização de conversão — UX de formulário, hierarquia visual, trust signals | "página não converte", "melhorar CTA", auditoria de landing page |
+| `rv-trafego-pago` | Estrutura de campanha Google Ads | Criar/ajustar campanha de tráfego pago |
+
+### Sites, design & ferramentas técnicas
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `rv-design` | UI/UX pra turismo/hospitalidade/negócio local | Código React, landing page de cliente — complementa frontend-design/motion |
+| `frontend-design` | Design visual premium, tipografia, animações, paleta | UI/UX, novos componentes, redesign, CSS, dark mode |
+| `motion` | Animações React, transições, scroll effects, gestos | Animações, hover effects, fade, reveal, parallax |
+| `landing-page-design` | Layout de alta conversão + geração de imagem hero com IA | Site novo pra cliente, hero section, estrutura de landing page |
+| `vercel-react` | Performance, code splitting, imagens, deploy | Build, Vercel, lazy loading, Core Web Vitals |
+| `favicon-setup` | Favicon, ícones, PWA manifest | Configuração inicial de site, manifest.json |
+| `web-design-guidelines` | Auditoria de UI contra Web Interface Guidelines (Vercel) | "revisa minha UI", "audita o design", "checa acessibilidade" |
+| `rv-entrega` | Checklist de pré-entrega de site (roda /improve) | "vamos entregar o site", "checar antes de entregar" |
+| `rv-i18n` | Internacionalização PT/EN/DE do real-vision-site — estado do progresso | "continua o i18n do site", "traduz o blog/página X" |
+| `rv-posthog-setup` | Instala PostHog (analytics + banner) em site de cliente | "instalar PostHog no site do cliente X", "analytics pro cliente X" |
+| `rv-auditoria-tecnica-site` | Auditoria técnica por cliente — GSC, indexação, favicon, GA4, PostHog | "audita o site dele", "confere o GSC/GA4/favicon do cliente X" |
+| `frontend-slides` | Apresentações HTML animadas | Converter PPT ou criar slides pra talk/pitch |
+| `gnomo-monstro` | Pano2VR 7 — hotspots, patches, skin editor, GSV | Qualquer trabalho com Pano2VR: tours, Street View, skin, animações |
+
+### Infraestrutura & controle
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `rv-mcp-controle` | Catálogo de MCPs conectados (status, cota, documentação) | Conectar MCP novo, "isso tá funcionando?", "tá perto do limite?" |
+| `rv-incidente-supabase` | Diagnóstico de outage/instabilidade Supabase, por código de erro | Erro 522/502/503/504, app não carrega — ANTES de mexer em código |
+| `supabase-postgres` | Banco de dados, RLS, queries, migrations | Banco de dados, backend, persistência, auth |
+| `awesome-claude` | Qualidade de código, tipagem, pair programming | Qualquer codificação |
+| `superpowers` | Git, diagnóstico, build, ambiente local | Git commit/push, build errors, porta travada |
+| `karpathy-guidelines` | Precisão, planejamento antes de executar, mudanças cirúrgicas | Tarefas multi-etapa, refatorações, decisões de arquitetura |
+
+### Projetos internos da Real Vision
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `master-visionair` | Arquiteta-documentadora de engenharia IA — projetos internos, começando pela Real Vision Academy | Trabalhar na Academy, "Master Visionair", "área de membros", planejar/retomar plataforma de cursos |
+| `rv-course-builder` | Monta estrutura de curso | Criar/estruturar módulo de curso da Academy |
+| `visionflow` / `rv-visionflow` | Desenvolvimento do CRM interno — schema, deploy, padrões de componente | Qualquer sessão de código/banco/deploy do VisionFlow |
+| `rv-visionflow-handoff` | Retomar VisionFlow após pausa — roadmap, pendências | Voltar a mexer no VisionFlow depois de um tempo parado |
+| `rv-novo-cliente` | Onboarding de cliente novo — Supabase, pasta, docs, skill por-cliente | Cliente novo apresentado (print, nome, lead de campo) |
+| `rv-fim-sessao` | Fecha sessão — atualiza ficha/timeline/VisionFlow do cliente ou registra playbook interno | "fim de sessão", "encerrar sessão", "handoff", "terminamos por hoje" |
+| `earth-game` | EARTH GAME — filosofia Nigredo Luminoso, paleta oficial, mockup por tela | Qualquer sessão do jogo: design, mockups, roteiro, protótipo |
+
+### Base de conhecimento (Obsidian)
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `obsidian` | Skill mestre do vault — onde fica tudo, quais sub-skills usar | Felipe falar em Obsidian, vault, "abre o Obsidian" |
+| `obsidian-cli` / `obsidian-markdown` / `obsidian-bases` | Edição técnica de notas/vault | Operação direta no vault via CLI, propriedades, bases |
+| `rv-wiki` | Ingestão de documentos + perguntas sobre o Company OS | Jogar material novo pra wiki, consultar algo registrado |
+| `rv-varredura` | Varredura do Company OS pra alimentar a wiki | Auditoria/atualização de saúde da base de conhecimento |
+| `json-canvas` | Mapas mentais/canvas visual | Mapear ideias/fluxo em canvas visual |
+
+### Meta / ferramentas de sessão
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `skill-creator` | Criar, testar, avaliar e otimizar skills | "quero criar uma skill", "melhora esta skill", "otimiza o trigger" |
+| `find-skills` | Descobre skills prontas que já existem por aí | Buscar skill externa pronta antes de criar uma do zero |
+| `session-handoff` | Resumo de fim de sessão genérico (fora do escopo cliente RV) | "session handoff", "vamos encerrar" fora de contexto de cliente/projeto interno |
+
+### Utilidades gerais
+| Skill | Domínio | Ativa quando... |
+|---|---|---|
+| `fact-check` | Verificação de fatos/desinformação | Checar veracidade de uma afirmação antes de publicar |
+| `defuddle` | Extrai conteúdo limpo de página web | Ler artigo/página bagunçada, extrair só o texto útil |
 
 ---
 
@@ -103,7 +190,7 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 `realvision` + `rv-i18n` (estado do site real-vision-site especificamente) + `marketing-seo` + `vercel-react` + `frontend-design`
 
 ### Blog post / copy / texto
-`realvision` + `rv-blogpost` + `rv-intencao-busca` (pesquisa de perguntas reais antes de escrever)
+`realvision` + `rv-copy` + `rv-blogpost` + `rv-intencao-busca` (pesquisa de perguntas reais antes de escrever)
 
 ### Deploy / git / build
 `superpowers` + `vercel-react`
@@ -112,7 +199,7 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 `supabase-postgres` + `awesome-claude`
 
 ### Outage / instabilidade / erro 522-502-503-504 no backend
-`rv-incidente-supabase` (diagnóstico primeiro, sempre) + `supabase-postgres` (se a causa raiz for RLS/schema/client) + skill do projeto específico (`visionflow` ou outro, para contexto de schema/stack)
+`rv-incidente-supabase` (diagnóstico primeiro, sempre) + `supabase-postgres` (se a causa raiz for RLS/schema/client) + skill do projeto específico (`visionflow`/`rv-visionflow` ou outro, para contexto de schema/stack)
 
 ### Arquitetura / refatoração grande
 `karpathy-guidelines` + `awesome-claude` + `superpowers`
@@ -127,7 +214,7 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 `realvision` + `frontend-design` + `web-design-guidelines` + `landing-page-copywriter` + `motion` + `vercel-react` + `favicon-setup` + `marketing-seo`
 
 ### Copy / texto de landing page
-`realvision` + `landing-page-copywriter` + `cro`
+`realvision` + `rv-copy` + `landing-page-copywriter` + `cro`
 
 ### Site novo para cliente (completo)
 `realvision` + `frontend-design` + `web-design-guidelines` + `landing-page-design` + `landing-page-copywriter` + `cro` + `motion`
@@ -149,6 +236,48 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 
 ### Criar ou melhorar uma skill
 `skill-creator` (nota: `skill-builder` está aposentado — usar sempre `skill-creator`)
+
+### Conectar MCP novo / checar status de MCP
+`rv-mcp-controle`
+
+### Cliente novo apresentado (print, nome, lead de campo)
+`realvision` + `rv-novo-cliente` (onboarding: Supabase, pasta, docs, skill por-cliente)
+
+### Fechar contrato com cliente
+`realvision` + `rv-termos` (confirmar cláusulas aplicáveis) + `rv-contrato` (gerar PDF)
+
+### Relatório de status ou proposta comercial pra cliente
+`realvision` + `rv-relatorio` (mesma arquitetura HTML pras duas coisas)
+
+### Prospecção — lead frio até briefing acionável
+`realvision` + `rv-prospeccao` (playbook) + `client-briefing-generator` (nome/cidade → briefing com score)
+
+### Rotina semanal de pipeline
+`pipeline-weekly-update`
+
+### Campanha de reativação (clientes com tour vencido)
+`realvision` + `rv-copy` + `rv-email` + `rv-reativacao` (+ `rv-doc-renovacao` se for gerar o documento de renovação)
+
+### Auditoria técnica de site de cliente (GSC, GA4, favicon, PostHog)
+`realvision` + `rv-auditoria-tecnica-site` (+ `rv-posthog-setup` se for instalar, não só auditar)
+
+### Pré-entrega de site
+`realvision` + `rv-entrega`
+
+### VisionFlow — código, banco, deploy ou retomada após pausa
+`realvision` + `visionflow`/`rv-visionflow` + `supabase-postgres` (+ `rv-visionflow-handoff` se for retomar depois de um tempo parado)
+
+### Real Vision Academy — plataforma de cursos
+`realvision` + `master-visionair` (+ `rv-course-builder` se for estruturar módulo)
+
+### Fim de sessão / handoff
+Cliente RV → `realvision` + `rv-fim-sessao`. Projeto interno/pessoal → `rv-fim-sessao`. Fora do escopo RV/pessoal → `session-handoff`.
+
+### Trabalho direto no vault Obsidian (notas, propriedades, varredura)
+`obsidian` (+ `obsidian-cli`/`obsidian-markdown`/`obsidian-bases` conforme a operação; `rv-varredura` pra varredura de saúde; `rv-wiki` pra ingestão/consulta)
+
+### Divulgação em plataformas de freelancer
+`realvision` + `rv-plataformas`
 
 ---
 
