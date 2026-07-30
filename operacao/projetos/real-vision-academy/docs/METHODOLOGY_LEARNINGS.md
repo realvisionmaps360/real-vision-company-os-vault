@@ -27,6 +27,27 @@ updated: 2026-07-19
 
 ## Aprendizados registrados
 
+### 2026-07-30 — PRD-007: decisão de arquitetura fechada com 10 min de teste, não com análise
+- **Artefato que já existe vale mais que análise.** A dúvida "PWA aguenta áudio em segundo plano no
+  Android ou precisa de wrapper nativo?" era a decisão mais cara do PRD-007 (Capacitor significaria build
+  Android, assinatura de app e um artefato novo pra manter). Em vez de decidir por leitura de documentação
+  ou de construir para descobrir depois, o teste rodou em **10 minutos** sobre o post do blog que já estava
+  no ar — mesmo tipo de áudio, mesma tecnologia, zero código escrito. Resultado: PWA aprovada, Capacitor
+  descartado, e a fase correspondente **encolheu** em vez de crescer. Lição para próximos PRDs: antes de
+  documentar duas arquiteturas alternativas, procurar se já existe no projeto algo que responda a dúvida
+  empiricamente.
+- **Registrar decisão em aberto COMO aberta evita que ela vire fato por repetição.** D-021 foi escrita nos
+  documentos com status explícito de "não tomada" e com a minha avaliação técnica marcada como "a validar,
+  leitura minha, não fato verificado". Isso deixou visível o que precisava de teste, em vez de a suposição
+  circular entre documentos até parecer decidida. Vale como padrão: decisão pendente ganha entrada própria
+  em [[DECISIONS]] com o encaminhamento e o critério de fechamento escritos.
+- **Auditar o código antes de aceitar a stack sugerida pelo PRD pegou dois erros e um risco de segurança.**
+  O rascunho do PRD-007 dizia "transformar a Academy em PWA", supondo ajuste — o site não tinha PWA
+  nenhuma. Dizia que o modelo de dados bastava — `lessons` não tinha campo de texto e `lesson_progress` não
+  guardava posição. E o mais grave: `lessons` tem SELECT público (é o catálogo), então gravar o texto da
+  aula paga ali vazaria o conteúdo sem matrícula (KI-28). Nada disso apareceria sem ler o código real antes
+  de escrever a arquitetura.
+
 ### 2026-07-17 — Fase 2 executada a frio, sem histórico de chat
 - **`CONTEXT.md` como porta de entrada única: validado.** Sessão nova (Fable 5, zero histórico de
   chat) leu só `CONTEXT.md` → `ARCHITECTURE.md` §3/§7 → `ROADMAP.md` Fase 2 → `DECISIONS.md`, e

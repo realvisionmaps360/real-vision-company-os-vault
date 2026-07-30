@@ -185,8 +185,131 @@ related:
   "membro" — uma fonte clássica de bug de controle de acesso.
 - **Impacto:** Coluna `min_tier` nas tabelas de conteúdo; a UI diferencia o que cada tier enxerga.
 
+## D-016 — Aula narrada e aula em vídeo coexistem
+- **Data:** 2026-07-30
+- **Contexto:** O [[PRD-007-curso-narrado-sincronizado]] propõe uma modalidade de aula com texto + áudio
+  narrado sincronizado. O Profissional 360 foi desenhado como screencast, e a conta Bunny Stream já está
+  paga, configurada (Library `707363`) e validada em produção (KI-14).
+- **Problema:** O narrado substitui o vídeo ou é formato adicional?
+- **Decisão:** **Coexistem.** Cada aula declara o próprio formato. Bunny Stream continua sendo a entrega
+  de vídeo; narrado é formato novo ao lado.
+- **Justificativa:** Felipe confirmou. Os formatos servem conteúdos diferentes: aula de mentalidade,
+  mercado e precificação não tem tela pra mostrar (narrado é melhor); aula de ferramenta na prática tem
+  o valor exatamente em ver a tela (vídeo é melhor). Substituir jogaria fora infra paga e validada.
+- **Impacto:** Coluna de formato em `lessons` com default no comportamento atual — nenhuma aula existente
+  muda. A Academy passa a saber renderizar dois leitores.
+
+## D-017 — Texto das aulas vem dos roteiros do curso
+- **Data:** 2026-07-30
+- **Decisão:** O conteúdo de leitura é escrito a partir dos roteiros do curso, adaptado para leitura —
+  **não** transcrição de fala nem texto novo sem relação com a grade.
+- **Justificativa:** A grade ([[02-profissional-360/CONCEITO|CONCEITO]]) e os roteiros já carregam a progressão pedagógica decidida.
+- **Impacto:** O texto da aula narrada é **final palavra por palavra**, porque cumpre três papéis: o que
+  Felipe lê na gravação, o que aparece na tela, e o que o alinhamento sincroniza. Formato diferente do
+  roteiro em tópicos do Módulo 1, e isso é intencional.
+
+## D-018 — Conteúdo pago no banco e em bucket privado, nunca em arquivo do repo
+- **Data:** 2026-07-30
+- **Contexto:** No blog, texto e mapa de sincronização vivem em `src/data/` e o MP3 em `public/`. O
+  rascunho do PRD-007 não especificava onde o conteúdo pago ficaria.
+- **Problema:** Reusar o padrão do blog para conteúdo de curso pago?
+- **Decisão:** **Não.** Texto e mapa vão para o banco com gate de matrícula; áudio para bucket privado com
+  URL assinada, reusando o padrão de D-010 (`createSignedUrl` no client + policy em `storage.objects`).
+- **Justificativa:** No blog funciona porque é conteúdo público. Em curso pago, texto no código-fonte é
+  conteúdo baixável sem pagar por qualquer visitante. Restrição de segurança, não preferência.
+- **Impacto:** Gate obrigatório sobre o conteúdo pago, porque `lessons` hoje tem SELECT público para
+  catálogo (KI-28). Recomendação: view com exigência de matrícula, padrão `prompts_gated`/`skills_gated`
+  da Fase 6. Limite honesto assumido: quem pagou consegue extrair o MP3 (KI-25) — a proteção real é
+  contra acesso **sem** matrícula.
+
+## D-019 — Gamificação do MVP: só progresso com escuta real
+- **Data:** 2026-07-30
+- **Contexto:** O PRD-006 jogou gamificação inteira para fora do MVP; o PRD-007 a traz de volta com uma
+  lista longa (XP, badges, missões, sequência, recompensas).
+- **Problema:** Quanto de gamificação entra antes de saber se a experiência de leitura narrada funciona?
+- **Decisão:** **Mínimo.** Progresso por módulo/curso + aula concluída **apenas com escuta real** do
+  áudio. XP, badges, missões e sequência ficam fora.
+- **Justificativa:** Felipe escolheu o escopo mínimo. A regra de escuta real é o que cumpre a exigência
+  do PRD de "gamificação que reforça o aprendizado, não decoração" — deixar a barra correr até o fim não
+  conclui a aula.
+- **Impacto:** Duas colunas em `lesson_progress` (última posição, tempo ouvido). Medição por avanço
+  contínuo do áudio, persistida em lote (~15s), não a cada `timeupdate`.
+
+## D-020 — Mapa de sincronização gerado por script, não à mão
+- **Data:** 2026-07-30
+- **Contexto:** No blog, o mapa bloco→frases foi montado manualmente. Bateu 65/65 fragmentos em um post,
+  mas o próprio playbook marca esse passo como o mais arriscado do pipeline.
+- **Problema:** Repetir o processo manual na Academy ou automatizar antes da primeira aula?
+- **Decisão:** **Automatizar antes da primeira aula.** Script gera frases e mapa, com validação
+  automática (contagem de fragmentos + último `end` = duração do áudio).
+- **Justificativa:** Felipe escolheu automatizar antes. Erro de contagem aqui significa áudio destacando
+  a frase errada — o defeito mais visível possível para um aluno pagante. E o curso passa de 40 aulas.
+- **Impacto:** Script novo em `scripts/`. Validação com gabarito conhecido: rodar sobre o post do blog e
+  comparar com o mapa manual.
+
+## D-021 — Áudio em segundo plano no Android: PWA, sem wrapper nativo
+- **Data:** 2026-07-30 (aberta e **fechada no mesmo dia**, com teste em aparelho real)
+- **Status:** ✅ **RESOLVIDA — PWA aprovada. Capacitor fora do escopo.**
+- **Contexto:** Requisito do PRD: áudio continua tocando com a tela desligada, com controles no sistema.
+  O site **não tem PWA nenhuma** hoje (sem manifest, sem service worker, sem `vite-plugin-pwa`).
+- **Problema:** PWA atende com confiabilidade, ou precisa de wrapper nativo (Capacitor)?
+- **Teste executado (Felipe, celular real, Chrome Android):** roteiro do §5.3 de
+  [[PRD-007-arquitetura-leitor-narrado]], usando os 8 min de narração do post `site-maior-ativo-era-ia`
+  que já está no ar. Resultado — **todos os passos passaram**:
+  - tela apagada por 2 min: áudio continuou;
+  - controles apareceram na tela de bloqueio;
+  - troca para outro app por 2 min e volta: áudio continuou e o destaque voltou ao lugar certo;
+  - **repetido com economia de bateria ligada: passou também** (era o cenário mais rigoroso).
+- **Decisão:** **PWA + Media Session API.** Nenhum wrapper nativo, nenhum build Android, nenhuma
+  dependência nova de empacotamento.
+- **Justificativa:** O comportamento foi verificado no aparelho do Felipe, não inferido. Passar com
+  economia de bateria ligada remove a principal dúvida (o Android corta mais coisa nesse modo). Capacitor
+  custaria build Android, assinatura de app e mais um artefato para manter, sem resolver problema que
+  exista.
+- **Impacto:** Fase 6 do [[PRD-007-plano-execucao]] **encolhe** — controles já aparecem nativamente, então
+  o trabalho vira `manifest.json` + ícones (instalabilidade) e Media Session apenas para os metadados
+  (título/capa da aula em vez de rótulo genérico do navegador). Service worker segue **fora** do escopo,
+  porque offline não está no MVP e ele traz o risco do KI-26. Nenhuma fase fica travada.
+- **Aprendizado de método:** a decisão custou 10 minutos de teste com um artefato que já existia (o post
+  do blog), em vez de dias de análise ou de construir para descobrir depois. Registrado em
+  [[METHODOLOGY_LEARNINGS]].
+
+## D-022 — Prova inicial: Módulo 0 do Profissional 360
+- **Data:** 2026-07-30
+- **Contexto:** O PRD exige provar "uma aula real" antes de qualquer expansão.
+- **Decisão:** Módulo 0, "Bem-vindo à Profissão 360°".
+- **Justificativa:** Felipe escolheu. É o início real do curso, e é conteúdo de mentalidade sem tela pra
+  mostrar — o caso em que o formato narrado é melhor que vídeo, não apenas diferente.
+- **Impacto:** O roteiro do Módulo 0 não existia; foi escrito nesta sessão em
+  [[MODULO-0-bem-vindo]] (4 aulas), aguardando revisão do Felipe.
+
+## D-023 — MVP é uma aula só: a 0.1
+- **Data:** 2026-07-30
+- **Contexto:** D-022 escolheu o Módulo 0 (4 aulas) como prova.
+- **Problema:** Construir o módulo inteiro ou só uma aula?
+- **Decisão:** **Só a aula 0.1 — "O que é um Profissional 360°".** As aulas 0.2, 0.3 e 0.4 entram depois
+  da experiência validada e aprovada.
+- **Justificativa:** Felipe reduziu o escopo. O objetivo do MVP é provar que o app funciona, e para isso
+  uma aula basta; 4 aulas multiplicariam gravação e processamento antes de saber se a experiência presta.
+- **Impacto:** Fora do MVP: listagem e navegação entre aulas narradas, importação em lote. O texto das 4
+  aulas fica escrito e pronto no vault, mas só a 0.1 precisa ser revisada e gravada agora.
+
+## D-024 — Texto final da aula 0.1 é o que foi gravado, não o roteiro original
+- **Data:** 2026-07-30
+- **Contexto:** Felipe gravou a narração da 0.1 sem seguir [[MODULO-0-bem-vindo]] palavra por palavra —
+  improvisou boa parte, incluindo um trecho final com metáfora de "reino astral" ausente do roteiro.
+- **Decisão:** o texto transcrito da gravação **substitui** o roteiro anterior como conteúdo oficial da
+  aula, incluindo o trecho da metáfora — mantido como gravado, confirmado explicitamente por Felipe.
+- **Justificativa:** KI-23 (mudar o texto depois de gravar quebra o sync) força tratar o áudio como fonte
+  de verdade. Reescrever o texto pra bater com o roteiro antigo exigiria regravar a aula inteira.
+- **Impacto:** as linhas "Objetivo" e "Resultado da aula" no topo da seção, que citam "quatro pilares",
+  não foram atualizadas — não descrevem mais o conteúdo com precisão. Revisão fica pendente, sem OK do
+  Felipe pra reescrever o resumo editorial. Roteiro anterior preservado no histórico do git (nunca
+  apagado, AGENTS regra 6).
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]
 - [[CONTEXT]]
 - [[PRD-006-hub-comunidade]]
+- [[PRD-007-curso-narrado-sincronizado]] · [[PRD-007-arquitetura-leitor-narrado]] · [[PRD-007-plano-execucao]]

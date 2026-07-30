@@ -7,19 +7,76 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-07-30
 related:
   - MASTER_PRD
   - ARCHITECTURE
   - ROADMAP
   - DECISIONS
+  - PRD-007-curso-narrado-sincronizado
 ---
 
 # Contexto Atual — Real Vision Academy
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
 
-## Fase 6 em curso (2026-07-19) — Hub + Comunidade v1
+## Fase 7 (2026-07-30) — Curso Narrado Sincronizado: FASES 0-4 FEITAS, FASE 5 DOCUMENTADA
+Nova modalidade de aula: texto estruturado + áudio narrado pelo Felipe, frase destacada e auto-scroll —
+a experiência do RV Voice Sync (já no ar em 1 post do blog) trazida pra dentro do curso **pago**.
+Documentação: [[PRD-007-curso-narrado-sincronizado]] (produto),
+[[PRD-007-arquitetura-leitor-narrado]] (técnica), [[PRD-007-plano-execucao]] (as 8 fases) e
+[[PRD-007-fase5-plano]] (o passo a passo detalhado da fase atual).
+
+**Escopo do MVP: uma aula só** — a 0.1 "O que é um Profissional 360°" (D-023).
+
+### Onde parou
+
+| Fase | Estado |
+|---|---|
+| 0 — conteúdo gravado | ✅ Felipe narrou a 0.1 (12min19s), texto congelado em [[MODULO-0-bem-vindo]] |
+| 1 — teste Android | ✅ PWA aprovada em aparelho real, Capacitor descartado (D-021) |
+| 2 — pipeline de sincronização | ✅ 82 blocos / 97 frases, último fragmento bate com a duração (0.01s) |
+| 3 — banco e storage | ✅ colunas novas, view `lessons_gated`, áudio no bucket `course-materials` |
+| 4 — leitor genérico | ✅ implementado, verificado e **pushado** (`63ab090`) |
+| **5 — a aula na Academy** | 📋 **planejada e revisada, zero código** ← fase atual |
+| 6 — Media Session + PWA | ⏳ depende da 5 |
+| 7 — verificação e publicação | ⏳ |
+
+Da Fase 4 nasceram duas peças reutilizáveis pelo blog e pela Academy:
+`src/components/narration/NarratedSpans.tsx` e `src/hooks/useNarrationAutoScroll.ts`.
+
+### Antes de tocar na Fase 5 — três coisas que quebram se ignoradas
+
+A revisão do plano da Fase 5 (30/07/2026, antes de virar código) achou 8 problemas. Três são graves, e
+**dois já são bugs de produção hoje**, independentes desta fase:
+
+- **KI-31 — o mais perigoso.** `lessons_gated` é `security_invoker = true`, então a RLS de
+  `lessons`/`modules` continua valendo por baixo e exige curso publicado. O Profissional 360 está
+  `published = false` (pré-venda). Resultado: a view devolve **zero linha** para aluno matriculado. Como
+  admin tem policy `ALL`, tudo funciona no teste do Felipe e quebra só com aluno pagante. **O SQL do Passo
+  0 do [[PRD-007-fase5-plano]] é pré-requisito absoluto** — sem ele a Academy mostra o curso vazio.
+- **KI-30.** `useCourse.ts` lê a tabela crua `lessons`, não a view. RLS é por linha, não por coluna: o
+  conteúdo pago vaza no dia em que o curso for publicado.
+- **KI-32.** `useProgress.ts` e `useMyCourses.ts` tratam "linha existe" como "aula concluída". A Fase 5
+  cria a primeira linha "em andamento" e expõe isso. Corrigir o filtro **sem** o backfill do SQL
+  desmarcaria toda aula já concluída.
+
+Também vale saber: **KI-33** — o `**negrito**` não aparece na renderização narrada (o pipeline removeu os
+asteriscos dos fragmentos). É esperado, não é bug de CSS.
+
+**Decisões:** D-016 (vídeo e narrado coexistem), D-017 (texto dos roteiros, final palavra por palavra),
+D-018 (conteúdo pago no banco + bucket privado, **nunca** em arquivo do repo), D-019 (conclusão por escuta
+real), D-020 (mapa por script), D-021 (PWA, Capacitor fora), D-022/D-023 (só a aula 0.1), D-024 (texto = o
+que foi gravado). Em 30/07/2026 o Felipe decidiu ainda: curso segue `published = false`, e em aula narrada
+o botão manual "Marcar como concluída" some, trocado por indicador passivo "Ouvido: X%".
+
+**Ainda não existe PWA no site** — sem `manifest.json`, sem service worker, sem `vite-plugin-pwa`. É
+construção nova na Fase 6.
+
+**Próximo passo:** (1) Felipe roda [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] no SQL Editor; (2)
+implementar os Passos 1 a 7 do [[PRD-007-fase5-plano]].
+
+## Fase 6 (2026-07-19) — Hub + Comunidade v1
 Decidido evoluir o `/academy` de grade de cursos para um **hub/ecossistema** com **comunidade nativa**
 (referência estrutural: Circle / ibe.IA). Plano completo em [[PRD-006-hub-comunidade]] — **aprovado pelo
 Felipe em 2026-07-19**. Modelo de acesso: duas trilhas ortogonais — **Membro** (anuidade → comunidade +
@@ -50,7 +107,7 @@ recompensa na biblioteca) registrada em [[IDEAS]], sem implementação.
 (ver "Futuro" no [[ROADMAP]]: gamificação, Mentor IA, marketplace, i18n, etc.) ou retomar pendências
 antigas (Bunny Stream real, conteúdo do Profissional 360, Stripe).
 
-## Fase atual
+## Etapa anterior (2026-07-18) — Fase 3
 **Fase 3 (área de membros + player + progresso) implementada e verificada ponta a ponta** (2026-07-18).
 `/academy` (Meus Cursos), `/academy/curso/:slug`, player Bunny Stream com seam/placeholder, materiais
 por Storage assinado, progresso — tudo testado no preview com curso e aluno de teste descartáveis

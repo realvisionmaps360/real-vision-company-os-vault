@@ -8,6 +8,11 @@
 # Permitir o próprio .gitignore (para a regra viajar para celular/VPS)
 !.gitignore
 
+# Exceção: os SQL de migração da Academy são artefato de documentação (o banco não tem
+# arquivo de migração no repo de código — ver KI-09). Sem esta linha eles existiriam só
+# na máquina do Felipe. Escopo estreito de propósito: só esta pasta, não *.sql global.
+!operacao/projetos/real-vision-academy/docs/prds/*.sql
+
 # Bloquear repos git internos (evitar "repo dentro de repo")
 # Cada linha abaixo é um repositório de código com .git próprio.
 # Pastas de projeto que só têm .md (documentação) NÃO precisam ser listadas aqui —
@@ -21,6 +26,8 @@ operacao/projetos/rv-cartaodigital-paraty-onboard/
 operacao/projetos/site-template-rv-01/
 operacao/clientes/arquivos/MSV-Aarau/site/
 operacao/projetos/_RV-Internos/jogo-da-terra/prototipo/
+operacao/clientes/arquivos/Hallan Costa - Lavanderia Magnólia/site/
+operacao/projetos/_RV-Internos/instagram-mcp/
 
 # Bloquear pastas com arquivos grandes ou desnecessários
 loja-imagens/

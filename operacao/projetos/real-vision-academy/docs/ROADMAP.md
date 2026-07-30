@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-07-30
 depends_on:
   - MASTER_PRD
   - ARCHITECTURE
@@ -85,10 +85,28 @@ diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
 - **Fora do MVP (fases seguintes):** gamificação, missões, quiz por módulo, Mentor IA (RAG), marketplace
   interno, mapa de oportunidades, IA proativa de acompanhamento.
 
+## Fase 7 — Curso Narrado Sincronizado (documentada, aguardando execução)
+- **Objetivo:** segunda modalidade de aula na Academy — texto estruturado + áudio narrado pelo Felipe, com
+  a frase sendo dita destacada e auto-scroll, trazendo pra dentro do curso pago a experiência do RV Voice
+  Sync já validada no blog.
+- **Escopo do MVP:** **uma aula só** — a 0.1 "O que é um Profissional 360°", do Módulo 0 (D-023). Leitor
+  genérico extraído do blog, conteúdo pago com gate de matrícula, áudio em bucket privado, posição salva,
+  conclusão por escuta real, e áudio em segundo plano no Android.
+- **Decisões:** D-016 (coexistência com vídeo), D-017 (texto dos roteiros), D-018 (conteúdo pago no banco),
+  D-019 (gamificação mínima), D-020 (mapa automatizado), D-021 (**PWA**, validada em aparelho real —
+  Capacitor descartado), D-022/D-023 (Módulo 0 → aula 0.1). Nenhuma decisão em aberto.
+- **Documentação:** [[PRD-007-curso-narrado-sincronizado]] (produto) ·
+  [[PRD-007-arquitetura-leitor-narrado]] (técnica) · [[PRD-007-plano-execucao]] (7 fases com trava).
+- **Conteúdo:** as 4 aulas do Módulo 0 já escritas em [[MODULO-0-bem-vindo]] (grade em [[02-profissional-360/CONCEITO|CONCEITO]]);
+  só a 0.1 entra no MVP.
+- **Fora do escopo:** aulas 0.2 a 0.4 e demais módulos em narrado, listagem/navegação entre aulas
+  narradas, XP/badges/missões, offline, automação de Aeneas no painel.
+- **Gamificação sai parcialmente de "Futuro"** — só o mínimo (progresso + escuta real) entra aqui.
+
 ## Futuro (exige novo planejamento)
-Assinatura de todos os cursos · certificados (parcial, D-012) · trilhas · gamificação · missões ·
-Mentor IA (RAG) · marketplace · mapa de oportunidades · i18n (EN/DE) · ferramentas digitais.
-Ver [[IDEAS]].
+Assinatura de todos os cursos · certificados (parcial, D-012) · trilhas · gamificação completa (XP,
+badges, missões — o mínimo entra na Fase 7) · Mentor IA (RAG) · marketplace · mapa de oportunidades ·
+i18n (EN/DE) · ferramentas digitais. Ver [[IDEAS]].
 
 ## Documentos relacionados
 - [[MASTER_PRD]]
