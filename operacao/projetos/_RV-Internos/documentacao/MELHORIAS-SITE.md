@@ -3,6 +3,7 @@
 **Análise feita em:** 20/05/2026
 **Páginas avaliadas:** `/portfolio` e `/servicos`
 **Status:** documentado para implementação futura — não mexer sem autorização explícita do Felipe
+**Relacionado:** [[AUDITORIA-HOME]] · [[NOVA-HOME-ARQUITETURA]]
 
 ---
 

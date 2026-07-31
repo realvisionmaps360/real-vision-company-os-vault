@@ -2,6 +2,7 @@
 
 > Cliente da Real Vision 360. Carregue sempre junto com a skill `realvision`.
 > Idioma de trabalho com o cliente: PT-BR.
+> Ficha: [[FICHA-CLIENTE]] · Timeline: [[COROA-AZUL-TIMELINE]]
 
 ## Quem é
 - **Cliente:** Francisco

@@ -1,6 +1,7 @@
 # Solarium Aarau — Proposta Landing Page (Texto corrigido, tradução PT-BR)
 
 > Este documento é a tradução em português da versão que a Romana revisou em alemão, já com os 4 erros de revisão corrigidos. Serve só para o Felipe analisar antes de decidir os dois pontos em aberto (marcados em ⚠️). Depois da decisão, o texto vai pro HTML final em alemão.
+> Ficha: [[FICHA-CLIENTE]] · Versão DE: [[Solarium-Aarau_Proposta-LandingPage_03-07-26_DE-REVISAO]]
 
 ---
 

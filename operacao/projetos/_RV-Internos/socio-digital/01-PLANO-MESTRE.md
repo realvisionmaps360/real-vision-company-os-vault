@@ -1,5 +1,7 @@
 # Plano Mestre — Sócio Digital
 
+Índice: [[README]] → [[02-SERVICO-COMPLETO]]
+
 > Documento de orientação principal. Quando em dúvida sobre prioridade, ordem ou estratégia macro, este arquivo é a fonte da verdade.
 
 ## Visão estratégica

@@ -1,6 +1,7 @@
 # Mensagem de WhatsApp — Diogo / D Info
 
 > Objetivo: marcar a call de 15 min. Não mencionar preço. Aguardar aprovação do Felipe antes de enviar.
+> Ficha: [[FICHA-CLIENTE]]
 
 ---
 

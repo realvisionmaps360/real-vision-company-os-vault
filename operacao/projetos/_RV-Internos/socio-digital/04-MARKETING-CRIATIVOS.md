@@ -1,5 +1,7 @@
 # Marketing + Criativos — Google Ads + Higgsfield + Blog
 
+[[03-PAGINA-SERVICO-BRIEFING]] ← Índice: [[README]] → [[05-TEMPLATES-OPERACIONAIS]]
+
 > Estratégia completa de aquisição paga + produção de criativos visuais + conteúdo SEO.
 
 ## Funil completo

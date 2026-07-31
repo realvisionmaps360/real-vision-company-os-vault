@@ -1,6 +1,7 @@
 # Solarium Aarau — Angebot Landing Page (Revisão de Texto)
 
 > Texto extraído da proposta em alemão para revisão gramatical. Corrigir diretamente aqui e devolver.
+> Ficha: [[FICHA-CLIENTE]] · Versão PT: [[Solarium-Aarau_Proposta-LandingPage_03-07-26_PT-CORRIGIDO]]
 
 ---
 

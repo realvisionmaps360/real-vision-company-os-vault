@@ -4,6 +4,7 @@
 
 **Destinatário:** solariumaarau@gmail.com
 **Remetente:** adm@realvisionmaps.com
+**Ficha:** [[FICHA-CLIENTE]] · **Relatório base:** [[relatorio-mensal-modelo]]
 **Anexo:** `Solarium_RelatorioMensal_[DD-MM-AA].pdf`
 
 ---

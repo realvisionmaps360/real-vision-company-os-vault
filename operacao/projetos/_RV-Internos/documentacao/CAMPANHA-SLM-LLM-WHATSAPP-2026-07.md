@@ -1,6 +1,7 @@
 # Campanha Google Ads — "SLM vs LLM" → Comunidade WhatsApp
 
-> Primeira campanha de tráfego pago da Real Vision. Status: **em preparação, nada ativado ainda.**
+> Primeira campanha de tráfego pago da Real Vision. Status: **pausada 22/07/2026 — ver TIMELINE pra detalhes e próximos passos.**
+> Skill desta pasta: `rv-trafego-pago`. Histórico completo em [[TIMELINE]] (pasta campanha-google-ads-slm-llm). Auditoria pré-campanha: [[AUDITORIA-SEGURANCA-TRACKING-SITE-2026-07-12]] · Integração Ads: [[GOOGLE-ADS-MCP-INTEGRACAO]].
 
 ## Briefing (confirmado com Felipe em 12/07/2026)
 

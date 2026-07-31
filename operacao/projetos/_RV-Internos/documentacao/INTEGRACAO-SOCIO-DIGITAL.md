@@ -2,6 +2,7 @@
 
 > **Status:** Pendente — fazer depois que a home for refeita
 > **Criado:** 2026-05-25
+> Depende de: [[NOVA-HOME-ARQUITETURA]] · Conceito: [[socio-digital]]
 
 ## O que precisa ser integrado
 

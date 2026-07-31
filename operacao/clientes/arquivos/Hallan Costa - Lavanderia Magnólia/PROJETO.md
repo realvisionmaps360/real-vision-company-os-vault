@@ -1,5 +1,7 @@
 # Hallan Costa — Lavanderia Magnólia (Dossiê)
 
+Ficha: [[FICHA-CLIENTE]] · Timeline: [[TIMELINE]]
+
 ## Quem é
 - **Cliente:** Hallan Costa — amigo pessoal do Felipe
 - **Negócio:** Lavanderia Magnólia — São Bernardo do Campo, SP (bairro Orquídeas)

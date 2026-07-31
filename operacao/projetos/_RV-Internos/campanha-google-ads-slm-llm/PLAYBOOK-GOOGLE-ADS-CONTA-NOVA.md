@@ -1,6 +1,7 @@
 # Playbook — Criar campanha numa conta Google Ads nova (sem histórico)
 
 Descoberto na marra em 12/07/2026, criando a campanha "RV - Blog LLM vs SLM - WhatsApp". A interface do Google Ads muda com frequência — isso aqui documenta o comportamento **daquela data**; se algo não bater, é sinal de que o Google mudou de novo e este playbook precisa de uma revisão rápida, não de ser jogado fora.
+Timeline: [[TIMELINE]]
 
 ## Contexto: por que isso é diferente do fluxo "normal"
 

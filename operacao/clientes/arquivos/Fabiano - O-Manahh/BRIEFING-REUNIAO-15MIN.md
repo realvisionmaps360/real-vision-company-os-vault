@@ -1,6 +1,7 @@
 # Briefing — Call de Diagnóstico com Fabiano (O Maná'h)
 
 > Objetivo: entender a situação atual do negócio em ~15min e identificar como a Real Vision pode ajudar. Sem vender nada nessa call — só diagnosticar.
+> Ficha: [[FICHA-CLIENTE]] · Dossiê: [[MANAHH-PROJETO]]
 
 ## Abertura (1 min)
 - Se contatar diretamente: "Oi Fabiano, tudo bem? Sou o Felipe, da Real Vision. Estive na loja de vocês há pouco comprando própolis e conversei com o Arthur — ele deve ter comentado. Queria bater um papo rápido, uns 15 minutinhos, sobre o site de vocês."

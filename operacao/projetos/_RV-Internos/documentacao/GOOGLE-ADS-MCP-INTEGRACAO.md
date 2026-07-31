@@ -4,6 +4,7 @@
 
 ## Objetivo
 Conectar o Claude Code à API do Google Ads via MCP Server oficial (read-only), para consultar métricas e relatórios de campanhas por linguagem natural, sem precisar navegar na interface do Google Ads. Motivação inicial: campanha de tráfego pago para o blog post [Diferença entre LLM e SLM](https://realvisionmaps.com/blog/diferenca-entre-llm-e-slm).
+Campanha: [[CAMPANHA-SLM-LLM-WHATSAPP-2026-07]] · Auditoria: [[AUDITORIA-SEGURANCA-TRACKING-SITE-2026-07-12]]
 
 ## O que já foi feito (06/07/2026)
 

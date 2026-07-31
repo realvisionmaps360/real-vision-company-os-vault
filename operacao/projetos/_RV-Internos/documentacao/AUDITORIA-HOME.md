@@ -7,6 +7,7 @@
 > - Objetivo: conversão direta de venda
 > - Sócio Digital: protagonista
 > - Idiomas: PT-BR agora, trilíngue depois
+> **Próxima fase:** [[NOVA-HOME-ARQUITETURA]]
 
 ---
 

@@ -11,6 +11,9 @@ servicos: []
 
 # Hallan Costa — Lavanderia Magnólia
 
+Wiki: [[hallan-lavanderia-magnolia]]
+Dossiê: [[PROJETO]] · PRD: [[PRD-landing-page]] · Briefing: [[briefing-hallan]]
+
 ## Contexto
 Hallan é amigo pessoal do Felipe, dono da Lavanderia Magnólia (São Bernardo do Campo, SP, bairro Orquídeas). Também trabalha como designer e tem uma lan house. Real Vision vai clonar uma landing page de referência de lavanderia para ele, em troca de 1.000 cartões de visita novos da Real Vision — ele cria a arte e terceiriza a impressão (a gráfica não é dele).
 

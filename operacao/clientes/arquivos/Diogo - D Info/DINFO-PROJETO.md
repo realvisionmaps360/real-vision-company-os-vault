@@ -2,6 +2,7 @@
 
 > Cliente da Real Vision. Carregue sempre junto com a skill `realvision`.
 > Idioma de trabalho com o cliente: português brasileiro.
+> Ficha: [[FICHA-CLIENTE]] · Timeline: [[DINFO-TIMELINE]]
 
 ## Quem é
 - **Cliente:** Diogo

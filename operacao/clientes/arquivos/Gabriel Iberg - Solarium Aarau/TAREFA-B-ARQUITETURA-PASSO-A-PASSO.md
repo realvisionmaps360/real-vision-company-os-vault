@@ -4,6 +4,7 @@
 **Executor:** Felipe  
 **Foco:** Gabriel — sistema GA4 → Relatório → Email (mensal)  
 **Infraestrutura:** Supabase Functions (cron automático)  
+**Ficha:** [[FICHA-CLIENTE]] · **Diagnóstico GA4:** [[GA4-DIAGNOSTICO-CHECKLIST]]  
 **Revisão:** Manual (Felipe revisa HTML + email antes de enviar)
 
 ---

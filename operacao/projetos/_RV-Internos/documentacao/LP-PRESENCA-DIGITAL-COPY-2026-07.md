@@ -2,7 +2,7 @@
 
 > Data: 12/07/2026 · Status: **aguardando aprovação do Felipe antes de codar a página**
 > Base: texto institucional enviado pelo Felipe + VOZ.md + skill rv-copy
-> Campanha: Google Ads institucional (conta 414-120-1211)
+> Campanha: Google Ads institucional (conta 414-120-1211) · Ver [[CAMPANHA-SLM-LLM-WHATSAPP-2026-07]]
 
 ---
 

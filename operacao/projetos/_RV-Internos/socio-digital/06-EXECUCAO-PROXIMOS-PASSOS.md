@@ -1,5 +1,7 @@
 # Execução — Próximos Passos
 
+[[05-TEMPLATES-OPERACIONAIS]] ← Índice: [[README]] → [[07-METODOLOGIA-TECNICA]]
+
 > Este documento existe pra outro modelo (Sonnet ou outro Claude) continuar o projeto de onde parou.
 > Ordem exata + dependências + decisões pendentes + comandos prontos.
 

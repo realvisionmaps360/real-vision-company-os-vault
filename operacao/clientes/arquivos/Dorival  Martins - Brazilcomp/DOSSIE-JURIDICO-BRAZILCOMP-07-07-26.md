@@ -1,6 +1,7 @@
 # Dossiê — Caso BrazilComp (Dorival Martins)
 
 > Documento preparado em 07/07/2026 para eventual consulta jurídica. Reúne o histórico factual e documentado da relação comercial entre Real Vision e BrazilComp, caso seja necessário responder a uma notificação ou ação judicial.
+> Timeline: [[TIMELINE]] · Analytics: [[ANALYTICS-FINAL]]
 
 ## Partes
 

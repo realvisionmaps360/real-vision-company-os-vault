@@ -1,5 +1,7 @@
 # BRIEFING — MSV Aarau
 
+Wiki: [[msv-aarau]]
+
 > **Levantamento realizado em:** 25/06/2026 via Playwright MCP (site completo)
 > **Status no VisionFlow:** Swiss Army — Lead
 

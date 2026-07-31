@@ -1,5 +1,7 @@
 # Templates Operacionais — Sócio Digital
 
+[[04-MARKETING-CRIATIVOS]] ← Índice: [[README]] → [[06-EXECUCAO-PROXIMOS-PASSOS]]
+
 > Todos os documentos que o Felipe usa repetidamente no dia a dia do serviço.
 > Cada template deve virar versão editável em `operacao/projetos/socio-digital/templates-editaveis/` (Notion, Google Docs ou arquivo Word) na Etapa 4 da execução.
 

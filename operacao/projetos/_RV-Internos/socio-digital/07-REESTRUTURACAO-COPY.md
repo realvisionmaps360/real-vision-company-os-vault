@@ -1,5 +1,7 @@
 # Reestruturação de Copy — Sócio Digital
 
+Índice: [[README]] · Relacionado: [[03-PAGINA-SERVICO-BRIEFING]]
+
 > **Data:** 2026-05-28
 > **Status:** Planejamento — aguardando execução
 > **Origem:** texto compartilhado por Felipe em sessão de Claude Design (home page)

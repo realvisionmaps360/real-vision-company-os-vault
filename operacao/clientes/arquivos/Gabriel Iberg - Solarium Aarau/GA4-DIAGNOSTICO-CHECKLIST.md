@@ -4,6 +4,7 @@
 **Status:** Pendente (checklist a preencher)  
 **Cliente:** Gabriel Iberg  
 **Property GA4:** `G-7SZVNPKT6L`  
+**Ficha:** [[FICHA-CLIENTE]]  
 **Site:** https://aarau-solarium.ch
 
 ---

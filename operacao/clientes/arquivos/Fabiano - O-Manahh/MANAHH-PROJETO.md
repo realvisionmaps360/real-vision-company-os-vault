@@ -2,6 +2,7 @@
 
 > Cliente da Real Vision. Carregue sempre junto com a skill `realvision`.
 > Idioma de trabalho com o cliente: Português brasileiro.
+> Ficha: [[FICHA-CLIENTE]] · Timeline: [[MANAHH-TIMELINE]]
 
 ## Quem é
 - **Dono:** Fabiano (Felipe ainda não o conheceu pessoalmente — estava fora da loja na visita)

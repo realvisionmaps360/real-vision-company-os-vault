@@ -1,5 +1,7 @@
 # TIMELINE — O Jogo da Terra
 
+Projeto: [[README]] · Decisões: [[DECISOES]] · Game Design: [[GAME-DESIGN]]
+
 ## 2026-07-09
 
 - **✅ Roteiro do Fim Documentado**

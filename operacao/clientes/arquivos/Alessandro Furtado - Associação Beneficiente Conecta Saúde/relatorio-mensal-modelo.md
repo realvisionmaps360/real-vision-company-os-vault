@@ -1,5 +1,7 @@
 # Relatório Mensal — Conectando Saúde
 
+Timeline: [[TIMELINE]]
+
 > **Status deste arquivo:** modelo reutilizável para os próximos relatórios mensais deste cliente, mesma estrutura do modelo do Solarium Aarau (`skill rv-relatorio`). O primeiro relatório (10/07/2026) consolida todo o período em atraso desde a criação da property GA4, por decisão do Felipe — não gerar um documento por mês retroativo.
 
 **Cliente:** Alessandro Furtado — Associação Beneficiente Conectando Saúde

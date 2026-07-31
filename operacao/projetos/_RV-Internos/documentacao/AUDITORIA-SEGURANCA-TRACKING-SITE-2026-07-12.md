@@ -4,7 +4,8 @@
 
 ## Contexto e motivação
 
-Preparação para a primeira campanha de tráfego pago da Real Vision (Google Ads, ver [`GOOGLE-ADS-MCP-INTEGRACAO.md`](./GOOGLE-ADS-MCP-INTEGRACAO.md)). Antes de colocar dinheiro em tráfego, Felipe pediu uma varredura de segurança e tracking do site — nada de rodar campanha sem saber se o site está seguro e se dá pra medir resultado de verdade.
+Preparação para a primeira campanha de tráfego pago da Real Vision (Google Ads, ver [[GOOGLE-ADS-MCP-INTEGRACAO]]). Antes de colocar dinheiro em tráfego, Felipe pediu uma varredura de segurança e tracking do site — nada de rodar campanha sem saber se o site está seguro e se dá pra medir resultado de verdade.
+Campanha: [[CAMPANHA-SLM-LLM-WHATSAPP-2026-07]]
 
 Rodada via skill `improve` (`--focus security`, nível standard) no repo `real-vision-site`.
 

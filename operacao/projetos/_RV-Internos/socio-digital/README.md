@@ -1,5 +1,9 @@
 # Projeto: Sócio Digital
 
+[[01-PLANO-MESTRE]] → [[02-SERVICO-COMPLETO]] → [[03-PAGINA-SERVICO-BRIEFING]] → [[04-MARKETING-CRIATIVOS]] → [[05-TEMPLATES-OPERACIONAIS]] → [[06-EXECUCAO-PROXIMOS-PASSOS]] → [[07-METODOLOGIA-TECNICA]]
+Nota relacionada: [[07-REESTRUTURACAO-COPY]]
+Conceito: [[socio-digital]]
+
 > **Status:** Fase 0 — Documentação completa (2026-05-24)
 > **Responsável:** Felipe Garcia
 > **Modelo IA:** Opus 4.7 (esforço máximo) para esta documentação. Próximas execuções podem rodar em Sonnet usando estes documentos.

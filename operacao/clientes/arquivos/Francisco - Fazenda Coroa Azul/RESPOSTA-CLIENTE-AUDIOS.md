@@ -1,6 +1,7 @@
 # Fazenda Coroa Azul — Resposta do Francisco à Proposta (3 áudios transcritos)
 
 > Contexto: Felipe enviou a proposta `Proposta_Fazenda-Coroa-Azul_14-05-26.pdf` (válida até 29/05/2026) e o Francisco respondeu por WhatsApp com 3 áudios. Felipe transcreveu e resumiu abaixo. Registrado em 14/07/2026.
+> Ficha: [[FICHA-CLIENTE]]
 
 ## 1. Visão geral do negócio e preocupações iniciais
 Custos fixos muito baixos hoje: só contador, energia solar, imóvel próprio. Isso deixa o Francisco receoso em assumir custo fixo novo com o projeto digital.

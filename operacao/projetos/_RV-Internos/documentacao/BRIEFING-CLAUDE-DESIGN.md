@@ -2,7 +2,7 @@
 
 > **Data:** 2026-05-25
 > **Fase:** 4 de 4 (briefing visual final)
-> **Inputs anteriores:** AUDITORIA-HOME.md · NOVA-HOME-ARQUITETURA.md · COPY-HOME.md
+> **Inputs anteriores:** [[AUDITORIA-HOME]] · [[NOVA-HOME-ARQUITETURA]] · [[COPY-HOME]]
 > **Destino:** Claude Design (claude.ai/design) → exportar componente React → colar no Lovable
 
 ---

@@ -14,6 +14,7 @@
 | [[PROTOCOLO-Sessao-Contexto]] | Como o Claude lê contexto de clientes via obsidian-cli ao iniciar sessão | Felipe + Claude |
 | [[GUIA-Skills-Obsidian]] | O que são as 4 skills, como funcionam e como usar no dia a dia da RV | Felipe + Claude |
 | [[CICLO-Sessao]] | Índice do ciclo completo de uma sessão: início (carrega ficha) → durante → fim (rv-fim-sessao) | Felipe + Claude |
+| [[REGISTRO-Grafo-Wikilinks]] | Trabalho em etapas de cobertura de wikilink e filtro do Graph View | Felipe + Claude |
 
 ---
 

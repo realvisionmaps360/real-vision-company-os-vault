@@ -1,6 +1,7 @@
 # O Jogo da Terra — Projeto do Primeiro Jogo da Real Vision
 
 > Criado em 04/07/2026. Status: **Fase 0 — Conceito e planejamento** (nada de código ainda).
+> Timeline: [[TIMELINE]] · Propósito: [[VISAO-PROPOSITO]] · Game Design: [[GAME-DESIGN]]
 
 ## O que é
 

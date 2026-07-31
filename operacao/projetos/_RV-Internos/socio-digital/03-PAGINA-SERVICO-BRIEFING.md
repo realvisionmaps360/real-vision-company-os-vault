@@ -1,5 +1,7 @@
 # Briefing — Página `/socio-digital`
 
+[[02-SERVICO-COMPLETO]] ← Índice: [[README]] → [[04-MARKETING-CRIATIVOS]]
+
 > Documento auto-contido pro **Claude Design** renderizar o visual da página.
 > Ao enviar pro Claude Design, anexar também: `contexto/DESIGN.md` + `contexto/VOZ.md` + 2–3 links de inspiração visual.
 

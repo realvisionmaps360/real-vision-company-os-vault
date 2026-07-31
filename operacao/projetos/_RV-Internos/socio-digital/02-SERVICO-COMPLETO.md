@@ -1,5 +1,7 @@
 # Serviço Sócio Digital — Especificação Completa
 
+[[01-PLANO-MESTRE]] ← Índice: [[README]] → [[03-PAGINA-SERVICO-BRIEFING]]
+
 > Fonte da verdade pra escopo, preços, entregáveis e processo. Toda proposta comercial e página de marketing puxa daqui.
 
 ## Posicionamento

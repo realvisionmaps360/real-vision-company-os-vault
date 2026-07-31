@@ -2,7 +2,7 @@
 
 > **Data:** 2026-05-25
 > **Fase:** 3 de 4 (redação de copy)
-> **Input:** AUDITORIA-HOME.md + NOVA-HOME-ARQUITETURA.md + VOZ.md + EMPRESA.md
+> **Input:** [[AUDITORIA-HOME]] + [[NOVA-HOME-ARQUITETURA]] + VOZ.md + EMPRESA.md
 > **VOZ:** direta, técnica, resultado-focada. Sem hipérbole. Vocabulário misto (negócio + visual).
 > **Decisões fechadas:**
 > - Funil Sócio Digital: **call de diagnóstico grátis (30min)**

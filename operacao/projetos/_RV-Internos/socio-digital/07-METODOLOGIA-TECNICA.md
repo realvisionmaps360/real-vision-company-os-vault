@@ -1,5 +1,7 @@
 # Metodologia Técnica — Sócio Digital
 
+[[06-EXECUCAO-PROXIMOS-PASSOS]] ← Índice: [[README]]
+
 > Documento interno. Descreve como o produto funciona por baixo do capô — stack, lógica de entrega e diferencial da camada de IA. Não publicar esse conteúdo diretamente para clientes (adaptar a linguagem).
 
 ---

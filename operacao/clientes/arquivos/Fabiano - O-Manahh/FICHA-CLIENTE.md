@@ -10,6 +10,9 @@ servicos: []
 
 # Fabiano — O Maná'h
 
+Wiki: [[fabiano-manahh]]
+Dossiê completo: [[MANAHH-PROJETO]] · Briefing de call: [[BRIEFING-REUNIAO-15MIN]]
+
 ## Contexto
 Loja física de produtos naturais e cerealista em São Bernardo do Campo (SP), Bairro Assunção. Felipe conheceu o Arthur (funcionário) numa compra presencial de própolis em 01/07/2026 e identificou oportunidade: site com loja virtual quebrado (erro "[object Object]" ao comprar) e loja física pouco visível apesar de estar na avenida. Fabiano é o dono, mas Felipe ainda não falou diretamente com ele.
 

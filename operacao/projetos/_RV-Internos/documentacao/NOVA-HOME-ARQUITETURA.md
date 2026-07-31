@@ -2,7 +2,8 @@
 
 > **Data:** 2026-05-25
 > **Fase:** 2 de 4 (arquitetura de seções)
-> **Input:** AUDITORIA-HOME.md + CRO framework + F-pattern + funil de conversão
+> **Input:** [[AUDITORIA-HOME]] + CRO framework + F-pattern + funil de conversão
+> **Próxima fase:** [[COPY-HOME]]
 > **Objetivo:** definir a ordem, função e lógica de cada seção da nova home
 > **Decisões base confirmadas:**
 > - Objetivo: conversão direta de venda

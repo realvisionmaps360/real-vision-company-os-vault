@@ -4,6 +4,7 @@
 
 **Cliente:** Gabriel Iberg — Solarium & Collarium Aarau
 **Site:** https://aarau-solarium.ch
+**Ficha:** [[FICHA-CLIENTE]] · **Email de envio:** [[email-relatorio-mensal-modelo]]
 **Período coberto:** `[DATA INÍCIO] – [DATA FIM]` — pendente (ver nota acima)
 
 ---

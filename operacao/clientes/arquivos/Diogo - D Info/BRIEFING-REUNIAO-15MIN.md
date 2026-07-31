@@ -1,6 +1,7 @@
 # Roteiro — Call de Diagnóstico (15 min) — Diogo / D Info
 
 > Objetivo da call: mostrar ao Diogo o que é possível fazer, confirmar as dores reais dele e coletar o que falta para montar a proposta. Não é para fechar venda nesta call.
+> Ficha: [[FICHA-CLIENTE]] · Dossiê: [[DINFO-PROJETO]]
 
 ## Abertura (1-2 min)
 - Agradecer pelo tempo, lembrar da conversa presencial na galeria

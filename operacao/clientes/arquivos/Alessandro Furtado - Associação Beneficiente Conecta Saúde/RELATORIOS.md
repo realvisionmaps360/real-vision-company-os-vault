@@ -1,5 +1,7 @@
 # Alessandro Furtado — Relatórios Mensais
 
+Timeline: [[TIMELINE]]
+
 ## Status
 
 - **Cliente desde:** 12/01/2026

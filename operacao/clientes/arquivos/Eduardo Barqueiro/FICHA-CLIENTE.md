@@ -11,6 +11,8 @@ servicos:
 
 # Eduardo Barqueiro — Paraty Onboard
 
+Wiki: [[eduardo-barqueiro]]
+
 ## Contexto
 
 Eduardo Barqueiro é dono/gestor da Paraty Onboard, empresa de passeios e transporte em Paraty (RJ). Chegou pela campanha de prospecção de pousadas/turismo de Paraty em junho/2026.
