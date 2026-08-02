@@ -1,6 +1,6 @@
 # Alessandro Furtado — Relatórios Mensais
 
-Timeline: [[TIMELINE]]
+Timeline: [[TIMELINE]] · Ver: [[FICHA-CLIENTE]] · [[AUDITORIA-CRO-CONECTANDO-SAUDE]] · [[AUDITORIA-TECNICA-CONECTANDO-SAUDE]] · [[PLANO-EXECUCAO-PROXIMA-SESSAO]] · [[ANALYTICS-CLARITY]] · [[ANALYTICS-POSTHOG]] · [[INDICE-CLIENTES]] (saúde técnica: GA4/PostHog/Clarity)
 
 ## Status
 
@@ -26,7 +26,7 @@ Os meses de janeiro a junho não tinham dados de GA4 (property criada só em 13/
 
 | Mês de referência | Data de envio (rascunho) | Enviado |
 |-----|---------------|---------|
-| Julho/2026 | 01/08/2026 | ⬜ |
+| Julho/2026 | 01/08/2026 | ✅ (rascunho `r-4247648090546932498`) |
 | Agosto/2026 | 01/09/2026 | ⬜ |
 | Setembro/2026 | 01/10/2026 | ⬜ |
 | Outubro/2026 | 01/11/2026 | ⬜ |
