@@ -1,4 +1,5 @@
 # Acquisition Claude — Descrição do Papel
+> Índice: [[README]]
 
 > Função interna da Real Vision para **aquisição de clientes**.
 > Não substitui o que já existe — **organiza e dá ritmo**. Aciona as skills `clarisso`

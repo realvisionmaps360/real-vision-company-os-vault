@@ -1,4 +1,5 @@
 # Lafatas Photography & Print — Status SEO
+> Hub: [[TIMELINE]]
 **Última atualização:** 2026-07-03
 
 ---

@@ -35,6 +35,7 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 |---|---|
 | README.md | Este índice — visão geral do projeto |
 | [[CONCEITO]] | **Grade-mestra**: os 6 módulos, todas as aulas, preços e modelos de venda |
+| [[MODULO-0-bem-vindo]] | **Texto pronto pra gravar** do Módulo 0 (4 aulas) — formato **narrado**, texto final palavra por palavra |
 | [[MODULO-1-google-meu-negocio]] | **Roteiro pronto pra gravar** do Módulo 1 (8 aulas, com fala e tela) |
 
 > Convenção: os próximos roteiros seguem o mesmo nome — `MODULO-2-...md`, `MODULO-3-...md`, etc. (padrão flat, igual ao Curso 01).
@@ -45,7 +46,7 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 
 - [x] Grade-mestra definida (`CONCEITO.md`)
 - [x] Roteiro do Módulo 1 — Google Meu Negócio (`MODULO-1-...md`)
-- [ ] Roteiro do Módulo 0 — Bem-vindo / mentalidade
+- [x] Roteiro do Módulo 0 — Bem-vindo / mentalidade (`MODULO-0-bem-vindo.md`) — aguardando revisão do Felipe
 - [ ] Roteiro do Módulo 2 — Imersão Total 360°
 - [ ] Roteiro do Módulo 3 — Sites com IA
 - [ ] Roteiro do Módulo 4 — Gestão de Clientes

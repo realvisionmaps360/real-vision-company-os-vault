@@ -61,3 +61,8 @@ Ver: [[PLANO_ACAO]]
 ## Diferencial vs. concorrência
 
 A maioria dos cursos de IA ensina ferramentas. Este ensina a construir uma empresa — e entrega a infraestrutura (Sócio Digital instalado) como parte do curso.
+
+## Conexões
+- [[PLANO_ACAO]]
+- [[BLOG_POST_RASCUNHO]]
+- Índice geral: [[operacao/cursos/README|Cursos Real Vision]]

@@ -6,6 +6,8 @@
 
 *For Brazilian clients, a Portuguese version of these Terms is available and shall prevail in case of conflict: [[TERMOS-E-CONDICOES-GERAIS-v1.1-PT]]*
 
+Concept: [[termos-condicoes]] · Index: [[README]]
+
 These General Terms and Conditions ("Terms") apply to all services provided by Real Vision Brasil Ltda ("Real Vision") and form an integral part of every proposal, quotation, [[SERVICE-AGREEMENT-TEMPLATE-v1.0-EN|agreement]], service order or contract entered into between Real Vision and its clients.
 
 ---

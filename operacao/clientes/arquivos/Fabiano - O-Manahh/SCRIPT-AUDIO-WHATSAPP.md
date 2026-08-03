@@ -1,4 +1,5 @@
 # Script — Áudio de Apresentação (WhatsApp)
+> Hub: [[FICHA-CLIENTE]]
 
 > Enviar para o número (11) 99515-4632. Ler em voz natural, tom de consultor prestativo — não de vendedor.
 

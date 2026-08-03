@@ -3,6 +3,7 @@
 > **Pré-requisito:** Mission 2 (arquitetura) aprovada em 20/06/2026 ✅
 > **Referência de arquitetura:** [[ACQUISITION-SYSTEM-ARCHITECTURE]]
 > **Papel do agente:** [[ACQUISITION-CLAUDE]]
+> Índice: [[README]]
 
 ---
 

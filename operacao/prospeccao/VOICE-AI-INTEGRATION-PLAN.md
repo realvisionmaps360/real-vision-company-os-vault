@@ -3,6 +3,7 @@
 > **Status:** 📋 Planejamento — Aguardando validação do Felipe
 > **Data:** 05/07/2026
 > **Relacionado:** [[ACQUISITION-OPERATING-SYSTEM]] · [[ACQUISITION-CLAUDE]] · [[rv-prospeccao]] · [[ACQUISITION-DATA-MODEL]]
+> Índice: [[README]]
 
 ---
 

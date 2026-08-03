@@ -1,4 +1,5 @@
 # Email — Proposta de Parceria para Ari
+> Hub: [[BRIEFING-PARCERIA-ARI]] · Anexo: [[PROPOSTA-PARCERIA-ARI]]
 
 **Para:** arjc543@gmail.com  
 **Assunto:** Proposta de Parceria — Real Vision  

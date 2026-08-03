@@ -1,3 +1,5 @@
+> Hub: [[jogo-da-terra/README|README]]
+
 \[08/07, 13:59\] Real Vision: por djthatha e outras pessoas  
 astrophilesz Dr. Roman Yampolskiy is not a conspiracy theorist. He is a computer scientist and Al safety researcher at the University of Louisville who has spent his career studying the risks of artificial superintelligence. What he is saying about simulation theory is not casual speculation. It follows from a  
 specific chain of logic.  

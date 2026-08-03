@@ -51,3 +51,4 @@ Papel interno da Real Vision para encher e organizar o funil de aquisição com 
 ## Conex�es
 - [[rv-empresa]]
 - [[felipe-garcia]]
+- [[operacao/prospeccao/README|Prospecção — README]]

@@ -1,3 +1,5 @@
+> Hub: [[../README|README]]
+
 Criar um aplicativo gamificado baseado na Teoria dos 7 Níveis apresentada no vídeo é uma ideia fascinante. O objetivo seria transformar a jornada de autoconhecimento em um RPG (*Role-Playing Game*) da vida real, onde a progressão não é baseada em pontos, mas em mudança de percepção e comportamento.
 
 ### Estrutura do App: "O Jogo da Terra"

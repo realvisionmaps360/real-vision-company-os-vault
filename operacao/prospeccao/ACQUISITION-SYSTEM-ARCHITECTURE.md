@@ -2,6 +2,7 @@
 
 > **Status:** Desenho aprovado · **Data:** 20/06/2026 · **Missão:** Mission 2
 > **Relacionado:** [[ACQUISITION-CLAUDE]] (papel — Mission 1) · VisionFlow (CRM — destino do handover)
+> Índice: [[README]]
 > **Escopo deste documento:** define *onde* e *como* os dados de aquisição vivem. **A construção do banco é a Mission 3** — este doc é o projeto, não a implementação.
 
 ---

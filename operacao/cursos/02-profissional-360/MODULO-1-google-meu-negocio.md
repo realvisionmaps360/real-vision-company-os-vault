@@ -1,4 +1,5 @@
 # Módulo 1 — Google Meu Negócio · Roteiro de gravação
+> Módulo anterior: [[MODULO-0-bem-vindo]] · Hub: [[02-profissional-360/README|README]]
 
 > **Formato:** screencast (gravação de tela + sua voz). Aulas de ~5 min.
 > **Como usar este roteiro:** cada aula tem o que mostrar na tela e a fala em tópicos. As frases entre **"aspas"** são o gancho de abertura e o fecho — vale gravar perto do escrito (é o que prende e o que conecta com a próxima aula). O miolo é guia, fala natural.

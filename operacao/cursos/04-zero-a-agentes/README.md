@@ -1,4 +1,5 @@
 # Do Zero a Agentes: Curso Prático de IA para Pequenas Empresas
+> Grade-mestra: [[04-zero-a-agentes/CONCEITO|CONCEITO]] · Índice geral: [[operacao/cursos/README|Cursos Real Vision]]
 
 **Status:** 🔨 Em Estruturação (01/07/2026)
 

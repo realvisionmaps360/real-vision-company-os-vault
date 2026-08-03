@@ -1,7 +1,7 @@
 ---
 type: source
-title: "Cursos Real Vision — Portfólio de Formações"
-aliases: ["cursos-real-vision", "cursos", "formações", "Real Vision Academy"]
+title: "Cursos Real Vision ï¿½ Portfï¿½lio de Formaï¿½ï¿½es"
+aliases: ["cursos-real-vision", "cursos", "formaï¿½ï¿½es", "Real Vision Academy"]
 date_created: 2026-06-30
 date_updated: 2026-06-30
 source_count: 0
@@ -11,52 +11,59 @@ tags: [cursos, educacao, receita]
 status: stable
 ---
 
-# Cursos Real Vision — Portfólio de Formações
+# Cursos Real Vision ï¿½ Portfï¿½lio de Formaï¿½ï¿½es
 
 ## TL;DR
-3 cursos em estruturação. Porta de entrada (Sócio Digital, R$89,90) ? formação técnica (Profissão 360°, R$997) ? curso amplo (Empresa com IA, R$1.997). Todos com área de membros própria no site da Real Vision.
+3 cursos em estruturaï¿½ï¿½o. Porta de entrada (Sï¿½cio Digital, R$89,90) ? formaï¿½ï¿½o tï¿½cnica (Profissï¿½o 360ï¿½, R$997) ? curso amplo (Empresa com IA, R$1.997). Todos com ï¿½rea de membros prï¿½pria no site da Real Vision.
 
 ---
 
-## Curso 01 — Como Abrir uma Empresa com IA
-**Público:** qualquer pessoa que queira abrir ou escalar uma empresa com IA no back-end.
-**Preço:** R$997 pré-venda · R$1.997 lançamento · VIP com 1:1: R$3.500+
-**Status:** em estruturação
-**Estrutura:** 5 módulos — crise/oportunidade, instalação do Sócio Digital, plano de 7 passos, arquitetura de agentes, escalar.
-**Diferencial:** entrega a infraestrutura (Sócio Digital instalado) como parte do próprio curso.
+## Curso 01 ï¿½ Como Abrir uma Empresa com IA
+**Pï¿½blico:** qualquer pessoa que queira abrir ou escalar uma empresa com IA no back-end.
+**Preï¿½o:** R$997 prï¿½-venda ï¿½ R$1.997 lanï¿½amento ï¿½ VIP com 1:1: R$3.500+
+**Status:** em estruturaï¿½ï¿½o
+**Estrutura:** 5 mï¿½dulos ï¿½ crise/oportunidade, instalaï¿½ï¿½o do Sï¿½cio Digital, plano de 7 passos, arquitetura de agentes, escalar.
+**Diferencial:** entrega a infraestrutura (Sï¿½cio Digital instalado) como parte do prï¿½prio curso.
 
 ---
 
-## Curso 02 — Profissão 360°
-**Público:** fotógrafos, freelancers, quem quer liberdade geográfica.
-**Preço:** R$997 pré-venda (de R$1.997) · 12x R$97
-**Status:** grade concluída; roteiro do Módulo 1 pronto. Página no site: `/profissional-360`.
-**Estrutura:** 6 módulos — Google Meu Negócio ? Tour 360° ? Sites com IA ? Gestão de Clientes ? Montar o negócio.
-**Diferencial:** ensina o sistema integrado (Tríade do Sucesso), não uma ferramenta solta. Termina fechando cliente.
+## Curso 02 ï¿½ Profissï¿½o 360ï¿½
+**Pï¿½blico:** fotï¿½grafos, freelancers, quem quer liberdade geogrï¿½fica.
+**Preï¿½o:** R$997 prï¿½-venda (de R$1.997) ï¿½ 12x R$97
+**Status:** grade concluï¿½da; roteiro do Mï¿½dulo 1 pronto. Pï¿½gina no site: `/profissional-360`.
+**Estrutura:** 6 mï¿½dulos ï¿½ Google Meu Negï¿½cio ? Tour 360ï¿½ ? Sites com IA ? Gestï¿½o de Clientes ? Montar o negï¿½cio.
+**Diferencial:** ensina o sistema integrado (Trï¿½ade do Sucesso), nï¿½o uma ferramenta solta. Termina fechando cliente.
 
 ---
 
-## Curso 03 — Sócio Digital (porta de entrada)
-**Público:** porta de entrada — qualquer pessoa que queira montar IA + Company OS.
-**Preço:** R$89,90 *(provisório — jun/2026)*
-**Status:** grade concluída (28/06/2026); aguarda resposta do Felipe sobre as 3 perguntas.
-**Estrutura:** 6 módulos (~25-30 aulas de ~5min) — mentalidade + 3 perguntas, Company OS, Claude Code, Obsidian + celular, prompts prontos, rotina diária.
-**Diferencial:** aluno sai com o Sócio Digital *funcionando*, não com dicas soltas.
+## Curso 03 ï¿½ Sï¿½cio Digital (porta de entrada)
+**Pï¿½blico:** porta de entrada ï¿½ qualquer pessoa que queira montar IA + Company OS.
+**Preï¿½o:** R$89,90 *(provisï¿½rio ï¿½ jun/2026)*
+**Status:** grade concluï¿½da (28/06/2026); aguarda resposta do Felipe sobre as 3 perguntas.
+**Estrutura:** 6 mï¿½dulos (~25-30 aulas de ~5min) ï¿½ mentalidade + 3 perguntas, Company OS, Claude Code, Obsidian + celular, prompts prontos, rotina diï¿½ria.
+**Diferencial:** aluno sai com o Sï¿½cio Digital *funcionando*, nï¿½o com dicas soltas.
 
 ---
 
-## Relação entre os cursos
+## Relaï¿½ï¿½o entre os cursos
 ```
-Sócio Digital (R$89,90) ? Profissão 360° (R$997) ? Empresa com IA (R$1.997)
-porta de entrada          formação técnica            formação ampla
+Sï¿½cio Digital (R$89,90) ? Profissï¿½o 360ï¿½ (R$997) ? Empresa com IA (R$1.997)
+porta de entrada          formaï¿½ï¿½o tï¿½cnica            formaï¿½ï¿½o ampla
 ```
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[socio-digital]]
 - [[hermes-email-marketing]]
 
-## Conexões
+## Conexï¿½es
 - [[rv-empresa]]
 - [[socio-digital]]
 - [[felipe-garcia]]
+
+## Arquivos reais dos cursos
+- [[operacao/cursos/README|Cursos Real Vision â€” README]]
+- [[operacao/cursos/01-empresa-com-ia/CONCEITO]]
+- [[operacao/cursos/02-profissional-360/README]]
+- [[operacao/cursos/03-socio-digital/README]]
+- [[operacao/cursos/04-zero-a-agentes/CONCEITO]] (curso 04, ainda nÃ£o coberto no resumo acima)

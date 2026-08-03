@@ -79,8 +79,11 @@ prompt de missão bom tem, nesta ordem:
    verdade é o vault.
 3. **Escopo fechado da fase** — lista explícita do que entra e do que NÃO entra (evita ele "adiantar"
    fases seguintes).
-4. **Fatos e credenciais operacionais** — banco (`xomtfkbvathddfpbknyo`), como rodar SQL (Management
-   API com PAT, porque o MCP não alcança), arquivos-chave já existentes, padrões do repo (CLAUDE.md).
+4. **Fatos e credenciais operacionais** — banco (`xomtfkbvathddfpbknyo`), arquivos-chave já existentes,
+   padrões do repo (CLAUDE.md). Sobre rodar SQL: o MCP Supabase não alcança este projeto (KI-20); e
+   **escrita via Management API é sempre bloqueada pelo classificador de segurança do Claude Code, mesmo
+   com PAT válido** (KI-29, confirmado 2x em 30/07/2026) — só leitura passa. Não insistir tentando
+   contornar: preparar o SQL pronto e pedir pro Felipe rodar no SQL Editor.
 5. **Critério de conclusão verificável** — o que precisa estar funcionando pra fase ser dada como
    pronta (ex: "admin cadastra curso completo pelo painel"), e a exigência de rodar `npm run build` +
    verificar no preview.
@@ -129,6 +132,7 @@ pedir explicitamente:
 | Favicon / config de indexação | [[favicon-setup]] |
 | SEO local, Schema.org, GA4, tags de busca | [[marketing-seo]] |
 | Estruturar grade pedagógica de um novo curso (módulos, aulas, cronograma) | [[rv-course-builder]] |
+| Processar áudio narrado de aula (limpar texto, Aeneas, sync map, `blockMap`) | [[NARRACAO-SINCRONIZADA-BLOG]] (playbook com parâmetros/comandos exatos, ffmpeg + Docker + gotchas de encoding) |
 | Sessão de código: commits, git status, build local, porta travada, node_modules | [[superpowers]] |
 | Consulta ou atualização do vault Obsidian fora do fluxo padrão da Academy | [[obsidian]] / [[obsidian-cli]] |
 | Fim de sessão / fim de etapa relevante | [[rv-fim-sessao]] |
@@ -163,12 +167,17 @@ perguntar.
 
 Ao ser ativada para trabalhar na Academy, seguir nesta ordem:
 
-1. **Verificar o Obsidian CLI.** Comando é `obsidian` (não `obsidian-cli`). Testar `obsidian help`.
-   - Está instalado nesta máquina (`C:\Users\Computador\AppData\Local\Programs\Obsidian\`).
-   - **Exige o Obsidian aberto** para operar de fato. Se estiver fechado ou o comando falhar,
-     usar edição direta dos `.md` com as ferramentas de arquivo — a estrutura documental é a mesma.
-   - Ver [[obsidian-cli]] para a referência de comandos. **Nunca inventar comando** — rodar
-     `obsidian help` antes se em dúvida.
+1. **Montar o Obsidian CLI e rodar `/rv-skill-scout`** — sempre os dois, sempre antes de qualquer
+   outra coisa, nesta ordem:
+   - Obsidian CLI: comando é `obsidian` (não `obsidian-cli`). Testar `obsidian help`.
+     - Está instalado nesta máquina (`C:\Users\Computador\AppData\Local\Programs\Obsidian\`).
+     - **Exige o Obsidian aberto** para operar de fato. Se estiver fechado ou o comando falhar,
+       usar edição direta dos `.md` com as ferramentas de arquivo — a estrutura documental é a mesma.
+     - Ver [[obsidian-cli]] para a referência de comandos. **Nunca inventar comando** — rodar
+       `obsidian help` antes se em dúvida.
+   - `/rv-skill-scout`: mapeia as skills do projeto relevantes pra tarefa antes de planejar ou
+     executar qualquer coisa. Ver [[feedback_carregar_skills_antes_de_planejar]] no incidente que
+     motivou essa regra.
 2. **Abrir o índice** `PROJECT_INDEX.md` do projeto.
 3. **Ler `CONTEXT.md`** — resumo executivo do estado atual (fase, próximos passos, bloqueios).
 4. **Identificar os documentos** relacionados à tarefa pedida e lê-los.
@@ -249,3 +258,4 @@ metodologia for burocrática ou inútil, registrar o problema e **propor melhori
 - [[favicon-setup]]
 - [[marketing-seo]]
 - [[superpowers]]
+- [[NARRACAO-SINCRONIZADA-BLOG]]

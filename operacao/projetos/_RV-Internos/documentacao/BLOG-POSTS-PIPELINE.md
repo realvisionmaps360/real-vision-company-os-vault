@@ -1,4 +1,5 @@
 # Pipeline de Blog Posts — Real Vision
+> Incidente relacionado: [[INCIDENTE-404-CLEANURLS-BLOG-OG-2026-07-16]]
 
 Backlog de posts pro site real-vision-core. Status: `📝 ideia` → `✍️ rascunho` → `🎨 design` → `🚀 publicado`.
 

@@ -180,7 +180,8 @@ DRAFT vFINAL → entregue com loop de crítica visível para o Felipe
 
 - **Plataforma de envio:** Resend
 - **Banco:** Supabase `ghwjetvazmdlaqidgxqi` (tabelas dedicadas, separadas do VisionFlow)
-  - `email_contatos` · `email_envios` · `email_sequencias` · `email_ab_testes`
+  - `email_contatos` (tem coluna `tags text[]` desde 22/07/2026) · `email_envios` · `email_sequencias` · `email_ab_testes`
+- **Segmentação por grupo (cliente/tour/mensalidade/nicho):** ver `operacao/marketing/email-marketing/03-SEGMENTACAO-CONTATOS.md` antes de montar a query de uma campanha segmentada — nunca disparar pra lista inteira sem checar se o pedido do Felipe é pra um grupo específico
 - **Domínio remetente:** `contato@realvisionmaps.com`
 - **DNS:** SPF + DKIM + DMARC verificados na Hostinger
 - **Docs:** `operacao/marketing/email-marketing/`

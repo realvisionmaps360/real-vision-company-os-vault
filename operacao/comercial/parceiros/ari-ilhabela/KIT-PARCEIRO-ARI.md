@@ -1,4 +1,5 @@
 # Kit do Parceiro Real Vision — Para o Ari
+> Hub: [[BRIEFING-PARCERIA-ARI]]
 
 > Este documento é para você, Ari. Antes de começar a apresentar a Real Vision para as pessoas que você conhece em Ilhabela, quero que você entenda o que fazemos, como pensamos e qual é o seu papel dentro desta parceria.
 

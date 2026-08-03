@@ -1,4 +1,5 @@
 # Geschäftsvorschlag — Wood Art (zur Durchsicht von Romana)
+> Hub: [[FICHA-CLIENTE]] · PT: [[PROPOSTA-WOOD-ART-REVISAO-PT]]
 
 > Dieses Dokument wurde aus dem finalen HTML `PROPOSTA-COMERCIAL-WOOD-ART_09-07-2026_final.html` extrahiert, um die Textprüfung zu erleichtern.
 > Jeder Abschnitt hat eine ID in eckigen Klammern — bitte beim Zurücksenden des überarbeiteten Textes die IDs unverändert lassen, damit wir genau wissen, wo jeder Abschnitt im HTML-Template wieder eingesetzt werden muss.

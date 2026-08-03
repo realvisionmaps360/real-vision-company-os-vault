@@ -2,7 +2,7 @@
 
 > Grade-mestra do curso. Documento de referência para gravação, montagem da área de membros e material de venda.
 > Criado em 28/06/2026. Fonte de verdade da estrutura — o site será alinhado a este documento depois, com OK do Felipe.
-> Índice do projeto: [[README]] · Marketing: [[ESTRATEGIA-LANCAMENTO]] · Cronograma: [[TIMELINE]] · As 3 perguntas: [[GUIA-3-PERGUNTAS]] · Copy de venda: [[SOCIO_DIGITAL_COPY_NOVA]].
+> Índice do projeto: [[03-socio-digital/README|README]] · Marketing: [[ESTRATEGIA-LANCAMENTO]] · Cronograma: [[TIMELINE]] · As 3 perguntas: [[GUIA-3-PERGUNTAS]] · Copy de venda: [[SOCIO_DIGITAL_COPY_NOVA]].
 
 ---
 
@@ -27,7 +27,7 @@
 |---|---|---|
 | **Curso Sócio Digital** (este) | Curso barato, faça-você-mesmo | **Porta de entrada** |
 | **Serviço Sócio Digital** | Real Vision instala e configura pra você (1:1) | Upsell de quem quer pronto |
-| **Curso [[../01-empresa-com-ia/CONCEITO\|Empresa com IA]]** | Formação ampla: abrir uma empresa inteira com IA | Próximo nível |
+| **Curso [[../01-empresa-com-ia/CONCEITO|Empresa com IA]]** | Formação ampla: abrir uma empresa inteira com IA | Próximo nível |
 
 Quem compra este curso é candidato natural a contratar o **serviço** (quero que façam pra mim) ou a subir para o curso **Empresa com IA** (quero ir além).
 
@@ -116,7 +116,7 @@ A maioria dos cursos de IA ensina "como usar o ChatGPT". Este ensina a montar um
 
 ## Onde vai ser hospedado
 
-**Área de membros própria** (mesma do [[../02-profissional-360/CONCEITO|Profissão 360°]]), construída no site da Real Vision: login do aluno, lista de módulos/aulas, player de vídeo e progresso. **Projeto técnico separado**, depois das gravações — registrado no [[README]] como etapa futura. Na largada, a venda pode ser por pré-venda (igual ao Profissão 360°) enquanto a área não fica pronta.
+**Área de membros própria** (mesma do [[../02-profissional-360/CONCEITO|Profissão 360°]]), construída no site da Real Vision: login do aluno, lista de módulos/aulas, player de vídeo e progresso. **Projeto técnico separado**, depois das gravações — registrado no [[03-socio-digital/README|README]] como etapa futura. Na largada, a venda pode ser por pré-venda (igual ao Profissão 360°) enquanto a área não fica pronta.
 
 ---
 

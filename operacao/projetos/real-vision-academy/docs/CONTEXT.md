@@ -20,7 +20,7 @@ related:
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
 
-## Fase 7 (2026-07-30) — Curso Narrado Sincronizado: FASES 0-4 FEITAS, FASE 5 DOCUMENTADA
+## Fase 7 (2026-07-30) — Curso Narrado Sincronizado: FASES 0-5 FEITAS, FASE 6 A SEGUIR
 Nova modalidade de aula: texto estruturado + áudio narrado pelo Felipe, frase destacada e auto-scroll —
 a experiência do RV Voice Sync (já no ar em 1 post do blog) trazida pra dentro do curso **pago**.
 Documentação: [[PRD-007-curso-narrado-sincronizado]] (produto),
@@ -38,8 +38,8 @@ Documentação: [[PRD-007-curso-narrado-sincronizado]] (produto),
 | 2 — pipeline de sincronização | ✅ 82 blocos / 97 frases, último fragmento bate com a duração (0.01s) |
 | 3 — banco e storage | ✅ colunas novas, view `lessons_gated`, áudio no bucket `course-materials` |
 | 4 — leitor genérico | ✅ implementado, verificado e **pushado** (`63ab090`) |
-| **5 — a aula na Academy** | 📋 **planejada e revisada, zero código** ← fase atual |
-| 6 — Media Session + PWA | ⏳ depende da 5 |
+| 5 — a aula na Academy | ✅ implementada e verificada ponta a ponta (30/07/2026), casos positivo e negativo |
+| **6 — Media Session + PWA** | ⏳ **fase atual**, aguardando Felipe validar a aula real primeiro |
 | 7 — verificação e publicação | ⏳ |
 
 Da Fase 4 nasceram duas peças reutilizáveis pelo blog e pela Academy:
@@ -73,8 +73,8 @@ o botão manual "Marcar como concluída" some, trocado por indicador passivo "Ou
 **Ainda não existe PWA no site** — sem `manifest.json`, sem service worker, sem `vite-plugin-pwa`. É
 construção nova na Fase 6.
 
-**Próximo passo:** (1) Felipe roda [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] no SQL Editor; (2)
-implementar os Passos 1 a 7 do [[PRD-007-fase5-plano]].
+**Próximo passo:** Felipe ouvir a aula 0.1 do início ao fim no preview e validar a experiência, depois
+decidir se parte pra Fase 6 (Media Session + PWA) ou fica só na 0.1 por enquanto.
 
 ## Fase 6 (2026-07-19) — Hub + Comunidade v1
 Decidido evoluir o `/academy` de grade de cursos para um **hub/ecossistema** com **comunidade nativa**

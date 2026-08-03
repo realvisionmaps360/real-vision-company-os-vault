@@ -142,6 +142,18 @@ Alexis Lafatas - Lafatas Grafik/
 - Link do LinkedIn aponta para `/admin/dashboard/` — URL quebrada
 - Email em formato `(at)` — não reconhecido como mailto
 
+## Docs técnicos (docs/)
+- [[Alexis Lafatas PLAN]]
+- [[analytics-baseline-julho-2026]]
+- [[before-after-seo-DE]]
+- [[before-after-seo-PT-BR]]
+- [[lafatas-projeto-status]]
+- [[proximos-passos-pendente]]
+- [[site-snapshot-2026-06-26]]
+- [[site-snapshot-completo-2026-06-26]]
+
+---
+
 ### O que já existe (positivo)
 - Structured Data (LocalBusiness + WebSite) — presente, mas com bug
 - Canonical tag correta

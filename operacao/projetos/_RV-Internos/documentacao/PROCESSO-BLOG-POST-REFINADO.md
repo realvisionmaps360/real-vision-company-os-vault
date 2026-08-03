@@ -43,6 +43,9 @@ Felipe salva o arquivo em `TEMP/`. Copiar pra `src/assets/blog/<slug>.png`, impo
 ### 9. Inserir no array
 Novo post entra **no início** do array `blogPosts` (mais recente primeiro).
 
+### 9.5. Fontes no final do post — sempre, sem exceção
+Todo post que cita fato/dado/caso externo (notícia, relatório, incidente) termina com bloco `{ type: "heading3", text: "Fontes" }` (PT) / `"Quellen"` (DE) / `"Sources"` (EN) + `{ type: "list", items: [...] }` com um `<a href="URL">Nome do veículo</a>` por fonte, uma por linha do rascunho da seção "Fontes" em `documentacao/rascunhos/`. Conferir esse bloco existe no `contentBlocks` **antes** do passo 10 (build) — ficou de fora uma vez (post 22, 24-25/07/2026) e só foi notado depois de publicado.
+
 ### 10. Build
 `npm run build` — zero erro antes de cogitar commit.
 

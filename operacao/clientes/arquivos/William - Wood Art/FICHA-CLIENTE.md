@@ -46,6 +46,7 @@ William é dono da Wood Art, empresa de placas de madeira personalizadas, tábua
 **Geral:**
 - Reconciliar duplicata no VisionFlow quando o Supabase voltar.
 - Ver as 11 frentes detalhadas em [[WOOD-ART-FRENTES-DE-TRABALHO]]
+- Revisão da Romana do texto da proposta: [[PROPOSTA-WOOD-ART-REVISAO-PT]] · [[PROPOSTA-WOOD-ART-REVISAO-DE]]
 
 ## Observações
 - Idioma: PT-BR

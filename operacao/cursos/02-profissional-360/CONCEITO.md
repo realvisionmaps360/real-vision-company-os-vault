@@ -40,6 +40,7 @@
 
 ### MÓDULO 0 — Bem-vindo à Profissão 360° *(mentalidade + visão geral)*
 4 aulas. Prepara a cabeça e mostra o destino antes da primeira ferramenta.
+*(Texto pronto em [[MODULO-0-bem-vindo]] — formato **narrado**, ver [[PRD-007-curso-narrado-sincronizado]])*
 - **0.1** — O que é um Profissional 360° (a profissão que você vai construir)
 - **0.2** — O mercado: por que agora é a hora (negócios locais sem presença digital)
 - **0.3** — Como estudar este curso (assistir → executar → cobrar)

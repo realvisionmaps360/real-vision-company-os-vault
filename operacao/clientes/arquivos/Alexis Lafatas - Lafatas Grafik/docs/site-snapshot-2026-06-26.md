@@ -1,4 +1,5 @@
 # Lafatas Photography & Print — Snapshot do Site
+> Hub: [[TIMELINE]]
 **Data:** 2026-06-26  
 **URL:** https://www.lafatas.ch/  
 **Método:** Jina AI Reader (r.jina.ai)  

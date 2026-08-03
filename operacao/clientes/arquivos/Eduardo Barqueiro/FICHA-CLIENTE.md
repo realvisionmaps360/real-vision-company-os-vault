@@ -3,7 +3,8 @@ title: Eduardo Barqueiro — Paraty Onboard
 tags:
   - cliente
   - entregue
-status: entregue
+  - inadimplente
+status: inadimplente
 data_inicio: 2026-06-16
 servicos:
   - cartao-digital
@@ -27,8 +28,14 @@ Eduardo Barqueiro é dono/gestor da Paraty Onboard, empresa de passeios e transp
   - Stack: Vite + React + Tailwind + glassmorphism
   - Repo privado no GitHub → deploy Vercel → CNAME Hostinger
 
+- **31/07/2026** — Site tirado do ar (domínio `paraty.realvisionmaps.com` removido do projeto Vercel) por falta de pagamento
+  - Reversível: reconectar domínio no painel Vercel assim que o pagamento for regularizado
+  - Repo, código e CNAME Hostinger permanecem intactos
+
 ## Próximos passos
 
+- [ ] Cobrar Eduardo / regularizar pagamento antes de reativar o site
+- [ ] Reconectar domínio na Vercel após pagamento confirmado
 - [ ] Follow-up pós-entrega: satisfação com o cartão
 - [ ] Oportunidade: Tour Virtual 360° para a frota/operação da Paraty Onboard
 
@@ -37,3 +44,4 @@ Eduardo Barqueiro é dono/gestor da Paraty Onboard, empresa de passeios e transp
 - Primeiro cartão digital entregue pela Real Vision (caso de referência para o produto)
 - Contato via WhatsApp (campanha de prospecção)
 - Localização: Paraty, RJ
+- Inadimplente desde 31/07/2026 — site suspenso até acerto

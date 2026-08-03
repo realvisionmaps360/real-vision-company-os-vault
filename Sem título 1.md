@@ -1,1 +1,0 @@
-![[prompt-claude-code-realvision-youtube]]

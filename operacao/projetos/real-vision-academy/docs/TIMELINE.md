@@ -699,6 +699,43 @@ rodado**.
 absoluto, sem ele a Academy mostra o curso vazio para todo mundo; (2) implementar os Passos 1 a 7 do mesmo
 documento.
 
+## 2026-07-30 — PRD-007 Fase 5: aula narrada implementada e verificada
+- **Objetivo:** implementar e verificar a Fase 5 do curso narrado sincronizado (aula 0.1) conforme
+  [[PRD-007-fase5-plano]].
+- **Pré-requisito:** Felipe rodou [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] no SQL Editor do Supabase —
+  `deve_ser_zero = 0` confirmado antes de qualquer código.
+- **Atividades:**
+  - Passo 1 — `useProgress.ts`: filtro `.eq("completed", true)` na leitura + upsert explícito com
+    `completed`/`completed_at`.
+  - Passo 2 — `useMyCourses.ts`: mesmo filtro (KI-32).
+  - Passo 3 — `useCourse.ts` migrado pra view `lessons_gated`, 3 selects planos, `user.id` no `queryKey`.
+  - Passo 4 — `useNarratedListenProgress.ts` (novo): regra de escuta real, refs sem re-render, `seeked`
+    zera delta, flush nunca escreve `completed`.
+  - Passo 5 — `NarratedLessonPlayer.tsx` (novo): player próprio, reusa `NarratedSpans` +
+    `useNarrationAutoScroll` da Fase 4, URL assinada renovável, controles completos.
+  - Passo 6 — `CoursePage.tsx`: branch por `format`, botão manual de conclusão some em aula narrada.
+  - Passo 7 — `CourseEditor.tsx`: select de formato + dialog "Narração" (audio_path + JSONs validados).
+  - Verificação via Playwright no preview local, logada como admin (`realvisionmaps360@gmail.com`)
+    matriculado manualmente pelo painel `/academy/admin`.
+- **Bug achado e corrigido na própria verificação (KI-34):** o `useEffect` que liga os listeners de áudio
+  (`timeupdate`/`play`/`pause`/`seeked`/`loadedmetadata`) não tinha `audioUrl` nas dependências — como o
+  player mostra um placeholder enquanto a URL assinada carrega, a tag `<audio>` real só existe no DOM
+  depois, e o efeito nunca reconectava à ref. Sintoma: áudio tocava de verdade, mas destaque de frase,
+  tempo exibido e "Ouvido: X%" ficavam travados. Corrigido adicionando `audioUrl` ao array de dependências.
+- **Verificado com sucesso:** view libera conteúdo com curso `published=false` (KI-31), texto+áudio não
+  vazam sem matrícula (KI-30), destaque de frase sincroniza, duração real carrega (12:18), banner
+  "Continuar de onde parei" grava e restaura posição, escuta simulada até ~82% dispara conclusão automática
+  sem botão manual, indicador "Ouvido: 100%" e "Aula concluída" aparecem, percentual bate entre
+  `/academy/curso/...` (1 de 40 · 3%) e `/academy/cursos` (mesmo número) — KI-32 sem regressão.
+- **Caso negativo verificado (mesma sessão, conta não-admin do Felipe):** curso mostra a vitrine (nome,
+  mesmo despublicado) mas exibe "Você não está matriculado"; no nível de rede, a query de `modules` já
+  vem vazia — nenhuma chamada chega a `lessons_gated`. Zero `<audio>`, zero fragmento de texto no DOM.
+  Fase 5 considerada 100% fechada — os 10 critérios de aceite do §14 do PRD-007 (exceto o #5, Fase 6)
+  verificados.
+- **Deploy:** commit `de0e0cf` no `main`, push confirmado pelo Felipe, Vercel builda automaticamente.
+- **Próximos passos:** Felipe validar a experiência da aula real em produção (ouvir do início ao fim) e
+  decidir sobre a Fase 6 (Media Session + PWA).
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]

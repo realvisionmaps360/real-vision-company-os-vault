@@ -1,4 +1,5 @@
 # Prospecção Paraty — Restaurantes
+> Índice: [[README]] · Campanha: [[campanha-paraty-2026]]
 **Data:** Junho 2026 · **Oferta:** Foto 360° aérea no Google Meu Negócio — R$25
 **Remetente:** adm@realvisionmaps.com · WhatsApp: (11) 91293-1924
 **Total:** 20 restaurantes

@@ -95,7 +95,7 @@ Os clientes Nery, Jair, Antônio, Jucélia, Getúlio, Emerson e Messias foram ca
 | 7 | Messias / Restaurante Pôr do Sol | Online, vencido | B | Manga Rosa Garden | Sim |
 | 8 | Betão / Pousada Cajueiro | Online, vencido | B | Vila Mandela | Não |
 | 9 | Zuleide / Pousada Sol da Ilha | Online, vencido | B | Vila Mandela | Não |
-| 10 | Fernanda / Siri Bar | Online, vencendo agora | C | Casa Amarela Maraú | Não |
+| 10 | Fernanda / Restaurante Siribar | Online, vencendo agora | C | Casa Amarela Maraú | Não |
 | 11 | Didier / Casa dos Cajus | Online, vencendo agora | C | Vila Mandela | Não |
 | 12 | Kelly / Pizzaria Baiana | Online, vencendo agora | C | Manga Rosa Garden | Não |
 | 13 | Ian / Barra Clube | Online, ainda no prazo | D | Casa Amarela Maraú | Não |

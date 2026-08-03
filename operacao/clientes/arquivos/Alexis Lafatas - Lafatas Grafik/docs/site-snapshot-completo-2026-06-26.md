@@ -1,4 +1,5 @@
 # Lafatas Photography & Print — Snapshot Completo do Site
+> Hub: [[TIMELINE]]
 **Data:** 2026-06-26 (re-scraping corrigido)
 **URL:** https://www.lafatas.ch/
 **Método:** WebFetch direto — texto literal, sem resumo, sem tradução

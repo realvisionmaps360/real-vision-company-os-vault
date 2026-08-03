@@ -190,7 +190,7 @@ related:
   (leitura) depois que ele rodar.
 
 ### Achados da revisão do plano da Fase 5 (30/07/2026, antes de virar código)
-- **KI-30 — `useCourse.ts` lê a tabela crua `lessons` e vaza o conteúdo pago.** O hook faz
+- **KI-30 — ✅ RESOLVIDO (30/07/2026, Fase 5, verificado ponta a ponta).** `useCourse.ts` lê a tabela crua `lessons` e vaza o conteúdo pago. O hook faz
   `.from("modules").select("*, lessons(*, materials(*))")` — `*` na tabela, não na view `lessons_gated`
   criada para gatear (KI-28). RLS do Postgres é por **linha**, não por coluna: como a policy de catálogo
   libera `lessons` de curso publicado para qualquer um, no dia em que o Profissional 360 for publicado
@@ -199,8 +199,8 @@ related:
   verificou só a existência dela no `information_schema` — nenhuma UI consumia a view ainda, e o hook
   nunca foi migrado. **Correção:** Passo 3 do [[PRD-007-fase5-plano]] (migrar para `lessons_gated` + botar
   `user.id` no `queryKey`, já que o cache passa a guardar conteúdo pago).
-- **KI-31 — `lessons_gated` devolve zero linha para aluno matriculado enquanto o curso não for publicado.
-  É bug de produção hoje, não só bloqueio da Fase 5.** A view é `security_invoker = true`, então as
+- **KI-31 — ✅ RESOLVIDO (30/07/2026, Fase 5).** `lessons_gated` devolve zero linha para aluno matriculado enquanto o curso não for publicado.
+  Era bug de produção, não só bloqueio da Fase 5. A view é `security_invoker = true`, então as
   policies de `lessons`/`modules` continuam valendo por baixo, aplicadas como o usuário que chama — e elas
   exigem `published = true`. O Profissional 360 está `published = false` (pré-venda). Efeito: a KI-18
   liberou a **compra** em pré-venda, mas quem comprar e for matriculado abre o curso e **não vê aula
@@ -214,7 +214,13 @@ related:
   `is_enrolled_module` (security definer), policies `modules_select_enrolled`/`lessons_select_enrolled`, e
   a view recriada com `where published or is_admin() or is_enrolled_course(...)`. As duas metades são
   necessárias. Regra que passa a valer: **matrícula libera o conteúdo; `published` governa só a vitrine.**
-- **KI-32 — "linha existe" é tratado como "aula concluída" em `useProgress.ts` e `useMyCourses.ts`.**
+  **Verificado ponta a ponta (30/07/2026):** admin matriculado abre a 0.1 com texto+áudio apesar de
+  `published=false` (caso positivo). Caso negativo confirmado com uma segunda conta, autenticada mas
+  **sem** matrícula: a vitrine do curso aparece (nome, mesmo despublicado), mas a tela mostra "Você não
+  está matriculado" e, no nível de rede, a query de `modules` já vem vazia para esse usuário — nem chega
+  a existir chamada para `lessons_gated`. Zero `<audio>`, zero fragmento de texto, zero vazamento
+  confirmado via DOM. Os dois lados do critério de aceite #6/#7 do PRD-007 estão fechados.
+- **KI-32 — ✅ RESOLVIDO (30/07/2026, Fase 5, verificado ponta a ponta).** "Linha existe" era tratado como "aula concluída" em `useProgress.ts` e `useMyCourses.ts`.
   Nenhum dos dois filtra `.eq("completed", true)`; a escrita (`upsert({user_id, lesson_id})`) também não
   manda a coluna. Inofensivo enquanto só existia marcação manual (a linha ou existe = concluída, ou é
   apagada). A Fase 5 cria pela primeira vez uma linha "em andamento" (posição salva antes de concluir) e
@@ -229,6 +235,22 @@ related:
   partir dos fragmentos — então nenhum negrito chega à tela. Consertar exige regerar os artefatos de
   sincronização, território do KI-23 (texto congelado depois da gravação). **Não corrigido de propósito**;
   registrado para não ser diagnosticado como bug de CSS depois.
+
+### Achado na verificação da Fase 5 (30/07/2026, depois do código, antes de fechar)
+- **KI-34 — ✅ RESOLVIDO (30/07/2026, mesma sessão).** `NarratedLessonPlayer.tsx` renderizava o
+  placeholder ("Aula narrada em breve") enquanto `audioUrl` ainda carregava — nesse primeiro render a tag
+  `<audio ref={audioRef}>` não existe no DOM, então `audioRef.current` fica `null`. O `useEffect` que liga
+  os listeners (`timeupdate`/`play`/`pause`/`seeked`/`loadedmetadata`) tinha `if (!audio) return` e não
+  dependia de `audioUrl` — quando o player passava a renderizar o `<audio>` de verdade (placeholder → real),
+  esse efeito não rerodava porque nenhuma das suas dependências mudou, deixando a ref presa em `null` pra
+  sempre. Sintoma: áudio tocava de verdade (confirmado via `audio.paused`/`currentTime` no DOM), mas o
+  destaque de frase, o tempo exibido e o indicador "Ouvido: X%" nunca atualizavam — só o play/pause via
+  clique direto no botão funcionava, porque esse handler lê `audioRef.current` sob demanda, não via
+  listener. **Correção:** adicionar `audioUrl` ao array de dependências do efeito, garantindo que ele
+  rerode no exato momento em que o placeholder vira o player real. Sem isso, a Fase 5 pareceria funcional
+  em qualquer teste manual rápido (áudio toca) mas o critério de aceite #2/#3 (destaque + auto-scroll)
+  estaria 100% quebrado. **Como foi achado:** log temporário no efeito mostrou `audio: null` nas duas
+  primeiras invocações (StrictMode) — nunca reinvocado depois que o áudio carregou de verdade.
 
 ## Decisões em aberto (não são problemas, mas travam fases)
 - **Nenhuma.** D-021 (áudio em segundo plano) foi fechada em 30/07/2026 com teste em aparelho real: PWA

@@ -3,6 +3,7 @@
 > **Status:** ✅ Congelado · **Data:** 24/06/2026 · **Missão:** Mission 4
 > **Aprovado por:** Felipe Garcia
 > **Relacionado:** [[ACQUISITION-CLAUDE]] (papel — M1) · [[ACQUISITION-SYSTEM-ARCHITECTURE]] (arquitetura — M2) · [[ACQUISITION-DATA-MODEL]] (schema — M3) · VisionFlow (destino do handover)
+> Índice: [[README]]
 > **Convenção:** prosa em português; status, serviços e campos em inglês (igual M3).
 
 ---

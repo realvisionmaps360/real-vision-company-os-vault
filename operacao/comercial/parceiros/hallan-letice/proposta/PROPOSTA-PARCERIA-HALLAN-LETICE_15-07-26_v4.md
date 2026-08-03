@@ -1,4 +1,5 @@
 # Proposta de Parceria — Real Vision × Hallan e Letice
+> Índice: [[README]] · Cliente: [[hallan-lavanderia-magnolia]]
 
 **Data:** 14 de julho de 2026
 **Elaborado por:** Felipe Garcia — Real Vision

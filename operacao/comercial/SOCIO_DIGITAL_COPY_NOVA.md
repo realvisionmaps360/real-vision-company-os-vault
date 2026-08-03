@@ -1,5 +1,6 @@
 # Sócio Digital — Nova Copy
-> Copy de venda do serviço descrito em [[CONCEITO|Curso 03 — Sócio Digital]]
+> Copy de venda do serviço descrito em [[operacao/cursos/03-socio-digital/CONCEITO|Curso 03 — Sócio Digital]]
+> Índice: [[README]]
 > Reescrita em 28/05/2026
 > Substitui o conteúdo genérico de ServicoSocioDigital.tsx
 > Baseado no vídeo "A Crise e a Oportunidade da Inteligência Artificial"

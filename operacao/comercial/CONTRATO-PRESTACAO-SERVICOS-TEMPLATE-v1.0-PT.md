@@ -1,4 +1,4 @@
-<!-- Real Vision — Contrato de Prestação de Serviços (template mestre) · v1.0 (junho 2026) · pareia com [[TERMOS-E-CONDICOES-GERAIS-v1.1-PT]] · campos de preenchimento usam a sintaxe {{CAMPO}} · tradução fiel do [[SERVICE-AGREEMENT-TEMPLATE-v1.0-EN]] — pendente de revisão do Felipe -->
+<!-- Real Vision — Contrato de Prestação de Serviços (template mestre) · v1.0 (junho 2026) · pareia com [[TERMOS-E-CONDICOES-GERAIS-v1.1-PT]] · campos de preenchimento usam a sintaxe {{CAMPO}} · tradução fiel do [[SERVICE-AGREEMENT-TEMPLATE-v1.0-EN]] — pendente de revisão do Felipe · conceito: [[contrato-rv]] · índice: [[README]] -->
 
 # REAL VISION BRASIL LTDA
 

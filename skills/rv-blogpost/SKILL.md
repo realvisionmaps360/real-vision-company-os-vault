@@ -31,7 +31,7 @@ Todo post precisa seguir a interface `BlogPost` de `src/data/blog-posts.ts`:
 ```typescript
 {
   id: string,                // próximo número disponível
-  slug: string,              // kebab-case, max 50 chars
+  slug: { pt: string, en: string, de: string },  // kebab-case por idioma, max 50 chars — desde RF4.1 (SEO Internacional), nunca campo único
   title: string,             // declaração de valor, não manchete de revista
   summary: string,           // 2-3 frases, lidas no card do blog
   content: string,           // mesmo texto do summary (usado como fallback)
@@ -41,8 +41,8 @@ Todo post precisa seguir a interface `BlogPost` de `src/data/blog-posts.ts`:
   date: string,              // YYYY-MM-DD
   readTime: string,          // "X min"
   image: string,             // Unsplash URL ou import de asset local
-  metaTitle: string,         // max 60 chars, inclui "| Real Vision"
-  metaDescription: string,   // max 160 chars, inclui dado concreto + CTA implícito
+  metaTitle: string,         // max 60 chars, inclui "| Real Vision" — vira {pt,en,de} quando o post for traduzido (ver checklist DoD na rv-i18n)
+  metaDescription: string,   // max 160 chars, inclui dado concreto + CTA implícito — idem
   featured?: boolean,        // só para posts estratégicos de topo de funil
   contentBlocks?: ContentBlock[],
   postCta?: PostCta,
@@ -65,7 +65,7 @@ Todo post precisa seguir a interface `BlogPost` de `src/data/blog-posts.ts`:
 | `modalities` | Modalidades de serviço. Cada item: `{ icon, title, body }` |
 | `image` | Imagem com legenda. Campos: `url`, `alt`, `caption?`, `size?` |
 | `metric-grid` | Grid de métricas. Cada item: `{ eyebrow, label, icon }` |
-| `link-card` | Card de link interno. Campos: `href`, `eyebrow`, `title`, `text`, `image` |
+| `link-card` | Card de link interno. Campos: `href`, `eyebrow`, `title`, `text`, `image`. **Se o post já tiver EN/DE:** `href` do bloco EN aponta pro slug EN com prefixo `/en/`, o do bloco DE pro slug DE com `/de/` — nunca reusar o link do bloco PT (bug real já corrigido, ver Pitfalls e checklist DoD na `rv-i18n`) |
 | `camera-card` | Card de câmera/equipamento (uso específico) |
 | `compare-cards` | Comparação de produtos/opções |
 
@@ -146,7 +146,8 @@ Sempre presente. Direto ao próximo passo. Link para WhatsApp com mensagem pré-
 | **Post saindo com pouco negrito** | Texto corrido sem destaque nas frases/dados centrais, difícil de escanear | Usar `**negrito**` deliberadamente nas frases-chave de cada bloco, não só 1-2 vezes no post inteiro |
 | **Crítica virando julgamento de caráter** | Rascunho quase chamou executivo real de termo pejorativo (ex: "sociopata") sem base verificável | Crítica fica no fato concreto e verificável ("colocou infraestrutura de terceiro em risco"), nunca em acusação de caráter contra pessoa física — risco de difamação |
 | **Tema partindo de vídeo/notícia viral sem checar** | Conteúdo de origem (transcrição de vídeo) tinha nomes/datas distorcidos do fato real | Antes de escrever sobre qualquer alegação externa, rodar WebSearch pra confirmar o que de fato aconteceu — regra de ouro "nunca inventar dado" vale também pra fontes de terceiros |
-| **Presumir tradução automática** | — | **Todo post sai sempre em PT primeiro.** EN/DE só depois de aprovação do post em PT já publicado — regra fixa, ver `rv-i18n` quando chegar a hora |
+| **Presumir tradução automática** | — | **Todo post sai sempre em PT primeiro.** EN/DE só depois de aprovação do post em PT já publicado. Ao traduzir, seguir o **checklist DoD (RF7)** da skill `rv-i18n` — slug, metaTitle e metaDescription traduzidos de verdade fazem parte do pacote, não são opcionais |
+| **`link-card` com href do idioma errado** | 4 posts linkavam pra outro post do blog, e 2 pro portfólio, usando o `href` do bloco PT dentro dos blocos EN/DE — leitor em inglês/alemão clicava e caía na versão em português, perdendo o idioma no meio da leitura. Corrigido em 26/07/2026 (projeto SEO Internacional) | Todo `link-card` dentro de um bloco EN/DE aponta pra URL daquele idioma (`/en/blog/<slug-en>`, `/de/blog/<slug-de>`) — nunca copia o `href` do bloco PT. Se o post citar outro post ou projeto do portfólio, resolver o link certo **na hora de escrever o bloco**, não depois |
 
 **Regra de ouro:** *Rascunho no lugar certo → Revisão do Felipe → Só então publica.*
 

@@ -32,9 +32,10 @@ A história de progressão é baseada na vida e na obra de **Manly Palmer Hall**
 
 | Arquivo | O que é |
 |---|---|
-| `referencias/Como VENCER o Jogo da Terra  A Teoria dos 7 Níveis.md` | Transcrição do vídeo do YouTube que inspirou o conceito ([link](https://www.youtube.com/watch?v=iA6UIyVNYNE)) |
-| `referencias/IDEIAS SOLTAS.md` | Brainstorm original do Felipe com as ideias do app |
-| `referencias/The_Secret_Teachings_of_All_Ages_- _Manly_Hall.md` | Texto completo do livro (edição 1928, domínio público) — fonte da história do jogo |
+| [[Como VENCER o Jogo da Terra  A Teoria dos 7 Níveis]] | Transcrição do vídeo do YouTube que inspirou o conceito ([link](https://www.youtube.com/watch?v=iA6UIyVNYNE)) |
+| [[IDEIAS SOLTAS]] | Brainstorm original do Felipe com as ideias do app |
+| [[The_Secret_Teachings_of_All_Ages_- _Manly_Hall]] | Texto completo do livro (edição 1928, domínio público) — fonte da história do jogo |
+| [[FINAL DO JOGO EARTH GAME]] | Registro do desfecho/final do jogo |
 
 ## Regras deste projeto
 

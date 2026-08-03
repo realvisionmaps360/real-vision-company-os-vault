@@ -1,7 +1,8 @@
 # Guia das 3 Perguntas — worksheet do Felipe
 
 > Documento de trabalho para o Felipe **definir e responder** as 3 perguntas centrais da técnica do Sócio Digital.
-> Vira, depois, o roteiro do **Módulo 0** do [[CONCEITO|curso]].
+> Vira, depois, o roteiro do **Módulo 0** do [[03-socio-digital/CONCEITO|curso]].
+> Hub: [[03-socio-digital/README|README]] · Cronograma: [[TIMELINE]]
 > Criado em 28/06/2026.
 >
 > ⚠️ As perguntas abaixo são uma **proposta de partida** (marcadas como rascunho). Felipe valida, troca ou reescreve. Nada aqui é definitivo.

@@ -77,3 +77,15 @@ Esse app seria construído no futuro, mas o sistema de rastreamento manual come�
 
 > _(espaço para você adicionar sua visão, ajustes, dúvidas ou aprovação)_
 
+---
+
+## Documentos da parceria
+- [[WHATSAPP-ARI]] — abordagem inicial
+- [[PROPOSTA-PARCERIA-ARI]] — proposta formal
+- [[EMAIL-PROPOSTA-ARI]] — envio por email
+- [[KIT-PARCEIRO-ARI]] — material de integração
+- [[CONTRATO-PARCERIA-INDICACAO-ARI]] — formalização
+- [[ANALISE-ALTERACOES-ROMANA]] — revisão da Romana
+
+Índice: [[README]]
+

@@ -1,4 +1,5 @@
 # Proposta de Parceria — Real Vision × Ari
+> Hub: [[BRIEFING-PARCERIA-ARI]]
 
 **Data:** 24 de junho de 2026  
 **Elaborado por:** Felipe Garcia — Real Vision

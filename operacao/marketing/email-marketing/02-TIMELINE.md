@@ -107,3 +107,27 @@
 - Felipe revisa e aprova os 13 emails + 13 WAs (checklist no `03-CLIENTES-REATIVACAO.md`).
 - Após aprovação: disparo via Hermes (Resend) + WA manual por Felipe.
 - Registrar respostas e atualizar checklist.
+
+---
+
+## Numeração de campanhas (a partir de 20/07/2026)
+
+A partir de agora, cada disparo de email marketing ganha um número sequencial.
+
+- **Campanha 001** — Reativação de clientes antigos de tour virtual (13 clientes, ver seção acima e `03-CLIENTES-REATIVACAO.md`).
+- **Campanha 002** — "O erro de R$0 que muito dono de empresa tá cometendo agora" (lista geral, todos os contatos ativos).
+
+### 20/07/2026 — Campanha 002 disparada pra lista geral
+- **Contexto:** Felipe mostrou o email anterior (disparo de teste) com bug de encoding (mojibake — "não" virando "n�o") e sem nenhuma formatação HTML. Pediu pra reformatar no estilo de um email de referência do Neil Patel (Ubersuggest): logo, texto direto, negrito estratégico, P.S., assinatura com foto.
+- **Correção do bug:** o `hermes-send` já declara `charset="UTF-8"` corretamente — o problema era que o disparo anterior não passou por ele (foi texto puro direto). A partir de agora, todo envio usa HTML via `hermes-send`.
+- **Masthead nova:** em vez do texto "REAL VISION" em fundo preto sólido, agora usa o mesmo fundo `.grid-bg` (radial-gradients âmbar + grid pontilhado) usado na Home/RV Academy do site, com o logo real (`logo-header.png`) embutido. Gerado via Playwright (screenshot do CSS real do site) e publicado em `real-vision-site/public/email-assets/masthead-002.png`.
+- **Assinatura com foto:** recorte da foto do Felipe com o drone (`felipe-drone.png`, seção "Fundador" da Home), publicada em `public/email-assets/felipe-assinatura.png`.
+- **Secret do Hermes:** `HERMES_SECRET` agora vive em `.mcp.json` (raiz do vault, gitignorado) na chave `"secrets"` — Felipe regenerou o valor no Supabase Dashboard porque o valor antigo não podia ser recuperado (Supabase não expõe secrets já salvos).
+- **Bug de teste (resolvido):** primeiro teste real teve um erro meu (mandei um placeholder no lugar do HTML) e depois um problema de cache do proxy de imagem do Gmail mobile (bateu bem na hora da propagação do deploy) — resolvido com cache-bust (`?v=2`) na URL das imagens.
+- **Romana Loznjakovic cadastrada** na tabela `email_contatos` (`romana.loznjakovic@gmail.com`) — não estava na lista ainda.
+- **Disparo:** 28 contatos ativos (`status='ativo'`), sequência `002 - Site é o maior ativo digital` marcada como `enviada` em `email_sequencias`.
+- **Arquivo da campanha:** `operacao/marketing/email-marketing/campanhas/002-site-maior-ativo-digital.html`.
+- **Próximo passo:** acompanhar métricas de abertura/clique no Resend, e Felipe/Romana avaliam se o formato novo (Neil Patel style) fica como padrão pras próximas campanhas.
+
+### 22/07/2026 — Nova fonte de entrada em `email_contatos`: squeeze page da comunidade WhatsApp
+Edge Function pública `capture-community-lead` (mesmo projeto Supabase do Hermes) grava direto em `email_contatos` com `origem_consentimento='blog-<slug>'`. Testado local, ainda não publicado em produção. Detalhe completo em [`TIMELINE.md`](../../projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.

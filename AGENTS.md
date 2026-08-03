@@ -89,7 +89,7 @@ Regra de ouro completa (o que somos / não somos, palavras que usamos/evitamos, 
 | **Tour 360°** | Pano2VR + Google Street View | Equipamento próprio |
 | **Hospedagem/Deploy** | Vercel (frontend) + Hostinger VPS (Ubuntu 24.04) | VPS IP: 187.77.36.202 |
 | **Banco/Backend** | Supabase (PostgreSQL + Auth + Realtime) | |
-| **CRM** | VisionFlow (`operacao/projetos/_RV-Internos/visionflow`) | CRM próprio, React + Vite + Supabase. Export de clientes em `operacao/clientes/` |
+| **CRM** | VisionFlow (`operacao/projetos/_RV-Internos/sites/visionflow`) | CRM próprio, React + Vite + Supabase. Export de clientes em `operacao/clientes/` |
 | **Notas/Conhecimento** | Obsidian (Company OS) + GitHub sync | Vault: `real-vision-company-os-vault/` |
 | **IA Agent** | Hermes Agent (Thomas Anderson) | Roda no VPS via Docker |
 | **Automação Web** | Evolution API (WhatsApp), n8n, Playwright/Patchright | Open source > pago |
@@ -106,6 +106,19 @@ Regra de ouro completa (o que somos / não somos, palavras que usamos/evitamos, 
 - **GEO-ready:** Structured data (LocalBusiness + subtypes), conteúdo para AI Overviews/SGE.
 - **Zero dependência de vendor lock-in.** Deploy próprio, dados próprios.
 - **Identidade visual do site oficial:** sempre seguir `contexto/DESIGN.md` (paleta âmbar/dark, Bebas Neue + Inter + JetBrains Mono). Não introduzir cores/fontes fora do padrão sem aprovação.
+
+### Segredos & Credenciais (API keys, tokens, senhas, connection strings)
+- **NUNCA pedir pro Felipe colar valor sensível no chat.** Ao detectar necessidade de chave/token/senha/credencial de conexão, aponta direto o caminho de onde salvar — nunca pergunta o valor.
+- **Padrão por projeto:**
+  ```
+  projeto/
+  ├── .env              # valores reais, NUNCA commitado
+  ├── .env.example       # nomes das variáveis, vazio, ESSE vai pro git
+  └── .gitignore         # contém ".env"
+  ```
+- Antes de usar qualquer credencial: confirma que `.env` está no `.gitignore` do repo (adiciona se não estiver).
+- Cria/atualiza `.env.example` com o nome da variável (sem valor) pra documentar o que o projeto precisa.
+- Código sempre lê via variável de ambiente (`process.env.NOME_DA_CHAVE` ou equivalente) — nunca hardcoded.
 
 ### Convenções de Arquivos & Pastas (Company OS)
 ```
@@ -131,6 +144,12 @@ real-vision-company-os-vault/
 - Datas: `YYYY-MM-DD` ou `YYYY-MM` no nome
 - Versões: `-v1`, `-v2`, `-CORRIGIDO`, `-REVISAO`
 - **NUNCA** espaços, acentos, maiúsculas no nome do arquivo (exceção: documentos comerciais/legais em `operacao/comercial/`, que usam `MAIUSCULO-COM-HIFENS.md`)
+
+**Wikilinks (padrão permanente):**
+- Todo novo documento `.md` criado em `operacao/` linka pro doc central da pasta (`README.md`, `FICHA-CLIENTE.md` ou `CONCEITO.md` — o que for o hub daquela pasta) e o hub linka de volta.
+- Se o assunto tiver conceito ou entidade equivalente em `wiki/concepts/` ou `wiki/entities/` (`operacao/gestao/infraestrutura/obsidian/wiki/`), linkar os dois lados.
+- Sintaxe padrão: `[[nome-do-arquivo]]`. Se esse nome existir em mais de um lugar do vault (ex: vários `README.md` ou `CONCEITO.md`), o link é ambíguo — usar caminho completo `[[pasta/nome]]`.
+- Fora de escopo: código-fonte de repositório de cliente/projeto (`README.md`, `.lovable/plan.md`, docs técnicas dentro de `site/`, `node_modules/`) — não fazem sentido como nó do grafo de conhecimento do negócio.
 
 ### Git & Sync
 - **Vault sync:** Script `vault-sync.sh` no Hermes (cron 1h 8h-20h + fim de sessão)
@@ -251,7 +270,7 @@ vault-sync.sh "mensagem opcional"
 
 ### Git no Site (real-vision-core)
 ```bash
-cd operacao/projetos/_RV-Internos/real-vision-site
+cd operacao/projetos/_RV-Internos/sites/real-vision-site
 git pull --rebase origin main
 # faz mudanças
 git add -A && git commit -m "msg" && git push

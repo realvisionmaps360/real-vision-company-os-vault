@@ -10,6 +10,8 @@ Estes Termos e Condições Gerais ("Termos") aplicam-se a todos os serviços pre
 
 *Versão em inglês: [[GENERAL-TERMS-CONDITIONS-v1.1-EN]]*
 
+Conceito: [[termos-condicoes]] · Índice: [[README]]
+
 ---
 
 # 1. Escopo dos Serviços

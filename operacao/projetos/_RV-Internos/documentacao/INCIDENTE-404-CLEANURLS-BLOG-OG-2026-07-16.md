@@ -1,4 +1,5 @@
 # Incidente — 404 em todas as páginas internas do site (16/07/2026)
+> Causado por mudança no [[BLOG-POSTS-PIPELINE|pipeline de blog]] (correção de imagem OG)
 
 ## Resumo
 

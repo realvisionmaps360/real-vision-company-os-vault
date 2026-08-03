@@ -1,4 +1,5 @@
 # Mensagem WhatsApp — Ari (Ilhabela)
+> Hub: [[BRIEFING-PARCERIA-ARI]]
 
 > **Quando enviar:** Assim que Felipe aprovar  
 > **Tom:** Pessoal, leve, sem vender nada — objetivo é reabrir o canal

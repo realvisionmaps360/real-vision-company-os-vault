@@ -18,13 +18,17 @@
 # Pastas de projeto que só têm .md (documentação) NÃO precisam ser listadas aqui —
 # a regra geral do gitignore já libera .md automaticamente.
 # Ao criar um projeto novo que seja um repositório de código, adicionar uma linha aqui.
-operacao/projetos/_RV-Internos/visionflow/
-operacao/projetos/_RV-Internos/real-vision-site/
-operacao/projetos/solariumaarau/
+operacao/projetos/_RV-Internos/sites/visionflow/
+operacao/projetos/_RV-Internos/sites/real-vision-site/
+operacao/projetos/_RV-Internos/sites/site-template-rv-01/
 operacao/projetos/sunbite-site/
-operacao/projetos/rv-cartaodigital-paraty-onboard/
-operacao/projetos/site-template-rv-01/
+operacao/clientes/arquivos/Eduardo Barqueiro/Cartão Digital/rv-cartaodigital-paraty-onboard/
 operacao/clientes/arquivos/MSV-Aarau/site/
+operacao/clientes/arquivos/Gabriel Iberg - Solarium Aarau/site/
+operacao/clientes/arquivos/Alessandro Furtado - Associação Beneficiente Conecta Saúde/site/
+operacao/clientes/arquivos/Flávia Andrade - Vila dos Corais/site/
+operacao/clientes/arquivos/Dorival  Martins - Brazilcomp/entrega-final/site-versao-1/
+operacao/clientes/arquivos/Dorival  Martins - Brazilcomp/entrega-final/site-versao-2/
 operacao/projetos/_RV-Internos/jogo-da-terra/prototipo/
 operacao/clientes/arquivos/Hallan Costa - Lavanderia Magnólia/site/
 operacao/projetos/_RV-Internos/instagram-mcp/

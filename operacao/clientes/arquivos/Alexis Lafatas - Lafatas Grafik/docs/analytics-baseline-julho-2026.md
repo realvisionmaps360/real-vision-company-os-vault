@@ -1,4 +1,5 @@
 # Lafatas — Baseline Analytics & Search Console (03/07/2026)
+> Hub: [[TIMELINE]]
 
 Primeira captura de dados desde que o Google Analytics e o Search Console foram conectados. Serve como ponto de partida para comparar a evolução mês a mês, inclusive se o Alexis fechar um plano mensal com a Real Vision.
 

@@ -1,4 +1,5 @@
 # Proposta Comercial — Wood Art (para revisão da Romana)
+> Hub: [[FICHA-CLIENTE]] · DE: [[PROPOSTA-WOOD-ART-REVISAO-DE]]
 
 > Documento extraído do HTML final `PROPOSTA-COMERCIAL-WOOD-ART_09-07-2026_final.html` para facilitar a revisão de texto.
 > Cada bloco tem um ID entre colchetes — ao devolver o texto revisado, mantenha os IDs intactos para sabermos exatamente onde recolocar cada trecho no template HTML.

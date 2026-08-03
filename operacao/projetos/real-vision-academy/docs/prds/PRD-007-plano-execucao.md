@@ -244,10 +244,17 @@ e não pode ser substituído pelo teste como admin** — é justamente onde o KI
 `lesson_progress` do Passo 0 não tem rollback automático (o SQL registra o estado anterior antes).
 **Trava:** (1) Felipe rodar o SQL do Passo 0; (2) aprovação do Felipe sobre a experiência antes da Fase 6.
 
-**Status (30/07/2026):** planejada e revisada, **nada implementado**. A revisão encontrou 8 problemas — 3
-graves, sendo dois deles bugs que já existem em produção hoje, independentes desta fase (KI-30 vazamento
-de conteúdo pago pelo `useCourse.ts`; KI-31 aluno de pré-venda não enxerga aula nenhuma). Todos estão
-documentados com correção em [[PRD-007-fase5-plano]].
+**Status (30/07/2026):** ✅ implementada e verificada ponta a ponta. Passo 0 (SQL) rodado pelo Felipe no SQL
+Editor, `deve_ser_zero = 0` confirmado. Passos 1-7 implementados, `npm run build` e ESLint limpos.
+Verificado no preview com duas contas: admin matriculado vê a view `lessons_gated` devolver a árvore mesmo
+com `published = false` (KI-31 fechado), texto+áudio da 0.1 carregam, escuta real simulada até 80% dispara
+a conclusão automática sem botão manual, "Ouvido: X%" e "Continuar de onde parei" funcionam, percentual
+bate entre `/academy/curso/...` e `/academy/cursos` (KI-32 fechado). Conta não-admin sem matrícula confirma
+o caso negativo: vitrine aparece, conteúdo não — no nível de rede a query de `modules` já vem vazia, sem
+chamada nenhuma a `lessons_gated` (KI-30 fechado, os dois lados). Um bug foi achado e corrigido durante a
+própria verificação (KI-34 — `useEffect` que liga os listeners de áudio não tinha `audioUrl` nas
+dependências, então nunca reconectava ao elemento real depois do placeholder inicial). Os 10 critérios de
+aceite do §14 do PRD, exceto o #5 (Fase 6), estão verificados.
 
 ---
 

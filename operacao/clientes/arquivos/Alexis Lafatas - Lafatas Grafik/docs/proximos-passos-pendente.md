@@ -1,4 +1,5 @@
 # Próximos passos pendentes — conteúdo reservado para documento futuro
+> Hub: [[TIMELINE]]
 
 > Removido do relatório final (04/07/2026) por decisão do Felipe: o relatório de entrega deve focar só no que já foi feito. Este conteúdo sobre o Google Merchant Center foi preservado aqui para entrar num **próximo documento** de "próximos passos / oportunidades de expansão" que o Felipe ainda vai criar para o Alexis.
 >

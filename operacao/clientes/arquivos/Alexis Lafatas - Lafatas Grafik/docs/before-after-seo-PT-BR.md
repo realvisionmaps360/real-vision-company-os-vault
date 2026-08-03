@@ -1,4 +1,5 @@
 # Lafatas Photography & Print — Otimização SEO Antes/Depois
+> Hub: [[TIMELINE]]
 
 **26 de junho de 2026**  
 **Revisora:** Romana Loznjakovic

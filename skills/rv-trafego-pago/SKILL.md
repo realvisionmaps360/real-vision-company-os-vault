@@ -119,3 +119,11 @@ Se a propriedade GA4 e a conta Google Ads estão em e-mails/contas Google difere
 ## Última campanha criada — referência
 
 `RV - Blog LLM vs SLM - WhatsApp` (12/07/2026), conta `414-120-1211`, ver timeline completa em [`TIMELINE.md`](../../operacao/projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md) e briefing original em [`CAMPANHA-SLM-LLM-WHATSAPP-2026-07.md`](../../operacao/projetos/_RV-Internos/documentacao/CAMPANHA-SLM-LLM-WHATSAPP-2026-07.md).
+
+## Sempre confirmar a URL final do anúncio via API antes de diagnosticar GA4
+
+Antes de rodar qualquer relatório de GA4 filtrando por página, confirmar a URL exata do anúncio via `mcp__google-ads-mcp__search_search` (resource `ad_group_ad`, campo `ad_group_ad.ad.final_urls`) — nunca assumir o slug de memória. Um diagnóstico de 22/07/2026 checou a página errada e concluiu (errado) que o vínculo GA4↔Ads tinha quebrado, quando na verdade o vínculo nunca caiu — só a página checada estava errada. Ver TIMELINE da campanha, entrada de 22/07/2026.
+
+## Conversão de "clique solto" não é ativo — considerar squeeze page antes do link final
+
+Quando o objetivo da campanha for social (entrar em comunidade, grupo, canal) em vez de comercial direto, um clique que só redireciona pra fora não vira nada que a Real Vision controle depois. Padrão aplicado em 22/07/2026 na campanha SLM x LLM: página/modal de captura (nome+email) antes de liberar o link final, gravando direto em `email_contatos` (Hermes) via Edge Function pública dedicada — nunca expondo credencial de escrita no bundle do site público. Detalhe técnico completo (arquitetura, Edge Function, teste local) em [`TIMELINE.md`](../../operacao/projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.

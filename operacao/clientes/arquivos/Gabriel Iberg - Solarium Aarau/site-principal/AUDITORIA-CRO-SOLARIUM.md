@@ -168,17 +168,17 @@ Nome do proprietário aparece como placeholder `[Name]` e UID como `[UID-Nummer]
 
 ## 7. Oportunidades Perdidas
 
-| Oportunidade | Impacto |
-|---|---|
-| Google Reviews widget na homepage | Alto — prova social para visita física |
-| "Aberto até meia-noite" no hero | Alto — urgência e diferenciação |
-| Bônus como argumento de 1ª visita | Alto — incentivo à conversão |
-| Preview do tour 360° na homepage | Médio — reduz ansiedade |
-| Quick reply "Como chegar?" no chatbot | Médio — atalho para visita |
-| CTA "Venha hoje" após o bônus | Médio — fecha o funil |
-| Foto exterior do estúdio na homepage | Médio — reconhecimento físico |
-| Número de sessões/clientes como social proof | Médio — validação de escala |
-| `solarium-teaser.webp` (não usada) | Baixo — asset disponível |
+| Oportunidade                                 | Impacto                                |
+| -------------------------------------------- | -------------------------------------- |
+| Google Reviews widget na homepage            | Alto — prova social para visita física |
+| "Aberto até meia-noite" no hero              | Alto — urgência e diferenciação        |
+| Bônus como argumento de 1ª visita            | Alto — incentivo à conversão           |
+| Preview do tour 360° na homepage             | Médio — reduz ansiedade                |
+| Quick reply "Como chegar?" no chatbot        | Médio — atalho para visita             |
+| CTA "Venha hoje" após o bônus                | Médio — fecha o funil                  |
+| Foto exterior do estúdio na homepage         | Médio — reconhecimento físico          |
+| Número de sessões/clientes como social proof | Médio — validação de escala            |
+
 
 ---
 

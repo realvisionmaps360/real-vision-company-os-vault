@@ -16,6 +16,31 @@ related:
 
 > Histórico de alterações. Formato: data + o que mudou.
 
+## [PRD-007 Fase 5] — 2026-07-30 — Aula narrada sincronizada na Academy
+### Banco (`xomtfkbvathddfpbknyo`, via SQL Editor — Felipe)
+- [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]]: funções `is_enrolled_course`/`is_enrolled_module`,
+  policies `modules_select_enrolled`/`lessons_select_enrolled`, `lessons_gated` recriada com
+  `published or is_admin() or is_enrolled_course(...)`, backfill de `lesson_progress.completed` +
+  `set default false`.
+### Código (`real-vision-site`)
+- `src/hooks/useProgress.ts` — leitura filtra `completed=true`; upsert grava `completed`/`completed_at`.
+- `src/hooks/useMyCourses.ts` — mesmo filtro na leitura de `lesson_progress`.
+- `src/hooks/useCourse.ts` — migrado da tabela crua `lessons` pra view `lessons_gated`; `user.id` no
+  `queryKey`; tipos novos `format`/`content_blocks`/`audio_path`/`sync_map`/`LessonSyncMap`.
+- `src/hooks/useNarratedListenProgress.ts` (novo) — regra de escuta real (80%), flush a cada 15s/pause/
+  aba escondida/unmount, nunca escreve `completed` no flush.
+- `src/components/academy/NarratedLessonPlayer.tsx` (novo) — player da aula narrada: URL assinada
+  renovável, play/pause/mute/±15s/velocidade, destaque de frase + auto-scroll (reusa `NarratedSpans` e
+  `useNarrationAutoScroll` da Fase 4), clique na frase pra seek, banner "continuar de onde parei".
+- `src/pages/academy/CoursePage.tsx` — branch de player por `lesson.format`; botão manual "Marcar como
+  concluída" some em aula narrada, substituído por indicador passivo.
+- `src/components/academy/CourseEditor.tsx` — select de formato (`video`/`narrated`) + dialog "Narração"
+  (audio_path + `content_blocks`/`sync_map` colados como JSON, validados antes de salvar).
+### Bug corrigido na verificação (KI-34)
+- `NarratedLessonPlayer.tsx`: `useEffect` de listeners de áudio faltava `audioUrl` nas dependências —
+  nunca reconectava à ref real depois do placeholder de carregamento. Áudio tocava, mas destaque/tempo/
+  "Ouvido: X%" ficavam congelados. Corrigido.
+
 ## [Fase 4] — 2026-07-18 — Checkout manual via WhatsApp (D-011) implementado
 ### Código (`real-vision-site`)
 - `src/hooks/usePurchase.ts` (novo) — grava `orders` (`pending`) e abre `wa.me` pré-preenchido,

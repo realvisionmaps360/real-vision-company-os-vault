@@ -1,4 +1,5 @@
 # Leads — Acessórios de Informática · Centro de São Bernardo do Campo
+> Índice: [[README]]
 
 **Pesquisa feita em:** 23/05/2026
 **Fonte:** Google Maps

@@ -1,4 +1,4 @@
-<!-- Real Vision — Service Agreement (master template) · v1.0 (June 2026) · pairs with [[GENERAL-TERMS-CONDITIONS-v1.1-EN]] · merge fields use {{FIELD}} syntax · pareia com [[CONTRATO-PRESTACAO-SERVICOS-TEMPLATE-v1.0-PT]] -->
+<!-- Real Vision — Service Agreement (master template) · v1.0 (June 2026) · pairs with [[GENERAL-TERMS-CONDITIONS-v1.1-EN]] · merge fields use {{FIELD}} syntax · pareia com [[CONTRATO-PRESTACAO-SERVICOS-TEMPLATE-v1.0-PT]] · concept: [[contrato-rv]] · index: [[README]] -->
 
 # REAL VISION BRASIL LTDA
 

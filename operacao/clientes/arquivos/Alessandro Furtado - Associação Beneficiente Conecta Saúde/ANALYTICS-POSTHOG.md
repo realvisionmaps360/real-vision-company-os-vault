@@ -44,7 +44,7 @@ mesmos moldes já rodando no site institucional da Real Vision e no Solarium Aar
 
 - [x] Env vars adicionadas no Vercel (Production + Preview) pelo Felipe — 02/08/2026.
 - [x] Commit `6fd7af3` pushado pro `main`, deploy disparado — 02/08/2026.
-- [ ] Confirmar ao vivo no site real que o banner aparece pro visitante e que o evento de pageview chega no painel do PostHog.
+- [x] Confirmado ao vivo — banner aparece, evento de pageview chega no painel do PostHog (Felipe conferiu, 02/08/2026).
 
 ---
 

@@ -38,5 +38,6 @@ Os meses de janeiro a junho não tinham dados de GA4 (property criada só em 13/
 ## Observações
 
 - Cliente recorrente — relatório mensal é obrigação contratual
-- Estilo do relatório fixado em 11/07/2026: template "leve" (GA4 + resumo + próximos passos, sem foto pesada em base64) — ver `ConectandoSaude_RelatorioMensal_11-07-26.html` como modelo pros próximos
+- Estilo do relatório fixado em 11/07/2026: template "leve" (GA4 + resumo + próximos passos, sem foto pesada em base64)
+- Padrão atualizado em 02/08/2026 (aprovado pelo Felipe) — ver `ConectandoSaude_RelatorioMensal_02-08-26.html` como modelo pros próximos: logo real (não texto) + link clicável + assinatura com nome/email + seção de Localização (GA4). Ver `relatorio-mensal-modelo.md` para o modelo estrutural atualizado
 - A rotina automática (`relatorio-mensal-clientes`) cria o rascunho no Gmail sem anexar o HTML — só referencia o caminho do arquivo na pasta do cliente, pro Felipe anexar manualmente antes de enviar

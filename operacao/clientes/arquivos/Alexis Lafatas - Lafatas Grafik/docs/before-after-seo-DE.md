@@ -1,4 +1,5 @@
 # Lafatas Photography & Print — Before / After SEO
+> Hub: [[TIMELINE]]
 **Data:** 2026-06-26 (v2 — estratégia Suíça aprovada)
 **Revisão:** Romana Loznjakovic (alemão nativo)
 **Execução:** após aprovação da Romana + OK do Felipe

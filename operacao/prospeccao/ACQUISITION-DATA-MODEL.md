@@ -3,6 +3,7 @@
 > **Status:** ✅ Congelado · **Data:** 24/06/2026 · **Missão:** Mission 3
 > **Aprovado por:** Felipe Garcia
 > **Relacionado:** [[ACQUISITION-CLAUDE]] (Mission 1) · [[ACQUISITION-SYSTEM-ARCHITECTURE]] (Mission 2) · [[ACQUISITION-MISSION3-KICKSTART]] (construção)
+> Índice: [[README]]
 > **Próxima etapa:** construção do banco (Supabase, SQL, RLS) conforme checklist do Kickstart
 
 ---

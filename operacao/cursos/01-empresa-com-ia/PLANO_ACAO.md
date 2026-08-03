@@ -5,6 +5,8 @@
 
 Este é o plano de ação que vamos ensinar no Curso 01 e usar como espinha dorsal do conteúdo.
 
+Hub: [[CONCEITO]]
+
 ---
 
 ## Passo 1 — Encontrar um problema doloroso de verdade

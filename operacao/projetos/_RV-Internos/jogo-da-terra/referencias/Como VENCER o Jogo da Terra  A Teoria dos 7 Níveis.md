@@ -1,4 +1,5 @@
 Transcrição  Como VENCER o Jogo da Terra | A Teoria dos 7 Níveis
+> Hub: [[../README|README]]
 
 Pesquisar transcrição  
 Pesquisar transcrição  

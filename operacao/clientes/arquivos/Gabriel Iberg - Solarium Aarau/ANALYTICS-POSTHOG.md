@@ -80,8 +80,7 @@ pro visitante e que o evento de pageview chega no painel do PostHog.
 - [x] Adicionar `VITE_POSTHOG_PROJECT_TOKEN` e `VITE_POSTHOG_HOST` nas env vars do Vercel
   (Production + Preview) do projeto `solariumaarau` — feito 02/08/2026.
 - [x] Aprovação explícita do Felipe pra fazer o deploy em produção — feito 02/08/2026.
-- [ ] Confirmar ao vivo que o banner aparece pro visitante real e que o evento de pageview chega
-  no painel do PostHog.
+- [x] Confirmado ao vivo — banner aparece, evento de pageview chega no painel do PostHog (Felipe conferiu, 02/08/2026).
 - [ ] Montar dashboard básico no painel (pageviews por página, origem do tráfego).
 
 ---

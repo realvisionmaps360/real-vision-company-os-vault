@@ -35,7 +35,7 @@ description: Carrega o contexto completo do cliente Solarium Aarau (Gabriel Iber
   - Origem: projeto Lovable (já migrado para repo próprio)
 
 ### Onde está o código
-- **Repo local:** `operacao/projetos/solariumaarau`
+- **Repo local:** `operacao/clientes/arquivos/Gabriel Iberg - Solarium Aarau/site`
 - **Repo GitHub:** `https://github.com/realvisionmaps360/solariumaarau-12006307`
 - ⚠️ Antes de mexer no código: `git pull` no repo local + checar `git status`.
 - ⚠️ Site em produção — **nunca** publicar sem OK explícito do Felipe.

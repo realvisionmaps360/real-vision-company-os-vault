@@ -1,37 +1,139 @@
-# 🗂️ Real Vision - Central de Skills
+# 🗂️ Real Vision — Central de Skills
 
-Este diretório funciona como a nossa biblioteca de **Skills** e diretrizes de desenvolvimento. Estas regras e playbooks servem como guia para o desenvolvimento de todos os nossos projetos.
+Este diretório é a nossa biblioteca de **Skills**: guias e diretrizes que o Claude Code carrega automaticamente pra trabalhar do jeito certo em cada tipo de tarefa — desde contexto de cliente até padrões de código e design.
 
-Sempre que iniciarmos uma nova tarefa ou projeto, eu lerei este diretório para alinhar as práticas e garantir que o código gerado seja profissional, rápido e siga exatamente as diretrizes oficiais de cada tecnologia.
-
----
-
-## 📌 Índice de Skills (Ordem Recomendada de Implementação)
-
-Aqui está a lista ordenada de nossas skills, o que cada uma faz e quando usá-las:
-
-| Ordem | Skill | Nome Técnico | Objetivo Principal | Status |
-| :---: | :--- | :--- | :--- | :--- |
-| **1** | [01. Supabase & Postgres](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/01-supabase-postgres/SKILL.md) | `supabase-postgres-best-practices` | Regras de performance do banco, índices, RLS (Row Level Security) e consistência de dados. | **Pronto** |
-| **2** | [02. Design de Frontend](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/02-frontend-design/SKILL.md) | `frontend-design` | Estética premium (cores HSL, animações fluidas, tipografia moderna) rejeitando padrões genéricos de IA. | **Pronto** |
-| **3** | [03. Vercel & React](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/03-vercel-react/SKILL.md) | `vercel-react-best-practices` | Otimização de performance React, code-splitting (lazy loading), prevenção de gargalos e carregamento de imagens. | **Pronto** |
-| **4** | [04. Configuração de Favicons](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/04-favicon-setup/SKILL.md) | `favicon-setup` | Diretrizes oficiais do Google Search e integração no Lovable para exibição perfeita do ícone nos resultados. | **Pronto** |
-| **5** | [05. Marketing & SEO](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/05-marketing-seo/SKILL.md) | `marketing-seo` | SEO Local (Schema JSON-LD), robots.txt, sitemaps, analytics (GTM/GA4) e otimização de conversão (CRO). | **Pronto** |
-| **6** | [06. Superpoderes de Agente (Claude)](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/06-awesome-claude/SKILL.md) | `awesome-claude-skills` | Padrões de escrita de prompts, controle de qualidade de código, clareza e fluxos de pair programming. | **Pronto** |
-| **7** | [07. Git & Diagnósticos](file:///C:/Users/Computador/.gemini/antigravity/scratch/skills/07-superpowers/SKILL.md) | `superpowers` | Controle de versão git, logs de build, diagnósticos de ambiente de desenvolvimento e scripts úteis. | **Pronto** |
+70 skills organizadas por categoria abaixo. Se não souber qual usar, pergunte "qual skill eu uso pra X" ou peça pra rodar a `rv-skill-scout`, que sugere automaticamente.
 
 ---
 
-| **8** | [08. RV Skill Scout](file:///C:/Users/Computador/.claude/skills/rv-skill-scout/SKILL.md) | `rv-skill-scout` | Meta-skill: analisa cada nova tarefa e sugere proativamente quais skills locais são relevantes antes de executar. | **Pronto** |
-| **9** | [RV BlogPost](file:///C:/Users/Computador/.claude/skills/rv-blogpost/SKILL.md) | `rv-blogpost` | Persona copywriter (Halbert + Ogilvy + Schwartz) para posts do blog Real Vision com estrutura de ContentBlocks. | **Pronto** |
-| **10** | [RH Real Vision](file:///C:/Users/Computador/.claude/skills/rh-real-vision/SKILL.md) | `rh-real-vision` | Processo seletivo, fichas de candidatas, avaliação via Upwork, estrutura de onboarding. | **Pronto** |
-| **11** | [Karpathy Guidelines](file:///C:/Users/Computador/.claude/skills/karpathy-guidelines/SKILL.md) | `karpathy-guidelines` | Diretrizes de precisão: pensar antes de executar, mudanças cirúrgicas, simplicidade, verificação com critérios de sucesso. | **Pronto** |
-| **12** | [RV i18n](file:///C:/Users/Computador/.claude/skills/rv-i18n/SKILL.md) | `rv-i18n` | Estado do progresso de internacionalização (PT/EN/DE) do real-vision-site — o que já foi traduzido, o que falta, achados de arquitetura. | **Em andamento** |
-| **13** | [RV Intenção de Busca](file:///C:/Users/Computador/.claude/skills/rv-intencao-busca/SKILL.md) | `rv-intencao-busca` | Réplica gratuita do AnswerThePublic via Google Autocomplete — pesquisa de perguntas reais para alimentar a `rv-blogpost`, qualquer idioma/região. | **Pronto** |
+## Clientes Específicos
+Carregam histórico, status e contexto de um cliente específico.
+
+| Skill | O que carrega |
+|---|---|
+| `solarium` | Solarium Aarau (Gabriel, Suíça) — tour 360°, site, Meta Ads |
+| `hallan-magnolia` | Hallan Costa / Lavanderia Magnólia — parceria por permuta |
+| `sunbite-site` | Sunbite (food bike da Romana) |
+| `rv-lafatas` | Alexis Lafatas (Suíça) — site Wix, comunicação PT+DE |
+| `coroa-azul` | Francisco / Fazenda Coroa Azul (cacau, Ilhéus-BA) |
+| `manahh` | O Maná'h / Fabiano (cerealista, SBC) |
+| `wood-art` | William / Wood Art (placas de madeira personalizadas) |
+
+## Contexto & Base da Empresa
+Carregam antes de qualquer tarefa do negócio.
+
+| Skill | O que faz |
+|---|---|
+| `realvision` | Contexto geral da empresa — carregar sempre primeiro |
+| `rh-real-vision` | RH: candidatos, processo seletivo, onboarding |
+| `rv-skill-scout` | Sugere automaticamente quais skills usar em cada tarefa |
+
+## Conteúdo & Copywriting
+
+| Skill | O que faz |
+|---|---|
+| `rv-copy` | Copywriter mestre (base Hormozi) pra qualquer texto |
+| `rv-blogpost` | Posts de blog com estrutura própria da RV |
+| `rv-intencao-busca` | Pesquisa o que as pessoas buscam antes de escrever |
+| `landing-page-copywriter` | Copy de landing page (headlines, CTAs) |
+| `script-writer` | Roteiros de vídeo/YouTube |
+| `instagram-weekly-content` | Conteúdo semanal de Instagram (copy/briefing) |
+| `rv-instagram-automacao` | Automação técnica: MCP publicar/ler + comentário→DM automática |
+| `humanizer` | Remove "cara de texto de IA" de um texto |
+
+## Documentos, Propostas & Contratos
+
+| Skill | O que faz |
+|---|---|
+| `rv-contrato` | Gera contrato de prestação de serviço em PDF |
+| `rv-termos` | Consulta os Termos de Serviço da RV |
+| `rv-relatorio` | Relatório de cliente em HTML (capa honeycomb) |
+| `canvas-design` | Arte visual — pôster, capa, PDF de design |
+
+## Marketing & Prospecção
+
+| Skill | O que faz |
+|---|---|
+| `rv-prospeccao` | Playbook de prospecção (oferta de entrada) |
+| `clarisso` | Agente de prospecção (RV + Viagem) |
+| `client-briefing-generator` | Gera briefing de prospecção a partir de nome/cidade |
+| `pipeline-weekly-update` | Atualiza pipeline de prospecção semanal |
+| `rv-reativacao` | Campanha de reativação de clientes com tour vencido |
+| `rv-email` | Email marketing (estilo Jeff Walker + Hormozi) |
+| `rv-plataformas` | Divulgação em Malt/Workana/Upwork/Fiverr/LinkedIn |
+| `marketing-seo` | SEO local, schema, GA4 |
+| `cro` | Otimização de conversão de páginas/formulários |
+| `rv-trafego-pago` | Estrutura de campanha Google Ads |
+
+## Sites, Design & Ferramentas Técnicas
+
+| Skill | O que faz |
+|---|---|
+| `rv-design` | UI/UX pra turismo/hospitalidade/negócio local |
+| `frontend-design` | Design visual premium pra sites |
+| `motion` | Animações em sites/apps |
+| `landing-page-design` | Layout de alta conversão |
+| `vercel-react` | Performance React + deploy Vercel |
+| `favicon-setup` | Configuração de favicon |
+| `web-design-guidelines` | Auditoria de acessibilidade/UX |
+| `rv-entrega` | Checklist de pré-entrega de site |
+| `rv-i18n` | Tradução do site (PT/EN/DE) |
+| `rv-posthog-setup` | Instala analytics em site de cliente |
+| `frontend-slides` | Apresentações HTML animadas |
+| `gnomo-monstro` | Especialista em Pano2VR (tours 360°) |
+
+## Infraestrutura & Controle
+
+| Skill | O que faz |
+|---|---|
+| `rv-mcp-controle` | Controla status/cota de todas as ferramentas externas conectadas |
+| `rv-incidente-supabase` | Diagnóstico rápido quando um app/site sai do ar |
+| `rv-auditoria-tecnica-site` | Auditoria técnica por cliente — GSC, indexação, favicon, GA4, PostHog |
+| `supabase-postgres` | Boas práticas de banco de dados |
+
+## Projetos Internos da Real Vision
+
+| Skill | O que faz |
+|---|---|
+| `master-visionair` | Arquiteta da Real Vision Academy (curso) |
+| `rv-course-builder` | Monta estrutura de curso |
+| `visionflow` / `rv-visionflow` | Desenvolvimento do CRM interno |
+| `rv-visionflow-handoff` | Retomar trabalho no VisionFlow após pausa |
+| `rv-novo-cliente` | Onboarding de cliente novo (pasta, docs) |
+| `rv-fim-sessao` | Fecha sessão — atualiza ficha/timeline do cliente |
+| `earth-game` | O jogo da Real Vision (RPG pixel art) |
+
+## Base de Conhecimento (Obsidian)
+
+| Skill | O que faz |
+|---|---|
+| `obsidian` | Skill mestre do vault — explica onde fica tudo |
+| `obsidian-cli` / `obsidian-markdown` / `obsidian-bases` | Edição técnica de notas/vault |
+| `rv-wiki` | Perguntas e ingestão de documentos |
+| `rv-varredura` | Varredura do Company OS pra wiki |
+| `json-canvas` | Mapas mentais/canvas visual |
+
+## Meta / Ferramentas de Sessão
+
+| Skill | O que faz |
+|---|---|
+| `skill-creator` | Cria/edita/testa skills novas |
+| `find-skills` | Descobre skills prontas que já existem por aí |
+| `session-handoff` | Resumo de fim de sessão pra continuar depois |
+| `superpowers` | Diagnóstico, git, build, ambiente local |
+| `awesome-claude` | Princípios de colaboração entre você e a IA |
+| `karpathy-guidelines` | Evita erros comuns de IA no código |
+| `prompt-improver` | Enriquece um pedido vago com pesquisa antes de agir |
+
+## Utilidades Gerais
+
+| Skill | O que faz |
+|---|---|
+| `fact-check` | Verificação de fatos/desinformação |
+| `defuddle` | Extrai conteúdo limpo de uma página web |
 
 ---
 
-## 🚀 Como Usar no Lovable ou Antigravity
+## Como funciona
 
-1. **Leitura de Alinhamento:** Ao iniciar um projeto, peça para mim ler o arquivo `SKILL.md` correspondente à tecnologia/fase do projeto.
-2. **Melhoria Contínua:** À medida que evoluirmos nossos padrões, nós editamos e adicionamos novas diretrizes a estes arquivos para que fiquem exatamente do jeito que você gosta.
+Toda skill fica na sua própria pasta com um arquivo `SKILL.md` — é ele que o Claude Code lê automaticamente quando o assunto da conversa bate com o que a skill cobre. Não precisa pedir "carrega a skill X" na maioria dos casos — mas pode pedir direto, tipo `/nome-da-skill`, quando quiser forçar.

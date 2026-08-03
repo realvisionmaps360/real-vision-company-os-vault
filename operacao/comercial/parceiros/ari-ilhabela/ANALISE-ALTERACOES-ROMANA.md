@@ -1,4 +1,5 @@
 # Análise das Alterações da Romana — Parceria Ari (Ilhabela)
+> Hub: [[BRIEFING-PARCERIA-ARI]]
 
 Comparação entre os originais (.md) e as versões revisadas pela Romana (.docx).
 
