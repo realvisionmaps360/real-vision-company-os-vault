@@ -2,12 +2,12 @@
 id: PRD-007-fase5-plano
 title: Plano Detalhado da Fase 5 — Aula Narrada na Academy
 type: plan
-status: aguardando execução
+status: concluído
 project: real-vision-academy
 phase: fase-5
 owner: master-visionair
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-04
 depends_on:
   - PRD-007-plano-execucao
   - PRD-007-arquitetura-leitor-narrado
@@ -29,8 +29,13 @@ related:
 > depender do histórico da conversa em que foi planejado. Se algum passo aqui parecer depender de
 > contexto que não está escrito, o documento está incompleto — avise o Felipe em vez de adivinhar.
 
-> **Nada aqui foi implementado.** Em 30/07/2026 o estado é: Fases 0-4 concluídas, Fase 5 planejada e
-> revisada, zero código escrito, zero SQL rodado.
+> **✅ FASE 5 CONCLUÍDA (30/07/2026).** SQL do Passo 0 rodado pelo Felipe, Passos 1-7 implementados e
+> verificados ponta a ponta, commit `de0e0cf` no `main`. KI-30, KI-31, KI-32 e KI-34 fechados. Resultado
+> completo em [[PRD-007-plano-execucao]] (§Fase 5), [[CONTEXT]] e [[TIMELINE]].
+>
+> *(O aviso original desta caixa dizia "Nada aqui foi implementado", verdadeiro só no momento em que o
+> plano foi escrito. Ficou desatualizado por 5 dias e em 04/08/2026 levou uma sessão a re-planejar
+> trabalho pronto — corrigido na abertura do [[PRD-008-leitor-narrado-design]].)*
 
 ## Objetivo
 

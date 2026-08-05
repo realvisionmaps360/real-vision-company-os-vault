@@ -307,9 +307,72 @@ related:
   Felipe pra reescrever o resumo editorial. Roteiro anterior preservado no histórico do git (nunca
   apagado, AGENTS regra 6).
 
+## D-025 — Aula narrada abre em rota própria de tela cheia, fora do `AcademyShell`
+- **Data:** 2026-08-04
+- **Contexto:** o design aprovado ([[PRD-008-leitor-narrado-design]]) tem cabeçalho de aula de 60px
+  próprio e player fixo no rodapé da viewport. Hoje a aula abre dentro do `AcademyShell` (sidebar
+  Início/Aprender/Comunidade) e do grid de 3 colunas do `CoursePage`.
+- **Decisão:** rota nova `/academy/curso/:slug/aula/:lessonId`, registrada **fora** do bloco
+  `<Route element={<AcademyShell />}>`. `CoursePage` continua existindo e leva pra lá.
+- **Justificativa:** os dois formatos não convivem — cabeçalho próprio, rodapé fixo e modo imersivo do
+  celular exigem a viewport inteira. Já há precedente no projeto: `/academy/admin` fica fora da casca.
+- **Impacto:** `NarratedLessonPlayer.tsx` (o player embutido da Fase 5) é substituído e removido.
+
+## D-026 — Cada frase é um elemento de bloco próprio, não span inline
+- **Data:** 2026-08-04
+- **Contexto:** hoje o leitor renderiza 82 parágrafos com as frases como `<span>` inline dentro. O design
+  pede frase com `padding 8px 14px`, raio 10px e `box-shadow: inset 3px 0 0` — o protótipo usa `<p>` por
+  frase.
+- **Decisão:** o leitor da Academy renderiza **uma frase por elemento de bloco**, com `data-frag`.
+- **Justificativa:** `inset box-shadow` em span inline que quebra linha renderiza errado. E o custo é
+  baixo: os dados reais têm 82 blocos para 97 frases (1,18 por bloco), então a estrutura de parágrafo
+  praticamente não se perde.
+- **Impacto:** habilita destaque, marcador, resultado de busca e clique por frase — quatro estados que o
+  design exige e o span inline não suporta bem.
+
+## D-027 — `NarratedSpans.tsx` não é reusado pelo leitor novo
+- **Data:** 2026-08-04
+- **Contexto:** a Fase 4 extraiu `NarratedSpans.tsx` justamente para ser compartilhado entre blog e
+  Academy. Mas o commit `34cd211` depois mudou o blog **de propósito** para destacar o **bloco inteiro**
+  (`isBlockActive` aplicado a todos os spans), e o design da Academy exige o oposto: destaque por frase.
+- **Decisão:** o leitor novo renderiza suas próprias frases (D-026); `NarratedSpans.tsx` fica **intocado**
+  servindo o blog. `useNarrationAutoScroll` continua reusado 100%, sem alteração.
+- **Justificativa:** mexer no componente compartilhado regride um comportamento do blog que foi escolhido
+  deliberadamente. Reverter para não regredir custaria mais que duplicar ~30 linhas de renderização.
+- **Impacto:** aceita duplicação pequena e conhecida em troca de risco zero no blog em produção.
+
+## D-028 — Temas claro e sépia escopados na área de leitura, nunca em `:root`
+- **Data:** 2026-08-04
+- **Contexto:** o design tem 3 temas de leitura (Real Vision escuro, Claro, Sépia). O site inteiro é
+  escuro por identidade de marca ([[DESIGN]]).
+- **Decisão:** os temas trocam variáveis CSS **locais** num wrapper com `data-reader-theme`. `:root` não é
+  tocado. Confirmado explicitamente pelo Felipe.
+- **Justificativa:** mexer em `:root` vazaria o tema claro para todas as telas do site.
+- **Impacto:** verificação de cada bloco inclui checar que o resto da Academy segue escuro.
+
+## D-029 — A lista de aulas navega de verdade entre aulas
+- **Data:** 2026-08-04
+- **Contexto:** [[D-023]] limitou o MVP à aula 0.1, e "listagem/navegação entre aulas narradas" estava
+  explicitamente fora do escopo do PRD-007. O design tem um painel curso → módulos → aulas.
+- **Decisão:** o painel navega de verdade. Amplia o escopo do PRD-007 de propósito.
+- **Justificativa:** o objetivo do Felipe é gravar os módulos restantes logo depois desta reforma. Deixar
+  o painel só decorativo obrigaria reabrir o código na primeira aula nova.
+- **Impacto:** custo pequeno agora (a `CourseTree` já vem inteira do `useCourse`), evita retrabalho certo.
+
+## D-030 — Media Session e PWA vêm depois do design, não antes
+- **Data:** 2026-08-04
+- **Contexto:** a Fase 6 do [[PRD-007-plano-execucao]] (Media Session + `manifest.json`) estava planejada
+  como próxima, antes de o design chegar.
+- **Decisão:** vira o **Bloco 6** do [[PRD-008-leitor-narrado-design]], depois de toda a reforma visual.
+- **Justificativa:** esse código mora dentro do player. Implementado antes, seria refeito durante a
+  reforma. Depois, é feito uma vez só, sobre o player final.
+- **Impacto:** a Fase 6 do PRD-007 deixa de existir como fase separada; o critério de aceite #5 do §14 do
+  PRD-007 passa a ser fechado no Bloco 6.
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]
 - [[CONTEXT]]
+- [[PRD-008-leitor-narrado-design]]
 - [[PRD-006-hub-comunidade]]
 - [[PRD-007-curso-narrado-sincronizado]] · [[PRD-007-arquitetura-leitor-narrado]] · [[PRD-007-plano-execucao]]

@@ -103,6 +103,17 @@ diagnóstico de porta/cache do PowerShell quando o ambiente local travar.
   narradas, XP/badges/missões, offline, automação de Aeneas no painel.
 - **Gamificação sai parcialmente de "Futuro"** — só o mínimo (progresso + escuta real) entra aqui.
 
+## Fase 8 — Design aprovado do leitor narrado (em execução, 04/08/2026)
+- **Objetivo:** transformar o leitor funcional da Fase 7 no produto final desenhado — tela cheia própria,
+  player fixo no rodapé, painéis (aulas, configurações de leitura, materiais, marcadores), pesquisa
+  interna, popup de seleção e modo imersivo do celular. Meta: leitor 100% pronto **antes** de gravar os
+  módulos restantes.
+- **Decisões:** D-025 (rota em tela cheia fora do `AcademyShell`), D-026 (frase como bloco próprio),
+  D-027 (`NarratedSpans` do blog fica intocado), D-028 (temas escopados na leitura), D-029 (lista de aulas
+  navega de verdade), D-030 (Media Session/PWA por último).
+- **Execução:** 7 blocos, um por vez, cada um com verificação no Playwright — [[PRD-008-leitor-narrado-design]].
+- **Absorve** a antiga Fase 6 do PRD-007 (Media Session + `manifest.json`), que virou o Bloco 6.
+
 ## Futuro (exige novo planejamento)
 Assinatura de todos os cursos · certificados (parcial, D-012) · trilhas · gamificação completa (XP,
 badges, missões — o mínimo entra na Fase 7) · Mentor IA (RAG) · marketplace · mapa de oportunidades ·

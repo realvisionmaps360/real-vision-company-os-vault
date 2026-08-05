@@ -16,12 +16,13 @@ updated: 2026-07-30
 > **Comece por [[CONTEXT]]** para saber o estado atual em 30 segundos.
 
 ## 🚦 Estado atual
-- **Fase 7 (Curso Narrado Sincronizado): Fases 0-4 concluídas, Fase 5 documentada e pronta pra executar.**
-  MVP é **uma aula só** (a 0.1 do Profissional 360). D-021 fechada (PWA aprovada em aparelho real,
-  Capacitor descartado). Nenhuma decisão em aberto travando fase.
-  **Antes de executar a Fase 5, ler KI-30/KI-31/KI-32 em [[KNOWN_ISSUES]]** — a revisão do plano achou dois
-  bugs que já existem em produção, e o SQL de [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] é pré-requisito
-  absoluto (sem ele a Academy mostra o curso vazio para todo aluno).
+- **Fase 8 (Design do Leitor Narrado): em execução desde 04/08/2026.** O design aprovado do leitor
+  (tela cheia, player de rodapé, painéis, marcadores, pesquisa, modo imersivo do celular) está sendo
+  construído em 7 blocos — ver [[PRD-008-leitor-narrado-design]]. Objetivo: leitor 100% pronto antes de
+  gravar os módulos restantes.
+- **Fase 7 (Curso Narrado Sincronizado): Fases 0-5 concluídas** (commit `de0e0cf`, verificado ponta a
+  ponta). KI-30/KI-31/KI-32/KI-34 fechados. A antiga Fase 6 (Media Session + PWA) foi reposicionada como
+  Bloco 6 do PRD-008, para não ser refeita durante a reforma do player (D-030).
 - **Fase 6 (Hub + Comunidade v1):** concluída no código e verificada no preview — passos 3 a 6 do
   [[PRD-006-plano-execucao]] fechados (memberships/gating, casca do hub, Comunidade, Biblioteca de
   Prompts+Skills).
@@ -59,8 +60,10 @@ updated: 2026-07-30
 - [[PRD-007-curso-narrado-sincronizado]] — aula narrada com áudio sincronizado: produto e escopo (em revisão)
 - [[PRD-007-arquitetura-leitor-narrado]] — leitor, dados, segurança, segundo plano, pipeline (em revisão)
 - [[PRD-007-plano-execucao]] — as 8 fases com checkpoint, aceite, rollback e trava (fases 0-4 concluídas)
-- [[PRD-007-fase5-plano]] — passo a passo detalhado da Fase 5, auto-suficiente (aguardando execução)
-- [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] — SQL da Fase 5, pronto pro SQL Editor (aguardando Felipe rodar)
+- [[PRD-007-fase5-plano]] — passo a passo detalhado da Fase 5, auto-suficiente (✅ concluída, `de0e0cf`)
+- [[PRD-007-fase5-sql|PRD-007-fase5-sql.sql]] — SQL da Fase 5 (✅ rodado pelo Felipe em 30/07/2026)
+- [[PRD-008-leitor-narrado-design]] — design aprovado do leitor narrado: tela cheia, player de rodapé,
+  painéis, marcadores, pesquisa e modo imersivo do celular (em execução, 7 blocos)
 
 ## 🔗 Fora deste vault
 - **Código:** `operacao/projetos/_RV-Internos/real-vision-site` (rota `/academy`)
