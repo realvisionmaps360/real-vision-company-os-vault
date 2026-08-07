@@ -4,10 +4,10 @@ title: Contexto Atual — Real Vision Academy
 type: context
 status: active
 project: real-vision-academy
-phase: planning
+phase: fase-8
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-08-04
+updated: 2026-08-07
 related:
   - MASTER_PRD
   - ARCHITECTURE
@@ -21,70 +21,124 @@ related:
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
 
-## Fase 8 (2026-08-04) — Design do Leitor Narrado: BLOCO 0 FEITO, BLOCO 1 CODADO E AGUARDANDO VERIFICAÇÃO
+## Fase 8 (2026-08-07) — Design do Leitor Narrado: BLOCOS 0, 1 E 2 FEITOS E VERIFICADOS
 
 Design aprovado do leitor narrado ([[PRD-008-leitor-narrado-design]]), construído em 7 blocos, um por vez,
 cada um fechando com verificação no Playwright + aval do Felipe antes do seguinte. Repo:
-`operacao/projetos/_RV-Internos/sites/real-vision-site`, **branch `feat/leitor-narrado-design`** (2
-commits, nada pushado, nada mergeado no `main`).
+`operacao/projetos/_RV-Internos/sites/real-vision-site`, **branch `feat/leitor-narrado-design`** (4
+commits, **nada pushado, nada mergeado no `main`**).
 
 ### Onde parou
 
 | Bloco | Estado |
 |---|---|
 | 0 — preparo (Playwright, baseline, PRD-008 aberto) | ✅ commit `b8d2f38` |
-| 1 — rota em tela cheia + leitura + player de rodapé | ✅ **código pronto**, build/lint limpos. ⏳ **verificação com Playwright não rodou** — falta login (ver abaixo). Commit `e907393` |
-| 2 a 7 | não iniciados |
+| 1 — rota em tela cheia + leitura + player de rodapé | ✅ **verificado ponta a ponta** (07/08/2026). Commits `e907393` + `d92357e` |
+| 2 — painéis (lista, configurações, materiais) + pesquisa interna | ✅ **verificado ponta a ponta** (07/08/2026). Commit `811d18c` |
+| **3 — marcadores por frase** | ⏳ **próximo**, destravado assim que o Felipe rodar o SQL |
+| 4 a 7 | não iniciados |
 
-### Próximo passo imediato — ação do Felipe primeiro
+### Próximo passo — duas ações do Felipe no Supabase, depois é código
+
+Rodar no SQL Editor (logado como ele — escrita nunca por MCP/Management API, KI-29):
+
+1. `docs/prds/PRD-008-bloco3-marcadores.sql` — cria `lesson_bookmarks` + 4 policies RLS. **Destrava o
+   Bloco 3.**
+2. `docs/prds/PRD-008-materiais-teste.sql` — insere 1 prompt + 1 link + 1 arquivo genéricos na aula 0.1.
+   Não é pré-requisito de nada; serve para o painel de Materiais do Bloco 2 ser conferido com dado real
+   (hoje só renderizou o estado vazio, porque a aula não tem material nenhum cadastrado).
+
+Depois disso, retomar o código do Bloco 3 (marcadores: hook novo com `user.id` no queryKey — KI-22/KI-27,
+painel de marcadores, e o destaque `inset 3px 0 0 <cor>` que o `ReadingArea` já aceita via
+`sentenceStates.bookmarkColor`).
+
+### Verificação — como rodar (a sessão do Playwright já está salva)
+
+O login já foi feito em 07/08/2026 e o perfil persistente guarda a sessão: **não precisa logar de novo**,
+a menos que `node tests/whoami.mjs` volte `{"logged":false}`.
 
 ```bash
-cd "C:\Users\Felipe Garcia\Desktop\Real Vision\operacao\projetos\_RV-Internos\sites\real-vision-site"
 npm run dev
 ```
-Em outro terminal:
+Em outro terminal (PowerShell 5.1 **não aceita `&&`** — rodar uma linha por vez):
 ```bash
-node tests/login.mjs
+node tests/whoami.mjs
+node tests/verify-full.mjs desktop
+node tests/verify-full.mjs mobile
+node tests/verify-bloco2.mjs desktop
+node tests/verify-bloco2.mjs mobile
+node tests/verify-banner-regressao.mjs desktop
 ```
-Abre uma janela do **Chrome instalado no sistema** (o Chromium empacotado do Playwright não inicia nesta
-máquina — erro SxS, já corrigido no script com `channel: "chrome"`). O Felipe loga com
-`realvisionmaps360@gmail.com` (conta admin, já matriculada no Profissional 360 pela Fase 5). A sessão fica
-salva em `C:\Users\Felipe Garcia\.playwright-rv-profile` e os testes seguintes reusam sem pedir senha de
-novo — nenhuma credencial passa pelo agente.
 
-Rodei `node tests/login.mjs` uma vez nesta sessão e a janela abriu, mas a sessão fechou (provavelmente
-timeout de contexto entre turnos) **antes de o Felipe confirmar o login** — `node tests/whoami.mjs` voltou
-`{"logged":false}`. Não presumir que logou; conferir com `whoami.mjs` antes de seguir.
+Resultado desta sessão: **Bloco 1 32/32 no desktop e 32/32 no mobile**, **Bloco 2 47/47 e 47/47**,
+regressão do banner 7/7 nos dois, mais 14/14 em retomada/conclusão. `tsc`, ESLint e build limpos.
 
-### O que já foi verificado do Bloco 1 (sem login)
+O que ficou provado do Bloco 1: destaque por frase (não por bloco — D-026/D-027) acompanhando o áudio,
+clique na frase faz seek, auto-scroll com a trava de 1,5s, ±15s, ±1 frase, 6 presets de velocidade,
+volume, "Continuar de onde parei", conclusão automática ao cruzar 80% de escuta **sem** botão manual, e o
+antigo E5 (um `pause` logo depois não desfaz a conclusão — persistiu após reload).
 
-- A rota `/academy/curso/:slug/aula/:lessonId` responde 200, sem sidebar da Academy, zero erro de console
-  — testado deslogado, mostra a tela "Faça login para acessar esta aula." corretamente (o guard funciona).
-- `npm run build` e ESLint limpos nos arquivos novos (erros pré-existentes em outros arquivos do projeto
-  não são desta sessão, confirmados por grep antes de ignorar).
-- **Ainda faltam, só possíveis com sessão logada e matriculada:** destaque por frase acompanhando o áudio
-  (não por bloco, que é o padrão do blog — D-026/D-027), auto-scroll com a trava de 1,5s, clique na frase
-  pra seek, os 6 presets de velocidade, volume −/+, ±15s, ±1 frase, escuta simulada até 80% concluindo sem
-  botão manual, um `pause` logo depois **não** desfazendo a conclusão (teste do antigo E5), "Continuar de
-  onde parei", e o caso negativo (conta sem matrícula não vê nada).
+### Correção que saiu desta sessão — banner de consentimento cobria o player
 
-### Arquivos do Bloco 1 (não apagar sem entender por quê)
+O `ConsentBanner` é global (`App.tsx`), fixo no rodapé com `z-[100]`; o player do leitor também é fixo no
+rodapé, com `z-40`. Enquanto o banner estivesse na tela, **play, velocidade e volume ficavam inclicáveis**
+para qualquer aluno que ainda não tivesse respondido ao consentimento. Não era hipótese: o Playwright
+tentou clicar 60 vezes e o banner interceptou todas.
 
-- `src/pages/academy/NarratedLessonPage.tsx` — a rota nova.
-- `src/components/academy/narrated/` — `ReaderHeader`, `ReadingArea`, `BottomPlayer`,
-  `ReturnToNarration`, `readerTheme.ts`.
-- `src/hooks/useNarratedAudio.ts` — todo o wiring de áudio da Fase 5, extraído e preservado (URL assinada
-  renovável, `audioUrl` nas deps do efeito de listeners — **KI-34, não perder de novo**).
+Solução (commit `d92357e`): a rota do leitor publica a altura da sua barra em `--rv-bottom-inset` e o
+banner se posiciona a partir dela, empilhando acima em vez de cobrir. Sem a variável, comportamento
+idêntico ao anterior — home e blog verificados. A altura é **medida com ResizeObserver, não fixa**: a barra
+tem 79px (76 + fio de progresso + borda) e cresce com o banner de erro do áudio; um valor fixo deixava 3px
+de sobreposição.
+
+### Decisões tomadas no Bloco 2 (não estavam no design)
+
+- **Busca normaliza acento** — digitar `profissao` acha "profissão". Teclado de celular sem acento é o caso
+  comum do aluno.
+- **Pesquisar não move o áudio** — traz a ocorrência pra tela e deixa o aluno decidir clicando na frase.
+  Pular a narração a cada tecla digitada seria hostil.
+- **"Restaurar padrão" não mexe na velocidade** — o hook do Bloco 1 resetava tudo, incluindo os 1,5× do
+  player. O painel é de leitura (letra, tema, rolagem); quem ouve em 1,5× não perde isso ao mudar a fonte.
+  Nasceu daí o `resetReading` em `useReaderPreferences`.
+
+### Arquivos do leitor (não apagar sem entender por quê)
+
+- `src/pages/academy/NarratedLessonPage.tsx` — a rota, o estado dos painéis e a lógica da pesquisa.
+- `src/components/academy/narrated/` — `ReaderHeader`, `ReadingArea`, `BottomPlayer`, `ReturnToNarration`,
+  `readerTheme.ts` (Bloco 1) + `ReaderPanel`, `LessonListPanel`, `ReadingSettingsPanel`, `MaterialsPanel`,
+  `ReaderSearchBar`, `readerSentences.ts` (Bloco 2).
+- `readerSentences.ts` — **a regra que achata blocos em frases mora só aqui.** Saiu do `ReadingArea` porque
+  a pesquisa precisa exatamente da mesma lista; duplicar faria a busca apontar pra índices que não existem
+  na tela.
+- `src/hooks/useNarratedAudio.ts` — wiring de áudio da Fase 5 (URL assinada renovável, `audioUrl` nas deps
+  do efeito de listeners — **KI-34, não perder de novo**).
 - `src/hooks/useReaderPreferences.ts` — fonte/tema/auto-scroll/velocidade em `localStorage`.
 - `src/components/academy/NarratedLessonPlayer.tsx` — **o player antigo da Fase 5, ainda no repo de
-  propósito.** Só remover depois que a rota nova passar na verificação completa. Se o Bloco 1 falhar, a
-  volta atrás é trocar o `CoursePage.tsx` de volta pra ele.
-- `tests/smoke.mjs`, `tests/login.mjs`, `tests/whoami.mjs` — harness de verificação (Bloco 0).
+  propósito.** Só remover depois que o leitor novo estiver publicado. Volta atrás = trocar o `CoursePage.tsx`
+  de volta pra ele.
+- `tests/` — `login.mjs`, `whoami.mjs`, `smoke.mjs`, `find-lesson.mjs`, `reset-progress.mjs`,
+  `verify-full.mjs`, `verify-bloco2.mjs`, `verify-conclusao.mjs`, `verify-banner-regressao.mjs`.
 
-### Lixo de sessão limpo
+### Achados registrados, não corrigidos (fora do escopo dos blocos)
 
-Três arquivos vazios (`0`, `Assim`, `{,`) apareceram na raiz do repo durante esta sessão — resíduo de
-algum comando mal interpretado pelo shell, não rastreado, sem conteúdo. Removidos antes do commit.
+- **`materials` da aula 0.1 está vazia** — os três cards do painel (prompt, link, arquivo) nunca
+  renderizaram com dado real. Resolve com `PRD-008-materiais-teste.sql`.
+- **`lesson_progress.completed_at` vem preenchido mesmo com `completed = false`** — a coluna parece ter
+  default `now()`. Não quebra o leitor (a tela lê `completed`), mas qualquer relatório futuro que conte
+  "aulas concluídas" por `completed_at` vai mentir. Mudança de schema, não mexida.
+- **`npm run build` dispara IndexNow** — `[notify-indexnow] 87 URLs enviadas, status 403`. Comportamento
+  pré-existente do projeto: todo build local avisa um serviço externo, e o 403 sugere chave inválida.
+
+### Detalhes operacionais que custaram tempo
+
+- **PowerShell 5.1 não aceita `&&`.** Comando com `&&` dá `ParserError`. Passar uma linha por vez.
+- **O header renderiza as variantes desktop E mobile**, escondendo uma por CSS. Em teste, seletor sem
+  `:visible` mira no elemento invisível e trava.
+- **O navegador normaliza estilo inline** (`inset 0 0 0 1px #F5A623` vira `rgb(...) 0px 0px 0px 1px inset`).
+  Testar por `style*=` não funciona; usar `getComputedStyle`.
+- **Arquivos-lixo do shell** (`banner`, `text`, `null))`, `r.json())`, `setTimeout(r`) aparecem na raiz do
+  repo quando um comando é mal interpretado. Sempre vazios. Conferir com `ls -la` e remover antes do commit
+  — já aconteceu em duas sessões seguidas.
 
 ## Fase 7 (2026-07-30) — Curso Narrado Sincronizado: FASES 0-5 FEITAS, FASE 6 A SEGUIR
 Nova modalidade de aula: texto estruturado + áudio narrado pelo Felipe, frase destacada e auto-scroll —

@@ -7,8 +7,8 @@ project: real-vision-academy
 phase: fase-8
 owner: master-visionair
 created: 2026-08-04
-updated: 2026-08-04
-progress: "Bloco 0 concluído · Bloco 1 codado, aguardando verificação com Playwright (falta login) · detalhe em CONTEXT"
+updated: 2026-08-07
+progress: "Blocos 0, 1 e 2 concluídos e verificados (32/32 e 47/47, desktop e mobile) · Bloco 3 aguarda o SQL de marcadores · detalhe em CONTEXT"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -65,9 +65,9 @@ seguinte começar.
 | # | Bloco | Depende de |
 |---|---|---|
 | 0 | Preparo: Playwright, baseline de build, esta documentação | ✅ concluído |
-| 1 | Rota em tela cheia + área de leitura + player de rodapé | ⏳ código pronto, falta verificar (precisa de login — ver [[CONTEXT]]) |
-| 2 | Painéis (lista, configurações, materiais) + pesquisa interna | Bloco 1 verificado |
-| 3 | Marcadores por frase | SQL rodado pelo Felipe |
+| 1 | Rota em tela cheia + área de leitura + player de rodapé | ✅ verificado 07/08/2026 — 32/32 desktop e mobile |
+| 2 | Painéis (lista, configurações, materiais) + pesquisa interna | ✅ verificado 07/08/2026 — 47/47 desktop e mobile |
+| 3 | Marcadores por frase | ⏳ **próximo** — depende de `PRD-008-bloco3-marcadores.sql` rodado pelo Felipe |
 | 4 | Modo imersivo do celular | Bloco 2 · fecha só com aparelho real |
 | 5 | Popup de seleção de texto | Blocos 2 e 3 |
 | 6 | Media Session + `manifest.json` | Blocos 1-5 |

@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-08-07
 related:
   - ARCHITECTURE
   - MASTER_PRD
@@ -368,6 +368,29 @@ related:
   reforma. Depois, é feito uma vez só, sobre o player final.
 - **Impacto:** a Fase 6 do PRD-007 deixa de existir como fase separada; o critério de aceite #5 do §14 do
   PRD-007 passa a ser fechado no Bloco 6.
+
+## D-031 — Barra fixa de rodapé publica sua altura em `--rv-bottom-inset`
+- **Data:** 2026-08-07
+- **Contexto:** o `ConsentBanner` é global e fixo no rodapé com `z-[100]`; o player do leitor narrado
+  também é fixo no rodapé, com `z-40`. O banner cobria play, velocidade e volume (KI-35).
+- **Decisão:** a rota que tem barra fixa de rodapé publica a altura dela na variável CSS
+  `--rv-bottom-inset` (medida com `ResizeObserver`, nunca fixa), e o banner se posiciona a partir dela.
+- **Justificativa:** as alternativas eram piores. Esconder o banner no leitor mataria o pedido de
+  consentimento naquela rota; subir o z-index do player só inverteria o problema, com o player cobrindo
+  Aceitar/Recusar. Empilhar mantém os dois usáveis. Medir em vez de fixar porque a barra tem 79px (não os
+  76 do design) e cresce com o banner de erro do áudio.
+- **Impacto:** sem a variável, comportamento idêntico ao anterior — home e blog verificados. Qualquer
+  barra fixa de rodapé futura deve seguir o mesmo padrão.
+
+## D-032 — Pesquisa interna não move o áudio, e normaliza acento
+- **Data:** 2026-08-07
+- **Contexto:** Bloco 2 do [[PRD-008-leitor-narrado-design]]. O design não define o que a busca faz com a
+  narração nem como trata acentuação.
+- **Decisão:** pesquisar traz a ocorrência para a tela e **não** mexe na posição do áudio; o aluno decide
+  clicando na frase. A busca normaliza acento — `profissao` encontra "profissão".
+- **Justificativa:** pular a narração a cada tecla digitada seria hostil com quem só quer conferir um
+  trecho enquanto ouve. E o teclado de celular sem acento é o caso comum do aluno.
+- **Impacto:** vale também para o "Buscar" do popup de seleção (Bloco 5), que alimenta esta mesma busca.
 
 ## Documentos relacionados
 - [[ARCHITECTURE]]

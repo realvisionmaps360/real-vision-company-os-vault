@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-30
+updated: 2026-08-07
 related:
   - ARCHITECTURE
 ---
@@ -251,6 +251,27 @@ related:
   em qualquer teste manual rápido (áudio toca) mas o critério de aceite #2/#3 (destaque + auto-scroll)
   estaria 100% quebrado. **Como foi achado:** log temporário no efeito mostrou `audio: null` nas duas
   primeiras invocações (StrictMode) — nunca reinvocado depois que o áudio carregou de verdade.
+
+- **KI-35 — ✅ RESOLVIDO (07/08/2026, PRD-008 Bloco 1, commit `d92357e`).** O `ConsentBanner` (global,
+  `App.tsx`, fixo no rodapé, `z-[100]`) cobria o player do leitor narrado (fixo no rodapé, `z-40`),
+  deixando **play, velocidade e volume inclicáveis** para qualquer aluno que ainda não tivesse respondido
+  ao consentimento. **Como foi achado:** o Playwright tentou clicar em play 60 vezes e o banner interceptou
+  todas. **Correção:** a rota do leitor publica a altura da sua barra em `--rv-bottom-inset` e o banner se
+  posiciona a partir dela, empilhando acima. Sem a variável, comportamento idêntico ao anterior (home e
+  blog verificados). A altura é medida com `ResizeObserver` — fixar 76px deixava 3px de sobreposição,
+  porque a barra tem 79px (76 + fio de progresso + borda) e ainda cresce com o banner de erro do áudio.
+  **Vale como padrão:** qualquer barra fixa de rodapé que entrar depois deve publicar essa variável.
+
+- **KI-36 — `lesson_progress.completed_at` vem preenchido mesmo com `completed = false`.** Ao apagar e
+  recriar a linha de progresso (07/08/2026), a nova linha voltou com `completed: false` e `completed_at`
+  com timestamp — a coluna aparenta ter default `now()`. **Não quebra o leitor**, que lê `completed`. Mas
+  qualquer relatório futuro que conte "aulas concluídas" por `completed_at` vai mentir. Correção é mudança
+  de schema (dropar o default), fora do escopo do PRD-008 — decidir com o Felipe antes.
+
+- **KI-37 — `npm run build` dispara IndexNow com status 403.** Todo build local envia 87 URLs a um serviço
+  externo (`[notify-indexnow]`) e recebe 403, o que sugere chave inválida. Comportamento pré-existente,
+  não introduzido pelo PRD-008. Duas coisas a resolver quando alguém encostar: a chave errada e o fato de
+  um build de desenvolvimento avisar serviço externo.
 
 ## Decisões em aberto (não são problemas, mas travam fases)
 - **Nenhuma.** D-021 (áudio em segundo plano) foi fechada em 30/07/2026 com teste em aparelho real: PWA

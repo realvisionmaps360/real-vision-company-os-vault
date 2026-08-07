@@ -4,10 +4,10 @@ title: Timeline — Real Vision Academy
 type: timeline
 status: active
 project: real-vision-academy
-phase: planning
+phase: fase-8
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-08-07
 related:
   - ROADMAP
   - CHANGELOG
@@ -735,6 +735,54 @@ documento.
 - **Deploy:** commit `de0e0cf` no `main`, push confirmado pelo Felipe, Vercel builda automaticamente.
 - **Próximos passos:** Felipe validar a experiência da aula real em produção (ouvir do início ao fim) e
   decidir sobre a Fase 6 (Media Session + PWA).
+
+## 2026-08-07 — PRD-008 Fase 8: Blocos 1 e 2 verificados ponta a ponta + correção do banner
+- **Objetivo:** destravar a verificação do Bloco 1 (que dependia de login humano) e executar o Bloco 2.
+- **Atividades:**
+  - **Login resolvido.** O `tests/login.mjs` da sessão anterior tinha aberto a janela mas o contexto
+    expirou antes do Felipe concluir. Desta vez ele logou com `realvisionmaps360@gmail.com` e o perfil
+    persistente (`C:\Users\Felipe Garcia\.playwright-rv-profile`) guardou a sessão — `whoami.mjs` voltou
+    `{"logged":true}`. **Nenhuma credencial passou pelo agente**; próximas sessões reusam o perfil.
+  - **Aula localizada por captura de rede:** a página do curso usa botões, não links, então o id não
+    aparece no HTML. `tests/find-lesson.mjs` intercepta a resposta do Supabase. Aula 0.1 =
+    `37c49e32-b60e-4716-b02b-1a90b26f78f1`, 97 frases, áudio de 739s.
+  - **Bloco 1 verificado: 32/32 no desktop (1280×900) e 32/32 no mobile (390×844).** Destaque por frase
+    com a barra âmbar acompanhando o áudio, clique na frase faz seek, auto-scroll com a trava de 1,5s
+    respeitando o scroll manual, ±15s exatos, ±1 frase, 6 presets (1,5× aplicando no áudio), volume e
+    mudo, preferências persistindo, sem scroll horizontal, player não cobre a última frase, zero erro de
+    console.
+  - **Os três testes que estavam bloqueados rodaram (14/14).** A aula estava marcada como concluída desde
+    a Fase 5, o que travava a conclusão por escuta e o "Continuar de onde parei". Com autorização explícita
+    do Felipe, a linha de `lesson_progress` foi apagada (estado anterior registrado antes: `completed
+    true`, `last_position 338`, `listened 1038`). Resultado: "Você parou em 4:43" com Retomar funcionando,
+    a aula **concluiu sozinha** ao cruzar 80% de escuta sem botão manual, e o **antigo E5 passou** — um
+    `pause` logo depois não desfez a conclusão, que persistiu após reload.
+  - **Bug real achado e corrigido — o banner de consentimento cobria o player.** `ConsentBanner` é global,
+    fixo no rodapé, `z-[100]`; o player do leitor é fixo no rodapé, `z-40`. Play, velocidade e volume
+    ficavam **inclicáveis** para qualquer aluno que ainda não tivesse respondido ao consentimento. Três
+    caminhos avaliados: esconder o banner no leitor (mataria o consentimento na rota), subir o z-index do
+    player (aí o player cobriria Aceitar/Recusar) e **empilhar** — o escolhido. A rota publica a altura da
+    barra em `--rv-bottom-inset` e o banner se posiciona a partir dela. Altura **medida com ResizeObserver**:
+    um valor fixo de 76px deixava 3px de sobreposição, porque a barra tem 79px. Regressão verificada em
+    home e blog, nos dois formatos (7/7).
+  - **Bloco 2 implementado e verificado: 47/47 no desktop e 47/47 no mobile.** Casca única de painel
+    (bottom sheet no mobile, lateral de 400px no desktop, scrim, Esc, trava de rolagem), lista de aulas
+    com progresso e navegação real (D-029), configurações de leitura (15–26px com travas, 3 temas
+    verificados como **não vazando** pro resto do site — D-028, switch de rolagem, restaurar padrão),
+    painel de materiais com as três abas, e pesquisa interna com atalho `/`, contador e navegação circular.
+- **Decisões novas (Bloco 2, não estavam no design):** busca normaliza acento (`profissao` acha
+  "profissão"); pesquisar **não** move o áudio; "restaurar padrão" **não** mexe na velocidade (nasceu daí
+  o `resetReading`).
+- **Refatoração:** a regra que achata blocos em frases saiu do `ReadingArea` para `readerSentences.ts` —
+  a pesquisa precisa exatamente da mesma lista, e duplicar faria a busca apontar pra índices inexistentes.
+- **Commits (branch `feat/leitor-narrado-design`, nada pushado):** `d92357e` (correção do banner + harness
+  de verificação) e `811d18c` (Bloco 2).
+- **Achados registrados, não corrigidos:** `materials` da aula 0.1 está vazia (os três cards nunca
+  renderizaram com dado real); `lesson_progress.completed_at` vem preenchido mesmo com `completed = false`
+  (default `now()` no schema — enganaria relatório futuro); `npm run build` dispara IndexNow com status 403.
+- **Próximos passos:** Felipe roda `PRD-008-bloco3-marcadores.sql` (destrava o Bloco 3) e, opcionalmente,
+  `PRD-008-materiais-teste.sql` (1 prompt + 1 link + 1 arquivo genéricos para conferir o painel de
+  Materiais com dado real). Depois, código do Bloco 3.
 
 ## Documentos relacionados
 - [[ROADMAP]]
