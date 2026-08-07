@@ -131,3 +131,57 @@ A partir de agora, cada disparo de email marketing ganha um número sequencial.
 
 ### 22/07/2026 — Nova fonte de entrada em `email_contatos`: squeeze page da comunidade WhatsApp
 Edge Function pública `capture-community-lead` (mesmo projeto Supabase do Hermes) grava direto em `email_contatos` com `origem_consentimento='blog-<slug>'`. Testado local, ainda não publicado em produção. Detalhe completo em [`TIMELINE.md`](../../projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.
+
+---
+
+### 07/08/2026 — Pesquisa: automação da newsletter recorrente (nada construído ainda)
+
+Sessão de pesquisa e arquitetura. **Nenhum código escrito, nenhum disparo, nenhuma tabela criada.**
+Único write em produção: tag `teste` no contato do Felipe (ver abaixo).
+
+**Pedido original do Felipe:** automatizar a newsletter — quando chegasse email do Neil Patel,
+adaptar o conteúdo pra realidade da Real Vision, mandar pro email de teste dele e, com um OK,
+disparar pra lista. Depois refinado para: **3x/semana, conteúdo relevante, levando pra ler um
+blog post do site.**
+
+**Achados que reposicionaram o pedido:**
+- Dos 13 emails do Neil Patel em 60 dias, **6 são anúncio dele** (convite de webinar, venda de
+  plano Ubersuggest, "SEO Week fecha amanhã"). Automação sem triagem erraria ~46% das vezes.
+- A frequência dele é **~4-5/semana**, não 3. Amarrar nossa cadência à dele entrega o calendário
+  a um remetente externo.
+- **O site tem 21 blog posts publicados** em PT/EN/DE, não 2. O `BLOG-POSTS-PIPELINE.md` está
+  desatualizado e precisa de correção — vários posts marcados "📝 ideia" já estão no ar.
+- `hermes-send` envia **1 contato por chamada** (sem endpoint de lote). 28 contatos = 28 chamadas.
+- **`email_ab_testes` tem 0 linhas** — o A/B nunca rodou.
+- **Não existe medição de abertura/clique.** `email_envios` grava só o `resend_id`.
+- Dos "28 contatos ativos", **pelo menos 6 são internos** (Felipe ×2, "Teste Felipe", Maria Luci,
+  Acacio, Jeri) + 2 em alemão + Romana. Público externo real ≈ **20 clientes**. A campanha 002 foi
+  disparada pros 28 contando esses.
+
+**Decisões tomadas com o Felipe:**
+- Cadência: **1x/semana subindo gradual** (aprovado), não 3x direto.
+- Primeiro envio: **segunda 10h** (horário Brasil). Teste chega antes, lista recebe ao aprovar.
+- Idioma: **só PT por enquanto**; os 2 contatos DE (Suíça) ficam fora desta rodada.
+- Aprovação: **botão no próprio email de teste** (link assinado, uso único, expira em 24h, com
+  página de confirmação intermediária pra não disparar por prefetch do Gmail/iOS). Preferido ao
+  Telegram porque o email de teste **é** o email real — é o que o Felipe queria conferir no celular.
+- Neil Patel deixa de ser gatilho e vira **sinal de pauta**, com portão de triagem.
+- **Regra da Prova de Campo:** todo email carrega algo que só a Real Vision poderia dizer. Sem isso,
+  não envia — marca a pauta como `precisa_input` e pula. É o que impede a automação de encher
+  linguiça pra cumprir a cadência.
+- **Solarium Aarau não pode ser citado ainda** (decisão do Felipe, 07/08). Vale pro print do
+  ChatGPT recomendando o cliente, que era a prova mais forte disponível.
+
+**Write em produção (único):** contato `realvisionmaps360@gmail.com`
+(id `2df1cfcd-290b-4789-8c84-4d5b340a00a6`) recebeu `tags = ['teste']`. Ele já estava na lista e
+recebeu a campanha 002 junto com os clientes. **Atenção:** a tag sozinha não exclui do disparo —
+a query da campanha precisa filtrar `not ('teste' = any(tags))`.
+
+**Documentos criados:**
+- [[2026-08-07-automacao-newsletter-3x-semana-PESQUISA]] — arquitetura completa, fases, riscos
+- [[2026-08-07-analise-concorrentes-e-angulos-newsletter]] — **primeira pesquisa de concorrente do
+  vault** + inventário do que a RV faz + 5 ângulos
+
+**Próximo passo (definido pelo Felipe):** trabalhar os **blog posts** — extrair a sacada de cada um
+dos 21 posts e escrever um trecho curto e impactante sobre o conteúdo de cada, pra usar no email
+marketing. Só depois construir a automação.
