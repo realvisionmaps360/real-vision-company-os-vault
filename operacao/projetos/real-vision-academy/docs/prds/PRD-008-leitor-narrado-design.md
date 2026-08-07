@@ -8,6 +8,7 @@ phase: fase-8
 owner: master-visionair
 created: 2026-08-04
 updated: 2026-08-04
+progress: "Bloco 0 concluído · Bloco 1 codado, aguardando verificação com Playwright (falta login) · detalhe em CONTEXT"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -63,9 +64,9 @@ seguinte começar.
 
 | # | Bloco | Depende de |
 |---|---|---|
-| 0 | Preparo: Playwright, baseline de build, esta documentação | — |
-| 1 | Rota em tela cheia + área de leitura + player de rodapé | Playwright instalado |
-| 2 | Painéis (lista, configurações, materiais) + pesquisa interna | Bloco 1 |
+| 0 | Preparo: Playwright, baseline de build, esta documentação | ✅ concluído |
+| 1 | Rota em tela cheia + área de leitura + player de rodapé | ⏳ código pronto, falta verificar (precisa de login — ver [[CONTEXT]]) |
+| 2 | Painéis (lista, configurações, materiais) + pesquisa interna | Bloco 1 verificado |
 | 3 | Marcadores por frase | SQL rodado pelo Felipe |
 | 4 | Modo imersivo do celular | Bloco 2 · fecha só com aparelho real |
 | 5 | Popup de seleção de texto | Blocos 2 e 3 |

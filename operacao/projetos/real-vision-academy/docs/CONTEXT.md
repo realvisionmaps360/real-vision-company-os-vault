@@ -7,18 +7,84 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-07-30
+updated: 2026-08-04
 related:
   - MASTER_PRD
   - ARCHITECTURE
   - ROADMAP
   - DECISIONS
   - PRD-007-curso-narrado-sincronizado
+  - PRD-008-leitor-narrado-design
 ---
 
 # Contexto Atual — Real Vision Academy
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
+
+## Fase 8 (2026-08-04) — Design do Leitor Narrado: BLOCO 0 FEITO, BLOCO 1 CODADO E AGUARDANDO VERIFICAÇÃO
+
+Design aprovado do leitor narrado ([[PRD-008-leitor-narrado-design]]), construído em 7 blocos, um por vez,
+cada um fechando com verificação no Playwright + aval do Felipe antes do seguinte. Repo:
+`operacao/projetos/_RV-Internos/sites/real-vision-site`, **branch `feat/leitor-narrado-design`** (2
+commits, nada pushado, nada mergeado no `main`).
+
+### Onde parou
+
+| Bloco | Estado |
+|---|---|
+| 0 — preparo (Playwright, baseline, PRD-008 aberto) | ✅ commit `b8d2f38` |
+| 1 — rota em tela cheia + leitura + player de rodapé | ✅ **código pronto**, build/lint limpos. ⏳ **verificação com Playwright não rodou** — falta login (ver abaixo). Commit `e907393` |
+| 2 a 7 | não iniciados |
+
+### Próximo passo imediato — ação do Felipe primeiro
+
+```bash
+cd "C:\Users\Felipe Garcia\Desktop\Real Vision\operacao\projetos\_RV-Internos\sites\real-vision-site"
+npm run dev
+```
+Em outro terminal:
+```bash
+node tests/login.mjs
+```
+Abre uma janela do **Chrome instalado no sistema** (o Chromium empacotado do Playwright não inicia nesta
+máquina — erro SxS, já corrigido no script com `channel: "chrome"`). O Felipe loga com
+`realvisionmaps360@gmail.com` (conta admin, já matriculada no Profissional 360 pela Fase 5). A sessão fica
+salva em `C:\Users\Felipe Garcia\.playwright-rv-profile` e os testes seguintes reusam sem pedir senha de
+novo — nenhuma credencial passa pelo agente.
+
+Rodei `node tests/login.mjs` uma vez nesta sessão e a janela abriu, mas a sessão fechou (provavelmente
+timeout de contexto entre turnos) **antes de o Felipe confirmar o login** — `node tests/whoami.mjs` voltou
+`{"logged":false}`. Não presumir que logou; conferir com `whoami.mjs` antes de seguir.
+
+### O que já foi verificado do Bloco 1 (sem login)
+
+- A rota `/academy/curso/:slug/aula/:lessonId` responde 200, sem sidebar da Academy, zero erro de console
+  — testado deslogado, mostra a tela "Faça login para acessar esta aula." corretamente (o guard funciona).
+- `npm run build` e ESLint limpos nos arquivos novos (erros pré-existentes em outros arquivos do projeto
+  não são desta sessão, confirmados por grep antes de ignorar).
+- **Ainda faltam, só possíveis com sessão logada e matriculada:** destaque por frase acompanhando o áudio
+  (não por bloco, que é o padrão do blog — D-026/D-027), auto-scroll com a trava de 1,5s, clique na frase
+  pra seek, os 6 presets de velocidade, volume −/+, ±15s, ±1 frase, escuta simulada até 80% concluindo sem
+  botão manual, um `pause` logo depois **não** desfazendo a conclusão (teste do antigo E5), "Continuar de
+  onde parei", e o caso negativo (conta sem matrícula não vê nada).
+
+### Arquivos do Bloco 1 (não apagar sem entender por quê)
+
+- `src/pages/academy/NarratedLessonPage.tsx` — a rota nova.
+- `src/components/academy/narrated/` — `ReaderHeader`, `ReadingArea`, `BottomPlayer`,
+  `ReturnToNarration`, `readerTheme.ts`.
+- `src/hooks/useNarratedAudio.ts` — todo o wiring de áudio da Fase 5, extraído e preservado (URL assinada
+  renovável, `audioUrl` nas deps do efeito de listeners — **KI-34, não perder de novo**).
+- `src/hooks/useReaderPreferences.ts` — fonte/tema/auto-scroll/velocidade em `localStorage`.
+- `src/components/academy/NarratedLessonPlayer.tsx` — **o player antigo da Fase 5, ainda no repo de
+  propósito.** Só remover depois que a rota nova passar na verificação completa. Se o Bloco 1 falhar, a
+  volta atrás é trocar o `CoursePage.tsx` de volta pra ele.
+- `tests/smoke.mjs`, `tests/login.mjs`, `tests/whoami.mjs` — harness de verificação (Bloco 0).
+
+### Lixo de sessão limpo
+
+Três arquivos vazios (`0`, `Assim`, `{,`) apareceram na raiz do repo durante esta sessão — resíduo de
+algum comando mal interpretado pelo shell, não rastreado, sem conteúdo. Removidos antes do commit.
 
 ## Fase 7 (2026-07-30) — Curso Narrado Sincronizado: FASES 0-5 FEITAS, FASE 6 A SEGUIR
 Nova modalidade de aula: texto estruturado + áudio narrado pelo Felipe, frase destacada e auto-scroll —
