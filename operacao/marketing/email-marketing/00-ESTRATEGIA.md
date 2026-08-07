@@ -148,6 +148,7 @@ Conecta com a skill `rv-prospeccao`.
 ## 8. Fontes
 Pesquisas e propostas derivadas:
 - [[2026-08-07-automacao-newsletter-3x-semana-PESQUISA]] — arquitetura da newsletter automatizada 3x/semana (pesquisa, aguardando decisão)
+- [[2026-08-07-sacadas-dos-21-blog-posts]] — sacada + trecho pronto de cada um dos 21 posts publicados (matéria-prima da fila de pautas)
 
 Arquivos transcritos em `operacao/marketing/email-marketing/referencias/`:
 - [[hormozi about email marketing]]

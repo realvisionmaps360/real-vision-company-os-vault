@@ -185,3 +185,35 @@ a query da campanha precisa filtrar `not ('teste' = any(tags))`.
 **Próximo passo (definido pelo Felipe):** trabalhar os **blog posts** — extrair a sacada de cada um
 dos 21 posts e escrever um trecho curto e impactante sobre o conteúdo de cada, pra usar no email
 marketing. Só depois construir a automação.
+
+---
+
+### 07/08/2026 — Sacadas dos 21 blog posts (matéria-prima da fila de pautas)
+
+Os 21 posts foram baixados do `real-vision-core` (`src/data/blog-posts.ts`, commit `60ed8f6`) via
+GitHub MCP — `raw.githubusercontent` dá 404 porque o repo é privado. Todos lidos na íntegra na
+versão PT. **Nenhum email escrito, nenhum disparo, nada alterado em produção.**
+
+**Entregue:** [[2026-08-07-sacadas-dos-21-blog-posts]] — para cada post, a **sacada** (a ideia mais
+forte) + um **trecho curto pronto pra email**, na voz da RV, com a Prova de Campo marcada por post
+(✅ tem prova própria · 🟡 dado de terceiro, prova nossa precisa vir de fora · 🔴 bloqueado).
+Índice com prioridade calculada pro público atual (~20 clientes, pousadas/restaurantes locais BA).
+
+**Solarium Aarau:** respeitado o bloqueio de 07/08 — o post 13 ficou sem trecho e fora da fila.
+Registrado no documento que a menção ao cliente **respinga em outros dois posts**
+(`site-maior-ativo-era-ia` cita pelo nome com o print do ChatGPT; `drones-em-2026` cita de
+passagem). Tirar só o post dele da fila não resolve o bloqueio inteiro.
+
+**Achados que precisam de decisão do Felipe:**
+- `do-maps-ao-fechamento-tour-virtual-google-site` ainda chama a metodologia de **"Tríade do
+  Sucesso"** — desde jul/2026 é **Sistema PDI**. Email e post vão falar coisas diferentes até o
+  post ser corrigido no `real-vision-core`.
+- `reflexoes-presenca-digital-negocios-locais` tem 4 min e quase só a tese — **não serve como
+  destino de clique**. Ou expandir, ou redirecionar a ideia pro post do Maps/do site.
+- Apareceu um post que não estava mapeado na pesquisa anterior: `crise-oportunidade-inteligencia-artificial`
+  (id 17). Reforça que o `BLOG-POSTS-PIPELINE.md` precisa da correção da Fase 0.
+- **Nenhum dos 21 posts serve de destino pro ângulo A** ("perguntei pro ChatGPT onde se hospedar em
+  Barra Grande"). Ou vira post novo, ou o email aponta pro `site-maior-ativo-era-ia`.
+
+**Próximo passo:** com as sacadas na mão, montar a fila (`email_pautas`) — cada post rende mais de
+um ângulo, conforme a seção 4 da pesquisa. Automação depois disso.
