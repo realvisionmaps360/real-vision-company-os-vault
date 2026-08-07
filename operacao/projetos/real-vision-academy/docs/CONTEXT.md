@@ -21,11 +21,11 @@ related:
 
 > Primeiro documento a ler para reconstruir o contexto. Mantido curto e atualizado ao fim de cada etapa.
 
-## Fase 8 (2026-08-07) — Design do Leitor Narrado: BLOCOS 0, 1 E 2 FEITOS E VERIFICADOS
+## Fase 8 (2026-08-07) — Design do Leitor Narrado: BLOCOS 0 A 3 FEITOS E VERIFICADOS
 
 Design aprovado do leitor narrado ([[PRD-008-leitor-narrado-design]]), construído em 7 blocos, um por vez,
 cada um fechando com verificação no Playwright + aval do Felipe antes do seguinte. Repo:
-`operacao/projetos/_RV-Internos/sites/real-vision-site`, **branch `feat/leitor-narrado-design`** (4
+`operacao/projetos/_RV-Internos/sites/real-vision-site`, **branch `feat/leitor-narrado-design`** (5
 commits, **nada pushado, nada mergeado no `main`**).
 
 ### Onde parou
@@ -35,22 +35,33 @@ commits, **nada pushado, nada mergeado no `main`**).
 | 0 — preparo (Playwright, baseline, PRD-008 aberto) | ✅ commit `b8d2f38` |
 | 1 — rota em tela cheia + leitura + player de rodapé | ✅ **verificado ponta a ponta** (07/08/2026). Commits `e907393` + `d92357e` |
 | 2 — painéis (lista, configurações, materiais) + pesquisa interna | ✅ **verificado ponta a ponta** (07/08/2026). Commit `811d18c` |
-| **3 — marcadores por frase** | ⏳ **próximo**, destravado assim que o Felipe rodar o SQL |
-| 4 a 7 | não iniciados |
+| 3 — marcadores por frase | ✅ **verificado ponta a ponta** (07/08/2026). Commit `5cec0d7` |
+| **4 — modo imersivo do celular** | ⏳ **próximo** — fecha só com aparelho real na mão do Felipe |
+| 5 a 7 | não iniciados |
 
-### Próximo passo — duas ações do Felipe no Supabase, depois é código
+### Bloco 3 — o que ficou pronto (07/08/2026)
 
-Rodar no SQL Editor (logado como ele — escrita nunca por MCP/Management API, KI-29):
+Os dois SQLs foram rodados pelo Felipe no SQL Editor e conferidos por print: `lesson_bookmarks` com as 4
+policies (select/insert/update/delete) e os 3 materiais de teste (link, prompt, pdf) na aula 0.1.
 
-1. `docs/prds/PRD-008-bloco3-marcadores.sql` — cria `lesson_bookmarks` + 4 policies RLS. **Destrava o
-   Bloco 3.**
-2. `docs/prds/PRD-008-materiais-teste.sql` — insere 1 prompt + 1 link + 1 arquivo genéricos na aula 0.1.
-   Não é pré-requisito de nada; serve para o painel de Materiais do Bloco 2 ser conferido com dado real
-   (hoje só renderizou o estado vazio, porque a aula não tem material nenhum cadastrado).
+- `src/hooks/useLessonBookmarks.ts` — `user.id` no queryKey (KI-22/KI-27). Marcar de novo é **upsert** pelo
+  `unique (user_id, lesson_id, frag_index)`: troca a cor, não duplica linha. O popup do Bloco 5 vai chamar
+  o mesmo `setBookmark` sem reescrever nada.
+- `src/components/academy/narrated/BookmarksPanel.tsx` — cartão com trecho, tempo, "Ir ao trecho", lixeira
+  e **as 4 cores dentro do cartão**. A troca de cor mora ali de propósito: o popup de seleção que o design
+  usa para isso é do Bloco 5, e sem essa saída o aluno marcaria tudo em âmbar.
+- "Marcar frase" no player expandido age sobre a **frase que está tocando** — é a que o aluno vê destacada.
+- Precedência de destaque no `ReadingArea`: ativa > resultado atual > resultado de busca > marcada.
 
-Depois disso, retomar o código do Bloco 3 (marcadores: hook novo com `user.id` no queryKey — KI-22/KI-27,
-painel de marcadores, e o destaque `inset 3px 0 0 <cor>` que o `ReadingArea` já aceita via
-`sentenceStates.bookmarkColor`).
+Verificação: `node tests/verify-bloco3.mjs desktop|mobile` — **17/17 nos dois**, incluindo persistência
+após reload (prova que gravou no banco, não só no estado da tela). Regressão sem quebra: Bloco 1 32/32,
+Bloco 2 47/47, banner 7/7. `tsc`, ESLint e build limpos.
+
+**Achado fechado:** o painel de Materiais agora renderiza com dado real (599 caracteres, não mais o estado
+vazio) — era pendência registrada no Bloco 2.
+
+**Nota de teste:** marcar a frase 0 não prova nada (ela começa em 0:00, então "tempo no cartão" e "Ir ao
+trecho move o áudio" passariam vazios). O `verify-bloco3` entra em 90s de propósito.
 
 ### Verificação — como rodar (a sessão do Playwright já está salva)
 
@@ -67,8 +78,14 @@ node tests/verify-full.mjs desktop
 node tests/verify-full.mjs mobile
 node tests/verify-bloco2.mjs desktop
 node tests/verify-bloco2.mjs mobile
+node tests/verify-bloco3.mjs desktop
+node tests/verify-bloco3.mjs mobile
 node tests/verify-banner-regressao.mjs desktop
 ```
+
+**A sessão salva vale por porta.** O login mora no `localStorage` de `localhost:8080`; se o Vite subir na
+8081 (porta ocupada), `whoami` devolve `{"logged":false}` e todo teste falha no portão de matrícula. Não é
+sessão expirada — é origem diferente. Derrubar quem estiver na 8080 e subir o dev ali.
 
 Resultado desta sessão: **Bloco 1 32/32 no desktop e 32/32 no mobile**, **Bloco 2 47/47 e 47/47**,
 regressão do banner 7/7 nos dois, mais 14/14 em retomada/conclusão. `tsc`, ESLint e build limpos.
@@ -121,8 +138,6 @@ de sobreposição.
 
 ### Achados registrados, não corrigidos (fora do escopo dos blocos)
 
-- **`materials` da aula 0.1 está vazia** — os três cards do painel (prompt, link, arquivo) nunca
-  renderizaram com dado real. Resolve com `PRD-008-materiais-teste.sql`.
 - **`lesson_progress.completed_at` vem preenchido mesmo com `completed = false`** — a coluna parece ter
   default `now()`. Não quebra o leitor (a tela lê `completed`), mas qualquer relatório futuro que conte
   "aulas concluídas" por `completed_at` vai mentir. Mudança de schema, não mexida.
