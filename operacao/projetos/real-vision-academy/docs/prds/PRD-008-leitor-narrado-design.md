@@ -8,7 +8,7 @@ phase: fase-8
 owner: master-visionair
 created: 2026-08-04
 updated: 2026-08-07
-progress: "Blocos 0 a 3 concluídos e verificados (32/32, 47/47 e 17/17, desktop e mobile) · Bloco 4 (modo imersivo do celular) é o próximo · detalhe em CONTEXT"
+progress: "Blocos 0 a 4 concluídos e verificados no Playwright · Bloco 4 ainda precisa do teste em aparelho real · Bloco 5 (popup de seleção) é o próximo · detalhe em CONTEXT"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -68,7 +68,7 @@ seguinte começar.
 | 1 | Rota em tela cheia + área de leitura + player de rodapé | ✅ verificado 07/08/2026 — 32/32 desktop e mobile |
 | 2 | Painéis (lista, configurações, materiais) + pesquisa interna | ✅ verificado 07/08/2026 — 47/47 desktop e mobile |
 | 3 | Marcadores por frase | ✅ verificado 07/08/2026 — 17/17 desktop e mobile |
-| 4 | Modo imersivo do celular | Bloco 2 · fecha só com aparelho real |
+| 4 | Modo imersivo do celular | ✅ verificado 07/08/2026 — 17/17 mobile e 5/5 desktop · **falta confirmar em aparelho real** |
 | 5 | Popup de seleção de texto | Blocos 2 e 3 |
 | 6 | Media Session + `manifest.json` | Blocos 1-5 |
 | 7 | Verificação final e publicação | todos |

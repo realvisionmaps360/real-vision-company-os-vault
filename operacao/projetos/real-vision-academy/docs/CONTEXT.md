@@ -36,8 +36,9 @@ commits, **nada pushado, nada mergeado no `main`**).
 | 1 — rota em tela cheia + leitura + player de rodapé | ✅ **verificado ponta a ponta** (07/08/2026). Commits `e907393` + `d92357e` |
 | 2 — painéis (lista, configurações, materiais) + pesquisa interna | ✅ **verificado ponta a ponta** (07/08/2026). Commit `811d18c` |
 | 3 — marcadores por frase | ✅ **verificado ponta a ponta** (07/08/2026). Commit `5cec0d7` |
-| **4 — modo imersivo do celular** | ⏳ **próximo** — fecha só com aparelho real na mão do Felipe |
-| 5 a 7 | não iniciados |
+| 4 — modo imersivo do celular | ✅ código verificado (07/08/2026). Commit `d9fbf01`. **Falta o Felipe conferir num celular de verdade** |
+| **5 — popup de seleção de texto** | ⏳ **próximo** |
+| 6 e 7 | não iniciados |
 
 ### Bloco 3 — o que ficou pronto (07/08/2026)
 
@@ -60,6 +61,36 @@ Bloco 2 47/47, banner 7/7. `tsc`, ESLint e build limpos.
 **Achado fechado:** o painel de Materiais agora renderiza com dado real (599 caracteres, não mais o estado
 vazio) — era pendência registrada no Bloco 2.
 
+### Bloco 4 — o que ficou pronto (07/08/2026)
+
+- `src/hooks/useImmersiveChrome.ts` — decide quando o chrome some. No desktop devolve `visible: true`
+  fixo; toda a lógica é mobile (`max-width: 639px`).
+- `src/components/academy/narrated/ImmersiveStrip.tsx` — a faixa mínima do rodapé (progresso, nome da
+  aula, porcentagem). `pointer-events: none` é obrigatório: sem isso a faixa engole o toque que deveria
+  trazer o chrome de volta.
+- Toque no fundo do texto traz tudo de volta; toque numa frase continua sendo seek; seleção de texto não
+  alterna nada. Fechar o player entra no imersivo na hora.
+
+**Duas correções que saíram da verificação (não estavam no design):**
+
+1. **O gatilho é o gesto, não o evento `scroll`.** O auto-scroll da narração também dispara `scroll` — com
+   o listener de `scroll` o chrome sumia sozinho um segundo depois de o aluno tê-lo trazido de volta, sem
+   ninguém tocar em nada. Agora escuta `touchmove`/`wheel`. **Não trocar de volta.**
+2. **A faixa usa degradê do fundo da leitura.** O design pede "sem fundo sólido", mas o print da
+   verificação mostrou a última linha do texto colidindo com o nome da aula, ilegível. O degradê
+   (`linear-gradient(to top, var(--rd-bg) 45%, transparent)`) resolve sem virar barra opaca, e acompanha
+   os 3 temas pela variável.
+
+Verificação: `node tests/verify-bloco4.mjs mobile|desktop` — **17/17 no mobile, 5/5 no desktop** (lá o
+teste prova o oposto: o chrome nunca some). Print do estado imersivo em `tests/out-mobile-imersivo.png`.
+
+**Pendência do Felipe:** abrir a aula num celular de verdade e sentir o comportamento — os 10s de espera,
+o toque para trazer o player, a leitura sem distração. Playwright prova a mecânica, não o conforto.
+
+**O `verify-full.mjs` ganhou dois "acordar o chrome" no mobile.** Não é gambiarra de teste: fechar o
+player agora esconde a barra de propósito, e sem o toque o Playwright fica clicando num botão fora da
+tela.
+
 **Nota de teste:** marcar a frase 0 não prova nada (ela começa em 0:00, então "tempo no cartão" e "Ir ao
 trecho move o áudio" passariam vazios). O `verify-bloco3` entra em 90s de propósito.
 
@@ -80,6 +111,8 @@ node tests/verify-bloco2.mjs desktop
 node tests/verify-bloco2.mjs mobile
 node tests/verify-bloco3.mjs desktop
 node tests/verify-bloco3.mjs mobile
+node tests/verify-bloco4.mjs mobile
+node tests/verify-bloco4.mjs desktop
 node tests/verify-banner-regressao.mjs desktop
 ```
 
@@ -151,6 +184,12 @@ de sobreposição.
   `:visible` mira no elemento invisível e trava.
 - **O navegador normaliza estilo inline** (`inset 0 0 0 1px #F5A623` vira `rgb(...) 0px 0px 0px 1px inset`).
   Testar por `style*=` não funciona; usar `getComputedStyle`.
+- **Perfil do Playwright dentro do repo derruba o Vite.** Um script de teste com o caminho do perfil mal
+  escapado criou `UsersFelipe Garcia.playwright-rv-profile/` na raiz do projeto; o watcher do Vite tentou
+  vigiar os arquivos de sessão do Chrome e morreu com `EBUSY`. O sintoma engana: os testes começam a
+  falhar com "400 Bad Request" e `ERR_CONNECTION_REFUSED` intermitentes, parecendo bug do app, quando o
+  servidor é que caiu no meio. **Sempre passar o perfil por caminho absoluto ou `RV_PROFILE`**, e conferir
+  a raiz do repo com `ls` antes de culpar o código.
 - **Arquivos-lixo do shell** (`banner`, `text`, `null))`, `r.json())`, `setTimeout(r`) aparecem na raiz do
   repo quando um comando é mal interpretado. Sempre vazios. Conferir com `ls -la` e remover antes do commit
   — já aconteceu em duas sessões seguidas.
