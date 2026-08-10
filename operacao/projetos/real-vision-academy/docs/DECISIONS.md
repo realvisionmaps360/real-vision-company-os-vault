@@ -392,10 +392,131 @@ related:
   trecho enquanto ouve. E o teclado de celular sem acento é o caso comum do aluno.
 - **Impacto:** vale também para o "Buscar" do popup de seleção (Bloco 5), que alimenta esta mesma busca.
 
+## D-033 — Toque simples é interruptor puro, e o chrome é um grupo só
+- **Data:** 2026-08-10
+- **Contexto:** o Bloco 4 tinha sido entregue com um mapa de gesto em que o toque na frase fazia seek, o
+  toque na frase **já ativa** escondia o chrome, e o duplo toque o trazia de volta. Passou nos 17 testes
+  e falhou no dedo do Felipe: ele entrava no modo limpo e não conseguia mais alternar.
+- **Decisão:** um toque em **qualquer pixel** alterna o chrome — à vista some, escondido volta. O toque
+  simples **não mexe no áudio**. E "chrome" é cabeçalho de cima **e** barra de baixo juntos, um grupo só:
+  *"a barra de controles vai ser a mesma coisa que o cabeçalho lá de cima"*.
+- **Justificativa:** o mapa anterior embutia dois significados no mesmo toque, separados por um estado
+  invisível (qual frase está ativa). Ninguém aprende isso usando. Interruptor é o gesto que o aluno já
+  conhece de leitor de PDF e de player de vídeo.
+- **Impacto:** a implementação anterior estava **correta** — a especificação estava errada. Lição de
+  método: gesto se valida no dedo, não em asserção de teste.
+
+## D-034 — Duplo toque numa frase pula pro trecho E começa a tocar
+- **Data:** 2026-08-10
+- **Contexto:** com o seek fora do toque simples (D-033), ele precisava de casa nova.
+- **Decisão:** duplo toque numa frase = "quero ouvir daqui". Pula pro início do fragmento e garante o
+  play. Nasceu o `playFromFragment` em `useNarratedAudio` — `seekToFragment` + `togglePlay` pausaria se
+  já estivesse tocando, o que contradiz o gesto.
+- **Justificativa:** separar os dois gestos por **número de toques**, não por estado, eliminou a briga
+  pelo primeiro clique do duplo toque. Com o toque simples barato (só anima o chrome), ele pode ser
+  adiado 250ms e cancelado pelo duplo — adiamento que era inaceitável enquanto ele fazia seek.
+- **Impacto:** `verify-bloco1` teve o teste de seek trocado de `click` para `dblclick`.
+
+## D-035 — O chrome só muda por gesto explícito
+- **Data:** 2026-08-10
+- **Contexto:** a versão anterior escondia o chrome ao rolar com o dedo e depois de 10s de ociosidade.
+  Nada disso foi pedido; foi invenção da implementação.
+- **Decisão:** sem timer de ocioso e sem esconder por rolagem. A tela nunca se mexe sozinha.
+- **Justificativa:** o aluno rola pra ler; a tela reagir ao ato de ler é hostil. E timer torna o estado
+  imprevisível — o Felipe trazia o chrome de volta e ele fugia sozinho.
+- **Impacto:** as duas ficaram como **teste de regressão** em `verify-bloco4`. Se voltarem, falha.
+
+## D-036 — Pilha do rodapé: a barrinha nunca sai, as camadas montam sobre ela
+- **Data:** 2026-08-10
+- **Contexto:** existiam **duas** barras de progresso (a faixa fina do modo limpo e outra dentro da barra
+  de controles), e a fina **desaparecia** quando a de controles aparecia.
+- **Decisão:** três camadas empilhadas — (1) barrinha de progresso + nome da aula + porcentagem, **sempre
+  na tela**; (2) barra de controles, monta sobre a 1; (3) painel expandido, monta sobre a 2. A barrinha é
+  a **única** barra de progresso do mobile; o filete interno da barra de controles virou `sm:block`.
+- **Justificativa:** palavras do Felipe, *"cada um monta em cima do outro"*. Dois medidores da mesma
+  grandeza podiam divergir e não havia motivo pra existirem.
+- **Impacto:** geometria da pilha derivada de `STRIP_H` (exportado por `ImmersiveStrip`) em vez dos
+  76/94/40 cravados. Qualquer camada nova de rodapé se posiciona a partir dessa constante.
+
+## D-037 — A barrinha tem fundo sólido
+- **Data:** 2026-08-10
+- **Contexto:** ela usava degradê pra transparente, com a intenção de "deixar o texto respirar até a borda".
+- **Decisão:** fundo sólido (`var(--rd-bg)`).
+- **Justificativa:** o efeito prático da intenção bonita era o texto desfilando atrás do nome da aula
+  enquanto rolava. Reprovado no teste em aparelho.
+- **Impacto:** `verify-bloco4` tinha uma asserção exigindo o oposto (`faixa sem fundo sólido`) —
+  invertida de propósito.
+
+## D-038 — A barra de controles tem quatro saltos de tempo; frase vai pro painel
+- **Data:** 2026-08-10
+- **Contexto:** a barra recolhida tinha frase anterior / play / próxima frase, e os saltos de 15s moravam
+  só no painel expandido. O Felipe pediu 15s **e** 5s para cada lado.
+- **Decisão:** barra = `−15  −5  [play]  +5  +15`, com o número no canto superior direito de cada seta.
+  Os botões de frase descem pro painel expandido; os de 15s sobem pra barra. O círculo âmbar do play não
+  muda. Único item redesenhado: o botão de abrir os controles.
+- **Justificativa:** cinco itens é o teto de uma barra de celular. Ícone com "15" desenhado dentro fica
+  ilegível a 19px, e rótulo ao lado dobraria a largura — quatro botões não caberiam.
+- **Impacto:** o "espaço vazio" que o Felipe notou tinha causa: no mobile o bloco da esquerda (tempo +
+  régua) é `hidden sm:flex`, e os blocos restantes esticavam com `flex-1`. Cinco botões resolvem por
+  conteúdo.
+
+## D-039 — Nenhum bloco é "verificado" sem print de 390px revisado a olho
+- **Data:** 2026-08-10
+- **Contexto:** os Blocos 1 a 4 foram declarados "verificados 17/17, 32/32" com base em Playwright. O
+  Felipe testou e achou container vazando, cor de destaque reprovada, itens quebrando linha e rolagem
+  horizontal na nav. **Todos passaram no teste**, porque nada disso é asserção dele. Pior: o ramo
+  `feat/leitor-narrado-design` nunca tinha sido juntado ao `main`, então o teste no celular caiu no
+  player velho da Fase 5.
+- **Decisão:** bloco só fecha com os quatro — `npm run build` limpo · Playwright verde · **screenshot em
+  390px que o agente abre e olha** · revisão contra [[DESIGN]]. E antes de pedir teste ao Felipe,
+  **confirmar em que endereço o código está rodando** e que o commit está no `main` publicado.
+- **Justificativa:** teste de robô prova que não quebrou, não que está bom. Confundir os dois custou uma
+  rodada inteira de avaliação do Felipe sobre uma tela que já havia sido reformada.
+- **Impacto:** valeu na hora. Foi olhando o print que a primeira versão do botão de abrir os controles
+  (dois filetes flanqueando a seta) foi reprovada, e que a primeira tentativa de cor dourada foi
+  reprovada por ler como bege acinzentado. Nenhuma das duas acusou nada no Playwright.
+
+## D-040 — Trilha gamificada: um nó por aula, módulos em acordeão
+- **Data:** 2026-08-10 · **Status:** decidido, execução em [[PRD-009-trilha-gamificada]]
+- **Contexto:** a `CoursePage` joga o sumário na lateral, que no celular cai depois do conteúdo todo. O
+  Felipe quer navegação estilo Duolingo.
+- **Decisão:** cada bolinha da trilha é uma **aula**; os **módulos são acordeões** que agrupam as
+  bolinhas. Níveis de cor por estado — concluída acesa, não concluída com opacidade baixa.
+- **Justificativa:** a proposta inicial era um nó por módulo, por causa das 40 aulas do curso. O Felipe
+  preferiu aula, com o acordeão do módulo resolvendo o comprimento da trilha. Reaproveita o `Accordion`
+  do shadcn já usado em `CourseSyllabus`.
+- **Impacto:** substitui a `CoursePage` atual. Nasce quase toda vazia — só a aula 0.1 está gravada, e
+  isso é esperado.
+
+## D-041 — Navegação livre: aula não concluída fica apagada, nunca travada
+- **Data:** 2026-08-10 · **Status:** decidido, execução em [[PRD-009-trilha-gamificada]]
+- **Decisão:** a trilha mostra visualmente onde o aluno está, mas ele abre qualquer aula quando quiser.
+- **Justificativa:** curso pago com aula bloqueada gera reclamação e pedido de reembolso. O ganho
+  motivacional da gamificação vem do progresso visível, não do bloqueio.
+
+## D-042 — Uma tela por aula, e os materiais moram nela
+- **Data:** 2026-08-10 · **Status:** decidido, execução em [[PRD-009-trilha-gamificada]]
+- **Decisão:** trilha → **tela da aula** (materiais + botão de ouvir) → leitor em tela cheia. Os materiais
+  saem da tela do curso. O `MaterialsPanel` **dentro** do leitor continua existindo.
+- **Justificativa:** consultar material sem sair da narração é útil; a tela da aula é a casa principal
+  dos materiais, não a única.
+- **Impacto:** o leitor precisa mudar de rota — ver [[PRD-009-trilha-gamificada]].
+
+## D-043 — Materiais em acordeão, todos fechados
+- **Data:** 2026-08-10
+- **Contexto:** hoje `md_prompt` renderiza o `<pre>` inteiro sempre (ocupando meia tela) e os outros tipos
+  são um card que dispara o arquivo direto no clique.
+- **Decisão:** os três nascem **fechados**, iguais. Clicar abre o container e revela o botão dentro —
+  copiar prompt, baixar PDF, abrir link.
+- **Justificativa:** pedido do Felipe. Um prompt escancarado empurra tudo pra baixo e esconde o resto.
+- **Impacto:** `openFile` (com a URL assinada do bucket privado `course-materials`) não muda — só deixa
+  de ser disparado pelo clique no card.
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]
 - [[CONTEXT]]
 - [[PRD-008-leitor-narrado-design]]
+- [[PRD-009-trilha-gamificada]]
 - [[PRD-006-hub-comunidade]]
 - [[PRD-007-curso-narrado-sincronizado]] · [[PRD-007-arquitetura-leitor-narrado]] · [[PRD-007-plano-execucao]]

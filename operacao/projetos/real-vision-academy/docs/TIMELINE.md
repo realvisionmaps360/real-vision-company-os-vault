@@ -784,7 +784,94 @@ documento.
   `PRD-008-materiais-teste.sql` (1 prompt + 1 link + 1 arquivo genéricos para conferir o painel de
   Materiais com dado real). Depois, código do Bloco 3.
 
+## 2026-08-10 — Primeiro teste em aparelho real. Duas rodadas de correção, tudo no ar e aprovado
+
+Sessão longa, em Opus 5. O leitor saiu do localhost e foi para produção; o Felipe testou no celular pela
+primeira vez.
+
+### O achado que reenquadrou tudo
+
+Os sete commits do PRD-008 (Blocos 0 a 4) estavam no ramo `feat/leitor-narrado-design` e **nunca tinham
+sido juntados ao `main`**. Os blocos estavam documentados como "verificados 32/32, 47/47, 17/17" com base
+em Playwright rodando **no localhost**. O Felipe foi testar em `realvisionmaps.com` e avaliou, com todo
+cuidado, o **player velho da Fase 5** — uma tela que já havia sido reformada.
+
+Publicado com autorização explícita dele: `60ed8f6` → `4322086`. O `main` estava parado no "Add Microsoft
+Clarity tracking script"; o merge foi fast-forward, sem conflito.
+
+Daí saiu **D-039**: teste de robô prova que não quebrou, não que está bom. Playwright aprovou container
+vazando, cor de destaque reprovada, item quebrando linha e rolagem horizontal na nav, porque nada disso é
+asserção dele.
+
+### Fase A — `ea28825`
+
+O modo imersivo só sabia **acender** o chrome: o toque no texto chamava `mostrar`, e não existia gesto que
+apagasse. O Felipe entrava no modo limpo e não conseguia mais alternar. Junto disso, dois comportamentos
+que ninguém pediu e que mexiam a tela sozinha enquanto ele lia: esconder ao rolar com o dedo e timer de
+ocioso de 10s (**D-035**, agora regressão em teste).
+
+Também: painel expandido passou a fechar por toque fora (o aluno ficava preso nele); destaque foi de âmbar
+diluído pra dourado; `box-decoration-break: clone` consertou o canto cortado.
+
+**A cor precisou de duas tentativas, e a segunda foi reprovada por mim mesmo no print** —
+`rgba(229,192,123,0.16)` lia como bege acinzentado, porque `AMBER_LIGHT` é dourado *dessaturado* e diluir
+sobre fundo escuro tira o amarelo. O valor final `rgba(247,201,72,0.16)` sobe croma, não opacidade.
+
+### Fase A-2 — `19a886d` — aprovado pelo Felipe
+
+Ao usar a Fase A, ficou claro que **a implementação estava correta e a especificação estava errada**. O
+Felipe redesenhou o gesto para algo mais simples (**D-033**, **D-034**) e, no caminho, apontou dois
+defeitos de arquitetura no rodapé que a implementação anterior tinha introduzido (**D-036**, **D-037**):
+
+- toque simples em qualquer pixel alterna cabeçalho **e** barra juntos, e não mexe no áudio
+- duplo toque numa frase pula pro trecho **e começa a tocar** — nasceu o `playFromFragment`
+- três camadas de rodapé empilhadas, com a barrinha **sempre** na tela e **uma só** barra de progresso
+- barrinha com fundo sólido: o degradê deixava o texto desfilar atrás do nome da aula
+- barra com `−15 −5 [play] +5 +15`, número no canto de cada seta; botões de frase desceram pro painel
+  (**D-038**)
+
+**A solução dele resolveu um problema técnico de graça.** Com o seek fora do toque simples, os dois gestos
+deixaram de brigar pelo primeiro clique do duplo toque, e o toque simples pôde ser adiado 250ms e
+cancelado pelo duplo — adiamento que era inaceitável enquanto ele fazia seek.
+
+### Verificação
+
+27/27 bloco 4 mobile · 8/8 desktop · 23/23 bloco 1 · 47/47 bloco 2 · 17/17 bloco 3. Print dos três
+estados da pilha em 390px revisado a olho — e foi olhando que a primeira versão do botão de abrir os
+controles (dois filetes flanqueando a seta) foi reprovada por ler como controle quebrado.
+
+`verify-bloco4` foi **reescrito duas vezes** nesta sessão; duas asserções hoje afirmam o **oposto** do que
+afirmavam (toque na frase escondia o chrome; barrinha era transparente).
+
+### Duas falhas de teste que não eram regressão
+
+- **Bloco 3** falhava por **estado sujo**: dois marcadores órfãos de uma rodada que morreu no meio, antes
+  do passo de limpeza. Removidos pela própria interface. O harness não limpa quando falha — vale melhorar.
+- **Bloco 1** falhava em "destaque avança junto com o áudio" com 6s cravados de espera. **A frase 0 desta
+  aula dura ~10,5s** (medido) — o teste parava dentro dela. Agora espera o evento, teto de 20s.
+
+### Escopo novo fechado com o Felipe
+
+[[PRD-009-trilha-gamificada]] escrito e especificado, **zero código**: trilha estilo Duolingo com um nó
+por aula e módulos em acordeão (**D-040**), navegação livre (**D-041**), uma tela por aula com os
+materiais dentro (**D-042**). Mais a Fase B do [[PRD-008-leitor-narrado-design]], detalhada no próprio
+PRD: materiais em acordeão (**D-043**), cartão da aula narrada e nav sem rolagem horizontal.
+
+### Próximo passo
+
+**Fase B do PRD-008**, na ordem B1 → B2 → B3. Depois [[PRD-009-trilha-gamificada]]. Depois os Blocos 5, 6
+e 7 do PRD-008. Handoff em
+`operacao/projetos/real-vision-academy/docs/HANDOFF-2026-08-10-leitor-narrado.md`.
+
+### Achados registrados, não corrigidos
+
+- `docs/` tem dois arquivos-lixo de sessões anteriores: `[[PRD-007-fase5-sql` e `setCompleted.mutate({`.
+  Não removidos — regra de nunca apagar nota do vault sem OK do Felipe.
+- `npm run build` segue disparando IndexNow com status 403.
+- Materiais não têm `sort_order`; a ordem é a que o banco devolver.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]
 - [[CONTEXT]]
+- [[PRD-008-leitor-narrado-design]] · [[PRD-009-trilha-gamificada]] · [[DECISIONS]]
