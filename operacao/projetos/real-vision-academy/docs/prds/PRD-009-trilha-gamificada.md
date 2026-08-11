@@ -2,13 +2,13 @@
 id: PRD-009-trilha-gamificada
 title: PRD-009 — Trilha Gamificada do Curso + Tela por Aula
 type: prd
-status: código pronto (Blocos 1-3) — aguardando confirmação do Felipe em aparelho real
+status: aprovado
 project: real-vision-academy
 phase: fase-9
 owner: master-visionair
 created: 2026-08-10
 updated: 2026-08-11
-progress: "Blocos 1-3 codados, build limpo, testados com conta real de aluno (dados reais, print 390px) e publicados em main (599836a, 805103d). Bloco 4 (verificação final) aguarda confirmação do Felipe em aparelho — a Vercel bloqueia verificação headless automatizada partindo deste ambiente. Ver [[TIMELINE]] 2026-08-11."
+progress: "Blocos 1-4 completos. Publicado em main (599836a, 805103d), testado com conta real de aluno e APROVADO pelo Felipe em aparelho real em 11/08/2026. Próximo: Blocos 5-7 do [[PRD-008-leitor-narrado-design]]. Ver [[TIMELINE]] 2026-08-11."
 depends_on:
   - PRD-008-leitor-narrado-design
 related:
@@ -126,7 +126,7 @@ Academy — isso é Fase B do [[PRD-008-leitor-narrado-design]].
 | 1 | Rotas: leitor vai pra `/ler`, tela da aula nasce no endereço antigo | — | ✅ publicado (`599836a`) |
 | 2 | Tela da aula: título + materiais em acordeão + botão de ouvir | Bloco 1 · Fase B do PRD-008 | ✅ publicado (`805103d`) |
 | 3 | A trilha: módulos em acordeão, bolinhas por aula, estados de cor | Bloco 2 | ✅ publicado (`805103d`) |
-| 4 | Verificação final e publicação | todos | ⏳ aguardando confirmação do Felipe em aparelho real |
+| 4 | Verificação final e publicação | todos | ✅ **aprovado pelo Felipe em aparelho real, 11/08/2026** |
 
 ## Documentos relacionados
 - [[PRD-008-leitor-narrado-design]] · [[DECISIONS]] · [[ROADMAP]] · [[CONTEXT]] · [[TIMELINE]]

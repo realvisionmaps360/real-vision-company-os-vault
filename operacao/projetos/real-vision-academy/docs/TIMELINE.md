@@ -1007,6 +1007,83 @@ Depois, Blocos 5 (popup de seleção de texto), 6 (Media Session + PWA) e 7 (ver
 - **Próximo passo:** nenhum bloco do PRD-009 ficou pendente. Retomar os Blocos 5-7 do PRD-008 (popup de
   seleção de texto, Media Session + PWA, verificação final) quando o Felipe confirmar o PRD-009.
 
+## 2026-08-11 — PRD-009 confirmado pelo Felipe em aparelho real
+
+- **Objetivo:** registrar a confirmação e destravar os Blocos 5-7 do [[PRD-008-leitor-narrado-design]].
+- **Atividades:** Felipe testou a trilha e a tela da aula em aparelho real e aprovou ("testei aqui e ta
+  legal"). [[PRD-009-trilha-gamificada]] atualizado: `status: aprovado`, Bloco 4 marcado como aprovado.
+- **Próximo passo:** Bloco 5 do PRD-008 (popup de seleção de texto) — falta especificar com o Felipe que
+  ações o popup oferece, o PRD só nomeia o bloco sem detalhar UX. Depois, Bloco 6 (Media Session + PWA) e
+  Bloco 7 (verificação final).
+
+## 2026-08-11 — Bloco 5 do PRD-008 especificado e planejado (zero código)
+
+- **Objetivo:** fechar a spec do Bloco 5 com o Felipe e planejar por escrito, no Opus, para ser executado
+  no Sonnet numa sessão seguinte. Regra explícita da sessão: **nenhum código**.
+- **Spec fechada com o Felipe:** popup de 3 ícones ao selecionar texto (copiar · grifar · pular o áudio
+  pro trecho); grifar abre segundo popup de cor; grifo age sobre **o trecho**, com vários por frase; o
+  botão "Marcar frase" do painel (D-048) **continua existindo** e convive com o grifo novo; popup abre
+  depois de pausa curta; tocar num grifo abre cores + lixeira.
+- **A leitura do código mudou o tamanho do bloco.** O que parecia front-end virou schema novo
+  (`lesson_highlights`, porque `lesson_bookmarks` trava em uma cor por frase) mais um refactor no `<p>` da
+  frase, que hoje renderiza texto puro e precisa passar a renderizar segmentos — o elemento mais sensível
+  do leitor, que sustenta o destaque da narração, o `boxDecorationBreak: clone` e o auto-scroll.
+- **Achado principal — 5 conflitos de gesto que o PRD não previa**, nenhum deles detectável pelo
+  Playwright, três atingindo gestos já aprovados e guardados por regressão:
+  1. **O duplo toque já seleciona a palavra** (nativo do navegador). Como o duplo toque pula o áudio
+     (D-034), o popup abriria toda vez que o aluno pulasse a narração. Resolvido com debounce de 400ms
+     **mais** janela de supressão de 900ms pós-duplo-toque — o debounce sozinho não basta, porque depois
+     do duplo toque a palavra fica selecionada *e estável*.
+  2. Terminar uma seleção dispara `click` no container, que alterna o chrome (D-033) — o cabeçalho
+     piscaria a cada seleção.
+  3. Tocar num grifo briga com o toque simples do chrome e com o duplo toque da frase.
+  4. Frases sem áudio (`fragIndex` negativo) não têm destino de seek — ícone de pular é omitido.
+  5. Seleção cruzando duas frases — popup de 1 ícone, só copiar.
+- **Escrito:** [[PRD-008-bloco5-plano-execucao]] (plano completo, com os 8 sub-passos, os detalhes que a
+  execução não pode inventar e o plano de verificação em loop) e [[PRD-008-bloco5-grifos]] (o SQL
+  idempotente, no padrão do Bloco 3). Tabela de blocos do [[PRD-008-leitor-narrado-design]] atualizada.
+- **Nenhuma decisão numerada nova registrada ainda** — as decisões desta sessão viram D-051+ quando o
+  bloco for executado, e o plano lembra de conferir o último número usado (D-050) antes de numerar.
+- **Próximo passo:** o Felipe roda [[PRD-008-bloco5-grifos]] no SQL Editor (KI-29, escrita no banco nunca
+  por MCP/Management API) e confirma as 4 linhas de policy. Só depois começa o passo 5.1 — nada de
+  front-end antes da tabela existir, senão o hook só gera 404 e polui o diagnóstico.
+
+## 2026-08-11 — Bloco 5 do PRD-008: execução iniciada (passos 5.1-5.3)
+
+- **Objetivo:** executar o plano aprovado ([[PRD-008-bloco5-plano-execucao]]) depois de o Felipe rodar o
+  SQL de `lesson_highlights` no SQL Editor (4 policies confirmadas). Trabalho pausado no meio de propósito
+  para handoff — sessão vai encerrar antes do passo 5.4.
+- **Passo 5.1 — extração do `MarkerColorPopup.tsx`:** popup de 4 cores tirado do `BottomPlayer.tsx` sem
+  mudar comportamento, pra ser reusado pelo popup de seleção mais adiante. Verificado: build limpo,
+  `verify-bloco3.mjs` 17/17 mobile e desktop, print 390px idêntico ao original.
+- **Passo 5.2 — `readerHighlightSegments.ts`:** módulo puro que fatia o texto de uma frase em segmentos
+  grifados/não-grifados, com relocação defensiva quando o offset não bate mais com o texto. 10/10 testes
+  vitest — 2 falhas no meio do caminho eram bug nos próprios testes (cenário mal montado), não no código;
+  corrigido e reconfirmado.
+- **Passo 5.3 — o de maior risco, refactor do `ReadingArea.tsx`:** extraído `SentenceParagraph`
+  (`useMemo` não pode viver dentro de `.map()`), adicionado `data-frag-any` em todas as frases (só as
+  narráveis tinham `data-frag`), `<p>` passou a renderizar segmentos — mas com a lista de grifos sempre
+  vazia neste passo, o resultado é pixel-idêntico ao anterior. Zero espaço fantasma, zero mudança na
+  cadeia de precedência de cor (ativa > hit atual > hit > marcada).
+- **Verificação:** Blocos 1 (24/24 mobile+desktop), 2 (47/47 mobile+desktop), 3 e 4 — todos os
+  comportamentos passaram; o único padrão de falha (~1 em 4 rodadas) foi um check genérico de "sem erro de
+  console" pego por ruído externo (Google Fonts 404, chamada de analytics abortada) — investigado a fundo
+  via captura de rede, confirmado que `ReadingArea`/`readerHighlightSegments` não fazem chamada de rede
+  nenhuma. Zero regressão real.
+- **Achado fora do escopo, corrigido no mínimo necessário:** 12 scripts de teste (`verify-bloco1/2/3/4`,
+  `verify-blocoC4-C7`, `verify-aluno`, `verify-conclusao`, `verify-full`, `verify-banner-regressao`)
+  ficaram apontando pra URL antiga do leitor depois do PRD-009 mover a rota pra `/ler` — ninguém tinha
+  atualizado o harness. Corrigidos só os 4 que esta sessão precisou (`limpar-marcadores.mjs`,
+  `verify-bloco1/2/3/4.mjs`); os outros 8 continuam quebrados, sinalizado ao Felipe, não corrigido (fora
+  do escopo do Bloco 5).
+- **Achado de processo:** outro agente trabalhando em paralelo no mesmo repositório, branch
+  `feat/menu-mobile-v2` (nenhum commit ainda, só working tree) — feature de animação do menu mobile em
+  `HomeNav.tsx` e uma correção no `CLAUDE.md`. Confirmado com o Felipe que cada um cuida só da própria
+  parte; nenhum arquivo se sobrepôs.
+- **Pendente, retomar aqui:** passo 5.4 — `useLessonHighlights.ts` (hook espelhando `useLessonBookmarks.ts`,
+  ver assinatura completa no plano) + ligar `highlightsByFrag` no `ReadingArea` dentro do
+  `NarratedLessonPage.tsx`. Depois, 5.5 a 5.8 conforme o plano.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]

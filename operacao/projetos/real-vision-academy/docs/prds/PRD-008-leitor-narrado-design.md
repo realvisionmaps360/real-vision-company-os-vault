@@ -7,8 +7,8 @@ project: real-vision-academy
 phase: fase-8
 owner: master-visionair
 created: 2026-08-04
-updated: 2026-08-10
-progress: "Blocos 0 a 4 no ar e APROVADOS pelo Felipe em aparelho real (10/08) · Fase A e A-2 corrigiram o gesto e o rodapé · próximo: Fase B (materiais em acordeão, cartão, nav) e depois PRD-009 (trilha) · detalhe em CONTEXT"
+updated: 2026-08-11
+progress: "Blocos 0 a 4, Fase A/A-2, Fase B e Fase C TODAS no ar e APROVADAS pelo Felipe em aparelho real (10/08) · PRD-009 (trilha) fechado e aprovado em aparelho real (11/08) · Bloco 5 ESPECIFICADO em 11/08, plano em PRD-008-bloco5-plano-execucao + SQL em PRD-008-bloco5-grifos, zero código escrito — próximo passo é o Felipe rodar o SQL · depois Blocos 6 e 7 · detalhe em CONTEXT"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -71,8 +71,9 @@ seguinte começar.
 | 4 | Modo imersivo do celular | ✅ no ar · 27/27 mobile, 8/8 desktop · **aprovado pelo Felipe em aparelho real, 10/08/2026** |
 | A | Correções do 1º teste em aparelho | ✅ no ar (`ea28825`) |
 | A-2 | Gesto virou interruptor + pilha do rodapé | ✅ no ar (`19a886d`) · aprovado |
-| B | Materiais em acordeão · cartão da aula narrada · nav sem rolagem horizontal | ⏳ **próximo** |
-| 5 | Popup de seleção de texto | Blocos 2 e 3 |
+| B | Materiais em acordeão · cartão da aula narrada · nav sem rolagem horizontal | ✅ no ar (`c2198b5`) · aprovado |
+| C | Nav com Cursos/Materiais · duplo clique na aula · cartão redesenhado · materiais do player em acordeão · painel sem navegar-por-frase + volume arrastável + popup de cor · frase não esconde atrás do menu · título em letreiro | ✅ no ar (`f4dca32`) · **aprovado pelo Felipe em aparelho real, 10/08/2026** |
+| 5 | Popup de seleção de texto | **em execução** — SQL rodado, passos 5.1-5.3 concluídos e verificados (plano em [[PRD-008-bloco5-plano-execucao]]). Falta 5.4 a 5.8 |
 | 6 | Media Session + `manifest.json` | Blocos 1-5 |
 | 7 | Verificação final e publicação | todos |
 
@@ -117,9 +118,11 @@ implementada corretamente; a especificação é que estava errada.
 
 Geometria derivada de `STRIP_H`, exportado por `ImmersiveStrip.tsx`. Barra de progresso única no mobile.
 
-## Fase B — o que a próxima sessão executa (especificada, não iniciada)
+## Fase B — publicada e testada em aparelho real, 10/08/2026
 
-Três frentes, todas apontadas pelo Felipe no teste de 10/08/2026. Nenhuma linha de código escrita.
+Três frentes, todas apontadas pelo Felipe no teste de 10/08/2026. **Status: publicada no `main`
+(`c2198b5`) e testada por ele no celular — foi esse teste que gerou a rodada de feedback da Fase C, logo
+abaixo.** Decisões de implementação em [[DECISIONS]] D-044 e D-045.
 
 ### B1 — Materiais em acordeão (**D-043**)
 
@@ -151,6 +154,9 @@ tipo cru como rótulo — manter esse comportamento.
 *Nota: materiais **não têm** `sort_order` no schema, e `useCourse` não os ordena (linhas 84-89). A ordem
 é a que o banco devolver. Não corrigir nesta fase; registrar se incomodar.*
 
+**Feito:** `MaterialsList.tsx` reescrito sobre `Accordion`, `type="multiple"`, sem `defaultValue`. Verificado
+12/12 mobile e 12/12 desktop em `tests/verify-blocoB1.mjs`, sem regressão no bloco 1 (23/23).
+
 ### B2 — Cartão da aula narrada e ordem no celular
 
 `NarratedLessonCard` (`CoursePage.tsx:20-38`) é um `aspect-video` com ícone de 48px centralizado — no
@@ -164,6 +170,12 @@ O grid de `CoursePage.tsx:115` (`grid items-start gap-6 lg:grid-cols-3`) empilha
 > se faz o mínimo pra ela não ficar quebrada no intervalo — não vale redesenho profundo do que vai ser
 > trocado.
 
+**Feito (D-044):** `NarratedLessonCard` perdeu o `aspect-video` fixo, virou altura natural com padding.
+Grid da `CoursePage` ganhou `order-1`/`order-2` — sumário passa a vir ANTES do bloco de conteúdo no celular
+(não depois, como pedido originalmente cogitava — ver justificativa em D-044 sobre por que a divisão em
+3 blocos foi descartada). Desktop sem mudança visual. Verificado 9/9 mobile e 8/8 desktop em
+`tests/verify-blocoB2.mjs`, sem regressão no bloco 1 (23/23).
+
 ### B3 — Nav da Academy
 
 `src/components/academy/AcademyShell.tsx:78` — `<nav className="flex gap-1.5 overflow-x-auto pb-1">` com
@@ -173,6 +185,33 @@ rolagem horizontal que o Felipe chamou de horrível. Também corrigir o containe
 Redesenhar contra [[DESIGN]] — grade que quebra linha, ou barra inferior fixa estilo app. **Cuidado:** se
 virar barra inferior fixa, ela entra no mesmo território da pilha de rodapé do leitor; o leitor fica fora
 do `AcademyShell` (D-025), então não colidem, mas vale conferir.
+
+**Feito (D-045):** grade escolhida em vez de barra fixa (justificativa em D-045). `nav` virou
+`grid grid-cols-3 gap-1.5` — os 5 chips quebram em duas linhas (3 + 2), sem `overflow-x-auto`. Verificado
+16/16 mobile e 4/4 desktop em `tests/verify-blocoB3.mjs`, sem regressão no bloco 1 (23/23).
+
+## Fase C — feedback do Felipe depois de testar a Fase B em aparelho real (10/08/2026)
+
+**Status: publicada no `main` (`f4dca32`) e APROVADA pelo Felipe em aparelho real, na mesma sessão do
+pedido — "tudo está perfeito, deu tudo certo".** Decisões em [[DECISIONS]] D-046 a D-050.
+
+| Item | O quê | Decisão |
+|---|---|---|
+| Nav | +"Cursos" · "Prompts"→"Materiais" · "Aprender" desabilitado até a trilha existir | — |
+| Sumário | Duplo clique numa aula narrada abre ela direto (aula em vídeo só seleciona, como já era) | — |
+| Cartão | `NarratedLessonCard` com glow radial, anéis atrás do ícone, duração do áudio | — |
+| Materiais do player | `MaterialsPanel` (dentro da aula) vira acordeão — mesmo padrão do B1, sem abas | — |
+| Painel expandido | Linha "Navegar por frase" removida | **D-046**, desfaz D-041 |
+| Painel expandido | Volume ganha arraste, além dos botões | **D-047** |
+| Painel expandido | "Marcar frase" abre popup de 4 cores em vez de marcar direto | **D-048** |
+| Auto-scroll | Frase ativa centraliza no espaço livre acima do painel expandido, não na tela inteira | **D-049** |
+| Título | Letreiro: parado 5s → desliza → parado 5s → repete, no cabeçalho e no rodapé fixo | **D-050** |
+
+**Verificado:** build limpo. Testes novos por item — `tests/verify-blocoC2.mjs` (3/3),
+`verify-blocoC4.mjs` (3/3), `verify-blocoC5.mjs` (4/4), `verify-blocoC6.mjs` (2/2),
+`verify-blocoC7.mjs` (5/5). Sem regressão: bloco1 24/24, bloco2 47/47, bloco3 17/17 (desktop e mobile),
+bloco4 27/27 mobile + 8/8 desktop, B1/B2/B3 12/12 + 9/9 + 18/18. Print de cada item revisado a olho
+(D-039), **e aprovado no aparelho real do Felipe** — o critério que realmente fecha um bloco.
 
 ## Restrições herdadas (valem em todos os blocos)
 
