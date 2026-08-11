@@ -74,18 +74,20 @@ family=Geist:wght@300;400;500;600        ← disponível para uso específico
 ## Navegação — menu header (ordem oficial)
 
 ```
-Sobre Nós | Serviços | Portfólio | Formação | Blog | Contato | Loja
+Portfólio | Serviços | Contato | Formação | Sobre Nós | Blog | Loja
 ```
 
 | Item | Rota |
 |---|---|
-| Sobre Nós | `/sobre` |
-| Serviços | `/servicos` |
 | Portfólio | `/portfolio` |
-| Formação | `/profissional-360` |
-| Blog | `/blog` |
+| Serviços | `/servicos` |
 | Contato | `/contato` |
+| Formação | `/profissional-360` |
+| Sobre Nós | `/sobre` |
+| Blog | `/blog` |
 | Loja | `/loja` (botão separado no desktop) |
+
+> Ordem definida em 11/08/2026 junto com o menu mobile v2 (Painel Editorial) — prioriza prova (Portfólio) e conversão (Serviços, Contato) no topo.
 
 ---
 
