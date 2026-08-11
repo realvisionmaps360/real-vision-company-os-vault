@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: fase-8
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-08-07
+updated: 2026-08-11
 related:
   - ROADMAP
   - CHANGELOG
@@ -869,6 +869,143 @@ e 7 do PRD-008. Handoff em
   Não removidos — regra de nunca apagar nota do vault sem OK do Felipe.
 - `npm run build` segue disparando IndexNow com status 403.
 - Materiais não têm `sort_order`; a ordem é a que o banco devolver.
+
+## 2026-08-10 (continuação) — Fase B do PRD-008 codada: B1, B2, B3
+
+Sessão seguinte ao handoff (`HANDOFF-2026-08-10-leitor-narrado.md`), executando os três blocos
+especificados na ordem prevista, um por vez.
+
+### B1 — Materiais em acordeão (D-043)
+
+`MaterialsList.tsx` reescrito sobre o `Accordion` do shadcn — mesmo padrão do `CourseSyllabus`,
+`type="multiple"`, sem `defaultValue`. `openFile`/`copyPrompt` não mudaram, só deixaram de disparar no
+clique direto do card. Verificado 12/12 mobile e 12/12 desktop (`tests/verify-blocoB1.mjs`).
+
+### B2 — Cartão da aula narrada e ordem no celular (D-044)
+
+`NarratedLessonCard` perdeu o `aspect-video` fixo — o conteúdo não cabia na altura forçada e espremia o
+ícone de 48px; virou altura natural com padding. Para a ordem no celular, a opção de dividir o bloco de
+conteúdo em duas partes (cartão / título+materiais) pra intercalar o sumário no meio foi **descartada**:
+quebraria o grid de 3 colunas do desktop, que depende do bloco de conteúdo ser um item único. Resolvido
+com `order-1`/`order-2` trocando a posição inteira do sumário pra **antes** do bloco de conteúdo no
+celular, sem tocar no DOM nem no desktop. Verificado 9/9 mobile e 8/8 desktop (`tests/verify-blocoB2.mjs`).
+
+### B3 — Nav da Academy (D-045)
+
+A opção de virar barra inferior fixa estilo app foi **descartada** por ora: entraria no mesmo território
+vertical da pilha de rodapé do leitor (D-036/D-037) e pediria folga de área segura de iOS — mudança maior
+que o pedido. `nav` virou `grid grid-cols-3 gap-1.5`: os 5 chips quebram em duas linhas, sem
+`overflow-x-auto` e sem vazar a tela. Verificado 16/16 mobile e 4/4 desktop (`tests/verify-blocoB3.mjs`).
+
+### Verificação
+
+Build limpo nos três blocos. Sem regressão no bloco 1 (23/23) depois de cada um. Print 390px de cada
+bloco aberto e revisado a olho (D-039) antes de considerar fechado.
+
+### O que não foi feito (na hora)
+
+Os três commits ficaram locais em `feat/leitor-narrado-design` (`b94b553`, `712c652`, `5523cbe`) — o
+Felipe pediu pra seguir executando sem pausar entre blocos, mas sem push nem merge ainda. Isso mudou
+poucas horas depois — ver a próxima entrada. Arquivos-lixo de sessão anterior (`m.type()`, `html`, `0`,
+todos vazios) apareceram de novo no `git status` e foram removidos antes de cada commit — mesmo padrão já
+registrado em D-039/armadilhas da skill `rv-academy`, causa não investigada nesta sessão.
+
+## 2026-08-10 (continuação) — Fase B publicada, Felipe testa e pede a Fase C na mesma sessão
+
+Pedido do Felipe: publicar a Fase B pra ele testar no celular de verdade. `feat/leitor-narrado-design`
+juntado ao `main` (merge `c2198b5`), `git push origin main`. Confirmado que a Vercel tem proteção contra
+bot ("Vercel Security Checkpoint") que bloqueia `curl` e Playwright headless rodando deste ambiente —
+não dá pra verificar o deploy automaticamente daqui; a confirmação de que está no ar precisa vir do
+próprio Felipe abrindo no celular.
+
+Ele testou e voltou com uma lista grande de pedidos, em áudio transcrito — pediu explicitamente pra eu
+**analisar tudo e responder o que entendi de cada um antes de mexer em código** (não é luz verde
+automática). Investiguei o código atual de cada ponto (`ImmersiveStrip.tsx`, `BottomPlayer.tsx`,
+`MaterialsPanel.tsx`, `BookmarksPanel.tsx`, `useLessonBookmarks.ts`, `ReaderHeader.tsx`) antes de
+responder, pra não prometer abordagem errada. Duas perguntas via `AskUserQuestion` resolveram pontos
+genuinamente ambíguos (o que o botão "Aprender" mostra antes da trilha existir; se "Materiais" muda de
+destino ou só de nome) e uma confirmação explícita — tirar a linha de navegar-por-frase desfazia uma
+decisão do mesmo dia (D-041) e quebrava teste de regressão.
+
+### Fase C — sete pedidos, codados na ordem certa
+
+1. **Nav:** +Cursos, Prompts→Materiais, Aprender desabilitado até a trilha existir.
+2. **Sumário:** duplo clique numa aula narrada abre ela direto (reusa o mesmo padrão de duplo-toque já
+   validado no seek de frase, D-034/D-040).
+3. **Cartão da aula narrada:** glow radial, anéis atrás do ícone, duração do áudio.
+4. **Materiais dentro do player:** mesmo acordeão do B1, sem abas.
+5. **Painel expandido:** navegar-por-frase removido (**D-046**), volume ganha arraste (**D-047**), marcar
+   frase abre popup de 4 cores (**D-048** — `useLessonBookmarks` já previa isso num comentário próprio).
+6. **Auto-scroll:** frase ativa centraliza no espaço livre acima do painel expandido, não na tela inteira
+   (**D-049**) — sequenciado depois do item 5 de propósito, porque remover a linha muda a altura do painel.
+7. **Título letreiro:** parado 5s → desliza → parado 5s → repete, no cabeçalho e no rodapé fixo
+   (**D-050**), componente novo `MarqueeText.tsx`.
+
+### Dois achados no caminho, não regressões
+
+- `MaterialsPanel.tsx` (dentro do player) tinha o mesmo `truncate` que causou vazamento de ~90px de texto
+  pra fora da tela — o `AccordionTrigger` do Radix não encolhe bem com `nowrap`+ellipsis nesse contexto.
+  B1 nunca teve o problema porque deixa o título quebrar linha. Tirar o `truncate` resolveu.
+- `verify-bloco3.mjs` (marcadores) quebrou em dois pontos que dependiam do comportamento antigo: clicar
+  "Marcar frase" direto marcava na hora (agora abre popup) e usava o botão "Próxima frase" removido como
+  atalho pra trocar de frase ativa. No caminho, descoberto que "ativa" tem precedência visual sobre a cor
+  do marcador **por desenho** (comentário já existente no código) — não é bug, só exigiu um salto de
+  tempo maior no teste pra sair de uma frase mais longa que a média.
+
+### Verificação
+
+Build limpo em cada um dos 4 commits. Testes novos por item (3/3, 3/3, 4/4, 2/2, 5/5). Bateria completa de
+regressão depois de tudo: bloco1 24/24, bloco2 47/47, bloco3 17/17 (desktop + mobile), bloco4 27/27
+mobile + 8/8 desktop, B1/B2/B3 12/12 + 9/9 + 18/18. Print de cada item revisado a olho (D-039).
+
+`tests/limpar-marcadores.mjs` criado como utilidade permanente — remove marcadores de teste pela própria
+interface, sem SQL. O harness do Bloco 3 nunca limpou sozinho quando uma rodada anterior falha no meio.
+
+### Publicada e aprovada, na mesma sessão
+
+Felipe pediu pra publicar. `main` avançado com os 4 commits (`1a32324`, `428eeac`, `4481e5c`, `f4dca32`) em
+cima do `c2198b5` já publicado, `git push origin main`. **Confirmado por ele em aparelho real: "tudo está
+perfeito, deu tudo certo."** Fase B e Fase C do PRD-008 fecham aqui — status atualizado em
+[[PRD-008-leitor-narrado-design]] (tabela de blocos + seções B e C).
+
+Achado registrado, não novo nesta sessão mas repetido: a Vercel deste projeto tem proteção contra bot
+("Vercel Security Checkpoint") que bloqueia `curl` puro e Playwright headless partindo deste ambiente —
+tanto pra checar o deploy da Fase B quanto o da Fase C, a confirmação real precisou vir do Felipe abrindo
+no celular. Registrado na skill `rv-academy` pra próxima sessão não tentar de novo achando que é bug.
+
+### Próximo passo
+
+[[PRD-009-trilha-gamificada]] — o próximo escopo grande, já especificado (D-040 a D-042), zero código.
+Depois, Blocos 5 (popup de seleção de texto), 6 (Media Session + PWA) e 7 (verificação final) do PRD-008.
+
+## 2026-08-11 — PRD-009 completo: rotas, tela da aula e trilha
+
+- **Objetivo:** executar os 4 blocos do [[PRD-009-trilha-gamificada]], já especificado e aprovado na
+  sessão anterior — nenhuma decisão nova precisou ser tomada, só implementação.
+- **Bloco 1 — Rotas:** o leitor em tela cheia migrou de `/academy/curso/:slug/aula/:lessonId` para
+  `.../ler`. A rota antiga ficou temporariamente apontando pro leitor também, como stopgap até o Bloco 2
+  construir a tela que ia ocupá-la. As 3 linhas citadas no PRD já tinham deslocado desde a Fase C do
+  PRD-008 — 5 pontos reais corrigidos (`App.tsx`, 2× `NarratedLessonPage.tsx`, 2× `CoursePage.tsx`).
+  Testado no navegador: ambas as rotas resolvem sem 404. Publicado (`599836a`).
+- **Bloco 2 — Tela da aula:** `LessonPage.tsx` nova, dentro do `AcademyShell`, na rota antiga do leitor.
+  Título + cartão de abrir aula narrada (ou player de vídeo inline) + `MaterialsList` reusado direto.
+  `NarratedLessonCard` extraído da `CoursePage` pra componente compartilhado (`NarratedLessonCard.tsx`),
+  porque as duas telas precisavam dele — evita duplicar o card.
+- **Bloco 3 — A trilha (D-040/D-041):** `CoursePage.tsx` reescrita do zero — troca o grid de 3 colunas
+  (curso + sumário lateral, que no celular empilhava o sumário depois do conteúdo) por módulos em
+  acordeão com bolinha numerada por aula. Cor por estado: concluída (âmbar cheio + check), atual (anel
+  âmbar), não concluída (opacidade baixa, sempre clicável — navegação livre). `CourseSyllabus.tsx`
+  removido, ficou órfão com a troca.
+- **Verificação:** build limpo nos 3 blocos. Testado com a conta real de aluno (perfil Playwright salvo,
+  não a conta admin) no curso Profissional 360 — dados reais (40 aulas, progresso real), print 390px
+  revisado a olho (D-039), caminho completo testado ponta a ponta: trilha → clique numa bolinha não
+  concluída → tela da aula → botão → leitor em `/ler`. Zero erros de console em qualquer etapa.
+- **Publicado:** Blocos 2 e 3 em `805103d`, em cima do Bloco 1 (`599836a`). `main` no ar.
+- **Pendência:** confirmação em aparelho real pelo Felipe — a Vercel deste projeto bloqueia verificação
+  automatizada headless (Vercel Security Checkpoint, já registrado na sessão anterior e na skill
+  `rv-academy`), então a prova final de que está no ar como esperado depende dele abrir no celular.
+- **Próximo passo:** nenhum bloco do PRD-009 ficou pendente. Retomar os Blocos 5-7 do PRD-008 (popup de
+  seleção de texto, Media Session + PWA, verificação final) quando o Felipe confirmar o PRD-009.
 
 ## Documentos relacionados
 - [[ROADMAP]]

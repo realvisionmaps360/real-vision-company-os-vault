@@ -2,13 +2,13 @@
 id: PRD-009-trilha-gamificada
 title: PRD-009 — Trilha Gamificada do Curso + Tela por Aula
 type: prd
-status: especificado, não iniciado
+status: código pronto (Blocos 1-3) — aguardando confirmação do Felipe em aparelho real
 project: real-vision-academy
 phase: fase-9
 owner: master-visionair
 created: 2026-08-10
-updated: 2026-08-10
-progress: "Escopo e decisões fechados com o Felipe em 10/08/2026. Nenhuma linha de código. Executar DEPOIS da Fase B do PRD-008."
+updated: 2026-08-11
+progress: "Blocos 1-3 codados, build limpo, testados com conta real de aluno (dados reais, print 390px) e publicados em main (599836a, 805103d). Bloco 4 (verificação final) aguarda confirmação do Felipe em aparelho — a Vercel bloqueia verificação headless automatizada partindo deste ambiente. Ver [[TIMELINE]] 2026-08-11."
 depends_on:
   - PRD-008-leitor-narrado-design
 related:
@@ -121,12 +121,12 @@ Academy — isso é Fase B do [[PRD-008-leitor-narrado-design]].
 
 ## Blocos de execução
 
-| # | Bloco | Depende de |
-|---|---|---|
-| 1 | Rotas: leitor vai pra `/ler`, tela da aula nasce no endereço antigo | — |
-| 2 | Tela da aula: título + materiais em acordeão + botão de ouvir | Bloco 1 · Fase B do PRD-008 |
-| 3 | A trilha: módulos em acordeão, bolinhas por aula, estados de cor | Bloco 2 |
-| 4 | Verificação final e publicação | todos |
+| # | Bloco | Depende de | Status |
+|---|---|---|---|
+| 1 | Rotas: leitor vai pra `/ler`, tela da aula nasce no endereço antigo | — | ✅ publicado (`599836a`) |
+| 2 | Tela da aula: título + materiais em acordeão + botão de ouvir | Bloco 1 · Fase B do PRD-008 | ✅ publicado (`805103d`) |
+| 3 | A trilha: módulos em acordeão, bolinhas por aula, estados de cor | Bloco 2 | ✅ publicado (`805103d`) |
+| 4 | Verificação final e publicação | todos | ⏳ aguardando confirmação do Felipe em aparelho real |
 
 ## Documentos relacionados
 - [[PRD-008-leitor-narrado-design]] · [[DECISIONS]] · [[ROADMAP]] · [[CONTEXT]] · [[TIMELINE]]
