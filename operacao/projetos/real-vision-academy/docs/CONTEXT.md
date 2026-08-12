@@ -37,7 +37,7 @@ commits, **nada pushado, nada mergeado no `main`**).
 | 2 — painéis (lista, configurações, materiais) + pesquisa interna | ✅ **verificado ponta a ponta** (07/08/2026). Commit `811d18c` |
 | 3 — marcadores por frase | ✅ **verificado ponta a ponta** (07/08/2026). Commit `5cec0d7` |
 | 4 — modo imersivo do celular | ✅ código verificado (07/08/2026). Commit `d9fbf01`. **Falta o Felipe conferir num celular de verdade** |
-| **5 — popup de seleção de texto** | ⏳ **próximo** |
+| **5 — popup de seleção de texto** | ✅ no ar e testado em aparelho real, 12/08/2026. Ver [[TIMELINE]] e D-051 a D-055 em [[DECISIONS]] |
 | 6 e 7 | não iniciados |
 
 ### Bloco 3 — o que ficou pronto (07/08/2026)

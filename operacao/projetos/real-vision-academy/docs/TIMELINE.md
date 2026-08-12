@@ -1084,6 +1084,69 @@ Depois, Blocos 5 (popup de seleção de texto), 6 (Media Session + PWA) e 7 (ver
   ver assinatura completa no plano) + ligar `highlightsByFrag` no `ReadingArea` dentro do
   `NarratedLessonPage.tsx`. Depois, 5.5 a 5.8 conforme o plano.
 
+## 2026-08-12 — Bloco 5 do PRD-008 concluído: passos 5.4 a 5.8, testado em aparelho, publicado
+
+- **Objetivo:** retomar do passo 5.4 (pendente da sessão anterior) e fechar o Bloco 5 inteiro — grifo por
+  trecho de texto, com teste do Felipe em aparelho real antes de considerar fechado (D-039).
+- **Passo 5.4 — `useLessonHighlights.ts`:** hook espelhando `useLessonBookmarks.ts` (mesmo padrão de
+  `queryKey` com `user.id`, KI-22/27), com `byFrag` memoizado ligado no `ReadingArea`. Prova em SQL Editor
+  (KI-29): dois grifos de cores diferentes na mesma frase, offsets batendo por construção (`substr` tirado
+  do próprio texto do banco). Print 390px revisado.
+- **Passo 5.5 — popup de seleção:** `readerSelection.ts` (leitura de `Range`/`Selection` por offset GLOBAL
+  do `<p>`, não por nó — importa a partir do segundo grifo, quando a frase já tem `<span>`) +
+  `SelectionPopup.tsx` + `selectionchange` com debounce de 400ms e supressão de 900ms pós-duplo-toque
+  (D-052). 14/14 mobile e desktop no harness do passo.
+- **Passo 5.6 — cores do grifo e toque no grifo:** popup unificado num estado só (`selecao` com modo
+  `acoes`/`cores`, ou `grifo`) em vez de dois booleanos — os dois nunca coexistem. Grifar abre o segundo
+  popup de 4 cores em vez de aplicar direto; tocar num grifo já feito abre as mesmas 4 cores + lixeira
+  (conflito 3, D-034 continua ganhando). 21/21 mobile e desktop, incluindo persistência e limpeza.
+- **Passo 5.7 — arestas:** rolar fecha o popup e `Escape` fecha, com janela de graça de 250ms. Aqui também
+  entrou o primeiro ataque ao **risco visual nº 1** do plano (grifo âmbar sumindo na frase ativa) — ver
+  D-054 abaixo, que acabou virando parte do trabalho de correção pós-teste.
+- **Publicado em 4 commits** (`ea611ec`, `c19e40f`, `739b788`, `599d512`) antes do teste em aparelho.
+
+### Teste do Felipe em aparelho real — 2 bugs achados, os 2 corrigidos na mesma sessão
+
+Nenhum dos dois apareceu no Playwright, confirmando de novo a regra da skill `rv-academy`: robô prova que
+não quebrou, não prova que está bom.
+
+1. **Menu nativo do Android sobrepondo o popup.** A barra "Copiar / Compartilhar / Selecionar tudo" do
+   sistema nasce exatamente sobre a seleção e é desenhada acima de qualquer camada da página — nenhum
+   z-index resolve. Opção A aprovada pelo Felipe: o popup deixou de flutuar e virou uma **barra fixa** logo
+   acima do player (D-053). Simplificou o componente (sumiu o `useLayoutEffect` de medição e o clamp de
+   borda) e resolveu de brinde o alcance do polegar e o risco de nascer numa borda ruim. "Rolar fecha o
+   popup" foi removido — não fazia mais sentido pra um popup que não desalinha.
+2. **Painel "Marcadores" não mostrava os grifos.** O painel só tinha sido ligado a `lesson_bookmarks`
+   (Bloco 3) desde que foi criado — ninguém tinha ligado ele a `lesson_highlights`. `HighlightsList.tsx`
+   novo, mesmo visual do `BookmarksPanel`, seções separadas só quando os dois tipos coexistem (D-055).
+   Corrigido usando exatamente os grifos reais que o Felipe tinha acabado de fazer no celular — nenhum dado
+   dele foi apagado no processo (a suíte automatizada aprendeu a mexer só no que ela mesma cria, nunca em
+   dado de conta real).
+
+Achado à parte, sem bug: os dois grifos de **semente** que a sessão anterior inseriu via SQL pra provar o
+passo 5.4 pareciam "cortados no meio da palavra" no celular — não eram. Eram posições de caractere
+escolhidas à mão (20 a 33) pra ter duas cores na mesma frase, não uma seleção de palavra. Removidos pela
+própria interface depois do susto.
+
+### Verificação final
+
+`tests/verify-bloco5.mjs` criado no padrão dos outros blocos — cobre os 5 conflitos de gesto do plano
+original, o modo cores, o toque no grifo, a barra fixa, o painel e a regressão pontual de D-033/034/035.
+**36/37 mobile e 36/37 desktop.** A única falha em ambos é honesta, não defeito: esta aula não tem nenhuma
+frase sem áudio, então o caminho do conflito 4 (popup de 2 ícones) nunca pôde ser exercitado por robô — só
+por olho, se o Felipe testar numa aula que tenha uma frase assim. Blocos 1-4 seguem com o baseline de
+sempre (23/1, 46/1, 16/1, 26/1 — a única falha nos quatro é o 404 conhecido da fonte Inter do Google,
+externo ao código).
+
+**Publicado:** correções dos 2 bugs em `af1b593` (barra fixa) e `d6ce743` (painel), em cima dos 4 commits
+do bloco. `main` no ar, Vercel confirmada pelo Felipe em aparelho real.
+
+Bloco 5 do PRD-008 fecha aqui — tabela de blocos atualizada em [[PRD-008-leitor-narrado-design]], decisões
+D-051 a D-055 em [[DECISIONS]].
+
+- **Próximo passo:** Bloco 6 (Media Session + `manifest.json` PWA) e Bloco 7 (verificação final) do
+  [[PRD-008-leitor-narrado-design]] — nenhum dos dois iniciado.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]

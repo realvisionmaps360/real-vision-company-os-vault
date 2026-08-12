@@ -7,8 +7,8 @@ project: real-vision-academy
 phase: fase-8
 owner: master-visionair
 created: 2026-08-04
-updated: 2026-08-11
-progress: "Blocos 0 a 4, Fase A/A-2, Fase B e Fase C TODAS no ar e APROVADAS pelo Felipe em aparelho real (10/08) · PRD-009 (trilha) fechado e aprovado em aparelho real (11/08) · Bloco 5 ESPECIFICADO em 11/08, plano em PRD-008-bloco5-plano-execucao + SQL em PRD-008-bloco5-grifos, zero código escrito — próximo passo é o Felipe rodar o SQL · depois Blocos 6 e 7 · detalhe em CONTEXT"
+updated: 2026-08-12
+progress: "Blocos 0 a 5, Fase A/A-2, Fase B e Fase C TODAS no ar e APROVADAS pelo Felipe em aparelho real · PRD-009 (trilha) fechado e aprovado em aparelho real (11/08) · Bloco 5 (popup de seleção + grifos por trecho) EXECUTADO E TESTADO EM APARELHO em 12/08 — 2 bugs achados e corrigidos na mesma sessão (menu do Android sobrepondo o popup → virou barra fixa; painel de marcadores não listava os grifos → passou a listar). verify-bloco5.mjs criado, 36/37 mobile e desktop · próximo: Blocos 6 (Media Session + PWA) e 7 (verificação final) · detalhe em CONTEXT"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -73,7 +73,7 @@ seguinte começar.
 | A-2 | Gesto virou interruptor + pilha do rodapé | ✅ no ar (`19a886d`) · aprovado |
 | B | Materiais em acordeão · cartão da aula narrada · nav sem rolagem horizontal | ✅ no ar (`c2198b5`) · aprovado |
 | C | Nav com Cursos/Materiais · duplo clique na aula · cartão redesenhado · materiais do player em acordeão · painel sem navegar-por-frase + volume arrastável + popup de cor · frase não esconde atrás do menu · título em letreiro | ✅ no ar (`f4dca32`) · **aprovado pelo Felipe em aparelho real, 10/08/2026** |
-| 5 | Popup de seleção de texto | **em execução** — SQL rodado, passos 5.1-5.3 concluídos e verificados (plano em [[PRD-008-bloco5-plano-execucao]]). Falta 5.4 a 5.8 |
+| 5 | Popup de seleção de texto | ✅ no ar · 36/37 mobile, 36/37 desktop (`verify-bloco5.mjs`) · **testado pelo Felipe em aparelho real, 12/08/2026** — achou 2 bugs (menu do Android sobrepondo, painel sem os grifos), os dois corrigidos e republicados na mesma sessão. Plano em [[PRD-008-bloco5-plano-execucao]] |
 | 6 | Media Session + `manifest.json` | Blocos 1-5 |
 | 7 | Verificação final e publicação | todos |
 

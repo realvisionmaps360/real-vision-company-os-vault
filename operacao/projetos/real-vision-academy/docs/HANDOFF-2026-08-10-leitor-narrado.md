@@ -5,13 +5,14 @@ type: handoff
 project: real-vision-academy
 created: 2026-08-10
 updated: 2026-08-10
-status: pronto para a próxima sessão
+status: "executado — Fase B codada na sessão seguinte, ver [[HANDOFF-2026-08-10-fase-b-teste]]"
 related:
   - PRD-008-leitor-narrado-design
   - PRD-009-trilha-gamificada
   - DECISIONS
   - TIMELINE
   - CONTEXT
+  - HANDOFF-2026-08-10-fase-b-teste
 ---
 
 # Handoff — Leitor Narrado da Academy

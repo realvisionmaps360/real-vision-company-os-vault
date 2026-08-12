@@ -89,6 +89,17 @@ Conta de teste: `smarthomefg@gmail.com`, matriculada pelo admin `realvisionmaps3
 - **`git fetch` antes de `git status`** — `status` sozinho usa cache e já enganou aqui.
 - **Escrita no banco nunca por MCP ou Management API** (KI-29). SQL vai pro SQL Editor, com o Felipe.
 - **Hook novo nasce com `user.id` no `queryKey`** (KI-22/KI-27), sem exceção.
+- **A Vercel deste projeto bloqueia checagem automática de deploy.** `curl` puro e Playwright headless
+  partindo deste ambiente caem num "Vercel Security Checkpoint" (HTTP 403, header
+  `x-vercel-mitigated: challenge`) — não é falha de deploy nem bug de código, é proteção contra bot que
+  não distingue este ambiente de um ataque de verdade. **Não adianta trocar User-Agent, usar `channel:
+  "chrome"` real, nem esperar o desafio "resolver sozinho"** — testado em duas rodadas (Fase B e Fase C,
+  10/08/2026), nenhuma passou. Depois de publicar (`git push origin main`), a confirmação de que o pacote
+  novo está no ar só vem do Felipe abrindo no celular — pedir isso direto em vez de insistir em curl/diag.
+- **Materiais dentro do leitor (`MaterialsPanel.tsx`) e fora (`MaterialsList.tsx`) usam o mesmo
+  `Accordion`, mas o título do item não pode ter `truncate` (nowrap+ellipsis) — o `AccordionTrigger` do
+  Radix não encolhe direito com isso nesse contexto e o texto vaza ~90px pra fora da tela. Deixar o título
+  quebrar linha, sem `truncate`, como o `MaterialsList.tsx` já fazia.
 
 ## O leitor de aula narrada — o que está aprovado
 
@@ -105,6 +116,14 @@ Rodapé em três camadas, com a barrinha de progresso **sempre** na tela e as ou
 (D-036). Barrinha com fundo sólido (D-037). Barra com `−15 −5 [play] +5 +15` (D-038). Geometria derivada
 de `STRIP_H`, exportado por `ImmersiveStrip.tsx` — qualquer camada nova de rodapé parte dessa constante.
 
+Painel expandido (10/08/2026, Fase C — aprovado): **sem** linha de navegar-por-frase (D-046, o duplo
+toque na frase já cobre isso — não trazer de volta sem pedido explícito). Volume arrasta com o dedo, além
+dos botões (D-047). "Marcar frase" sem marcador ainda abre popup com as 4 `BOOKMARK_COLORS` em vez de
+marcar direto na cor padrão (D-048). Com o painel aberto, a frase ativa centraliza no espaço livre ACIMA
+dele, não na tela inteira — `useNarrationAutoScroll` lê a altura real via `data-rv-expanded-panel` (D-049).
+Título que não cabe (cabeçalho mobile e nome da aula no rodapé fixo) faz letreiro: parado 5s → desliza →
+parado 5s → repete, componente `MarqueeText.tsx` (D-050).
+
 ## Padrão de trabalho por fase
 
 O projeto anda em **blocos**, um por vez, cada um fechando com build limpo, Playwright verde, print
@@ -119,8 +138,11 @@ revisado e **aval do Felipe** antes do seguinte começar. Ao terminar uma fase:
 ## Documentos vivos
 
 - `PRD-007-curso-narrado-sincronizado` — o produto original e o pipeline de gravação
-- `PRD-008-leitor-narrado-design` — o leitor; Blocos 0-4 + Fases A e A-2 no ar, **Fase B é o próximo**
-- `PRD-009-trilha-gamificada` — trilha estilo Duolingo + tela por aula; especificado, zero código
+- `PRD-008-leitor-narrado-design` — o leitor; Blocos 0-5, Fases A, A-2, B e C **todas no ar e aprovadas**
+  em aparelho real (10/08 e 12/08/2026). Bloco 5 (grifo por trecho de texto) fechou em 12/08. Faltam:
+  Bloco 6 (Media Session + PWA), Bloco 7 (verificação final) — nenhum iniciado.
+- `PRD-009-trilha-gamificada` — trilha estilo Duolingo + tela por aula; concluída e aprovada em aparelho
+  real, 11/08/2026.
 
 ## Pré-requisito de fora do código
 

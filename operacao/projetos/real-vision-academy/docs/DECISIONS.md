@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-08-07
+updated: 2026-08-10
 related:
   - ARCHITECTURE
   - MASTER_PRD
@@ -511,6 +511,168 @@ related:
 - **Justificativa:** pedido do Felipe. Um prompt escancarado empurra tudo pra baixo e esconde o resto.
 - **Impacto:** `openFile` (com a URL assinada do bucket privado `course-materials`) não muda — só deixa
   de ser disparado pelo clique no card.
+
+## D-044 — Sumário sobe pra antes do conteúdo no celular, cartão perde altura fixa
+- **Data:** 2026-08-10
+- **Contexto:** `CourseSyllabus` e o bloco de conteúdo (cartão + título + materiais) eram os dois únicos
+  itens do grid da `CoursePage`. No celular o grid empilha em ordem de DOM, e o sumário — que deveria
+  ajudar a navegar entre aulas — ficava depois de tudo, inclusive dos materiais.
+- **Decisão:** `order-1`/`order-2` no Tailwind trocam a ordem visual no celular (sumário primeiro, depois
+  cartão + título + materiais), sem tocar na ordem do DOM nem no grid de 3 colunas do desktop — o `order`
+  do desktop reaplica a ordem original. `NarratedLessonCard` perdeu o `aspect-video` fixo (o conteúdo não
+  cabia na altura forçada e espremia o ícone de 48px); virou altura natural com padding.
+- **Justificativa:** o PRD cogitava dividir o bloco de conteúdo em duas partes (cartão / título+materiais)
+  pra intercalar o sumário no meio. Descartado: quebra o grid de 3 colunas do desktop, que hoje depende do
+  bloco de conteúdo ser um item único ocupando 2 colunas ao lado do sumário — três itens soltos forçariam
+  o auto-placement do CSS Grid a abrir uma segunda linha e deixar um vão embaixo do cartão. Sumário antes
+  de tudo é a correção mínima que resolve o problema descrito (estava enterrado) sem esse risco.
+- **Impacto:** escopo contido de propósito — o [[PRD-009-trilha-gamificada]] troca esta tela em seguida.
+
+## D-045 — Nav mobile da Academy vira grade, não barra inferior fixa
+- **Data:** 2026-08-10
+- **Contexto:** os 5 chips (Início, Aprender, Comunidade, Prompts, Conta) com `overflow-x-auto` não cabiam
+  em 390px — rolagem horizontal sem indicação visual, o Felipe via o último chip cortado na borda direita
+  da tela ("container vazando à direita").
+- **Decisão:** `grid grid-cols-3` — os 5 chips quebram em duas linhas (3 + 2), sem rolagem.
+- **Justificativa:** o PRD dava a opção de virar barra inferior fixa estilo app. Descartada por ora: entra
+  no mesmo território vertical da pilha de rodapé do leitor narrado (D-036/D-037), exige folga de área
+  seguro de iOS e padding extra no `main` pra nada ficar escondido atrás dela — mudança de escopo maior
+  que o "sem rolagem horizontal" pedido. Grade resolve o sintoma relatado com uma troca de classe.
+- **Impacto:** se a Academy ganhar uma sexta entrada de nav, reavaliar — grid-cols-3 com 6 itens forma
+  duas linhas de 3, o que também funciona; a decisão que precisaria de revisão é o número da coluna, não
+  a abordagem.
+
+## D-046 — Linha "Navegar por frase" sai do painel expandido (desfaz D-041)
+- **Data:** 2026-08-10
+- **Contexto:** o Felipe testou a Fase B em aparelho real e pediu pra tirar a linha "Anterior/Próxima"
+  do painel do leitor. D-041 (mais cedo no mesmo dia) tinha posto ela ali de propósito.
+- **Decisão:** removida. O duplo toque na frase (D-034/D-040) já cobre pular pra outra frase — a linha
+  virou redundante depois dessa mudança.
+- **Justificativa:** pedido direto do Felipe, confirmado explicitamente antes de mexer (a mudança desfazia
+  uma decisão do mesmo dia e quebrava teste de regressão).
+- **Impacto:** `controls.stepSentence` (o hook por trás dos botões) continua existindo só pro atalho de
+  teclado (seta pra cima/baixo) — sem UI própria no painel mobile. `tests/verify-bloco1.mjs` e
+  `tests/verify-bloco4.mjs` atualizados pra checar a ausência da linha em vez da presença.
+
+## D-047 — Volume ganha arraste, além dos botões
+- **Data:** 2026-08-10
+- **Decisão:** a barrinha de volume no painel expandido vira um slider de verdade — arrasta com o dedo,
+  clica em qualquer ponto pra pular o volume pra lá. Os botões `−`/`+` continuam existindo.
+- **Justificativa:** pedido do Felipe — "seria interessante também se... eu pudesse pegar o dedo e
+  arrastar a barrinha".
+
+## D-048 — Popup de cor no botão "Marcar frase"
+- **Data:** 2026-08-10
+- **Contexto:** `useLessonBookmarks.setBookmark` já aceitava `color` opcional desde o Bloco 3, com um
+  comentário no próprio hook prevendo esse popup ("Bloco 5"). Sem ele, toda frase nascia marcada na cor
+  padrão (âmbar), e as outras três só ficavam alcançáveis recolorindo depois no painel de marcadores.
+- **Decisão:** clicar em "Marcar frase" sem marcador ainda abre um popup com as 4 cores
+  (`BOOKMARK_COLORS`) em vez de marcar direto. Já marcada, o clique continua removendo — trocar de cor
+  depois do fato continua sendo papel do painel de marcadores, que já faz isso.
+- **Justificativa:** pedido do Felipe — "seria legal se aparecesse marcar frase quando você clicasse, e
+  aparecesse um popupzinho com todas as cores diferentes que tem de marcação".
+
+## D-049 — Frase ativa centraliza no espaço visível, não na tela inteira
+- **Data:** 2026-08-10
+- **Contexto:** com o painel expandido aberto, o auto-scroll (`useNarrationAutoScroll`) continuava
+  mirando a frase ativa no centro da TELA INTEIRA — que, com o painel aberto, é ocupado pelos botões de
+  velocidade/volume, não por texto legível. O Felipe mandou print mostrando o problema.
+- **Decisão:** o hook mede a altura real do painel expandido via `data-rv-expanded-panel` (tag nova em
+  `BottomPlayer.tsx`) e centraliza a frase no espaço que sobra ACIMA dele. Sem o painel aberto, o
+  comportamento de sempre (centro da tela inteira) continua igual.
+- **Justificativa:** pedido do Felipe, sequenciado depois do D-046 de propósito — remover a linha de
+  navegar-por-frase encolhe o painel, então a conta da altura ocupada fica mais simples de acertar depois.
+- **Impacto:** só afeta o auto-scroll contínuo durante a narração. Os outros `scrollIntoView` do arquivo
+  (ir ao marcador, ir ao resultado de busca) não foram tocados — acontecem em momentos onde o painel
+  expandido tende a estar fechado.
+
+## D-050 — Título "letreiro": parado 5s, desliza, parado 5s, repete
+- **Data:** 2026-08-10
+- **Decisão:** título que não cabe no espaço fica parado 5 segundos, desliza uma vez até revelar o fim,
+  fica mais 5 segundos parado, volta pro início e repete. Aplicado no título mobile do cabeçalho
+  (`ReaderHeader`) e no nome da aula do rodapé fixo (`ImmersiveStrip`). Título que cabe inteiro nunca
+  anima — sem efeito à toa em título curto.
+- **Justificativa:** pedido do Felipe, pra deixar claro pro aluno no celular que o texto cortado tem mais
+  coisa, sem precisar de um toque extra pra descobrir.
+- **Impacto:** componente novo e reutilizável, `MarqueeText.tsx`. Só entrou nesses dois lugares — o
+  título do cabeçalho desktop (que já não corta, tem mais espaço) não foi tocado.
+
+## D-051 — Grifo e marcador convivem como sistemas separados
+- **Data:** 2026-08-11
+- **Contexto:** PRD-008 Bloco 5 — popup de seleção de texto. `lesson_bookmarks` (Bloco 3) trava em uma cor
+  por frase (`unique (user_id, lesson_id, frag_index)`), e o pedido novo do Felipe é grifar **trechos**,
+  com vários por frase.
+- **Decisão:** tabela nova, `lesson_highlights`, sem migrar nada de `lesson_bookmarks`. O botão "Marcar
+  frase" do painel do player (D-048) continua existindo do jeito que está.
+- **Justificativa:** são dois conceitos diferentes na cabeça do aluno — marcador é "guardei esta frase pra
+  achar depois", grifo é "destaquei esta parte específica". Forçar os dois na mesma tabela exigiria
+  redesenhar a chave única e arriscaria o que já estava aprovado em aparelho.
+- **Impacto:** os dois pintam camadas diferentes do DOM (marcador no `<p>`, grifo no `<span>` dentro dele) —
+  nenhuma regra de precedência de cor existente mudou. O painel "Marcadores" (ícone do cabeçalho) passou a
+  listar as duas coisas, em seções separadas quando ambas existem (ver D-055).
+
+## D-052 — Popup nasce do `selectionchange`, com debounce e janela de supressão
+- **Data:** 2026-08-11
+- **Contexto:** o popup de ações precisa abrir sobre a seleção **final**, não a provisória. No celular a
+  seleção nasce de um long-press e é ajustada arrastando as alças, bem depois do `touchend`.
+- **Decisão:** ouvir `selectionchange` (não `mouseup`/`touchend`), com debounce de 400ms que reinicia a
+  cada ajuste. Depois de um duplo toque (D-034, pula o áudio), uma janela de supressão de 900ms impede o
+  popup de abrir mesmo com a palavra selecionada e estável — e limpa a seleção residual.
+- **Justificativa:** o duplo toque do navegador seleciona a palavra como efeito colateral nativo. Sem a
+  janela de supressão, todo duplo toque (gesto já aprovado, D-034) abriria o popup de seleção por engano.
+  O debounce sozinho não bastava: a palavra fica estável depois do duplo toque, então o timer dispararia
+  normalmente.
+- **Impacto:** `SUPRESSAO_MS = 900` é a única constante do bloco marcada como candidata a ajuste em
+  aparelho lento. A checagem da janela fica no momento de ABRIR (t+400ms), não no agendar — no desktop o
+  `selectionchange` chega antes do `dblclick` do React.
+
+## D-053 — Barra de ações fixa acima do player, não flutuante sobre a seleção
+- **Data:** 2026-08-12
+- **Contexto:** a primeira versão ancorava o popup no retângulo da seleção (`getBoundingClientRect`), como
+  o plano original previa. Testado pelo Felipe em aparelho real: a barra nativa do Android
+  ("Copiar · Compartilhar · Selecionar tudo") nasce exatamente ali e é desenhada pelo **sistema**, acima de
+  qualquer camada da página — nenhum z-index resolve, e não deveria: se resolvesse, qualquer site
+  conseguiria esconder o menu do usuário.
+- **Decisão:** a barra de ações do grifo virou uma faixa **fixa**, sempre no mesmo lugar, logo acima do
+  player (ancorada em `--rv-bottom-inset`, a mesma variável que a barra do rodapé já usa pra se
+  autodimensionar).
+- **Justificativa:** parar de disputar espaço com o menu nativo do Android é a única solução que não
+  depende de truque de CSS. De brinde, a barra fica sempre no alcance do polegar e nunca nasce numa borda
+  ruim da tela — os dois eram riscos abertos do plano original (item 3 da checklist de conferência visual).
+- **Impacto:** `SelectionPopup.tsx` perdeu o `useLayoutEffect` de medição e o clamp de borda — não precisa
+  mais calcular posição. "Rolar fecha o popup" (regra do plano original, pra popup flutuante) deixou de
+  fazer sentido e foi removida: a barra fixa não desalinha ao rolar, e fechar só tiraria função de quem
+  rola pra reler o contexto. `Escape` continua fechando.
+
+## D-054 — Filete de contorno no grifo, só quando a frase está ativa
+- **Data:** 2026-08-12
+- **Contexto:** risco visual nº 1 do plano do Bloco 5 (item da lista "o que só o olho do Felipe pega",
+  D-039) — grifo âmbar sobre a frase que está tocando, que já tem fundo âmbar (`--rd-hi`).
+- **Decisão:** confirmado em print nos 3 temas do leitor: no tema **escuro** (o padrão) o grifo âmbar
+  quase desaparece dentro do fundo dourado da frase ativa; no claro e no sépia lê bem. Corrigido com
+  `box-shadow: inset 0 0 0 1px <cor do grifo>`, aplicado **só** quando `isActive` é verdadeiro.
+- **Justificativa:** aplicar o filete em todo grifo (não só na frase ativa) deixava a marcação com cara de
+  caixinha em vez de marca-texto — o contorno só existe pra resolver o conflito de contraste específico.
+  `inset` foi escolhido sobre borda de verdade porque não ocupa espaço: borda deslocaria a quebra de linha
+  da frase, que é o bug mais provável do bloco (documentado no plano original).
+- **Impacto:** `ReadingArea.tsx`, dentro do `SentenceParagraph` — `boxShadow: isActive ? inset... : undefined`
+  no `<span data-hl>`.
+
+## D-055 — Painel "Marcadores" também lista os grifos, em seção separada
+- **Data:** 2026-08-12
+- **Contexto:** achado do Felipe testando em aparelho real: ele grifou trechos e o painel do ícone
+  "Marcadores" continuava mostrando só os marcadores de frase (Bloco 3) — nunca tinha sido ligado a
+  `lesson_highlights`.
+- **Decisão:** o mesmo painel passa a listar as duas coisas. `HighlightsList.tsx`, componente novo com o
+  mesmo visual de cartão do `BookmarksPanel` (cor, trocar cor, "Ir ao trecho", lixeira), mas separado
+  porque os dados são diferentes — o grifo já grava o `quote` exato do trecho, não precisa olhar o texto
+  da frase inteira. Cabeçalho de seção ("Frases marcadas" / "Trechos grifados") só aparece quando os dois
+  tipos coexistem; estado vazio combinado quando nenhum dos dois tem conteúdo.
+- **Justificativa:** manter D-051 (sistemas separados de dados) sem esconder do aluno onde as duas coisas
+  ficam guardadas — um painel só, duas listas.
+- **Impacto:** duas asserções do `verify-bloco3.mjs` presumiam que "sem marcador" era sinônimo de "painel
+  vazio" — premissa que morreu com os grifos coexistindo. Trocadas para checar ausência do cartão de
+  marcador especificamente (aria-label "Remover marcador"), não mais o texto de estado vazio.
 
 ## Documentos relacionados
 - [[ARCHITECTURE]]
