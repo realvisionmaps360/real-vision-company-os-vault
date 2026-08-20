@@ -5,6 +5,104 @@
 
 ---
 
+## 2026-08-17 — Fechamento total: prazo de 72h vencido, e-mail + tour + Lovable removidos de vez. Domínio irmão `.com` descoberto e zerado também.
+
+**Contexto:** o prazo de 72h dado a Dorival em 11/08 (mediante pagamento de R$500) pra migrar o e-mail pra outro provedor venceu em 14/08/2026 sem qualquer confirmação de migração registrada. Felipe decidiu fechar definitivamente, sem nova prorrogação.
+
+**Ações executadas em `brazilcomp.com.br` (confirmadas por Felipe, 17/08/2026, print do hPanel):**
+1. [x] MX `@` → `smtp.google.com` removido
+2. [x] TXT `@` → SPF Google Workspace removido
+3. [x] TXT `google._domainkey` → DKIM Google removido
+4. [x] TXT `@` → `google-site-verification=...` removido
+5. [x] ALIAS `tour` → `tour.brazilcomp.com.br.cdn.hstgr.net` removido
+6. [x] ALIAS `360` → `360.brazilcomp.com.br.cdn.hstgr.net` removido
+7. [x] TXT `_lovable` removido
+8. [x] TXT `_lovable.www` removido
+
+**Mantidos intencionalmente** (print pós-limpeza confirma só estes dois restantes): CNAME `track` → `snov-stream.com` (nunca identificado como serviço da Real Vision — sem base pra remover) e TXT `_dmarc` → `v=DMARC1; p=none` (política inofensiva sem o resto).
+
+**Descoberta nova nesta sessão:** existe um domínio irmão, `brazilcomp.com` (sem o `.br`), na mesma conta Hostinger — nunca antes documentado neste TIMELINE. Felipe vai resetar os registros dele também. Estado **antes** do reset, registrado aqui por segurança:
+
+| Tipo | Nome | Prioridade | Conteúdo | TTL |
+|---|---|---|---|---|
+| TXT | _lovable.www | 0 | `lovable_verify=80fc1a880fb3d025ae13fcf3d1cf265c57606a3d78c1843a3be8f87eb771471f` | 14400 |
+| A | www | 0 | `185.158.133.1` | 14400 |
+| TXT | _lovable | 0 | `lovable_verify=65f6d790704e775dd918d8a76486325764a21cecb5cc13ed76bd3bda4ad839e5` | 14400 |
+| TXT | _dmarc | 0 | `v=DMARC1; p=none` | 3600 |
+| TXT | @ | 0 | `v=spf1 include:_spf.google.com ~all` | 14400 |
+| MX | @ | 1 | `smtp.google.com` | 14400 |
+| A | @ | 0 | `185.158.133.1` | 14400 |
+
+Nota técnica: os registros A de `brazilcomp.com` apontam pro mesmo IP (`185.158.133.1`) que aparecia nos registros antigos de `brazilcomp.com.br` antes de 07/07/2026 — indício de que os dois domínios rodavam espelhados no mesmo período. Felipe vai usar "Redefinir registros DNS" no hPanel pra zerar esse domínio também.
+
+**Status: caso BrazilComp/Dorival ENCERRADO DEFINITIVAMENTE em 17/08/2026.** Sem site, sem e-mail, sem tour, sem domínio adicional ativo. Sem pendências abertas da Real Vision.
+
+**Próximo passo:** nenhum, salvo se Dorival retomar contato — nesse caso, consultar [[DOSSIE-JURIDICO-BRAZILCOMP-07-07-26]].
+
+---
+
+## 2026-08-11 — Desligamento definitivo: prazo de transição (07/08) vencido, site tirado do ar
+
+**Contexto:** o prazo de transição de 1 mês (site V1 reativado em 07/07, válido até 07/08/2026) venceu há 3 dias sem execução. Dorival mandou print do Lovable pedindo acesso de proprietário (workspace sem créditos) — respondido que o material completo já foi entregue em 11/07 e que o site vai ser desligado hoje.
+
+**Snapshot completo do DNS de `brazilcomp.com.br` ANTES da remoção (hPanel Hostinger, 11/08/2026):**
+
+| Tipo | Nome | Prioridade | Conteúdo | TTL |
+|---|---|---|---|---|
+| TXT | google._domainkey | 0 | `v=DKIM1; k=rsa; p=MIIBIjANBgkq...` (DKIM Google Workspace) | 14400 |
+| TXT | resend._domainkey | 0 | `p=MIGfMA0GCSqGSIb3DQEBAQUAA4GN...` (DKIM Resend) | 14400 |
+| TXT | _lovable.www | 0 | `lovable_verify=00b43d683bd4f77de5da425636deb936da361e04fa428138854abf32b036666b` | 14400 |
+| CNAME | www | 0 | `5e7ed87c13bdc163.vercel-dns-017.com` (aponta pro site na Vercel) | 14400 |
+| ALIAS | tour | 0 | `tour.brazilcomp.com.br.cdn.hstgr.net` (tour virtual 360°) | 300 |
+| CNAME | track | 0 | `snov-stream.com` | 14400 |
+| TXT | _lovable | 0 | `lovable_verify=f8f93c527e1f67af86b8b9e9365e8fc244ee4fb7a0eb7c07ae455137fcf2ad52` | 14400 |
+| TXT | send | 0 | `v=spf1 include:amazonses.com ~all` (SPF Resend/SES) | 14400 |
+| MX | send | 10 | `feedback-smtp.sa-east-1.amazonses.com` (bounce SES) | 14400 |
+| TXT | _dmarc | 0 | `v=DMARC1; p=none` | 3600 |
+| ALIAS | 360 | 0 | `360.brazilcomp.com.br.cdn.hstgr.net` (tour 360°) | 300 |
+| TXT | @ | 0 | `google-site-verification=w85gHGB9n9tkGCsQDquPZ-L-eRlozXVlFM3MGL7Gxso` | 14400 |
+| TXT | @ | 0 | `v=spf1 include:_spf.google.com ~all` (SPF Google Workspace) | 14400 |
+| MX | @ | 0 | `smtp.google.com` (e-mail Google Workspace do cliente) | 14400 |
+| **A** | **@** | 0 | **`216.198.79.1`** (aponta pro site na Vercel — REMOVIDO hoje) | 14400 |
+
+**Correção de escopo durante a sessão:** Felipe esclareceu que o gerenciamento de e-mail (antes feito por um terceiro, "Gilmar") também foi absorvido como serviço prestado pela Real Vision desde o início — não é uma conta pessoal separada do cliente. Isso reclassifica o Google Workspace (MX/SPF/DKIM/verificação) como escopo nosso também, não só o site.
+
+**Decisão tomada:** não oferecer prorrogação paga (Felipe cogitou +1 mês por R$600). Mantido o prazo já comunicado ao cliente hoje ("desligamento completo hoje à tarde"), para não contradizer o aviso enviado nem abrir uma terceira prorrogação (já houve duas: 26/06→07/07, depois até 07/08) — mantém consistente o padrão de prazos cumpridos que sustenta o dossiê jurídico.
+
+**Ações executadas hoje — TODAS CONFIRMADAS por Felipe:**
+1. [x] Projeto `brazilcomp_website` deletado na Vercel.
+2. [x] Registro **A `@` → 216.198.79.1** removido no Hostinger (site).
+3. [x] Registro **CNAME `www` → 5e7ed87c13bdc163.vercel-dns-017.com** removido no Hostinger (site).
+4. [x] Registro **MX `@` → smtp.google.com** removido (e-mail Google Workspace).
+5. [x] Registro **TXT `@` → SPF Google Workspace** removido.
+6. [x] Registro **TXT `google._domainkey`** (DKIM Google) removido.
+7. [x] Registro **TXT `@` → google-site-verification** removido.
+8. [x] Registro **TXT `resend._domainkey`** (DKIM Resend) removido.
+9. [x] Registro **TXT `send` → SPF Amazon SES** removido.
+10. [x] Registro **MX `send` → feedback-smtp.sa-east-1.amazonses.com** removido.
+
+**Total: 9 registros de DNS + 1 projeto Vercel removidos. Site e e-mail (@brazilcomp.com.br) inteiramente fora do ar a partir de hoje, 11/08/2026.**
+
+**Registros que permaneceram no ar (decisão pendente, não removidos hoje):** tour virtual (`tour` e `360`, ainda no CDN da Hostinger), `track` (Snov.io, não identificado como serviço da Real Vision), `_dmarc` (política, inofensiva sem o resto) e os TXT órfãos do Lovable (`_lovable`, `_lovable.www`).
+
+**Atualização (mesmo dia, período da manhã) — Dorival reage e pede reativação só do e-mail:**
+
+Às 08h05 Dorival percebeu a queda do e-mail e reagiu com forte apelo emocional/religioso via WhatsApp (mensagens de texto, recusou mandar áudio a pedido de Felipe), alegando prejuízo à empresa, oferecendo dinheiro extra, e confirmando por escrito que a gestão de e-mail (herdada do "Gilmar") era serviço da Real Vision. Disse não precisar mais do site, só do e-mail.
+
+**Acordo fechado:** reativar **somente o e-mail** (site permanece definitivamente fora do ar, Vercel não é restaurado), mediante pagamento antecipado de **R$500 via Pix** (confirmado pago) e prazo final de **72h (até quinta-feira, 14/08/2026)** para ele migrar o e-mail pra outro provedor com o técnico contratado. Comunicado como última prorrogação, sem novas extensões depois disso.
+
+**Registros de e-mail restaurados no Hostinger (confirmado por Felipe, 11/08/2026):**
+- [x] MX `@` → `smtp.google.com`
+- [x] TXT `@` → SPF Google Workspace
+- [x] TXT `google._domainkey` → DKIM Google
+- [x] TXT `@` → `google-site-verification`
+
+**Site permanece removido:** A `@` e CNAME `www` não foram restaurados — Vercel (`brazilcomp_website`) segue deletado.
+
+**Próximo passo:** cobrar o prazo de 72h (vence 14/08/2026) — se o e-mail não for migrado até lá, remover os 4 registros de novo, definitivamente. Decidir também sobre o tour virtual (`tour`/`360`, ainda ativo no CDN da Hostinger) e limpar os TXT órfãos do Lovable quando conveniente. Caso jurídico segue com o dossiê disponível caso Dorival conteste qualquer remoção.
+
+---
+
 ## 2026-07-11 (sessão 4) — Entrega final enviada. Caso encerrado.
 
 **Ações executadas:**

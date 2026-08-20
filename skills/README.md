@@ -101,6 +101,7 @@ Carregam antes de qualquer tarefa do negócio.
 | `rv-visionflow-handoff` | Retomar trabalho no VisionFlow após pausa |
 | `rv-novo-cliente` | Onboarding de cliente novo (pasta, docs) |
 | `rv-fim-sessao` | Fecha sessão — atualiza ficha/timeline do cliente |
+| `rv-pacote-ia-externa` | Empacota contexto em `TEMP/` pra levar ao ChatGPT |
 | `earth-game` | O jogo da Real Vision (RPG pixel art) |
 
 ## Base de Conhecimento (Obsidian)

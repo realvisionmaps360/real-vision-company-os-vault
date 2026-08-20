@@ -22,7 +22,7 @@ No fim da sessão eu **escrevo** de volta nela — assim a próxima sessão come
 | | `session-handoff` | `rv-visionflow-handoff` | Documentação permanente (esta skill) |
 |---|---|---|---|
 | **Pra quem** | Próximo Claude (depois de `/clear`), continuidade técnica no meio de uma tarefa | VisionFlow / Felipe | Company OS — memória permanente, reutilizável, pode virar conteúdo ou oferta futura |
-| **Saída** | Bilhete técnico no chat (nunca salva arquivo) | Texto pra colar em Observações do CRM | Arquivos `.md` gravados (TIMELINE, playbook, skill) |
+| **Saída** | Bilhete técnico no chat (sempre) + enviado direto pra sessão nomeada via `send_message`, se houver uma (nunca salva arquivo) | Texto pra colar em Observações do CRM | Arquivos `.md` gravados (TIMELINE, playbook, skill) |
 | **Conteúdo** | Planos, tarefas, arquivos mexidos, servidores, branches | ENTREGA, COMUNICACAO, TAREFA, STATUS, FINANCEIRO | O que foi feito/decidido + conhecimento reutilizável descoberto |
 | **Quando aparece** | Só se sobrou trabalho técnico pela metade antes de um `/clear` | Só sessão de cliente | Sempre, pra qualquer sessão dentro de RV ou do âmbito pessoal do Felipe |
 
@@ -88,8 +88,16 @@ Isso substitui, pra esse tipo de sessão, o que antes só virava bilhete efêmer
 6. Confirmar com o Felipe antes de gravar (mesma regra de aprovação do Passo 5).
 
 ### Passo 4 — SE a obra ficou pela metade: gerar o bilhete técnico (complementar, qualquer categoria)
-Quando há trabalho em aberto e Felipe vai dar `/clear`, produzir o bilhete no **formato exato** de `[[session-handoff]]`:
-chat-only, nunca salva arquivo, caminhos absolutos, seções: Where it started · Decisions locked + what shipped · Key files · Running state · Verification · Deferred + open questions · Pick up here.
+Quando há trabalho em aberto, produzir o bilhete no **formato exato** de `[[session-handoff]]`:
+caminhos absolutos, seções: Where it started · Decisions locked + what shipped · Key files · Running state · Verification · Deferred + open questions · Pick up here.
+
+**Sempre exibir o bilhete no chat primeiro.** É o registro de segurança — garante que a informação não se perde mesmo se o envio direto (abaixo) falhar ou a sessão de destino estiver ocupada/fechada.
+
+**Depois, decidir o destino** (adicionado 18/08/2026, ver [[CICLO-Sessao]]):
+- **Existe sessão de destino nomeada** (Felipe já renomeou a outra sessão, ou diz explicitamente pra qual sessão continuar) → rodar `mcp__ccd_session_mgmt__list_sessions` pra achar o `session_id` correspondente ao nome, e mandar o mesmo bilhete via `mcp__ccd_session_mgmt__send_message`. Nunca advinhar o alvo — se não estiver claro qual sessão é, perguntar ao Felipe antes de enviar. Avisar depois: `✅ Bilhete enviado pra sessão "<nome>".`
+- **Não há sessão de destino** (Felipe só vai dar `/clear` nesta mesma sessão, trocar de repositório inteiro, ou o projeto vai ficar pausado por dias) → só o bilhete no chat, como sempre. Felipe copia manualmente quando abrir uma sessão nova.
+
+Regra de decisão: mensagem direta é pra **continuidade de fluxo** (mesmo projeto, outra sessão já ativa). Arquivo/prompt manual continua sendo o certo pra **persistência absoluta** (limpeza real de histórico, troca de repositório, pausa longa).
 
 Isso soma à documentação permanente (Passos 1-3 ou 1b) — nunca a substitui.
 
@@ -118,7 +126,7 @@ O script:
 
 - Sessão que tocou o banco → seguir pré-voo de `[[rv-visionflow]]` (git status + git pull + MCP conectado).
 - Filtro de conteúdo do CRM → `[[rv-visionflow-handoff]]`.
-- Formato do bilhete técnico → `[[session-handoff]]` (continua existindo como componente efêmero — chat-only, nunca grava arquivo, mesmo comportamento de sempre).
+- Formato do bilhete técnico → `[[session-handoff]]` (continua existindo como componente efêmero — nunca grava arquivo; desde 18/08/2026 pode também ser enviado direto pra outra sessão nomeada via `send_message`, ver Passo 4).
 - Nunca inventar dados; idioma PT-BR com Felipe; revisar tom contra VOZ.md.
 - Filosofia Ponytail (simplicidade) aplica ao Passo 1b: nem toda sessão gera um playbook — só quando há conhecimento genuinamente reutilizável.
 - Ao final, mostrar **links markdown clicáveis** dos arquivos atualizados.
@@ -133,4 +141,4 @@ O script:
 
 ---
 
-*Skill criada em 29/06/2026 — maestro do ciclo de sessão. Ampliada em 12/07/2026 pra cobrir documentação permanente de projetos internos e assuntos pessoais, não só clientes. Ver [[CICLO-Sessao]].*
+*Skill criada em 29/06/2026 — maestro do ciclo de sessão. Ampliada em 12/07/2026 pra cobrir documentação permanente de projetos internos e assuntos pessoais, não só clientes. Ampliada em 18/08/2026 pra usar comunicação direta entre sessões (`send_message`) no bilhete técnico do Passo 4, quando há sessão de destino nomeada. Ver [[CICLO-Sessao]].*

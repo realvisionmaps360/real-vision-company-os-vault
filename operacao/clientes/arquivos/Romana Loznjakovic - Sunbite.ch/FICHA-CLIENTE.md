@@ -19,7 +19,9 @@ Romana Loznjakovic é co-fundadora da Real Vision e criadora da Sunbite.ch — f
 
 ## Serviços contratados
 
-- **Site Sunbite.ch** — em desenvolvimento
+- **Site Sunbite.ch** — no ar (landing page DE/EN, Vercel, repo `sunbite-site`)
+- **Presença digital integrada** — identidade visual, Google Meu Negócio, Instagram, SEO/GEO
+- **PDV próprio para celular** — offline-first, separa Bargeld de TWINT, interface PT/DE
 - **Vectorização de stickers** (via Leonardo, freelancer) — aguardando
 
 ## Entregas realizadas
@@ -27,14 +29,16 @@ Romana Loznjakovic é co-fundadora da Real Vision e criadora da Sunbite.ch — f
 - **29/05/2026** — Briefing do projeto criado em `operacao/projetos/BRIEFING-SUNBITE.md`
 - **29/05/2026** — Mensagem enviada ao Leonardo (vectorização de stickers); prazo ~1 mês
 - **29/06/2026** — Pasta canônica padronizada: `operacao/clientes/arquivos/Romana Loznjakovic - Sunbite.ch/`
+- **18/07/2026** — Abertura da operação em Aarau (CHF 479,70 no primeiro dia)
+- **19/08/2026** — Case publicado no portfólio da Real Vision: `realvisionmaps.com/portfolio/sunbite` (PT/EN/DE)
 - Docs de projeto: [[SUNBITE-PROJETO]] · [[SUNBITE-TIMELINE]]
 
 ## Próximos passos
 
-- [ ] Aguardar Romana chegar com a food bike (stickers)
+- [ ] Confirmar preço do Schlagrahm — arquitetura diz "grátis", site e PDV cobram CHF 0.50 (ver [[SUNBITE-TIMELINE]])
 - [ ] Aguardar posição do Leonardo sobre vectorização
-- [ ] Iniciar site após logo + fotos disponíveis
-- [ ] Skill `sunbite-site` ativa para quando o desenvolvimento começar
+- [ ] Decidir se a seção "Sobre Romana" volta ao site (oculta desde 28/07/2026)
+- [ ] Skill `sunbite-site` ativa para novas sessões de desenvolvimento
 
 ## Observações
 

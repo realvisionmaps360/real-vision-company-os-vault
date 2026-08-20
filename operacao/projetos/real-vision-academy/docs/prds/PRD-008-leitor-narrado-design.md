@@ -8,7 +8,7 @@ phase: fase-8
 owner: master-visionair
 created: 2026-08-04
 updated: 2026-08-12
-progress: "Blocos 0 a 5, Fase A/A-2, Fase B e Fase C TODAS no ar e APROVADAS pelo Felipe em aparelho real · PRD-009 (trilha) fechado e aprovado em aparelho real (11/08) · Bloco 5 (popup de seleção + grifos por trecho) EXECUTADO E TESTADO EM APARELHO em 12/08 — 2 bugs achados e corrigidos na mesma sessão (menu do Android sobrepondo o popup → virou barra fixa; painel de marcadores não listava os grifos → passou a listar). verify-bloco5.mjs criado, 36/37 mobile e desktop · próximo: Blocos 6 (Media Session + PWA) e 7 (verificação final) · detalhe em CONTEXT"
+progress: "Blocos 0 a 6, Fase A/A-2, Fase B e Fase C TODAS no ar e APROVADAS pelo Felipe em aparelho real · PRD-009 (trilha) fechado e aprovado em aparelho real (11/08) · Bloco 5 (popup de seleção + grifos por trecho) EXECUTADO E TESTADO EM APARELHO em 12/08 — 2 bugs achados e corrigidos na mesma sessão (menu do Android sobrepondo o popup → virou barra fixa; painel de marcadores não listava os grifos → passou a listar). verify-bloco5.mjs criado, 36/37 mobile e desktop · Bloco 6 (Media Session + manifest.json PWA) EXECUTADO E TESTADO EM APARELHO em 12/08 — 2 bugs achados e corrigidos na mesma sessão (botões de skip só apareciam pra play/pause em skins tipo MIUI → duplicados em previoustrack/nexttrack; artwork da capa não carregava por MIME errado → deriva da extensão do cover_url). Capa real do curso Profissional 360 publicada (D-058) · Bloco 7 INICIADO em 12/08, INTERROMPIDO sem fechar — tentativa de bateria completa de regressão automatizada esbarrou em KI-38 (estado de aula concluída trava o harness) e achou KI-39 (blocoB1 sem investigar). Nenhum código mudou nesta tentativa, nada novo foi publicado. Blocos 1-5 e o núcleo de verify-aluno rodaram limpos quando isolados do problema de estado. Felipe decidiu pausar a automação e retomar em outra sessão · detalhe em CONTEXT e HANDOFF-2026-08-12-bloco7-verificacao-final"
 depends_on:
   - PRD-007-curso-narrado-sincronizado
   - PRD-007-arquitetura-leitor-narrado
@@ -74,8 +74,8 @@ seguinte começar.
 | B | Materiais em acordeão · cartão da aula narrada · nav sem rolagem horizontal | ✅ no ar (`c2198b5`) · aprovado |
 | C | Nav com Cursos/Materiais · duplo clique na aula · cartão redesenhado · materiais do player em acordeão · painel sem navegar-por-frase + volume arrastável + popup de cor · frase não esconde atrás do menu · título em letreiro | ✅ no ar (`f4dca32`) · **aprovado pelo Felipe em aparelho real, 10/08/2026** |
 | 5 | Popup de seleção de texto | ✅ no ar · 36/37 mobile, 36/37 desktop (`verify-bloco5.mjs`) · **testado pelo Felipe em aparelho real, 12/08/2026** — achou 2 bugs (menu do Android sobrepondo, painel sem os grifos), os dois corrigidos e republicados na mesma sessão. Plano em [[PRD-008-bloco5-plano-execucao]] |
-| 6 | Media Session + `manifest.json` | Blocos 1-5 |
-| 7 | Verificação final e publicação | todos |
+| 6 | Media Session + `manifest.json` | ✅ no ar (`5939620`) · **testado pelo Felipe em aparelho real, 12/08/2026** — achou 2 bugs (botões de skip só apareciam pra play/pause, artwork não carregava), os dois corrigidos e republicados na mesma sessão. Ver D-056 a D-058 |
+| 7 | Verificação final e publicação | ⏸️ pausado — ver [[HANDOFF-2026-08-12-bloco7-verificacao-final]] |
 
 > **Atenção ao ler os blocos 1-4 acima.** Entre 07 e 10/08/2026 eles estiveram marcados como
 > "verificados" quando o que existia era Playwright verde **no localhost**, com o ramo

@@ -674,6 +674,51 @@ related:
   vazio" — premissa que morreu com os grifos coexistindo. Trocadas para checar ausência do cartão de
   marcador especificamente (aria-label "Remover marcador"), não mais o texto de estado vazio.
 
+## D-056 — Botões de skip do Media Session duplicados em previoustrack/nexttrack
+- **Data:** 2026-08-12
+- **Contexto:** Bloco 6 do PRD-008 (Media Session + `manifest.json`). Primeira versão registrava só
+  `seekbackward`/`seekforward` (spec correta pra "pular ±15s dentro da aula", decisão já tomada de não
+  navegar entre aulas pelo controle do sistema). No teste em aparelho (MIUI/HyperOS), só play/pause
+  apareciam no card de mídia — nenhum botão de pular, mesmo com os handlers registrados.
+- **Decisão:** registra a mesma ação (`skip(-15)`/`skip(15)`) nos dois pares de handler —
+  `seekbackward`/`seekforward` **e** `previoustrack`/`nexttrack`. Cada `setActionHandler` embrulhado em
+  `try/catch` porque nem toda action existe em todo browser.
+- **Justificativa:** skins customizadas de Android (pelo menos MIUI/HyperOS) só reservam slot de botão
+  pro par previous/next no card de mídia, ignorando seekbackward/seekforward mesmo quando registrados.
+  Duplicar a ação nos dois nomes cobre as duas famílias de skin sem mudar o comportamento (continua
+  pulando ±15s na mesma aula, não troca de aula — o nome do handler não implica navegação real).
+- **Impacto:** `useNarratedAudio.ts`, efeito de Media Session.
+
+## D-057 — Artwork do Media Session deriva o MIME da extensão do `cover_url`
+- **Data:** 2026-08-12
+- **Contexto:** depois de publicar a primeira capa real do curso (Bloco 6), o artwork continuava não
+  aparecendo no controle do sistema — sem erro nenhum visível. A causa: o código cravava
+  `type: "image/png"` fixo no objeto `MediaMetadata.artwork`, mas o arquivo publicado era `.jpg`.
+  Android/Chrome rejeita o artwork em silêncio quando o `type` declarado não bate com o conteúdo real.
+- **Decisão:** `type` passa a ser derivado da extensão do próprio `coverUrl` (`guessImageMimeType`), não
+  mais um valor fixo. `sizes` ficou cravado em `1672x941` — dimensão real do primeiro cover publicado; se
+  um cover com outra proporção entrar no ar, revisar.
+- **Justificativa:** o bug não dava erro de console nem de build — só falha silenciosa no dispositivo.
+  Vale como lição pro próximo campo de mídia declarado manualmente no código: MIME e tamanho declarados
+  precisam bater com o arquivo real, não só ser "algum valor plausível".
+- **Impacto:** `useNarratedAudio.ts`, `guessImageMimeType` nova + `MediaMetadata.artwork`.
+
+## D-058 — Capa do curso "Profissional 360" publicada como asset estático do site
+- **Data:** 2026-08-12
+- **Contexto:** o curso não tinha `cover_url` — o artwork do Media Session usava `mark.png` (símbolo
+  isolado da marca) como placeholder, que ficava esticado/zoado em tela cheia. Precisava de uma imagem
+  de verdade, usada tanto no card do curso (16:9) quanto no artwork do player.
+- **Decisão:** gerada via ChatGPT Plus a partir de um briefing escrito (
+  [[BRIEFING-capa-curso-profissional-360]]), publicada em `public/covers/profissional-360.jpg` do
+  próprio repo do site (não bucket do Supabase) — mesmo padrão dos ícones do Bloco 6. PNG original de
+  2MB reduzido pra JPEG 189KB via canvas (sem perda visível). `cover_url` do curso, no admin da Academy,
+  aponta pra `https://realvisionmaps.com/covers/profissional-360.jpg`.
+- **Justificativa:** publicar como asset estático do site evita depender de bucket/URL assinada do
+  Supabase pra uma imagem pública que não muda por aluno — git-tracked, sem custo de storage extra,
+  consistente com como os ícones do PWA já foram publicados.
+- **Impacto:** `public/covers/profissional-360.jpg` novo; `cover_url` do curso atualizado via admin
+  (escrita no banco pelo próprio Felipe, não por SQL/MCP — KI-29).
+
 ## Documentos relacionados
 - [[ARCHITECTURE]]
 - [[MASTER_PRD]]

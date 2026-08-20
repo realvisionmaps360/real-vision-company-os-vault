@@ -46,6 +46,12 @@ Felipe — os dois podem conviver, mas é uma instalação a mais pra manter.
 | Firecrawl | Lê o conteúdo completo de uma página (scraping) | ✅ Ativo | firecrawl.dev → Dashboard → Usage (créditos por chamada) | [`mcp-pesquisa-web/firecrawl/`](mcp-pesquisa-web/firecrawl/README.md) |
 | Google Maps | Dados de negócios locais (endereço, telefone, nota, avaliações) | ✅ Ativo e testado (27/07/2026) — quebrou entre 20/07 e 27/07 por faltar Geocoding/Directions/etc habilitadas no projeto Cloud, corrigido | console.cloud.google.com → APIs e Serviços → Painel (projeto `proven-airship-503011-u9`) | [`mcp-pesquisa-web/google-maps/`](mcp-pesquisa-web/google-maps/README.md) |
 
+## Automação de navegador
+
+| MCP | Pra que serve | Status | Onde checar cota/uso | Documentação |
+|---|---|---|---|---|
+| Playwright | Abre um navegador de verdade: navega, clica, preenche formulário, tira print, lê erros do site | ✅ Ativo e testado (07/08/2026) | Sem cota — roda 100% local, sem chave de API, custo zero | [`mcp-playwright/`](mcp-playwright/README.md) |
+
 ## Dados internos
 
 | MCP | Pra que serve | Status | Onde checar cota/uso | Documentação |

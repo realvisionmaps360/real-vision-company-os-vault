@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: planning
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-08-07
+updated: 2026-08-12
 related:
   - ARCHITECTURE
 ---
@@ -272,6 +272,26 @@ related:
   externo (`[notify-indexnow]`) e recebe 403, o que sugere chave inválida. Comportamento pré-existente,
   não introduzido pelo PRD-008. Duas coisas a resolver quando alguém encostar: a chave errada e o fato de
   um build de desenvolvimento avisar serviço externo.
+
+- **KI-38 — aula marcada como concluída esconde o leitor por trás de "Ouvir de novo", e o harness de
+  teste automatizado não prevê esse estado.** Descoberto em 12/08/2026, tentativa de rodar a bateria
+  completa de regressão (Bloco 7). A conta de teste (`smarthomefg@gmail.com`) tinha `Ouvido: 100%` na
+  aula 0.1 — o `verify-bloco1.mjs`, que ouve a aula inteira pra testar o indicador passivo, marca a aula
+  como concluída como efeito colateral. Todo teste que rodar DEPOIS dele na mesma sequência (`blocoB2`,
+  `C2`, `C4` a `C7`, `banner-regressao`, `verify-aluno`) trava esperando `[data-frag]` — porque a tela de
+  aula concluída não renderiza a lista de frases, só o botão "Ouvir de novo". **Não é bug de código.**
+  Comportamento correto pro aluno: reabrir uma aula já ouvida mostra a opção de reescutar, não crava o
+  leitor aberto. É bug do **harness**: nenhum `verify-bloco*.mjs` clica em "Ouvir de novo" antes de checar
+  o leitor. Corrigir de duas formas possíveis, a decidir: (1) resetar `lesson_progress` da conta de teste
+  antes de rodar a bateria, ou (2) os scripts passam a checar e clicar em "Ouvir de novo" quando presente,
+  antes de esperar `[data-frag]`. Nenhuma das duas foi feita ainda.
+
+- **KI-39 — `verify-blocoB1.mjs` reporta "seção 'Materiais da aula' presente" como FALHOU — não
+  investigado.** Achado em 12/08/2026, mesma tentativa de rodar a bateria (Bloco 7). Não dá pra distinguir
+  ainda se é regressão real (a Fase C reorganizou `MaterialsPanel.tsx` em acordeão — D-046 a D-050 — o
+  rótulo ou a estrutura que o teste procura pode ter mudado de propósito) ou se é efeito colateral do
+  KI-38 (aula concluída, painel de materiais nem chega a montar). Nenhuma investigação de causa foi feita.
+  **Bloco 7 segue aberto até isso ser resolvido.**
 
 ## Decisões em aberto (não são problemas, mas travam fases)
 - **Nenhuma.** D-021 (áudio em segundo plano) foi fechada em 30/07/2026 com teste em aparelho real: PWA

@@ -7,7 +7,7 @@ project: real-vision-academy
 phase: fase-8
 owner: master-visionair
 created: 2026-07-17
-updated: 2026-08-11
+updated: 2026-08-12
 related:
   - ROADMAP
   - CHANGELOG
@@ -1147,8 +1147,91 @@ D-051 a D-055 em [[DECISIONS]].
 - **Próximo passo:** Bloco 6 (Media Session + `manifest.json` PWA) e Bloco 7 (verificação final) do
   [[PRD-008-leitor-narrado-design]] — nenhum dos dois iniciado.
 
+## 2026-08-12 — Bloco 6 do PRD-008 concluído: Media Session + manifest.json, testado em aparelho, publicado
+
+- **Objetivo:** fechar o Bloco 6 — metadados e controles do sistema (Media Session API) pro leitor
+  narrado, mais `manifest.json` pra instalabilidade PWA. Escopo já vinha decidido desde o PRD-007 §5
+  (D-021, 30/07): sem service worker, sem navegação entre aulas pelos botões do sistema.
+- **Media Session:** `useNarratedAudio.ts` ganhou `courseTitle`/`coverUrl` nos parâmetros, um efeito que
+  registra `navigator.mediaSession.metadata` (título, curso, capa) e handlers de `play`/`pause`/
+  `seekbackward`/`seekforward` mapeados pro mesmo `skip(±15)` que os botões internos já usam.
+- **`manifest.json` + ícones:** `public/manifest.json` novo (nome, `#0a0d14`, `start_url: /academy`) e três
+  ícones (`192`, `512`, `512-maskable`) gerados a partir de `src/assets/mark.png` sobre o fundo do site —
+  processo via canvas no navegador (sem ImageMagick/sharp disponíveis na máquina), decodificado de
+  `dataURL` pra PNG. `index.html` ganhou `<link rel="manifest">`, `theme-color`, `apple-touch-icon`.
+- **Publicado** (`421f865`) e build limpo confirmado antes do teste em aparelho.
+
+### Teste do Felipe em aparelho real — 2 bugs achados, os 2 corrigidos na mesma sessão
+
+De novo nenhum dos dois apareceu no Playwright — os dois só existem em campo, confirmando a regra da
+skill `rv-academy` mais uma vez.
+
+1. **Botões de pular (±15s) não apareciam no controle do sistema**, só play/pause — testado tanto no
+   Chrome quanto no app instalado (PWA), resultado idêntico nos dois. Causa: a skin do Android do
+   aparelho (MIUI/HyperOS) só reserva slot de botão pro par `previoustrack`/`nexttrack`, ignora
+   `seekbackward`/`seekforward` mesmo registrados. Corrigido duplicando a mesma ação (`skip`, não
+   navegação de aula) nos dois pares de handler (D-056). Publicado em `14834ff`.
+2. **Artwork da capa não aparecia**, mesmo depois de gerar e publicar a primeira capa real do curso
+   "Profissional 360" (foto gerada via ChatGPT Plus a partir de
+   [[BRIEFING-capa-curso-profissional-360]], publicada em `public/covers/profissional-360.jpg`, 189KB
+   depois de comprimida de 2MB — `f83a4ef`). Causa: o código declarava `type: "image/png"` fixo no
+   `MediaMetadata.artwork`, mas o arquivo publicado é `.jpg` — Android/Chrome rejeita o artwork em
+   silêncio quando o MIME declarado não bate com o real, sem erro nenhum visível. Corrigido derivando o
+   MIME da extensão do próprio `cover_url` (D-057). Publicado em `5939620`.
+
+Achado à parte: o primeiro teste do artwork falhou também porque o Felipe ainda não tinha salvo o
+`cover_url` no admin da Academy — passo manual que faltou no meu primeiro passo a passo. Corrigido na
+segunda rodada de instruções, com o caminho completo (`/academy/admin` → curso → campo "Capa (URL)" →
+salvar).
+
+### Verificação
+
+Build limpo em cada uma das três rodadas (feature, fix dos botões, fix do artwork). Sem harness
+Playwright dedicado pro Bloco 6 — Media Session e instalabilidade PWA não são observáveis por automação
+headless (dependem de notificação do sistema operacional e prompt de instalação real do Android), então
+a verificação girou em torno de build limpo + teste do Felipe em aparelho, nas duas frentes (Chrome e
+app instalado), confirmando D-058 (capa), D-056 (botões) e D-057 (MIME) resolvidos.
+
+**Publicado:** feature em `421f865`, fix dos botões em `14834ff`, capa em `f83a4ef`, fix do artwork em
+`5939620`. Todos em `main`, confirmados pelo Felipe em aparelho real.
+
+Bloco 6 do PRD-008 fecha aqui — tabela de blocos atualizada em [[PRD-008-leitor-narrado-design]], decisões
+D-056 a D-058 em [[DECISIONS]].
+
+- **Próximo passo:** Bloco 7 (verificação final e publicação) do [[PRD-008-leitor-narrado-design]] —
+  iniciado e interrompido na mesma sessão, ver entrada abaixo.
+
+## 2026-08-12 — Bloco 7 do PRD-008 iniciado e interrompido: harness de teste travou em estado de aula concluída, nada publicado
+
+- **Objetivo:** fechar o Bloco 7 — verificação final de todo o leitor narrado, rodando a bateria completa
+  de regressão automatizada (todos os `verify-bloco*.mjs`, mobile e desktop) antes de pedir o teste final
+  do Felipe em aparelho.
+- **Build:** `npm run build` limpo, confirmado antes de qualquer teste.
+- **O que rodou limpo:** Blocos 1 a 5 quase inteiros (só 2 checagens de auto-scroll no Bloco 1 e 1 falha
+  pontual no Bloco 5, não investigadas). O núcleo de `verify-aluno` (matrícula, acesso, bloqueio de admin)
+  também passou.
+- **Onde travou:** a partir do `verify-blocoB2`, os testes passaram a travar esperando o texto da aula
+  aparecer. Causa raiz encontrada por investigação manual: o `verify-bloco1.mjs` ouve a aula inteira de
+  propósito (testa o indicador de progresso) e isso marca a aula de teste como 100% concluída pra conta
+  `smarthomefg@gmail.com`. Uma aula concluída mostra "Ouvir de novo" em vez do leitor ativo — certo pro
+  aluno, mas nenhum script de teste prevê esse estado. Registrado como **KI-38**.
+- **Achado à parte, não investigado:** `verify-blocoB1` reportou a seção "Materiais da aula" ausente.
+  Pode ser regressão real ou o mesmo efeito do KI-38 — não dá pra saber sem investigar. Registrado como
+  **KI-39**.
+- **Ruído da sessão:** ao tentar destravar o perfil do Chrome do Playwright, matei `chrome.exe` de forma
+  ampla demais três vezes, derrubando o próprio dev server sem querer — sem impacto em código ou dados,
+  só tempo perdido. Uma pasta órfã do perfil vazou pro repo por um path mal escapado; removida antes de
+  fechar a sessão, `git status` limpo.
+- **Decisão do Felipe:** pausar a automação e retomar em outra sessão. Sem pressa pelo Bloco 7 — o Bloco 6
+  já está publicado, testado e aprovado; o que falta é só a verificação final.
+- **Nada foi publicado nesta entrada.** Nenhuma linha de código mudou. O `main` segue exatamente como
+  ficou ao fechar o Bloco 6.
+- **Próximo passo:** ver checklist completo em [[HANDOFF-2026-08-12-bloco7-verificacao-final]] — resolver
+  KI-38 e investigar KI-39 antes de rodar a bateria de novo.
+
 ## Documentos relacionados
 - [[ROADMAP]]
 - [[CHANGELOG]]
 - [[CONTEXT]]
-- [[PRD-008-leitor-narrado-design]] · [[PRD-009-trilha-gamificada]] · [[DECISIONS]]
+- [[PRD-008-leitor-narrado-design]] · [[PRD-009-trilha-gamificada]] · [[DECISIONS]] · [[KNOWN_ISSUES]]
+- [[HANDOFF-2026-08-12-bloco7-verificacao-final]]
