@@ -1,28 +1,36 @@
 ---
 type: entity
-title: "Sadra — Universo Paralello"
-aliases: ["Sadra", "Universo Paralello"]
+title: "Sadra â€” Universo Paralello"
+aliases: ["Sadra", "Universo Paralello", "Wilame Morais"]
 date_created: 2026-06-29
-date_updated: 2026-06-29
+date_updated: 2026-08-21
 source_count: 1
 tags: [cliente, entregue]
 status: stub
 ---
 
-# Sadra — Universo Paralello
+# Sadra â€” Universo Paralello
 
 ## Resumo
-Sadra é responsável pelo Universo Paralello, festival em Pratigi (BA). Tour Virtual 360° entregue em subdomínio dedicado da Real Vision.
+Sadra Ã© responsÃ¡vel pelo Universo Paralello, festival em Pratigi (BA). Tour Virtual 360Â° entregue em subdomÃ­nio dedicado da Real Vision.
 
-## Serviços contratados
-- **Tour Virtual 360°** (entregue)
+## Contato
+- Wilame Morais â€” wilame@gmail.com
+
+## ServiÃ§os contratados
+- **Tour Virtual 360Â°** (entregue)
 
 ## Entregas
-- Tour Virtual: https://universoparalello.realvisionmaps.com/tour/ (subdomínio dedicado)
+- Tour Virtual: https://universoparalello.realvisionmaps.com/tour/ (subdomÃ­nio dedicado)
 
-## Histórico
-- **2025-01-30** — Início; tour entregue
+## HistÃ³rico
+- **2025-01-30** â€” InÃ­cio; tour entregue
+- **2026-05-13** â€” Envio do link do tour pra Wilame revisar; sugestÃ£o de botÃ£o de acesso direto ao tour no site (alternativa ao embed)
+- **2026-08-21** â€” Carrossel de 5 slides sobre o Tour 360Â° criado para postar no Instagram da Real Vision; enviado pra aprovaÃ§Ã£o do Wilame, com proposta de colab com o Instagram do Universo Paralello
 
-## Conexões
+## MissÃ£o atual
+- Aguardando aprovaÃ§Ã£o do Wilame sobre o carrossel (conteÃºdo + colab no Instagram) antes de publicar
+
+## ConexÃµes
 - Perfil: [[icp-real-vision]]
-- Serviços: [[tour-360]]
+- ServiÃ§os: [[tour-360]]
