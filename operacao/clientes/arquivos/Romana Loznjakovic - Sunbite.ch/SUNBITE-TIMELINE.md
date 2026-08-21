@@ -38,6 +38,11 @@
 - **Fix mobile rodada 2:** `body { height: 100dvh }` (container flex fixo) + card `92vw × min(175%, 82dvh)` → card preenche a tela no celular.
 - Commits e push para `main` → deploy Vercel.
 
+### 21/08/2026 — PDV: exploração de ícones dos toppings + marshmallow
+- Marshmallow identificado como topping faltante no PDV.
+- Gerado material de referência com **5 direções de estilo cartoon-elegante** (Traço Vivo, Adesivo Pop, Aquarela Doce, Bolha Glossy, Minimal Blush) pros ícones de topping (incl. marshmallow novo) e do ícone do copo de morango com chocolate — publicado como artifact HTML pro Felipe escolher a direção (link com o Felipe, não versionado no vault).
+- **Pendente:** localizar/confirmar onde vive o código do PDV (não está no repo `sunbite-site`) pra aplicar a direção escolhida e adicionar o marshmallow na lista real de toppings.
+
 ---
 
 ## Próximos marcos

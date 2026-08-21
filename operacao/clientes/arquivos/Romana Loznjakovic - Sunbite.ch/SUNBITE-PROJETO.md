@@ -118,6 +118,11 @@ Página **HTML standalone** (não React) para o ==Grand Opening: 18. Juli 2026==
 > - [ ] Foto real da Romana na RomanaSection (substituir `emblem.jpg`)
 > - [ ] Regenerar ícones Private Celebrations e Markets no Canva quando quota resetar
 
+> [!todo] PDV
+> - [ ] Confirmar com Felipe onde vive o código do PDV (não está no repo `sunbite-site`)
+> - [ ] Escolher direção de estilo dos ícones (5 opções exploradas, ver [[SUNBITE-TIMELINE]] 21/08/2026)
+> - [ ] Adicionar marshmallow na lista real de toppings do PDV depois da escolha do estilo
+
 ---
 
 ## Como trabalhar este cliente
