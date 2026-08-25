@@ -26,3 +26,6 @@ Conceito espelho na wiki: [[acquisition-system]]
 | [[sbc-agencias-marketing-contatos]] | Lista de contatos — agências de marketing SBC |
 | [[sbc-rudge-ramos-petshops-contatos]] | Lista de contatos — petshops Rudge Ramos SBC |
 | [[sp-avenida-paulista-agencias-marketing-contatos]] | Lista de contatos — agências de marketing Av. Paulista |
+| [[campanhas/estudios-musica-2026/HANDOFF|campanhas/estudios-musica-2026/]] | **Campanha Estúdios de Música (BR)** — venda de Website usando a demo AMP como referência. Fase de validação: ambiente auditado, pesquisa de boas práticas feita, cidade ainda não escolhida. Pasta completa: especificação, plano de execução, pesquisa, relatórios |
+
+Campanhas com mais de um artefato (dados brutos, geometria, scripts, textos de email) moram em `campanhas/<slug>/` com um `HANDOFF.md` como ponto de entrada. Listas simples de contato seguem soltas nesta pasta, no padrão `<local>-<segmento>-contatos.md`.
