@@ -4,7 +4,7 @@
 
 ---
 
-## Semana de 03/08/2026 a 09/08/2026
+## Semana de 24/08/2026 a 30/08/2026
 
 ### Tema
 **Sócio Digital para pousadas e restaurantes — IA que responde avaliações e gerencia reservas enquanto você dorme**
@@ -103,7 +103,8 @@
 
 ---
 
-### Sugestão Tema Semana Seguinte (10/08 a 16/08)
+### Sugestão Tema Semana Seguinte (31/08 a 06/09)
+
 **Opção A**: "Sócio Digital para restaurantes — IA que gerencia pedidos, responde avaliações e reativa clientes na baixa"
 - Conecta com blog Post 2 (custo vs estagiário)
 - Hot leads: restaurantes BA (Manga Rosa, Siribar, Akua Bistrô, Pôr do Sol)
@@ -122,6 +123,6 @@
 ---
 
 **Gerado por**: Thomas Anderson (Hermes Agent)  
-**Data**: 03/08/2026  
+**Data**: 24/08/2026  
 **Skill**: instagram-weekly-content  
-**Versão**: 1.0
+**Versão**: 2.0
