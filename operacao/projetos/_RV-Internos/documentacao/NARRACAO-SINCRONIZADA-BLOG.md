@@ -8,6 +8,10 @@
 skill quando replicarmos umas 2-3 vezes.
 **Repo:** `real-vision-site` (`operacao/projetos/_RV-Internos/real-vision-site`)
 
+> **Em obras (ago/2026):** o leitor narrado da Academy está sendo trazido para os posts do blog. Estado
+> atual e decisões em [[narracao-blog/ESTADO]] e [[narracao-blog/DECISOES]]. Este playbook é atualizado
+> no Bloco 5 daquele projeto — até lá, o processo descrito abaixo continua valendo.
+
 **Onde mais isso é usado:** este playbook é a base técnica da Fase 7 da Real Vision Academy, que leva a
 narração sincronizada para dentro do **curso pago** — ver [[PRD-007-curso-narrado-sincronizado]] (produto),
 [[PRD-007-arquitetura-leitor-narrado]] (o que muda do blog para a Academy) e [[PRD-007-plano-execucao]]
