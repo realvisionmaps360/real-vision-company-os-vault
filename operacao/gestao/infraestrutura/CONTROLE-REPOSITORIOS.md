@@ -27,6 +27,16 @@ Todos em `operacao/projetos/_RV-Internos/sites/`.
 | `visionflow` | `realvisionmaps360/visionflow-crm-48fe197a` | `main` | CRM interno — ver [[project_visionflow_migracao]] | ✅ |
 | `site-template-rv-01` | `realvisionmaps360/site-template-rv-01` (privado) | `main` | Template e-commerce reutilizável, derivado do projeto BrazilComp/Dorival (dados de cliente removidos, histórico squashado) | ⚪ |
 
+## Repositórios de campanha
+
+Landing pages de campanhas de prospecção — ficam dentro da própria pasta da campanha em
+`operacao/prospeccao/campanhas/`, não em `_RV-Internos/sites/`, porque estão coladas aos dados e
+textos daquela campanha específica.
+
+| Pasta | Repo GitHub | Branch | Descrição | Status |
+|---|---|---|---|---|
+| `prospeccao/campanhas/drone-digital-unterentfelden/landing/site` | `realvisionmaps360/drone-unterentfelden` (privado) | `main` | Landing da campanha piloto Suíça — modelo comercial em [[DEC-2026-004]] | ✅ — em produção em `unterentfelden.realvisionmaps.com` |
+
 ## Repositórios de cliente
 
 | Cliente | Pasta | Repo GitHub | Branch | Status |
@@ -56,3 +66,4 @@ find operacao/clientes operacao/projetos -maxdepth 6 -type d -name ".git"
 
 **Histórico de mudanças:**
 - 02/08/2026 — varredura inicial + reorganização: apagada duplicata de `rv-cartaodigital-paraty-onboard` em `operacao/projetos/`; criada pasta `_RV-Internos/sites/`; movidos `real-vision-site`, `visionflow` e `site-template-rv-01` pra dentro dela; movido repo do Solarium pra dentro da pasta do cliente Gabriel.
+- 21/08/2026 — `landing/site` da campanha Unterentfelden virou repo git próprio (`realvisionmaps360/drone-unterentfelden`, privado), pra sincronizar entre máquinas. Já estava em produção via `vercel --prod` direto desta pasta havia dias, sem histórico versionado até agora. Nasce a categoria "Repositórios de campanha".

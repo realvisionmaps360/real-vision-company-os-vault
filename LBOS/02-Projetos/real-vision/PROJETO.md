@@ -5,7 +5,7 @@ nome: Real Vision — operação
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-06
-atualizado_em: 2026-08-13
+atualizado_em: 2026-08-21
 proxima_revisao: 2026-09-06
 prazo: continuo
 pertence_a: ["[[LBOS]]"]
@@ -77,7 +77,7 @@ Cliente → Real Vision 360 → Receita → Fluxo de Caixa → OBJ-casamento-sui
 - Afeta: [[OBJ-casamento-suica]]
 - Empresa: [[Real Vision 360]]
 - Decidido por: [[DEC-2026-002]], [[DEC-2026-003]]
-- Tarefas: [[TAR-2026-002]], [[TAR-2026-003]], [[TAR-2026-004]], [[TAR-2026-005]]
+- Tarefas: [[TAR-2026-002]], [[TAR-2026-003]], [[TAR-2026-004]], [[TAR-2026-005]], [[TAR-2026-011]]
 - Conhecimento gerado: [[prospeccao-google-maps-apify]], [[georreferenciar-print-de-mapa]], [[landing-de-campanha-com-captura-propria]]
 - Referencia: [[AGENTS]], [[EMPRESA]]
 
@@ -91,3 +91,4 @@ Cliente → Real Vision 360 → Receita → Fluxo de Caixa → OBJ-casamento-sui
 | 2026-08-13 | Campanha Unterentfelden avança até landing page no ar e emails prontos; modelo comercial revisado em [[DEC-2026-003]] | Sessão de execução: página publicada, formulário próprio funcionando, 24 textos reescritos, teste aprovado | Falta só domínio próprio, tradução pro alemão e regravar os rascunhos do Gmail antes de enviar | Captura coletiva sem visita individual; cliente escolhe a forma de pagamento |
 | 2026-08-17 | Segundo cliente estruturado no LBOS: Eduardo Barqueiro / Paraty Onboard, via Prioridade 2 do handoff de memory dump | Site tinha sido tirado do ar em 31/07 por falta de pagamento; Eduardo pagou R$550 em 16/08 pela Opção 3 (domínio próprio + YouTube) | Site já reconectado na Vercel; nasce [[REC-2026-002]] como primeira receita ligada a este cliente | Sem débito antigo — o R$1.000 de referência do tour era permuta, nunca cobrança |
 | 2026-08-19 | Campanha Unterentfelden deixa de ser venda e vira validação de mercado gratuita, por [[DEC-2026-004]] | Felipe é brasileiro sem status de residência na Suíça e não tem como receber por esse trabalho de forma legal e simples | **CHF 480 de receita potencial vão a zero.** A frente suíça deixa de alimentar [[OBJ-casamento-suica]] por receita e passa a alimentá-la por rede de contato. Some a exposição fiscal inteira | Oferta gratuita, questionário voluntário, newsletter desacoplada, nenhum voo novo até o Amt für Migration responder |
+| 2026-08-21 | Nasce [[TAR-2026-011]] — controle de contratos no VisionFlow, já em estado pausado | Prioridade 5 do handoff de 17/08; Felipe simplificou o desenho junto com o Claude Code e pediu para pausar antes de codar, sem tempo agora | Nenhuma mudança em produção/banco. Desenho final (reaproveitar aba Arquivos + indicador binário) fica registrado, com 3 perguntas em aberto pra quando retomar | Rejeitada a proposta de tabela nova + aba nova; aprovado o desenho mais simples |

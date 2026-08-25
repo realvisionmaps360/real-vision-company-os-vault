@@ -14,15 +14,35 @@ site/
 
 ## Formulário — o questionário de 4 perguntas
 
-Chama direto a Edge Function pública `drone-unterentfelden-lead` (**versão 3**), deployada no mesmo
+Chama direto a Edge Function pública `drone-unterentfelden-lead` (**versão 9**), deployada no mesmo
 projeto Supabase do Hermes (`ghwjetvazmdlaqidgxqi`), que:
 
-1. **Grava em `email_contatos` SÓ se `consentimento === true`.** Quem responde o questionário sem
+1. **Grava a resposta em `unterentfelden_respostas` SEMPRE**, com ou sem opt-in — as 4 perguntas
+   mais a identificação e um campo `optin`. É o dado da pesquisa, e é sobre ele que o critério
+   6/24 é contado. Adicionado na v7 (21.08.2026); antes, quem não marcava o checkbox não existia
+   em lugar nenhum além do email no Gmail
+2. **Grava em `email_contatos` SÓ se `consentimento === true`.** Quem responde o questionário sem
    marcar o checkbox de opt-in **não entra** na base de email marketing. É isso que torna o
-   desacoplamento real e não decorativo — testado ponta a ponta em 19.08.2026
-2. Manda a notificação por email pro Felipe via **Resend**, com as 4 respostas e um selo dizendo se
+   desacoplamento real e não decorativo — testado ponta a ponta em 19.08.2026 e de novo na v7
+3. Manda a notificação por email pro Felipe via **Resend**, com as 4 respostas e um selo dizendo se
    a pessoa entrou ou não na base. `reply_to` aponta pro respondente. **Isso acontece sempre**, com
    ou sem opt-in, porque é o dado da pesquisa
+
+**v8/v9 (21.08.2026):** o template do email de notificação ainda tinha os rótulos e a decodificação
+do questionário **anterior** à reescrita de 19.08 — a pergunta 3 (hoje texto livre) era decodificada
+como se ainda fosse o vocabulário fixo antigo (`ja`/`nein`/`kommt-darauf-an`), então qualquer resposta
+real virava "(não respondeu)" no email mesmo estando salva certa no banco. Corrigido: rótulos
+re-sincronizados com `src/main.js`, limite de 40 caracteres da pergunta 3 removido (cortava resposta
+de texto livre), e opt-in de contato que já existia em `email_contatos` passou a acrescentar a tag da
+campanha em vez de ser ignorado em silêncio.
+
+As duas tabelas são coisas diferentes e continuam separadas: `unterentfelden_respostas` é pesquisa,
+`email_contatos` é base de contato. Falha na gravação da primeira **não derruba** a resposta ao
+usuário — loga e segue, porque o email ao Felipe é a rede de segurança.
+
+O placar da campanha sai pela view `unterentfelden_resumo` (`total`, `total_optin`, `hoje`,
+`ultima_em`, `faltam`, `alvo`), lida pela rotina diária do Hermes —
+ver `operacao/gestao/infraestrutura/hermes-rotina-unterentfelden/README.md`.
 
 Campos enviados: `estabelecimento`, `nome`, `email`, `pergunta_1..4`, `consentimento` (bool),
 `botcheck` (honeypot). Os campos `endereco` e `pagamento` **não existem mais**.

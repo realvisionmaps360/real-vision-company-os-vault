@@ -80,8 +80,20 @@
 - Barra de "Compartilhar" duplicada no topo da página (`ShareButtons`, mesmo componente do rodapé).
 - Build e preview local testados sem erro antes do push (lightbox conferido mostrando a imagem e legenda corretas). Commit `a12ddd9` no `main` do `real-vision-core` — Vercel dispara deploy automático.
 
+### 20/08/2026 — Sessão "corais 2": diagnóstico do tráfego pago e treino pra Evelin
+- Felipe informou que a Flávia delegou o assunto tráfego pago pra Evelin, da equipe dela. Reunião marcada pra 21/08/2026, onde Felipe vai treinar a Evelin e decidir se a Real Vision assume a gestão como serviço formal, e por quanto.
+- Pra treinar antes da reunião, reproduzimos ao vivo o erro que o Felipe vinha tomando no botão "Anunciar" do Perfil da Empresa — usando a conta própria da Real Vision 360 como teste, **nenhum acesso à conta da cliente foi usado**.
+- Causa raiz confirmada: o "Anunciar" só oferece contas de primeiro nível (no caso, uma cancelada e a MCC), nunca a conta filha real onde campanha pode existir. Fluxo clássico direto em `ads.google.com`, entrando na conta filha certa, funciona normalmente.
+- Rodado também um case study sobre o estado atual (20/08/2026) do produto Campanha Inteligente no mercado: API do Google Ads bloqueou criação de campanha nova desde 03/08/2026 (só API, não confirmado pra interface web), Google empurrando pra Performance Max, outros usuários reportando o mesmo tipo de erro em fóruns oficiais.
+- Detalhe técnico completo e fontes em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
+
+## Tempo investido (continuação)
+| Data | Sessão | Duração estimada |
+|---|---|---|
+| 20/08/2026 | Diagnóstico do erro no "Anunciar" + case study de mercado + registro pra reunião com Evelin | ~2h |
+
 ## Próximos marcos
 - Lançar R$700 manualmente no VisionFlow.
 - Confirmar itens finais do Perfil Google (post inicial, link de avaliação).
 - Preencher CNPJ/endereço/representante da Real Vision no contrato e gerar versão final.
-- Retomar tráfego pago na sessão "corais 2" — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
+- Reunião 21/08/2026 com Evelin: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].

@@ -124,6 +124,14 @@ Se a propriedade GA4 e a conta Google Ads estão em e-mails/contas Google difere
 
 Antes de rodar qualquer relatório de GA4 filtrando por página, confirmar a URL exata do anúncio via `mcp__google-ads-mcp__search_search` (resource `ad_group_ad`, campo `ad_group_ad.ad.final_urls`) — nunca assumir o slug de memória. Um diagnóstico de 22/07/2026 checou a página errada e concluiu (errado) que o vínculo GA4↔Ads tinha quebrado, quando na verdade o vínculo nunca caiu — só a página checada estava errada. Ver TIMELINE da campanha, entrada de 22/07/2026.
 
+## O botão "Anunciar" do Perfil da Empresa não alcança conta filha de MCC
+
+Descoberto em 20/08/2026, no caso Vila dos Corais (`LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa.md`). O botão "Anunciar" dentro do Perfil da Empresa cria uma Campanha Inteligente (Smart Campaign) e leva pra `ads.google.com/aw/campaigns/new/express`. A tela de seleção de conta desse fluxo só lista contas de **primeiro nível** — no caso da estrutura da Real Vision, isso significa a MCC (`359-167-3566`) e nenhuma conta filha. Como campanha nunca pode ser criada dentro de uma MCC, esse caminho sempre termina em 404 pra qualquer cliente cuja conta de anúncio vive debaixo de uma MCC (praticamente todo cliente gerenciado por aqui).
+
+**Não usar o "Anunciar" pra nenhum cliente.** Caminho certo: entrar direto em `ads.google.com`, entrar na MCC, usar o seletor de conta **interno** (não a tela de seleção do "Anunciar") pra trocar pra conta filha real, e criar a campanha pelo fluxo clássico ("Nova campanha" → "Criar uma campanha sem orientação" → "Pesquisar").
+
+Relacionado: em 20/08/2026 o Google também confirmou (multi-fonte: Search Engine Land, Search Engine Roundtable, blog de desenvolvedores do Google Ads) que desde 03/08/2026 a **API** do Google Ads não permite mais criar Campanha Inteligente nova (só editar existentes) — mas isso é documentado como restrição só da API, não da interface web. A causa do erro no "Anunciar" foi a estrutura de conta (acima), não essa descontinuação — mas o produto como um todo está sendo empurrado pro fim de vida em favor do Performance Max.
+
 ## Conversão de "clique solto" não é ativo — considerar squeeze page antes do link final
 
 Quando o objetivo da campanha for social (entrar em comunidade, grupo, canal) em vez de comercial direto, um clique que só redireciona pra fora não vira nada que a Real Vision controle depois. Padrão aplicado em 22/07/2026 na campanha SLM x LLM: página/modal de captura (nome+email) antes de liberar o link final, gravando direto em `email_contatos` (Hermes) via Edge Function pública dedicada — nunca expondo credencial de escrita no bundle do site público. Detalhe técnico completo (arquitetura, Edge Function, teste local) em [`TIMELINE.md`](../../operacao/projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.

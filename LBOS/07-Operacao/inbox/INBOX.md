@@ -53,6 +53,7 @@ Só isso. `tipo`, `projeto` e `prioridade` são preenchidos na classificação, 
 ## Fila atual
 
 - [[2026-08-17-prd-memory-dump-operacional]] — handoff externo (sessão ChatGPT), 8 frentes priorizadas. Prioridades 1-3 em processamento (3 sessões em paralelo, 2026-08-17); 4-8 ainda não entraram no fluxo.
+- [[2026-08-20-servicos-google-merchant-loja-site]] — cadastrar serviços no Google Meu Negócio → Merchant Center → conectar com a loja do site. Levantamento do que falta já feito; nada aplicado. Não entrou no fluxo.
 
 As 5 notas recebidas em 2026-08-10 (handoff externo, sessão ChatGPT) foram classificadas e processadas no mesmo dia, com aprovação do Felipe. Arquivadas em `09-Arquivo/`. O que geraram:
 
@@ -74,3 +75,4 @@ As 5 notas recebidas em 2026-08-10 (handoff externo, sessão ChatGPT) foram clas
 | Data | O que mudou | Motivo | Impacto | Decisão |
 |---|---|---|---|---|
 | 2026-08-06 | Inbox criado | Fase 3 do LBOS | Fecha a única porta de entrada do sistema | Captura é deliberadamente barata; classificação é trabalho do fluxo |
+| 2026-08-20 | Nota crua adicionada à fila: serviços Google → Merchant Center → loja do site | Felipe pediu para guardar pro futuro, não dá pra executar agora | Nenhum — só entrada, sem classificação | — |

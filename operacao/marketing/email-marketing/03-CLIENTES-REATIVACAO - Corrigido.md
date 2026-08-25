@@ -1,5 +1,9 @@
 # Clientes de Reativação — Campanha Hermes
 
+> **Campanha 001** na numeração oficial. Índice: [[INDICE-CAMPANHAS]] · Diário: [[02-TIMELINE]]
+>
+> **Status:** disparada em 03/07/2026, envio manual pelo Gmail. Sem tracking de abertura.
+>
 > **Skills ativas nesta campanha:** `realvision` + `rv-email` + `rv-copy` + `rv-reativacao`
 >
 > **Objetivo:** avisar que o período de 1 ano do tour virtual acabou e apresentar as opções de renovação e evolução da presença digital de cada cliente.

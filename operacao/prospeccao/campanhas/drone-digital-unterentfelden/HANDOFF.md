@@ -1,5 +1,9 @@
 # Drone & Digital Unterentfelden — handoff
 
+> **Campanha 003** na numeração oficial de campanhas de email da Real Vision
+> (atribuída em 20.08.2026). Fonte única da numeração: [[INDICE-CAMPANHAS]] em
+> `operacao/marketing/email-marketing/campanhas/INDICE-CAMPANHAS.md`.
+>
 > Campanha de prospecção da Real Vision 360. Estado em **19.08.2026**.
 > Este documento existe para uma sessão nova continuar de onde parou, sem contexto prévio.
 >
@@ -61,11 +65,15 @@ e **23 dos 64 perfis do Google não estão nem reivindicados pelos donos**.
 | Gerador de emails | ✅ reescrito, lê o CSV direto (o `eligible.tsv` foi eliminado) |
 | Texto dos 24 emails | ✅ **gerados em 20.08** em `emails/emails-24-gerados-2026-08-19.json`. Guarda-corpo verde: zero vestígio de preço, zero `ß` |
 | 24 rascunhos criados no Gmail do Felipe | ⚠️ ainda com o texto ANTIGO **e com preço**. Precisam ser regravados |
-| Subdomínio próprio | ⚠️ `unterentfelden.realvisionmaps.com` já adicionado no Vercel; falta o registro `A` na Hostinger — ver seção 10 |
-| Landing page em produção | ⚠️ o Vercel ainda serve a versão ANTIGA (em português, com preço). **Falta `npx vercel --prod`, que depende do OK do Felipe** |
+| Subdomínio próprio | ✅ registro `A` criado na Hostinger em 20.08, propagado (confirmado via 8.8.8.8 e 1.1.1.1 → `76.76.21.21`), SSL emitido pelo Vercel, `https://unterentfelden.realvisionmaps.com` no ar |
+| Landing page em produção | ✅ serve a versão em alemão, sem preço (v3, 20.08) — já estava com o deploy em dia quando o subdomínio entrou |
+| CORS da Edge Function | ✅ **versão 6**, corrigida em 20.08 — `ALLOWED_ORIGINS` agora inclui `https://unterentfelden.realvisionmaps.com` junto com o Vercel antigo (mantido por compatibilidade). Testado ponta a ponta (preflight OPTIONS + POST real, sem opt-in) direto na URL de produção |
+| Gravação de TODAS as respostas | ✅ **v7 da Edge Function, 21.08** — tabela `unterentfelden_respostas` grava com ou sem opt-in. Antes, quem não marcava o checkbox só existia no Gmail, e o critério 6/24 sairia subcontado. Separação opt-in de `email_contatos` intacta. Testado ponta a ponta, dados de teste apagados |
+| Notificação por email corrigida | ✅ **v9 da Edge Function, 21.08** — o template ainda usava rótulos e decodificação do questionário anterior a 19.08 (pergunta 3 tratada como vocabulário fixo antigo). Respostas reais apareciam como "(não respondeu)" no email mesmo salvas certas no banco. Corrigido junto: limite de 40 caracteres que cortava a pergunta 3, e opt-in em contato que já existia em `email_contatos` (antes era ignorado em silêncio, agora acrescenta a tag da campanha). Achado ao testar o formulário com o próprio Felipe (ver `landing/site/README.md`) |
+| Placar para a rotina diária do Hermes | ✅ view `unterentfelden_resumo` pronta · 🔜 falta o Hermes instalar na VPS (`operacao/gestao/infraestrutura/hermes-rotina-unterentfelden/README.md`) |
 | Tour 360° de Unterentfelden | ✅ gravado — `https://tour.realvisionmaps.com/unterentfelden01/`, embutido na página |
-| Carta ao Amt für Migration | 🔜 rascunho a escrever |
-| Envio dos emails | 🔜 só depois de tudo acima |
+| Carta ao Amt für Migration | ✅ rascunho pronto em `operacao/gestao/juridico-fiscal/CARTA-AMT-FUER-MIGRATION-RASCUNHO-2026-08-19.md` · 🔜 falta o Felipe revisar e enviar |
+| Envio dos emails | ✅ **24 de 24 entregues em 21.08.2026** — texto final e incidente de remetente em `emails/emails-24-enviados-2026-08-21.md` |
 
 ---
 
@@ -279,6 +287,12 @@ Não copiar conteúdo dessas fontes para cá. Referenciar e ler na hora.
 7. ~~Instalar analytics~~ ✅ PostHog cookieless, 5 eventos, testado
 8. ~~Atualizar a Edge Function~~ ✅ versão 3, testada ponta a ponta
 
+**Feito em 21.08, antes do envio:**
+
+8b. ~~Gravar toda resposta no banco (v7) + view do placar + handoff do Hermes~~ ✅ — tinha que
+entrar **antes** do envio: cada resposta que chegasse sem a tabela seria uma resposta perdida
+para a contagem do critério 6/24.
+
 **A partir daqui é a próxima sessão:**
 
 9. ~~Instalar o Python~~ ✅ feito em 20.08 — Python 3.12.10.
@@ -286,24 +300,44 @@ Não copiar conteúdo dessas fontes para cá. Referenciar e ler na hora.
    caminho completo: `%LOCALAPPDATA%\Programs\Python\Python312\python.exe`
 10. ~~Rodar o gerador~~ ✅ feito em 20.08 — 24 emails em
     `emails/emails-24-gerados-2026-08-19.json`, guarda-corpo verde nos dois testes
-11. Enviar o modelo para o email de teste **`smarthomefg@gmail.com`** (confirmado pelo Felipe em
-    19.08, só ele, sem a Romana) e esperar o OK
-12. **Deploy da landing:** `npx vercel --prod` de dentro de `landing/site/` — **só depois do OK
-    explícito do Felipe.** Hoje o Vercel ainda serve a versão antiga, em português e com preço
-13. Repetir o teste do formulário **na URL de produção** (o CORS só libera o domínio real)
-14. **Regravar os 24 rascunhos no Gmail** com o texto novo
-15. Felipe revisa email por email, apagando o bloco em português de cada um
-16. Enviar
+11. ~~Enviar o modelo para o email de teste~~ — superado pelo item 16 (os emails reais já saíram
+    direto, com o texto revisado na hora pelo Felipe)
+12. ~~Deploy da landing~~ ✅ já estava em produção quando o subdomínio entrou (v3, alemão, sem preço)
+13. ~~Repetir o teste do formulário na URL de produção~~ ✅ feito em 20.08 — preflight OPTIONS e POST
+    real testados direto em `https://unterentfelden.realvisionmaps.com`, resposta `{"ok":true}`
+14. ~~Regravar os 24 rascunhos no Gmail~~ ✅ feito em 21.08 — texto reescrito mais curto (pedido do
+    Felipe), link do domínio próprio, sem bloco em português. Ver
+    `emails/emails-24-enviados-2026-08-21.md`
+15. ~~Felipe revisa email por email~~ — superado: como o texto não tinha mais bloco em português
+    (item 14), a revisão virou o próprio ato de enviar
+16. ~~Enviar~~ ✅ **24 de 24 negócios alcançados em 21.08.2026.** Teve incidente no meio do caminho:
+    o Gmail tinha um alias sem autenticação como remetente padrão, e duas rodadas de envio
+    voltaram por falha SMTP antes da correção — nenhum negócio recebeu a versão quebrada. Depois
+    da correção, 9 dos 24 acabaram recebendo o email **duas vezes** (reenvio manual do Felipe e
+    reenvio desta sessão, em paralelo, sem coordenação). Detalhe completo, incidente e lição em
+    `emails/emails-24-enviados-2026-08-21.md` e [[CON-2026-006]]
 17. **Rascunhar a carta ao Amt für Migration** (`arbeitsbewilligungen.mika@ag.ch`, ou
     +41 62 835 18 60). A pergunta agora é fácil: "posso distribuir gratuitamente uma imagem que já
-    capturei?"
-18. Triar as respostas pela pergunta 3 (`score_remote`) e medir contra o critério de 6/24
+    capturei?" — rascunho já pronto em
+    `operacao/gestao/juridico-fiscal/CARTA-AMT-FUER-MIGRATION-RASCUNHO-2026-08-19.md`, falta
+    revisar e enviar
+18. Triar as respostas pela pergunta 3 (`score_remote`) e medir contra o critério de 6/24 —
+    agora dá pra fazer por SQL na tabela `unterentfelden_respostas`, em vez de garimpar o Gmail
+19. **Hermes:** instalar o placar na rotina diária e o termo `/felden` sob demanda —
+    ordem de serviço em `operacao/gestao/infraestrutura/hermes-rotina-unterentfelden/README.md`.
+    Não é bloqueio pro envio; os dados são gravados de qualquer jeito
+20. ~~Corrigir a notificação por email (rótulos e pergunta 3 desatualizados) + tag perdida em opt-in
+    de contato já existente~~ ✅ feito em 21.08 — achado ao testar o formulário com o próprio email
+    do Felipe. Detalhe em `landing/site/README.md`
 
-**Opcional, não bloqueia nada:** registro DNS na Hostinger para o subdomínio próprio — hPanel →
-Domínios → `realvisionmaps.com` → Editor de Zona DNS → registro `A`, nome `unterentfelden`,
-valor `76.76.21.21`. **Confirmar o IP no painel do Vercel na hora**, nunca de memória — o Vercel já
-mudou o IP recomendado antes. Se entrar, atualizar o CORS da Edge Function e o link dos 24 emails
-**no mesmo movimento**, senão o formulário quebra em silêncio.
+**A campanha está no ar e os 24 emails foram enviados.** A partir daqui, o que falta é esperar
+resposta (item 18) e revisar/mandar a carta ao Amt für Migration (item 17) — nada mais bloqueia.
+
+~~**Opcional:** registro DNS na Hostinger para o subdomínio próprio~~ ✅ feito em 20.08 — registro
+`A` (`unterentfelden` → `76.76.21.21`) propagado, SSL emitido, CORS da Edge Function atualizado
+para versão 6 no mesmo movimento (testado ponta a ponta). **Ainda falta:** trocar o link nos 24
+emails (item 14) de `drone-unterentfelden.vercel.app` para `unterentfelden.realvisionmaps.com` —
+o gerador (`emails/gerador-emails.py`) precisa da constante `URL` atualizada antes de rodar de novo.
 
 Manter a instrução do projeto "Projeto 360 Drone Aarau" atualizada conforme isso evoluir —
 é uma regra explícita do Felipe.
