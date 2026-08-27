@@ -241,3 +241,82 @@ Cada disparo de email marketing ganha um número sequencial.
 
 ### 22/07/2026 — Nova fonte de entrada em `email_contatos`: squeeze page da comunidade WhatsApp
 Edge Function pública `capture-community-lead` (mesmo projeto Supabase do Hermes) grava direto em `email_contatos` com `origem_consentimento='blog-<slug>'`. Testado local, ainda não publicado em produção. Detalhe completo em [`TIMELINE.md`](../../projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.
+
+---
+
+### 27/08/2026 — Ingestão do handoff editorial + primeiro disparo da campanha 004
+
+**Bloco 1 — Recuperação de documentos perdidos**
+- Descoberto que `04-CALENDARIO-EDITORIAL.md`, `README.md`, `INDICE-CAMPANHAS.md`,
+  `05-SISTEMA-RESPOSTA-PERSONALIZADA.md` e `06-MANUAL-APRENDIZADO.md`, criados em 21/08, **nunca
+  foram commitados e sumiram do disco**. Confirmado com `git log --diff-filter=A --all`: nenhum
+  deles existiu em commit algum.
+- O 04, 05 e 06 foram restaurados de `TEMP/pacote-email-marketing-2026-08-21/`. O `README.md` e o
+  `INDICE-CAMPANHAS.md` não tinham cópia e foram **reescritos do zero**.
+- Causa: o `.gitignore` do vault só versiona `.md` e ninguém commitou. Risco registrado.
+
+**Bloco 2 — Ingestão do pacote ChatGPT/LBOS**
+- Pacote de 4 arquivos (PRD, plano de execução, manifesto, rascunho de processo) ingerido pelo
+  Fluxo do Documento Vivo, com parada obrigatória no passo 5 (análise de impacto) antes de tocar
+  em qualquer nó.
+- Branch `docs/processo-editorial-email-blog-chatgpt-voz` (commit `ce4e559`) **mergeada no main**
+  com autorização explícita do Felipe. Sem force, sem push automático.
+- Inventário do blog reconferido em `real-vision-core` commit `eacdae6`: **21 posts**, slug por slug.
+  Nada mudou desde a leitura de 25/08.
+- Contagem falada de "7 ou 8 consolidados" descartada como fonte, conforme o PRD mandava.
+  Recalculada do zero: **4 ganchos aprovados e mapeados, 2 descartados**. Tabela em
+  [[04-CALENDARIO-EDITORIAL]] seção 6.
+- Achado: o paradoxo da Kodak não era direção órfã — está inteiro no post 11.
+- Nota de ingestão criada em `LBOS/07-Operacao/inbox/2026-08-27-ingestao-handoff-editorial-email-blog.md`.
+
+**Bloco 3 — Cadência mudou**
+- Felipe trocou a cadência de **semanal para 5 em 5 dias**. Doze emails passam de 12 semanas para
+  60 dias.
+- Os 4 emails da Fase 1 agendados no Google Agenda (`realvisionmaps360@gmail.com`):
+  27/08, 01/09, 06/09, 11/09.
+- `04-CALENDARIO-EDITORIAL.md` corrigido — tinha ficado dizendo "toda quinta, 9h" depois da
+  mudança. Felipe pegou o erro.
+
+**Bloco 4 — Disparo real do email 1**
+- Problema: o `hermes-send` exige `HERMES_SECRET`, e por regra o agente não pede nem manuseia
+  segredo. Felipe deixou claro que não ia operar painel nem rodar comando.
+- Solução: função `hermes-campanha` publicada no Supabase com aprovação explícita do Felipe. Roda
+  **dentro** do Supabase, então lê os segredos do próprio ambiente sem que nada saia do painel.
+  Mantém todas as garantias do `hermes-send`: remetente verificado, descadastro injetado, só
+  contato `ativo`, registro em `email_envios`.
+- Bug encontrado no caminho: o `ConvertTo-Json` do PowerShell 5.1 serializa string vinda de
+  `Get-Content -Raw` como objeto `{value, Length}` em vez de texto. Quebrava com
+  `html.split is not a function`. Resolvido com cast explícito `[string]`.
+- Simulação (`dry_run`) confirmou os 28 contatos antes de qualquer envio.
+- Teste visual para `smarthomefg@gmail.com` (`resend_id 6b5db43c-0dd8-408a-b8bf-e25dcdeee3f2`),
+  aprovado por Felipe com print: logo do topo carregou, assinatura com foto carregou, descadastro
+  visível.
+- Felipe reescreveu o corpo do email antes do disparo. Ajustes de digitação aplicados e a promessa
+  do P.S. trocada de "semana que vem" para "daqui a poucos dias", por causa da nova cadência.
+  Adicionada a menção à narração em áudio do post.
+- **Disparo: 27/08/2026, 11h32 UTC — 28 enviados, 0 falhas.** Confirmado em `email_envios`.
+
+**Bloco 5 — Limpeza de segurança**
+- `hermes-test-send`, criada em 21/08 como temporária e **esquecida ativa em produção por seis
+  dias** com chave fraca embutida e acesso ao `RESEND_API_KEY`, foi **desativada**.
+- `hermes-campanha` desativada logo após cumprir o propósito.
+- As duas tiveram o corpo esvaziado (respondem 410, não usam segredo nenhum) e `verify_jwt` ligado.
+  Não foram apagadas porque o ambiente do Claude Code não tem ferramenta de delete de edge
+  function — Felipe apaga pelo painel quando quiser.
+
+**Bloco 6 — Foto do remetente: investigado e arquivado**
+- Felipe pediu para resolver a ausência de foto do remetente via Gravatar.
+- Checado por consulta pública: `contato@`, `adm@` e `realvisionmaps360@` **já têm Gravatar
+  configurado**. Não era falta de configuração.
+- **O Gmail não usa Gravatar.** Nunca usou. Mexer lá não mudaria nada.
+- O que o Gmail usa é BIMI. DNS conferido: DMARC já está em `p=quarantine` (pré-requisito
+  cumprido), mas não existe registro BIMI nem VMC.
+- O VMC é exigência do Gmail, custa US$ 1.000-1.500/ano e **só é emitido para marca registrada**.
+  Inviável hoje. Decisão: arquivar até a marca ser registrada.
+
+**Decisões do Felipe nesta sessão**
+1. Restaurar o `04` e seguir com ele, em vez de criar arquivo novo
+2. Merge da branch do ChatGPT
+3. Ganchos aprovados um por um: B→post 14, D→post 2, E→post 13, F→post 11; A e C descartados
+4. Cadência de 5 em 5 dias
+5. Publicar a `hermes-campanha` e disparar o email 1 no mesmo dia
