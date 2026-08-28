@@ -46,9 +46,10 @@ nele, o arquivo está errado — não o schema.
 
 ### Campos comuns
 
-`id` · `tipo: painel` · `painel_versao: 1` · `visualizacao` · `nome` · `resumo` · `area` ·
-`prioridade` · `destaque` · `status` · `saude` · `proximo_passo` (+ `_prazo`) · `bloqueio` ·
-`alerta` · `atualizado_em` · `atualizado_por` · `metricas[]` · `documentos[]` · `pendencias[]` ·
+`id` · `tipo: painel` · `painel_versao: 1` · `visualizacao` · `nome` · `resumo` · `o_que_e` ·
+`para_que_serve` · `como_funciona` · `objetivo_final` (+ `_criterio`) · `area` · `prioridade` ·
+`destaque` · `status` · `saude` · `proximo_passo` (+ `_prazo`) · `bloqueio` · `alerta` ·
+`atualizado_em` · `atualizado_por` · `metricas[]` · `documentos[]` · `pendencias[]` ·
 arestas (`pertence_a`, `depende_de`, `afeta`) · `tags`
 
 Datas **sempre ISO** (`AAAA-MM-DD`), inclusive dentro de `itens[]`. O `DD/MM/AAAA` do corpo do
@@ -58,6 +59,81 @@ vault não entra aqui — formatar é trabalho da UI.
 e `risco` ao mesmo tempo. É o campo que dá panorama de verdade.
 
 `documentos[].caminho` é relativo à raiz do vault, com `/`, terminando em `.md`.
+
+### O bloco de compreensão (obrigatório desde 28/08/2026)
+
+Nasceu de um problema real: Felipe abriu o painel do blog e não entendeu a própria tela. O
+`resumo` diz o **estado** ("Ciclo 1, Fase 1 em curso"); ele pressupõe que o leitor já sabe o que
+a coisa é. Esses campos dizem o que a coisa **é**:
+
+| Campo | Obrigatório | O que escrever |
+|---|---|---|
+| `o_que_e` | **sim** | 1-2 frases em português leigo. O que a pessoa está olhando. |
+| `para_que_serve` | não | O problema que o projeto resolve. Por que ele existe. |
+| `como_funciona` | não | Lista de 3 a 5 passos do operacional, cada passo uma frase. |
+| `objetivo_final` (+ `_criterio`) | não | Onde isso termina, e como saberemos que chegou. |
+
+Escreva para quem nunca abriu a pasta do projeto. Sem sigla interna, sem nome de arquivo, sem
+jargão técnico. "A fila de posts do blog" e não "backlog do pipeline editorial".
+
+> **`objetivo_final` fica em aberto de propósito.** Decisão do Felipe em 28/08/2026: por
+> enquanto, nenhum painel declara objetivo final. Quando o campo está ausente, a UI mostra
+> "Objetivo final não declarado" em âmbar. Isso é o comportamento desejado, não esquecimento.
+> Não preencha por conta própria e não torne o campo obrigatório sem falar com ele.
+
+### `ajuda` — o "?" de cada item
+
+Campo opcional em `metricas[]`, `pendencias[]`, `documentos[]`, `itens[]` e nas colunas do
+kanban. Vira um botão "?" ao lado daquele item exato na tela.
+
+Existe porque a explicação geral do projeto não resolve a dúvida pontual ("o que conta como
+falha no envio?"), e essa dúvida some se a resposta só mora na cabeça de quem escreveu o
+arquivo. **Toda métrica e toda coluna de kanban devem ter `ajuda`** — são os elementos que mais
+condensam significado em pouco texto.
+
+Termos do próprio sistema (`ativo`, `risco`, `defasado`, os moldes de visualização) **não** vão
+em `ajuda`: eles já estão definidos uma vez em `src/lib/glossario.ts` no app e a UI busca de lá.
+Não repita glossário dentro do `_PAINEL.md`.
+
+### `fonte` e `apurado_em` — de onde vem o número
+
+Métrica sem procedência vira folclore: ninguém sabe se "28 contatos" foi contado no banco hoje
+ou copiado de um `.md` que envelheceu. Duas formas:
+
+```yaml
+metricas:
+  - rotulo: Contatos ativos
+    valor: 27
+    fonte:
+      tipo: banco                                  # fora do vault, não vira link no app
+      descricao: "tabela email_contatos no Supabase do VisionFlow, status = ativo"
+    apurado_em: 2026-08-28
+    ajuda: "27 com status ativo. 3 deles ainda são contatos de teste pendentes de limpeza."
+  - rotulo: Fases entregues
+    valor: "7 de 8"
+    fonte:
+      tipo: documento                              # .md do vault, vira link clicável
+      caminho: operacao/projetos/_RV-Internos/visionvault/TIMELINE.md
+```
+
+`tipo: documento` faz o gerador servir aquele `.md`, e a métrica vira link. `tipo: banco` não
+tem destino dentro do app: a `descricao` aparece no "?" e o card mostra "fora do vault".
+
+**Caso real que justifica o campo:** o painel do email marketing dizia "Contatos ativos: 28",
+número copiado de um snapshot de 22/07. Em 28/08 o banco tinha 27 ativos, porque um contato deu
+bounce e o webhook o tirou da lista sozinho. Ninguém tinha como perceber.
+
+### Colunas de kanban com explicação
+
+`colunas` aceita as duas formas. A curta continua válida para quem não tem o que explicar:
+
+```yaml
+colunas:
+  - ideia                                          # forma curta
+  - id: rascunho                                   # forma longa
+    rotulo: Rascunho
+    ajuda: "Texto sendo escrito. Já passou pela pesquisa de intenção de busca."
+```
 
 ### As três visualizações
 
@@ -82,9 +158,14 @@ existente distorce a leitura do projeto — não por gosto.
 1. Ler a pasta inteira do projeto — nunca leitura parcial.
 2. Escolher a `visualizacao` que menos distorce o que aquele projeto é.
 3. Escrever o `_PAINEL.md` com o **estado real**, sem inventar nada. Sem dado, campo omitido.
-4. `cd tools/painel && node build.ts --dry-run` — precisa sair 0.
-5. Commit e push no main. A Action publica em ~2 min.
-6. Conferir no app.
+4. Preencher o bloco de compreensão: `o_que_e` (obrigatório), `para_que_serve` e
+   `como_funciona`. Depois reler imaginando alguém que nunca ouviu falar do projeto. Se essa
+   pessoa não entenderia, reescreva antes de seguir.
+5. Preencher `ajuda` em **toda métrica** e em **toda coluna de kanban**. Métrica que vem de
+   número apurado leva também `fonte` e `apurado_em`.
+6. `cd tools/painel && node build.ts --dry-run` — precisa sair 0.
+7. Commit e push no main. A Action publica em ~2 min.
+8. Conferir no app.
 
 ---
 
@@ -167,6 +248,11 @@ que painel nenhum. Duas defesas, ambas ativas:
 
 **Ao encerrar qualquer sessão de trabalho num projeto que está no painel, atualizar o
 `_PAINEL.md` dele é parte do trabalho** — não item opcional.
+
+Terceira defesa, desde 28/08/2026: métrica com `fonte` e `apurado_em` diz de onde o número veio
+e quando foi contado. Sem isso, um número copiado de documento velho passa por dado de hoje. Ao
+atualizar um `_PAINEL.md`, reconferir os números que têm `fonte: banco` contra o banco de
+verdade, e mover o `apurado_em` junto.
 
 ---
 

@@ -5,6 +5,15 @@ painel_versao: 1
 visualizacao: campanha-cadencia
 nome: Email Marketing — Projeto Hermes
 resumo: "Cadência de 12 emails para a base de 28 contatos. Ciclo 1, Fase 1 em curso."
+
+o_que_e: "A campanha de email da Real Vision para quem já é cliente. São 12 emails escritos numa ordem pensada, disparados de 5 em 5 dias, cada um construindo em cima do anterior."
+para_que_serve: "Manter relação com quem já comprou e abrir espaço para os serviços que aquele cliente ainda não tem. É mais barato vender de novo para quem já confia do que buscar cliente novo."
+como_funciona:
+  - "A base de contatos vive numa tabela no Supabase, com o registro de quem autorizou receber."
+  - "Os 12 emails são divididos em 3 fases: primeiro a oportunidade, depois a transformação, por último a oferta."
+  - "Cada email é escrito com antecedência, Felipe aprova o texto, e só então ele é agendado."
+  - "O disparo sai pelo Resend, no domínio realvisionmaps.com, um email a cada 5 dias."
+  - "Um webhook grava de volta entrega, abertura, clique e falha. Quem dá bounce ou marca spam sai da lista ativa sozinho."
 area: marketing
 prioridade: alta
 destaque: true

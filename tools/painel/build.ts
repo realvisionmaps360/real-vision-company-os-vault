@@ -219,6 +219,13 @@ async function main() {
   for (const p of projetos) {
     for (const d of p.documentos ?? []) servidos.add(d.caminho);
     for (const i of p.itens ?? []) if (i.caminho) servidos.add(i.caminho);
+    // Fonte de metrica do tipo `documento` entra na whitelist pelo mesmo caminho dos
+    // `documentos[]`: uma vez servido, ele ganha hash e aparece na arvore, e o app
+    // resolve o link igual ja faz com os documentos listados.
+    // Fonte `banco` nao resolve nada — nao existe destino clicavel dentro do app.
+    for (const m of p.metricas ?? []) {
+      if (m.fonte?.tipo === "documento") servidos.add(m.fonte.caminho);
+    }
   }
 
   // Um nivel de vizinhos: evita beco sem saida na navegacao sem explodir o tamanho.

@@ -18,6 +18,7 @@
 | 5 — Arquivos + calendário | ✅ Concluída | Calendário lê datas do vault |
 | 6 — Mapa mental | ✅ Concluída | React Flow + dagre |
 | 7 — Polimento e teste | ✅ Concluída | Validado logado em produção |
+| 7.5 — Painel que se explica | ✅ Concluída | Bloco de compreensão, glossário e "?" por item |
 | 8 — Google Calendar (OAuth) | ⬜ Não iniciada | Adiado por decisão do Felipe |
 | Futuro — frontmatter no vault inteiro | ⬜ Não iniciada | ~665 documentos vivos |
 
@@ -93,6 +94,69 @@ Verificação parcial precisa ser declarada como parcial.
 
 ---
 
+### 28/08/2026 — Sessão 2: o painel passa a se explicar
+
+**Ponto de partida.** Felipe abriu a tela do Pipeline de Blog e não entendeu. As palavras dele:
+gostou do fluxo, mas o início não tem uma instrução simples dizendo o que é o projeto e o que é
+cada tela, e falta um botão de interrogação com a explicação específica de cada item. O pedido:
+que essas telas sejam legíveis por qualquer pessoa, porque elas são o reflexo real dos
+documentos vivos e ele vai ler o estado dos projetos por ali.
+
+**O diagnóstico.** A tela abria em `MARKETING · ATIVO · RISCO`, quatro métricas sem tradução
+(`Na fila 6`, `No painel 2`, `No site 21`, `Sem tradução 2`) e um kanban. Nada dizia o que o
+projeto era. O vocabulário do sistema (`ativo`, `risco`, `defasado`, os três moldes) não estava
+definido em lugar nenhum do app. E `objetivo_final` não existia no contrato: não era bug de UI,
+era lacuna do modelo de dados.
+
+**Decisão central:** a explicação nasce no `_PAINEL.md`, não no código. Explicação hardcoded no
+app morre no dia em que o projeto muda, e essas telas precisam refletir o documento vivo.
+
+**Construído:**
+- Contrato: `o_que_e` (obrigatório), `para_que_serve`, `como_funciona`, `objetivo_final` (+ critério)
+- `ajuda` em métrica, pendência, documento, item e coluna de kanban — o texto do "?" daquele item
+- `Metrica.fonte` (documento do vault ou banco fora dele) + `apurado_em`
+- `colunas` do kanban passa a aceitar explicação por coluna, sem quebrar a forma curta
+- `src/lib/glossario.ts` — o vocabulário do sistema definido uma vez, lido das fontes normativas
+- Componente `Ajuda`: toggletip em portal, fecha com Esc e clique fora, não vaza em 390px
+- Tela de projeto: bloco "O que é isso" sempre visível + "Entender este painel" expansível
+- Início: cartão dispensável "O que é o VisionVault" e "?" nas três métricas do topo
+
+**Decisões registradas:**
+- 28/08 — `objetivo_final` fica **em aberto em todos os painéis** por enquanto. Ausente, a UI
+  mostra "Objetivo final não declarado" em âmbar. É lacuna visível de propósito, não erro
+- 28/08 — Métrica com fonte de banco **não vira link**. Não há destino dentro do app, e criar
+  affordance de clique sem destino é mentir para o dedo do usuário
+- 28/08 — Glossário mora no app, não repetido em cada `_PAINEL.md`. Termo do sistema é do
+  sistema; `ajuda` é para o que é específico daquele item
+
+**Dois bugs encontrados e corrigidos:**
+
+1. **Primeira coluna do kanban cortada em 390px.** A causa não era o `-mx-4`/`px-4`, como
+   parecia. Era `snap-mandatory`: o snapport usa o padding box, então `snap-start` encaixava a
+   coluna em `x=0` e o container se auto-rolava 16px sozinho no carregamento. Corrigido com
+   `scroll-pl-4`. Diagnóstico fechado medindo `scrollLeft` no DOM, não a olho
+2. **O "?" riscado.** Em item de checklist concluído, o `line-through` atravessava o botão de
+   ajuda. O "?" passou a ser irmão do texto, não filho
+
+**O primeiro uso da procedência já pegou um erro.** O painel dizia "Contatos ativos: 28". A
+skill `rv-email` aponta a tabela `email_contatos` como a base viva, e o documento
+`03-SEGMENTACAO-CONTATOS.md` traz um snapshot de 22/07/2026 com 28 contatos. Foi de lá que o
+número veio. Em 28/08 o banco tem **27 ativos**: um contato de relação comercial deu bounce e o
+webhook do Resend o tirou da lista ativa sozinho, como está documentado na skill. Dos 27, três
+ainda são contatos de teste, então o público real de campanha é 24. O `28` também é o número que
+o E1 recebeu no disparo de 27/08, o que significa que o envio pegou os testes e o contato que
+depois bounceou.
+
+**Em aberto ao fim da sessão:** Felipe precisa decidir se a métrica mostra 27 ou 24, e se o
+snapshot de 22/07 no `03-SEGMENTACAO-CONTATOS.md` ganha uma linha datada com o estado de hoje.
+Até lá, a métrica de contatos ficou intocada no `_PAINEL.md` do email marketing.
+
+**Verificado:** typecheck limpo, lint sem erro novo, gerador validando os 3 painéis, e as três
+visualizações percorridas em 390px e 1280px com o "?" aberto, fechado por Esc e por clique fora,
+sem rolagem horizontal na página. Não testado em produção: as mudanças estão só no local.
+
+---
+
 ## Próxima sessão — métrica clicável
 
 Hoje o card de métrica é texto morto. O número **28 contatos ativos** vive no `_PAINEL.md` do
@@ -132,3 +196,4 @@ as outras.
 | Data | O que mudou | Motivo |
 |---|---|---|
 | 2026-08-28 | Arquivo criado com o registro da sessão 1 | Primeira entrega do VisionVault |
+| 2026-08-28 | Registro da sessão 2: painel que se explica | Felipe abriu o painel do blog e não entendeu a própria tela |
