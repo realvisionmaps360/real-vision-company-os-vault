@@ -1,0 +1,82 @@
+name: Gerar índice do VisionVault
+
+# Sempre que um documento do vault muda, o índice do painel é regerado e publicado
+# no branch órfão `painel-dist`. O app lê de lá, nunca de `main`.
+#
+# Por que branch separado: o `vault-sync.sh` roda de hora em hora na VPS e commita em `main`.
+# Se a Action também escrevesse em `main`, os dois brigariam por push.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/_PAINEL.md"
+      - "**/*.md"
+      - "tools/painel/**"
+      - ".github/workflows/painel.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: painel-dist
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # O gerador roda `git log` para detectar painel defasado. Sem histórico completo
+          # ele não consegue, e todo projeto apareceria como atualizado.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Instalar dependências do gerador
+        working-directory: tools/painel
+        run: npm ci || npm install
+
+      - name: Gerar índice
+        id: gerar
+        working-directory: tools/painel
+        # `continue-on-error` de propósito: um _PAINEL.md quebrado não pode impedir a
+        # publicação dos projetos que estão válidos. O passo "Falhar se houve erro" avisa depois.
+        continue-on-error: true
+        run: node build.ts
+
+      - name: Publicar em painel-dist
+        run: |
+          if [ ! -f painel/index.json ]; then
+            echo "Nenhum índice gerado. Abortando publicação."
+            exit 1
+          fi
+          git config user.name "VisionVault Bot"
+          git config user.email "realvisionmaps360@gmail.com"
+
+          # Guarda o resultado antes de trocar de branch.
+          cp -r painel /tmp/painel
+
+          git checkout --orphan painel-dist
+          git rm -rf --cached . > /dev/null 2>&1 || true
+          rm -rf ./* || true
+          cp -r /tmp/painel ./painel
+
+          # O .gitignore do vault ignora tudo que não é .md — sem --force nada seria commitado.
+          # Este é o passo que mais vai ser esquecido se alguém reescrever esta Action.
+          git add --force painel/
+          git commit -m "painel: índice gerado de ${GITHUB_SHA::7}" || {
+            echo "Nada mudou no índice."
+            exit 0
+          }
+          git push --force origin painel-dist
+
+      - name: Falhar se houve erro de schema
+        if: steps.gerar.outcome == 'failure'
+        run: |
+          echo "O índice foi publicado, mas ao menos um _PAINEL.md tem erro de schema."
+          echo "Veja o log do passo 'Gerar índice'."
+          exit 1

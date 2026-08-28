@@ -13,6 +13,15 @@
 # na máquina do Felipe. Escopo estreito de propósito: só esta pasta, não *.sql global.
 !operacao/projetos/real-vision-academy/docs/prds/*.sql
 
+# Exceção: o gerador do VisionVault. É código, não documento, mas precisa estar versionado
+# porque a GitHub Action roda ele a cada push. Escopo estreito de propósito — só estes arquivos,
+# não a pasta tools/ inteira. Os JSON gerados em painel/ continuam ignorados aqui: eles vivem
+# no branch órfão `painel-dist`, publicados com `git add --force` pela Action.
+!tools/painel/*.ts
+!tools/painel/package.json
+!tools/painel/package-lock.json
+!.github/workflows/*.yml
+
 # Bloquear repos git internos (evitar "repo dentro de repo")
 # Cada linha abaixo é um repositório de código com .git próprio.
 # Pastas de projeto que só têm .md (documentação) NÃO precisam ser listadas aqui —
@@ -32,6 +41,7 @@ operacao/clientes/arquivos/Dorival  Martins - Brazilcomp/entrega-final/site-vers
 operacao/projetos/_RV-Internos/jogo-da-terra/prototipo/
 operacao/clientes/arquivos/Hallan Costa - Lavanderia Magnólia/site/
 operacao/projetos/_RV-Internos/instagram-mcp/
+operacao/projetos/_RV-Internos/sites/visionvault/
 
 # Bloquear pastas com arquivos grandes ou desnecessários
 loja-imagens/

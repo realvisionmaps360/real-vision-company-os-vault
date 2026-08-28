@@ -1,0 +1,16 @@
+{
+  "name": "@rv/painel-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gerador do indice do VisionVault: le os _PAINEL.md do vault e emite JSON.",
+  "scripts": {
+    "build": "node build.ts",
+    "check": "node build.ts --dry-run"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3",
+    "zod": "^3.23.8"
+  }
+}
