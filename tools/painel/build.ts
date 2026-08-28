@@ -72,7 +72,17 @@ function ultimoCommitDaPasta(pastaRelativa: string): string | null {
   try {
     const saida = execFileSync(
       "git",
-      ["log", "-1", "--format=%cI", "--", pastaRelativa],
+      [
+        "log",
+        "-1",
+        "--format=%cI",
+        "--",
+        pastaRelativa,
+        // O proprio painel nao conta como "a pasta mudou". Sem esta exclusao, o commit
+        // que atualiza o resumo marca o resumo como defasado — o alerta dispararia
+        // justamente quando o dado acabou de ser posto em dia, e viraria ruido ignorado.
+        `:(exclude)${pastaRelativa}/_PAINEL.md`,
+      ],
       { cwd: VAULT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
     ).trim();
     return saida ? saida.slice(0, 10) : null;
