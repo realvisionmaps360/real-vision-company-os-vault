@@ -55,9 +55,42 @@ where status = 'ativo' and tags @> array['nicho-pousada'];
 where tags @> array['nicho-pousada', 'lead-blog-diferenca-entre-llm-e-slm']
 ```
 
-## Estado atual da base (22/07/2026)
+## Estado da base
+
+> Cada apuração vira uma linha nova aqui, com data. Não sobrescrever a anterior: foi justamente
+> um número de julho lido como se fosse de hoje que colocou "28 contatos ativos" no painel do
+> VisionVault por mais de um mês.
+
+### 22/07/2026
 
 28 contatos. `origem_consentimento`: 22 `relacao_comercial` (21 já linkados a `cliente_id` — clientes existentes), 3 `teste`, 2 `manual`, 1 `sócia Real Vision 360`. Nenhuma tag aplicada ainda — coluna nova, começa vazia.
+
+### 28/08/2026
+
+28 registros na tabela, **24 com `status = 'ativo'`**. É esse 24 que o painel do VisionVault mostra.
+
+| `status` | `origem_consentimento` | Qtd | Quem |
+|---|---|---|---|
+| ativo | relacao_comercial | 21 | 20 clientes + o próprio Felipe (`realvisionmaps360`) |
+| ativo | manual | 2 | Pais do Felipe (Maria Luci e Acacio) |
+| ativo | sócia Real Vision 360 | 1 | Romana |
+| bounced | relacao_comercial | 1 | Saiu sozinho pelo webhook do Resend |
+| descadastrado | manual | 2 | `smarthomefg` e `felipegarciajericoacoara`, endereços do Felipe |
+| descadastrado | teste | 1 | `dronevideomakerjeri`, email de teste do Felipe |
+
+**Clientes reais na lista: 20.** O `realvisionmaps360` continua marcado como `relacao_comercial`
+e por isso é contado junto com os clientes.
+
+O que mudou desde julho, e por quê:
+
+- **1 bounce saiu sozinho.** O webhook `resend-webhook`, ativo desde 20/08, tira da lista ativa
+  quem dá bounce ou marca spam. Funcionou como devia; o painel é que ficou parado no número velho.
+- **Os 3 `teste` não eram teste de sistema.** Dois eram os pais do Felipe, que ele quis manter e
+  foram reclassificados de `teste` para `manual`. O terceiro era o email de teste dele.
+- **Felipe tinha 3 endereços recebendo cada disparo.** Ficou só o `realvisionmaps360`; os outros
+  dois foram descadastrados em 28/08.
+- **Descadastrado, não apagado.** Ninguém foi removido da tabela: sai da lista ativa e some das
+  métricas, mas o registro fica caso precise voltar.
 
 ## Pendente (etapas futuras, não fazer sem Felipe revisar)
 

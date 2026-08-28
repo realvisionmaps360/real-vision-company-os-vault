@@ -4,7 +4,7 @@ tipo: painel
 painel_versao: 1
 visualizacao: campanha-cadencia
 nome: Email Marketing — Projeto Hermes
-resumo: "Cadência de 12 emails para a base de 28 contatos. Ciclo 1, Fase 1 em curso."
+resumo: "Cadência de 12 emails para a base de 24 contatos. Ciclo 1, Fase 1 em curso."
 
 o_que_e: "A campanha de email da Real Vision para quem já é cliente. São 12 emails escritos numa ordem pensada, disparados de 5 em 5 dias, cada um construindo em cima do anterior."
 para_que_serve: "Manter relação com quem já comprou e abrir espaço para os serviços que aquele cliente ainda não tem. É mais barato vender de novo para quem já confia do que buscar cliente novo."
@@ -22,30 +22,39 @@ status: ativo
 saude: atencao
 proximo_passo: "Escrever a Fase 2 (emails 5 a 8) — sem ela a cadência quebra."
 proximo_passo_prazo: 2026-09-16
-atualizado_em: 2026-08-27
+atualizado_em: 2026-08-28
 atualizado_por: claude
 proxima_revisao: 2026-09-05
 
 canal: email
 publico: "Contatos ativos com consentimento registrado"
-tamanho_publico: 28
+tamanho_publico: 24
 inicio: 2026-08-27
 fim_previsto: 2026-10-26
 
 metricas:
   - rotulo: Contatos ativos
-    valor: 28
+    valor: 24
     formato: numero
-    tendencia: estavel
+    tendencia: caindo
+    fonte:
+      tipo: banco
+      descricao: "Tabela email_contatos no Supabase do VisionFlow, contando status = ativo"
+    apurado_em: 2026-08-28
+    ajuda: "24 com status ativo: 20 clientes, os pais do Felipe, a Romana e o próprio Felipe. Nenhum contato de teste restante na lista."
   - rotulo: Fase 1 enviada
     valor: "1 de 4"
     formato: texto
+    ajuda: "A Fase 1 tem 4 emails (E1 a E4). Só o E1 saiu; os outros três estão agendados."
   - rotulo: Cadência
     valor: "5 em 5 dias"
     formato: texto
+    ajuda: "Intervalo entre um email e o próximo. Espaçado assim de propósito: mais denso cansa a lista e derruba a reputação do domínio."
   - rotulo: Falhas no envio
     valor: 0
     formato: numero
+    ajuda: "Erros técnicos no disparo, gravados pelo webhook do Resend. Não confundir com bounce, que é o email existir e recusar a entrega."
+    apurado_em: 2026-08-28
 
 itens:
   - id: c004-01
@@ -99,8 +108,9 @@ pendencias:
     prazo: 2026-09-16
   - texto: "Ajustar o P.S. do email 4"
     prazo: 2026-09-11
-  - texto: "Limpar os 3 contatos de origem_consentimento = teste"
+  - texto: "Reclassificar os 20 contatos de relação comercial com tag de nicho"
     prazo: null
+    ajuda: "Sem nicho marcado, toda campanha vai para a lista inteira. Precisa do Felipe revisar cliente a cliente: nicho não dá para inferir sozinho."
   - texto: "Apagar as functions hermes-campanha e hermes-test-send no Supabase"
     prazo: null
   - texto: "Publicar em produção a captura de lead do blog (capture-community-lead)"
@@ -145,3 +155,5 @@ O conteúdo humano está no [[README]]. Aqui só mora o estado que o painel prec
 | Data | O que mudou | Motivo |
 |---|---|---|
 | 2026-08-27 | Arquivo criado | Fase 0 do VisionVault — contrato de dados do painel |
+| 2026-08-28 | Bloco de compreensão e `ajuda` nas métricas | As telas do painel não se explicavam sozinhas |
+| 2026-08-28 | Contatos ativos: 28 → 24, com `fonte` e `apurado_em` | O 28 vinha de um snapshot de 22/07. Limpeza da base tirou 3 endereços de teste e 1 bounce já tinha saído sozinho |
