@@ -26,6 +26,7 @@ Todos em `operacao/projetos/_RV-Internos/sites/`.
 | `real-vision-site` | `realvisionmaps360/real-vision-core` | `main` | Site oficial [[project_site_url\|realvisionmaps.com]] | ✅ |
 | `visionflow` | `realvisionmaps360/visionflow-crm-48fe197a` | `main` | CRM interno — ver [[project_visionflow_migracao]] | ✅ |
 | `site-template-rv-01` | `realvisionmaps360/site-template-rv-01` (privado) | `main` | Template e-commerce reutilizável, derivado do projeto BrazilComp/Dorival (dados de cliente removidos, histórico squashado) | ⚪ |
+| `lp-sites` | ainda sem repo próprio (vive dentro do vault) | `main` do vault | Landing page de venda do pilar Sites Profissionais. Destino do link de rodapé dos sites de cliente e do tráfego pago. Ver `README.md` da pasta | 🟡 — construída em 29/08/2026, sem deploy |
 
 ## Repositórios de campanha
 
