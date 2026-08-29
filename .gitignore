@@ -19,17 +19,6 @@
 # no branch órfão `painel-dist`, publicados com `git add --force` pela Action.
 !tools/painel/*.ts
 
-# Exceção: o código da LP de venda de sites. É landing page própria da RV, ainda sem repo
-# separado no GitHub. Sem estas linhas ela existiria só na máquina de quem construiu.
-# Escopo estreito de propósito: só esta pasta. Quando virar repo próprio (padrão da landing
-# de Unterentfelden), remover este bloco e registrar em CONTROLE-REPOSITORIOS.md.
-!operacao/projetos/_RV-Internos/sites/lp-sites/index.html
-!operacao/projetos/_RV-Internos/sites/lp-sites/package.json
-!operacao/projetos/_RV-Internos/sites/lp-sites/vercel.json
-!operacao/projetos/_RV-Internos/sites/lp-sites/.env.example
-!operacao/projetos/_RV-Internos/sites/lp-sites/src/*.css
-!operacao/projetos/_RV-Internos/sites/lp-sites/src/*.js
-!operacao/projetos/_RV-Internos/sites/lp-sites/public/*.svg
 !tools/painel/package.json
 !tools/painel/package-lock.json
 !.github/workflows/*.yml
@@ -79,3 +68,17 @@ node_modules/
 *.zip
 *.rar
 *.7z
+
+# Exceção: o código da LP de venda de sites. É landing page própria da RV, ainda sem repo
+# separado no GitHub. Sem estas linhas ela existiria só na máquina de quem construiu.
+# Escopo estreito de propósito: só esta pasta. Quando virar repo próprio (padrão da landing
+# de Unterentfelden), remover este bloco e registrar em CONTROLE-REPOSITORIOS.md.
+!operacao/projetos/_RV-Internos/sites/lp-sites/index.html
+!operacao/projetos/_RV-Internos/sites/lp-sites/package.json
+!operacao/projetos/_RV-Internos/sites/lp-sites/vercel.json
+!operacao/projetos/_RV-Internos/sites/lp-sites/.env.example
+!operacao/projetos/_RV-Internos/sites/lp-sites/src/*.css
+!operacao/projetos/_RV-Internos/sites/lp-sites/src/*.js
+!operacao/projetos/_RV-Internos/sites/lp-sites/public/*.png
+!operacao/projetos/_RV-Internos/sites/lp-sites/public/*.webp
+!operacao/projetos/_RV-Internos/sites/lp-sites/public/*.ico

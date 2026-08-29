@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://sites.realvisionmaps.com/og-sites.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,9 +29,9 @@
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
     <a class="nav__brand" href="https://realvisionmaps.com" aria-label="Real Vision 360">
-      <span class="wordmark">Real Vision<span class="amber">360</span></span>
+      <img src="/logo-header.png" alt="Real Vision 360" width="93" height="36" draggable="false" />
     </a>
-    <a class="btn btn--sm js-wa" data-wa="nav" href="#"><span class="nav__cta-full">Falar no </span>WhatsApp</a>
+    <a class="btn btn--sm js-wa" data-wa="nav" href="#"><span class="nav__cta-full">Falar no&nbsp;WhatsApp</span><span class="nav__cta-short">WhatsApp</span></a>
   </div>
 </header>
 
@@ -41,31 +41,41 @@
 <section class="hero">
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <p class="eyebrow">Sites profissionais</p>
-    <h1 class="hero__title">
-      Seu site devia<br /><span class="amber">trazer cliente.</span>
-    </h1>
-    <p class="hero__sub">
-      A maioria dos sites de negócio local é um folheto online. Bonito, parado, invisível no Google.
-      A gente constrói o outro tipo: rápido, encontrável e feito pra converter quem chega.
-    </p>
-    <div class="hero__cta">
-      <a class="btn js-wa" data-wa="hero" href="#">Quero um diagnóstico gratuito</a>
-      <a class="btn btn--ghost" href="#projetos">Ver projetos reais</a>
+    <div class="hero__col">
+      <p class="eyebrow">Sites profissionais</p>
+      <h1 class="hero__title">
+        Seu site devia <span class="amber">trazer cliente.</span>
+      </h1>
+      <p class="hero__sub">
+        A maioria dos sites de negócio local é um folheto online. Bonito, parado, invisível no Google.
+        A gente constrói o outro tipo: rápido, encontrável e feito pra converter quem chega.
+      </p>
+      <div class="hero__cta">
+        <a class="btn js-wa" data-wa="hero" href="#">Quero um diagnóstico gratuito <span class="arrow">&rarr;</span></a>
+        <a class="btn--text" href="#projetos">Ver projetos reais <span class="arrow">&rarr;</span></a>
+      </div>
+      <p class="hero__micro">
+        Você fala direto com quem projeta e constrói o site. Sem intermediário, sem time de vendas.
+      </p>
     </div>
-    <p class="hero__micro">
-      Você fala direto com quem projeta e constrói o site. Sem intermediário, sem time de vendas.
-    </p>
+    <div class="hero__media">
+      <img src="/hero-sites.webp" alt="Site profissional da Real Vision aberto em notebook e celular"
+           width="1280" height="853" fetchpriority="high" decoding="async" />
+      <span class="hero__media-veil" aria-hidden="true"></span>
+    </div>
   </div>
 </section>
 
 <!-- ============ BARRA DE CREDIBILIDADE ============ -->
 <section class="strip" aria-label="Números da Real Vision">
   <div class="wrap strip__inner">
-    <div class="strip__item"><b>30+</b><span>projetos entregues</span></div>
-    <div class="strip__item"><b>10+</b><span>cidades atendidas</span></div>
-    <div class="strip__item"><b>5+</b><span>segmentos</span></div>
-    <div class="strip__item"><b>BR + CH</b><span>Brasil e Suíça</span></div>
+    <p class="strip__tag">Números da operação, não estimativa de portfólio.</p>
+    <div class="strip__grid">
+      <div class="strip__item"><b>17+</b><span>Sites entregues</span></div>
+      <div class="strip__item"><b>33+</b><span>Tours 360°</span></div>
+      <div class="strip__item"><b>12+</b><span>Cidades</span></div>
+      <div class="strip__item"><b>9+</b><span>Segmentos</span></div>
+    </div>
   </div>
 </section>
 
@@ -104,7 +114,7 @@
 </section>
 
 <!-- ============ O QUE VOCÊ RECEBE ============ -->
-<section class="sec sec--surface" id="entrega">
+<section class="sec sec--band" id="entrega">
   <div class="wrap">
     <p class="eyebrow">O que está incluso</p>
     <h2 class="sec__title">Site pronto pra trabalhar, não pra enfeitar.</h2>
@@ -158,7 +168,7 @@
 </section>
 
 <!-- ============ PROCESSO ============ -->
-<section class="sec sec--surface" id="processo">
+<section class="sec sec--band" id="processo">
   <div class="wrap">
     <p class="eyebrow">Como a gente trabalha</p>
     <h2 class="sec__title">Seis etapas. Você sabe onde está em cada uma.</h2>
@@ -196,7 +206,7 @@
 </section>
 
 <!-- ============ PORTFÓLIO ============ -->
-<section class="sec sec--surface" id="projetos">
+<section class="sec sec--band" id="projetos">
   <div class="wrap">
     <p class="eyebrow">Projetos reais</p>
     <h2 class="sec__title">De pousada na Bahia a negócio na Suíça.</h2>
@@ -208,7 +218,7 @@
       <article class="card card--proj"><h3>Itacaré Virtual</h3><p class="proj__cat">Portal turístico</p><p class="proj__loc">Itacaré, BA</p><p>Portal com tours de vários negócios da cidade em um só lugar.</p></article>
       <article class="card card--proj"><h3>Universo Paralello 18°</h3><p class="proj__cat">Tour virtual e HUB</p><p class="proj__loc">Pratigi, Ituberá, BA</p><p>Estrutura digital do evento, com navegação imersiva pelo espaço.</p></article>
     </div>
-    <p class="note">30+ projetos entregues entre Brasil, Suíça, Itália e Bósnia. Portfólio completo em <a href="https://realvisionmaps.com/portfolio" target="_blank" rel="noopener">realvisionmaps.com/portfolio</a>.</p>
+    <p class="note">Projetos entregues entre Brasil, Suíça, Itália e Bósnia. Portfólio completo em <a href="https://realvisionmaps.com/portfolio" target="_blank" rel="noopener">realvisionmaps.com/portfolio</a>.</p>
   </div>
 </section>
 
@@ -218,12 +228,12 @@
     <p class="eyebrow">Perguntas diretas</p>
     <h2 class="sec__title">O que a gente mais ouve antes de fechar.</h2>
     <div class="faq">
-      <details><summary>Quanto custa?</summary><div><p>Depende do formato e do escopo. Um cartão digital e uma loja virtual não custam a mesma coisa. O diagnóstico é gratuito e define o escopo. Você recebe o valor fechado por escrito antes de decidir qualquer coisa. Sem surpresa no meio do caminho.</p></div></details>
-      <details><summary>Em quanto tempo fica pronto?</summary><div><p>Depende do formato. Uma landing page sai em dias. Um site institucional leva algumas semanas, porque envolve conteúdo, estrutura e revisão. No diagnóstico você recebe o prazo real do seu caso, não uma média de propaganda.</p></div></details>
-      <details><summary>Já tenho site. Preciso jogar fora?</summary><div><p>Não necessariamente. A gente parte do que existe: domínio, textos, fotos, ficha do Google. O diagnóstico mostra o que dá pra aproveitar e o que precisa ser reconstruído, com o motivo técnico de cada decisão.</p></div></details>
-      <details><summary>Vocês atendem minha cidade?</summary><div><p>Site é entregue 100% remoto, pra qualquer lugar. Já entregamos no interior da Bahia, em São Paulo, na Suíça, na Itália e na Bósnia. Só a captação de fotos e tour 360° depende de deslocamento.</p></div></details>
-      <details><summary>Depois de pronto, fico dependente de vocês?</summary><div><p>Não. O domínio fica no seu nome e você recebe os acessos. Existe suporte contratado pra quem quer, mas é escolha, não amarra.</p></div></details>
-      <details><summary>Vou falar com um vendedor?</summary><div><p>Não. Você fala direto com quem projeta e constrói o site.</p></div></details>
+      <details><summary><span>Quanto custa?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Depende do formato e do escopo. Um cartão digital e uma loja virtual não custam a mesma coisa. O diagnóstico é gratuito e define o escopo. Você recebe o valor fechado por escrito antes de decidir qualquer coisa. Sem surpresa no meio do caminho.</p></div></details>
+      <details><summary><span>Em quanto tempo fica pronto?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Depende do formato. Uma landing page sai em dias. Um site institucional leva algumas semanas, porque envolve conteúdo, estrutura e revisão. No diagnóstico você recebe o prazo real do seu caso, não uma média de propaganda.</p></div></details>
+      <details><summary><span>Já tenho site. Preciso jogar fora?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Não necessariamente. A gente parte do que existe: domínio, textos, fotos, ficha do Google. O diagnóstico mostra o que dá pra aproveitar e o que precisa ser reconstruído, com o motivo técnico de cada decisão.</p></div></details>
+      <details><summary><span>Vocês atendem minha cidade?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Site é entregue 100% remoto, pra qualquer lugar. Já entregamos no interior da Bahia, em São Paulo, na Suíça, na Itália e na Bósnia. Só a captação de fotos e tour 360° depende de deslocamento.</p></div></details>
+      <details><summary><span>Depois de pronto, fico dependente de vocês?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Não. O domínio fica no seu nome e você recebe os acessos. Existe suporte contratado pra quem quer, mas é escolha, não amarra.</p></div></details>
+      <details><summary><span>Vou falar com um vendedor?</span><span class="faq__icon" aria-hidden="true">+</span></summary><div><p>Não. Você fala direto com quem projeta e constrói o site.</p></div></details>
     </div>
   </div>
 </section>
@@ -273,7 +283,7 @@
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="wrap foot__inner">
-    <span class="wordmark wordmark--sm">Real Vision<span class="amber">360</span></span>
+    <img class="foot__logo" src="/logo-footer.png" alt="Real Vision 360" width="41" height="40" draggable="false" />
     <p class="foot__tag">Presença digital integrada. Sites, Google, tour virtual 360° e automações com IA.</p>
     <nav class="foot__links">
       <a href="https://realvisionmaps.com" target="_blank" rel="noopener">Site oficial</a>
