@@ -100,6 +100,7 @@ clientes/
 - **Responsável:** Felipe
 - **Link:** https://realvisionmaps.com
 - **Docs:** [[_RV-Internos/real-vision-site/README|README do projeto]]
+- **LP de venda de sites:** rota `/sitelp` — [[_RV-Internos/documentacao/LP-SITELP|LP-SITELP]]
 
 ### visionflow
 - **O quê:** CRM interno para gerenciar clientes, oportunidades, tarefas

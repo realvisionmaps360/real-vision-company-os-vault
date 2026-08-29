@@ -38,7 +38,12 @@ Negócios locais e globais que precisam de presença digital coerente: pousadas,
 
 ## Portfólio (seleção)
 
-30+ projetos, 5+ segmentos, 10+ cidades.
+**Números em produção** (fonte: `CredibilityBar.tsx` do site oficial, conferido em 29/08/2026 —
+é o que aparece pro cliente, então é a fonte de verdade):
+**17+ sites entregues · 33+ tours 360° · 12+ cidades · 9+ segmentos.**
+
+> A versão anterior deste arquivo dizia "30+ projetos, 5+ segmentos, 10+ cidades", que não batia
+> com o site. Se os números do site mudarem, atualizar aqui junto.
 
 | Projeto | Categoria | Local |
 |---|---|---|

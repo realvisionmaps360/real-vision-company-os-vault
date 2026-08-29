@@ -1,3 +1,20 @@
+> ## ⚠️ Protótipo descontinuado — 29/08/2026
+>
+> Esta versão standalone **foi substituída** pela rota `/sitelp` dentro do site oficial
+> (`real-vision-core`, `src/pages/SiteLP.tsx`, branch `claude/lp-sitelp`).
+>
+> **Por quê:** aqui o design system era *copiado* do site. Na rota, ele é *herdado* — a LP usa
+> os mesmos `.btn-amber`, `.svc-card`, `.faq-item` e `.form-input` do `index.css`, os mesmos
+> assets, e atualiza sozinha quando o site muda. O formulário também deixou de precisar de Edge
+> Function própria: posta em `/api/contact`, a mesma função que a página de contato usa.
+>
+> **Nada aqui foi apagado** — a pasta fica como registro do estudo que produziu a conferência de
+> tokens abaixo, que segue válida e virou a seção "Correções de 29/08/2026" do `contexto/DESIGN.md`.
+>
+> **Não deployar esta pasta.** Documentação viva da LP: `../../documentacao/LP-SITELP.md`.
+
+---
+
 # LP Sites — Real Vision 360
 
 Landing page de venda do pilar **Sites Profissionais**. Dois usos previstos:
