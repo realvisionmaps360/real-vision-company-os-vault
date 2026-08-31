@@ -1,3 +1,10 @@
+---
+id: PRC-005
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 [[../README|← Gestão]]
 
 # Controle de Repositórios — Real Vision 360

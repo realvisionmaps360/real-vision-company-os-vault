@@ -1,3 +1,10 @@
+---
+id: PRC-014
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Guia de Sincronização do Obsidian — Computador ↔ Celular
 
 > Guia em linguagem simples. Explica como funciona a sincronização das suas notas entre o PC e o celular, e como resolver sozinho se algo parar.

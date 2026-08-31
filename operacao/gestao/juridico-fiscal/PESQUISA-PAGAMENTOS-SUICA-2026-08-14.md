@@ -1,3 +1,10 @@
+---
+id: DOC-002
+tipo: doc
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Pesquisa — como receber pagamento na Suíça de forma legal
 
 > Pesquisa exploratória, feita em 14.08.2026, disparada pela campanha Drone & Digital Unterentfelden

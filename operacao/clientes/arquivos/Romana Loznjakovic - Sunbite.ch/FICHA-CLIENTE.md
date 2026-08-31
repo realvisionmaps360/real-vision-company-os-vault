@@ -9,6 +9,10 @@ data_inicio: 2026-05-01
 servicos:
   - site
   - identidade-visual
+id: CLI-012
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Romana Loznjakovic — Sunbite.ch

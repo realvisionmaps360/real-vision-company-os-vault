@@ -1,3 +1,10 @@
+---
+id: PRC-016
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Protocolo de Contexto de Sessão — Obsidian CLI
 
 > Como o Claude carrega o contexto de um cliente automaticamente ao iniciar uma sessão.

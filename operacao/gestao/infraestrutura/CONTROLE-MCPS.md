@@ -1,3 +1,10 @@
+---
+id: PRC-004
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Controle de MCPs — Real Vision 360
 
 > Catálogo mestre de todas as ferramentas externas (MCP) conectadas ao

@@ -6,6 +6,10 @@ tags:
 status: lead
 data_inicio: 2026-08-14
 servicos: []
+id: CLI-013
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Saulo — AMP Estúdio & Escola de Música

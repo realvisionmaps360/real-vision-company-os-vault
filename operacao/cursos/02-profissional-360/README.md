@@ -37,6 +37,7 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 | [[CONCEITO]] | **Grade-mestra**: os 6 módulos, todas as aulas, preços e modelos de venda |
 | [[MODULO-0-bem-vindo]] | **Texto pronto pra gravar** do Módulo 0 (4 aulas) — formato **narrado**, texto final palavra por palavra |
 | [[MODULO-1-google-meu-negocio]] | **Roteiro pronto pra gravar** do Módulo 1 (8 aulas, com fala e tela) |
+| [[MODULO-2-imersao-total-360]] | **Rascunho** do Módulo 2 — só aulas 2.1 e 2.2, aguardando o resto do conteúdo |
 
 > Convenção: os próximos roteiros seguem o mesmo nome — `MODULO-2-...md`, `MODULO-3-...md`, etc. (padrão flat, igual ao Curso 01).
 
@@ -45,9 +46,9 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 ## Status e roadmap
 
 - [x] Grade-mestra definida (`CONCEITO.md`)
-- [x] Roteiro do Módulo 1 — Google Meu Negócio (`MODULO-1-...md`)
-- [x] Roteiro do Módulo 0 — Bem-vindo / mentalidade (`MODULO-0-bem-vindo.md`) — aguardando revisão do Felipe
-- [ ] Roteiro do Módulo 2 — Imersão Total 360°
+- [x] Roteiro do Módulo 1 — Google Meu Negócio (`MODULO-1-...md`) — aulas 1.2, 1.3, 1.4, 1.6, 1.7 enriquecidas em 28/08/2026
+- [x] Roteiro do Módulo 0 — Bem-vindo / mentalidade (`MODULO-0-bem-vindo.md`) — aula 0.2 com texto final em 28/08/2026, aguardando gravação
+- [ ] Roteiro do Módulo 2 — Imersão Total 360° — rascunho das aulas 2.1 e 2.2 iniciado (`MODULO-2-imersao-total-360.md`), faltam 2.3 a 2.9
 - [ ] Roteiro do Módulo 3 — Sites com IA
 - [ ] Roteiro do Módulo 4 — Gestão de Clientes
 - [ ] Roteiro do Módulo 5 — Montando seu negócio 360°

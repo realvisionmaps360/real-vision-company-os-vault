@@ -1,3 +1,10 @@
+---
+id: CLI-001
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Ficha do Cliente — Alessandro Furtado (Associação Beneficiente Conectando Saúde)
 
 Ver: [[TIMELINE]] · [[RELATORIOS]] · [[ANALYTICS-POSTHOG]] · [[ANALYTICS-CLARITY]]

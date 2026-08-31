@@ -6,6 +6,10 @@ tags:
 status: proposta-enviada
 data_inicio: 2026-07-03
 servicos: []
+id: CLI-014
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # William — Wood Art

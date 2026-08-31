@@ -1,6 +1,10 @@
 ---
 title: Metodologia — Auditoria Técnica de Sites por Cliente
 tags: [infraestrutura, auditoria, seo, ga4, posthog]
+id: PRC-010
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Metodologia — Auditoria Técnica de Sites por Cliente

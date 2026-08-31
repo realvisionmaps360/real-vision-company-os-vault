@@ -211,77 +211,119 @@ bate com o texto novo, que fala de Sistema PDI/Sócio Digital em vez de enumerar
 
 ## Aula 0.2 — O mercado: por que agora é a hora
 
-**Duração estimada:** ~5 min de narração · **Tipo:** conceito, aula narrada
+**Duração estimada:** ~6-7 min de narração (a confirmar após gravação) · **Tipo:** conceito, aula narrada
 **Objetivo:** o aluno entender que existe demanda real e não atendida, e por que a janela é agora.
+
+> **Texto novo, ditado por você em 28/08/2026** — substitui a versão anterior deste arquivo (script
+> resumido em tópicos, ficou registrado no histórico do git). Mesmo princípio da Aula 0.1: são as suas
+> palavras, só organizadas em frase e pontuação — nenhum conteúdo trocado por IA. Onde o ditado por voz
+> saiu confuso demais pra eu reconstruir com segurança, marquei com 📌 em vez de inventar — confirma
+> antes de gravar.
 
 ### Onde está o dinheiro parado
 
-Sai na rua da sua cidade e olha os negócios. Restaurante, pousada, salão, oficina, clínica, loja.
+Se você sair na rua da sua cidade e olhar os negócios — restaurante, pousada, qualquer lugar — e
+procurar o perfil deles no Google, do seu celular, você vai encontrar três situações.
 
-Agora procura cada um deles no Google, do celular.
+Um é o que não aparece. Simplesmente não tem perfil nenhum.
 
-Você vai encontrar três situações. Uns não aparecem de jeito nenhum. Outros aparecem com a ficha
-abandonada, sem foto, com horário errado, com telefone antigo. E poucos, muito poucos, aparecem
-direito.
+O outro é o que aparece, tem a ficha, mas a ficha tá abandonada. Não tem foto, não tem horário, não tem
+telefone, não tem site.
 
-Esse é o seu mercado. Não é um mercado que você precisa criar convencendo ninguém de que internet é
-importante. Todo dono de negócio já sabe. O que ele não sabe é o que fazer, e não tem tempo para
-descobrir.
+E poucos, muito poucos, aparecem direito, com um perfil feito da forma correta. 📌 *(ajustei o fecho
+desse trecho — no ditado ficou "e eu sou uma plataforma da forma correta", que não fecha a frase.
+Confirma se "poucos aparecem direito, com um perfil feito da forma correta" bate com o que você quis
+dizer.)*
+
+Esse é o seu mercado.
+
+O seu papel aqui é conectar uma plataforma que já existe, que tem várias funcionalidades que ajudam as
+pessoas, e implementar isso para o dono. Porque ele não sabe como fazer, e não tem tempo para descobrir.
+
+E o nosso cliente, o cliente final, ele decide qual é o estabelecimento que ele vai antes mesmo de
+falar com o negócio.
 
 ### O cliente decide antes de falar com o negócio
 
-Mudou como as pessoas escolhem onde gastar.
+O jeito como as pessoas escolhem gastar mudou.
 
-Antes, a pessoa entrava na loja e decidia lá. Hoje ela decide no celular, antes de sair de casa. Procura
-no Google, olha as fotos, lê as avaliações, e só então liga. Ou não liga.
+Antes, as pessoas entravam nas lojas e decidiam lá se queriam comprar. Hoje ela decide no celular, antes
+de sair de casa. Ela procura no Google, olha as fotos, lê as avaliações, e então liga. Ou não liga.
 
 📌 Vale citar aqui o dado do Google sobre crescimento de busca local e sobre quem faz busca local entrar
 em contato no mesmo dia. *(Escolha a estatística que você quer afirmar no ar e confirme a fonte. Não
 coloquei número que você não tenha validado.)*
 
-O que isso significa para o negócio local: quando a ficha está ruim, ele perde o cliente sem nunca
-saber que aquele cliente existiu. Não aparece como venda perdida em lugar nenhum. É invisível.
+Geralmente a forma mais simples e cômoda é a mais fácil, e no Brasil hoje com certeza é o WhatsApp.
+Então se a pessoa, por exemplo, não tem o botão do WhatsApp no perfil do Google dela, ela já tá deixando
+muita oportunidade para trás. Porque as pessoas querem facilidade, elas decidem em segundos.
+
+E hoje eu mesmo, se preciso de algo e vejo um perfil do Google que não tem um botão para eu falar
+direto com a empresa, eu já pulo para o outro. E a grande maioria é assim.
+
+Isso, para o dono do negócio local, significa que quando a ficha dele tá ruim, ele perde o cliente e
+nunca fica sabendo que isso aconteceu. É um dado invisível. Você simplesmente não recebe as pessoas.
 
 O que isso significa para você: você não vende "presença digital". Você vende os clientes que ele está
 perdendo agora e nem sabe.
 
 ### Por que agora, e não cinco anos atrás
 
-Duas coisas aconteceram ao mesmo tempo.
+De um tempo para cá, muitas coisas aconteceram ao mesmo tempo.
 
-A primeira: as ferramentas ficaram acessíveis. Fazer um site que carrega rápido, aparece no Google e
-converte deixou de exigir uma equipe de desenvolvedores. Com inteligência artificial, uma pessoa faz.
+As ferramentas ficaram muito mais acessíveis. Hoje fazer um site que carrega super rápido, aparece no
+Google e realmente converte deixou de ter muita burocracia. Virou uma coisa que uma pessoa com o mínimo
+de conhecimento consegue fazer. Com inteligência artificial, uma pessoa consegue criar qualquer tipo de
+coisa hoje no mundo digital.
 
-A segunda: a régua subiu. Ficha bem feita, tour virtual, site rápido deixaram de ser diferencial de
-empresa grande e passaram a ser o esperado. Quem não tem, perde.
+E o nível também subiu completamente. Uma ficha bem feita, um tour virtual, um site rápido já não é um
+diferencial de empresa grande. Isso é uma coisa esperada de qualquer empresa. Então quem não tem, acaba
+perdendo.
 
-Junta as duas: o negócio local precisa mais do que nunca, e entregar ficou mais barato do que nunca.
-Essa é a folga onde você entra.
+Quando você junta essas duas coisas, o negócio local precisa mais do que nunca dessas funcionalidades, e
+entregar isso ficou mais barato do que nunca. E é aí que você entra.
 
 ### Por que a vaga ainda está aberta
 
-Você pode estar pensando que se é fácil assim, já está cheio de gente fazendo.
+Você pode até pensar que já tem um monte de gente fazendo essa mesma coisa.
 
 Não está. E o motivo é específico.
 
-Quem faz site normalmente não faz tour 360°. Quem faz tour não mexe em Google Meu Negócio. Quem mexe no
-Google não sabe cobrar recorrência. Quase todo mundo no mercado é especialista em uma peça.
+Quem faz site normalmente não faz tour 360°. 📌 *(um trecho do ditado ficou confuso — "tem médico
+Google não sabe desenvolver aplicativos" — não deu pra reconstruir com segurança. Se você lembrar a
+frase original, me fala que eu encaixo certinho antes de gravar. Deixei só a ideia geral abaixo.)*
+Quase todo mundo no mercado é especialista numa peça só.
 
-O dono do negócio não quer contratar quatro fornecedores e coordenar todos. Ele quer um que resolva.
+Você, o Profissional 360°, vai ser o elo entre todas essas funcionalidades e vai entregar uma solução
+completa. Porque o dono do negócio não quer contratar quatro fornecedores, ele quer um que resolve tudo.
 
-Esse é o espaço vazio. Não é ser melhor que os outros em uma coisa. É ser o único que entrega o
-conjunto.
+Esse é o espaço vazio, essa é a lacuna. Não é ser melhor que os outros numa coisa só. É ser o único que
+entrega todo o conjunto, e criar uma experiência simples para a pessoa entender.
 
 ### O tamanho disso
 
-Não é um mercado de uma cidade. Negócio local existe em todo lugar, e a maior parte do trabalho é
-remota: Google, site e automação você entrega de onde estiver.
+O tamanho disso é gigantesco. Não se resume a somente um ramo ou somente uma cidade. Negócio local
+existe em qualquer lugar, e a maior parte do trabalho é remota: a criação do site, do Google, as
+automações.
 
-A Real Vision atende de Itacaré, na Bahia, até Aarau, na Suíça. Mesma metodologia, negócios diferentes,
-países diferentes.
+A Real Vision atende no Brasil e na Suíça hoje, com a mesma metodologia, negócios diferentes, países
+diferentes. A gente atende remotamente para a criação de sites, mas também tem colaboradores no Brasil e
+fora que fazem a captação das imagens 360° e enviam pra mim poder montar o tour remotamente.
 
-Você escolhe onde começar. Provavelmente na sua rua, porque ali você conhece as pessoas e a primeira
-venda é mais fácil.
+Isso também não é um problema, porque hoje, com a facilidade da internet, você consegue encontrar
+pessoas online muito fácil. Então, se você precisa desenvolver um trabalho em outra cidade, você pode
+contratar um fotógrafo freelancer pra fazer a captação das imagens para você. Não só imagem 360°, fotos
+também, caso precise, para atualizar o perfil do Google, por exemplo.
+
+📌 *(um trecho do ditado — "que cor ser um oceano azul tão amplo" — não deu pra reconstruir, parece
+perdido na gravação por voz. Removi dessa versão. Se lembrar o que queria dizer ali, me passa que eu
+encaixo.)*
+
+Você pode escolher onde quer começar. Pode ser prospectando na sua rua, num bairro mais próximo, ou numa
+outra cidade.
+
+E vale deixar claro que às vezes as pessoas estão comprando esse curso para implementar na própria
+empresa, ou para oferecer o curso para um funcionário ir implementar na empresa dele.
 
 **Resultado da aula:** o aluno entende que a demanda existe, que ela não está sendo atendida por
 completo, e por que o momento favorece quem entra agora.

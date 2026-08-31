@@ -1,6 +1,10 @@
 ---
 title: Passo a Passo — Google Search Console e GA4 (pra Felipe)
 tags: [infraestrutura, auditoria, google-search-console, ga4]
+id: PRC-011
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Passo a Passo — Google Search Console e GA4

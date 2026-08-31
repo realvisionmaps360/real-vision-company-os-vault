@@ -2,6 +2,9 @@
 data: 2026-07-16
 tipo: registro técnico de infraestrutura
 executado_por: Claude Code (sessão "Skill storage location")
+id: PRC-007
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Unificação de skills duplicadas via Junction (16/07/2026)

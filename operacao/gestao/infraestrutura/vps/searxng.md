@@ -1,3 +1,10 @@
+---
+id: PRC-019
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # SearXNG — Instância Privada no VPS
 
 **Status:** ✅ Instalado e funcionando

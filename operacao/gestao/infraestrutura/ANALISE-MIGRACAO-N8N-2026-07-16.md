@@ -1,3 +1,10 @@
+---
+id: PRC-003
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Análise: quais fluxos migrar para o n8n
 
 > **Data:** 16/07/2026

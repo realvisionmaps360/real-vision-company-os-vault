@@ -6,6 +6,10 @@ tags:
 status: ativo
 data_inicio: 2026-01-06
 servicos: [Site Institucional, Perfil Google Meu Negócio, Instagram]
+id: CLI-007
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Flávia Andrade — Vila dos Corais

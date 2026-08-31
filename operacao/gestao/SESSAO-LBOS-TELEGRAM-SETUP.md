@@ -4,6 +4,9 @@ projeto: LBOS
 data: 2026-08-11
 status: pendente
 tags: [lbos, telegram, claude-code, infra, setup]
+id: PRC-001
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Sessão LBOS — Setup do Agente Telegram

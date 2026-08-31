@@ -6,6 +6,10 @@ tags:
 status: proposta
 data_inicio: 2026-05-09
 servicos: []
+id: CLI-008
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Francisco — Fazenda Coroa Azul

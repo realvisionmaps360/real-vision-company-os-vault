@@ -5,6 +5,11 @@ tags:
   - skills
   - referencia
 date: 2026-06-29
+id: PRC-015
+tipo: processo
+pertence_a:
+  - "[[operacao/gestao/README]]"
+atualizado_em: 2026-08-28
 ---
 
 # Guia das Skills Obsidian — Real Vision

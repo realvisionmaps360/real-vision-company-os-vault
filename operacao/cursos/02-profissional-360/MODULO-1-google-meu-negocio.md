@@ -44,7 +44,8 @@
 - Passo 4 — **Endereço ou área de atendimento.** Tem ponto físico que recebe cliente? Coloca o endereço. Atende em domicílio (fotógrafo, eletricista)? Define a área e esconde o endereço.
 - Passo 5 — Ajustar o **pin no mapa** exatamente em cima da porta.
 - Passo 6 — **Telefone e site.**
-- Passo 7 — **Verificação.** O Google confirma que o negócio é real — por vídeo, telefone, e-mail ou cartão postal. Mostrar as opções que aparecem.
+- Passo 7 — **Verificação.** O Google varia o método por caso: SMS, ligação por telefone, ou vídeo-chamada, onde você grava um vídeo de dentro do espaço mostrando áreas internas ou o caixa registradora, pra provar que o negócio é real. Mostrar as opções que aparecem.
+- **Segunda forma de criar o perfil (via Google Maps):** além do fluxo normal por business.google.com, dá pra achar o local direto no mapa do Google Maps — útil quando o lugar já existe no mapa como um ponto, mas ainda não é um perfil de empresa reivindicado por ninguém. Você localiza o ponto exato, clica/pressiona e segura (no celular) ou clica com o botão direito (no notebook), e aparece uma opção do tipo "criar uma empresa aqui" ou "reivindicar essa empresa". 📌 *(o texto exato do menu muda com frequência no Google Maps — confirma a opção que aparece na hora de gravar, pra não citar um nome de botão desatualizado.)* O Google atribui aquele local ao card, e a verificação segue os mesmos métodos do passo 7.
 - Fecho: **"Pronto, o perfil existe. Mas existir não basta — perfil mal otimizado não aparece. É o que a gente resolve na próxima aula."**
 
 **Resultado da aula:** perfil criado e em processo de verificação.
@@ -64,7 +65,9 @@
 - **Categorias secundárias** — adicione tudo que o negócio também faz (ex: pousada que também é "café da manhã" / "restaurante").
 - **Descrição (até 750 caracteres)** — escreva natural, citando a cidade e o serviço, sem empilhar palavra-chave. Mostrar um exemplo bom e um exemplo "robô".
 - **Serviços / produtos** — listar item a item ajuda o Google a entender o negócio.
-- **Horário e atributos** — preencher tudo (aceita Pix? tem Wi-Fi? acessível?). Ficha completa rende mais que ficha pela metade.
+- **Horário e atributos** — preencher tudo (aceita Pix? tem Wi-Fi? acessível?). O Google dá mais relevância pra perfis com mais informações respondidas — regra prática: abrir todas as telas do perfil e preencher pelo menos "sim ou não" em cada campo disponível. Ficha completa rende mais que ficha pela metade.
+- **Google Merchant Center (catálogo de produtos)** — o Google virou uma central conectada onde o dono consegue vender direto. Cadastrar os produtos do negócio no GMC encaixa esse catálogo ao perfil do Google, e esses produtos passam a aparecer também nas buscas por IA (quando alguém pergunta por algo que o negócio vende e ele está cadastrado no GMC, ele aparece na resposta). Parte de otimizar o perfil é ativar isso, não só preencher texto.
+- 📌 **Nota sua sobre a estrutura desta aula:** você comentou que sente que o conteúdo do módulo tá espalhado — algumas coisas que fazem sentido juntas estão em aulas diferentes. Não reorganizei nada sozinho aqui (mudança cirúrgica: só adicionei o conteúdo novo nos pontos correspondentes). Se quiser, na próxima sessão a gente senta e decide juntos se agrupa algo diferente antes de gravar.
 - Fecho: **"Categoria, descrição e serviços alinhados: o Google já sabe quando te mostrar. Agora falta o que faz o cliente CLICAR — as fotos. Próxima aula."**
 
 **Resultado da aula:** ficha otimizada e encontrável.
@@ -84,6 +87,10 @@
 - Subir: **logo**, **capa**, e um conjunto de fotos **internas e externas** de qualidade.
 - Subir um **vídeo curto** (poucos segundos) — diferencia na hora.
 - **A ponte com o Módulo 2:** o tour virtual 360° entra aqui. Quando você publica o tour no Google Street View (você aprende no Módulo 2), ele passa a aparecer dentro deste perfil. O cliente "entra" no espaço sem sair da busca.
+- **As três formas de o Street View aparecer no perfil (detalhar aqui, aprofundar no Módulo 2):**
+  1. **Linha azul** — a trilha que aparece andando pelo espaço no Street View. É feita a partir de um vídeo com imagens de GPS atrelado: você grava o vídeo andando pelo local, faz o upload, e o Google transforma isso na linha azul navegável.
+  2. **Conjunto de imagens 360°** — várias fotos 360° enviadas juntas, com setinhas de navegação entre elas. É o formato principal que o curso ensina a montar no Pano2VR (Módulo 2).
+  3. **Imagem 360° única** — o cliente final consegue fazer isso sozinho, sem sua ajuda: basta ter uma foto 360° e subir ela direto no perfil do Google pelo notebook ou PC. Vale mencionar essa opção pro cliente que quer algo simples e não vai contratar o tour completo.
 - Esse é o pulo do gato do Profissão 360°: o serviço de Google e o de tour 360° se reforçam. Um vende o outro.
 - Fecho: **"Ficha encontrável e com cara profissional. Agora a gente mantém ela viva — porque perfil parado o Google esquece. Próxima aula: posts."**
 
@@ -120,7 +127,9 @@
 **Roteiro (fala):**
 - Gancho: **"Antes de ligar pra um negócio, a pessoa lê as avaliações. Elas vendem ou afastam — e dá pra trabalhar isso de propósito."**
 - **Conseguir avaliações:** pegar o link curto de avaliação e mandar pro cliente na hora certa (logo depois de um bom atendimento). Mostrar onde gerar o link.
-- **Responder TODAS** — as boas (agradece, cita o serviço naturalmente) e as ruins (educado, resolve, nunca briga). Resposta também é lida por quem está decidindo.
+- **Como você costuma vender essa parte:** otimização de perfil pode ser pontual ou embutida no preço das fotos — se o cliente quiser só as fotos, ele contrata à parte; se te passa as fotos, você já monta o perfil do zero, e isso inclui a rotina de avaliações completa.
+- **Responder TODAS** — as boas (agradece, cita o serviço naturalmente) e as ruins (educado, resolve, nunca briga). Você usa inteligência artificial pra gerar as respostas, mas sempre revisa o resultado final antes de publicar. Resposta também é lida por quem está decidindo — quem deu 5 estrelas se sente valorizado, e uma avaliação de 1 estrela sem resposta fica parecendo verdade incontestada.
+- **Instagram + Google, os dois são rede social de empresa:** pega o Instagram do cliente (ou pede pra ele postar) e cria um destaque salvo com o link de avaliação, pra facilitar quem quiser deixar uma. E lembrar que o Google Meu Negócio também é rede social — as postagens de lá têm imagem, texto curto e um link. Sempre deixar tanto o link de avaliação quanto o link do site e do WhatsApp nesses posts. É esse tipo de detalhe mínimo que diferencia a entrega da Real Vision.
 - Nunca comprar avaliação falsa — o Google derruba e pode suspender o perfil.
 - Dica de venda: gestão de avaliações é parte do **pacote mensal**.
 - Fecho: **"Reputação no controle. Mas como você PROVA pro cliente que o seu trabalho está dando resultado? Com números. Próxima aula: as métricas."**
@@ -141,6 +150,8 @@
 - Mostrar os principais indicadores: **como acharam o perfil** (direto pelo nome vs. descoberta por categoria), **ligações**, **pedidos de rota**, **cliques no site**.
 - O que importa: a tendência. Está subindo mês a mês? É isso que você reporta.
 - Montar um relatório simples (pode ser um print + 3 frases): "Mês passado X ligações, esse mês Y. As pessoas estão te achando mais por [categoria]."
+- **O pós-venda da Real Vision (é o método que a gente usa de verdade):** seis meses depois de entregar o perfil, a gente roda essa análise com inteligência artificial e manda um e-mail de relatório pro cliente. Se o cliente é do pacote mensal, ele recebe esse relatório todo mês. Se foi só a otimização pontual, ele recebe uma vez só — mas o próprio relatório já mostra o que ele teria de resultado se tivesse o pacote mensal. É o gancho natural pra converter pontual em recorrência.
+- **O que entra no relatório/pacote mensal, na prática:** cerca de 5 posts por mês, resposta das avaliações, resposta das perguntas que as pessoas deixam no próprio perfil (existe essa seção separada das avaliações), fotos novas ou promoções/itens de cardápio quando o cliente manda, e a gestão do catálogo de produtos no Google Merchant Center.
 - Isso justifica a mensalidade e abre porta pros outros serviços (tour, site).
 - Fecho: **"Você já sabe criar, otimizar, manter e medir um Google Meu Negócio. Falta a parte que transforma isso em dinheiro: como empacotar e cobrar. Última aula do módulo."**
 
@@ -173,4 +184,6 @@
 - [ ] Conferir os números marcados com 📌 (estatísticas do Google)
 - [ ] Ter um perfil de exemplo pra criar/editar ao vivo
 - [ ] Decidir se cita os bônus (templates de proposta) — depende de já estarem prontos
+- [ ] Confirmar o texto exato do menu do Google Maps pra reivindicar/criar empresa (aula 1.2 — muda com frequência)
+- [ ] Decidir junto com o Felipe se reorganiza algo da aula 1.3 (nota dele: conteúdo parece espalhado entre aulas)
 - [ ] Tom revisado: consultor direto, sem hipérbole (VOZ.md)

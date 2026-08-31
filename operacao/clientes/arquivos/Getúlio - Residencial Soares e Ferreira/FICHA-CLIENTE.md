@@ -6,6 +6,10 @@ tags:
 status: ativo
 data_inicio: 2025-01-10
 servicos: [Tour Virtual 360°]
+id: CLI-010
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Getúlio — Residencial Soares & Ferreira

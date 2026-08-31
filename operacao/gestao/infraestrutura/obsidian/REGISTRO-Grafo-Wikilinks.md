@@ -1,3 +1,10 @@
+---
+id: PRC-017
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Registro — Grafo e Cobertura de Wikilinks do Company OS
 
 > Iniciado em 31/07/2026, a partir de uma reflexão sobre o vídeo "Graph Engineering" do Lucas Montano. Índice: [[README]].

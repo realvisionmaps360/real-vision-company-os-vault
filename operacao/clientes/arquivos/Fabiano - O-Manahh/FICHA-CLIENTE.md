@@ -6,6 +6,10 @@ tags:
 status: lead
 data_inicio: 2026-07-02
 servicos: []
+id: CLI-005
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Fabiano — O Maná'h

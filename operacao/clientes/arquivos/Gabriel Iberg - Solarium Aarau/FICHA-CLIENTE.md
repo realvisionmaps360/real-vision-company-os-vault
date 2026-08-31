@@ -8,6 +8,10 @@ status: entregue
 data_inicio: 2026-04-01
 servicos:
   - tour-360
+id: CLI-009
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Gabriel Iberg — Solarium Aarau

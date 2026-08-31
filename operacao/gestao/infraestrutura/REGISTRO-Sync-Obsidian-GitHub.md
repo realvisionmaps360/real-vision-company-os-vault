@@ -1,3 +1,10 @@
+---
+id: PRC-006
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Registro Técnico — Sincronização Obsidian via GitHub
 
 Log de configuração para troubleshooting futuro. Se a sincronização quebrar, este documento descreve o estado exato montado e como reverter/corrigir.

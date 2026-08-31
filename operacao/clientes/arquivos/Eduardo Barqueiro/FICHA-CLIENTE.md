@@ -10,6 +10,10 @@ servicos:
   - cartao-digital
   - dominio-proprio
   - canal-youtube
+id: CLI-004
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Eduardo Barqueiro — Paraty Onboard

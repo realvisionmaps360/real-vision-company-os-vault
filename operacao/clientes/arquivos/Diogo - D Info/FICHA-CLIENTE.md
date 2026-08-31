@@ -6,6 +6,10 @@ tags:
 status: lead
 data_inicio: 2026-07-01
 servicos: []
+id: CLI-003
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Diogo — D Info

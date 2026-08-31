@@ -1,6 +1,10 @@
 ---
 title: Índice de Clientes — Saúde Técnica do Site
 tags: [infraestrutura, auditoria, indice]
+id: PRC-009
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Índice de Clientes — Saúde Técnica do Site

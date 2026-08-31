@@ -7,6 +7,10 @@ tags:
 status: acordo-em-alinhamento
 data_inicio: 2026-07-12
 servicos: []
+id: CLI-011
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Hallan Costa — Lavanderia Magnólia

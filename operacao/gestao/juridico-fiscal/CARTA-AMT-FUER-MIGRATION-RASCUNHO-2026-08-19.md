@@ -1,3 +1,10 @@
+---
+id: DOC-001
+tipo: doc
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Rascunho — pergunta ao Amt für Migration und Integration Aargau
 
 > Escrito em 19.08.2026. **Não enviado.** O Felipe revisa e envia.

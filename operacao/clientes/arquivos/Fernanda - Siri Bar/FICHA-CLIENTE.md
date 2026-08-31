@@ -6,6 +6,10 @@ tags:
 status: ativo
 data_inicio: 2025-04-09
 servicos: [Tour Virtual 360°]
+id: CLI-006
+tipo: cliente
+pertence_a: ["[[operacao/clientes/README]]"]
+atualizado_em: 2026-08-28
 ---
 
 # Fernanda — Restaurante Siribar

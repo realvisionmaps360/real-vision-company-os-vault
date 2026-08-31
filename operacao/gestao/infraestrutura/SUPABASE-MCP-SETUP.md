@@ -1,3 +1,10 @@
+---
+id: PRC-008
+tipo: processo
+pertence_a: ["[[operacao/gestao/README]]"]
+atualizado_em: 2026-08-28
+---
+
 # Supabase MCP Setup — VisionFlow (ghwjetvazmdlaqidgxqi)
 
 > Guia para configurar os MCPs do Supabase no Hermes Agent.
