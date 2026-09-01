@@ -78,6 +78,17 @@ export const FonteMetrica = z.discriminatedUnion("tipo", [
     tipo: z.literal("banco"),
     descricao: z.string().min(1).max(300),
     url: z.string().url().optional(),
+    /*
+     * Nome de um conjunto que o app sabe abrir (registro fechado em
+     * `src/dados/conjuntos.ts`). O painel cita o NOME; quem decide tabela, colunas e filtro
+     * e o app. Isso e de proposito: este arquivo e texto que qualquer sessao de IA edita, e
+     * uma consulta declarada aqui seria o vault dirigindo o que o app pergunta ao banco.
+     * Nome desconhecido nao quebra nada — a metrica so nao abre.
+     */
+    conjunto: z
+      .string()
+      .regex(/^[a-z0-9-]+$/, "conjunto usa apenas minusculas, numeros e hifen")
+      .optional(),
   }),
 ]);
 

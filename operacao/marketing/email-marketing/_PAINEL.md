@@ -40,7 +40,7 @@ metricas:
     fonte:
       tipo: banco
       descricao: "Tabela email_contatos no Supabase do VisionFlow, contando status = ativo"
-      url: https://supabase.com/dashboard/project/ghwjetvazmdlaqidgxqi/editor
+      conjunto: email-contatos-ativos
     apurado_em: 2026-08-28
     ajuda: "24 com status ativo: 20 clientes, os pais do Felipe, a Romana e o próprio Felipe. Nenhum contato de teste restante na lista."
   - rotulo: Fase 1 enviada

@@ -4,7 +4,7 @@ tipo: painel
 painel_versao: 1
 visualizacao: checklist
 nome: VisionVault — o painel
-resumo: "O próprio painel do Company OS. v1 no ar; rodada de uso real corrigiu navegação e rolagem."
+resumo: "O próprio painel do Company OS. Agora lê também o Supabase, e abre dados e documentos em camada."
 
 o_que_e: "É este aplicativo. Um painel instalável no celular que mostra, numa tela só, em que pé estão todos os projetos da Real Vision. Este card é o painel se acompanhando como qualquer outro projeto."
 para_que_serve: "O estado de cada projeto vive espalhado em centenas de documentos no vault. Sem um lugar que responda o que está rolando agora, saber isso exigia abrir arquivo por arquivo."

@@ -13,6 +13,11 @@ App instalável (PWA) que mostra o estado real dos projetos que vivem como markd
 `.gitignore` do vault**, então nada de lá vai para o GitHub do Company OS. Documentação sobre o
 projeto mora fora, em `operacao/projetos/_RV-Internos/visionvault/`)
 **Gerador:** `tools/painel/` na raiz do vault
+
+**Camadas do `src/`** (desde 01/09/2026, quando o Supabase virou segunda fonte de dados):
+`vault/` lê o Company OS via `/api` · `dados/` lê o Supabase direto, com a sessão do usuário ·
+`lib/` são utilidades puras · `components/`, `pages/`, `contexts/` como antes. Fonte nova de
+dados entra em `dados/`, não espalhada nas telas.
 **Projeto Vercel:** `felipes-projects-26a2b9dd/visionvault`
 
 ---
@@ -116,8 +121,35 @@ metricas:
       caminho: operacao/projetos/_RV-Internos/visionvault/TIMELINE.md
 ```
 
-`tipo: documento` faz o gerador servir aquele `.md`, e a métrica vira link. `tipo: banco` não
-tem destino dentro do app: a `descricao` aparece no "?" e o card mostra "fora do vault".
+`tipo: documento` faz o gerador servir aquele `.md`, e a métrica vira link. `tipo: banco` sem
+`conjunto` não tem destino: a `descricao` aparece no "?" e o card mostra "fora do vault".
+
+### `conjunto` — métrica de banco que abre a lista dentro do app
+
+`fonte.banco` aceita `conjunto`, o **nome** de um conjunto de dados que o app sabe abrir:
+
+```yaml
+fonte:
+  tipo: banco
+  descricao: "Tabela email_contatos no Supabase do VisionFlow, contando status = ativo"
+  conjunto: email-contatos-ativos
+```
+
+O card passa a abrir uma camada por cima da tela com aquela lista. Nada sai do app.
+
+**A regra que não se quebra: o `_PAINEL.md` cita um nome, nunca uma consulta.** Tabela, colunas
+e filtro vivem em `src/dados/conjuntos.ts`, num registro fechado. O motivo é de segurança: este
+arquivo é texto que qualquer sessão de IA edita, e uma consulta declarada aqui seria o vault
+dirigindo o que o app pergunta ao banco. Nome desconhecido não quebra nada — a métrica só não
+abre. Para expor um conjunto novo, registra-se ele no app primeiro.
+
+Quem barra leitura indevida é a **RLS do Supabase**, não código nosso — por isso o app consulta
+direto do navegador com a sessão que já tem, sem chave de servidor e sem rota nova.
+
+> **Armadilha:** com RLS, negar leitura devolve **lista vazia, não erro**. "Você não tem acesso"
+> e "essa lista está vazia mesmo" chegam idênticos. `CamadaDados` separa os casos pelo que dá
+> para saber com certeza (se há sessão) e, quando há, diz explicitamente que lista vazia pode
+> ser regra de acesso. Não simplifique isso para um "Nenhum registro" seco.
 
 **Caso real que justifica o campo:** o painel do email marketing dizia "Contatos ativos: 28",
 número copiado de um snapshot de 22/07. Em 28/08 o banco tinha 27 ativos, porque um contato deu

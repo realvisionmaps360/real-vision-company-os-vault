@@ -261,6 +261,61 @@ com caminho do Windows. Não apagados — aguardando OK.
 
 ---
 
+## Sessão 5 — 01/09/2026 · o app deixa de mandar embora
+
+Correção de rumo. Na sessão anterior a métrica **Contatos ativos** ganhou um link que abria o
+painel do Supabase noutra aba — tirava o Felipe do app, que é o oposto do que ele tinha pedido.
+Agora clicar numa métrica de banco abre uma **camada por cima da tela**, dentro do aplicativo,
+com a lista de quem são os 24 contatos.
+
+Com isso o VisionVault deixa de ter **uma** fonte de dados e passa a ter **duas**: o vault, lido
+via GitHub, e o Supabase, lido direto.
+
+### Ler o banco não exigiu infraestrutura nova
+
+`email_contatos` tem RLS ligada, com a política `Allowed users view email_contatos` liberando
+leitura para quem passa em `is_allowed_user()` — que confere o email contra `allowed_emails`. O
+VisionVault já autentica nesse mesmo projeto Supabase. Logo, o app consulta **direto do
+navegador, com a sessão que já tem**: sem rota nova no servidor, sem chave, sem segredo. Quem
+barra acesso indevido é o banco.
+
+### O `_PAINEL.md` cita um nome, nunca uma consulta
+
+O contrato ganhou `fonte.conjunto`. O arquivo do vault escreve `conjunto: email-contatos-ativos`
+e o app decide o que aquele nome significa, a partir de um registro fechado em
+`src/dados/conjuntos.ts`.
+
+A indireção é de segurança, não de estilo: o `_PAINEL.md` é texto que qualquer sessão de IA
+edita. Se ele pudesse declarar tabela e filtro, um arquivo do vault estaria dirigindo o que o
+app pergunta ao banco. Citando um nome de lista fechada, o pior caso é uma métrica que não abre.
+
+### A armadilha que a RLS esconde
+
+Com RLS, negar leitura **devolve lista vazia, não erro**. "Você não tem acesso" e "essa lista
+está vazia mesmo" chegam idênticos na tela, e mostrar os dois como "Nenhum registro" seria o
+painel mentindo com cara de certeza — exatamente o risco central do projeto. A camada separa os
+casos pelo que dá para saber com certeza (se há sessão no banco) e, quando há, diz que lista
+vazia também pode ser regra de acesso.
+
+### Documento também abre em camada, sem perder endereço
+
+Usando localização de fundo do React Router: link de dentro do app abre por cima, mantendo a
+tela de origem viva atrás; endereço colado na barra ou recarregar continua abrindo a página
+inteira. Medido: abrir um documento a partir de `/arquivos` em `scrollY 700` mantém o fundo em
+700, e voltar devolve à árvore no mesmo ponto.
+
+O `navigate(-1)` é o mesmo caminho para o X e para o gesto de voltar do iPad, então não sobra
+entrada fantasma no histórico. `Esc` fecha e limpa o parâmetro da URL.
+
+### Camadas no código
+
+`src/lib/` estava virando depósito. Agora: `vault/` (Company OS via `/api`), `dados/` (Supabase),
+`lib/` (utilidades puras), e as telas como antes. O renderizador de markdown saiu de
+`pages/Documento.tsx` para `components/DocumentoCorpo.tsx` — dois lugares mostram documento
+agora, e duas cópias divergiriam em silêncio.
+
+---
+
 ## Relacionados
 
 - Skill: `skills/visionvault`
@@ -277,3 +332,4 @@ com caminho do Windows. Não apagados — aguardando OK.
 | 2026-08-28 | Registro da sessão 2: painel que se explica | Felipe abriu o painel do blog e não entendeu a própria tela |
 | 2026-08-28 | Sessão 3: métrica com procedência, base 28 → 24 ativos, segredos em variáveis de ambiente | O painel dizia "28 contatos" havia um mês, número copiado de snapshot velho |
 | 2026-09-01 | Sessão 4: rolagem, boundary de erro, três faixas de navegação, métrica com destino | Primeira rodada vinda do uso real no celular |
+| 2026-09-01 | Sessão 5: camada para dados e documentos, Supabase como segunda fonte, `src/` em camadas | O link da métrica mandava o Felipe para fora do app |
