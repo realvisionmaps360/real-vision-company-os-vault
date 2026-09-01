@@ -4,7 +4,7 @@ tipo: painel
 painel_versao: 1
 visualizacao: campanha-cadencia
 nome: Email Marketing — Projeto Hermes
-resumo: "Cadência de 12 emails para a base de 24 contatos. Ciclo 1, Fase 1 em curso."
+resumo: "Cadência de 12 emails para a base de 25 contatos. Ciclo 1, Fase 1 em curso — 2 de 4 emails disparados."
 
 o_que_e: "A campanha de email da Real Vision para quem já é cliente. São 12 emails escritos numa ordem pensada, disparados de 5 em 5 dias, cada um construindo em cima do anterior."
 para_que_serve: "Manter relação com quem já comprou e abrir espaço para os serviços que aquele cliente ainda não tem. É mais barato vender de novo para quem já confia do que buscar cliente novo."
@@ -20,32 +20,32 @@ destaque: true
 
 status: ativo
 saude: atencao
-proximo_passo: "Escrever a Fase 2 (emails 5 a 8) — sem ela a cadência quebra."
+proximo_passo: "Escrever a Fase 2 (emails 5 a 8) — sem ela a cadência quebra. Corrigir idioma=de faltante (Romana) e decidir versão em alemão do email 2."
 proximo_passo_prazo: 2026-09-16
-atualizado_em: 2026-08-28
+atualizado_em: 2026-09-01
 atualizado_por: claude
 proxima_revisao: 2026-09-05
 
 canal: email
 publico: "Contatos ativos com consentimento registrado"
-tamanho_publico: 24
+tamanho_publico: 25
 inicio: 2026-08-27
 fim_previsto: 2026-10-26
 
 metricas:
   - rotulo: Contatos ativos
-    valor: 24
+    valor: 25
     formato: numero
-    tendencia: caindo
+    tendencia: subindo
     fonte:
       tipo: banco
       descricao: "Tabela email_contatos no Supabase do VisionFlow, contando status = ativo"
-    apurado_em: 2026-08-28
-    ajuda: "24 com status ativo: 20 clientes, os pais do Felipe, a Romana e o próprio Felipe. Nenhum contato de teste restante na lista."
+    apurado_em: 2026-09-01
+    ajuda: "25 com status ativo: 20 clientes, os pais do Felipe, a Romana, o próprio Felipe e Mikkel (Mike), cadastrado em 01/09. Nenhum contato de teste restante na lista."
   - rotulo: Fase 1 enviada
-    valor: "1 de 4"
+    valor: "2 de 4"
     formato: texto
-    ajuda: "A Fase 1 tem 4 emails (E1 a E4). Só o E1 saiu; os outros três estão agendados."
+    ajuda: "A Fase 1 tem 4 emails (E1 a E4). E1 e E2 saíram; E3 e E4 estão agendados."
   - rotulo: Cadência
     valor: "5 em 5 dias"
     formato: texto
@@ -71,10 +71,14 @@ itens:
   - id: c004-02
     ordem: 2
     titulo: "E2 — 3 coisas que matam seu Google Meu Negócio"
-    estado: agendado
+    estado: enviado
     data: 2026-09-01
     gancho: "Reciprocidade"
     ativo: "post google-meu-negocio-guia-completo"
+    metricas:
+      enviados: 25
+      falhas: 0
+    nota: "Disparado 16h23 UTC, variante A. Só em PT (decisão do Felipe) — 4 contatos idioma=de (incluindo Romana, cadastrada como pt mas fluente em alemão) receberam em português por falta de versão em alemão."
   - id: c004-03
     ordem: 3
     titulo: "E3 — 5 negócios, 1 mapa, 1 decisão"
@@ -157,3 +161,4 @@ O conteúdo humano está no [[README]]. Aqui só mora o estado que o painel prec
 | 2026-08-27 | Arquivo criado | Fase 0 do VisionVault — contrato de dados do painel |
 | 2026-08-28 | Bloco de compreensão e `ajuda` nas métricas | As telas do painel não se explicavam sozinhas |
 | 2026-08-28 | Contatos ativos: 28 → 24, com `fonte` e `apurado_em` | O 28 vinha de um snapshot de 22/07. Limpeza da base tirou 3 endereços de teste e 1 bounce já tinha saído sozinho |
+| 2026-09-01 | E2 disparado (25 contatos, 0 falhas); contatos ativos 24 → 25 (Mikkel/Mike incluído) | Campanha 004-02 aprovada e enviada por decisão do Felipe. Achado no processo: Romana está com `idioma=pt` no banco mas é fluente em alemão — não corrigido ainda porque não existe versão em alemão do email 2 |

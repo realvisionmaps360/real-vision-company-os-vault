@@ -217,6 +217,38 @@ Cada disparo de email marketing ganha um número sequencial.
 - **Próximo passo:** apagar a função `hermes-test-send`; Felipe aprovar a copy dos 4 emails da
   Fase 1 pra reservar `sequencia_id` e disparar de verdade, um por quinta, via `hermes-send`.
 
+### 01/09/2026 — Email 2 disparado, sem acesso ao `HERMES_SECRET` nesta sessão
+
+- **Contexto:** sessão rodando num ambiente remoto (Claude Code na nuvem) sem o `.env` local
+  onde vive o `HERMES_SECRET` nem os `.html` de campanha (nunca versionados no git — ver aviso
+  do [[README]]). Diferente da sessão de 21/08, que rodava na máquina com esse acesso.
+- **Caminho técnico usado:** deployada função temporária `hermes-batch-004-02` (mesmo padrão
+  autorizado por Felipe em 21/08 — chave própria embutida, não é `HERMES_SECRET` de produção),
+  contendo o HTML completo do email 2 (masthead `masthead-002.png` + assinatura
+  `felipe-assinatura.png`, confirmados reais no repo `real-vision-core`, `public/email-assets/`).
+  O sandbox desta sessão tem a rede bloqueada por política pra hosts externos (inclusive
+  `*.supabase.co` e `realvisionmaps.com` direto) — contornado invocando a função via `pg_net`
+  (extensão já instalada no projeto), que faz a chamada HTTP a partir da própria infraestrutura
+  do Supabase, não do sandbox.
+- **Teste antes do disparo geral:** `smarthomefg@gmail.com`, `resend_id 73a26ee3-af30-4e1b-8750-5cc4e8c40714`.
+  Felipe aprovou ("pode rodar") sem pedir ajuste.
+- **Disparo:** 25 contatos ativos, **25 enviados, 0 falhas**, `sequencia_id`
+  `90efb3bf-daea-46fc-bc85-fd05bf474688`, todos com `resend_id` gravado em `email_envios`.
+  Novo contato incluído na leva: `Mikkel (Mike)` (`mikey.mp3@gmail.com`, `idioma=de`),
+  cadastrado por Felipe no mesmo dia.
+- **Achado não resolvido:** checagem de idioma mostrou 4 contatos `idioma=de` (Mikkel, Modular
+  Festival, Swiss Army) e a Romana ainda cadastrada como `idioma=pt` — mas ela é fluente em
+  alemão e ainda aprendendo português (`contexto/TIME.md`). Não existe versão em alemão do
+  email 2 em lugar nenhum. Felipe decidiu explicitamente mandar só em PT pra todo mundo desta
+  vez, em vez de segmentar ou esperar a tradução. Fica registrado como pendência real, não como
+  decisão de arquitetura definitiva.
+- **Função desativada logo após o uso** (responde 410, sem acesso a segredo) — mesmo padrão da
+  `hermes-test-send`. **Pendência:** apagar de vez pelo painel do Supabase, junto com
+  `hermes-campanha` e `hermes-test-send` (nenhuma das três foi apagada ainda, só desativada).
+- **Próximo passo:** escrever versão em alemão do email 2 (ou decidir não segmentar por idioma
+  no Ciclo 1, formalizando isso no [[04-CALENDARIO-EDITORIAL]]); corrigir `idioma` da Romana no
+  banco; seguir com E3 (06/09) e E4 (11/09) da Fase 1.
+
 ### 20/08/2026 — Webhook do Resend: métricas voltam pro banco
 - **Problema:** os 31 envios da campanha 002 estavam com `aberto`, `clicado` e `bounced` em `false`.
   O Resend registrava os eventos, mas nada trazia de volta pro Supabase. Métrica era zero por

@@ -117,8 +117,8 @@ Datas agendadas no Google Agenda (`realvisionmaps360@gmail.com`), cadência de 5
 
 | # | Data | Email | Gatilho | Ativo do site | CTA |
 |---|---|---|---|---|---|
-| 1 | **27/08** | Seu site foi lido hoje, só não por gente | Autoridade + Empatia | `site-maior-ativo-era-ia` | ler o post |
-| 2 | **01/09** | 3 coisas que matam seu Google Meu Negócio | Reciprocidade | `google-meu-negocio-guia-completo` | **RLM:** "quer que eu olhe o seu?" |
+| 1 | **27/08 ✅** | Seu site foi lido hoje, só não por gente | Autoridade + Empatia | `site-maior-ativo-era-ia` | ler o post |
+| 2 | **01/09 ✅** | 3 coisas que matam seu Google Meu Negócio | Reciprocidade | `google-meu-negocio-guia-completo` | **RLM:** "quer que eu olhe o seu?" |
 | 3 | **06/09** | 5 negócios, 1 mapa, 1 decisão | Comunidade + Prova Social | portfólio Hub Ilha do Contrato | ver o hub |
 | 4 | **11/09** | Do Brasil à Suíça: o que muda e o que não muda | Confiança | `solarium-aarau-primeiro-cliente-internacional` | ver o case |
 
