@@ -157,6 +157,11 @@ sem rolagem horizontal na página. Não testado em produção: as mudanças est�
 
 ---
 
+> [!info] Concluído na sessão 3 (28/08/2026)
+> A métrica com procedência foi entregue: `fonte` + `apurado_em` no schema, e a decisão de que
+> métrica de banco não vira link. A seção abaixo fica como registro de como o problema foi
+> pensado antes de existir solução.
+
 ## Próxima sessão — métrica clicável
 
 Hoje o card de métrica é texto morto. O número **28 contatos ativos** vive no `_PAINEL.md` do
@@ -183,6 +188,79 @@ as outras.
 
 ---
 
+## Sessão 4 — 01/09/2026 · uso real: rolagem, tela preta e navegação por dedo
+
+Primeira rodada de correções vinda do **uso**, não do plano. O Felipe usou o painel no celular e
+trouxe cinco incômodos. Investigando, quatro deles couberam em três causas.
+
+### A "tela preta" e a "página que abre no meio" eram o mesmo bug
+
+O app nunca resetava a rolagem ao trocar de rota. O sintoma óbvio era abrir um projeto e cair no
+meio dele. O sintoma **não** óbvio: quando a página de destino é mais curta que a posição
+anterior, o navegador prende a rolagem no fim dela — e o que sobra na tela é fundo escuro vazio.
+Parecia app travado sem carregar nada.
+
+Medido antes da correção:
+
+| Ação | Rolagem antes | Rolagem depois | Altura do destino |
+|---|---|---|---|
+| Início → `/arquivos` | 6000 | 1006 | 1818px |
+| Início → `/projeto/...` | 1196 | 1196 | — |
+
+Correção em `src/components/IrAoTopo.tsx`: `useLayoutEffect` no `pathname`, com `hash` de fora
+para link de âncora continuar funcionando. Depois da correção, as duas rotas medem `0`.
+
+### O app não tinha rede de segurança nenhuma
+
+Não existia `ErrorBoundary` em lugar algum. Qualquer erro de render derrubava a árvore inteira e
+deixava o fundo `#0a0d14` na tela — que num app dark é indistinguível de "não carregou". Agora
+`src/components/ErroBoundary.tsx` envolve o `Outlet`, com `key` na rota para se resetar ao
+navegar, e trata em separado a falha de chunk preguiçoso (deploy novo + service worker velho),
+oferecendo limpar o cache em vez de mostrar erro técnico.
+
+`Documento.tsx` também tinha um `return null` mudo quando o documento não vinha. Virou estado
+vazio explícito.
+
+### Não existia faixa de tablet
+
+A casca ia de celular direto para desktop em 1024px. O iPad em retrato (768px) caía no layout de
+celular — o único tamanho que ele nunca tem. Agora são três faixas:
+
+| Largura | Navegação |
+|---|---|
+| < 768px | Barra fixa embaixo, no alcance do polegar, com área segura do iPhone |
+| 768–1023px | Coluna estreita de ícones (iPad retrato) |
+| ≥ 1024px | Coluna larga com rótulo ao lado do ícone |
+
+A navegação do celular saiu do topo de propósito: como grade de chips lá em cima, exigia esticar
+o dedo até a outra ponta do aparelho e sumia assim que a página rolava. Todo alvo clicável da
+casca tem no mínimo 44px, contorno no repouso, estado âmbar no ativo, anel de foco visível e
+retorno de toque (`scale`) onde não há hover.
+
+O manifesto do PWA travava a orientação em `portrait`. Para iPad isso é errado — virou `any`.
+
+### Métrica de banco ganhou destino
+
+O `_PAINEL.md` já podia declarar `fonte.url`, mas o app ignorava o campo: o card de **Contatos
+ativos** dizia "fora do vault" e não levava a lugar nenhum. Agora, quando há `url`, o card vira
+link externo e o rótulo passa a ser "abrir onde nasce". Sem `url`, segue inerte de propósito —
+melhor um card quieto que um clique morto. O `_PAINEL.md` do email marketing recebeu a URL do
+editor do Supabase.
+
+### O que ficou pendente
+
+**Login em dispositivo novo cai no VisionFlow.** O código do app está certo: ele manda
+`redirectTo` com o próprio endereço e a barra final. O que falha é a allowlist de *Redirect URLs*
+do projeto Supabase `ghwjetvazmdlaqidgxqi` — quando o destino não casa, o Supabase descarta em
+silêncio e joga na Site URL do projeto, que é a do VisionFlow. Falta saber **de qual endereço** o
+Felipe entrou para acrescentar exatamente aquele padrão. A escrita dessa configuração é PATCH na
+Management API, bloqueada pelo classificador: o clique final é dele, no painel.
+
+**Dois arquivos-lixo na raiz do repo do app** (`25).slice(0` e `r.text())`), sobra de um `node -e`
+com caminho do Windows. Não apagados — aguardando OK.
+
+---
+
 ## Relacionados
 
 - Skill: `skills/visionvault`
@@ -197,3 +275,5 @@ as outras.
 |---|---|---|
 | 2026-08-28 | Arquivo criado com o registro da sessão 1 | Primeira entrega do VisionVault |
 | 2026-08-28 | Registro da sessão 2: painel que se explica | Felipe abriu o painel do blog e não entendeu a própria tela |
+| 2026-08-28 | Sessão 3: métrica com procedência, base 28 → 24 ativos, segredos em variáveis de ambiente | O painel dizia "28 contatos" havia um mês, número copiado de snapshot velho |
+| 2026-09-01 | Sessão 4: rolagem, boundary de erro, três faixas de navegação, métrica com destino | Primeira rodada vinda do uso real no celular |

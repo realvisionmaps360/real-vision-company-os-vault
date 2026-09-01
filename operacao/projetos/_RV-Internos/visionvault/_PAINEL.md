@@ -4,7 +4,7 @@ tipo: painel
 painel_versao: 1
 visualizacao: checklist
 nome: VisionVault — o painel
-resumo: "O próprio painel do Company OS. v1 no ar, validada em produção."
+resumo: "O próprio painel do Company OS. v1 no ar; rodada de uso real corrigiu navegação e rolagem."
 
 o_que_e: "É este aplicativo. Um painel instalável no celular que mostra, numa tela só, em que pé estão todos os projetos da Real Vision. Este card é o painel se acompanhando como qualquer outro projeto."
 para_que_serve: "O estado de cada projeto vive espalhado em centenas de documentos no vault. Sem um lugar que responda o que está rolando agora, saber isso exigia abrir arquivo por arquivo."
@@ -20,11 +20,11 @@ destaque: false
 
 status: ativo
 saude: ok
-proximo_passo: "Decidir se a métrica de contatos mostra 27 (status ativo no banco) ou 24 (sem os contatos de teste)."
+proximo_passo: "Colocar o LBOS no painel: fechar a tipagem dos 21 arquivos sem frontmatter e escrever o LBOS/_PAINEL.md."
 proximo_passo_prazo: null
-atualizado_em: 2026-08-28
+atualizado_em: 2026-09-01
 atualizado_por: claude
-proxima_revisao: 2026-09-15
+proxima_revisao: 2026-09-22
 
 metricas:
   - rotulo: Projetos no painel
@@ -33,10 +33,10 @@ metricas:
     ajuda: "Quantos projetos do vault já têm um _PAINEL.md. Todo o resto do Company OS ainda está de fora e não aparece nas telas."
     apurado_em: 2026-08-28
   - rotulo: Documentos servidos
-    valor: 20
+    valor: 21
     formato: numero
     ajuda: "Documentos do vault que o aplicativo pode abrir. Só é servido o que algum _PAINEL.md aponta, nunca o vault inteiro."
-    apurado_em: 2026-08-28
+    apurado_em: 2026-09-01
   - rotulo: Fases entregues
     valor: "7 de 8"
     formato: texto

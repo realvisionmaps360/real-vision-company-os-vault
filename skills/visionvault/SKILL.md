@@ -226,6 +226,16 @@ for (const x of r) await x.unregister();
 for (const k of await caches.keys()) await caches.delete(k);
 ```
 
+**Rolagem não resetada vira "tela preta".** Sem reset de rolagem na troca de rota, o navegador
+prende a página nova no fim quando ela é mais curta que a posição anterior — e o que sobra é
+fundo escuro vazio, que parece app travado, não bug de rolagem. Corrigido em
+`src/components/IrAoTopo.tsx`; se aparecer tela vazia de novo, medir `window.scrollY` antes de
+procurar erro de dados.
+
+**Sem `ErrorBoundary`, todo erro vira tela preta.** Num app dark, árvore derrubada é
+indistinguível de "não carregou". `src/components/ErroBoundary.tsx` envolve o `Outlet` com `key`
+na rota. Não remover ao refatorar a casca.
+
 **Variável da Vercel vence o fallback do código.** Se o app parece ignorar uma mudança de
 configuração, procure uma env var antiga sobrando antes de mexer no código.
 
@@ -234,6 +244,20 @@ carregado sob demanda. Estilizar componente de biblioteca lazy exige especificid
 
 **`erasableSyntaxOnly` no tsconfig** proíbe parameter properties (`constructor(public x)`).
 Declarar o campo e atribuir no corpo.
+
+---
+
+### As três faixas da casca (`Shell.tsx`)
+
+| Largura | Navegação |
+|---|---|
+| < 768px | Barra fixa embaixo, alcance do polegar, com `env(safe-area-inset-bottom)` |
+| 768–1023px | Coluna estreita de ícones — é onde vive o iPad em retrato |
+| ≥ 1024px | Coluna larga, rótulo ao lado do ícone |
+
+Só existiam duas faixas até 01/09/2026, e o iPad em retrato caía no layout de celular. Alvo
+clicável mínimo de 44px (`.alvo-toque`), contorno no repouso e anel de foco âmbar em tudo que
+clica. Ao mexer aqui, conferir 390px, 768px, 1024px e 1280px — não só as pontas.
 
 ---
 
