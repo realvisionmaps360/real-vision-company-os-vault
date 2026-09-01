@@ -5,14 +5,17 @@
 
 **Objetivo:** levar o leitor narrado da Academy (PRD-008) para os posts do blog, com entrada suave dentro da própria página do post.
 
-> ## 🟢 NO AR desde 25/08/2026
-> Publicado em `realvisionmaps.com` (commit `eacdae6`). O post `site-maior-ativo-era-ia`
-> está narrando para qualquer visitante.
+> ## 🟢 DOIS POSTS NO AR — o segundo desde 01/09/2026
+> `site-maior-ativo-era-ia` (25/08, commit `eacdae6`) e
+> `google-meu-negocio-guia-completo-negocios-locais` (01/09, commit `a9ebf6e`) estão
+> narrando para qualquer visitante em `realvisionmaps.com`.
 >
-> **Uma pendência:** o site publicado serve o áudio de `public/audio/`, não do Supabase —
-> a variável `VITE_BLOG_AUDIO_BASE` não chegou ao build da Vercel. Ver
-> [[AUDIO-NO-SUPABASE]]. Nada quebrado; o `.mp3` continua no repositório e é ele que está
-> tocando no ar.
+> **A pendência da Vercel caiu.** Verificado em produção em 01/09: o áudio dos posts é
+> servido do bucket Supabase, não de `public/audio/`. A `VITE_BLOG_AUDIO_BASE` está no
+> build. Ver [[AUDIO-NO-SUPABASE]], que ficou histórico.
+>
+> **Sobra dali uma gordura:** os dois `.mp3` continuam no repositório sem serem usados
+> (13 MB). Podem sair num commit de limpeza — decisão do Felipe.
 
 **Repositório:** `operacao/projetos/_RV-Internos/sites/real-vision-site`
 **Plano completo:** `C:\Users\Felipe Garcia\.claude\plans\perfeito-me-fa-a-as-mellow-hollerith.md`
@@ -28,8 +31,8 @@
 | 2 | A barrinha que some e volta | **Feito e testado — 25/08/2026** |
 | 3 | Os controles | **Feito e testado — 25/08/2026** |
 | 4 | Áudio no Supabase + qualquer post | **Feito — 25/08/2026.** Falta só a variável na Vercel, que trava a saída do `.mp3` do repositório (ver [[AUDIO-NO-SUPABASE]]) |
-| 5 | A linha de produção das narrações | — (depende de ffmpeg + Python + Docker e de o Felipe gravar) |
-| 6 | Verificação final e publicação | **Feito — 25/08/2026.** Publicado e verificado em produção; falta só a Academy (área logada) e a variável da Vercel |
+| 5 | A linha de produção das narrações | **Fechado — 01/09/2026.** Segundo post narrado ponta a ponta, skill `rv-blogpost-audio` criada, publicado e verificado em produção |
+| 6 | Verificação final e publicação | **Feito — 25/08/2026.** Publicado e verificado em produção; a variável da Vercel se resolveu (confirmado 01/09). Falta só o Felipe conferir a Academy no celular (área logada) |
 
 ---
 
@@ -247,7 +250,148 @@ uma nova publicação e aí sim o `.mp3` pode sair do repositório.
 
 ---
 
+## Publicação do segundo post — 01/09/2026
+
+O trabalho do Bloco 5 tinha ficado parado no disco desde 26/08: os arquivos gerados,
+verificados e nunca commitados. Esta sessão só fechou o que faltava — **nada do pipeline
+foi rodado de novo**. O `.m4a` que o Felipe trouxe pra esta sessão é a mesma gravação de
+agosto (489,93s, idêntica ao `completo.mp3` já processado), não uma regravação.
+
+Publicado no commit **`a9ebf6e`**: o sync map do post, o registro no catálogo e o `.mp3`
+em `public/audio/`.
+
+### O que a verificação em produção revelou
+
+O post narrado abriu em `realvisionmaps.com` e o áudio veio **do bucket Supabase** —
+`https://xomtfkbvathddfpbknyo.supabase.co/storage/v1/object/public/blog-audio/…`.
+
+Isso encerra a pendência que estava aberta desde 25/08: a `VITE_BLOG_AUDIO_BASE` está no
+build da Vercel. Os dois `.mp3` também já estão no bucket (checados por HTTP, os dois 200).
+
+Consequência: o `.mp3` commitado nesta sessão **não é usado por ninguém**. Foi commitado
+porque a decisão da sessão ainda era a do post anterior, tomada antes de a verificação
+mostrar o contrário. Não quebra nada — é rede de segurança se a variável cair. Se o Felipe
+quiser, os 13 MB dos dois arquivos saem num commit de limpeza.
+
+### Verificação desta sessão (390px, Playwright)
+
+| O que | Resultado |
+|---|---|
+| `tsc`, `npm run test`, `npm run build` | limpos; 30 testes |
+| Convite | "Ouvir este post — 8 minutos" |
+| Áudio | 469,212s, `readyState 4`, sem erro |
+| 6 instantes conferidos contra o `.srt` | texto aceso correto nos 6 |
+| Âncoras (300s lista de erros, 380s métricas) | não acendem — correto |
+| Negrito | 22 dos 27 spans com `<strong>` |
+| Sair | pausa e devolve capa, comentários e rodapé |
+| EN (`google-business-profile-complete-guide`) | sem convite, sem áudio |
+| Console | 0 erros (2 avisos do React Router, pré-existentes) |
+| Produção, pós-deploy | convite aparece, áudio do Supabase, destaque correto em 2:00 |
+
+Print: `TEMP/audio-gmn/gmn-narrado-390-verificacao-01-09.png`.
+
+### O que ficou pra próxima sessão
+
+- **`site-maior-ativo-era-ia` continua sem os negritos** no modo narrado (fragmentos
+  salvos sem os `**`, antes da D-45). Conserta rodando o pipeline de novo nele — decisão
+  do Felipe de deixar pra depois, tomada nesta sessão.
+- Os dois `.mp3` no repositório, agora sem uso (ver acima).
+- O Felipe conferir uma aula narrada da Academy no celular — pendência do Bloco 0, que
+  verificação automatizada não alcança.
+
+---
+
+## Bloco 5 — o que foi feito (26/08/2026, no PC do Brasil)
+
+Segundo post narrado: **`google-meu-negocio-guia-completo-negocios-locais`**. O processo inteiro
+rodou do zero e virou a skill **`rv-blogpost-audio`** (`skills/rv-blogpost-audio/`), com os três
+scripts do pipeline dentro dela.
+
+### A descoberta que mudou o processo
+
+O Felipe **não lê o post literalmente**. Ele narra títulos, cards, listas de erro, métricas e
+modalidades — blocos que o playbook original mandava pular por "não fazerem sentido narrados" —
+e improvisa comentários que não existem em bloco nenhum.
+
+Isso quebra a premissa do Aeneas, que assume que o texto entregue é a transcrição do áudio. Na
+primeira tentativa, com só os 29 trechos de prosa, mediu-se **14 segundos de deriva** no trecho
+das métricas: o destaque ficava aceso na frase errada por um quarto de minuto.
+
+A saída foi separar as unidades em duas categorias:
+
+- **Destacável** — `paragraph`, `highlight`, `list`. Entra no `blockMap` e acende na tela.
+- **Âncora** — títulos, cards, listas de erro, métricas, modalidades e os improvisos. Vai para o
+  Aeneas para segurar a régua do alinhamento, mas não entra no `blockMap`: o `BlogPost.tsx` só
+  sabe destacar os três tipos de cima. O áudio passa por elas sem acender nada.
+
+Com as âncoras no lugar, a deriva típica caiu para **menos de 2 segundos**.
+
+### O que a transcrição virou
+
+O Whisper deixou de ser opcional. É ele que revela o que foi realmente narrado, onde cada
+improviso caiu e onde cortar. Farol rápido: duração dividida por número de unidades entre 6 e 10
+segundos é saudável — este post começou marcando 17s por unidade, que foi o sinal de alarme.
+
+### Dois defeitos corrigidos de passagem
+
+1. **O negrito sumia no modo narrado.** O `renderNarratedSpans` desenha o parágrafo a partir do
+   texto do fragmento e passa por `boldify` — e os fragmentos do primeiro post foram salvos sem
+   os `**`. Agora o texto vai para o Aeneas limpo e é salvo com os marcadores. **O post
+   `site-maior-ativo-era-ia` continua com o defeito**; conserta rodando o pipeline de novo nele.
+2. **A posição do improviso importa.** Um comentário que o Felipe fez no meio da lista de
+   elementos essenciais foi colocado no fim do bloco e custou 6s de erro em duas unidades
+   destacáveis. Daí o campo `depoisDe` no `improvisos.json`.
+
+### Sobre o áudio deste post
+
+Gravação de 8min10s. Os últimos ~25s são uma chamada final que não existe no texto do post
+("é só entrar em contato com a gente no fim desse post... muito obrigado"). Cortada com ffmpeg
+(D-44), porque não havia nada para acender e só atrapalhava o alinhamento. Áudio final: **7min49s,
+6,39 MB**.
+
+### Verificação
+
+| O que | Resultado |
+|---|---|
+| Fim do último fragmento x duração do MP3 | 469,20s x 469,21s |
+| Deriva conferida contra a transcrição | típica < 2s; pior destacável 4,1s |
+| Convite, entrada, áudio, destaque | ok em 390px e 1280px |
+| 6 instantes espalhados conferidos contra o `.srt` | texto aceso correto em todos |
+| Negrito no modo narrado | preservado |
+| Sair | devolve capa, comentários e rodapé; pausa o áudio |
+| Mesmo post em EN | nenhum convite, nenhum áudio carregado |
+| `tsc` + `npm run test` | limpos, 30 testes |
+
+**Pendente de humano:** o Felipe olhar os prints e ouvir o post narrado de ponta a ponta — a
+deriva de 4s numa unidade é o tipo de coisa que só o ouvido julga.
+
+### Arquivos
+
+| Arquivo | O que é |
+|---|---|
+| `skills/rv-blogpost-audio/SKILL.md` | novo — o processo inteiro |
+| `skills/rv-blogpost-audio/scripts/extrair.mjs` | novo — post → unidades faladas |
+| `skills/rv-blogpost-audio/scripts/montar-sync.mjs` | novo — syncmap → arquivo do site |
+| `skills/rv-blogpost-audio/scripts/conferir.mjs` | novo — farol de deriva |
+| `src/data/blog-audio/google-meu-negocio-guia-completo-negocios-locais.ts` | novo — 65 fragmentos, 27 destacáveis |
+| `src/data/blog-audio/index.ts` | segundo post registrado no catálogo |
+
+### O que falta para este post ir ao ar
+
+1. **O Felipe subir o `.mp3`** no bucket `blog-audio` (conta `smarthomefg@gmail.com`), com o nome
+   exato `google-meu-negocio-guia-completo-negocios-locais.mp3`. O arquivo está em
+   `TEMP/audio-gmn/` e também, só para o teste local, em `public/audio/` — **não commitado**.
+2. **A variável na Vercel**, a mesma pendência do Bloco 4 ([[AUDIO-NO-SUPABASE]]). Enquanto ela
+   não funcionar no build, publicar este post exigiria commitar mais 6,4 MB de áudio no
+   repositório, que é justamente o que a D-7 quer evitar.
+
+---
+
 ## Próximo bloco
+
+> **Histórico — cumprido em 26/08/2026.** O aviso abaixo valeu até o Bloco 5 ser feito, no PC do
+> Brasil, como planejado. Fica registrado porque a razão dele continua valendo: qualquer narração
+> nova pede Docker e processamento, então é trabalho de PC, não de notebook.
 
 # ⚠️ O Bloco 5 é no PC do Brasil, não no notebook
 

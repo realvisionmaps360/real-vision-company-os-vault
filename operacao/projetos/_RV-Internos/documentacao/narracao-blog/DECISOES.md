@@ -85,3 +85,16 @@ Decisões numeradas, com data e o porquê. Não reabrir sem motivo novo.
 | D-38 | O bucket `blog-audio` é **público**, sem URL assinada | O blog é anônimo e o áudio é o mesmo conteúdo do post que já está aberto na tela. URL assinada aqui só criaria complexidade sem proteger nada — o oposto da Academy, onde o áudio é de curso pago |
 | D-39 | O catálogo é quem filtra o idioma, não a página | D-8 é regra de conteúdo, não de layout. Com o filtro no catálogo, qualquer lugar que perguntar "este post tem narração?" recebe a mesma resposta |
 | D-40 | O agente **não** cria o bucket nem sobe o arquivo | O Supabase do site não está na conta alcançada pelo acesso automatizado, e criar bucket público é mudança de infraestrutura — passa pelo Felipe, no painel ([[AUDIO-NO-SUPABASE]]) |
+
+---
+
+## Bloco 5 — 26/08/2026
+
+| # | Decisão | Por quê |
+|---|---|---|
+| D-41 | O texto entregue ao Aeneas é **tudo o que foi narrado**, não só os blocos destacáveis | O Aeneas assume que o texto é a transcrição do áudio. Sem as linhas do que foi falado a mais, ele empurra o tempo sobrando para as frases vizinhas — mediu-se 14s de deriva no trecho das métricas. Títulos, cards, listas de erro, métricas e modalidades entram como âncora |
+| D-42 | Âncora **não** entra no `blockMap` | O `BlogPost.tsx` só sabe destacar `paragraph`, `highlight` e `list`. Um fragmento âncora simplesmente não acende — o áudio passa por ele com a tela parada, que é o comportamento correto. Fazer os outros tipos acenderem seria mexer em seis renderizadores aprovados para atender um caso que eles não previam |
+| D-43 | **Transcrever com Whisper é passo obrigatório**, não conferência opcional | É o único jeito de saber o que foi realmente narrado. O Felipe não lê o post literalmente: reformula títulos e improvisa. Sem a transcrição, a deriva só aparece quando alguém ouve o post no ar |
+| D-44 | Trecho longo narrado sem texto na tela se **corta do áudio** | Neste post, os ~25s de chamada final não existem em bloco nenhum. Não há o que acender, e mantê-los só piora o alinhamento. Improviso curto no meio do post **não** se corta: vira âncora |
+| D-45 | O fragmento salvo **preserva os `**`**; quem recebe texto limpo é o Aeneas | O `renderNarratedSpans` desenha o parágrafo a partir do texto do fragmento e passa por `boldify`. Sem os marcadores, o modo narrado perde todos os negritos do post — foi o que aconteceu no `site-maior-ativo-era-ia`, que segue com o defeito até rodar o pipeline de novo |
+| D-46 | Item de lista é **uma unidade**, nunca quebrado em frases | O `renderBlock` casa `fragIndices[i]` com `items[i]`. Quebrar um item em duas frases desloca todos os itens seguintes e o destaque acende no item errado |

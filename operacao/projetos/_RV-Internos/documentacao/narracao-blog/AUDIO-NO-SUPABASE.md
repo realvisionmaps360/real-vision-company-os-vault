@@ -1,5 +1,16 @@
 # Passo a passo — tirar o áudio do repositório e servir do Supabase
 
+> ## ✅ RESOLVIDO — 01/09/2026
+> Este passo a passo virou **histórico**. Verificado em produção: os dois posts narrados
+> carregam o áudio do bucket `blog-audio` do Supabase, e a `VITE_BLOG_AUDIO_BASE` está no
+> build da Vercel. O bucket existe, é público e tem os dois arquivos (HTTP 200 nos dois).
+>
+> O que sobrou: os dois `.mp3` ainda estão em `public/audio/` no repositório, sem uso.
+> Podem sair num commit de limpeza.
+>
+> O texto abaixo fica como registro de como chegou até aqui.
+
+
 > Ver também: [[ESTADO]] · [[DECISOES]] · [[NARRACAO-SINCRONIZADA-BLOG]]
 >
 > **Isto é a segunda metade do Bloco 4** e é a única parte do projeto que o agente não
