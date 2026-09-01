@@ -97,3 +97,60 @@
 - Confirmar itens finais do Perfil Google (post inicial, link de avaliação).
 - Preencher CNPJ/endereço/representante da Real Vision no contrato e gerar versão final.
 - Reunião 21/08/2026 com Evelin: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
+
+### 01/09/2026 — Correção do login e migração do banco para conta própria
+
+**Problema relatado:** Flávia não conseguia entrar no painel (`/secure`). A senha
+falhava e ela precisava pedir redefinição toda vez, num ciclo que nunca terminava.
+Print dela mostrava `404: NOT_FOUND` da Vercel.
+
+**Diagnóstico — três defeitos somados:**
+1. Não existia `vercel.json`. Acesso direto a qualquer rota interna dava 404 da
+   plataforma. Confirmado por teste HTTP: `/` respondia 200, `/secure` e
+   `/reset-password` respondiam 404. Ela não conseguia nem chegar no login por link.
+2. A tela de "criar nova senha" nunca tinha sido construída — nenhuma chamada
+   `updateUser` no código inteiro. O link do email apontava para `/secure` (tela de
+   login) e o app entrava direto no painel usando a sessão de recuperação, **sem
+   nunca gravar a senha**. Daí o loop.
+3. A conta dela foi criada por script com senha aleatória de 24 caracteres exibida
+   uma única vez. Provavelmente ninguém nunca teve essa senha.
+
+Defeito secundário: o login mostrava "Email ou senha incorretos" para qualquer erro,
+escondendo excesso de tentativas e email não confirmado. Foi isso que manteve o
+problema real invisível.
+
+**Correções (commit `794b0ab`):**
+- `vercel.json` com rewrite de SPA + headers de segurança + `noindex` em `/secure` e `/admin`
+- `DefinirSenhaPage.tsx` — uma tela servindo duas rotas: `/redefinir-senha` (link do
+  email) e `/primeiro-acesso` (troca obrigatória da senha provisória). Medidor de
+  força, aviso de link expirado, `updateUser` de verdade com erro tratado
+- `useAuth.ts` — `redirectTo` corrigido, `updatePassword`, evento `PASSWORD_RECOVERY`,
+  e a chamada RPC tirada de dentro do callback de `onAuthStateChange` (padrão
+  desaconselhado pelo Supabase, travava a tela em "Carregando...")
+- `ProtectedRoute.tsx` — desvio para `/primeiro-acesso` quando a marca está ativa
+- `SecurePage.tsx` — mensagens de erro honestas
+
+**Migração de banco (commit `b80ebf8`):** descobriu-se que o projeto Supabase
+`zilfvhgeqniddxskpgdp` foi criado pelo Lovable e **ninguém da Real Vision tinha
+acesso ao painel** — sem backup, sem como corrigir permissão ou recuperar dados.
+Risco maior que o problema original.
+
+- Dados exportados com a chave pública antes de qualquer mudança (backup em
+  `backup-banco-2026-09-01/`)
+- Projeto novo `xcymehoyqppdgvrhytfj` criado na conta Real Vision, região São Paulo
+- Estrutura recriada idêntica (tabelas, políticas RLS, funções, triggers)
+- Dados migrados e conferidos: preço base R$2.000, 180 datas, 13 bloqueadas,
+  145 com preço especial, de 10/01/2026 a 16/01/2027
+- Conta `administracao@clisam.com.br` recriada com senha provisória `viladoscorais`,
+  email confirmado, papel de admin e marca de troca obrigatória. Login testado.
+
+**Verificação de segurança:** as políticas RLS do banco estão corretas — leitura
+pública nas tabelas de preço (a calculadora precisa), escrita só para administrador.
+
+**Pendente:** SMTP próprio (o email de recuperação ainda usa o serviço embutido do
+Supabase, limitado a poucos envios por hora).
+
+## Tempo investido (continuação)
+| Data | Sessão | Duração estimada |
+|---|---|---|
+| 01/09/2026 | Diagnóstico do login + correção das 3 falhas + migração completa do banco para conta própria | ~3h |
