@@ -34,6 +34,7 @@ Quando os dois se tocam, linka-se — não se copia.
 | CON-2026-003 | [[georreferenciar-print-de-mapa]] | Transformar área desenhada à mão num print em polígono geográfico |
 | CON-2026-004 | [[sites-clientes-migracao-dominio-builder-antigo]] | Domínio ainda no builder antigo apesar do repo existir — diagnóstico e correção |
 | CON-2026-005 | [[landing-de-campanha-com-captura-propria]] | Landing de campanha com formulário próprio (sem serviço de terceiro) e copy que não promete o que a mídia não mostra |
+| CON-2026-007 | [[mapeamento-canais-comunicacao-local-prospeccao]] | Achar freelancer/parceiro/cliente numa cidade nova combinando plataformas grandes com pesquisa de onde a comunidade local se comunica de fato |
 
 Templates: [[TEMPLATE-conhecimento]] · [[TEMPLATE-processo]] · [[TEMPLATE-ferramenta]]
 

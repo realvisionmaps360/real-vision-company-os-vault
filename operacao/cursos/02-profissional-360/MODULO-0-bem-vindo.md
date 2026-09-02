@@ -214,11 +214,22 @@ bate com o texto novo, que fala de Sistema PDI/Sócio Digital em vez de enumerar
 **Duração estimada:** ~6-7 min de narração (a confirmar após gravação) · **Tipo:** conceito, aula narrada
 **Objetivo:** o aluno entender que existe demanda real e não atendida, e por que a janela é agora.
 
-> **Texto novo, ditado por você em 28/08/2026** — substitui a versão anterior deste arquivo (script
-> resumido em tópicos, ficou registrado no histórico do git). Mesmo princípio da Aula 0.1: são as suas
-> palavras, só organizadas em frase e pontuação — nenhum conteúdo trocado por IA. Onde o ditado por voz
-> saiu confuso demais pra eu reconstruir com segurança, marquei com 📌 em vez de inventar — confirma
-> antes de gravar.
+> **Texto novo, ditado por você em 28/08/2026, revisado e fechado em 31/08/2026** — substitui a versão
+> anterior deste arquivo (script resumido em tópicos, ficou registrado no histórico do git). Mesmo
+> princípio da Aula 0.1: são as suas palavras, só organizadas em frase e pontuação — nenhum conteúdo
+> trocado por IA. Todos os pontos que tinham ficado marcados com 📌 foram esclarecidos por você e já
+> estão fechados no texto abaixo — nenhuma pendência restante.
+
+### Por que isso importa agora
+
+Hoje a gente fala toda hora sobre tecnologia, inovação, inteligência artificial. Mas a verdade é essa: a
+tecnologia já existe. A plataforma já foi criada.
+
+O Google já existe. O Google Maps já existe. E mesmo assim, a maioria das pessoas não usa isso do jeito
+que deveria.
+
+É exatamente aí que mora o gap. Porque a plataforma pronta não é o que faz a diferença — é a forma como
+você usa ela. E é isso que separa os três tipos de negócio que eu vou te mostrar agora.
 
 ### Onde está o dinheiro parado
 
@@ -230,10 +241,9 @@ Um é o que não aparece. Simplesmente não tem perfil nenhum.
 O outro é o que aparece, tem a ficha, mas a ficha tá abandonada. Não tem foto, não tem horário, não tem
 telefone, não tem site.
 
-E poucos, muito poucos, aparecem direito, com um perfil feito da forma correta. 📌 *(ajustei o fecho
-desse trecho — no ditado ficou "e eu sou uma plataforma da forma correta", que não fecha a frase.
-Confirma se "poucos aparecem direito, com um perfil feito da forma correta" bate com o que você quis
-dizer.)*
+E poucos, muito poucos, aparecem direito.
+
+Ou seja: a plataforma existe, a tecnologia existe. O que falta é usar da forma correta.
 
 Esse é o seu mercado.
 
@@ -289,13 +299,12 @@ Você pode até pensar que já tem um monte de gente fazendo essa mesma coisa.
 
 Não está. E o motivo é específico.
 
-Quem faz site normalmente não faz tour 360°. 📌 *(um trecho do ditado ficou confuso — "tem médico
-Google não sabe desenvolver aplicativos" — não deu pra reconstruir com segurança. Se você lembrar a
-frase original, me fala que eu encaixo certinho antes de gravar. Deixei só a ideia geral abaixo.)*
-Quase todo mundo no mercado é especialista numa peça só.
+Quem faz site normalmente não cria tour virtual. Quem mexe no Google não sabe desenvolver aplicativo.
+Quase todo mundo tem essa lacuna em alguma peça.
 
-Você, o Profissional 360°, vai ser o elo entre todas essas funcionalidades e vai entregar uma solução
-completa. Porque o dono do negócio não quer contratar quatro fornecedores, ele quer um que resolve tudo.
+Você, o Profissional 360°, sabe trabalhar em todas as frentes. Vai ser o elo entre todas essas
+funcionalidades e vai entregar uma solução completa. Porque o dono do negócio não quer contratar quatro
+fornecedores, ele quer um que resolve tudo.
 
 Esse é o espaço vazio, essa é a lacuna. Não é ser melhor que os outros numa coisa só. É ser o único que
 entrega todo o conjunto, e criar uma experiência simples para a pessoa entender.
@@ -315,9 +324,8 @@ pessoas online muito fácil. Então, se você precisa desenvolver um trabalho em
 contratar um fotógrafo freelancer pra fazer a captação das imagens para você. Não só imagem 360°, fotos
 também, caso precise, para atualizar o perfil do Google, por exemplo.
 
-📌 *(um trecho do ditado — "que cor ser um oceano azul tão amplo" — não deu pra reconstruir, parece
-perdido na gravação por voz. Removi dessa versão. Se lembrar o que queria dizer ali, me passa que eu
-encaixo.)*
+Esse trabalho é um oceano azul de oportunidades. Muito amplo, porque poucas pessoas têm uma boa presença
+digital.
 
 Você pode escolher onde quer começar. Pode ser prospectando na sua rua, num bairro mais próximo, ou numa
 outra cidade.

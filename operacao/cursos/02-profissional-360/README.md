@@ -29,6 +29,42 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 
 ---
 
+## Como desenvolvemos as aulas narradas (Módulo 0 e qualquer outro módulo em formato narrado)
+
+> Processo fechado na sessão de 31/08/2026, ao revisar a Aula 0.2. Vale pra 0.3, 0.4 e qualquer aula
+> narrada futura — não é regra só do Módulo 0.
+
+1. **O texto sai da voz do Felipe, não da IA.** Felipe dita o conteúdo falando naturalmente (às vezes por
+   voz transcrita, às vezes digitado corrido). O valor da aula narrada está em soar como ele fala de
+   verdade — então a IA nunca reescreve o conteúdo, só organiza.
+2. **Organizar = quebrar em frases/parágrafos e ajustar pontuação.** Nada de trocar palavra por sinônimo,
+   resumir ideia ou "melhorar" o estilo. Mesmo princípio já registrado no cabeçalho da Aula 0.1.
+3. **Trecho confuso do ditado (fala embaralhada, transcrição por voz que saiu sem nexo) nunca é
+   adivinhado.** Marca com 📌 e pergunta direto ao Felipe o que ele quis dizer ali. Só fecha depois que
+   ele confirma ou reescreve o trecho.
+4. **Fluxo de revisão:** quando o Felipe pede pra "conversar" sobre um trecho, mostrar **antes/depois**
+   no chat antes de tocar no arquivo. Quando ele já resolveu os pontos em aberto e pede pra "aplicar",
+   aplica direto no arquivo e devolve o texto final pronto pra leitura em voz alta.
+5. **Cada 📌 resolvido é removido do texto** — o arquivo final não deve carregar marcação de pendência já
+   fechada, só o que ainda falta confirmar antes de gravar (ex: uma estatística que o Felipe ainda não
+   validou).
+
+## ⚠️ Restrição de máquina — narração e transcrição sincronizada
+
+> Registrado em 31/08/2026 porque quase virou confusão: o Felipe estava na Suíça no notebook nesta
+> sessão, e a ferramenta que faz o alinhamento de áudio (Aeneas, via Docker — usada no
+> [[NARRACAO-SINCRONIZADA-BLOG]]/RV Voice Sync) **só está instalada na máquina dele no Brasil (PC)**.
+
+- **Planejamento, organização de roteiro e escrita do texto narrado** (o que fizemos nesta sessão) —
+  pode ser feito de qualquer máquina, incluindo o notebook na Suíça.
+- **Processamento técnico do áudio** (rodar o Docker/Aeneas pra gerar o sync frase-a-frase) — só funciona
+  na máquina do Brasil. Quando o Felipe estiver acessando aquele PC (fisicamente ou via TeamViewer), ele
+  avisa na sessão, e a partir daí dá pra rodar essa etapa.
+- **Na prática:** o texto final de cada aula narrada (como o da 0.2, já fechado) fica pronto pra gravação
+  em qualquer sessão. Só a etapa de sincronização do áudio depende de estar na máquina certa.
+
+---
+
 ## Arquivos desta pasta
 
 | Arquivo | O que é |
@@ -82,3 +118,4 @@ Mapeado nesta sessão, deixado pra depois a pedido do Felipe:
 ## Histórico
 
 - **01/06/2026** — Sessão de planejamento e criação. Definida a grade completa, escrito o roteiro do Módulo 1, mapeadas as pendências do site. Persona de copy usada: O Arquiteto da Persuasão (Halbert/Ogilvy/Schwartz na voz Real Vision).
+- **28-31/08/2026** — Enriquecido o roteiro do Módulo 1 (1.2, 1.3, 1.4, 1.6, 1.7) com detalhes reais de operação do Felipe. Reescrita a Aula 0.2 no formato narrado (texto final, ditado por ele em duas rodadas, todos os 📌 fechados em 31/08). Criado o rascunho do Módulo 2 (aulas 2.1 e 2.2). Fechado o processo de trabalho pra aulas narradas e registrada a restrição de máquina (Docker/Aeneas só no PC do Brasil) — ver seções acima. Próxima sessão: Aula 0.3.

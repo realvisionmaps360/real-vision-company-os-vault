@@ -19,6 +19,12 @@ narração sincronizada para dentro do **curso pago** — ver [[PRD-007-curso-na
 **Diferenças na Academy:** conteúdo pago vai para o banco e bucket privado (nunca `public/`), e o passo
 do `blockMap` manual vira script automatizado.
 
+> **⚠️ Restrição de máquina (registrado 31/08/2026):** o Docker com a imagem `oyekamal/aeneas-docker`
+> está instalado só na máquina do Felipe **no Brasil** (PC). Se ele estiver em outra máquina (ex: notebook
+> na Suíça), dá pra escrever/organizar o texto da narração normalmente, mas a etapa 5 deste pipeline
+> (rodar o Aeneas) só executa quando ele estiver acessando o PC do Brasil — fisicamente ou via TeamViewer.
+> Ele avisa na sessão quando estiver nessa máquina.
+
 ---
 
 ## O que é
