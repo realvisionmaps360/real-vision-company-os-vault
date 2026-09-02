@@ -2,13 +2,13 @@
 
 **Número usado:** esse WhatsApp Business é o número principal do Felipe Garcia — as mensagens estão sendo mandadas pra pessoas que já são contatos existentes nesse número principal, não é um número secundário/comercial separado.
 
-Objetivo: captar o email de cada contato do WhatsApp Business pra newsletter (projeto Hermes / email marketing). Não é mais prospecção de lead — é captação de email de toda a rede (exceto família de 1º grau).
+Objetivo: captar o email de cada contato do WhatsApp Business pra newsletter (projeto Hermes / email marketing). Não é mais prospecção de lead — é captação de email de toda a rede, incluindo família de 1º grau (ver regra atualizada abaixo).
 
 Destino final dos emails confirmados: Supabase `ghwjetvazmdlaqidgxqi`, tabela `email_contatos` (coluna `tags` marca a categoria: amigo / familia / cliente).
 
 ## Regra de cobertura (atualizada 02/09/2026)
 
-**Mandar pra todos.** Não filtrar contato por "qualidade" da relação, tipo de interação ou se parece frio/comercial — a única checagem é: já existe conversa registrada no WhatsApp (qualquer tipo, mesmo mínima)? Se sim, manda. A única razão válida pra NÃO mandar de novo é já ter mandado antes nesta campanha e a pessoa ainda não ter respondido — nesse caso não duplica, só espera. Grupos, bots automáticos, e família de 1º grau continuam fora (ver lista de exclusão abaixo).
+**Mandar pra todos.** Não filtrar contato por "qualidade" da relação, tipo de interação ou se parece frio/comercial — a única checagem é: já existe conversa registrada no WhatsApp (qualquer tipo, mesmo mínima)? Se sim, manda. A única razão válida pra NÃO mandar de novo é já ter mandado antes nesta campanha e a pessoa ainda não ter respondido — nesse caso não duplica, só espera. Grupos e bots automáticos continuam fora. Família de 1º grau também entra na campanha normalmente — ver regra revisada abaixo, que muda a exclusão anterior.
 
 ## Templates aprovados (02/09/2026, template A revisado 02/09/2026, abertura "Bom dia" a partir do Lote 8)
 
@@ -31,13 +31,19 @@ Regra: nenhum emoji de coração (💛❤️ etc) em nenhum template.
 
 > [abertura no tom certo] ... Vi aqui que seu email é [email] — posso usar esse mesmo pra te colocar na lista?
 
-Família de 1º grau excluída de NOVOS disparos (assume-se que Felipe já tem o email): Pai, Romana, Drenka Mama, Tata Mile Loznjakovic, Família GP (grupo), Gê Prima, Diego Primo, Victor Iberg (irmão da namorada), **Lucy Mae** (mãe do Felipe — descoberta no lote 2, aparece no grupo "Família GP" junto com Pai/Cibele Irmã), **Vitoria Morais** e **Christine Garcia** (pedido explícito do Felipe pra pular, 02/09/2026), **Débora** (irmã do Felipe — descoberta no lote 3) e **Cibele Irmã** (irmã, mencionada nas mesmas conversas de família).
+## Regra de exclusão de família (revisada 02/09/2026)
 
-**Correção 02/09/2026:** Débora e Cibele Irmã já tinham recebido mensagem (template B) ANTES de serem identificadas como família/excluídas nesta lista. Não houve reenvio — ambas ficam com status "aguardando resposta" como qualquer outro contato. Cibele Irmã não estava em nenhuma tabela de lote; registro abaixo:
+**Decisão nova de hoje (02/09/2026):** família de 1º grau **entra** na campanha normalmente, como qualquer outro contato — a regra antiga de excluir todo mundo desse grupo foi revogada. A única exclusão por já ter email confirmado é: **Pai (Acacio)**, **Mãe (Lucy Mae / Maria Luci)** e **Romana** — os três já têm email na base por outro canal, não precisam de novo disparo.
+
+**Liberados hoje** (antes estavam na lista de exclusão de família, agora recebem mensagem normalmente): Drenka Mama, Tata Mile Loznjakovic, Gê Prima, Diego Primo, Victor Iberg (irmão da namorada).
+
+**Continuam bloqueados, mas por motivo separado** — pedido explícito do Felipe, não é regra de família: **Christine Garcia** e **Vitoria Morais**.
+
+Débora e Cibele Irmã (irmãs do Felipe, família de 1º grau) já tinham recebido mensagem antes mesmo de existir qualquer exclusão de família no processo — o que hoje é simplesmente o comportamento correto sob a regra nova, não mais uma exceção. Ver registro delas no Lote 1/3 abaixo.
 
 | # | Contato | Categoria | Email já tinha? | Ação | Status |
 |---|---|---|---|---|---|
-| — | Cibele Irmã | Família (irmã) | Não encontrado | Mensagem (template B, "Oi Cibele...") enviada antes da exclusão ser identificada | ⏳ aguardando resposta |
+| — | Cibele Irmã | Família (irmã) | Não encontrado | Mensagem (template B, "Oi Cibele...") enviada antes da exclusão ser identificada (regra antiga, hoje revogada) | ⏳ aguardando resposta |
 
 ## Lote 1 — primeiros 10 contatos (02/09/2026)
 
@@ -79,7 +85,7 @@ Total de mensagens novas enviadas no lote 2: 10 (Guilherme, Damien, Saulo, Eduar
 
 | # | Contato | Categoria | Email já tinha? | Ação | Status |
 |---|---|---|---|---|---|
-| 25 | Débora | Família (irmã) | Não encontrado | **Correção 02/09/2026:** mensagem (template B, "Oi irmã...") já tinha sido enviada antes de ela ser identificada como família/excluída. Deixada como está, sem reenvio. | ⏳ aguardando resposta |
+| 25 | Débora | Família (irmã) | Não encontrado | **Correção 02/09/2026:** mensagem (template B, "Oi irmã...") já tinha sido enviada antes de ela ser identificada como família/excluída (regra antiga, hoje revogada). Deixada como está, sem reenvio. | ⏳ aguardando resposta |
 | 26 | Celina | Amigo (DE) | Não encontrado | Mandada msg A em alemão | ⏳ aguardando resposta |
 | 27 | Florian (+41 79 101 16 24) | Amigo (DE) | Não encontrado | Mandada msg A em alemão | ⏳ aguardando resposta |
 | 28 | Quintal Mangô | Prospect | Não encontrado | Mandada msg C pedindo email | ⏳ aguardando resposta |
@@ -329,3 +335,15 @@ Total de mensagens novas enviadas no lote 8: 30. 1 pulado (zero interação real
 Nenhuma confirmação de email nova encontrada além das 7 já registradas anteriormente — todos os contatos do Lote 8 seguem "aguardando resposta" (enviados nesta mesma sessão, ainda muito recentes). Sessão encerrada aqui.
 
 Total de mensagens novas enviadas no lote 5: 18. Contatos pulados: 3 (outreach frio, suporte técnico, bot comercial).
+
+## Relacionados
+
+- [[07-COMO-ADICIONAR-CONTATOS]]
+- [[03-SEGMENTACAO-CONTATOS]]
+
+## Histórico
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 2026-09-02 | Documento movido de `Felipe Garcia/contatos-whatsapp/coleta-emails-whatsapp.md` pra cá | Trabalho pertence ao projeto de email marketing (Hermes), não à pasta pessoal do Felipe |
+| 2026-09-02 | Regra de exclusão de família reescrita | Família de 1º grau passa a entrar na campanha normalmente — só Pai/Mãe/Romana ficam fora por já terem email confirmado. Christine Garcia e Vitoria Morais continuam bloqueadas, mas por pedido explícito separado, não por regra de família |

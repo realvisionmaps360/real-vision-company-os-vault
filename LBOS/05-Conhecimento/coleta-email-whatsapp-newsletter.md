@@ -1,16 +1,17 @@
 ---
-id: PRC-2026-001
-tipo: processo
+id: CON-2026-008
+tipo: conhecimento
 nome: Captação de email via WhatsApp para newsletter (Hermes)
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-09-02
 atualizado_em: 2026-09-02
 proxima_revisao: 2026-10-02
-fonte_unica: true
+confiabilidade: alta
+fonte: Execução direta acompanhada pelo Felipe via sessão de Claude Code + Playwright MCP no WhatsApp Web, 02/09/2026
 pertence_a: ["[[LBOS]]"]
 referencia: ["[[02-Projetos/real-vision/PROJETO]]"]
-tags: [lbos/entidade, lbos/processo]
+tags: [lbos/entidade, lbos/conhecimento]
 ---
 
 # Captação de email via WhatsApp para newsletter (Hermes)
@@ -19,7 +20,7 @@ tags: [lbos/entidade, lbos/processo]
 
 Processo repetível para varrer os contatos do WhatsApp Business principal do Felipe e conseguir autorização + email de cada um pra newsletter da Real Vision (projeto Hermes / email marketing). Nasceu de um pedido que começou como "separar lead de cliente com etiqueta" e virou, no meio da conversa, "captar email de todo mundo que já é contato — a era de procurar lead novo acabou por enquanto".
 
-**Onde a verdade operacional mora:** a lista viva de quem já foi contatado, com status por pessoa, fica em `Felipe Garcia/contatos-whatsapp/coleta-emails-whatsapp.md` (Company OS, fora do LBOS). Este nó documenta o **método**, não repete a lista — consultar o arquivo pra saber quem já respondeu.
+**Onde a verdade operacional mora:** a lista viva de quem já foi contatado, com status por pessoa, fica em `operacao/marketing/email-marketing/08-COLETA-WHATSAPP.md` (Company OS, fora do LBOS). Este nó documenta o **método**, não repete a lista — consultar o arquivo pra saber quem já respondeu.
 
 ## Contexto
 
@@ -47,9 +48,9 @@ Regra fixa: **nenhum emoji de coração** (💛❤️ etc) em nenhum template �
 **4. Mesmo com o email já visível no histórico, mandar mensagem pedindo confirmação/autorização de uso** — nunca extrair e salvar sem a pessoa confirmar que aquele endereço pode ser usado. Variante de confirmação (mesmo tom A/B/C, só troca o fecho):
    > [abertura no tom certo] ... Vi aqui que seu email é [email] — posso usar esse mesmo pra te colocar na lista?
 
-**5. Não filtrar por "faz sentido pro negócio da Real Vision" ou por qualidade do relacionamento.** Decisão corrigida a meio do processo (02/09/2026): o Felipe pediu explicitamente pra mandar pra **todo mundo** da lista de contatos, incluindo fornecedor pessoal, loja onde ele é cliente, contato salvo sem conversa prévia — a única exceção real é família de 1º grau que **já tem o email por outro canal**.
+**5. Não filtrar por "faz sentido pro negócio da Real Vision" ou por qualidade do relacionamento.** Decisão corrigida a meio do processo (02/09/2026): o Felipe pediu explicitamente pra mandar pra **todo mundo** da lista de contatos, incluindo fornecedor pessoal, loja onde ele é cliente, contato salvo sem conversa prévia.
 
-**6. Família excluída do disparo — só quem já tem o email confirmado por fora:** Pai e Mãe (Lucy Mae). **As duas irmãs (Débora e Cibele) recebem a mensagem normalmente** — Débora foi contatada pelo próprio Felipe fora do fluxo do Claude; Cibele foi mandada dentro do fluxo. Romana (esposa/parceira) não entra no fluxo por ser óbvio demais. Descobrir quem é família de 1º grau exige checar o grupo "Família GP" do WhatsApp antes de mandar — dois contatos (Lucy Mae, Débora) só foram identificados como mãe/irmã depois de já estarem na fila, checando esse grupo.
+**6. Regra de família (revisada 02/09/2026, mesmo dia da criação deste nó):** família de 1º grau **entra** na campanha normalmente, como qualquer outro contato — a regra original (excluir todo o 1º grau) durou poucas horas e foi revogada no mesmo dia. A exclusão que sobrevive é bem mais estreita: só quem **já tem email confirmado por outro canal** fica de fora — **Pai (Acacio)**, **Mãe (Lucy Mae / Maria Luci)** e **Romana**. Contatos que estavam na lista de exclusão antiga e hoje são liberados: Drenka Mama, Tata Mile Loznjakovic, Gê Prima, Diego Primo, Victor Iberg. **Christine Garcia** e **Vitoria Morais** continuam bloqueadas, mas por um motivo separado — pedido explícito do Felipe, não é regra de família. Descobrir quem é família de 1º grau ainda exige checar o grupo "Família GP" do WhatsApp antes de mandar, só que agora pra decidir se a pessoa já tem email confirmado (fica de fora) ou não (entra normalmente).
 
 **7. Duplicata é o ruído mais comum.** Muitos números "sem nome" na lista de conversas, ao abrir, revelam ser o mesmo contato de alguém já processado sob outro nome/rótulo. Sempre confirmar o nome que aparece no cabeçalho do chat antes de mandar, não confiar só no número buscado.
 
@@ -59,7 +60,7 @@ Regra fixa: **nenhum emoji de coração** (💛❤️ etc) em nenhum template �
 
 ## Como saber que deu certo
 
-Cada contato da lista de conversas do WhatsApp Business tem uma linha em `coleta-emails-whatsapp.md` com status final: e-mail confirmado e salvo no Supabase, aguardando resposta, ou pulado com motivo explícito (família com email já conhecido, duplicata, ou recusa expressa do próprio contato).
+Cada contato da lista de conversas do WhatsApp Business tem uma linha em `08-COLETA-WHATSAPP.md` com status final: e-mail confirmado e salvo no Supabase, aguardando resposta, ou pulado com motivo explícito (família com email já conhecido, duplicata, ou recusa expressa do próprio contato).
 
 ## Limite técnico encontrado
 
@@ -73,7 +74,7 @@ Durante a varredura, apareceu uma `SUPABASE_SERVICE_ROLE_KEY` em texto puro num 
 
 - Pertence a: [[LBOS]]
 - Referencia: [[02-Projetos/real-vision/PROJETO]]
-- Artefato operacional (fora do LBOS): `Felipe Garcia/contatos-whatsapp/coleta-emails-whatsapp.md`
+- Artefato operacional (fora do LBOS): `operacao/marketing/email-marketing/08-COLETA-WHATSAPP.md`
 - Skill de apoio: `rv-email` (persona Hermes, regras de LGPD e infraestrutura de envio)
 
 ## Histórico
@@ -81,3 +82,5 @@ Durante a varredura, apareceu uma `SUPABASE_SERVICE_ROLE_KEY` em texto puro num 
 | Data | O que mudou | Motivo | Impacto | Decisão |
 |---|---|---|---|---|
 | 2026-09-02 | Nó criado, processo documentado após 4 lotes de execução (~50 contatos processados) | Felipe pediu registro explícito do processo mapeado, pra reuso futuro | Método de captação de email vira repetível — não fica preso numa sessão | Filtro por "relevância pro negócio" foi abandonado no meio do processo: manda pra todo mundo, só família de 1º grau com email já conhecido fica de fora |
+| 2026-09-02 | Nó movido de `04-Processos/` (pasta fora da spec do LBOS, sem hub e colidindo em numeração com `04-Documentos`/`04-Interagente`) pra `05-Conhecimento/`; ID trocado de `PRC-2026-001` pra `CON-2026-008`; `tipo` trocado de `processo` pra `conhecimento`; `fonte:` e `confiabilidade:` adicionados (exigência do hub desta pasta) | Reorganização de documentação — o conteúdo é método reutilizável (conhecimento), não um processo de negócio formal com dono operacional fixo | Nenhuma mudança de conteúdo técnico do processo em si, só de localização/classificação no grafo | Regra de família também foi corrigida neste mesmo commit (ver linha abaixo) — família de 1º grau passa a entrar na campanha, só quem já tem email confirmado (Pai/Mãe/Romana) fica de fora |
+| 2026-09-02 | Regra de exclusão de família reescrita no corpo (passo 6) | A regra antiga (excluir todo o 1º grau) foi revogada no mesmo dia em que foi criada — Christine Garcia e Vitoria Morais seguem bloqueadas, mas por pedido separado do Felipe, não por serem família | Contatos antes excluídos (Drenka Mama, Tata Mile, Gê Prima, Diego Primo, Victor Iberg) agora entram na campanha normalmente | Só fica de fora quem já tem email confirmado por outro canal: Pai, Mãe, Romana |

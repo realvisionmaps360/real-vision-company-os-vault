@@ -98,3 +98,9 @@ O que mudou desde julho, e por quê:
 - [ ] Confirmar com Felipe se `tasks.recurrence` cobre 100% os casos de mensalidade/anuidade, ou se precisa de um campo dedicado em `client_services`
 - [ ] UI de tags dentro do VisionFlow (hoje só via SQL/MCP)
 - [ ] Fluxo de "email geral disparado sempre que algo novo for criado pra todo mundo" — mencionado por Felipe em 22/07, ainda não desenhado
+
+## Relacionados
+
+- [[README]]
+- [[07-COMO-ADICIONAR-CONTATOS]]
+- [[08-COLETA-WHATSAPP]]

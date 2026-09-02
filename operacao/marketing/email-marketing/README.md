@@ -19,6 +19,7 @@ escritos e agendados. Emails 5 a 12 ainda não escritos.
 | 05 | [[05-SISTEMA-RESPOSTA-PERSONALIZADA]] | Proposta de arquitetura pro 1:1 depois da resposta. Nada implementado |
 | 06 | [[06-MANUAL-APRENDIZADO]] | A escola do Felipe, em 6 níveis |
 | 07 | [[07-COMO-ADICIONAR-CONTATOS]] | Processo fixo de entrada de contato novo |
+| 08 | [[08-COLETA-WHATSAPP]] | Captação de email da rede pessoal via WhatsApp Business |
 | — | [[LEITURA-NARRADA-EMAILS]] | Todos os emails em texto corrido, pra ler em voz alta antes de aprovar |
 | — | [[PROCESSO-EDITORIAL-EMAIL-BLOG-CHATGPT-VOZ]] | Como blog post vira email. Veio do ChatGPT/LBOS, mergeado em 27/08 |
 | — | `campanhas/` | Os HTMLs disparados + [[INDICE-CAMPANHAS]] |
@@ -91,3 +92,4 @@ só nesta máquina. Vale decidir se entram no versionamento.
 |---|---|---|
 | 2026-08-21 | Versão original criada | Sessão `email1` |
 | 2026-08-27 | **Reescrito do zero** | O original se perdeu sem cópia. Reconstruído com o estado real de hoje, depois do disparo da campanha 004 |
+| 2026-09-02 | Adicionado [[08-COLETA-WHATSAPP]] à tabela | Documento movido de `Felipe Garcia/contatos-whatsapp/` (pasta pessoal errada) pra dentro do projeto Hermes, onde o trabalho pertence |
