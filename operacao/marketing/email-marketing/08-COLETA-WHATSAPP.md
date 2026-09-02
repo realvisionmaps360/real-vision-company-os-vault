@@ -290,6 +290,36 @@ Já confirmados em sessões anteriores (mantidos, não reprocessados): Ben/+41 7
 
 Nenhuma outra resposta com email novo encontrada na varredura — os demais contatos seguem "aguardando resposta".
 
+## Varredura das mensagens mais recentes (02/09/2026, sessão de reorganização)
+
+Nova sessão retomou o trabalho e encontrou confirmações que ficaram sem salvar. Varredura não foi o audit completo dos 158 — foi uma passada pelas conversas mais recentes (busca por `@gmail`, `@hotmail`, `@yahoo`, `@gmx`, `@outlook`, `@icloud` + lista "Tudo" ordenada por chegada) até a trilha esfriar.
+
+| Contato | Email confirmado | Categoria |
+|---|---|---|
+| ANTONIO CLAUDIO (#53) | antonioclaudioc721@gmail.com | amigo |
+| Italo Nogueira (#24) | italonogueira.dev@gmail.com | amigo |
+| Letice Hallan (#64) | leticesn@gmail.com | amigo — resposta humana real ("belezaa, pode mandar sim"), não é mais só bot de horário |
+| William Tibia (#63) | williammaciejewski@gmail.com | amigo |
+| Daniel — +41 78 269 24 96 (#58) | danielcostadcr@gmail.com | amigo — nome inferido do próprio email, contato ainda salvo como "Desconhecido" antes |
+| Renan Queiroz Vereador (#75) | renanmonteiroqueiroz@gmail.com | família não-imediata |
+| Hallan (#6) | hallangsc@gmail.com | amigo/parceria |
+| Nikola Bruda (#22) | nikolaloznjakovic7@gmail.com | amigo |
+| Alex — +55 11 98271-2051 (#65) | alexvideoefoto@gmail.com | amigo/peer (Connecta Digital) |
+| Tertuliano da Silva — "Pintor" 🚒🛟🧯 (#37) | tertulianodasilvatertuliano@gmail.com | prospect |
+| Damien Snowboarder (#14) | damianohiltonno@gmail.com | amigo |
+| William Primo (#23) | willliangc10@hotmail.com | família não-imediata (primo) |
+| Roosevelt Escritor (#82) | rooseveltsoares@hotmail.com | amigo |
+| Filipi Felix Tattoo (#76) | Felix.filipi@icloud.com | amigo |
+
+**Total desta varredura: 14 salvos.** Total acumulado no Supabase: 21.
+
+**Pendências encontradas, não salvas ainda:**
+- **Emerson Santos Pratigí (#94)** — mandou o email duas vezes (07/45 hoje e 29/06) sempre como `recantopousada 6@gmail.com`, com espaço no meio. Endereço inválido como está — confirmar com ele antes de salvar, pra não gerar bounce.
+- **Norabrignoccoli Nora (#135)** — respondeu "Pode sim" mas o email não apareceu na mensagem seguinte visível na varredura; precisa abrir a conversa pra achar.
+- **Gabriel Iberg / Solarium-Aarau** (já no Supabase com `solariumaarau@gmail.com`) — pediu update: email oficial mudou pra `solarium-aarau@gmx.ch`. Fora do escopo desta varredura (não é contato novo), mas fica registrado.
+
+A varredura completa dos ~140 contatos ainda sem resposta não foi feita nesta sessão — só a passada pelas conversas recentes acima.
+
 ## Lote 8 — contatos 129-158 (02/09/2026)
 
 Abertura trocada pra "Bom dia" a partir daqui (pedido do Felipe). Bloco majoritariamente de prospects turísticos (Ilhabela) e restaurantes de Paraty (campanha de prospecção antiga).
