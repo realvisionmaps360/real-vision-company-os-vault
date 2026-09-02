@@ -5,7 +5,7 @@ nome: Real Vision — operação
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-06
-atualizado_em: 2026-08-21
+atualizado_em: 2026-09-02
 proxima_revisao: 2026-09-06
 prazo: continuo
 pertence_a: ["[[LBOS]]"]
@@ -79,6 +79,7 @@ Cliente → Real Vision 360 → Receita → Fluxo de Caixa → OBJ-casamento-sui
 - Decidido por: [[DEC-2026-002]], [[DEC-2026-003]]
 - Tarefas: [[TAR-2026-002]], [[TAR-2026-003]], [[TAR-2026-004]], [[TAR-2026-005]], [[TAR-2026-011]]
 - Conhecimento gerado: [[prospeccao-google-maps-apify]], [[georreferenciar-print-de-mapa]], [[landing-de-campanha-com-captura-propria]], [[mapeamento-canais-comunicacao-local-prospeccao]]
+- Processos gerados: [[04-Processos/coleta-email-whatsapp-newsletter|PRC-2026-001 — Captação de email via WhatsApp para newsletter]]
 - Referencia: [[AGENTS]], [[EMPRESA]]
 
 ## Histórico
@@ -93,3 +94,4 @@ Cliente → Real Vision 360 → Receita → Fluxo de Caixa → OBJ-casamento-sui
 | 2026-08-19 | Campanha Unterentfelden deixa de ser venda e vira validação de mercado gratuita, por [[DEC-2026-004]] | Felipe é brasileiro sem status de residência na Suíça e não tem como receber por esse trabalho de forma legal e simples | **CHF 480 de receita potencial vão a zero.** A frente suíça deixa de alimentar [[OBJ-casamento-suica]] por receita e passa a alimentá-la por rede de contato. Some a exposição fiscal inteira | Oferta gratuita, questionário voluntário, newsletter desacoplada, nenhum voo novo até o Amt für Migration responder |
 | 2026-08-21 | Nasce [[TAR-2026-011]] — controle de contratos no VisionFlow, já em estado pausado | Prioridade 5 do handoff de 17/08; Felipe simplificou o desenho junto com o Claude Code e pediu para pausar antes de codar, sem tempo agora | Nenhuma mudança em produção/banco. Desenho final (reaproveitar aba Arquivos + indicador binário) fica registrado, com 3 perguntas em aberto pra quando retomar | Rejeitada a proposta de tabela nova + aba nova; aprovado o desenho mais simples |
 | 2026-09-02 | Nasce [[mapeamento-canais-comunicacao-local-prospeccao]], a partir do caso real de busca de freelancer 360°/drone em Itacaré-BA | Felipe pediu documentação explícita da metodologia para reuso no curso Profissão 360° e em prospecções futuras de clientes/parceiros em novas cidades | Metodologia de prospecção local vira ativo reutilizável do grafo, não fica presa numa sessão | Nó de conhecimento único, atualizado a cada novo caso testado — não um nó por cidade |
+| 2026-09-02 | Nasce [[04-Processos/coleta-email-whatsapp-newsletter\|PRC-2026-001]] — processo de captação de email via WhatsApp pro projeto Hermes, ~50 contatos processados em 4 lotes | Pedido original de tagging de lead virou captação de email de toda a rede de contatos, depois de decisão do Felipe de pausar prospecção nova | Metodologia (3 tons de mensagem, checagem de email existente, exclusão só de família com email já conhecido) vira repetível; lista viva de status por contato fica fora do LBOS, em `Felipe Garcia/contatos-whatsapp/coleta-emails-whatsapp.md` | Abandonado o filtro por "relevância pro negócio" — manda pra todo mundo da lista, exceto Pai/Mãe (já têm email por outro canal) |
