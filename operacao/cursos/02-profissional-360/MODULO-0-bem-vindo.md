@@ -214,124 +214,123 @@ bate com o texto novo, que fala de Sistema PDI/Sócio Digital em vez de enumerar
 **Duração estimada:** ~6-7 min de narração (a confirmar após gravação) · **Tipo:** conceito, aula narrada
 **Objetivo:** o aluno entender que existe demanda real e não atendida, e por que a janela é agora.
 
-> **Texto novo, ditado por você em 28/08/2026, revisado e fechado em 31/08/2026** — substitui a versão
-> anterior deste arquivo (script resumido em tópicos, ficou registrado no histórico do git). Mesmo
-> princípio da Aula 0.1: são as suas palavras, só organizadas em frase e pontuação — nenhum conteúdo
-> trocado por IA. Todos os pontos que tinham ficado marcados com 📌 foram esclarecidos por você e já
-> estão fechados no texto abaixo — nenhuma pendência restante.
+> **Texto novo, ditado por você em 31/08/2026** — substitui a versão de 28/08 (que ficou registrada no
+> histórico do git). Mesmo princípio da Aula 0.1: são as suas palavras, só organizadas em frase e
+> pontuação — nenhum conteúdo trocado por IA. Este ditado resolveu três dos 📌 da versão anterior
+> (o fecho dos "três tipos", a frase do "quem mexe com Google não sabe desenvolver aplicativo" e o
+> "oceano azul"). Restou um 📌: a estatística de busca local — resolvido em 02/09/2026, dado do Google
+> (88% das buscas locais no celular terminam em ligação ou visita em 24h), fonte Think with Google.
 
-### Por que isso importa agora
+### A plataforma já existe. O que falta é uso
 
 Hoje a gente fala toda hora sobre tecnologia, inovação, inteligência artificial. Mas a verdade é essa: a
-tecnologia já existe. A plataforma já foi criada.
+tecnologia já existe, a plataforma já foi criada. O Google Meu Negócio já existe. E mesmo assim, a
+maioria das pessoas não usa do jeito que deveria.
 
-O Google já existe. O Google Maps já existe. E mesmo assim, a maioria das pessoas não usa isso do jeito
-que deveria.
+É exatamente aí que mora o gap. Porque a plataforma pronta não é o que faz diferença. É a forma como
+você usa ela.
 
-É exatamente aí que mora o gap. Porque a plataforma pronta não é o que faz a diferença — é a forma como
-você usa ela. E é isso que separa os três tipos de negócio que eu vou te mostrar agora.
+E é isso que separa os três tipos de negócio que eu vou te mostrar agora.
 
 ### Onde está o dinheiro parado
 
-Se você sair na rua da sua cidade e olhar os negócios — restaurante, pousada, qualquer lugar — e
-procurar o perfil deles no Google, do seu celular, você vai encontrar três situações.
+Se você sair na rua da sua cidade e olhar os negócios — restaurante, pousada, qualquer tipo de lugar — e
+depois pesquisar o perfil deles no Google, do seu celular, você vai encontrar três situações.
 
-Um é o que não aparece. Simplesmente não tem perfil nenhum.
+O primeiro é aquele que nem aparece. Simplesmente não tem perfil nenhum.
 
-O outro é o que aparece, tem a ficha, mas a ficha tá abandonada. Não tem foto, não tem horário, não tem
+O outro até aparece, tem a ficha lá, mas é uma ficha abandonada. Não tem foto, não tem horário, não tem
 telefone, não tem site.
 
 E poucos, muito poucos, aparecem direito.
 
-Ou seja: a plataforma existe, a tecnologia existe. O que falta é usar da forma correta.
-
-Esse é o seu mercado.
+Ou seja: a plataforma existe, a tecnologia existe. O que falta é usar da forma correta. E esse é o seu
+mercado.
 
 O seu papel aqui é conectar uma plataforma que já existe, que tem várias funcionalidades que ajudam as
-pessoas, e implementar isso para o dono. Porque ele não sabe como fazer, e não tem tempo para descobrir.
+pessoas, e implementar isso para o dono. Porque ele não sabe como fazer, e não tem tempo de descobrir.
 
-E o nosso cliente, o cliente final, ele decide qual é o estabelecimento que ele vai antes mesmo de
-falar com o negócio.
+E o nosso cliente, o cliente final, é ele que decide qual estabelecimento ele vai, antes mesmo de falar
+com o dono.
 
 ### O cliente decide antes de falar com o negócio
 
-O jeito como as pessoas escolhem gastar mudou.
+O jeito como as pessoas escolhem gastar mudou. Antes, as pessoas entravam nas lojas e decidiam ali se
+queriam comprar. Hoje ela decide pelo celular, antes de sair de casa. Procura no Google, olha as fotos,
+vê as avaliações, e talvez liga. Ou não liga.
 
-Antes, as pessoas entravam nas lojas e decidiam lá se queriam comprar. Hoje ela decide no celular, antes
-de sair de casa. Ela procura no Google, olha as fotos, lê as avaliações, e então liga. Ou não liga.
+Segundo o Google, 88% das buscas locais feitas pelo celular terminam em uma ligação ou visita ao
+negócio em até 24 horas.
 
-📌 Vale citar aqui o dado do Google sobre crescimento de busca local e sobre quem faz busca local entrar
-em contato no mesmo dia. *(Escolha a estatística que você quer afirmar no ar e confirme a fonte. Não
-coloquei número que você não tenha validado.)*
+Geralmente, no Brasil, o WhatsApp é a forma mais fácil de acessar uma empresa rápido. Então, se você não
+tem o botão do WhatsApp no perfil do Google da sua empresa, você já está deixando muita oportunidade
+para trás. Porque as pessoas hoje querem facilidade, elas decidem em segundos.
 
-Geralmente a forma mais simples e cômoda é a mais fácil, e no Brasil hoje com certeza é o WhatsApp.
-Então se a pessoa, por exemplo, não tem o botão do WhatsApp no perfil do Google dela, ela já tá deixando
-muita oportunidade para trás. Porque as pessoas querem facilidade, elas decidem em segundos.
+Hoje é o mesmo comigo: se eu preciso de alguma coisa e vejo um perfil do Google que não tem botão para
+falar direto com a empresa, eu já pulo para o outro. E a grande maioria é assim.
 
-E hoje eu mesmo, se preciso de algo e vejo um perfil do Google que não tem um botão para eu falar
-direto com a empresa, eu já pulo para o outro. E a grande maioria é assim.
-
-Isso, para o dono do negócio local, significa que quando a ficha dele tá ruim, ele perde o cliente e
+Isso, para o dono do negócio local, significa que quando a ficha dele está ruim, ele perde o cliente e
 nunca fica sabendo que isso aconteceu. É um dado invisível. Você simplesmente não recebe as pessoas.
 
-O que isso significa para você: você não vende "presença digital". Você vende os clientes que ele está
-perdendo agora e nem sabe.
+O que isso significa para você? Você não vende presença digital. Você vende os clientes que ele está
+perdendo agora e nem sabe ainda.
 
 ### Por que agora, e não cinco anos atrás
 
 De um tempo para cá, muitas coisas aconteceram ao mesmo tempo.
 
-As ferramentas ficaram muito mais acessíveis. Hoje fazer um site que carrega super rápido, aparece no
+As ferramentas ficaram muito mais acessíveis. Hoje, fazer um site que carrega super rápido, aparece no
 Google e realmente converte deixou de ter muita burocracia. Virou uma coisa que uma pessoa com o mínimo
 de conhecimento consegue fazer. Com inteligência artificial, uma pessoa consegue criar qualquer tipo de
 coisa hoje no mundo digital.
 
-E o nível também subiu completamente. Uma ficha bem feita, um tour virtual, um site rápido já não é um
-diferencial de empresa grande. Isso é uma coisa esperada de qualquer empresa. Então quem não tem, acaba
+E o nível também subiu completamente. Uma ficha bem feita, um tour virtual, um site rápido já não é
+diferencial de empresa grande. Isso é a coisa esperada de qualquer empresa. Então quem não tem, acaba
 perdendo.
 
 Quando você junta essas duas coisas, o negócio local precisa mais do que nunca dessas funcionalidades, e
-entregar isso ficou mais barato do que nunca. E é aí que você entra.
+entregar isso ficou muito mais barato do que nunca. E é aí que você entra.
 
 ### Por que a vaga ainda está aberta
 
-Você pode até pensar que já tem um monte de gente fazendo essa mesma coisa.
+Você pode até pensar que já tem um monte de gente fazendo a mesma coisa. Mas não estão. E o motivo é bem
+específico.
 
-Não está. E o motivo é específico.
-
-Quem faz site normalmente não cria tour virtual. Quem mexe no Google não sabe desenvolver aplicativo.
+Quem faz site normalmente não faz tour virtual. Quem mexe com o Google não sabe desenvolver aplicativo.
 Quase todo mundo tem essa lacuna em alguma peça.
 
-Você, o Profissional 360°, sabe trabalhar em todas as frentes. Vai ser o elo entre todas essas
-funcionalidades e vai entregar uma solução completa. Porque o dono do negócio não quer contratar quatro
-fornecedores, ele quer um que resolve tudo.
+Você, o Profissional 360°, sabe trabalhar em todas as frentes. Você vai ser o elo entre todas essas
+funcionalidades e entregar uma solução completa. Porque o dono do negócio não quer contratar quatro
+fornecedores, ele quer um que resolva tudo.
 
-Esse é o espaço vazio, essa é a lacuna. Não é ser melhor que os outros numa coisa só. É ser o único que
-entrega todo o conjunto, e criar uma experiência simples para a pessoa entender.
+Esse é o espaço vazio, essa é a lacuna. Não é ser melhor que os outros numa coisa só. É você ser o único
+que entrega todo o conjunto e cria uma experiência simples para a pessoa poder entender.
 
 ### O tamanho disso
 
-O tamanho disso é gigantesco. Não se resume a somente um ramo ou somente uma cidade. Negócio local
-existe em qualquer lugar, e a maior parte do trabalho é remota: a criação do site, do Google, as
-automações.
+O tamanho disso é gigantesco. Não se resume a um ramo só, nem a uma cidade. Negócio local existe em
+qualquer lugar, e a maior parte do trabalho é remota: criação do site, criação do Google, criação de
+automações. Você pode criar o sistema operacional de uma empresa, por exemplo.
 
 A Real Vision atende no Brasil e na Suíça hoje, com a mesma metodologia, negócios diferentes, países
 diferentes. A gente atende remotamente para a criação de sites, mas também tem colaboradores no Brasil e
-fora que fazem a captação das imagens 360° e enviam pra mim poder montar o tour remotamente.
+fora que fazem a captação das imagens 360° e mandam para mim, para eu montar o tour remotamente.
 
-Isso também não é um problema, porque hoje, com a facilidade da internet, você consegue encontrar
-pessoas online muito fácil. Então, se você precisa desenvolver um trabalho em outra cidade, você pode
-contratar um fotógrafo freelancer pra fazer a captação das imagens para você. Não só imagem 360°, fotos
-também, caso precise, para atualizar o perfil do Google, por exemplo.
+Isso também não é um problema, porque com a facilidade da internet hoje você consegue encontrar pessoas
+online muito fácil. Se você precisa desenvolver um trabalho em outra cidade, pode contratar um fotógrafo
+freelancer para fazer essa captação de imagens para você. Não só imagem 360°, mas fotos, todo tipo de
+captação de conteúdo — caso você precise atualizar o perfil do Google do seu cliente, por exemplo.
 
-Esse trabalho é um oceano azul de oportunidades. Muito amplo, porque poucas pessoas têm uma boa presença
-digital.
+Então, galera: esse trabalho é um oceano azul de oportunidades. É muito amplo, porque poucas empresas
+têm uma boa presença digital hoje.
 
-Você pode escolher onde quer começar. Pode ser prospectando na sua rua, num bairro mais próximo, ou numa
+Você pode escolher onde quer começar. Pode ser prospectando na sua rua, num bairro mais próximo, ou em
 outra cidade.
 
-E vale deixar claro que às vezes as pessoas estão comprando esse curso para implementar na própria
-empresa, ou para oferecer o curso para um funcionário ir implementar na empresa dele.
+E também vale se você estiver desenvolvendo esse trabalho para a sua própria empresa, ou se quiser
+contratar ou treinar alguém justamente para isso.
+
+Muito obrigado. Na próxima aula a gente conversa mais.
 
 **Resultado da aula:** o aluno entende que a demanda existe, que ela não está sendo atendida por
 completo, e por que o momento favorece quem entra agora.
@@ -341,70 +340,235 @@ completo, e por que o momento favorece quem entra agora.
 ## Aula 0.3 — Como estudar este curso
 
 **Duração estimada:** ~5 min de narração · **Tipo:** conceito, aula narrada
-**Objetivo:** o aluno adotar o ciclo assistir, executar, cobrar, e não acumular aula sem prática.
+**Objetivo:** o aluno entender como usar o curso de forma prática, onde encontrar os materiais e como
+construir, ao mesmo tempo, uma estrutura de conhecimento na mente e dentro do computador.
 
-### O erro que faz curso não virar dinheiro
+> **Texto final, ditado por você, aprovado em 03/09/2026** — substitui a versão anterior deste arquivo
+> (ciclo assistir/executar/cobrar, ficou registrada no histórico do git). Mesmo princípio das aulas
+> anteriores: são as suas palavras, só organizadas em frase e parágrafo — nenhum conteúdo trocado por
+> IA. Rascunho de trabalho ficou em [[AULA-0.3-PROVISORIO]] (marcado como incorporado).
 
-A maioria das pessoas faz curso da mesma forma: assiste tudo do começo ao fim, sente que aprendeu, e não
-faz nada.
+A maioria das pessoas faz curso da mesma forma.
 
-Não é falta de disciplina. É que assistir dá uma sensação parecida com a de saber fazer. Só que a
-sensação passa em poucos dias, e o que fica é a sua vida exatamente igual ao que era antes de comprar.
+Assiste tudo do começo ao fim, sente que aprendeu e não executa nada.
 
-Este curso é montado para impedir isso.
+Na sua cabeça, parece que você já entendeu e já consegue fazer.
 
-### O ciclo: assistir, executar, cobrar
+Só que entender e conseguir executar são duas coisas diferentes.
 
-Assistir. Cada aula resolve uma coisa só e dura por volta de cinco minutos. Não tem aula de uma hora,
-porque aula de uma hora ninguém termina.
+Esse curso foi montado justamente pra evitar isso.
 
-Executar. Terminou a aula, faz. Não na semana que vem, não quando tiver um cliente. Agora, num negócio
-de exemplo: o seu, o de um parente, o do vizinho. Fazer com o negócio de alguém que você conhece tira o
-peso do erro.
+Aqui, cada conteúdo que você aprende precisa virar alguma coisa prática.
 
-Cobrar. Cada pilar do curso fecha com uma aula sobre quanto cobrar por aquilo. Não é bônus. É parte da
-matéria. Saber fazer sem saber cobrar é hobby.
+Pode ser aplicado em um projeto que você já tá fazendo, no seu próprio negócio ou até num projeto de teste.
 
-Se você seguir os três em cada aula, o curso deixa de ser conteúdo e passa a ser treino.
+E conforme você avança, a gente vai organizando esse conhecimento também na sua máquina, dentro do seu computador.
 
-### Dois formatos de aula
+A ideia não é deixar tudo perdido dentro da sua cabeça ou preso numa conversa de inteligência artificial.
 
-Você vai encontrar dois tipos, e cada um pede uma postura diferente.
+A gente vai construindo uma estrutura onde os dados ficam organizados pra você poder consultar, reutilizar e aprimorar conforme o tempo passa.
 
-Aula narrada, como esta. Texto na tela e minha voz junto, com a frase que estou dizendo destacada. É o
-formato de conceito, mentalidade e estratégia. Dá para ouvir andando, no carro, na academia. Pode ouvir
-mais de uma vez.
+Ou seja, você vai construindo conhecimento dentro da sua cabeça e, ao mesmo tempo, construindo um sistema organizado dentro do seu computador.
 
-Aula em vídeo. Gravação da minha tela enquanto eu faço. É o formato de execução, quando o valor está em
-ver onde clicar. Nessas, o certo é ter a tela dividida: eu de um lado, você fazendo do outro. Ou pausar
-a cada passo.
+E tem uma coisa importante por trás disso tudo.
 
-Se você tentar assistir aula de execução como se fosse conceito, só passando o olho, vai chegar no
-cliente sem saber fazer. É o único jeito de estudar errado aqui.
+O nosso objetivo é fazer você entender que quem está arquitetando o plano é você.
 
-### Ritmo
+Quem precisa entender o problema, enxergar o todo, organizar as etapas e decidir o que precisa acontecer é você.
 
-Não existe prazo. O acesso é vitalício, o curso não expira.
+A inteligência artificial pode executar muita coisa do operacional.
 
-Existe um limite, e é este: não avance de módulo sem ter executado o anterior pelo menos uma vez, em um
-negócio real, mesmo que sem cobrar.
+Mas você precisa ser a pessoa que coordena essa operação.
 
-O motivo é técnico, não motivacional. Cada módulo assume que você já sabe o anterior. O Módulo 2 conecta
-o tour ao Google que você configurou no Módulo 1. Se você não configurou, o encaixe não faz sentido e
-você acha que a aula é confusa. Não é. Está faltando a base.
+É essa cabeça que a gente quer construir ao longo do curso.
 
-### Quando travar
+Você vai aprendendo a enxergar a hierarquia das coisas, como elas se conectam e qual é o próximo passo antes de simplesmente mandar a máquina fazer alguma coisa.
 
-Vai travar em algum ponto. Todo mundo trava.
+E não sei se você reparou, mas essa aula não tem vídeo.
 
-Quando travar, pergunta na comunidade. Ela existe para isso, e a chance de outra pessoa ter travado no
-mesmo ponto é alta.
+É de propósito.
 
-E se for algo específico do seu caso, existe mentoria individual. Uma hora resolvendo o seu problema
-concreto vale mais do que uma semana relendo aula.
+Todas as aulas deste curso vão seguir esse formato: texto na tela e a minha voz acompanhando.
 
-**Resultado da aula:** o aluno sabe como consumir o curso, entende a diferença entre os dois formatos e
-aceita a regra de executar antes de avançar.
+Por quê?
+
+Porque quando tem muita coisa acontecendo na tela, muita informação aparecendo e alguém falando ao mesmo tempo, sua atenção acaba ficando dividida.
+
+E aqui é um lugar onde você precisa estar com atenção total no raciocínio.
+
+Eu quero que você consiga acompanhar o que eu tô explicando sem precisar ficar olhando onde eu tô clicando ou tentando prestar atenção em várias coisas ao mesmo tempo.
+
+E outra coisa importante: eu já vou te dar o caminho das pedras.
+
+O que isso significa?
+
+Grande parte dos processos que eu vou te ensinar aqui já foi usada, testada e mapeada dentro da Real Vision.
+
+Então, junto com o conhecimento que a gente está passando dentro da aula, a gente também vai te entregar as peças que ajudam você a montar essa grande engrenagem.
+
+Desde a ideia, passando pela arquitetura e pela execução, até chegar na entrega dos projetos.
+
+Pra isso, você vai receber prompts, arquivos, links, skills e outros materiais complementares que fizerem sentido pra cada aula.
+
+Alguns desses materiais vão ajudar você diretamente na execução.
+
+Outros vão ajudar você a entender melhor os conceitos e a lógica por trás daquilo que está sendo construído.
+
+Uma skill, por exemplo, pode ser simplesmente um conjunto de instruções escritas em linguagem natural que ensina uma inteligência artificial a executar determinado processo de uma determinada forma.
+
+E isso é interessante porque esse tipo de documentação funciona tanto pra máquina quanto pra gente.
+
+Se você parar pra pensar, essa própria aula também funciona quase como um prompt.
+
+Eu tô colocando dentro de você um conjunto de informações, uma lógica e uma forma de pensar.
+
+A diferença é que quem está absorvendo isso agora é você.
+
+E é assim que a gente vai construindo essa metodologia ao longo do curso.
+
+Os materiais complementares ficam disponíveis dentro de cada aula.
+
+Então, se tiver um arquivo, um checklist, um link ou qualquer outra coisa necessária praquela execução, você vai encontrar ali.
+
+Você não precisa decorar tudo.
+
+Você pode voltar pra aula, ouvir novamente uma parte e pegar exatamente o material que precisa pra continuar executando.
+
+Vou te dar um exemplo de um processo mapeado que a gente tem dentro da Real Vision pra você entender como isso funciona.
+
+A gente queria transformar os contatos do WhatsApp da empresa em uma base de email marketing.
+
+E esse WhatsApp tem contatos acumulados de muitos anos.
+
+Se eu fosse fazer isso manualmente, eu teria que abrir conversa por conversa, verificar se já existia um email ali, entender quem era aquela pessoa e, quando não tivesse email, enviar uma mensagem perguntando se ela autorizava entrar na nossa newsletter.
+
+Então eu passei essa tarefa pra inteligência artificial.
+
+Eu expliquei o que precisava acontecer.
+
+A gente foi fazendo as interações necessárias até mapear o processo direito.
+
+A inteligência artificial organizou uma planilha, acessou as conversas, analisou o contexto e, quando necessário, enviou uma mensagem personalizada pra pessoa pedindo a autorização e o email.
+
+Eu não precisei ficar repetindo manualmente o mesmo processo contato por contato.
+
+Mas antes disso funcionar, alguém precisou arquitetar o processo.
+
+Precisou decidir o que procurar.
+
+O que fazer quando encontrasse uma informação.
+
+O que fazer quando não encontrasse.
+
+Quando mandar mensagem.
+
+E como registrar o resultado.
+
+Esse é o ponto.
+
+A inteligência artificial executa.
+
+Mas existe uma arquitetura por trás da execução.
+
+E é essa capacidade que eu quero desenvolver em você.
+
+Então, quando um processo já estiver mapeado e puder ser reutilizado, os materiais complementares vão ficar disponíveis pra você adaptar ao seu próprio contexto.
+
+Essa é a lógica do curso.
+
+Eu mostro o raciocínio.
+
+Mostro como aquilo foi aplicado.
+
+E entrego a estrutura pra você conseguir reutilizar.
+
+Agora, isso só funciona se você colocar em prática.
+
+Terminou uma aula e tem alguma coisa pra executar?
+
+Faz.
+
+Não espera terminar o curso inteiro.
+
+Pode aplicar no seu próprio negócio.
+
+Pode usar num projeto que você já esteja trabalhando.
+
+Pode testar no negócio de alguém próximo.
+
+Ou pode criar um projeto só pra aprender.
+
+O importante é não deixar o conhecimento parado.
+
+E aqui também existem formas diferentes de aplicar esse conhecimento.
+
+Talvez você esteja fazendo o curso pra transformar isso em profissão e prestar serviços pra outras empresas.
+
+Nesse caso, você vai aprender também como transformar essas entregas em serviços que podem ser cobrados.
+
+Mas talvez você já tenha uma empresa e esteja fazendo o curso pra aplicar tudo isso dentro dela.
+
+Nesse caso, você vai usar o mesmo conhecimento pra melhorar a sua própria operação.
+
+O conhecimento é o mesmo.
+
+O que muda é onde você vai aplicar.
+
+E não precisa correr.
+
+O importante é não avançar acumulando um monte de informação que você ainda não colocou em prática.
+
+Cada parte do curso vai sendo construída em cima da anterior.
+
+Bloco por bloco.
+
+Então, quando uma aula depender de alguma coisa que você já fez antes, aquilo já vai estar organizado e disponível pra você continuar.
+
+E em algum momento você vai travar.
+
+Isso faz parte.
+
+Quando acontecer, volta pra aula.
+
+Revê o material.
+
+Repete o passo.
+
+E se você perceber que alguma coisa ficou desatualizada, que existe algum erro ou algum ponto que pode ser explicado melhor, deixa um comentário ali embaixo.
+
+Assim eu consigo revisar e manter o conteúdo atualizado.
+
+Porque o objetivo deste curso não é você decorar as coisas.
+
+É você saber onde encontrar a informação, entender o que está fazendo e continuar avançando.
+
+Sempre construindo um bloco em cima do outro.
+
+E conforme você faz isso, duas coisas vão sendo construídas ao mesmo tempo.
+
+Dentro da sua cabeça, você começa a criar um mapa mental de como uma empresa funciona.
+
+Você começa a entender a hierarquia, a lógica, como os processos se conectam e como pensar uma solução do início ao fim.
+
+E dentro do seu computador, a gente vai construindo essa mesma organização.
+
+Pasta por pasta.
+
+Processo por processo.
+
+Informação por informação.
+
+Cada coisa no lugar certo.
+
+Então, no final, você não vai ter simplesmente mais um curso que assistiu.
+
+Você vai ter construído uma forma de pensar.
+
+E junto com ela, uma estrutura organizada que você consegue consultar, melhorar e continuar desenvolvendo conforme a sua operação cresce.
+
+**Resultado da aula:** o aluno entende como usar o curso na prática, sabe onde encontrar os materiais
+complementares de cada aula (prompts, arquivos, skills) e entende que está construindo conhecimento em
+dois lugares ao mesmo tempo: na própria cabeça e dentro do computador (Sócio Digital).
 
 ---
 
