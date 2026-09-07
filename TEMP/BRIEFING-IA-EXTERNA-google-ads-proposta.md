@@ -4,7 +4,7 @@
 > arquivos desta mesma pasta. O objetivo da conversa lá fora é amadurecer um **PRD (documento de
 > requisitos)** de uma oferta/proposta de Google Ads pra cliente. Quando o PRD estiver pronto, o
 > Felipe traz o **texto** de volta pro Claude Code, que usa isso pra montar a proposta comercial
-> de verdade dentro do Company OS (vault). Esta pasta `temp/` é descartável — não é fonte de
+> de verdade dentro do Company OS (vault). Esta pasta `TEMP/` é descartável — não é fonte de
 > verdade, é só o material de apoio pra essa conversa externa.
 
 ---
