@@ -5,10 +5,10 @@ nome: LBOS — Life & Business Operating System
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-06
-atualizado_em: 2026-08-06
-proxima_revisao: 2026-09-06
+atualizado_em: 2026-09-08
+proxima_revisao: 2026-12-08
 versao_lbos: "1.0"
-fase_atual: "1 — Fundação"
+fase_atual: "4 — Skills concluída · 3 pendente nas Bases · 5 travada"
 fonte_unica: true
 referencia: ["[[AGENTS]]"]
 tags: [lbos/sistema, lbos/raiz]
@@ -18,7 +18,7 @@ tags: [lbos/sistema, lbos/raiz]
 
 Cérebro externo do Felipe e da Romana. Um único lugar onde vida pessoal, finanças, documentação e negócios se conectam — para que nenhuma decisão seja tomada sem o contexto todo.
 
-Versão vigente: **1.0** · Fase atual: **1 — Fundação**
+Versão vigente: **1.0** · Fases 1, 2 e 4 concluídas · Fase 3 incompleta · Fase 5 travada
 
 ---
 
@@ -113,9 +113,15 @@ O sistema **recomenda**. Quem decide é o Felipe.
 | 0 — Higiene | Cofre limpo e indexado | ✅ concluída |
 | 1 — Fundação | Estrutura, convenções, 15 templates | ✅ concluída |
 | 2 — Entidades | Primeiros nós reais e arestas | ✅ concluída |
-| 3 — Documento Vivo | Fluxo de 7 passos + 3 Bases | ✅ construída · validação pendente |
+| 3 — Documento Vivo | Fluxo de 7 passos + 3 Bases | ⚠️ **parcial** — o fluxo existe, as 3 Bases **não** |
 | 4 — Skills | 9 skills do pipeline + skill mestre | ✅ concluída |
-| 5 — Missão 1 | Absorção de `Felipe Garcia/` | ⬜ aguarda decisão sobre a regra 6 do `AGENTE.md` |
+| 5 — Missão 1 | Absorção de `Felipe Garcia/` | ⬜ travada — ver abaixo |
+
+**Fase 3, o que falta:** a pasta `00-Sistema/bases/` não existe e não há nenhum arquivo `.base` no cofre. Ela é citada como pronta em [[ARQUITETURA]] §2, [[00-Sistema/README]] e na verificação de consistência do [[FLUXO-DOCUMENTO-VIVO]]. Sem as Bases não há indicador de saúde (§37) — foi por isso que 16 nós ficaram com revisão vencida sem ninguém perceber, até a [[AUDITORIA-2026-09-08]].
+
+**Fase 5, o que trava:** a versão anterior desta tabela dizia "aguarda decisão sobre a regra 6 do `AGENTE.md`". Esse arquivo não existe no cofre. O arquivo é [[AGENTS]], e a regra 6 dele é *"NUNCA APAGUE NOTAS DO OBSIDIAN. Só CRIE."* — o que a Missão 1 precisa saber é se absorver `Felipe Garcia/` significa **copiar** para o LBOS mantendo a pasta original intacta (compatível com a regra 6) ou **mover** (incompatível). A decisão segue com o Felipe.
+
+> Enquanto a Missão 1 não roda, o material de `Felipe Garcia/Casamento_Felipe_Romana/` continua sendo a fonte de detalhe do projeto do casamento, referenciada pelos nós em vez de duplicada.
 
 ---
 
@@ -134,9 +140,11 @@ Mesmo cofre significa mesmo grafo. Era essa a razão da escolha: cofre separado 
 - Normatizado por: [[CONVENCOES]]
 - Versionado por: [[VERSIONAMENTO]]
 - Referencia: [[AGENTS]]
+- Auditado por: [[AUDITORIA-2026-09-08]]
 
 ## Histórico
 
 | Data | O que mudou | Motivo | Impacto | Decisão |
 |---|---|---|---|---|
 | 2026-08-06 | Nó raiz criado | Fase 1 — Fundação | Ponto de entrada do sistema para humanos e IA | LBOS no mesmo cofre do Company OS, referenciando sem absorver |
+| 2026-09-08 | `fase_atual` corrigida; Fase 3 rebaixada para parcial; travamento da Fase 5 explicado | Auditoria achou o frontmatter dizendo "Fase 1" enquanto o corpo dava 4 fases por concluídas, as Bases marcadas como prontas sem existir, e referência a um `AGENTE.md` inexistente | O nó raiz volta a descrever o sistema que existe. Fica claro que falta construir as Bases | Fase 3 só volta a "concluída" quando as 3 Bases existirem |

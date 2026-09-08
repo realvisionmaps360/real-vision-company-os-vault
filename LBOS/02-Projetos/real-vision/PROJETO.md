@@ -5,8 +5,8 @@ nome: Real Vision — operação
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-06
-atualizado_em: 2026-09-02
-proxima_revisao: 2026-09-06
+atualizado_em: 2026-09-08
+proxima_revisao: 2026-12-08
 prazo: continuo
 pertence_a: ["[[LBOS]]"]
 afeta: ["[[OBJ-casamento-suica]]"]
@@ -46,12 +46,16 @@ Consultar sempre a fonte. Nunca copiar para cá.
 
 ## Clientes Real Vision já estruturados no LBOS
 
-Índice de quais clientes/projetos da Real Vision já têm nó próprio no LBOS (com `PROJETO.md`, checklist, histórico etc.) — não é a lista completa de clientes da empresa, essa mora em `operacao/clientes/`. Aqui só entra quem já foi trazido pro grafo.
+> **A carteira não vive aqui.** Por [[DEC-2026-005]] (08/09/2026), cliente é uma coisa só e mora em `operacao/clientes/`. Os dois abaixo já estavam no grafo antes da decisão e continuam; novos clientes só entram se houver motivo de grafo — receita que financia objetivo, prazo que colide com outro projeto, risco que atravessa vida e negócio.
 
 | Cliente | Nó LBOS | Desde | Status |
 |---|---|---|---|
-| Flávia Andrade — Vila dos Corais | [[02-Projetos/vila-dos-corais/PROJETO]] | 2026-08-13 | Ativo — migração de domínio pro Vercel em andamento |
+| Flávia Andrade — Vila dos Corais | [[02-Projetos/vila-dos-corais/PROJETO]] | 2026-08-13 | Ativo — migração de domínio para a Vercel **concluída** em 13-14/08/2026, Search Console verificado |
 | Eduardo Barqueiro — Paraty Onboard | [[02-Projetos/paraty-onboard/PROJETO]] | 2026-08-17 | Ativo — site reconectado, falta migrar pro domínio próprio e subir o canal do YouTube |
+
+⏳ **Vila dos Corais está três semanas atrás da realidade.** O Company OS registra reunião com a Evelin (21/08), deck de reunião (31/08) e, em 01/09, a correção do login e a migração completa do Supabase para conta própria, com pendência de SMTP. Nada disso chegou aos nós do LBOS. O Felipe optou em 08/09 por **agendar essa atualização para depois** — está registrado aqui para não se perder, não porque foi esquecido. Fonte: `operacao/clientes/arquivos/Flávia Andrade - Vila dos Corais/Vila-dos-Corais-TIMELINE.md`.
+
+**Moreno — Pousada Galeão + Akua Bistrô** foi onboardado no Company OS em 02/09/2026 e **não entra no grafo**: a conversa parou numa pergunta sobre tour 360°, sem evolução. Volta à pauta se virar projeto.
 
 ## A cadeia que este nó viabiliza
 
@@ -76,7 +80,7 @@ Cliente → Real Vision 360 → Receita → Fluxo de Caixa → OBJ-casamento-sui
 - Pertence a: [[LBOS]]
 - Afeta: [[OBJ-casamento-suica]]
 - Empresa: [[Real Vision 360]]
-- Decidido por: [[DEC-2026-002]], [[DEC-2026-003]]
+- Decidido por: [[DEC-2026-002]], [[DEC-2026-003]], [[DEC-2026-005]]
 - Tarefas: [[TAR-2026-002]], [[TAR-2026-003]], [[TAR-2026-004]], [[TAR-2026-005]], [[TAR-2026-011]]
 - Conhecimento gerado: [[prospeccao-google-maps-apify]], [[georreferenciar-print-de-mapa]], [[landing-de-campanha-com-captura-propria]], [[mapeamento-canais-comunicacao-local-prospeccao]], [[05-Conhecimento/coleta-email-whatsapp-newsletter|CON-2026-008 — Captação de email via WhatsApp para newsletter]]
 - Referencia: [[AGENTS]], [[EMPRESA]]

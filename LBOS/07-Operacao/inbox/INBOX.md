@@ -5,8 +5,8 @@ nome: Inbox — porta de entrada do LBOS
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-06
-atualizado_em: 2026-08-06
-proxima_revisao: 2026-09-06
+atualizado_em: 2026-09-08
+proxima_revisao: 2026-12-08
 fonte_unica: true
 pertence_a: ["[[LBOS]]"]
 tags: [lbos/sistema, lbos/processo]
@@ -52,8 +52,13 @@ Só isso. `tipo`, `projeto` e `prioridade` são preenchidos na classificação, 
 
 ## Fila atual
 
+Conferida contra a pasta em 08/09/2026. São três notas cruas, nenhuma concluída:
+
 - [[2026-08-17-prd-memory-dump-operacional]] — handoff externo (sessão ChatGPT), 8 frentes priorizadas. Prioridades 1-3 em processamento (3 sessões em paralelo, 2026-08-17); 4-8 ainda não entraram no fluxo.
-- [[2026-08-20-servicos-google-merchant-loja-site]] — cadastrar serviços no Google Meu Negócio → Merchant Center → conectar com a loja do site. Levantamento do que falta já feito; nada aplicado. Não entrou no fluxo.
+- [[2026-08-25-roteiro-reuniao-romana-3-frentes]] — roteiro de reunião com a Romana, 3 frentes. Não passou pela classificação.
+- [[2026-08-27-ingestao-handoff-editorial-email-blog]] — ingestão do handoff editorial email ↔ blog. Não passou pela classificação.
+
+> **Correção de 08/09/2026.** Esta lista citava uma nota `2026-08-20-servicos-google-merchant-loja-site` que **nunca existiu como arquivo** — o wikilink apontava para o vazio. O assunto (cadastrar serviços no Google Meu Negócio → Merchant Center → conectar com a loja do site) foi registrado só aqui, no corpo do INBOX, em 20/08. Fica preservado neste parágrafo: levantamento do que falta já feito, nada aplicado, não entrou no fluxo. Se for retomado, nasce como nota crua de verdade.
 
 As 5 notas recebidas em 2026-08-10 (handoff externo, sessão ChatGPT) foram classificadas e processadas no mesmo dia, com aprovação do Felipe. Arquivadas em `09-Arquivo/`. O que geraram:
 
@@ -76,3 +81,4 @@ As 5 notas recebidas em 2026-08-10 (handoff externo, sessão ChatGPT) foram clas
 |---|---|---|---|---|
 | 2026-08-06 | Inbox criado | Fase 3 do LBOS | Fecha a única porta de entrada do sistema | Captura é deliberadamente barata; classificação é trabalho do fluxo |
 | 2026-08-20 | Nota crua adicionada à fila: serviços Google → Merchant Center → loja do site | Felipe pediu para guardar pro futuro, não dá pra executar agora | Nenhum — só entrada, sem classificação | — |
+| 2026-09-08 | Fila reconciliada com a pasta: 2 notas ausentes incluídas, 1 link quebrado corrigido | Auditoria achou a fila divergindo do conteúdo real da pasta há 4 semanas | A porta de entrada volta a refletir o que está de fato parado esperando classificação | Assunto da nota inexistente preservado no corpo em vez de descartado |

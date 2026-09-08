@@ -242,10 +242,64 @@ C5 e C6 mexem em quase metade dos arquivos do LBOS. Vale rodar em lote, um commi
 
 ---
 
+---
+
+## 8. Fase 6 — primeira rodada, aplicada em 08/09/2026
+
+O Felipe respondeu as perguntas do Bloco A e tomou as decisões de escopo. O que isso destravou foi aplicado no mesmo dia. **9 arquivos tocados, nenhum apagado.**
+
+### Respostas que fecharam o Bloco A
+
+| Pergunta | Resposta do Felipe |
+|---|---|
+| A certidão venceu? | **Sim.** Precisa tirar de novo. O caixa foi para a passagem, ele está na Suíça, o casamento não andou |
+| A despesa de R$ 2.517 ocorreu? | **Não.** Nada foi pago |
+| A receita do Solarium entrou? | **Não.** Conversa com o Gabriel ainda aberta |
+| Os 18 clientes entram no grafo? | **Não.** Cliente é uma coisa só, mora em `operacao/clientes/` |
+| `04-Documentos` precisa de nós? | **Não por enquanto.** Fica de pé, vazia, para o futuro |
+| Vila dos Corais? | Tem várias atualizações, mas o Felipe vai **agendar depois** |
+| Moreno? | Parou numa pergunta sobre tour, sem evolução. **Fica parado** |
+
+### O que mudou nos nós
+
+| Nó | Mudança |
+|---|---|
+| [[02-Projetos/casamento/PROJETO]] | Vencimento da certidão confirmado e datado; cadeia de documentos recomeça; base do Felipe na Suíça registrada; Escritura (13/10) passa a ser o prazo ativo; aberta a pergunta de logística presencial × procuração |
+| [[OBJ-casamento-suica]] | `ativo` → `pausado`, alinhado ao projeto; estado atual reescrito; progresso registrado como **menor** que os ~15% anteriores |
+| [[DES-2026-001]] | Confirmada como não ocorrida; alerta de que R$ 2.517 **não é mais** o custo de retomada — falta somar reemissão e novo apostilamento |
+| [[REC-2026-001]] | Confirmada como não recebida, conversa aberta; registrado que o objetivo segue sem nenhuma fonte de caixa |
+| [[DEC-2026-005]] | **Nó novo.** Fecha a fronteira: clientes ficam no Company OS; `04-Documentos` fica vazia de propósito; Moreno fora |
+| [[02-Projetos/real-vision/PROJETO]] | Tabela de clientes corrigida (migração da Vila dos Corais é concluída, não "em andamento"); pendência da Vila registrada como agendada; Moreno explicitamente fora |
+| [[INBOX]] | Fila reconciliada: 3 notas reais; link quebrado corrigido com o assunto preservado no corpo |
+| [[02-Projetos/README]] | 5 → 7 projetos, com o `status` real de cada um |
+| [[LBOS]] | `fase_atual` corrigida; Fase 3 rebaixada para parcial (as Bases não existem); travamento da Fase 5 explicado — o arquivo é `AGENTS.md` e a pergunta real é copiar × mover |
+
+### O que a decisão do Felipe fez com os números
+
+A cobertura de `02-Projetos` deixa de ser medida contra a carteira de 20 clientes. Com [[DEC-2026-005]], os 7 projetos que existem **são** o escopo, e a pasta passa de ~45% para completa. `04-Documentos` deixa de contar como 0% de buraco e passa a contar como vazia por decisão.
+
+Sobra como cobertura real a construir: as **3 Bases** da Fase 3 e a definição do escopo de `01-Objetivos` (hoje só o casamento).
+
+### O que continua aberto
+
+| # | Item | Espera |
+|---|---|---|
+| 1 | Custo da reemissão da certidão + novo apostilamento | Levantamento, quando o processo for retomado |
+| 2 | Logística presencial × procuração (Felipe na Suíça, cartório e consulado no Brasil) | Decisão do Felipe |
+| 3 | Atualização de conteúdo da Vila dos Corais (reunião 21/08, deck 31/08, migração Supabase 01/09, risco de SMTP) | Felipe vai agendar |
+| 4 | Missão 1 — absorver `Felipe Garcia/`: copiar ou mover? | Decisão do Felipe |
+| 5 | Construir as 3 Bases | Aprovação |
+| 6 | Bloco C inteiro — higiene em lote (IDs, revisões, históricos, links quebrados, `tipo: hub`/`apoio` na convenção) | Aprovação |
+
+Os Blocos B e C da seção 7 seguem válidos no que não foi tocado: `03-Financeiro/README`, `04-Interagente`, o `README.md` da raiz, as notas de `09-Arquivo` sem `status: arquivado`, e os nós citados mas nunca criados (CON-2026-005, CON-2026-006, TAR-2026-011).
+
+---
+
 ## Relacionados
 
 - Pertence a: [[LBOS]]
 - Audita: [[CONVENCOES]], [[ARQUITETURA]], [[FLUXO-DOCUMENTO-VIVO]]
+- Origina: [[DEC-2026-005]]
 - Referencia: [[INBOX]], [[OBJ-casamento-suica]], [[02-Projetos/real-vision/PROJETO]], [[02-Projetos/casamento/PROJETO]]
 
 ## Histórico
@@ -253,3 +307,4 @@ C5 e C6 mexem em quase metade dos arquivos do LBOS. Vale rodar em lote, um commi
 | Data | O que mudou | Motivo | Impacto | Decisão |
 |---|---|---|---|---|
 | 2026-09-08 | Auditoria criada | Felipe pediu leitura completa do LBOS antes de atualizar | Mede 55% de conformidade e 14 contradições confirmadas; nenhum nó alterado | Fase 6 (correção) espera aprovação |
+| 2026-09-08 | Seção 8 adicionada: primeira rodada da fase 6 aplicada | Felipe respondeu o Bloco A e decidiu a fronteira dos clientes | 9 arquivos atualizados; cobertura de `02-Projetos` deixa de ser buraco por decisão | [[DEC-2026-005]] |
