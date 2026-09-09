@@ -44,7 +44,7 @@ Pacote confirmado por Felipe em 17/08/2026 (primeira etapa da proposta, os demai
 
 ## Próximos passos
 - Site: nenhum pendente técnico (sitemap, indexação e GA4 concluídos).
-- Lançar manualmente no VisionFlow o pagamento de R$700 confirmado por Felipe (ver `## Serviços contratados`).
+- ~~Lançar manualmente no VisionFlow o pagamento de R$700~~ — **encerrado em 09/09/2026.** Felipe confirmou que os R$700 já estavam embutidos no pagamento de R$1.000 de 10/03/2026. Não lançar linha nova. O registro não fecha perfeitamente (a cobrança é datada de julho, depois do pagamento de março) e ele decidiu deixar como está para acertar no futuro. **Não tratar como pendência.**
 - Finalizar os itens restantes do Perfil Google Meu Negócio (ver acima) — VisionFlow ainda mostra a entrega como "em_andamento".
 - Formalizar contrato de prestação de serviços — rascunho gerado em 17/08/2026 (`ViladosCorais_Contrato_17-08-26.html`), falta preencher CNPJ/endereço/representante da Real Vision e confirmar o número do contrato.
 - Portfólio da Real Vision: Felipe decidiu em 17/08/2026 **não pedir autorização prévia da cliente** — os Termos e Condições Gerais (cláusula 8.4) já cobrem isso ("Real Vision poderá exibir projetos concluídos... salvo proibição expressa por escrito do Cliente"). Regra fixada: **nunca expor o nome pessoal da cliente** em material público (portfólio, case, redes) — usar só "Vila dos Corais" / "a proprietária". **Case publicado em 19/08/2026** — item concluído.

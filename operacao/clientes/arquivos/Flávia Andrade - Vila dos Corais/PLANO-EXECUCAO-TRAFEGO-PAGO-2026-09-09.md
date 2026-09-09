@@ -50,6 +50,7 @@ conforme a `rv-skill-scout` manda.
 | Fase | Skills | Por quê |
 |---|---|---|
 | **Todas** | `realvision` | Contexto e voz da marca — sempre primeiro em qualquer tarefa do negócio |
+| **0 — Pasta** | `obsidian` · `rv-novo-cliente` | `rv-novo-cliente` carrega a convenção de pasta e docs base; `obsidian` pros wikilinks |
 | **1 — VisionFlow** | `rv-visionflow` · `supabase-postgres` | A receita do JWT simulado está na `rv-visionflow`; `supabase-postgres` pro cuidado com RLS/trigger |
 | **2 — LBOS + playbook** | `lbos` · `lbos-memoria` · `lbos-impacto` · `lbos-atualizacao` · `rv-trafego-pago` · `obsidian` | O LBOS exige o fluxo de Documento Vivo com ponto de parada; `rv-trafego-pago` é onde o playbook vai morar |
 | **3 — Mini-app** | `rv-copy` · `rv-design` · `artifact-capabilities` · `artifact-design` | `rv-copy` pro texto que a cliente lê; `artifact-capabilities` **antes** de escrever qualquer código com `db` |
@@ -58,6 +59,61 @@ conforme a `rv-skill-scout` manda.
 **Lacuna encontrada na `rv-skill-scout`:** não existe entrada de "tráfego pago" no
 *Mapeamento por tipo de tarefa* (a skill só aparece no *Mapa de skills locais*). Corrigir na
 Fase 2 — adicionar a entrada, conforme o gatilho de skill modificada da própria scout.
+
+---
+
+## FASE 0 — Estruturar a pasta da cliente (PC ↔ vault)
+
+Pedido do Felipe em 09/09/2026: alinhar a pasta dela no PC com a do vault. **Fazer primeiro**,
+antes das outras fases — é o que garante que o resto da sessão trabalha em cima do material completo.
+
+### O que o vault tem hoje (versionado no git)
+
+```
+operacao/clientes/arquivos/Flávia Andrade - Vila dos Corais/
+├── FICHA-CLIENTE.md                            ← hub da pasta
+├── Vila-dos-Corais-TIMELINE.md
+├── PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09.md   ← este documento
+└── PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md     ← obsoleto, manter (nunca apagar nota)
+```
+
+### O que existe só localmente (não versionado — o `.gitignore` do vault libera só `.md`)
+
+- `PropostaViladosCorais-GoogleAds-2026-09-07.html` — a proposta aceita
+- `site/` — repositório do site da cliente (ignorado explicitamente no `.gitignore`)
+
+### Arquivos citados nos documentos mas ausentes desta máquina
+
+Confirmar no PC do Felipe se existem e onde estão. Estão referenciados na TIMELINE/FICHA mas
+não foram encontrados no vault:
+
+| Arquivo | Citado em |
+|---|---|
+| `Vila-dos-Corais-Avaliacoes.html` | página de avaliação com QR code (17/08/2026) |
+| `ViladosCorais_Contrato_17-08-26.html` | rascunho de contrato, faltam CNPJ/endereço/representante |
+| `VilaDosCorais_Situacao_16-06-26.pdf` | documento de situação inicial |
+| `Porposta Comercial Flávia Andrade 2 (1).pdf` | proposta original do pacote de R$2.900 (nome com typo no original) |
+
+### Como estruturar
+
+- **Convenção de pasta:** `Nome - Empresa` (já correta).
+- **Convenção de deliverable HTML:** `<Cliente>_<Tipo>_<DD-MM-AA>.html` é o padrão documentado
+  (ex: `ViladosCorais_Contrato_17-08-26.html`). A proposta nova fugiu disso
+  (`PropostaViladosCorais-GoogleAds-2026-09-07.html`) — **duas convenções coexistem hoje**.
+  Decidir com o Felipe qual vale daqui pra frente e renomear só se ele quiser (renomear
+  arquivo já entregue quebra referência nos documentos).
+- **Não versionar HTML/PDF à força.** O `.gitignore` ignorar tudo que não é `.md` é
+  intencional — os binários e entregáveis vivem no PC/Drive, o vault carrega o conhecimento.
+- **Regra de wikilink:** todo `.md` novo nesta pasta linka pro hub ([[FICHA-CLIENTE]]) e o hub
+  linka de volta. Já aplicado neste documento.
+- **Nunca apagar** nada da pasta, nem o deck obsoleto da Evelin — regra de ouro do Company OS.
+
+### Falta um `PROJETO.md`?
+
+A `rv-novo-cliente` prevê `<CLIENTE>-PROJETO.md` como doc base, e esta pasta não tem. Hoje o
+papel de "estado do projeto" está dividido entre a FICHA e a TIMELINE, e o nó de projeto vive
+no LBOS (`PRJ-2026-005`). **Não criar** sem o Felipe decidir — criar um terceiro documento de
+estado sem necessidade real só gera fonte duplicada, o que o LBOS proíbe.
 
 ---
 
@@ -124,17 +180,23 @@ simplesmente não conhecia essa seção da skill.
    `rv-visionflow` é explícita: validar com insert real, nunca só leitura.
 4. Conferir no painel (`https://visionflow.realvisionmaps.com`) que o card "Total" subiu.
 
-### Duas decisões que precisam do Felipe ANTES de executar
+### Os R$700 de julho — RESOLVIDO, não mexer
 
-Estas **não** foram autorizadas — ele pediu só o lançamento dos R$300. Perguntar:
+**Decisão do Felipe em 09/09/2026:** os R$700 já estavam embutidos no pagamento de R$1.000
+registrado em 10/03/2026. **Não lançar linha nova.** Ele reconhece que o registro não fecha
+perfeitamente (a cobrança dos R$700 é datada de 13-14/07, depois do pagamento de março) e
+decidiu deixar como está — conserta no futuro, não agora.
 
-- **Os R$700 de julho.** Foram cobrados em 13-14/07/2026 e confirmados como pagos por ele em
-  17/08/2026, mas nunca entraram em `finances` (mesmo bloqueio, agora resolvido). O painel
-  vai continuar errado enquanto isso não for lançado. Lançar junto?
+Os registros antigos que pedem "lançar R$700 manualmente" em [[FICHA-CLIENTE]],
+[[Vila-dos-Corais-TIMELINE]] e `LBOS/02-Projetos/vila-dos-corais/checklist.md` estão
+**superados por esta decisão**. Não tratar como pendência.
+
+### Uma decisão que ainda precisa do Felipe
+
 - **As parcelas futuras.** A tabela tem status `pendente` e o painel tem um card "Pendente"
   hoje zerado. Lançar as 4 parcelas restantes (R$300 + 3× R$600) como `pendente` faria o
   painel mostrar o contrato real (Total R$4.600 / Pago R$2.500 / Pendente R$2.100). Ou ele
-  prefere lançar só quando cada uma for paga?
+  prefere lançar só quando cada uma for paga? Perguntar antes de executar.
 
 **Não fazer:** nenhum espelhamento automático vault ↔ VisionFlow. O Felipe pediu
 explicitamente "só adicione lá agora, não faz espelhamento de nada por enquanto".

@@ -93,7 +93,7 @@
 | 20/08/2026 | Diagnóstico do erro no "Anunciar" + case study de mercado + registro pra reunião com Evelin | ~2h |
 
 ## Próximos marcos
-- Lançar R$700 manualmente no VisionFlow.
+- ~~Lançar R$700 manualmente no VisionFlow~~ — encerrado em 09/09/2026, ver entrada daquela data.
 - Confirmar itens finais do Perfil Google (post inicial, link de avaliação).
 - Preencher CNPJ/endereço/representante da Real Vision no contrato e gerar versão final.
 - Reunião 21/08/2026 com Evelin: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
@@ -172,3 +172,4 @@ Sessão de planejamento que levantou o estado real de três frentes e escreveu o
 - **Playbook replicável:** decidido expandir a skill `rv-trafego-pago` existente (já é documento vivo com notas por caso) em vez de criar skill nova. Conteúdo fica no Company OS; o nó LBOS só referencia, nunca copia.
 - **App de acompanhamento da cliente:** decidido usar Artifact com capability `db` — página de link único pra Flávia, com botões grandes, ajuda por bloco e formulário, sem depender de infraestrutura nova.
 - Nada executado nesta sessão além da documentação — a execução acontece numa sessão local seguindo o plano.
+- **R$700 de julho encerrados:** Felipe confirmou que já estavam embutidos no pagamento de R$1.000 de 10/03/2026. Não lançar linha nova no VisionFlow. As datas não reconciliam (cobrança em julho, pagamento em março) e ele decidiu deixar assim para acertar no futuro — deixa de ser pendência a partir de agora.
