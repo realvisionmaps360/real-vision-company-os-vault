@@ -154,3 +154,77 @@ Supabase, limitado a poucos envios por hora).
 | Data | Sessão | Duração estimada |
 |---|---|---|
 | 01/09/2026 | Diagnóstico do login + correção das 3 falhas + migração completa do banco para conta própria | ~3h |
+
+### 01/09/2026 (continuação) — Loop de login: causa raiz encontrada e corrigida
+
+**Problema relatado:** depois das correções da manhã, a Flávia digitava email e senha
+e a tela ficava presa em "Carregando..." para sempre, sem erro nenhum.
+
+**Reproduzido ao vivo em produção**, com a conta `administracao@clisam.com.br`:
+
+| Medição | Resultado |
+|---|---|
+| `POST /auth/v1/token?grant_type=password` | 200 — senha e conta corretas |
+| `get_current_user_role` com token real | 200, retorna `"admin"` |
+| Chamadas do mesmo RPC durante o login no browser | **~200 em poucos segundos**, todas 200 |
+| URL ao final | continuava `/secure` |
+| Erros no console | **nenhum** |
+
+Ou seja: banco, senha, permissão e infraestrutura estavam todos corretos. Defeito
+100% de front-end.
+
+**Causa raiz — ping-pong entre `/secure` e `/admin`:** `isAdmin` era booleano e
+começava em `false`, então "ainda não sei" era indistinguível de "não é admin".
+Como cada tela chamava `useAuth()` por conta própria (sem contexto compartilhado),
+o `ProtectedRoute` montava um estado zerado e, no render em que a sessão já tinha
+resolvido mas a consulta de papel ainda não, concluía "não é admin" e devolvia pro
+login. O login conferia de novo e mandava pro painel. Loop infinito, uma consulta
+ao banco por volta.
+
+O commit `8592cdf` da manhã tinha tentado fechar essa brecha, mas fechou pela metade:
+o marcador `checkingRole` também começava em `false`.
+
+**Correção (commit `758efbc`):**
+- `papel` com quatro estados (`checando` | `admin` | `nao-admin` | `erro`) — ninguém decide nada enquanto estiver `checando`
+- `AuthProvider` único em volta das rotas: uma sessão, um listener, uma consulta
+- a consulta lê `error` e `status`; rede/5xx/402/429 viram `erro` ("não sei"), nunca `nao-admin`
+- guarda de tempo de 8s e circuit breaker de 2 tentativas
+- `ProtectedRoute` mostra tela honesta com "Tentar de novo" em vez de spinner eterno, e não expulsa a usuária por falha de rede
+- `SecurePage` manda direto pro destino certo quando a senha é provisória
+- `scripts/resetar-senha-cliente.mjs` — reset da senha provisória (chave de serviço vem do ambiente, nunca do arquivo)
+
+**Verificação:**
+- Local: login completo vai direto pro `/primeiro-acesso` com **1 chamada** de `get_current_user_role` — era ~200
+- Com a rota da consulta pendurada: tela de erro aparece após 8s, sem spinner eterno e sem logout
+- Felipe entrou no painel com uma senha de teste dele e confirmou que funciona
+- Produção: deploy provado pelo conteúdo do pacote servido (`index-ClGJK06m.js` contém a tela de erro nova); `/admin` sem sessão redireciona na hora pro `/secure` com **zero** chamadas de papel
+
+**Conhecimento registrado:** skill nova `rv-portao-auth` (como construir e consertar
+portão de login com papel em React + Supabase, com receita de diagnóstico e
+checklist) e skill nova `vila-dos-corais` (contexto da cliente). Referências cruzadas
+adicionadas em `supabase-postgres` e `rv-incidente-supabase`.
+
+**Pendente:** a senha da conta é hoje uma senha de teste do Felipe, com a troca
+obrigatória já consumida. Rodar `scripts/resetar-senha-cliente.mjs` para gerar a
+provisória antes de mandar o acesso pra cliente. SMTP próprio continua pendente.
+
+**Verificação completa dos dois fluxos de senha (produção, 01/09/2026):**
+
+| O que | Resultado |
+|---|---|
+| Login com provisória → tela "Bem-vinda, Flávia!" | ✅ 1 consulta de papel |
+| Criar a senha nova ali → grava e desloga de propósito | ✅ |
+| Login com a senha nova → painel abre com os dados (diária R$2.000, calendário) | ✅ |
+| Link de recuperação → tela "Nova senha" (antes ia pro login sem gravar) | ✅ |
+| Salvar pelo link → senha nova funciona no login seguinte | ✅ |
+| Link já usado → tela "Link expirado", sem falhar calado | ✅ |
+| Conta devolvida ao estado de entrega (provisória + troca obrigatória) | ✅ conferido |
+
+Script novo `scripts/gerar-link-recuperacao.mjs` (commit `254d309`): gera o link de
+recuperação sem disparar email — usado no teste acima e útil pra entregar o link
+direto à cliente enquanto o SMTP próprio não existe.
+
+⚠️ **Incidente de credencial:** a chave `service_role` do projeto
+`xcymehoyqppdgvrhytfj` foi colada no chat durante esta sessão. **Precisa ser
+rotacionada** (Project Settings → API Keys → gerar nova). Rotacionar não afeta o
+site, que usa só a chave pública `anon`.
