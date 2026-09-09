@@ -22,6 +22,14 @@
 !tools/painel/package-lock.json
 !.github/workflows/*.yml
 
+# Exceção: planilhas de controle da campanha de prospecção "Estúdios de Música 2026" —
+# são fichas vivas de contato/e-mail/envio que precisam sincronizar entre sessões e
+# máquinas (Claude Code local + sessões cloud), não é dado bruto descartável. Escopo
+# estreito: só os .csv desta campanha, não *.csv global.
+!operacao/prospeccao/campanhas/estudios-musica-2026/*.csv
+!operacao/prospeccao/campanhas/estudios-musica-2026/relatorios/*.csv
+!operacao/prospeccao/campanhas/estudios-musica-2026/leva5-50-novos-email/*.csv
+
 # Bloquear repos git internos (evitar "repo dentro de repo")
 # Cada linha abaixo é um repositório de código com .git próprio.
 # Pastas de projeto que só têm .md (documentação) NÃO precisam ser listadas aqui —
