@@ -51,7 +51,7 @@ Débora e Cibele Irmã (irmãs do Felipe, família de 1º grau) já tinham receb
 |---|---|---|---|---|---|
 | 1 | Vitor Vieira | Amigo | Sim, viitor.vieira@gmail.com | Felipe já pediu confirmação diretamente (fora do fluxo do Claude) | ✅ confirmado ("Mano coloca ai viitor.vieira@gmail.com") — salvo no Supabase 02/09/2026 |
 | 2 | Mike The Guy (+41 79 360 93 04) | Amigo | Sim, mikey.mp3@gmail.com | Felipe já pediu confirmação diretamente (fora do fluxo do Claude) | ✅ confirmado ("mikey.mp3@gmail.com") — já estava salvo no Supabase como "Mikkel (Mike)" |
-| 3 | Flávia Andrade — Pousada Barra Grande | Cliente | Achado no chat era login admin do site (administracao@clisam.com.br), não confiável como email pessoal | Mandada msg C às 05:06 pra confirmar email pessoal | ⏳ aguardando resposta |
+| 3 | Flávia Andrade — Vila dos Corais | Cliente | Sim, administracao@clisam.com.br | Mandada msg C às 05:06 pra confirmar email pessoal | ✅ confirmado ("Sim" às 05:13, mesmo dia) — achado retroativo em 07/09/2026, nunca tinha sido salvo. **Causa:** as varreduras seguintes buscavam só por domínio comum (@gmail/@hotmail/@yahoo/@gmx/@outlook/@icloud) e o dela é `@clisam.com.br`, domínio próprio — ficou fora da busca. Salvo no Supabase em 07/09/2026, linkado ao `cliente_id` dela (Vila dos Corais) |
 | 4 | Moreno — Pousada Galeão | Cliente | Sim, mgazzaniga76@gmail.com (17/06/2026) | Mandada msg C de confirmação (pedindo autorização pra usar esse email) | ⏳ aguardando resposta |
 | 5 | Solarium-Aarau (Gabriel Iberg) | Cliente | Sim, solarium-aarau@gmx.ch (email oficial pedido por eles) | Mandada msg C de confirmação | ⏳ aguardando resposta |
 | 6 | Hallan (permuta) | Amigo/parceria | Não encontrado (busca "@" no chat vazia) | Mandada msg A pedindo email | ⏳ aguardando resposta |
@@ -147,7 +147,7 @@ No chat "Internship" (02/09/2026) apareceu uma **SUPABASE_SERVICE_ROLE_KEY em te
 
 - **Emails confirmados sem precisar de mensagem nova** (Felipe já tratou direto): nenhum ainda — todos os 10 contatos receberam ou vão receber mensagem de confirmação/pedido.
 - **Emails já conhecidos, aguardando confirmação de uso**: Vitor (viitor.vieira@gmail.com), Mike (mikey.mp3@gmail.com), Moreno (mgazzaniga76@gmail.com), Solarium-Aarau (solarium-aarau@gmx.ch).
-- **Email pedido do zero, aguardando resposta**: Flávia, Hallan, Kamila, Paula, Felipe Saturnino, Alexis.
+- **Email pedido do zero, aguardando resposta**: Hallan, Kamila, Paula, Felipe Saturnino, Alexis. (Flávia confirmou no mesmo dia — ver linha corrigida acima, achado retroativo em 07/09/2026)
 - **Nenhum email foi salvo no Supabase `email_contatos` ainda** — só salvar depois que cada contato confirmar (responder "sim"/mandar o email de novo).
 
 Atualizado durante o processamento — não fechar até todas as linhas terem status final. Próximo passo: esperar as respostas, salvar no Supabase os confirmados, e decidir se continua pro Lote 2 (próximos 10).
@@ -366,6 +366,52 @@ Nenhuma confirmação de email nova encontrada além das 7 já registradas anter
 
 Total de mensagens novas enviadas no lote 5: 18. Contatos pulados: 3 (outreach frio, suporte técnico, bot comercial).
 
+## Varredura 04/09/2026 — só leitura, sem novo envio
+
+Sessão nova conferiu o estado real do Supabase (que já estava mais avançado que este documento —
+outra sessão tinha salvo 21 confirmados sem atualizar aqui) e fez uma varredura pelas conversas de
+02/09 procurando resposta nova. Achados:
+
+- **Emerson Santos Pratigí (#94)** — pendência do email com espaço já estava resolvida (email
+  correto `recantopousada6@gmail.com` salvo no Supabase por outra sessão). Documento estava
+  desatualizado nisso.
+- **PH OFF TRIPS! Ecoturismo (Pedro Henrique, #153)** — autorizou explícito ("podem me adicionar
+  sim") e mandou `ph.off.trips@gmail.com`. **Salvo no Supabase.**
+- **Erk Kiko (#119)** — autorizou explícito ("Pode sim") e mandou `Erik.moraees@gmail.com`.
+  **Salvo no Supabase.**
+- **Anderson, filho do Antônio de Serinhaém (#116)** — respondeu ao pedido com
+  `angelsueeeee@gmail.com`, que é o **mesmo email já cadastrado do pai** (Antônio, cliente). Como
+  `email_contatos.email` é `unique`, não dá pra criar um segundo registro com esse email. A pedido
+  do Felipe, salvo mesmo assim: adicionada a tag `email-compartilhado-anderson-filho` no registro
+  existente do Antônio, sem duplicar linha. Nenhuma mensagem de confirmação foi mandada pra ele.
+- **Paula Fotógrafa Barra Grande (#8)** — recusou educadamente ("meu email já está super lotado...
+  mas agradeço"). Não adicionar, não reenviar.
+- **Débora / "Debi"** — recusou ("está avisado que não uso o e-mail"). Não adicionar, não reenviar.
+- **Norabrignoccoli Nora (#135)** — não localizada pela busca do WhatsApp Web (busca é fuzzy e não
+  achou o nome exato). Segue pendente — precisa o Felipe confirmar o nome/número atual do contato.
+- **Gabriel Iberg / Solarium-Aarau** — o pedido de update de email (pra `solarium-aarau@gmx.ch`,
+  registrado na sessão de 02/09) parece ter sido por **áudio**, não por texto — a busca de texto da
+  conversa não achou nada, e a sincronização de mensagens antigas do WhatsApp Web ainda estava em
+  andamento nesta sessão. Banco continua com o email antigo (`solariumaarau@gmail.com`). Ainda
+  pendente confirmar.
+
+Total de confirmados no Supabase ao fim desta sessão: **24** (22 que já estavam + Pedro + Erk Kiko,
+mais a tag no registro do Antônio).
+
+## Achado 07/09/2026 — ponto cego de domínio próprio nas varreduras
+
+A Flávia Andrade (Vila dos Corais) confirmou o email por WhatsApp em 02/09/2026, minutos depois de
+pedido — mas nunca foi salva. Causa: as varreduras de "confirmações perdidas" buscavam texto só
+pelos domínios comuns (`@gmail`, `@hotmail`, `@yahoo`, `@gmx`, `@outlook`, `@icloud`); o email dela
+é `@clisam.com.br`, domínio próprio, fora da busca. Corrigida e salva em 07/09/2026 (ver linha do
+Lote 1 acima).
+
+**Pendência real, ainda aberta:** o documento tem ~152 linhas marcadas "⏳ aguardando resposta" de
+uns 158 contatos processados no total. Não foi feita uma revarredura completa dessas conversas
+procurando confirmação que passou batido por esse mesmo motivo (domínio próprio) ou por outro. O
+Felipe decidiu em 07/09/2026 não travar o disparo do Email 3 por isso — só resolver o caso concreto
+da Flávia — mas a revarredura completa continua pendente, pra fazer com calma numa sessão futura.
+
 ## Relacionados
 
 - [[07-COMO-ADICIONAR-CONTATOS]]
@@ -377,3 +423,5 @@ Total de mensagens novas enviadas no lote 5: 18. Contatos pulados: 3 (outreach f
 |---|---|---|
 | 2026-09-02 | Documento movido de `Felipe Garcia/contatos-whatsapp/coleta-emails-whatsapp.md` pra cá | Trabalho pertence ao projeto de email marketing (Hermes), não à pasta pessoal do Felipe |
 | 2026-09-02 | Regra de exclusão de família reescrita | Família de 1º grau passa a entrar na campanha normalmente — só Pai/Mãe/Romana ficam fora por já terem email confirmado. Christine Garcia e Vitoria Morais continuam bloqueadas, mas por pedido explícito separado, não por regra de família |
+| 2026-09-04 | Varredura de leitura no WhatsApp Web + 2 novos confirmados salvos (Pedro, Erk Kiko) + caso Anderson resolvido com tag em vez de duplicata | Documento estava desatualizado em relação ao banco real; Felipe pediu pra terminar de processar as confirmações pendentes antes de preparar o disparo do Email 1 |
+| 2026-09-07 | Flávia Andrade (Vila dos Corais) corrigida de "aguardando resposta" pra confirmada e salva | Felipe notou que ela tinha confirmado por WhatsApp e nunca foi salva; causa raiz identificada (varredura só buscava domínio comum de email) e documentada como pendência maior ainda aberta |

@@ -13,7 +13,7 @@
 - Website entregue.
 
 ### 16/06/2026 — Situação inicial documentada
-- `VilaDosCorais_Situacao_16-06-26.pdf` registrado na pasta do cliente.
+- `VilaDosCorais_Situacao_2026-06-16.pdf` registrado na pasta do cliente.
 
 ### 14/08/2026 — Verificação no Google Search Console
 - Tentativa inicial via Tag HTML falhou ("Não foi possível encontrar seu site").
@@ -53,7 +53,7 @@
 ### 17/08/2026 (continuação) — Portfólio, contrato e página de avaliação
 - Página de avaliação criada (`Vila-dos-Corais-Avaliacoes.html`): link de avaliação do Google + QR code + botão de copiar, pra hóspedes.
 - Case de portfólio da Real Vision escrito em PT/EN/DE — versão inicial tinha a história errada (tratava como "resgate de site quebrado"); corrigido depois que Felipe esclareceu: cliente não tinha site nenhum, Real Vision construiu do zero com calculadora de reservas + checkout WhatsApp + painel de gestão própria + fotógrafo local coordenado. Ainda local, pendente push pro site em produção.
-- Contrato de prestação de serviços gerado em HTML (`ViladosCorais_Contrato_17-08-26.html`), mesma correção de escopo aplicada. Faltam CNPJ/endereço/representante da Real Vision (Felipe ainda não passou) e confirmar número do contrato (`RV-2026-002`, proposto).
+- Contrato de prestação de serviços gerado em HTML (`ViladosCorais_Contrato_2026-08-17.html`), mesma correção de escopo aplicada. Faltam CNPJ/endereço/representante da Real Vision (Felipe ainda não passou) e confirmar número do contrato (`RV-2026-002`, proposto).
 - Regra fixada: nunca expor o nome pessoal da cliente em material público — só "Vila dos Corais"/"a proprietária". Felipe decidiu não pedir autorização prévia dela pro portfólio (Termos §8.4 já cobre).
 
 ### 18/08/2026 — Cliente ativa Campanha Inteligente sozinha

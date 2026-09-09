@@ -239,6 +239,66 @@ Cada disparo de email marketing ganha um número sequencial.
 - **Limite conhecido:** os eventos só existem retroativamente a partir da criação do webhook. A
   campanha 002 (20/07) **não** será preenchida. Vale da próxima em diante.
 
+### 07/09/2026 — Confirmação do status real da campanha 004 + teste visual de E3 e E4
+
+**Contexto:** Felipe perguntou pelo status da campanha, achando que o E3 era pra ter saído em
+06/09 (não saiu, ele teve outro compromisso). Ao verificar, o `_PAINEL.md` e o
+`INDICE-CAMPANHAS.md` ainda diziam que o E2 estava "agendado" — desatualizados.
+
+- **Confirmado no banco** (`email_sequencias`, `email_envios`): o **E2 já tinha sido disparado em
+  01/09/2026, 16:23 UTC, pra 25 contatos**. Ninguém tinha registrado isso aqui nem no índice.
+  Achada a causa: uma function temporária (`hermes-batch-004-02`) fez o disparo mas a sessão que a
+  usou não fechou o registro. Ela já estava corretamente desativada (corpo esvaziado, 410).
+- **Confirmado no Google Agenda:** o E3 estava mesmo marcado pra 06/09 às 9h e não disparou —
+  bate com o que o Felipe lembrava.
+- Felipe pediu teste visual do E3 e do E4 pro email de teste, pra ver os dois antes de aprovar.
+- Reativada a `hermes-campanha` (mesma function usada no teste do E1, destinatário travado no
+  código em `realvisionmaps360@gmail.com`, chamada com a anon key do projeto — nenhum segredo
+  saiu do Supabase). Enviados os dois testes e a function foi desativada de novo (410) na
+  sequência, mesmo protocolo do incidente de 21/08.
+  - E3: `resend_id 1d32a38c-8a5c-41ad-8fc1-64011bed0b1f`.
+  - E4: `resend_id 272645f3-acaf-4065-a784-7188da2454c5`.
+- **Nenhum dos dois foi disparado pra lista real** — só o teste. Falta aprovação do Felipe.
+- `_PAINEL.md` e `INDICE-CAMPANHAS.md` corrigidos com o estado real.
+- **Achado de segurança leve:** a `hermes-batch-004-02` continua listada como `ACTIVE` no painel do
+  Supabase (igual `hermes-test-send` e `hermes-campanha` antes dela), mas as três já estão
+  neutralizadas por dentro (corpo esvaziado, sem acesso a segredo). Pendência de limpeza (apagar
+  pelo painel) atualizada no `_PAINEL.md` com as três.
+**Bloco 2 — E3 trocado de gancho**
+
+- Depois de ver o teste, Felipe achou o texto da Ilha do Contrato fraco. Pediu pra trocar pelo case
+  do **Universo Paralello 18°**: festival de música eletrônica na Praia de Pratigí-BA, onde a Real
+  Vision fez a maior cobertura 360° já feita pra um festival de música no Brasil (81 panoramas),
+  com reconhecimento do DJ Alok nos bastidores. Dados confirmados em `projects.ts` e `blog-posts.ts`
+  do site (slug do post: `bastidores-tour-360-universo-paralello-18`), nada inventado.
+- Introduzido o conceito **Destino 360°** no texto — trabalho que a Real Vision faz viajando até
+  onde o cliente está. O termo já existia como tag do blog (`Destinos 360°`), só reaproveitado.
+- Título definido pelo Felipe: "Tour virtual 360° aplicado a eventos". P.S. reescrito por ele
+  (eternizar edição de evento em tour 360° como estratégia de marketing).
+- Decisão do Felipe: sem foto no corpo do email, mantém o padrão dos outros 3 emails da Fase 1.
+- Novo arquivo `campanhas/004-03-tour-360-eventos.html`. Antigo `004-03-ilha-do-contrato.html`
+  mantido no disco, sem uso.
+- Teste reenviado com o texto final via `hermes-campanha` (reativada e desativada de novo na
+  sequência): `resend_id b24604f6-8816-4dbb-8044-4dbbff38af93`, `realvisionmaps360@gmail.com`.
+- Felipe aprovou o texto do E3 ("ficou bom") depois de ver o teste.
+
+**Bloco 3 — CTA passa a apontar pra `/links-uteis/`, regra pra todo email novo**
+
+- Felipe pediu pra trocar o destino do link do CTA: em vez de ir direto pro post/portfólio, aponta
+  pra `https://realvisionmaps.com/links-uteis/` — a página estilo linktree da Real Vision
+  (WhatsApp direto, Site, Portfólio, Blog, YouTube). O texto do link continua prometendo o
+  conteúdo específico, só o destino mudou. **Vale pra todo email novo, não só este.**
+- Regra gravada em `skills/rv-email/SKILL.md` (seção Regras de Voz), como decisão datada, pra não
+  se perder — inclusive pra Fase 2 e 3 quando forem escritas.
+- Aplicado nos dois arquivos ainda não disparados (`004-03-tour-360-eventos.html` e
+  `004-04-solarium-aarau.html`). Emails 1 e 2 não foram tocados, já saíram com o link antigo.
+- **Reenviados com o link corrigido:** E3 `resend_id 2d59d01a-64d2-42d3-9390-47d2e7c7cd2a`, E4
+  `resend_id 01230280-c989-458f-95e9-dfb5ea5efe43`, ambos pra `realvisionmaps360@gmail.com`.
+  Function `hermes-campanha` desativada de novo logo em seguida.
+- **Próximo passo:** Felipe aprova o E3 e o E4 vendo os testes na caixa de entrada; aí sim
+  disparam pra lista, no dia certo cada um (E3 já atrasado, E4 previsto 11/09 — mas antes ajustar
+  o P.S. dele).
+
 ### 22/07/2026 — Nova fonte de entrada em `email_contatos`: squeeze page da comunidade WhatsApp
 Edge Function pública `capture-community-lead` (mesmo projeto Supabase do Hermes) grava direto em `email_contatos` com `origem_consentimento='blog-<slug>'`. Testado local, ainda não publicado em produção. Detalhe completo em [`TIMELINE.md`](../../projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.
 

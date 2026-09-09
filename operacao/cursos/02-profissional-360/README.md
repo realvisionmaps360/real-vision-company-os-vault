@@ -73,6 +73,13 @@ Quem termina o curso sai com um negócio montado e os primeiros clientes a camin
 | [[CONCEITO]] | **Grade-mestra**: os 6 módulos, todas as aulas, preços e modelos de venda |
 | [[MODULO-0-bem-vindo]] | **Texto pronto pra gravar** do Módulo 0 (4 aulas) — formato **narrado**, texto final palavra por palavra |
 | [[MODULO-1-google-meu-negocio]] | **Roteiro pronto pra gravar** do Módulo 1 (8 aulas, com fala e tela) |
+| [[MODULO-1-google-meu-negocio-v2-narrado]] | **Versão de gravação do Módulo 1** — 5 aulas, áudio narrado puro (substitui a v2 acima para gravar) |
+| [[AULA-1.0-aviso-de-formato-narrado]] | Aviso de formato do curso (ler uma vez, no começo do Módulo 1) |
+| [[AULA-1.1-por-que-o-google-meu-negocio-vale-dinheiro-narrado]] | Roteiro narrado da Aula 1.1 |
+| [[AULA-1.2-criando-o-perfil-do-zero-narrado]] | Roteiro narrado da Aula 1.2 |
+| [[AULA-1.3-otimizacao-o-que-faz-o-google-te-escolher-narrado]] | Roteiro narrado da Aula 1.3 |
+| [[AULA-1.4-fotos-tour-360-e-perfil-vivo-narrado]] | Roteiro narrado da Aula 1.4 |
+| [[AULA-1.5-avaliacoes-metricas-e-como-cobrar-narrado]] | Roteiro narrado da Aula 1.5 + tabela de preços |
 | [[MODULO-2-imersao-total-360]] | **Rascunho** do Módulo 2 — só aulas 2.1 e 2.2, aguardando o resto do conteúdo |
 
 > Convenção: os próximos roteiros seguem o mesmo nome — `MODULO-2-...md`, `MODULO-3-...md`, etc. (padrão flat, igual ao Curso 01).

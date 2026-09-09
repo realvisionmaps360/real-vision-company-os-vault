@@ -20,6 +20,7 @@ escritos e agendados. Emails 5 a 12 ainda não escritos.
 | 06 | [[06-MANUAL-APRENDIZADO]] | A escola do Felipe, em 6 níveis |
 | 07 | [[07-COMO-ADICIONAR-CONTATOS]] | Processo fixo de entrada de contato novo |
 | 08 | [[08-COLETA-WHATSAPP]] | Captação de email da rede pessoal via WhatsApp Business |
+| 09 | [[09-LISTA-CAPTADOS-WHATSAPP]] | Lista final: número + nome + email dos 24 captados |
 | — | [[LEITURA-NARRADA-EMAILS]] | Todos os emails em texto corrido, pra ler em voz alta antes de aprovar |
 | — | [[PROCESSO-EDITORIAL-EMAIL-BLOG-CHATGPT-VOZ]] | Como blog post vira email. Veio do ChatGPT/LBOS, mergeado em 27/08 |
 | — | `campanhas/` | Os HTMLs disparados + [[INDICE-CAMPANHAS]] |

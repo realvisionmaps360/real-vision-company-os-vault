@@ -49,6 +49,13 @@ Esses passos (2-6) podem ir num único `browser_batch` por contato — só o cli
 
 **Ritmo:** um contato por vez, manual — não existe modo "broadcast automático" no WhatsApp Web sem risco de o número ser marcado como spam. Antes de dar sequência a uma leva grande (10+ contatos), **sempre confirmar com o Felipe o volume** ("quantos agora?") antes de disparar — não presumir "manda pra todo mundo".
 
+### Armadilhas observadas (leva grande, 08-09/09/2026)
+
+- **A busca de "Nova conversa" às vezes renderiza atrasada.** Depois de digitar o número, um primeiro screenshot pode mostrar a lista de conversas antiga (não filtrada) em vez do resultado da busca — clicar nesse estado abre o chat errado. Sempre que o resultado não bater com o número digitado, tirar um segundo screenshot antes de clicar (a busca é assíncrona, ~1-2s).
+- **A sessão do WhatsApp Web pode deslogar sozinha no meio de uma leva grande** (aconteceu após ~13 envios seguidos numa sessão). Sintoma: a tela vira "Escaneie para entrar" com QR code. Não dá pra contornar sozinho — avisar o Felipe pra escanear com o celular e só continuar o disparo depois de confirmar que a tela voltou pra lista de conversas.
+- **Antes de assumir "esse número nunca foi contatado"**, checar o histórico de chat completo dele (não só o `CONTROLE-ENVIOS.md` da campanha) — pode ter sido contatado numa sessão anterior não registrada no controle. Aconteceu na Leva 4 do Conecta Negócios: 5 contatos já tinham recebido a mensagem original sem estarem na tabela.
+- **Bots de atendimento automático (Meta AI / "assistente virtual" da própria loja) respondem quase instantaneamente** e não contam como interesse humano real — geralmente citam o nome da loja/negócio ou dizem "conectei você com nossa equipe". Distinguir isso de uma resposta manual de verdade antes de reportar como "sinal positivo".
+
 ## Registro obrigatório
 
 Toda campanha de disparo em massa deve ter um arquivo de controle em `operacao/prospeccao/campanhas/[nome-da-campanha]/CONTROLE-ENVIOS.md`, listando: nome/perfil, número, resultado (entregue / resposta automática / resposta manual), e qual foi o último contato enviado — para retomar de onde parou na próxima sessão. Ver exemplo em [[project_conecta_negocios_whatsapp]] (campanha `conecta-negocios-whatsapp`).

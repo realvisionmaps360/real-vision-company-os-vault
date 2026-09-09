@@ -85,6 +85,17 @@ Backlog de posts pro site real-vision-core. Status: `📝 ideia` → `✍️ ras
 
 ---
 
+## 📝 Reflexões / Atualidade (cont.)
+
+### 9. [tema a partir do vídeo "A nuvem NÃO é o futuro da IA (e a NVIDIA acabou de provar)"]
+**Status:** 📝 ideia
+**Fonte:** vídeo do canal Maestros da IA — https://www.youtube.com/watch?v=KhGY27kkReo&t=850s (trecho relevante a partir de 14:10, vídeo de 16:09 no total)
+**Objetivo:** a definir — Felipe apontou esse vídeo como tema/gatilho de um novo post, ainda sem ângulo definido
+**Ângulo:** a definir com Felipe (tema geral do vídeo: nuvem vs. IA local/on-device, contexto NVIDIA)
+**CTA:** a definir
+
+---
+
 ## 🔜 Backlog
 
 - "Como o Google Meu Negócio bem otimizado triplica o número de ligações da sua empresa"

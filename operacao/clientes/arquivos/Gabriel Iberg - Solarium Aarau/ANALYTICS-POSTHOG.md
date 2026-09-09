@@ -73,6 +73,16 @@ Felipe adicionou as env vars no Vercel e aprovou o deploy. Bundle JS de produç�
 `posthog-js` + token carregados. Próximo passo real: confirmar visualmente que o banner aparece
 pro visitante e que o evento de pageview chega no painel do PostHog.
 
+### 09/09/2026 — Primeira leitura real (via MCP), usada no relatório mensal
+Puxado via MCP direto (`projects-get` + `switch-project` pro id `539125`), período 01/08–09/09:
+18 gravações de sessão (`query-session-recordings-list`), destaque pra `/wie-funktioniert-es`
+(maior activity_score e tempo de engajamento). Heatmap da home (`heatmaps-list`): 50% dos cliques
+abaixo da dobra, scroll depth com só 1 de 10 sessões chegando ao fim da página. 1 sessão com
+`fbclid` na URL — indício de clique vindo de link/anúncio do Facebook, sem campanha formal ativa
+ainda. Retenção confirmada na prática: replay expira em 30 dias (campo `retention_period_days`),
+heatmap em 90 — dado precisa ser puxado logo após o fechamento do mês. Detalhes de como reproduzir
+em `skills/rv-analytics-cliente/SKILL.md` (skill criada nesta mesma sessão).
+
 ---
 
 ## Próximos passos

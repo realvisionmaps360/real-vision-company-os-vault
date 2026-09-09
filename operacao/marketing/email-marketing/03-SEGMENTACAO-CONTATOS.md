@@ -92,6 +92,31 @@ O que mudou desde julho, e por quê:
 - **Descadastrado, não apagado.** Ninguém foi removido da tabela: sai da lista ativa e some das
   métricas, mas o registro fica caso precise voltar.
 
+### 07/09/2026
+
+53 registros na tabela, **47 com `status = 'ativo'`** (lista completa de nomes e emails em
+[[../09-LISTA-CAPTADOS-WHATSAPP]] pros 24 novos via WhatsApp; os 47 ativos totais receberam o
+Email 3 da campanha 004 nesta mesma data — ver [[campanhas/INDICE-CAMPANHAS]]).
+
+| `status` | Qtd | Observação |
+|---|---|---|
+| ativo | 47 | 46 do corte anterior (mesmo dia) + **Flávia Andrade (Vila dos Corais)**, achada e corrigida |
+| bounced | 3 | Fernanda, Modular Festival, William Primo — sem mudança |
+| descadastrado | 3 | `smarthomefg`, `felipegarciajericoacoara`, `dronevideomakerjeri` — sem mudança |
+
+O que mudou desde a apuração anterior (mesmo dia):
+- **Flávia Andrade (administracao@clisam.com.br, Vila dos Corais) adicionada.** Ela tinha confirmado
+  o email por WhatsApp em 02/09/2026 e nunca foi salva — achado só porque o Felipe percebeu ao
+  revisar a lista antes do disparo do Email 3. Causa raiz: as varreduras de confirmação buscavam só
+  domínio comum de email (@gmail/@hotmail/@yahoo/@gmx/@outlook/@icloud); o dela é `@clisam.com.br`,
+  domínio próprio, fora da busca. Linkada ao `cliente_id` dela no VisionFlow (não usa tag, é cliente
+  existente). **Pendência real, ainda aberta:** o mesmo ponto cego pode ter deixado passar outras
+  confirmações — ~152 linhas do documento de coleta seguem "aguardando resposta" sem revarredura
+  completa. Felipe decidiu não travar o disparo por isso, mas o re-check completo continua pendente
+  — ver [[08-COLETA-WHATSAPP]].
+- **Nome de `mikey.mp3@gmail.com` corrigido** de "Mikkel (Mike)" pra "Mickel Angelo", a pedido do
+  Felipe.
+
 ## Pendente (etapas futuras, não fazer sem Felipe revisar)
 
 - [ ] Reclassificar os 22 contatos `relacao_comercial` com `nicho-*` — precisa Felipe revisar cliente a cliente, não dá pra inferir nicho automaticamente

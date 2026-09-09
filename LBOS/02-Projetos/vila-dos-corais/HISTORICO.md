@@ -89,7 +89,7 @@ A migração de domínio Lovable→Vercel (13-14/08) continua sendo um fato real
 
 **Visão de futuro (guardar pra continuar depois):** o sistema foi construído pensando em crescer — a estrutura permite no futuro replicar o mesmo modelo (calculadora + WhatsApp + painel próprio) pros donos das outras casas do mesmo condomínio, cada um virando cliente Real Vision.
 
-Corrigido em: `operacao/projetos/_RV-Internos/sites/real-vision-site/src/data/projects.ts` (case de portfólio), `ViladosCorais_Contrato_17-08-26.html` (Seção 5 e 12), `FICHA-CLIENTE.md`.
+Corrigido em: `operacao/projetos/_RV-Internos/sites/real-vision-site/src/data/projects.ts` (case de portfólio), `ViladosCorais_Contrato_2026-08-17.html` (Seção 5 e 12), `FICHA-CLIENTE.md`.
 
 ## Relacionados
 - Pertence a: [[02-Projetos/vila-dos-corais/PROJETO]]

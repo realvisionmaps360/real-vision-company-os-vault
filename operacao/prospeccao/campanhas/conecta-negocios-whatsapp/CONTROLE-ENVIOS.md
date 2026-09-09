@@ -95,11 +95,93 @@ Para evitar reabrir o painel "Dados do grupo → Pesquisar membros" a cada conta
 3. Para o envio em si, usar "Nova conversa" (ícone de lápis) → colar `+55 DD NNNNN-NNNN` na busca → abrir o resultado → mandar a mensagem. Isso é mais rápido que reabrir o painel do grupo a cada contato.
 4. Depois de mandar a leva toda, consolidar os resultados aqui no CONTROLE-ENVIOS.md e apagar o arquivo temporário.
 
-## Próximo passo
+## Leva 4 — extraída, disparo parcial
 
-Continuar a lista de membros do grupo a partir de onde a Leva 3 parou (depois de +55 11 96162-1494). Repetir o método acima: extrair a próxima leva de uma vez, salvar em temp, mandar, consolidar.
+`TEMP-leva4.md` tem 49 contatos (43-92) extraídos do grupo em 03/09. Descoberta em 08/09: os contatos **#44 a #48** (Izabel Sandrini Malvezi, e mais 4 sem nome — 93957-6262, 96455-4608, 99838-6755, 99822-1603) já tinham recebido a mensagem padrão numa sessão anterior não registrada aqui. Retomar a partir do #64.
+
+## Teste de nova abordagem — 08/09/2026 (Leva 4, #49-63)
+
+Depois de analisar as 42 respostas da campanha original (~24% taxa de resposta, 0% positiva, maioria recusa ou silêncio), testamos uma abordagem sem pitch/link no primeiro contato — só uma pergunta genuína, personalizada quando o nome do negócio aparece na lista de membros. Ver rascunhos abaixo.
+
+**Grupo 1 — nome de negócio visível** → `"Oi, tudo bem? Vi seu contato no grupo Conecta Negócios. A [Nome] já tem site próprio ou hoje é só rede social?"`
+| # | Nome/Perfil | Número | Status |
+|---|---|---|---|
+| 49 | IMPERATRIZ STORE | +55 11 98996-7533 | ✅ Enviado |
+| 50 | Flávia Monteiro | +55 11 97427-3725 | ✅ Enviado (versão genérica, sem nome de negócio claro) |
+| 51 | Marina Fatobene Nutricionista | +55 11 93236-3948 | ✅ Enviado |
+
+**Grupo 2 — sem nome visível** → `"Oi, tudo bem? Peguei seu contato no grupo Conecta Negócios. Seu negócio já tem site hoje ou é só rede social?"`
+| # | Número | Status |
+|---|---|---|
+| 52 | +55 11 96712-1277 | ✅ Enviado |
+| 53 | +55 11 99894-0998 | ✅ Enviado |
+| 54 | +55 11 94014-0706 | ✅ Enviado |
+| 55 | +55 11 99632-4006 | ✅ Enviado |
+| 56 | +55 11 94825-2794 | ✅ Enviado |
+| 57 | +55 11 95919-5302 | ✅ Enviado |
+| 58 | +55 11 96964-2756 | ✅ Enviado |
+| 59 | +55 11 94841-5564 | ✅ Enviado |
+| 60 | +55 11 96624-2694 | ✅ Enviado |
+| 61 | +55 11 95344-2318 | ✅ Enviado |
+| 62 | +55 11 95196-0550 | ✅ Enviado |
+| 63 | +55 11 98258-7231 | ✅ Enviado |
+
+**15 mensagens da nova abordagem enviadas.** Vários já dispararam bot automático de atendimento (não conta como resposta humana): IMPERATRIZ STORE, Flávia Monteiro, Marina Fatobene. Revisitar em alguns dias e comparar taxa de resposta humana real contra os 24% da mensagem antiga antes de decidir se replica pro resto da Leva 4 (#64-92).
+
+## Follow-up — 08/09/2026 (retomada de conversa nas Levas 1-3)
+
+Varredura das 42 conversas da Leva 1-3 encontrou respostas manuais reais (fora das automáticas) e fez retomada de conversa em 3 grupos, com mensagem adaptada ao tom de cada resposta.
+
+**Grupo A — sinal aberto/positivo** → `"Oi! Chegou a dar uma olhada no portfólio?"`
+| Número | Resposta original | Follow-up |
+|---|---|---|
+| +55 11 92090-3810 | "Olá. Obrigada. Vou ver." | ✅ Enviado 13:32 |
+| +55 14 98171-9564 | reagiu 👍 na mensagem | ✅ Enviado 13:35 |
+
+**Grupo B — recusa educada** → `"Sem problema! Fico à disposição se mudar de ideia. Abraço."`
+| Número | Resposta original | Follow-up |
+|---|---|---|
+| +55 11 98888-8418 | "Nao Obrigada" / "Bom dia" | ✅ Enviado 13:32 (recategorizado de A pra B ao ler o histórico completo) |
+| +55 87 9136-4494 | "Por enquanto não me interesso. Obrigada." | ✅ Enviado 13:36 |
+| +55 11 99138-5028 | "Obrigada Deus te abençoe, mas no momento não tenho interesse 🙏" | ✅ Enviado 13:37 |
+| +55 11 96124-5319 | "Nao obrigada" | ✅ Enviado 13:37 |
+| +55 11 96461-8283 (Vitrine de Garagem) | "Bom dia. No momento não. Vou salvar o seu contato..." | ✅ Enviado 13:38 |
+
+**Grupo C — silêncio total (5 dias sem resposta)** → `"Oi, tudo bem? Só um toque, sem pressa. Se quiser dar uma olhada, segue de novo o portfólio: https://realvisionmaps.com/portfolio"`
+| Número | Status |
+|---|---|
+| +55 11 96162-1494 | ✅ Enviado |
+| +55 11 96774-6913 | ✅ Enviado |
+| +55 11 94343-1737 | ✅ Enviado |
+| +55 11 96348-5027 | ✅ Enviado |
+| +55 11 99528-2747 | ✅ Enviado |
+| +55 11 97750-8338 | ✅ Enviado |
+| +55 11 95552-0506 | ✅ Enviado |
+| +55 11 98570-1913 | ✅ Enviado |
+| +55 11 99251-1493 | ✅ Enviado |
+| +55 11 99977-7760 | ✅ Enviado |
+| +55 12 99607-2013 | ✅ Enviado |
+| +55 11 98387-4242 | ✅ Enviado |
+| +55 11 95351-1129 | ✅ Enviado |
+| +55 11 99800-7005 | ✅ Enviado |
+| +55 11 97211-4364 | ✅ Enviado |
+| +55 11 99988-3742 (Ateliê Rafa Raiza) | ✅ Enviado |
+| +55 11 98186-1302 | ✅ Enviado |
+| +55 11 98712-5201 | ✅ Enviado (sem histórico visível, mensagem temporária de 24h) |
+| +55 11 96455-4608 | ✅ Enviado |
+| +55 11 93957-6262 | ✅ Enviado |
+| +55 11 98408-3316 (Izabel Sandrini Malvezi) | ✅ Enviado |
+| +55 11 99822-1603 | ✅ Enviado |
+| +55 11 99838-6755 | ✅ Enviado |
+| +55 11 98208-7221 (Regiane Andrade Vieira) | ✅ Enviado |
+
+**Todos os 31 follow-ups da leva de 08/09/2026 foram enviados.**
+
+**Fora do disparo:**
+- +55 11 91826-1187 (Mahroh) — respondeu "Combinado Roberto, abraço", não bate com nada que mandamos. Felipe vai olhar manualmente.
+- Respostas automáticas de robô/ausência (não são leads respondendo de verdade): 94748-7740, 98907-3089, 94508-3729, 99457-8890, 98224-1138.
 
 ## Pendências / observações
 
-- Nenhuma resposta manual de interesse ainda recebida — só respostas automáticas de fora do expediente.
-- Vale revisitar em alguns dias pra ver quem respondeu manualmente e dar sequência comercial.
+- Vale revisitar de novo em alguns dias pra ver quem respondeu ao follow-up.
+- Leva 4 (49 contatos) segue pendente de disparo — ver seção acima.
