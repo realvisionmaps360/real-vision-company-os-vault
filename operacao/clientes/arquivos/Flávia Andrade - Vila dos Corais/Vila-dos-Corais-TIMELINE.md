@@ -162,3 +162,13 @@ O plano da reunião com a Evelin (`PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md`) fic
 - Escopo: gestão de Google Ads, ciclo fechado de 3 meses, sem renovação automática, sem garantia de reservas.
 - Investimento à Real Vision: R$2.400 (R$600 implementação em duas parcelas de R$300 + R$600/mês × 3 de gestão). Verba de mídia (R$1.000–1.500/mês, referência) é paga direto ao Google, fora da Real Vision.
 - Flávia pagou a primeira parcela de R$300 via Pix em 07/09/2026, dando início ao trabalho — ver [[FICHA-CLIENTE]] → "Tráfego pago" para os próximos passos.
+
+### 09/09/2026 — Plano de execução documentado (sessão na nuvem, para executar localmente)
+
+Sessão de planejamento que levantou o estado real de três frentes e escreveu o handoff completo em [[PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09]].
+
+- **VisionFlow:** confirmado que o pagamento de R$300 existe só no vault — a tabela `finances` da cliente (`client_id 4cda08fe-2334-4d3d-bdc4-278cb399a64d`) tem apenas as 2 linhas antigas (R$1.200 + R$1.000). Os R$700 de julho também seguem sem lançar. `client_services` está vazia para ela.
+- **Gatilho de auditoria destravado:** a crença registrada em 17/08/2026 de que o lançamento via SQL era impossível está incompleta. A `skills/rv-visionflow/SKILL.md` (linhas 73-84) documenta a receita com `SET LOCAL request.jwt.claims` que resolve o erro `null value in column "user_email"`. Felipe autorizou usar esse caminho.
+- **Playbook replicável:** decidido expandir a skill `rv-trafego-pago` existente (já é documento vivo com notas por caso) em vez de criar skill nova. Conteúdo fica no Company OS; o nó LBOS só referencia, nunca copia.
+- **App de acompanhamento da cliente:** decidido usar Artifact com capability `db` — página de link único pra Flávia, com botões grandes, ajuda por bloco e formulário, sem depender de infraestrutura nova.
+- Nada executado nesta sessão além da documentação — a execução acontece numa sessão local seguindo o plano.

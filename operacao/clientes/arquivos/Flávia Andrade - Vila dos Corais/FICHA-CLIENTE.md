@@ -54,6 +54,8 @@ Pacote confirmado por Felipe em 17/08/2026 (primeira etapa da proposta, os demai
 
 Proposta comercial enviada e **aceita** por Flávia: `PropostaViladosCorais-GoogleAds-2026-09-07.html` (salva nesta pasta).
 
+Plano de execução completo (VisionFlow, playbook replicável e app de acompanhamento da cliente): [[PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09]].
+
 - **Escopo:** gestão de Google Ads por 3 meses — mensuração no site, estrutura de campanha e anúncios, pesquisa de palavras-chave, acompanhamento/ajustes semanais, reunião estratégica antes do lançamento, relatório final. Ciclo fechado, sem renovação automática, sem garantia de número de reservas.
 - **Investimento (pago à Real Vision):** R$2.400 — R$600 de implementação (R$300 no início + R$300 quando a campanha for ao ar) + R$600/mês × 3 meses de gestão. Sem comissão sobre verba de mídia.
 - **Verba de mídia (pago direto ao Google, fora da Real Vision):** referência preliminar R$1.000–1.500/mês — decisão final da cliente.
