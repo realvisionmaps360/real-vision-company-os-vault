@@ -97,23 +97,21 @@ não foram encontrados no vault:
 ### Como estruturar
 
 - **Convenção de pasta:** `Nome - Empresa` (já correta).
-- **Convenção de deliverable HTML:** `<Cliente>_<Tipo>_<DD-MM-AA>.html` é o padrão documentado
-  (ex: `ViladosCorais_Contrato_17-08-26.html`). A proposta nova fugiu disso
-  (`PropostaViladosCorais-GoogleAds-2026-09-07.html`) — **duas convenções coexistem hoje**.
-  Decidir com o Felipe qual vale daqui pra frente e renomear só se ele quiser (renomear
-  arquivo já entregue quebra referência nos documentos).
+- **Convenção de deliverable HTML — DECIDIDO em 09/09/2026:** os arquivos ficam com os nomes
+  diferentes mesmo, como estão. **Não renomear nada.** As duas formas coexistindo
+  (`ViladosCorais_Contrato_17-08-26.html` e `PropostaViladosCorais-GoogleAds-2026-09-07.html`)
+  são aceitas — renomear arquivo já entregue quebraria referência nos documentos sem ganho real.
 - **Não versionar HTML/PDF à força.** O `.gitignore` ignorar tudo que não é `.md` é
   intencional — os binários e entregáveis vivem no PC/Drive, o vault carrega o conhecimento.
 - **Regra de wikilink:** todo `.md` novo nesta pasta linka pro hub ([[FICHA-CLIENTE]]) e o hub
   linka de volta. Já aplicado neste documento.
 - **Nunca apagar** nada da pasta, nem o deck obsoleto da Evelin — regra de ouro do Company OS.
 
-### Falta um `PROJETO.md`?
+### `PROJETO.md` — DECIDIDO: não mexer
 
-A `rv-novo-cliente` prevê `<CLIENTE>-PROJETO.md` como doc base, e esta pasta não tem. Hoje o
-papel de "estado do projeto" está dividido entre a FICHA e a TIMELINE, e o nó de projeto vive
-no LBOS (`PRJ-2026-005`). **Não criar** sem o Felipe decidir — criar um terceiro documento de
-estado sem necessidade real só gera fonte duplicada, o que o LBOS proíbe.
+A `rv-novo-cliente` prevê `<CLIENTE>-PROJETO.md` como doc base, e esta pasta não tem. Felipe
+decidiu em 09/09/2026: **não mexer nisso.** A FICHA + a TIMELINE + o nó do LBOS (`PRJ-2026-005`)
+já cobrem o estado do projeto. Não criar o arquivo — assunto encerrado, não reabrir.
 
 ---
 
