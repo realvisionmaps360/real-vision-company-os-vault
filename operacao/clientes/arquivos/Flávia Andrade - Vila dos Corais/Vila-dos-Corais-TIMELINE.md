@@ -154,3 +154,11 @@ Supabase, limitado a poucos envios por hora).
 | Data | Sessão | Duração estimada |
 |---|---|---|
 | 01/09/2026 | Diagnóstico do login + correção das 3 falhas + migração completa do banco para conta própria | ~3h |
+
+### 07/09/2026 — Tráfego pago contratado: proposta enviada e aceita direto com a Flávia
+
+O plano da reunião com a Evelin (`PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md`) ficou obsoleto: **Evelin saiu do processo**, Felipe negociou direto com a Flávia. Proposta comercial `PropostaViladosCorais-GoogleAds-2026-09-07.html` enviada e **aceita**.
+
+- Escopo: gestão de Google Ads, ciclo fechado de 3 meses, sem renovação automática, sem garantia de reservas.
+- Investimento à Real Vision: R$2.400 (R$600 implementação em duas parcelas de R$300 + R$600/mês × 3 de gestão). Verba de mídia (R$1.000–1.500/mês, referência) é paga direto ao Google, fora da Real Vision.
+- Flávia pagou a primeira parcela de R$300 via Pix em 07/09/2026, dando início ao trabalho — ver [[FICHA-CLIENTE]] → "Tráfego pago" para os próximos passos.

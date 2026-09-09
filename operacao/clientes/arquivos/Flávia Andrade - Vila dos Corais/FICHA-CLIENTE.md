@@ -9,7 +9,7 @@ servicos: [Site Institucional, Perfil Google Meu Negócio, Instagram]
 id: CLI-007
 tipo: cliente
 pertence_a: ["[[operacao/clientes/README]]"]
-atualizado_em: 2026-08-28
+atualizado_em: 2026-09-07
 ---
 
 # Flávia Andrade — Vila dos Corais
@@ -49,8 +49,23 @@ Pacote confirmado por Felipe em 17/08/2026 (primeira etapa da proposta, os demai
 - Formalizar contrato de prestação de serviços — rascunho gerado em 17/08/2026 (`ViladosCorais_Contrato_17-08-26.html`), falta preencher CNPJ/endereço/representante da Real Vision e confirmar o número do contrato.
 - Portfólio da Real Vision: Felipe decidiu em 17/08/2026 **não pedir autorização prévia da cliente** — os Termos e Condições Gerais (cláusula 8.4) já cobrem isso ("Real Vision poderá exibir projetos concluídos... salvo proibição expressa por escrito do Cliente"). Regra fixada: **nunca expor o nome pessoal da cliente** em material público (portfólio, case, redes) — usar só "Vila dos Corais" / "a proprietária". **Case publicado em 19/08/2026** — item concluído.
 
-## Tráfego pago (em aberto, atualizado 20/08/2026)
-Cliente ativou sozinha uma Campanha Inteligente (Smart Campaign) dentro do Perfil da Empresa, com R$200 de orçamento, e perguntou pro Felipe qual o próximo passo — ela já queria fazer tráfego pago desde o início. **Flávia delegou o assunto pra Evelin**, da equipe dela, que vai receber treino do Felipe sobre tráfego pago — reunião marcada pra **21/08/2026**. Pesquisa completa (o que é o produto, diagnóstico técnico do botão "Anunciar", estado atual do mercado, veredito) em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]]. Nada foi executado na conta da cliente — decisão de negócio (pegar o serviço formal de gestão de tráfego pago e por quanto cobrar) fica pra reunião de 21/08/2026.
+## Tráfego pago — CONTRATADO (atualizado 07/09/2026)
+**Correção registrada em 07/09/2026:** o plano descrito no deck `PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md` (reunião pensada pra Evelin) ficou obsoleto — **Evelin saiu do processo**, Felipe fechou direto com a Flávia.
+
+Proposta comercial enviada e **aceita** por Flávia: `PropostaViladosCorais-GoogleAds-2026-09-07.html` (salva nesta pasta).
+
+- **Escopo:** gestão de Google Ads por 3 meses — mensuração no site, estrutura de campanha e anúncios, pesquisa de palavras-chave, acompanhamento/ajustes semanais, reunião estratégica antes do lançamento, relatório final. Ciclo fechado, sem renovação automática, sem garantia de número de reservas.
+- **Investimento (pago à Real Vision):** R$2.400 — R$600 de implementação (R$300 no início + R$300 quando a campanha for ao ar) + R$600/mês × 3 meses de gestão. Sem comissão sobre verba de mídia.
+- **Verba de mídia (pago direto ao Google, fora da Real Vision):** referência preliminar R$1.000–1.500/mês — decisão final da cliente.
+- **Pagamento confirmado:** R$300 (primeira parcela da implementação) pagos por Flávia via Pix em **07/09/2026** — lançado em `Felipe Garcia/financas/lancamentos/2026-09.md`. Faltam R$300 (implementação, quando a campanha for ao ar) + R$600/mês × 3.
+- **Próximos passos (ordem da própria proposta, seção 03):**
+  1. ~~Aprovação da proposta~~ — feito, R$300 iniciais pagos.
+  2. Pedir materiais pra campanha (fotos, vídeos, criativos que a cliente já tenha).
+  3. Passar pra Flávia quais acessos são necessários (conta Google Ads, forma de pagamento dela pro Google).
+  4. Reunião estratégica com a Flávia — alinhar público prioritário, verba de mídia e datas de prioridade antes de ir ao ar.
+  5. Campanha no ar → cobrar os R$300 restantes da implementação.
+- Pré-requisito técnico da skill `rv-trafego-pago` (nunca pular): GA4 do site já instalado (`G-8P07EHPVYR`, 14/08/2026) — falta ainda vincular ao Google Ads da cliente e definir evento de conversão (ex: clique no WhatsApp da calculadora de reservas) depois que a Real Vision tiver acesso à conta dela.
+- Contexto técnico anterior (diagnóstico do botão "Anunciar", descontinuação da Campanha Inteligente, caminho recomendado via `ads.google.com` direto) segue válido em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]] — só a decisão de negócio e o interlocutor (Evelin → Flávia direto) mudaram.
 
 ## Visão de futuro
 Felipe quer manter isso registrado para retomar depois: o sistema (calculadora de reservas + WhatsApp + painel próprio) foi construído pensando em crescer — a cliente é dona de só uma casa (Casa Estrela do Mar) dentro do Condomínio Vila dos Corais, mas a estrutura permite no futuro replicar o mesmo sistema pros donos das outras casas do condomínio, cada um virando cliente Real Vision com o mesmo modelo integrado.
