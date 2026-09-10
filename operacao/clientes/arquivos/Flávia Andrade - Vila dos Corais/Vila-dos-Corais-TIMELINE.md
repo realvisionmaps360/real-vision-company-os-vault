@@ -335,3 +335,97 @@ teste em tela de celular (a ferramenta de redimensionar não funcionou nesta má
 Google Ads ao GA4. Nada foi para produção: tudo vive na branch `feat/portal-projeto`.
 
 **Herdado e ainda aberto:** a chave `service_role` exposta em 01/09 continua sem rotacionar.
+
+### 10/09/2026 (continuação) — GA4 conversão marcada; Google Ads travado esperando chave de acesso
+
+Sessão local (Claude in Chrome conectado), retomando os 3 itens pendentes que exigem navegador.
+
+**GA4 — feito.** Property certa é "Vila dos Corais" (ID `549997524`, conta `realvisionmaps360@gmail.com`) —
+diferente da conta usada por padrão no navegador (`smarthomefg@gmail.com`), que não tem essa
+property. Confirmado ali: stream `viladoscorais.com.br` recebendo tráfego nas últimas 48h, e
+`whatsapp_click` **já estava marcado como evento principal (conversão)** — não precisou de ação
+nova, só confirmação visual em Admin → Eventos → Eventos principais.
+
+**Google Ads — bloqueado, não é erro, é rate limit do próprio Google.** Nenhuma das contas da
+Real Vision hoje serve pra essa cliente:
+- `smarthomefg@gmail.com` não tem acesso a nenhuma conta Ads.
+- `realvisionmaps360@gmail.com` só enxerga `Real Vision Google ADS Account` (156-292-4356),
+  **cancelada, cobrança pendente**.
+- A MCC `359-167-3566` (nome real: "Felipe Garcia Real Vision conta google ads claude") só é
+  acessível pela conta `felipegarciajericoacoara@gmail.com` — achada por tentativa, trocando
+  `authuser` na URL do Google Ads até aparecer. Ela tem 1 conta gerenciada hoje: `Real Vision`
+  (414-120-1211), a mesma usada como sandbox no diagnóstico de 20/08 — não é uma conta dedicada
+  da Vila dos Corais.
+
+Decisão do Felipe (opção 2 de duas propostas): criar conta Ads nova dentro dessa MCC antes de
+voltar ao GA4 pra vincular. Ao tentar "Criar nova conta", o Google pede verificação humana
+(reCAPTCHA "Não sou um robô") — **ação que a IA nunca executa** (regra fixa, sem exceção, mesmo
+com pedido direto do Felipe). Felipe tentou resolver manualmente duas vezes; nas duas o Google
+devolveu ao formulário sem criar nada. Na segunda tentativa apareceu o motivo real: o Google Ads
+exige uma **chave de acesso (passkey)** cadastrada na conta antes de liberar ações sensíveis
+(criar conta, vincular contas, adicionar usuário) — Felipe cadastrou a passkey em
+`felipegarciajericoacoara@gmail.com`, mas o próprio Google avisa que **leva de 1 a 2 dias pra
+conectar**. Não é bug, não é erro de execução — é rate limit conhecido do Google Ads.
+
+**Pendente, retomar depois de 1-2 dias (a partir de 10/09):**
+- Voltar em `ads.google.com` com `felipegarciajericoacoara@gmail.com`, entrar na MCC
+  `359-167-3566`, Contas → Adicionar conta → Criar nova conta, criar a conta dedicada da Vila
+  dos Corais (Pesquisa, sem Campanha Inteligente — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]]).
+  Se voltar a pedir reCAPTCHA depois da janela de 1-2 dias, é o Felipe que resolve.
+- Depois disso, voltar no GA4 (property "Vila dos Corais") → Admin → Vínculos de produtos →
+  Contas vinculadas do Google Ads → Vincular, escolhendo a conta nova (não a 156-292-4356
+  cancelada).
+
+**Login como a Flávia — feito, funciona.** `administracao@clisam.com.br` (papel `admin`, dela)
+logou normal em `/secure`, caiu em `/admin` ("Bem-vinda Flávia", preços/calendário intactos) e
+`/projeto` carregou certo pra esse papel: bloco "Agora" mostrando "Preparando a campanha", os 3
+cards (Perguntas da campanha 0/3, Fotos da casa via Google Drive, Fotos da praia), e a lista
+"Depois" com as 4 etapas futuras. Senha digitada pelo próprio Felipe na tela — a IA nunca digita
+senha de cliente.
+
+**Teste em tela de celular — não deu, ferramenta quebrada nesta máquina.** `resize_window` do
+Claude in Chrome reporta sucesso mas não muda o viewport real: `window.innerWidth` continuou
+`1366` depois de pedir `390x844` (confirmado via JS, não só visual). Mesmo defeito já registrado
+na sessão de 09/09 ("a ferramenta de redimensionar não funcionou nesta máquina — innerWidth
+continuou 1920") — agora confirmado que é uma falha estável da máquina/extensão, não pontual.
+Visualmente a página empilha em coluna única e parece bem comportada, mas isso é o layout
+normal (largura máxima do conteúdo é pequena mesmo em desktop) — **não prova nada sobre mobile
+de verdade.** Pendente: testar num celular físico ou achar outra ferramenta de emulação nesta
+máquina.
+
+**Fechamento da sessão "corais ADS2":** os 3 itens que dependiam de navegador foram até onde
+davam sem CAPTCHA nem senha de cliente. Retomar depois de 12/09/2026 pela conta Ads (ver acima)
+— aí sim GA4 ↔ Ads e a campanha ficam desbloqueados.
+
+### 10/09/2026 — Continuação "corais ADS2": UI do painel `/admin` e `/projeto`
+
+- **Botão "Painel inicial" no `/admin`** — faltava caminho de volta pra `/projeto`; só tinha
+  "Voltar ao site" e "Sair". Adicionado botão primário com ícone de casa
+  (`src/components/admin/AdminHeader.tsx`).
+- **Olho de mostrar/ocultar senha** no login (`src/pages/SecurePage.tsx`).
+- Commit `f4a2176`, push feito, Felipe confirmou funcionando em produção (prints do celular real).
+- Emulação mobile funcionou normal nesta sessão (375x812 confirmado via JS) — o defeito registrado
+  em 09/09 parece ter sido da máquina, não do site.
+- **Usuário de teste criado** no Supabase (`teste.rv@realvisionmaps360.com`, papel `admin`,
+  sem vínculo com `date_settings`/reservas reais) — credencial em `TEMP/vila-corais-login-teste.txt`
+  (fora do git), não repetida em chat.
+- Ao criar esse usuário, bati num bug real do GoTrue: colunas internas (`email_change` etc.) como
+  `NULL` em vez de `''` quebram QUALQUER login futuro daquele usuário com erro 500 silencioso
+  ("Database error querying schema" pro cliente, mensagem real só aparece no log do Supabase:
+  `error finding user: sql: Scan error on column index 8, name "email_change": converting NULL to
+  string is unsupported"`). Corrigido no usuário de teste. **Auditado nas 3 contas reais do banco
+  — nenhuma tinha o problema.** Não é a causa do bug relatado, mas é o tipo de coisa que vale
+  monitorar se aparecer de novo (ver `rv-portao-auth`).
+- Bug do "login trava na segunda tentativa" relatado pelo Felipe: **não reproduzido.** Felipe
+  testou pessoalmente depois do deploy e logou normal de primeira. Fica em observação — se
+  voltar a acontecer, o diagnóstico é contar requisições de rede (ver `rv-portao-auth` §7).
+
+**Próximo passo — redesenho do "Início" (`/projeto`):** Felipe pediu, no papel de webdesigner
+UI/UX, pra trocar a tela inicial (`src/pages/ProjetoPage.tsx`) de lista vertical de checklist
+pra um hub com 4 cards de navegação no topo: **Datas** (→ `/admin`), **Site** (→ `/`), **Agora**
+(status atual do projeto, com o checklist de tarefas pendentes embutido dentro do próprio card —
+não numa lista solta embaixo) e **Informações** (→ `/projeto/informacoes`). Ainda não implementado
+nesta sessão — combinado que a Romana/quem continuar no notebook dela pega esse próximo passo.
+Skills a usar: `frontend-design` (sistema visual dos cards) + `web-design-guidelines` (revisão de
+acessibilidade/toque mobile depois de montado). Mensagem de handoff self-contained deixada pro
+Felipe colar no outro notebook — ver histórico da sessão "corais ADS2" se precisar do texto de novo.
