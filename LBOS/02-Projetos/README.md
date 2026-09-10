@@ -39,6 +39,7 @@ Para criar projeto novo: copiar `_TEMPLATE-PROJETO/` inteiro e preencher.
 | [[02-Projetos/sunbite/PROJETO\|Sunbite]] | ⬜ Fase 2 |
 | [[02-Projetos/evento-experimental/PROJETO\|Evento experimental com amigos]] | 💡 Ideia |
 | [[02-Projetos/visionvault/PROJETO\|VisionVault — painel do Company OS]] | ✅ v1 no ar |
+| [[02-Projetos/pousada-cajueiro/PROJETO\|Pousada Cajueiro]] | ⬜ Pré-reunião |
 
 ## Contexto compartilhado (§5.4)
 

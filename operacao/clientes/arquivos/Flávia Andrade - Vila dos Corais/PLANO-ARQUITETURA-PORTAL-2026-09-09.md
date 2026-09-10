@@ -274,19 +274,38 @@ telemetria, não de lógica — mas exige teste da calculadora antes do deploy (
 
 ---
 
-## 3. Decisões que dependem do Felipe antes da implementação
+## 3. Decisões — FECHADAS por Felipe em 10/09/2026
 
-| # | Decisão | Recomendação |
+| # | Decisão | Escolha |
 |---|---|---|
-| D-A | Rota do portal | `/projeto` |
-| D-B | Modelo de papéis | Opção A — enum `'gestor'` |
-| D-C | Prefixo das tabelas | `portal_` |
-| D-D | Conta do Felipe no Supabase da cliente | criar via SQL, papel `gestor` |
-| D-E | Como a Flávia chega no portal | link no WhatsApp + atalho na `/admin` |
-| D-F | PWA | só `manifest.json`, sem service worker |
-| D-G | Nome do portal para a cliente | "Seu Projeto" ou "Projeto Vila dos Corais" |
+| D-A | Rota do portal | **`/projeto`** |
+| D-B | Modelo de papéis | **Opção A** — novo valor `'gestor'` no enum `app_role` |
+| D-C | Prefixo das tabelas | **`portal_`** |
+| D-D | Conta do Felipe no Supabase da cliente | **criar agora**, papel `gestor`, senha provisória por script com troca obrigatória |
+| D-E | Como a Flávia chega no portal | **só link pelo WhatsApp** — sem atalho na `/admin`, `AdminHeader` não é alterada |
+| D-F | PWA | **só `manifest.json`**, sem service worker |
+| D-G | Nome do portal para a cliente | **"Acompanhamento do Projeto"** |
 
-Nada disso é irreversível, mas mudar depois de implementado custa retrabalho.
+Consequência de D-E: o item "link de volta na `AdminHeader`" sai da Fase 1. O portal
+continua oferecendo o botão "Gerenciar datas" apontando pra `/admin` (caminho de ida),
+mas a `/admin` não ganha caminho de volta — nenhum arquivo dela é tocado.
+
+## 3.1 Auditoria reconferida em 10/09/2026
+
+Os três ⚠️ da §1 foram reverificados antes de começar. Resultado:
+
+| Furo | Estado em 10/09 |
+|---|---|
+| Repo 5 commits atrás + `.env` no Supabase antigo | **RESOLVIDO** — `git pull` feito, `HEAD` em `254d309`, `.env` em `xcymehoyqppdgvrhytfj`, `.gitignore` reconciliado (`supabase/.temp/` + `.vercel`), `npm run build` verde. Branch `feat/portal-projeto` criada a partir de `254d309`. |
+| Sem modelo de dois papéis | **CONFIRMADO** — `app_role` só tem `admin`, `user_roles` tem 1 linha, Felipe sem conta. Resolvido pela migração da Fase 1. |
+| Sem evento de conversão | **CONFIRMADO** — só `gtag('config')` no `index.html`, zero eventos customizados. Continua pré-requisito da Fase 2. |
+
+Achado novo: a conta da Flávia entrou por último em **07/09/2026** e está com a marca de
+troca de senha **ativa** — o reset pendente registrado em 01/09 já foi executado. Item
+encerrado.
+
+Pendência de segurança herdada: a chave `service_role` exposta em 01/09 **continua sem
+rotacionar**. Não bloqueia o portal, mas segue aberta.
 
 ---
 

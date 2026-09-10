@@ -22,6 +22,7 @@ Ler *The Secret Teachings of All Ages* (Manly P. Hall, 1928, domínio público) 
 
 | # | Capítulo | Arquivo | Data |
 |---|---|---|---|
+| — | Introduction | [cap-00-introducao.md](cap-00-introducao.md) | 10/09/2026 |
 | 5 | The Life and Teachings of Thoth Hermes Trismegistus | [cap-05-thoth-hermes-trismegisto.md](cap-05-thoth-hermes-trismegisto.md) | 05/08/2026 |
 
 ## Regras deste projeto

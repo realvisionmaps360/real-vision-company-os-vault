@@ -276,3 +276,62 @@ cliente.
   prefixo de tabelas, conta do Felipe, forma de acesso da cliente, PWA e nome do portal.
 - Nada de código foi escrito nesta sessão. A implementação começa numa sessão Sonnet, pela
   Fase 0 (sincronizar o repo).
+
+### 10/09/2026 — Portal implementado: Fase 0 e Fase 1 no ar (branch `feat/portal-projeto`)
+
+**As 7 decisões foram fechadas** (ver [[PLANO-ARQUITETURA-PORTAL-2026-09-09]] §3): rota
+`/projeto`, papel `gestor` no enum, prefixo `portal_`, conta do Felipe criada agora,
+acesso **só por link de WhatsApp** (sem atalho na `/admin`, que não foi tocada),
+PWA só com `manifest.webmanifest`, e nome **"Acompanhamento do Projeto"**.
+
+**Os três furos da auditoria, reconferidos antes de codar:**
+
+| Furo | Desfecho |
+|---|---|
+| Repo 5 commits atrás, `.env` no Supabase do Lovable | Resolvido. `git pull`, HEAD em `254d309`, `.env` em `xcymehoyqppdgvrhytfj` |
+| Sem modelo de dois papéis | Resolvido. `app_role` ganhou `gestor`; hoje existem 2 contas: `administracao@clisam.com.br` (admin) e `realvisionmaps360@gmail.com` (gestor) |
+| Sem evento de conversão | Resolvido. `whatsapp_click` implementado e verificado disparando |
+
+Achado extra: a conta da Flávia entrou por último em 07/09 com a marca de troca de senha
+ativa — o reset pendente de 01/09 já tinha sido feito. Item encerrado.
+
+**Banco (5 migrações):** tabelas `portal_project`, `portal_info`, `portal_checklist`,
+`portal_weekly`, `portal_history`, todas com RLS. A cliente lê tudo do projeto mas só
+escreve no que é dela; a Real Vision publica a semana. A restrição de escrita fica num
+**gatilho no banco**, não no front — requisição montada na mão não passa por cima.
+Também entrou `UNIQUE(user_id)` em `user_roles`, que é o que torna o `LIMIT 1` do
+`get_current_user_role()` determinístico sem reescrever a função.
+
+**Front:** `/projeto` (Agora / Já feito / Depois) e `/projeto/informacoes`. O
+`ProtectedRoute` passou a receber a lista de papéis; `/admin` continua exatamente como era.
+O estado `'nao-admin'` virou `'sem-acesso'` — com dois papéis, o nome antigo reintroduzia
+a ambiguidade que causou o loop de 01/09.
+
+**Três defeitos encontrados e corrigidos durante o teste** (nenhum apareceria sem abrir
+o navegador):
+
+1. **Login do gestor ficava preso.** O `SecurePage` só navegava quando o papel era
+   `admin`; quem entrava como `gestor` autenticava e não ia a lugar nenhum. Lição
+   registrada na skill `rv-portao-auth` §5.1.
+2. **O gatilho de histórico quebrava todo UPDATE** em `portal_info`, `portal_project` e
+   `portal_weekly`. `CASE` dentro de atribuição plpgsql compila como uma query só, então
+   `NEW.titulo` era exigido de tabelas que não têm essa coluna. Na prática, a Flávia não
+   conseguiria responder o briefing. Trocado por `IF/ELSIF`.
+3. **"Desfazer confirmação" mentia:** devolvia o item para "a cliente avisou que enviou",
+   mesmo quando ela nunca tinha dito nada.
+
+**Textos aprovados pelo Felipe** com dois ajustes: fotos vão por **Google Drive**, não
+WhatsApp (qualidade original, sem compressão); e o acesso ao Perfil da Empresa já entra
+como resolvido, porque a Real Vision já gerencia pela conta `viladoscoraisalgodoes@gmail.com`.
+
+**Verificado no navegador (Claude in Chrome, com o Playwright MCP fora do ar):** login do
+gestor com **1 consulta de papel** (a assinatura do ping-pong seria dezenas); calculadora
+**intacta** — 15 a 18/09, 3 noites, R$ 4.500, com a mensagem do WhatsApp correta; evento
+`whatsapp_click` disparando com origem; persistência sobrevivendo a refresh.
+
+**Pendente antes de publicar:** teste como a Flávia (a metade do sistema que ela usa),
+teste em tela de celular (a ferramenta de redimensionar não funcionou nesta máquina —
+`innerWidth` continuou 1920), marcar `whatsapp_click` como conversão no GA4, e vincular
+Google Ads ao GA4. Nada foi para produção: tudo vive na branch `feat/portal-projeto`.
+
+**Herdado e ainda aberto:** a chave `service_role` exposta em 01/09 continua sem rotacionar.

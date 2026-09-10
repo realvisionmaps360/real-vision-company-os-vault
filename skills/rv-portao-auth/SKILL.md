@@ -156,6 +156,49 @@ conta fica marcada (ex: `must_change_password` no metadata). Regras:
 
 ---
 
+## 5.1 Mais de um papel: o portão não é o único lugar a mexer
+
+Quando um segundo papel entra em cena (ex: `gestor` da Real Vision além do `admin`
+do cliente), a tentação é estender só o `ProtectedRoute`. **Não basta.** A tela de
+login também decide destino, e ela costuma ter o papel antigo cravado:
+
+```typescript
+// Só o admin é levado a algum lugar. O gestor autentica e fica preso na tela.
+if (carregandoSessao || papel !== 'admin' || !user) return;
+navigate('/admin', { replace: true });
+```
+
+O sintoma engana: o cliente diz "volta pro login", mas na verdade **nunca saiu dele**
+— e nenhum erro aparece, porque não houve erro.
+
+Ao acrescentar um papel, varra **todos** os pontos que decidem destino:
+
+- [ ] a tela de login navega para o destino de **cada** papel
+- [ ] o portão aceita a lista de papéis daquela rota (não um papel fixo)
+- [ ] o desvio de senha provisória continua acontecendo num lugar só
+- [ ] rota que a pessoa tentou abrir é devolvida depois do login
+
+E a armadilha que fecha o círculo: **papel válido em área que não é dele nunca volta
+pro login.** Se o portão devolve pro login e o login manda de volta pra rota barrada,
+você reconstruiu o ping-pong da §2 — agora por papel, em vez de por tempo. Mande a
+pessoa para a área **dela**:
+
+```typescript
+if (!user || papel === 'sem-acesso') {
+  return <Navigate to="/secure" state={{ de: location.pathname }} replace />;
+}
+if (!papeis.includes(papel)) {
+  return <Navigate to={papel === 'gestor' ? '/projeto' : '/admin'} replace />;
+}
+```
+
+**Nome de estado também envelhece.** `'nao-admin'` era claro enquanto só existia
+`admin`. Com um segundo papel, ele passa a significar "não tem acesso" mas *lê* como
+"não é admin" — e um gestor não é admin. Renomeie para `'sem-acesso'`: ambiguidade de
+nome é a mesma doença do booleano da §1, só que mais devagar.
+
+---
+
 ## 6. Mensagens de erro honestas no login
 
 Mostrar "Email ou senha incorretos" para qualquer falha **esconde o problema real** e
@@ -206,6 +249,8 @@ Console limpo **não** quer dizer que está tudo bem. O ping-pong não gera nenh
 - [ ] Guarda de tempo na consulta; nenhum spinner sem prazo
 - [ ] Estado de erro tem tela própria com "Tentar de novo"
 - [ ] Senha provisória desvia num lugar só, sem salto extra
+- [ ] **Cada papel existente tem destino na tela de login** (§5.1)
+- [ ] **Papel válido em área alheia vai pra área dele, não pro login** (§5.1)
 - [ ] Mensagens de login distinguem os casos da §6
 - [ ] **Login completo testado de ponta a ponta com screenshot de cada etapa**
 - [ ] **Contagem de requisições conferida: 1 ou 2, não 200**
