@@ -222,6 +222,9 @@ Se a lista for óbvia demais (ex: só `realvision` + uma skill técnica trivial)
 ### Otimização de conversão
 `realvision` + `cro` + `marketing-seo`
 
+### Tráfego pago / Google Ads para cliente
+`realvision` + `rv-trafego-pago` + `marketing-seo` (tracking é pré-requisito) + `rv-relatorio` (proposta)
+
 ### YouTube / curso / vídeo
 `realvision` + `script-writer` + `rv-blogpost`
 

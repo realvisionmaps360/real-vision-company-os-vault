@@ -93,7 +93,7 @@
 | 20/08/2026 | Diagnóstico do erro no "Anunciar" + case study de mercado + registro pra reunião com Evelin | ~2h |
 
 ## Próximos marcos
-- Lançar R$700 manualmente no VisionFlow.
+- ~~Lançar R$700 manualmente no VisionFlow~~ — encerrado em 09/09/2026, ver entrada daquela data.
 - Confirmar itens finais do Perfil Google (post inicial, link de avaliação).
 - Preencher CNPJ/endereço/representante da Real Vision no contrato e gerar versão final.
 - Reunião 21/08/2026 com Evelin: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
@@ -228,3 +228,51 @@ direto à cliente enquanto o SMTP próprio não existe.
 `xcymehoyqppdgvrhytfj` foi colada no chat durante esta sessão. **Precisa ser
 rotacionada** (Project Settings → API Keys → gerar nova). Rotacionar não afeta o
 site, que usa só a chave pública `anon`.
+
+### 07/09/2026 — Tráfego pago contratado: proposta enviada e aceita direto com a Flávia
+
+O plano da reunião com a Evelin (`PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md`) ficou obsoleto: **Evelin saiu do processo**, Felipe negociou direto com a Flávia. Proposta comercial `PropostaViladosCorais-GoogleAds-2026-09-07.html` enviada e **aceita**.
+
+- Escopo: gestão de Google Ads, ciclo fechado de 3 meses, sem renovação automática, sem garantia de reservas.
+- Investimento à Real Vision: R$2.400 (R$600 implementação em duas parcelas de R$300 + R$600/mês × 3 de gestão). Verba de mídia (R$1.000–1.500/mês, referência) é paga direto ao Google, fora da Real Vision.
+- Flávia pagou a primeira parcela de R$300 via Pix em 07/09/2026, dando início ao trabalho — ver [[FICHA-CLIENTE]] → "Tráfego pago" para os próximos passos.
+
+### 09/09/2026 — Plano de execução documentado (sessão na nuvem, para executar localmente)
+
+Sessão de planejamento que levantou o estado real de três frentes e escreveu o handoff completo em [[PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09]].
+
+- **VisionFlow:** confirmado que o pagamento de R$300 existe só no vault — a tabela `finances` da cliente (`client_id 4cda08fe-2334-4d3d-bdc4-278cb399a64d`) tem apenas as 2 linhas antigas (R$1.200 + R$1.000). Os R$700 de julho também seguem sem lançar. `client_services` está vazia para ela.
+- **Gatilho de auditoria destravado:** a crença registrada em 17/08/2026 de que o lançamento via SQL era impossível está incompleta. A `skills/rv-visionflow/SKILL.md` (linhas 73-84) documenta a receita com `SET LOCAL request.jwt.claims` que resolve o erro `null value in column "user_email"`. Felipe autorizou usar esse caminho.
+- **Playbook replicável:** decidido expandir a skill `rv-trafego-pago` existente (já é documento vivo com notas por caso) em vez de criar skill nova. Conteúdo fica no Company OS; o nó LBOS só referencia, nunca copia.
+- **App de acompanhamento da cliente:** decidido usar Artifact com capability `db` — página de link único pra Flávia, com botões grandes, ajuda por bloco e formulário, sem depender de infraestrutura nova.
+- Nada executado nesta sessão além da documentação — a execução acontece numa sessão local seguindo o plano.
+- **R$700 de julho encerrados:** Felipe confirmou que já estavam embutidos no pagamento de R$1.000 de 10/03/2026. Não lançar linha nova no VisionFlow. As datas não reconciliam (cobrança em julho, pagamento em março) e ele decidiu deixar assim para acertar no futuro — deixa de ser pendência a partir de agora.
+
+### 09/09/2026 (parte 2) — O mini-app virou Portal do Projeto: PRD recebido e arquitetura definida
+
+Sessão de arquitetura (Opus). O mini-app previsto no [[PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09]]
+(Fase 3, Artifact com `db`) **foi substituído** por uma solução dentro do próprio ecossistema da
+cliente.
+
+- **Como chegou aqui:** a sessão "flavia42" gerou o briefing `miniappviladoscoraisspec.md`, que
+  foi levado a uma ferramenta externa e voltou como PRD v2.0, agora salvo em
+  [[PRD-PORTAL-PROJETO-2026-09-09]].
+- **Mudança de decisão:** app separado deixou de fazer sentido ao se confirmar que a cliente já
+  tem site, repositório, Supabase, login e área privada de datas. O portal passa a ser uma rota
+  privada dentro de `viladoscorais.com.br`, acompanhando os 3 meses do contrato de Google Ads.
+- **Auditoria técnica feita** (exigência do §37 do PRD) e registrada em
+  [[PLANO-ARQUITETURA-PORTAL-2026-09-09]]. Três achados que o PRD não previa:
+  1. o clone local está **5 commits atrás** do `origin/main` — o `.env` dele ainda aponta pro
+     Supabase antigo do Lovable (`zilfvhgeqniddxskpgdp`), corrigido no commit `b80ebf8` remoto;
+  2. **não existe modelo de dois papéis.** O enum `app_role` tem um único valor (`admin`),
+     `user_roles` tem uma linha só (a Flávia) e Felipe não tem conta no Supabase da cliente. A
+     matriz de permissões do §8 do PRD precisa ser construída, não reaproveitada;
+  3. **não existe evento de conversão.** O GA4 está instalado desde 14/08, mas sem evento de
+     clique no WhatsApp — a tela Campanha depende de criá-lo, o que é pré-requisito da Fase 2.
+- **Isolamento da calculadora resolvido por construção:** ela lê `house_settings` e
+  `date_settings` com chave anônima, sem autenticação. Como o portal usa tabelas novas com
+  prefixo `portal_`, o requisito do §11 é atendido pela arquitetura, não por disciplina.
+- **7 decisões (D-A a D-G)** aguardam o Felipe antes da implementação — rota, modelo de papéis,
+  prefixo de tabelas, conta do Felipe, forma de acesso da cliente, PWA e nome do portal.
+- Nada de código foi escrito nesta sessão. A implementação começa numa sessão Sonnet, pela
+  Fase 0 (sincronizar o repo).

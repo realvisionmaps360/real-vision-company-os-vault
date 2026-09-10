@@ -4,7 +4,7 @@ nome: Histórico
 status: ativo
 responsavel: "[[Felipe Garcia]]"
 criado_em: 2026-08-13
-atualizado_em: 2026-08-13
+atualizado_em: 2026-09-09
 pertence_a: ["[[02-Projetos/vila-dos-corais/PROJETO]]"]
 tags: [lbos/apoio]
 ---
@@ -93,3 +93,43 @@ Corrigido em: `operacao/projetos/_RV-Internos/sites/real-vision-site/src/data/pr
 
 ## Relacionados
 - Pertence a: [[02-Projetos/vila-dos-corais/PROJETO]]
+
+## 2026-09-09 — Do mini-app ao Portal do Projeto: PRD + auditoria + arquitetura
+
+Segunda sessão do dia. A primeira (registrada no Company OS) fechou o plano comercial e
+previa um mini-app em Artifact para a cliente responder o que a Real Vision precisa dela.
+Essa decisão **foi revertida** nesta sessão.
+
+**Por quê:** a sessão "flavia42" produziu um briefing que foi levado a uma ferramenta externa
+e voltou como PRD v2.0. No caminho ficou claro que a Vila dos Corais já tem site publicado,
+repositório próprio, Supabase, autenticação em uso pela Flávia, área privada de bloqueio de
+datas e uma calculadora pública de reservas. Construir um app paralelo fragmentaria ainda mais
+a experiência dela.
+
+**O que passa a ser:** o **Portal do Projeto** — uma rota privada dentro do próprio site da
+cliente, que acompanha os 3 meses do contrato de Google Ads e responde três perguntas ao longo
+do tempo: o que precisamos de você agora, o que está acontecendo com a campanha, e o que
+aconteceu nesses três meses.
+
+**Auditoria técnica concluída** (exigida pelo próprio PRD antes de qualquer código). Três
+achados que o documento não previa:
+
+1. o clone local do repositório está 5 commits atrás do remoto, e o `.env` dele ainda aponta
+   para o Supabase antigo do Lovable — sincronizar é a primeira ação da implementação;
+2. não existe modelo de dois papéis. O enum `app_role` tem um valor só, `user_roles` tem uma
+   linha só (a Flávia) e Felipe não tem conta no Supabase da cliente. A matriz de permissões
+   do PRD precisa ser construída;
+3. não existe evento de conversão no GA4 — a tela de acompanhamento da campanha depende de
+   criar o evento de clique no WhatsApp primeiro.
+
+**Achado bom:** a calculadora pública lê as tabelas de preço e data com chave anônima, sem
+autenticação. Como o portal usará tabelas novas com prefixo próprio, a exigência de que a
+calculadora nunca dependa do portal é atendida pela arquitetura, não por disciplina de quem
+escreve o código.
+
+**Fronteira LBOS respeitada:** os dois documentos (produto e arquitetura) vivem no Company OS,
+na pasta da cliente. Este nó só referencia — não copia conteúdo.
+
+**Estado ao fim da sessão:** nenhuma linha de código escrita. Sete decisões de arquitetura
+(rota, modelo de papéis, prefixo de tabelas, conta do Felipe, forma de acesso da cliente, PWA
+e nome do portal) aguardam o Felipe. A implementação começa numa sessão separada.
