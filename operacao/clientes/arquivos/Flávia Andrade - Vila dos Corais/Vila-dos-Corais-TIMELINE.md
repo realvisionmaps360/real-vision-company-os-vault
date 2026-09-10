@@ -429,3 +429,70 @@ nesta sessão — combinado que a Romana/quem continuar no notebook dela pega es
 Skills a usar: `frontend-design` (sistema visual dos cards) + `web-design-guidelines` (revisão de
 acessibilidade/toque mobile depois de montado). Mensagem de handoff self-contained deixada pro
 Felipe colar no outro notebook — ver histórico da sessão "corais ADS2" se precisar do texto de novo.
+
+### 10/09/2026 — Redesenho da tela "Início" do painel: hub de atalhos
+
+**Problema:** a aba Início (`/projeto`) era uma lista vertical de cartões de
+checklist, com um bloco "Agora" solto no topo e um rodapé fixo que só levava a
+"Gerenciar datas". Muita rolagem para pouca informação, e nenhuma noção de
+progresso — nem de etapa do contrato, nem de quanto do checklist já foi.
+
+**Decisão do Felipe:** virar um hub com quatro atalhos no topo (Datas, Site,
+Agora, Informações), com o checklist **embutido dentro do cartão "Agora"**, não
+solto numa lista embaixo. Depois da primeira versão, pediu mais cor e um toque
+de gamificação.
+
+**O que foi feito** (commit `af962e5`, direto na `main`):
+- `HubCard` (novo) — atalho com cor própria: Datas em verde-azulado, Site em
+  coral, Agora em dourado, Informações em verde. Selo com o número que importa
+  (3 pendências, 0/3 respondidas). Cartão inteiro é o alvo de toque, 116px.
+- `ChecklistLinha` (novo) — a tarefa vira uma linha compacta que abre no toque,
+  com marcador de estado (tracejado / relógio dourado / check verde). Mesmas
+  regras de estado do `ChecklistCard`, que segue em uso no "Já feito".
+- `TrilhaEtapas` (novo) — as cinco etapas do contrato como trilha, com a atual
+  destacada e as passadas em check verde.
+- Barra de progresso do checklist ("1 de 4 concluídas") dentro do cartão Agora.
+- `PortalLayout` — sai o rodapé fixo de "Gerenciar datas" (virou o cartão Datas).
+- `index.css` — token `--portal-gold` nos dois temas, para completar a paleta da
+  casa sem inventar cor de fora.
+
+**Skills do vault usadas:** `frontend-design` (paleta HSL, gradiente sutil,
+micro-animações, mobile-first) e `web-design-guidelines`, que manda buscar as
+regras da Vercel por WebFetch. A revisão contra elas rendeu quatro correções:
+`transition: all` trocado por transição específica, `prefers-reduced-motion`
+respeitado, selos marcados como decorativos para leitor de tela e números com
+largura fixa na barra de progresso.
+
+⚠️ Nenhuma das duas skills aparece em ListSkills/SearchSkills — existem só como
+arquivo em `real-vision-company-os-vault/skills/`, não estão registradas no
+Claude. Foram lidas direto do `SKILL.md`.
+
+**Verificação (sessão real logada, Playwright):**
+
+| O que | Resultado |
+|---|---|
+| Celular 390px — hub 2×2, cartão Agora, tarefa abrindo | ✅ print conferido |
+| Computador 1440px — quatro atalhos lado a lado, trilha com rótulos | ✅ print conferido |
+| Alvos de toque abaixo de 44px | ✅ zero (eram 3 no cabeçalho, corrigidos) |
+| Erros de console | ✅ zero |
+| `tsc --noEmit`, `eslint`, `npm run build` | ✅ os três limpos |
+
+**Defeito pego no teste de celular:** os cinco nomes das etapas se atropelavam em
+390px ("Campanha no ar" colidindo com "Acompanhamento semanal"). Os rótulos
+passam a aparecer só a partir de `sm` — no celular ficam os números, e o nome da
+etapa atual já está escrito logo acima da trilha.
+
+**De passagem:** os botões "Sair", "Início" e "Informações" do cabeçalho tinham
+36–38px de altura, abaixo do mínimo de toque. Subiram para 44px.
+
+**Não tocado:** calculadora de reservas do site público, `/admin` (só ganhou o
+link de entrada) e o esquema do Supabase — o trabalho foi só de frente.
+
+**Higiene do repositório:** o `.env` está comitado no repo. A chave é a
+`anon`/publishable, que por natureza já é pública no navegador, então não há
+exposição — mas o arquivo não deveria estar versionado. Fica como pendência de
+arrumação, avisada ao Felipe.
+
+**Observação:** o handoff desta sessão dizia que faltava a chave do Supabase e
+que existia um `.env.example`. Nenhum dos dois era verdade — o `.env` já vinha
+preenchido no clone e funcionava.
