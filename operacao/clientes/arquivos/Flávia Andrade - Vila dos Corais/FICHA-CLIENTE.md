@@ -9,7 +9,7 @@ servicos: [Site Institucional, Perfil Google Meu Negócio, Instagram]
 id: CLI-007
 tipo: cliente
 pertence_a: ["[[operacao/clientes/README]]"]
-atualizado_em: 2026-09-07
+atualizado_em: 2026-09-09
 ---
 
 # Flávia Andrade — Vila dos Corais
@@ -68,6 +68,24 @@ Plano de execução completo (VisionFlow, playbook replicável e app de acompanh
   5. Campanha no ar → cobrar os R$300 restantes da implementação.
 - Pré-requisito técnico da skill `rv-trafego-pago` (nunca pular): GA4 do site já instalado (`G-8P07EHPVYR`, 14/08/2026) — falta ainda vincular ao Google Ads da cliente e definir evento de conversão (ex: clique no WhatsApp da calculadora de reservas) depois que a Real Vision tiver acesso à conta dela.
 - Contexto técnico anterior (diagnóstico do botão "Anunciar", descontinuação da Campanha Inteligente, caminho recomendado via `ads.google.com` direto) segue válido em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]] — só a decisão de negócio e o interlocutor (Evelin → Flávia direto) mudaram.
+
+## Portal do Projeto — em arquitetura (09/09/2026)
+
+O "mini-app de acompanhamento" previsto no plano de execução **evoluiu**: virou o **Portal do
+Projeto**, uma rota privada dentro do próprio site da cliente (`viladoscorais.com.br`), usada por
+Flávia e Felipe durante os 3 meses do contrato de Google Ads. App separado foi descartado — ela já
+tem site, repositório, Supabase, login e área de datas.
+
+- Produto (o quê e por quê): [[PRD-PORTAL-PROJETO-2026-09-09]]
+- Arquitetura e fases (o como, para executar): [[PLANO-ARQUITETURA-PORTAL-2026-09-09]]
+
+**Estado:** auditoria técnica concluída, 7 decisões (D-A a D-G) aguardando o Felipe. Nenhuma linha
+de código escrita. A implementação começa pela Fase 0 — sincronizar o repo local, que está 5
+commits atrás do `origin/main`.
+
+**Regra fixada:** nenhum arquivo do fluxo público de reserva (calculadora, `house_settings`,
+`date_settings`) é alterado por este projeto — exceto o disparo do evento `whatsapp_click` na
+Fase 2, que é telemetria, não lógica.
 
 ## Visão de futuro
 Felipe quer manter isso registrado para retomar depois: o sistema (calculadora de reservas + WhatsApp + painel próprio) foi construído pensando em crescer — a cliente é dona de só uma casa (Casa Estrela do Mar) dentro do Condomínio Vila dos Corais, mas a estrutura permite no futuro replicar o mesmo sistema pros donos das outras casas do condomínio, cada um virando cliente Real Vision com o mesmo modelo integrado.

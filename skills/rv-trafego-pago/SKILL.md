@@ -132,6 +132,22 @@ Descoberto em 20/08/2026, no caso Vila dos Corais (`LBOS/02-Projetos/vila-dos-co
 
 Relacionado: em 20/08/2026 o Google também confirmou (multi-fonte: Search Engine Land, Search Engine Roundtable, blog de desenvolvedores do Google Ads) que desde 03/08/2026 a **API** do Google Ads não permite mais criar Campanha Inteligente nova (só editar existentes) — mas isso é documentado como restrição só da API, não da interface web. A causa do erro no "Anunciar" foi a estrutura de conta (acima), não essa descontinuação — mas o produto como um todo está sendo empurrado pro fim de vida em favor do Performance Max.
 
+## Estrutura de proposta que funcionou: implementação + gestão mensal, parcelada
+
+Caso Vila dos Corais (Flávia Andrade), fechado em 07/09/2026 — primeiro cliente pago desta skill. Estrutura de preço replicável:
+
+| Item | Valor |
+|---|---|
+| Implementação | metade no início, metade quando a campanha for ao ar (ex: R$300 + R$300) |
+| Gestão mensal | valor fixo × N meses, ciclo fechado (ex: R$600/mês × 3 meses) |
+| Verba de mídia | paga pelo cliente direto ao Google, fora do valor da Real Vision — nunca embutir nem cobrar comissão sobre ela |
+
+Ciclo fechado, sem renovação automática, sem garantia de número de conversões (reservas, leads etc.) — só de execução do trabalho combinado. Parcelar a implementação (não cobrar tudo de uma vez no início) reduz atrito na aprovação e ainda garante metade do valor antes de qualquer trabalho começar.
+
+## Abordar cliente que já ativou uma Campanha Inteligente sozinho
+
+Alguns clientes ativam sozinhos uma Campanha Inteligente (Smart Campaign) pelo Perfil da Empresa antes de qualquer contato — geralmente com verba baixa (R$200) e sem estratégia. É uma abertura natural de venda: o cliente já demonstrou intenção e orçamento, só falta profissionalizar. Ao identificar isso (via Perfil da Empresa do cliente ou relato dele), oferecer a migração pra Search Ads bem estruturado é mais fácil do que prospectar do zero — mas nunca pedir acesso à conta dele nem tocar a campanha existente antes de fechar formalmente (ver regra inegociável no topo desta skill). Caso de origem: Vila dos Corais, 18/08/2026 → fechado 07/09/2026.
+
 ## Conversão de "clique solto" não é ativo — considerar squeeze page antes do link final
 
 Quando o objetivo da campanha for social (entrar em comunidade, grupo, canal) em vez de comercial direto, um clique que só redireciona pra fora não vira nada que a Real Vision controle depois. Padrão aplicado em 22/07/2026 na campanha SLM x LLM: página/modal de captura (nome+email) antes de liberar o link final, gravando direto em `email_contatos` (Hermes) via Edge Function pública dedicada — nunca expondo credencial de escrita no bundle do site público. Detalhe técnico completo (arquitetura, Edge Function, teste local) em [`TIMELINE.md`](../../operacao/projetos/_RV-Internos/campanha-google-ads-slm-llm/TIMELINE.md), entrada de 22/07/2026.
