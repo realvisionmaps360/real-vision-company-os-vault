@@ -23,6 +23,24 @@ O raciocínio de `skills/rv-skill-scout/SKILL.md` roda **por padrão em toda tar
 - **Perguntas puramente conversacionais** (sem execução de tarefa) também não precisam do aviso.
 - Isso não substitui os demais gatilhos do `rv-skill-scout` (detecção de skill nova, sugestão de virar skill) — só torna o aviso inicial automático em vez de sob demanda.
 
+### Transparência de Skills e Plugins — Sempre Ativo
+
+O raciocínio de `skills/rv-skill-scout/SKILL.md` roda em toda tarefa nova,
+sem exceção — inclusive perguntas simples ou conversacionais. Felipe não
+precisa pedir "roda o skill scout", isso acontece sozinho, antes de
+qualquer leitura de arquivo, edição ou resposta.
+
+Sempre que uma skill ou plugin for carregado/ativado ou usado para tomar
+uma decisão na resposta, declarar por escrito, nesse formato:
+
+Skills ativas para essa tarefa: • nome — motivo breve
+
+- Se nenhuma skill/plugin for relevante para a tarefa, declarar isso
+  também: "Skills ativas para essa tarefa: nenhuma."
+- Se mais de uma for ativada, listar todas na ordem em que carregarem.
+- Essa linha aparece sempre, em toda resposta, sem exceção de
+  complexidade ou tipo de pergunta.
+
 ---
 
-> Versão: 3.0 — Julho 2026. Consolidado com `AGENTS.md` para eliminar duplicação entre Claude Code e Hermes (os dois liam versões ligeiramente diferentes das mesmas regras, o que causava desalinhamento). `AGENTS.md` agora é a fonte única — este arquivo só importa e complementa.
+> Versão: 3.1 — Setembro 2026. Consolidado com `AGENTS.md` para eliminar duplicação entre Claude Code e Hermes (os dois liam versões ligeiramente diferentes das mesmas regras, o que causava desalinhamento). `AGENTS.md` agora é a fonte única — este arquivo só importa e complementa.
