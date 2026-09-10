@@ -46,6 +46,11 @@ continuam valendo:
 - Evitar palavras de "dinheiro" no corpo (cai em Promoções)
 - Imagens de email precisam ser URL pública real — **nunca base64** (Gmail bloqueia data: URI)
 - CTA e texto do CTA sempre coerentes entre si (nunca linkar pra algo diferente do que o texto promete)
+- **Link do CTA — decisão 07/09/2026:** todo CTA de email aponta pra
+  `https://realvisionmaps.com/links-uteis/` (com UTMs), não mais direto pro post/portfólio/página
+  específica. É a página estilo linktree da Real Vision (WhatsApp direto, Site, Portfólio, Blog,
+  YouTube) — o texto do CTA continua prometendo o conteúdo específico (ex: "Ver os bastidores de
+  X"), só o destino mudou. Vale pra todo email novo a partir desta data.
 
 **Estrutura fixa de cada email:**
 1. **Assunto** — intriga ou promessa concreta (A/B sempre)

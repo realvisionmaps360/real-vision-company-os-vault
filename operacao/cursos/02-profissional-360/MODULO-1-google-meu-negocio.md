@@ -7,7 +7,8 @@
 > **Tom (VOZ.md):** consultor direto. "Faz isso, dá esse resultado." Sem "incrível", sem "sensacional".
 
 ---
-
+temos que deixar avisado que o curso todo em todo lugar o curtos é apenas audio narrado nao vai ter imagens nao pelomenos a primeira versao do curso. 
+outra coisa é o fato que a gente vai narrar exatamente pra ele como esta funcionando o aplicativo hoje porque essa nova metodologia de hoje onde as ferramentas e plataformas estao tendo updates constantes e mudando toda hora a disposicao dos botoes, colocando mais funcoes, e mudando outras, entao a ideia é esse ser um lugare onde voce vai ter acesso ao tutorial da forma atualizada e o feedback da nossa comunidade é importante sempre pra quando tiver defasado me avisar nos comentários e a gente atualizar.
 ## Aula 1.1 — Por que o Google Meu Negócio vale dinheiro
 
 **Duração:** ~5 min · **Tipo:** conceito (você falando + alguns prints de exemplo)
@@ -90,7 +91,9 @@
 - **As três formas de o Street View aparecer no perfil (detalhar aqui, aprofundar no Módulo 2):**
   1. **Linha azul** — a trilha que aparece andando pelo espaço no Street View. É feita a partir de um vídeo com imagens de GPS atrelado: você grava o vídeo andando pelo local, faz o upload, e o Google transforma isso na linha azul navegável.
   2. **Conjunto de imagens 360°** — várias fotos 360° enviadas juntas, com setinhas de navegação entre elas. É o formato principal que o curso ensina a montar no Pano2VR (Módulo 2).
+  **AQUI NESSA PARTE FALTOU FALAR QUE O STREET VIEW É PARA LUGARES ABERTOS E O TOUR VIRTUAL É O EQUIVALENTE SÓ QUE PARA  A PARTE DE DENTRO DOS ESTABELECIMENTOS, E O MODO DE FAZER MUDA**
   3. **Imagem 360° única** — o cliente final consegue fazer isso sozinho, sem sua ajuda: basta ter uma foto 360° e subir ela direto no perfil do Google pelo notebook ou PC. Vale mencionar essa opção pro cliente que quer algo simples e não vai contratar o tour completo.
+  **AQUI NESSA PARTE TEM QUE FALAR QUE O GOOGLEHOJE JÁ  ACEITA SÓ DE ARRASTAR UMA FOTO 360 ( EQUIRETANGULAR) PRA DENTRO DO ALBUM  **
 - Esse é o pulo do gato do Profissão 360°: o serviço de Google e o de tour 360° se reforçam. Um vende o outro.
 - Fecho: **"Ficha encontrável e com cara profissional. Agora a gente mantém ela viva — porque perfil parado o Google esquece. Próxima aula: posts."**
 
@@ -115,6 +118,8 @@
 
 **Resultado da aula:** o aluno sabe manter o perfil ativo e enxergar isso como receita mensal.
 
+**ESSA AULA TA SOLTA , NAO TEM CONTEUDO SUFICIENTE, ISSO DEVERIA TESTAR JUNTO COM OUTRA NAO SOZINHA**
+
 ---
 
 ## Aula 1.6 — Avaliações: pedir, responder e gerenciar
@@ -127,7 +132,7 @@
 **Roteiro (fala):**
 - Gancho: **"Antes de ligar pra um negócio, a pessoa lê as avaliações. Elas vendem ou afastam — e dá pra trabalhar isso de propósito."**
 - **Conseguir avaliações:** pegar o link curto de avaliação e mandar pro cliente na hora certa (logo depois de um bom atendimento). Mostrar onde gerar o link.
-- **Como você costuma vender essa parte:** otimização de perfil pode ser pontual ou embutida no preço das fotos — se o cliente quiser só as fotos, ele contrata à parte; se te passa as fotos, você já monta o perfil do zero, e isso inclui a rotina de avaliações completa.
+- **Como você costuma vender essa parte:** otimização de perfil pode ser pontual ou embutida no preço das fotos — se o cliente quiser só as fotos, ele contrata à parte; se te passa as fotos, você já monta o perfil do zero, e isso inclui a rotina de avaliações completa. **COMO É ? NOS NAO SOMOS FOTOGRAFOS DE ONDE VOCE TIROU ISSO, A GENTE NAO VENDE SO AS FOTOS A GENTE VENDE O PERFIL SE PRECISAR TIRA AS FOTOS A GENTE FAZ MAS O FOCO NAO E EELE TER SO A SFOTOS AS FOTOS SAO O MEIO PRATER O PERFIL ATUALIZADO **
 - **Responder TODAS** — as boas (agradece, cita o serviço naturalmente) e as ruins (educado, resolve, nunca briga). Você usa inteligência artificial pra gerar as respostas, mas sempre revisa o resultado final antes de publicar. Resposta também é lida por quem está decidindo — quem deu 5 estrelas se sente valorizado, e uma avaliação de 1 estrela sem resposta fica parecendo verdade incontestada.
 - **Instagram + Google, os dois são rede social de empresa:** pega o Instagram do cliente (ou pede pra ele postar) e cria um destaque salvo com o link de avaliação, pra facilitar quem quiser deixar uma. E lembrar que o Google Meu Negócio também é rede social — as postagens de lá têm imagem, texto curto e um link. Sempre deixar tanto o link de avaliação quanto o link do site e do WhatsApp nesses posts. É esse tipo de detalhe mínimo que diferencia a entrega da Real Vision.
 - Nunca comprar avaliação falsa — o Google derruba e pode suspender o perfil.
@@ -135,6 +140,8 @@
 - Fecho: **"Reputação no controle. Mas como você PROVA pro cliente que o seu trabalho está dando resultado? Com números. Próxima aula: as métricas."**
 
 **Resultado da aula:** o aluno tem uma rotina de avaliações pra entregar.
+
+
 
 ---
 
@@ -159,9 +166,9 @@
 
 ---
 
-## Aula 1.8 — Como empacotar e cobrar (R$300–800)
+## Aula 1.8 — Como empacotar e cobrar 
 
-**Duração:** ~5 min · **Tipo:** conceito (você falando + um print de proposta simples)
+**Duração:** ~5 min · **Tipo:** conceito (você falando + um print de proposta simples) **REMOVA TODAS ESSES FORMATOS DIFERENTES POIS VAI SER TEXTO E NARRACAO SOMENTE TUDO O CURSO**
 **Objetivo:** o aluno transformar o conhecimento do módulo num serviço com preço.
 
 **Na tela:** um modelo simples de oferta (dois pacotes lado a lado).
@@ -169,6 +176,7 @@
 **Roteiro (fala):**
 - Gancho: **"Tudo que você aprendeu até aqui não vale nada parado na sua cabeça. Agora a gente coloca preço."**
 - **Pacote 1 — Setup (valor único):** criar + otimizar + fotos + primeiros posts + integrar tour. Faixa **R$300 a R$800**, dependendo do tamanho do negócio.
+- ** **TEM UM DETALHE AQUI, O VALOR QUE EU COBRO*** **SOMENTE PRA CRIA CAO DO TOUR É 300 REAIS TO COLOCANDO ESSA FAIXA PQ SE VOCE FOR UM BOM VENDEDOR VOCE PODE VENDER PELO PRECO QUE VOCE QUISER, VOCE SO PRECISA SABER COMO CRIAR VALOR NO QUE VOCE TA VENDENDO, MAS EM RELACAO AO TOUR AGORA, EU TENHO COSTUME DE COBRAR DE UMA FORMA DIFERENTE SE A GENTE FOR FAZER UM TOUR VIRTUAL PRO CLIENTE**
 - **Pacote 2 — Gestão (mensal):** posts toda semana + avaliações + relatório mensal. Receita recorrente — é o que sustenta o seu mês.
 - **Como apresentar:** nunca venda "vou mexer no seu Google". Venda o resultado: **"mais gente vai te encontrar e te ligar."** O cliente paga por cliente novo, não por configuração.
 - Onde isso encaixa: GMN costuma ser o **primeiro serviço** que você vende — barato de entregar, rápido de mostrar resultado. Depois você sobe pro tour 360° e pro site.

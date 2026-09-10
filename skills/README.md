@@ -2,7 +2,7 @@
 
 Este diretório é a nossa biblioteca de **Skills**: guias e diretrizes que o Claude Code carrega automaticamente pra trabalhar do jeito certo em cada tipo de tarefa — desde contexto de cliente até padrões de código e design.
 
-70 skills organizadas por categoria abaixo. Se não souber qual usar, pergunte "qual skill eu uso pra X" ou peça pra rodar a `rv-skill-scout`, que sugere automaticamente.
+72 skills organizadas por categoria abaixo. Se não souber qual usar, pergunte "qual skill eu uso pra X" ou peça pra rodar a `rv-skill-scout`, que sugere automaticamente.
 
 ---
 
@@ -18,6 +18,7 @@ Carregam histórico, status e contexto de um cliente específico.
 | `coroa-azul` | Francisco / Fazenda Coroa Azul (cacau, Ilhéus-BA) |
 | `manahh` | O Maná'h / Fabiano (cerealista, SBC) |
 | `wood-art` | William / Wood Art (placas de madeira personalizadas) |
+| `vila-dos-corais` | Flávia Andrade / Vila dos Corais (Maraú-BA) — site com calculadora de reservas e painel próprio |
 
 ## Contexto & Base da Empresa
 Carregam antes de qualquer tarefa do negócio.
@@ -74,6 +75,7 @@ Carregam antes de qualquer tarefa do negócio.
 | `motion` | Animações em sites/apps |
 | `landing-page-design` | Layout de alta conversão |
 | `vercel-react` | Performance React + deploy Vercel |
+| `rv-portao-auth` | Login, rota protegida e checagem de admin em site com Supabase — e como consertar loop de login |
 | `favicon-setup` | Configuração de favicon |
 | `web-design-guidelines` | Auditoria de acessibilidade/UX |
 | `rv-entrega` | Checklist de pré-entrega de site |

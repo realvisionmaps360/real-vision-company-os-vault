@@ -18,6 +18,11 @@ Ver também: `supabase-postgres` (seção "Autenticação, Sessão e Resiliênci
 - Página/CRM que funcionava parou de carregar dados sem deploy recente correspondente
 - Felipe reporta "não abre", "tela branca", "não consigo entrar", "sumiu tudo"
 
+> **Atalho:** se o sintoma for especificamente "não consigo entrar no painel", "fica
+> carregando pra sempre depois do login" ou "entra e volta pro login", vá direto para
+> `rv-portao-auth`. Esse defeito é de código e não gera erro nenhum no console — o
+> runbook abaixo vai dar tudo verde e você vai perder tempo.
+
 ## Passo 1 — Descartar causa de código primeiro
 
 ```bash

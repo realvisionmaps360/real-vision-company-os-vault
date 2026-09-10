@@ -63,3 +63,48 @@
 - **Logo:** trocado o wordmark de texto "REAL VISION" pela imagem real do logo (`rv-logo-white.png` no topo da capa escura, `rv-logo-black.png` no rodapé claro), embutida via `finalize.ps1`. Vira padrão consolidado pra todo relatório novo daqui pra frente, não só deste cliente.
 - Novos arquivos gerados (versionados, sem sobrescrever os `_v2`-less por decisão do Felipe — sempre versionar com sufixo pra evitar cache do navegador): `Solarium_RelatorioMensal_02-08-26_DE_v2.html` (oficial) e `Solarium_RelatorioMensal_02-08-26_PT_v2.html` (interno). Os arquivos sem `_v2` continuam na pasta como histórico, não são mais referenciados.
 - Rascunho do Gmail (`r-7645223615636843058`) atualizado no lugar (mesmo id) apontando pro caminho do arquivo `_v2` — ainda não enviado, aguardando revisão do Felipe.
+
+## 09/09/2026 — Relatório atrasado (agosto+set. consolidado) + acesso GA4 documentado
+
+- **Atraso identificado pelo Felipe:** o relatório mensal deveria ter saído dia 01/09, ficou 9 dias atrasado. Gerado agora cobrindo o período consolidado 01/08–09/09/2026 (40 dias, não é mês-calendário puro) — isso está sinalizado explicitamente no relatório (seção 01), não escondido do Gabriel.
+- **Acesso ao GA4 resolvido e documentado:** só a conta Google `realvisionmaps360@gmail.com` enxerga a propriedade do Solarium (`Solarium Aarau Website`, numérica `538376459`). As contas `smarthomefg@gmail.com` e `felipegarciajericoacoara@gmail.com` (também logadas no Chrome do Felipe) dão "Permissões ausentes". Registrado em [[FICHA-CLIENTE]] pra não precisar testar todas de novo.
+- Dados do período (01/08–09/09): 175 sessões, 147 usuários (139 novos), 364 page views, engajamento 37,1%, duração média 18s por sessão. Desktop 58,2% / Mobile 41,8%. Direct 46,3% + Organic Search 43,4% = quase 90% do tráfego.
+- Gerados `Solarium_RelatorioMensal_09-09-26_DE.html` (oficial, pro Gabriel) e `Solarium_RelatorioMensal_09-09-26_PT.html` (interno, conferência do Felipe) — skill `rv-relatorio`, mesmo "estilo leve" do relatório de agosto.
+- **Rascunho criado no Gmail, mas endereçado ao próprio e-mail do Felipe (`realvisionmaps360@gmail.com`), não ao Gabriel** — pedido explícito do Felipe pra revisar antes de mandar de verdade. O e-mail referencia o caminho do arquivo DE (sem anexar automaticamente, mesma regra de 11/07 — Felipe anexa manualmente). Depois da aprovação, recriar o rascunho de verdade endereçado a `solariumaarau@gmail.com`.
+- **Pendência:** Felipe revisar o teste, aprovar os números (engajamento caiu de 45,9% pra 37,1% — mencionado no relatório PT como algo a observar, não escondido), e então pedir a versão final pro Gabriel.
+
+## 09/09/2026 (mesmo dia) — Relatório enriquecido com PostHog + Search Console + skill nova
+
+- **Contexto:** Felipe confirmou que o Gabriel está sentindo falta de clientes e topou fazer tráfego pago no site (já entregue), mas está sem orçamento agora. Decisão: usar o relatório deste mês pra "preparar o terreno" com dados reais, sem propor preço/escopo — Felipe vai trabalhar a landing/estrutura em paralelo, conversa de verdade fica pra depois.
+- **Skill criada:** `rv-analytics-cliente` — documenta onde cada fonte de dado mora (GA4/GSC via Chrome, PostHog via MCP direto, Clarity via Chrome) e como cruzar pro relatório mensal. Evita redescobrir o processo todo mês.
+- **PostHog puxado via MCP** (projeto "Solarium Aarau", id `539125`, dentro da org Real Vision): 18 gravações de sessão no período 01/08–09/09, destaque pra página `/wie-funktioniert-es` (maior engajamento, activity_score 87 e 411s numa sessão). Heatmap da home: 50% dos cliques abaixo da dobra, scroll depth mostra só 1 de 10 sessões chegando ao fim da página. 1 sessão trouxe `fbclid` na URL (clique vindo de link/anúncio do Facebook, sem campanha formal ativa).
+  - **Retenção importante:** replay expira em 30 dias, heatmap em 90 — anotado na skill nova pra não perder dado de novo.
+- **Search Console puxado via Chrome**, conta `smarthomefg@gmail.com` (diferente da conta do GA4!), período 01/08–08/09 (GSC tem ~1 dia de defasagem): 88 cliques, 2.970 impressões, CTR 3%, posição média 21,8. Achado principal: termo genérico **"solarium"** (sem cidade) teve 425 impressões — o maior volume — mas só 1 clique, posição 40,3. Termo de marca "solarium aarau" concentra 50 dos 88 cliques, posição 3,8.
+- **Relatórios DE e PT reconstruídos** (`Solarium_RelatorioMensal_09-09-26_DE.html` e `_PT.html`, sobrescritos no lugar) com 3 seções novas: comportamento real (PostHog, com gráfico de scroll depth em CSS puro) e busca no Google (GSC, com callout de oportunidade "solarium genérico = demanda sem captura"). Layout também ganhou stat tiles (números grandes em grade) e barras de progresso pra mobile/desktop, em vez de só tabela — mais visual, pedido do Felipe.
+- **Testado visualmente** via servidor local + Chrome antes de reenviar (gráfico de scroll quebrou na primeira versão — `.sc-col` sem altura fixa fazia a barra de `height:%` colapsar pra 0 — corrigido com `height:90px` no container).
+- **Rascunho de teste no Gmail atualizado** (mesmo id `r8290568861444306601`), agora mencionando as 3 fontes e o gancho de tráfego pago no corpo do email (factual, sem preço/escopo).
+- **Pendência do Felipe:** revisar o rascunho de teste, aprovar, e então pedir a versão final endereçada a `solariumaarau@gmail.com`.
+
+## 09/09/2026 (correção grave) — Documento tinha conteúdo interno vazando pro cliente
+
+- **Erro identificado pelo Felipe:** a versão PT do relatório estava sendo tratada como "documento interno" quando na verdade devia ser só a versão em português do mesmo relatório que vai pro Gabriel. Continha: nome de projeto/ID técnico do PostHog ("projeto Solarium Aarau, id 539125"), nome das ferramentas (GA4/Search Console/PostHog) repetido em cada seção, e o pior — o parágrafo de fechamento falava *sobre* o Gabriel em vez de falar *com* ele, e citava "Pendência do Felipe" dentro do documento que seria enviado ao cliente.
+- **Correção:** os dois arquivos (`_DE.html` e `_PT.html`) foram substituídos por **um único arquivo bilíngue** `Solarium_RelatorioMensal_09-09-26.html`, com botão DE/PT no topo (JS puro, alterna blocos `data-lang`). Todo o texto foi reescrito do zero, sempre na 2ª pessoa falando com o Gabriel, sem nenhum termo técnico/interno. Nome das 3 ferramentas citado só uma vez, na introdução. Nome do site na capa virou link clicável pro `aarau-solarium.ch`.
+- **Explicação do achado "solarium genérico" reescrita** no estilo simples que o Felipe validou (exemplo concreto: "quando alguém busca só 'solarium', sem 'Aarau'...").
+- **Tabela de oportunidades reordenada**: 1º item agora é "Campanha paga no Google direcionada a termos como 'solarium'" (Alto) — item "Bônus como argumento de 1ª visita" removido a pedido do Felipe.
+- **Testado visualmente** (toggle DE/PT clicado e conferido via `get_page_text`) antes de reenviar.
+- **`_DE.html` e `_PT.html` antigos não foram apagados** (regra do Company OS) — ficam na pasta como histórico, não são mais referenciados. O arquivo válido a partir de agora é o único sem sufixo de idioma.
+- **Padrão salvo na skill `rv-relatorio`**: nunca citar nome de ferramenta/projeto/ID técnico no documento do cliente, documento sempre fala com o cliente (nunca sobre ele), relatório multilíngue vira 1 arquivo com botão de idioma, nome do site sempre linkado na capa.
+- Rascunho de teste no Gmail atualizado (mesmo id `r8290568861444306601`) apontando pro arquivo único.
+- **Pendência do Felipe:** revisar este novo rascunho e aprovar o envio real.
+
+## 09/09/2026 (ajuste fino de design) — Capa + card final
+
+- Felipe pediu 3 ajustes visuais: (1) manter o kicker "Solarium & Collarium · Aarau" na capa junto do botão DE/PT (tinha sido removido sem querer ao adicionar o toggle), (2) título "Wie lief der Monat" / "Como foi o mês" numa linha só, sem quebra, (3) seção final ("O que isso significa pra você") virar um card com gradiente dourado suave, elegante, discreto.
+- Implementado: `.cover-top-right` agrupa kicker + toggle alinhados à direita da capa; `cover-h1` com `white-space:nowrap` e `clamp` reduzido pra caber numa linha; `.gold-card` (gradiente `#fffaf0→#fdf0d5→#fffaf0`, sombra suave) envolvendo o parágrafo final nos dois idiomas.
+- Conferido visualmente antes de reenviar.
+
+## 09/09/2026 (envio) — Rascunho de verdade criado, endereçado ao Gabriel
+
+- Felipe aprovou o texto em português (com pequenos ajustes de tom — "tudo bem mano?", emoji, "nosso plano de marketing pago dos solariums no futuro") e pediu a versão em alemão.
+- Rascunho no Gmail (mesmo id `r8290568861444306601`) atualizado: agora endereçado a `solariumaarau@gmail.com` (não mais ao próprio Felipe), assunto e corpo em alemão como texto principal, resumo em português (aprovado pelo Felipe) logo abaixo pra referência. Anexo ainda referenciado por caminho — Felipe anexa manualmente antes de enviar.
+- **Pendência do Felipe:** anexar `Solarium_RelatorioMensal_09-09-26.html` e enviar de verdade pro Gabriel.

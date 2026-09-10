@@ -17,8 +17,8 @@ Só referências. Nenhum documento é armazenado aqui — tudo vive no Company O
 
 - Pasta do cliente (propostas, relatórios, ativos): `operacao/clientes/arquivos/Flávia Andrade - Vila dos Corais/`
 - Repositório do site: `github.com/realvisionmaps360/viladoscorais`
-- Proposta comercial: `Porposta Comercial Flávia Andrade 2 (1).pdf` (na pasta do cliente)
-- Relatório de situação (16/06/2026): `VilaDosCorais_Situacao_16-06-26.pdf` e `flavia-relatorio.html` (na pasta do cliente)
+- Proposta comercial: `Proposta-Comercial-Flavia-Andrade-2.pdf` (na pasta do cliente)
+- Relatório de situação (16/06/2026): `VilaDosCorais_Situacao_2026-06-16.pdf` e `flavia-relatorio.html` (na pasta do cliente)
 
 ## Relacionados
 - Pertence a: [[02-Projetos/vila-dos-corais/PROJETO]]
