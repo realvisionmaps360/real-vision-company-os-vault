@@ -12,7 +12,7 @@
 | 001 | Primeira comunicação | — | — | disparada (antes do registro estruturado) |
 | 002 | Seu site é o maior ativo digital | 20/07/2026 | 31 | disparada · **modelo visual de referência** |
 | 003 | — | — | — | disparada (antes do registro estruturado) |
-| 004 | Ciclo 1 · Fase 1 — Semear Autoridade | 27/08 a 11/09/2026 | 25-47 | **emails 1, 2 e 3 disparados**, 4 com teste visual pronto, aguardando aprovação |
+| 004 | Ciclo 1 · Fase 1 — Semear Autoridade | 27/08 a 11/09/2026 | 25-47 | **completa — emails 1, 2, 3 e 4 disparados** |
 | 005 | Ciclo 1 · Fase 2 — Transformação | previsto 16/09 | — | ⬜ não escrita |
 | 006 | Ciclo 1 · Fase 3 — Posse e oferta | — | — | ⬜ não escrita |
 
@@ -38,7 +38,7 @@ webhook do Resend só passou a existir em 20/08/2026 e não preenche retroativo.
 | 1 | `004-01-google-parou-de-mandar-cliente.html` | Seu site foi lido hoje, só não por gente | `site-maior-ativo-era-ia` | **27/08 ✅ disparado** |
 | 2 | `004-02-o-que-a-gente-ve-no-seu-gmn.html` | 3 coisas que matam seu Google Meu Negócio | `google-meu-negocio-guia-completo` | **01/09 ✅ disparado** |
 | 3 | `004-03-tour-360-eventos.html` | Tour virtual 360° aplicado a eventos | portfólio + blog post Universo Paralello 18° | **07/09 ✅ disparado** (47 enviados) |
-| 4 | `004-04-solarium-aarau.html` | Do Brasil à Suíça | portfólio + post Solarium Aarau | Previsto 11/09. Teste visual ✅ 07/09, aguardando aprovação |
+| 4 | `004-04-solarium-aarau.html` | Do Brasil à Suíça | portfólio + post Solarium Aarau | **11/09 ✅ disparado (47 enviados)** |
 
 ### Disparo do email 1 — 27/08/2026, 11h32 UTC
 
@@ -169,6 +169,29 @@ página de links genérica.
   blog, link da assinatura pra `/links-uteis/`, sem P.S.
 - **E4 segue não disparado pra lista real.** Aguardando o Felipe conferir este teste e aprovar.
 
+### Disparo do email 4 pra lista real — 11/09/2026, ~12h10 UTC
+
+- **47 enviados, 0 pulados, 0 erros.** Dry-run rodado antes (47/47 `seria_enviado`), depois disparo
+  real via `hermes-blast-004-04`, chamada diretamente via `pg_net` (extensão de HTTP assíncrono do
+  Postgres) porque a sessão que disparou não tinha egress HTTP direto liberado para o domínio do
+  Supabase — só a chave anon pública saiu, nenhum segredo exposto.
+- **Duas rotinas agendadas (Local e Nuvem) foram criadas antes pra esse disparo, ambas pro mesmo
+  horário (hoje, 9h BRT) — decisão foi manter só a Nuvem.** A rotina Local foi apagada. A rotina
+  Nuvem, porém, **sumiu da lista sem disparar** antes das 9h (motivo não identificado — pode ter
+  sido apagada sem querer durante a edição do texto, ou falha da plataforma, ainda em research
+  preview). Como o horário programado já tinha passado, o disparo foi feito manualmente nesta
+  sessão em vez de esperar a rotina ser recriada.
+- Romana Loznjakovic confirmada na lista (`status='ativo'`) e recebeu (`resend_id
+  027bde4b-2404-4f47-b181-5ea568dce033`) — checagem feita antes do disparo porque ela relatou não
+  ter recebido os emails anteriores. O banco mostra que ela recebeu e abriu E1, E2 e E3
+  (`email_envios`), o que contradiz o relato dela — hipótese mais provável é abertura de imagem
+  pré-carregada pelo Gmail em spam/promoções sem leitura real; vale confirmar com ela onde os
+  emails anteriores caíram.
+- Nova skill criada por causa desse episódio: `skills/rv-rotinas-claude/SKILL.md` — cobre Local vs
+  Nuvem, regra de "uma tarefa = uma rotina", e template de instruções com checagem de duplicidade
+  (Passo 0) antes de disparar.
+- **Total acumulado do email 4: 47 enviados.**
+
 ---
 
 ## Incidente de 21/08/2026 — template errado
@@ -210,3 +233,4 @@ com chave fraca embutida e acesso ao `RESEND_API_KEY`. Desativada em 27/08/2026.
 | 2026-09-07 | Catch-up do E1 pros 24 contatos captados via WhatsApp | Felipe pediu pra fechar a lacuna sem duplicar nem esquecer ninguém; corrigido também status `confirmado` → `ativo` de 6 contatos que ficariam fora de qualquer disparo futuro |
 | 2026-09-07 | E3 disparado pra lista real (47) | Felipe decidiu pular o catch-up do E2 e ir direto pro E3 com a lista toda; Flávia Andrade (Vila dos Corais) achada e corrigida no meio do caminho (confirmação de email perdida desde 02/09 por ponto cego de busca por domínio) |
 | 2026-09-09 | Painel corrigido (E3 estava "agendado" mas já tinha sido disparado; pendência do P.S. do E4 seguia aberta já resolvida); novo teste do E4 reenviado pro email de teste | Felipe pediu documento vivo pro LBOS + aprovação do E4; achada divergência entre painel e estado real ao criar [[../../../LBOS/02-Projetos/prospeccao-conecta-negocios/PROJETO|PRJ-2026-008]] |
+| 2026-09-11 | E4 disparado pra lista real (47), campanha 004 completa | Rotina agendada (Nuvem) sumiu antes de disparar às 9h; disparo feito manualmente via `pg_net`. Romana confirmada na lista após relatar não ter recebido os anteriores — banco mostra que recebeu e abriu E1/E2/E3, contradição não resolvida |
