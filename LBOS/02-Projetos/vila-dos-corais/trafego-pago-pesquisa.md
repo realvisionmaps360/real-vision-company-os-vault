@@ -54,11 +54,11 @@ Segundo reportagem do Search Engine Roundtable (checar fonte oficial do Google a
 
 ## 6. Atualização — sessão "corais 2" (20/08/2026)
 
-### 6.1 Fato novo: Flávia delegou pra Evelin
-Felipe avisou que a Flávia delegou o assunto tráfego pago pra uma pessoa da equipe dela, **Evelin**, que vai receber uma "aula" sobre o tema. Reunião marcada pra **21/08/2026**, onde Felipe também decide, junto com o que foi levantado aqui: (1) se a Real Vision pega esse trabalho como serviço formal, e (2) quanto cobrar. Nenhuma das duas coisas foi decidida ainda — fica pra essa reunião/próxima sessão.
+### 6.1 Fato novo: Flávia delegou pra ponte operacional da cliente
+Felipe avisou que a Flávia delegou o assunto tráfego pago pra **pessoa de contato da cliente**, da equipe dela, que vai receber uma "aula" sobre o tema. Reunião marcada pra **21/08/2026**, onde Felipe também decide, junto com o que foi levantado aqui: (1) se a Real Vision pega esse trabalho como serviço formal, e (2) quanto cobrar. Nenhuma das duas coisas foi decidida ainda — fica pra essa reunião/próxima sessão.
 
 ### 6.2 Diagnóstico técnico do erro no botão "Anunciar" — confirmado ao vivo
-Felipe tentou repetidamente abrir a Campanha Inteligente pelo botão "Anunciar" do Perfil da Empresa (testando com e-mails diferentes) e sempre batia num erro 404 em `ads.google.com/aw/campaigns/new/express`. Pra treinar antes de ensinar a Evelin, reproduzimos o fluxo ao vivo (via Claude in Chrome, no navegador real do Felipe) — **usando a própria conta "Real Vision 360" como sandbox, não a da cliente**.
+Felipe tentou repetidamente abrir a Campanha Inteligente pelo botão "Anunciar" do Perfil da Empresa (testando com e-mails diferentes) e sempre batia num erro 404 em `ads.google.com/aw/campaigns/new/express`. Pra treinar antes de ensinar a pessoa de contato da cliente, reproduzimos o fluxo ao vivo (via Claude in Chrome, no navegador real do Felipe) — **usando a própria conta "Real Vision 360" como sandbox, não a da cliente**.
 
 Causa raiz confirmada: a tela de contas que o "Anunciar" oferece só mostra contas de primeiro nível — no caso da Real Vision, a conta `156-292-4356` (cancelada, cobrança pendente) e a MCC `359-167-3566` ("Administrador"). Uma MCC nunca hospeda campanha — só suas contas filhas hospedam. A conta filha real (`414-120-1211`, ativa) só aparece se você entrar direto em `ads.google.com`, entrar na MCC, e usar o seletor de conta **interno** do Google Ads pra trocar pra ela — coisa que o atalho "Anunciar" nunca oferece como opção. Testamos o fluxo clássico ("Nova campanha" de dentro da conta `414-120-1211`) e funcionou sem erro, chegando normalmente na tela "Qual é o objetivo da sua campanha?".
 
@@ -73,12 +73,12 @@ Case study completo rodado nessa sessão sobre o que há de mais recente sobre C
 - **Sinal de que o problema é mais amplo que a Real Vision:** encontramos reclamações de outros usuários em fóruns oficiais do Google, em 2026, com o mesmo tipo de erro tentando anunciar pelo Perfil da Empresa (threads em PT-BR e ES). O próprio Google mantém uma página inteira só de "Problemas comuns ao vincular o Google Ads ao Perfil da Empresa" — sinal de que esse encaixe é historicamente instável.
 
 ### 6.4 Veredito
-O "Anunciar" do Perfil da Empresa é hoje um produto em fim de vida, mal encaixado em estrutura de MCC, sem suporte confiável documentado — não vale a pena ensinar a Evelin a depender dele. Caminho recomendado, já validado ao vivo: entrar direto em `ads.google.com`, escolher a conta filha certa, e criar campanha de Pesquisa pelo fluxo clássico — igual ao que a Real Vision já faz pros outros clientes (skill `rv-trafego-pago`).
+O "Anunciar" do Perfil da Empresa é hoje um produto em fim de vida, mal encaixado em estrutura de MCC, sem suporte confiável documentado — não vale a pena ensinar a pessoa de contato da cliente a depender dele. Caminho recomendado, já validado ao vivo: entrar direto em `ads.google.com`, escolher a conta filha certa, e criar campanha de Pesquisa pelo fluxo clássico — igual ao que a Real Vision já faz pros outros clientes (skill `rv-trafego-pago`).
 
 ### 6.5 Pendente pra próxima sessão
 - Decisão de negócio: pegar a gestão de tráfego pago da Vila dos Corais como serviço formal (preço/mensalidade à parte) ou não.
 - Se sim, quanto cobrar.
-- Montar a pauta real da reunião com a Evelin a partir do que está registrado aqui.
+- Montar a pauta real da reunião com a pessoa de contato da cliente a partir do que está registrado aqui.
 - As 4 perguntas em aberto da seção 5 continuam todas sem resposta.
 
 ## Fontes

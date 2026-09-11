@@ -26,8 +26,8 @@ versionada no git porque o vault só rastreia `.md`).
 Ciclo fechado de 3 meses, sem renovação automática, sem comissão sobre a verba, sem garantia
 de número de reservas.
 
-**Mudança de interlocutor:** o deck `PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md` está obsoleto.
-Evelin saiu do processo — Felipe fechou direto com a Flávia.
+**Mudança de interlocutor:** o deck `PLANO-DECK-REUNIAO-CONTATO-CLIENTE-2026-08-31.md` está obsoleto.
+A pessoa de contato da cliente saiu do processo — Felipe fechou direto com a Flávia.
 
 ### Os três problemas que este plano resolve
 
@@ -74,7 +74,7 @@ operacao/clientes/arquivos/Flávia Andrade - Vila dos Corais/
 ├── FICHA-CLIENTE.md                            ← hub da pasta
 ├── Vila-dos-Corais-TIMELINE.md
 ├── PLANO-EXECUCAO-TRAFEGO-PAGO-2026-09-09.md   ← este documento
-└── PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md     ← obsoleto, manter (nunca apagar nota)
+└── PLANO-DECK-REUNIAO-CONTATO-CLIENTE-2026-08-31.md     ← obsoleto, manter (nunca apagar nota)
 ```
 
 ### O que existe só localmente (não versionado — o `.gitignore` do vault libera só `.md`)
@@ -105,7 +105,7 @@ não foram encontrados no vault:
   intencional — os binários e entregáveis vivem no PC/Drive, o vault carrega o conhecimento.
 - **Regra de wikilink:** todo `.md` novo nesta pasta linka pro hub ([[FICHA-CLIENTE]]) e o hub
   linka de volta. Já aplicado neste documento.
-- **Nunca apagar** nada da pasta, nem o deck obsoleto da Evelin — regra de ouro do Company OS.
+- **Nunca apagar** nada da pasta, nem o deck obsoleto da pessoa de contato da cliente — regra de ouro do Company OS.
 
 ### `PROJETO.md` — DECIDIDO: não mexer
 
@@ -369,7 +369,7 @@ evento de conversão (clique no WhatsApp da calculadora de reservas) ainda não.
 
 - [[FICHA-CLIENTE]] — ficha da cliente, seção "Tráfego pago"
 - [[Vila-dos-Corais-TIMELINE]] — linha do tempo do projeto
-- [[PLANO-DECK-REUNIAO-EVELIN-2026-08-31]] — **obsoleto**, Evelin saiu do processo
+- [[PLANO-DECK-REUNIAO-CONTATO-CLIENTE-2026-08-31]] — **obsoleto**, a pessoa de contato da cliente saiu do processo
 - `LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa.md` — diagnóstico técnico do produto
 - `skills/rv-trafego-pago/SKILL.md` — onde o playbook vai crescer
 - `skills/rv-visionflow/SKILL.md` — receita do JWT simulado (linhas 73-84)

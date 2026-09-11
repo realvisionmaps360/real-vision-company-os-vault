@@ -110,7 +110,7 @@ Conta administrativa: `administracao@clisam.com.br`.
 - **R$700** confirmados como pagos por Felipe, mas **não lançados no VisionFlow** (inserção por SQL é bloqueada pelo gatilho de auditoria — tem que ser na interface).
 - **Perfil Google Meu Negócio** — VisionFlow ainda mostra "em_andamento"; faltam post inicial, link de avaliação e categorias.
 - **Contrato** — rascunho em `ViladosCorais_Contrato_17-08-26.html`, faltam CNPJ/endereço/representante da Real Vision e o número do contrato.
-- **Tráfego pago** — a cliente ativou sozinha uma Campanha Inteligente de R$200 e delegou o assunto para **Evelin**, da equipe dela. Decisão de negócio (pegar o serviço e por quanto) ainda em aberto. Nenhum acesso à conta de anúncios dela foi pedido até hoje.
+- **Tráfego pago** — a cliente ativou sozinha uma Campanha Inteligente de R$200 e delegou o assunto para **a pessoa de contato da cliente**, da equipe dela. Decisão de negócio (pegar o serviço e por quanto) ainda em aberto. Nenhum acesso à conta de anúncios dela foi pedido até hoje.
 
 ---
 

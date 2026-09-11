@@ -50,7 +50,7 @@ Pacote confirmado por Felipe em 17/08/2026 (primeira etapa da proposta, os demai
 - Portfólio da Real Vision: Felipe decidiu em 17/08/2026 **não pedir autorização prévia da cliente** — os Termos e Condições Gerais (cláusula 8.4) já cobrem isso ("Real Vision poderá exibir projetos concluídos... salvo proibição expressa por escrito do Cliente"). Regra fixada: **nunca expor o nome pessoal da cliente** em material público (portfólio, case, redes) — usar só "Vila dos Corais" / "a proprietária". **Case publicado em 19/08/2026** — item concluído.
 
 ## Tráfego pago — CONTRATADO (atualizado 07/09/2026)
-**Correção registrada em 07/09/2026:** o plano descrito no deck `PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md` (reunião pensada pra Evelin) ficou obsoleto — **Evelin saiu do processo**, Felipe fechou direto com a Flávia.
+**Correção registrada em 07/09/2026:** o plano descrito no deck `PLANO-DECK-REUNIAO-CONTATO-CLIENTE-2026-08-31.md` (reunião pensada pra pessoa de contato da cliente) ficou obsoleto — **a pessoa de contato da cliente saiu do processo**, Felipe fechou direto com a Flávia.
 
 Proposta comercial enviada e **aceita** por Flávia: `PropostaViladosCorais-GoogleAds-2026-09-07.html` (salva nesta pasta).
 
@@ -67,7 +67,7 @@ Plano de execução completo (VisionFlow, playbook replicável e app de acompanh
   4. Reunião estratégica com a Flávia — alinhar público prioritário, verba de mídia e datas de prioridade antes de ir ao ar.
   5. Campanha no ar → cobrar os R$300 restantes da implementação.
 - Pré-requisito técnico da skill `rv-trafego-pago` (nunca pular): GA4 do site já instalado (`G-8P07EHPVYR`, 14/08/2026) — falta ainda vincular ao Google Ads da cliente e definir evento de conversão (ex: clique no WhatsApp da calculadora de reservas) depois que a Real Vision tiver acesso à conta dela.
-- Contexto técnico anterior (diagnóstico do botão "Anunciar", descontinuação da Campanha Inteligente, caminho recomendado via `ads.google.com` direto) segue válido em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]] — só a decisão de negócio e o interlocutor (Evelin → Flávia direto) mudaram.
+- Contexto técnico anterior (diagnóstico do botão "Anunciar", descontinuação da Campanha Inteligente, caminho recomendado via `ads.google.com` direto) segue válido em [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]] — só a decisão de negócio e o interlocutor (pessoa de contato → Flávia direto) mudaram.
 
 ## Portal do Projeto — em arquitetura (09/09/2026)
 

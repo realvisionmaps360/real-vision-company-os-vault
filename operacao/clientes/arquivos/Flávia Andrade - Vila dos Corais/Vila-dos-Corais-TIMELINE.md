@@ -80,8 +80,8 @@
 - Barra de "Compartilhar" duplicada no topo da página (`ShareButtons`, mesmo componente do rodapé).
 - Build e preview local testados sem erro antes do push (lightbox conferido mostrando a imagem e legenda corretas). Commit `a12ddd9` no `main` do `real-vision-core` — Vercel dispara deploy automático.
 
-### 20/08/2026 — Sessão "corais 2": diagnóstico do tráfego pago e treino pra Evelin
-- Felipe informou que a Flávia delegou o assunto tráfego pago pra Evelin, da equipe dela. Reunião marcada pra 21/08/2026, onde Felipe vai treinar a Evelin e decidir se a Real Vision assume a gestão como serviço formal, e por quanto.
+### 20/08/2026 — Sessão "corais 2": diagnóstico do tráfego pago e treino pra pessoa de contato da cliente
+- Felipe informou que a Flávia delegou o assunto tráfego pago pra pessoa de contato da cliente, da equipe dela. Reunião marcada pra 21/08/2026, onde Felipe vai treinar a pessoa de contato da cliente e decidir se a Real Vision assume a gestão como serviço formal, e por quanto.
 - Pra treinar antes da reunião, reproduzimos ao vivo o erro que o Felipe vinha tomando no botão "Anunciar" do Perfil da Empresa — usando a conta própria da Real Vision 360 como teste, **nenhum acesso à conta da cliente foi usado**.
 - Causa raiz confirmada: o "Anunciar" só oferece contas de primeiro nível (no caso, uma cancelada e a MCC), nunca a conta filha real onde campanha pode existir. Fluxo clássico direto em `ads.google.com`, entrando na conta filha certa, funciona normalmente.
 - Rodado também um case study sobre o estado atual (20/08/2026) do produto Campanha Inteligente no mercado: API do Google Ads bloqueou criação de campanha nova desde 03/08/2026 (só API, não confirmado pra interface web), Google empurrando pra Performance Max, outros usuários reportando o mesmo tipo de erro em fóruns oficiais.
@@ -90,13 +90,13 @@
 ## Tempo investido (continuação)
 | Data | Sessão | Duração estimada |
 |---|---|---|
-| 20/08/2026 | Diagnóstico do erro no "Anunciar" + case study de mercado + registro pra reunião com Evelin | ~2h |
+| 20/08/2026 | Diagnóstico do erro no "Anunciar" + case study de mercado + registro pra reunião com a pessoa de contato da cliente | ~2h |
 
 ## Próximos marcos
 - ~~Lançar R$700 manualmente no VisionFlow~~ — encerrado em 09/09/2026, ver entrada daquela data.
 - Confirmar itens finais do Perfil Google (post inicial, link de avaliação).
 - Preencher CNPJ/endereço/representante da Real Vision no contrato e gerar versão final.
-- Reunião 21/08/2026 com Evelin: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
+- Reunião 21/08/2026 com a pessoa de contato da cliente: treino de tráfego pago + decisão de negócio (pegar o serviço e por quanto) — ver [[LBOS/02-Projetos/vila-dos-corais/trafego-pago-pesquisa]].
 
 ### 01/09/2026 — Correção do login e migração do banco para conta própria
 
@@ -231,7 +231,7 @@ site, que usa só a chave pública `anon`.
 
 ### 07/09/2026 — Tráfego pago contratado: proposta enviada e aceita direto com a Flávia
 
-O plano da reunião com a Evelin (`PLANO-DECK-REUNIAO-EVELIN-2026-08-31.md`) ficou obsoleto: **Evelin saiu do processo**, Felipe negociou direto com a Flávia. Proposta comercial `PropostaViladosCorais-GoogleAds-2026-09-07.html` enviada e **aceita**.
+O plano da reunião com a pessoa de contato da cliente (`PLANO-DECK-REUNIAO-CONTATO-CLIENTE-2026-08-31.md`) ficou obsoleto: **a pessoa de contato da cliente saiu do processo**, Felipe negociou direto com a Flávia. Proposta comercial `PropostaViladosCorais-GoogleAds-2026-09-07.html` enviada e **aceita**.
 
 - Escopo: gestão de Google Ads, ciclo fechado de 3 meses, sem renovação automática, sem garantia de reservas.
 - Investimento à Real Vision: R$2.400 (R$600 implementação em duas parcelas de R$300 + R$600/mês × 3 de gestão). Verba de mídia (R$1.000–1.500/mês, referência) é paga direto ao Google, fora da Real Vision.
@@ -496,3 +496,128 @@ arrumação, avisada ao Felipe.
 **Observação:** o handoff desta sessão dizia que faltava a chave do Supabase e
 que existia um `.env.example`. Nenhum dos dois era verdade — o `.env` já vinha
 preenchido no clone e funcionava.
+
+### 10/09/2026 (continuação) — Tráfego pago fechado + briefing vira múltipla escolha
+
+**Fato comercial que faltava registrar:** o deck "Anúncios no Google · Vila dos Corais"
+**foi apresentado numa reunião online e a cliente aceitou**. O serviço de gestão de
+Google Ads está contratado — projeto de 3 meses, conforme o deck: R$ 600 de
+implementação + R$ 600/mês de gestão (R$ 2.400 no total). **Primeiro pagamento de
+R$ 300 já recebido.**
+
+Registrado no LBOS em [[REC-2026-005]] e no nó [[02-Projetos/vila-dos-corais/PROJETO]],
+que passou a listar tráfego pago como escopo **ativo** (antes estava "em avaliação").
+
+⚠️ **A esclarecer:** os R$ 300 não batem com nenhuma linha isolada da proposta. Pode
+ser metade da implementação, um valor renegociado na reunião, ou uma entrada. Não foi
+deduzido de propósito — ver a seção "A conferir" em [[REC-2026-005]].
+
+**Mudança de processo:** o nó do LBOS vira a porta de entrada do projeto. Toda sessão
+que for mexer na Vila dos Corais abre [[02-Projetos/vila-dos-corais/PROJETO]] primeiro,
+antes de tocar em código. A regra está escrita no topo do próprio nó.
+
+**Pessoa removida da documentação:** a ponte operacional que a cliente havia delegado
+não faz mais parte do projeto. O nome dela saiu de toda a documentação — 19 ocorrências
+em 7 arquivos, trocadas por "a pessoa de contato da cliente", e o arquivo do plano do
+deck foi renomeado. Nada foi apagado: as frases seguem inteiras, só sem o nome próprio.
+
+---
+
+**Tela "Informações" redesenhada — o briefing virou múltipla escolha**
+
+As 3 perguntas do briefing (`publico`, `periodos`, `investimento`) eram campos de texto
+livre em branco. Escrever de cabeça "quem você mais quer receber" é difícil, e a
+resposta que vem é vaga demais para virar palavra-chave de campanha.
+
+Agora cada pergunta oferece opções em cartão, com ícone e cor, marcáveis no toque:
+
+| Pergunta | Como responde | Opções |
+|---|---|---|
+| Quem você mais quer receber? | marca várias | casais, famílias com crianças, grupos de amigos, casamentos, quem fica semanas trabalhando de longe, turista de fora do país |
+| Quais meses quer encher? | marca vários | alta temporada (dez–fev), Carnaval, feriados prolongados, meses parados (mar–jun), férias de julho, o ano todo |
+| Quanto investir por mês? | marca uma | R$ 1.000, R$ 1.500, R$ 2.000 |
+
+Todas mantêm um campo **"Outro — escreva do seu jeito"**, então nada foi tirado de quem
+quer responder por escrito. A tela ganhou também um placar no topo ("0 de 3") com barra
+de progresso, e cada cartão de pergunta mostra "Pergunta 1 de 3" e um selo verde
+"Respondida" quando tem resposta.
+
+**Nada mudou no banco.** A resposta continua sendo gravada como texto em
+`portal_info.valor`, agora com as escolhas separadas por " · ". Quem lê a resposta pelo
+lado da Real Vision vê a lista com check verde, item por item.
+
+**Verificação (sessão real logada, Playwright):**
+
+| O que | Resultado |
+|---|---|
+| Celular 390px — 3 perguntas, opções em coluna única | ✅ print conferido |
+| Computador 1440px — opções em duas colunas | ✅ print conferido |
+| Marcar e desmarcar opção, cor e check aparecendo | ✅ testado ao vivo |
+| Alvos de toque abaixo de 44px | ✅ zero (cartão inteiro é o alvo, 60px) |
+| `tsc`, `eslint`, `npm run build` | ✅ os três limpos |
+| Briefing real da cliente | ✅ **intacto** — nenhuma resposta foi salva no teste |
+
+Componentes novos: `src/components/portal/EscolhaOpcoes.tsx` (caixas de seleção e botões
+de rádio de verdade por baixo, para teclado e leitor de tela funcionarem) e
+`src/lib/opcoes-briefing.ts` (as opções em si, num arquivo só — mudar a lista não exige
+mexer na tela).
+
+---
+
+**Passo a passo do acesso ao Google Ads criado**
+
+Documento novo: `PASSO-A-PASSO-ACESSO-GOOGLE-ADS.md`, na pasta deste cliente. Separa o
+que o Felipe faz (enviar o convite pela conta de administrador) do roteiro que ele vai
+gravar em vídeo para a cliente (onde ela clica para aceitar). Caminho de menus conferido
+na documentação oficial do Google, não de memória.
+
+**O que trava hoje:** falta o **número de identificação da conta de Google Ads da
+cliente** (10 dígitos). Sem ele não dá para enviar o convite. É o primeiro passo do
+roteiro do vídeo — ela vê o número no canto superior direito ao entrar em
+`ads.google.com`.
+
+**Próximos passos do tráfego pago, na ordem:**
+1. Cliente responde as 3 perguntas do briefing (agora em múltipla escolha).
+2. Cliente manda o número da conta e aceita o convite de vínculo à MCC `359-167-3566`.
+3. Ligar o GA4 (`G-8P07EHPVYR`) à conta de anúncios dela e marcar `whatsapp_click` como
+   conversão principal — o evento já dispara no site, conferido no código hoje.
+4. Montar a campanha de Pesquisa e levar para aprovação **antes** de qualquer gasto.
+
+### 11/09/2026 — Os R$ 300 esclarecidos + conta certa no passo a passo
+
+- Felipe confirmou: os R$ 300 são **metade dos R$ 600 de implementação**. A dúvida
+  registrada ontem está resolvida. LBOS: [[REC-2026-005]] (recebida, confiabilidade
+  alta), [[REC-2026-006]] (2ª metade, R$ 300, prevista) e [[REC-2026-007]] (gestão,
+  3 × R$ 600, prevista). Datas das parcelas previstas ainda não definidas.
+- `PASSO-A-PASSO-ACESSO-GOOGLE-ADS.md`: a Parte A agora diz **qual conta** usar —
+  logado como `felipegarciajericoacoara@gmail.com`, na MCC `359-167-3566`, e não na
+  `414-120-1211` nem na `156-292-4356`. Regra do Felipe: toda instrução de Google Ads
+  cita o número da conta.
+- Parte A ainda **não** foi feita: falta o número da conta de anúncios da cliente.
+  Mensagem pedindo o número preparada para o Felipe enviar.
+
+### 11/09/2026 (continuação) — Correções: o vault deste notebook estava atrasado
+
+As entradas de 10/09 e 11/09 acima foram escritas no notebook da Romana, cuja cópia do
+vault estava dias atrás do notebook do Felipe. Ao sincronizar, apareceram os registros
+de 07/09, 09/09 e 10/09 feitos lá. Três afirmações das entradas deste notebook estavam
+erradas e ficam corrigidas aqui (as originais foram mantidas, conforme a regra de nunca
+apagar nota):
+
+- **"O fechamento não estava documentado"** — estava. A proposta foi aceita e registrada
+  em 07/09/2026 (entrada "Tráfego pago contratado" acima e `FICHA-CLIENTE.md`).
+- **"R$ 300 recebidos em 10/09"** — foram pagos via **Pix em 07/09/2026**. A segunda
+  metade da implementação é cobrada **quando a campanha for ao ar**. LBOS corrigido em
+  [[REC-2026-005]] e [[REC-2026-006]].
+- **"Falta marcar `whatsapp_click` como conversão"** — já está marcado como evento
+  principal no GA4 desde 10/09 (property "Vila dos Corais", ID `549997524`). O que
+  continua faltando é o **vínculo GA4 ↔ Google Ads**, que depende da conta de anúncios.
+
+**Decisão em aberto sobre a conta de anúncios:** em 10/09 o Felipe decidiu criar uma
+conta **nova** dentro da MCC `359-167-3566` (travada até a passkey de
+`felipegarciajericoacoara@gmail.com` ativar, 1 a 2 dias). Em 11/09 foi preparado, neste
+notebook, um passo a passo e uma mensagem no caminho contrário: **vincular a conta que a
+cliente já tem** (a dos R$ 200). Os dois caminhos são incompatíveis — esperando o Felipe
+escolher antes de mandar qualquer mensagem à cliente.
+
+Registro das duas máquinas criado em `operacao/gestao/infraestrutura/maquinas-de-trabalho.md`.

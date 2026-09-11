@@ -6,7 +6,7 @@ Baseado na documentação oficial do Google (Ajuda do Google Ads e Ajuda do Perf
 
 ## 1. O caminho mais simples de todos: botão "Anunciar" no Perfil da Empresa
 
-Esse é o caminho que citamos na conversa sobre a Evelyn — o mesmo botão "Anunciar" que testamos e que hoje está retornando erro 404 no navegador (desktop). A documentação oficial descreve o fluxo assim, e ele é pensado principalmente para o **app Google Maps no celular**:
+Esse é o caminho que citamos na conversa sobre a pessoa de contato da cliente — o mesmo botão "Anunciar" que testamos e que hoje está retornando erro 404 no navegador (desktop). A documentação oficial descreve o fluxo assim, e ele é pensado principalmente para o **app Google Maps no celular**:
 
 1. Abrir o app Google Maps no celular
 2. Tocar em "Empresa" (canto inferior direito)

@@ -5,8 +5,8 @@ ANTES de qualquer alteração no arquivo. Nada implementado até aprovação.
 
 Cliente: [[FICHA-CLIENTE]] · Histórico: [[Vila-dos-Corais-TIMELINE]]
 
-- **Arquivo atual:** `C:\Users\Felipe Garcia\Downloads\reuniaoevelinslides.html` (21 slides, palco 1920×1080)
-- **Público da reunião:** Evelin (ponte operacional) e, por tabela, Flávia (decisora)
+- **Arquivo atual:** `C:\Users\Felipe Garcia\Downloads\reuniaocontatoclienteslides.html` (21 slides, palco 1920×1080)
+- **Público da reunião:** a pessoa de contato da cliente (ponte operacional) e, por tabela, Flávia (decisora)
 - **Objetivo do deck:** vender a gestão de Google Ads da Real Vision — 3 meses — para atrair
   hóspede qualificado para a Vila dos Corais
 
@@ -24,7 +24,7 @@ Cliente: [[FICHA-CLIENTE]] · Histórico: [[Vila-dos-Corais-TIMELINE]]
 
 | # | Slide | O que muda |
 |---|-------|-----------|
-| 4 | 13 — "O que fica com você, em detalhe" (5 passos da Evelin) | **Manter, removendo o item 3** ("Ajudar a Flávia com o cartão"). Ficam 4 passos. |
+| 4 | 13 — "O que fica com você, em detalhe" (5 passos da pessoa de contato da cliente) | **Manter, removendo o item 3** ("Ajudar a Flávia com o cartão"). Ficam 4 passos. |
 | 5 | 14 — "Por que o aviso semanal importa tanto" | **Excluir o slide** e fundir a ideia dentro do slide 03, junto da terceira condição |
 | 6 | 16 — "Por que três meses" | Conteúdo está certo. Só precisa de **tratamento visual melhor** (Fase 3) |
 | 7 | 18 — Honorários | Tirar a linha "Google + Instagram/Facebook (R$ 800)". Fica só: implementação R$ 600 + gestão R$ 600/mês → **total R$ 2.400 nos três meses** |
@@ -72,7 +72,7 @@ Regra de escrita para o deck inteiro, vinda da Romana: **frases curtas, zero ter
 - Estudar os componentes um a um antes de aplicar: capa, cards, fluxo, timeline, tabela de preço
 - Aplicar a nova pele mantendo o palco fixo 1920×1080 e o modo de edição inline
 
-**Entrega:** novo arquivo HTML autocontido, nome com data (`reuniao-evelin-slides-2026-08-31.html`)
+**Entrega:** novo arquivo HTML autocontido, nome com data (`reuniao-contato-cliente-slides-2026-08-31.html`)
 
 ## 6. Decisões fechadas com Felipe (31/08/2026)
 
