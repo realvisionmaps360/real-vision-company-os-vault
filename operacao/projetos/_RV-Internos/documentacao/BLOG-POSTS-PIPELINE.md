@@ -94,6 +94,13 @@ Backlog de posts pro site real-vision-core. Status: `📝 ideia` → `✍️ ras
 **Ângulo:** a definir com Felipe (tema geral do vídeo: nuvem vs. IA local/on-device, contexto NVIDIA)
 **CTA:** a definir
 
+### 10. [tema a partir do vídeo https://youtu.be/SokOWXs0j7c]
+**Status:** 📝 ideia
+**Fonte:** vídeo do YouTube — https://youtu.be/SokOWXs0j7c?is=N0Gg5pCQ5icWZr_c
+**Objetivo:** a definir — Felipe apontou esse vídeo como tema/gatilho de um novo post, ainda sem ângulo definido
+**Ângulo:** a definir com Felipe
+**CTA:** a definir
+
 ---
 
 ## 🔜 Backlog
