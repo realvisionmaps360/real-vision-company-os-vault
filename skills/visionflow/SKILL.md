@@ -305,6 +305,35 @@ rollback;
 
 Usado para validar `monitored_sites`/`uptime_checks`/`status_changes` no Plano 006 Fase 2 (20/07/2026) — confirmou 0 linhas visíveis a não-admin. Rodar sempre depois de `get_advisors(type: security)`, não no lugar dele — o advisor pega policy ausente/mal configurada, mas não prova que uma policy existente está fazendo o que deveria.
 
+## 13.1 PITFALL: `REVOKE` avulso não segura — e view nunca deve ler `auth.users`
+
+Descoberto em 16/09/2026, corrigindo a reincidência do vazamento da view `team_members` (ver `docs/INCIDENTS.md` — mesmo furo já tinha sido "corrigido" em 15/07/2026).
+
+Três regras que saíram disso:
+
+1. **Grant volta sozinho.** Em `public`, as *default privileges* do Supabase dão `arwdDxtm` pra `anon` e `authenticated` em **todo objeto novo**. Um `REVOKE ALL ... FROM anon` rodado solto, numa migration separada, evapora na primeira vez que a view for recriada. O `REVOKE`/`GRANT` tem que estar na **mesma migration** que faz o `create view`. Conferir com:
+   ```sql
+   select grantee, privilege_type from information_schema.role_table_grants where table_name = '<view>';
+   ```
+2. **View em `public` não lê `auth.users`.** Se precisa de email/nome do usuário, espelhar numa tabela própria com RLS (no VisionFlow: `public.assignee_profiles`) e ler de lá. Dado sensível que só admin precisa (email) vai pela edge function `admin-users`, não pela view. Varredura pra confirmar que nenhuma view furou o schema `auth`:
+   ```sql
+   select c.relname from pg_class c
+   join pg_namespace n on n.oid = c.relnamespace
+   join pg_rewrite r on r.ev_class = c.oid
+   join pg_depend d on d.objid = r.oid
+   join pg_class ref on ref.oid = d.refobjid
+   join pg_namespace refn on refn.oid = ref.relnamespace
+   where n.nspname = 'public' and c.relkind in ('v','m') and refn.nspname = 'auth'
+   group by c.relname;   -- tem que voltar vazio
+   ```
+3. **`SECURITY DEFINER` em view é bandeira vermelha.** Quase sempre é contorno de permissão faltando. Usar `with (security_invoker = true)` e resolver o acesso via policy. Atenção ao efeito colateral: com `security_invoker`, a view passa a respeitar a RLS de quem consulta — se a policy da tabela-base for restritiva demais (ex: "só vê a própria linha"), funcionalidade que depende da lista inteira quebra pro não-admin. Checar quem consome a view no frontend **antes** de virar a chave.
+
+**Teste que fecha o ciclo** (além do §13): bater no REST de verdade com a chave pública, não só no SQL —
+```bash
+curl -s -w "\nHTTP %{http_code}\n" "https://ghwjetvazmdlaqidgxqi.supabase.co/rest/v1/<view>?select=*" -H "apikey: $ANON" -H "Authorization: Bearer $ANON"
+```
+Esperado pra objeto interno: `401 permission denied`. É o único teste que cobre a superfície que o atacante realmente usa.
+
 ## 14. PITFALL: verificar dark mode manualmente no navegador engana
 
 Duas pegadinhas descobertas testando o Plano 006 Fase 3 (tema âmbar/dark):
