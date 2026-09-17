@@ -12,3 +12,4 @@
 | [[05-SISTEMA-RESPOSTA-PERSONALIZADA\|email-marketing/05-SISTEMA-RESPOSTA-PERSONALIZADA]] | Resposta 1:1, banco próprio, escada de autonomia e digest diário (proposta) |
 | [[06-MANUAL-APRENDIZADO\|email-marketing/06-MANUAL-APRENDIZADO]] | Escola de email marketing em 6 níveis — documento vivo de aprendizado |
 | [[plano-plataformas\|plataformas/plano-plataformas]] | Plano de captação nas plataformas de freelancer |
+| [[referencias-sites/README\|Referências de Sites]] | **Swipe file de sites** — referências de design/estrutura por segmento |
